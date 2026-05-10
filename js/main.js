@@ -540,19 +540,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileNav = document.querySelector('.mobile-nav');
   const mobileLinks = mobileNav?.querySelectorAll('a');
 
+  const closeMobileMenu = () => {
+    hamburger?.classList.remove('active');
+    mobileNav?.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  };
+
   hamburger?.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     mobileNav.classList.toggle('active');
-    document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+    document.body.classList.toggle('menu-open', mobileNav.classList.contains('active'));
   });
 
   mobileLinks?.forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      mobileNav.classList.remove('active');
-      document.body.style.overflow = '';
-    });
+    link.addEventListener('click', closeMobileMenu);
   });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) closeMobileMenu();
+  }, { passive: true });
 
   // --- Smooth scroll for anchor links ---
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -566,6 +572,32 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  const wireHeroSearch = () => {
+    const searchInput = document.querySelector('.hero-search-bar input');
+    const searchBtn = document.querySelector('.search-btn');
+    if (!searchBtn || !searchInput) return;
+
+    const submitHeroSearch = (e) => {
+      e?.preventDefault();
+      const dest = searchInput.value.trim();
+      if (dest) {
+        const destinationInput = document.querySelector('#destination');
+        const contactMsg = document.querySelector('#message');
+        if (destinationInput) destinationInput.value = dest;
+        if (contactMsg) contactMsg.value = `Hola, me gustaría cotizar un viaje para mi grupo hacia ${dest}.`;
+      }
+      const contactSection = document.querySelector('#contacto');
+      if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    searchBtn.addEventListener('click', submitHeroSearch);
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') submitHeroSearch(e);
+    });
+  };
+
+  wireHeroSearch();
 
   // Integrate GSAP
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
@@ -582,8 +614,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroSlides = document.querySelectorAll('.hero-slide');
     const heroTexts = document.querySelectorAll('.hero-text-slide');
     const heroDots = document.querySelectorAll('.hero-progress-dot');
+    const desktopMotion = window.matchMedia('(min-width: 769px)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
-    if (heroSlides.length > 0 && typeof MotionPathPlugin !== 'undefined') {
+    const setStaticHeroStage = (index) => {
+      heroSlides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      heroTexts.forEach((text, i) => text.classList.toggle('active', i === index));
+      heroDots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    };
+
+    if (heroSlides.length > 0 && typeof MotionPathPlugin !== 'undefined' && desktopMotion) {
       let activeHeroStage = 0;
       gsap.set(heroSlides, { autoAlpha: 0 });
       gsap.set(heroTexts, { autoAlpha: 0, y: 18, filter: 'blur(3px)' });
@@ -662,44 +701,18 @@ document.addEventListener('DOMContentLoaded', () => {
         { x: -20, autoAlpha: 0 },
         { x: 0, autoAlpha: 1, duration: 0.6, stagger: 0.1, ease: 'power3.out', delay: 0.8 }
       );
-
-      // Make search bar functional
-      const searchInput = document.querySelector('.hero-search-bar input');
-      const searchBtn = document.querySelector('.search-btn');
-      if (searchBtn && searchInput) {
-        searchBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          const dest = searchInput.value.trim();
-          if (dest) {
-            const destinationInput = document.querySelector('#destination');
-            const contactMsg = document.querySelector('#message');
-            if (destinationInput) {
-              destinationInput.value = dest;
-            }
-            if (contactMsg) {
-              contactMsg.value = `Hola, me gustaría cotizar un viaje para mi grupo hacia ${dest}.`;
-            }
-          }
-          const contactSection = document.querySelector('#contacto');
-          if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-        // Also support Enter key
-        searchInput.addEventListener('keypress', (e) => {
-          if (e.key === 'Enter') searchBtn.click();
-        });
-      }
     } else {
+      setStaticHeroStage(0);
+      gsap.set([...heroSlides, ...heroTexts], { clearProps: 'all' });
       const heroTl = gsap.timeline();
-      heroTl.from('.hero-title', { y: 40, autoAlpha: 0, duration: 1, ease: 'power3.out' }, '-=0.5')
-            .from('.hero-desc', { y: 20, autoAlpha: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6')
-            .from('.hero-search-bar', { y: 20, autoAlpha: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6');
+      heroTl.from('.hero-title', { y: 26, autoAlpha: 0, duration: 0.7, ease: 'power3.out' }, '-=0.2')
+            .from('.hero-desc', { y: 14, autoAlpha: 0, duration: 0.55, ease: 'power3.out' }, '-=0.35')
+            .from('.hero-search-bar', { y: 14, autoAlpha: 0, duration: 0.55, ease: 'power3.out' }, '-=0.3');
     }
 
       // 2. Horizontal Scroll Destinations
       const scrollWrapper = document.querySelector('.scroll-wrapper');
-      if (scrollWrapper) {
+      if (scrollWrapper && desktopMotion && scrollWrapper.scrollWidth > window.innerWidth) {
         gsap.to(scrollWrapper, {
           x: () => -(scrollWrapper.scrollWidth - window.innerWidth),
           ease: 'none',
@@ -718,15 +731,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const revealElements = document.querySelectorAll('.reveal');
     revealElements.forEach(el => {
       gsap.fromTo(el, 
-        { autoAlpha: 0, y: 50 },
+        { autoAlpha: 0, y: desktopMotion ? 50 : 18 },
         {
           autoAlpha: 1, y: 0,
-          duration: 1,
+          duration: desktopMotion ? 1 : 0.45,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
-            toggleActions: 'play none none reverse'
+            toggleActions: desktopMotion ? 'play none none reverse' : 'play none none none'
           }
         }
       );
@@ -734,7 +747,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Parallax Images
     const parallaxImages = document.querySelectorAll('.ev-bg img, .about-image img');
-    parallaxImages.forEach(img => {
+    if (desktopMotion) parallaxImages.forEach(img => {
       gsap.to(img, {
         yPercent: 20,
         ease: 'none',
