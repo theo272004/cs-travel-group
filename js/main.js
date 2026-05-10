@@ -967,31 +967,54 @@ document.addEventListener('DOMContentLoaded', () => {
   const profileCards = document.querySelectorAll('.profile-card');
   const detailsWrapper = document.getElementById('profile-details-wrapper');
   const profileDetails = document.querySelectorAll('.profile-details');
+  const mobileBreakpoint = window.matchMedia('(max-width: 768px)');
 
   profileCards.forEach(card => {
-    card.addEventListener('click', () => {
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-expanded', 'false');
+
+    const activateProfile = () => {
       const targetId = 'details-' + card.dataset.profile;
-      
-      // Toggle active class on cards
-      profileCards.forEach(c => c.classList.remove('active'));
-      card.classList.add('active');
-      
-      // Show wrapper
-      detailsWrapper.classList.add('active');
-      
-      // Show specific details
-      profileDetails.forEach(detail => {
-        detail.classList.remove('active');
-        if (detail.id === targetId) {
-          detail.classList.add('active');
-        }
+      const isAlreadyActive = card.classList.contains('active');
+      const isMobile = mobileBreakpoint.matches;
+
+      if (isMobile && isAlreadyActive) {
+        card.classList.remove('active');
+        card.setAttribute('aria-expanded', 'false');
+        detailsWrapper?.classList.remove('active');
+        profileDetails.forEach(detail => detail.classList.remove('active'));
+        return;
+      }
+
+      profileCards.forEach(c => {
+        c.classList.remove('active');
+        c.setAttribute('aria-expanded', 'false');
       });
-      
-      // Scroll to details
+      card.classList.add('active');
+      card.setAttribute('aria-expanded', 'true');
+
+      detailsWrapper?.classList.add('active');
+
+      profileDetails.forEach(detail => {
+        detail.classList.toggle('active', detail.id === targetId);
+      });
+
       setTimeout(() => {
-        const y = detailsWrapper.getBoundingClientRect().top + window.scrollY - 100;
+        const scrollTarget = isMobile ? card : detailsWrapper;
+        if (!scrollTarget) return;
+        const offset = isMobile ? 86 : 100;
+        const y = scrollTarget.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }, 100);
+    };
+
+    card.addEventListener('click', activateProfile);
+    card.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        activateProfile();
+      }
     });
   });
 
@@ -1171,6 +1194,21 @@ document.addEventListener('DOMContentLoaded', () => {
   chatClose?.addEventListener('click', () => {
     chatWindow.classList.remove('active');
   });
+
+  const contactSection = document.getElementById('contacto');
+  const chatbotWidget = document.querySelector('.chatbot-widget');
+  if (contactSection && chatbotWidget && window.matchMedia('(max-width: 768px)').matches) {
+    const chatOverlapObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        chatbotWidget.classList.toggle('contact-overlap', entry.isIntersecting);
+      });
+    }, {
+      threshold: 0.25,
+      rootMargin: '0px 0px -15% 0px'
+    });
+
+    chatOverlapObserver.observe(contactSection);
+  }
 
   /* ===== Instagram Modal ===== */
   const igCards = document.querySelectorAll('.ig-card');

@@ -1158,6 +1158,12 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
     min-height: 48px;
     text-align: center;
   }
+  #perfiles,
+  #destinos,
+  #contacto,
+  .profile-details-wrapper {
+    scroll-margin-top: 88px;
+  }
   .header {
     padding: 10px 0;
     background: rgba(16,42,76,.86);
@@ -1229,15 +1235,49 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   .hero-stats { flex-direction: column; gap: 24px; }
   .clients-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
-  .profiles-grid { grid-template-columns: 1fr; }
+  .profiles-grid { grid-template-columns: 1fr; gap: 18px; margin-bottom: 22px; }
+  .profile-card {
+    border-radius: 24px;
+    box-shadow: 0 18px 42px rgba(16,42,76,.08);
+  }
   .profile-card:hover,
   .profile-card.active {
     transform: none;
   }
+  .profile-card.active {
+    box-shadow: 0 24px 56px rgba(16,42,76,.14);
+    border-color: rgba(106,155,200,.38);
+  }
   .profile-content { padding: 24px 20px; }
   .profile-image { aspect-ratio: 4/3; }
   .profile-title { font-size: 1.6rem; left: 24px; bottom: 20px; }
-  .details-inner { padding: 32px 24px; }
+  .profile-features { margin-bottom: 24px; }
+  .profile-features li {
+    align-items: flex-start;
+    line-height: 1.45;
+  }
+  .profile-btn {
+    min-height: 50px;
+    font-size: 0.98rem;
+  }
+  .profile-details-wrapper {
+    border-radius: 24px;
+    margin-top: 4px;
+  }
+  .details-inner { padding: 28px 20px; }
+  .details-text h4 { font-size: 1.3rem; }
+  .details-text p {
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+  .details-text ul {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .details-text ul li {
+    padding-left: 20px;
+    line-height: 1.55;
+  }
   .ev-services {
     min-height: 100vh;
     padding: 64px 0;
@@ -1249,8 +1289,67 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   .ev-card-content { padding: 32px 24px; }
   .ev-card-image { min-height: 220px; }
   .process-steps { grid-template-columns: 1fr; }
+  .destinations-scroll {
+    padding: 72px 0 56px;
+    overflow: hidden;
+  }
+  .scroll-container {
+    height: auto;
+    display: block;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 6px;
+  }
+  .scroll-container::-webkit-scrollbar { display: none; }
+  .scroll-wrapper {
+    gap: 16px;
+    padding: 0 18px 8px;
+    min-width: 100%;
+  }
+  .scroll-title {
+    min-width: min(82vw, 320px);
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .scroll-title h2 {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+  .scroll-title p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .scroll-title::after {
+    content: '⟷';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.76);
+    color: var(--primary);
+    border: 1px solid rgba(16,42,76,.08);
+    box-shadow: 0 12px 30px rgba(16,42,76,.08);
+  }
   .destinations-grid { grid-template-columns: 1fr; }
-  .dest-card { aspect-ratio: 16/10; }
+  .dest-card {
+    width: min(78vw, 320px);
+    height: 430px;
+    scroll-snap-align: start;
+  }
+  .dest-card-content { padding: 28px 22px; }
+  .dest-card-content h3 { font-size: 1.55rem; }
+  .dest-card-content p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
   .credentials { padding: 52px 0; }
   .cred-list { gap: 30px; }
   .cred-list-item { gap: 16px; }
@@ -1286,6 +1385,12 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   .chatbot-widget {
     bottom: 16px;
     right: 16px;
+    transition: transform var(--transition-fast), opacity var(--transition-fast), bottom var(--transition-fast);
+  }
+  .chatbot-widget.contact-overlap {
+    transform: scale(.94);
+    opacity: .82;
+    bottom: 88px;
   }
   .chatbot-toggle {
     width: 56px;
