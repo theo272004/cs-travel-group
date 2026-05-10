@@ -708,6 +708,27 @@ document.addEventListener('DOMContentLoaded', () => {
       heroTl.from('.hero-title', { y: 26, autoAlpha: 0, duration: 0.7, ease: 'power3.out' }, '-=0.2')
             .from('.hero-desc', { y: 14, autoAlpha: 0, duration: 0.55, ease: 'power3.out' }, '-=0.35')
             .from('.hero-search-bar', { y: 14, autoAlpha: 0, duration: 0.55, ease: 'power3.out' }, '-=0.3');
+
+      // Mobile Autoplay Slideshow & Interactive Dots
+      let mobileStage = 0;
+      let mobileInterval = setInterval(() => {
+        mobileStage = (mobileStage + 1) % heroSlides.length;
+        setStaticHeroStage(mobileStage);
+      }, 5000);
+
+      heroDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          clearInterval(mobileInterval);
+          mobileStage = index;
+          setStaticHeroStage(mobileStage);
+          
+          // Restart interval
+          mobileInterval = setInterval(() => {
+            mobileStage = (mobileStage + 1) % heroSlides.length;
+            setStaticHeroStage(mobileStage);
+          }, 5000);
+        });
+      });
     }
 
       // 2. Horizontal Scroll Destinations
