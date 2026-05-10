@@ -2220,8 +2220,9 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
 
 /* Fix for ed-grid mobile layout */
 .ed-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.profiles-grid-3 { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 900px) {
-  .ed-grid, .ed-grid-4 { 
+  .ed-grid, .ed-grid-4, .profiles-grid-3 { 
     grid-template-columns: 1fr !important; 
     gap: 32px !important; 
   }
