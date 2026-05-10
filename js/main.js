@@ -729,21 +729,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // 3. Section Reveals
       const revealElements = document.querySelectorAll('.reveal');
-    revealElements.forEach(el => {
-      gsap.fromTo(el, 
-        { autoAlpha: 0, y: desktopMotion ? 50 : 18 },
-        {
-          autoAlpha: 1, y: 0,
-          duration: desktopMotion ? 1 : 0.45,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: el,
-            start: 'top 85%',
-            toggleActions: desktopMotion ? 'play none none reverse' : 'play none none none'
-          }
-        }
-      );
-    });
+      if (desktopMotion) {
+        revealElements.forEach(el => {
+          gsap.fromTo(el, 
+            { autoAlpha: 0, y: 50 },
+            {
+              autoAlpha: 1, y: 0,
+              duration: 1,
+              ease: 'power3.out',
+              scrollTrigger: {
+                trigger: el,
+                start: 'top 85%',
+                toggleActions: 'play none none reverse'
+              }
+            }
+          );
+        });
+      } else {
+        gsap.set(revealElements, { autoAlpha: 1, y: 0, clearProps: "all" });
+      }
 
     // 3. Parallax Images
     const parallaxImages = document.querySelectorAll('.ev-bg img, .about-image img');
