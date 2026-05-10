@@ -1940,3 +1940,273 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
     height: 40px;
   }
 }
+
+/* ===== Split Hero (B2B) ===== */
+.split-hero {
+  display: flex;
+  min-height: 90vh;
+  background: var(--surface);
+  padding-top: 80px;
+}
+.split-hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 8%;
+}
+.split-hero-kicker {
+  color: var(--text-secondary);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.split-hero-title {
+  color: var(--text);
+  font-size: clamp(2.5rem, 4.5vw, 3.8rem);
+  line-height: 1.1;
+  margin-bottom: 32px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.split-hero-desc {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 48px;
+  max-width: 600px;
+}
+.split-hero-image {
+  flex: 1;
+  position: relative;
+}
+.split-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 900px) {
+  .split-hero {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .split-hero-image {
+    min-height: 400px;
+    width: 100%;
+    position: relative;
+    order: 2;
+  }
+  .split-hero-image img {
+    position: static;
+  }
+  .split-hero-content {
+    padding: 100px 24px 60px;
+    order: 1;
+  }
+}
+
+/* ===== FAQs ===== */
+.b2b-faqs {
+  padding: var(--section-py) 0;
+  background: var(--bg);
+}
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+.faq-item:hover {
+  border-color: var(--secondary);
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 24px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+}
+.faq-question svg {
+  transition: transform var(--transition-fast);
+  color: var(--secondary);
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+.faq-item.active .faq-question svg {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  background: var(--surface);
+}
+.faq-answer p {
+  padding: 0 24px 24px 24px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== Instagram Modal ===== */
+.ig-modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.ig-modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.ig-modal-container {
+  width: 90%;
+  max-width: 1000px;
+  height: 80vh;
+  min-height: 500px;
+  background: var(--surface);
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+.ig-modal-backdrop.active .ig-modal-container {
+  transform: scale(1);
+}
+.ig-modal-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.ig-modal-image {
+  flex: 1.5;
+  background: #000;
+  border-radius: 8px 0 0 8px;
+  overflow: hidden;
+}
+.ig-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.ig-modal-sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border-radius: 0 8px 8px 0;
+}
+.ig-modal-header {
+  padding: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.ig-modal-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+.ig-modal-body {
+  padding: 24px;
+  flex: 1;
+  overflow-y: auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+.ig-modal-footer {
+  padding: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ig-modal-date {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+.ig-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  z-index: 10;
+  line-height: 1;
+}
+.ig-modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: var(--text);
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+.ig-modal-nav:hover {
+  background: #fff;
+}
+.ig-modal-nav.prev {
+  left: -24px;
+}
+.ig-modal-nav.next {
+  right: -24px;
+}
+
+@media (max-width: 768px) {
+  .ig-modal-container {
+    height: 90vh;
+  }
+  .ig-modal-content {
+    flex-direction: column;
+  }
+  .ig-modal-image {
+    flex: 1;
+    border-radius: 8px 8px 0 0;
+  }
+  .ig-modal-sidebar {
+    flex: 1;
+    border-radius: 0 0 8px 8px;
+  }
+  .ig-modal-nav {
+    display: none;
+  }
+}
