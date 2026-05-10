@@ -1195,7 +1195,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
     justify-content: center;
   }
   .hero {
-    min-height: auto;
+    min-height: 100vh;
     padding: 112px 0 56px;
     align-items: flex-start;
   }
@@ -1239,7 +1239,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   .profile-title { font-size: 1.6rem; left: 24px; bottom: 20px; }
   .details-inner { padding: 32px 24px; }
   .ev-services {
-    min-height: auto;
+    min-height: 100vh;
     padding: 64px 0;
   }
   .ev-card {
@@ -1999,7 +1999,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
 @media (max-width: 900px) {
   .split-hero {
     flex-direction: column;
-    min-height: auto;
+    min-height: 100vh;
   }
   .split-hero-image {
     min-height: 400px;
@@ -2215,5 +2215,14 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   }
   .ig-modal-nav {
     display: none;
+  }
+}
+
+/* Fix for ed-grid mobile layout */
+.ed-grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) {
+  .ed-grid, .ed-grid-4 { 
+    grid-template-columns: 1fr !important; 
+    gap: 32px !important; 
   }
 }
