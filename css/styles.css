@@ -272,10 +272,12 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
 }
 .hero-slides {
   position: absolute; inset: 0; z-index: 1;
+  overflow: hidden;
 }
 .hero-slide {
   position: absolute; inset: 0; opacity: 0; visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease;
+  overflow: hidden;
 }
 .hero-slide.active {
   opacity: 1; visibility: visible;
@@ -285,14 +287,14 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   animation: kenBurns 20s ease-out infinite alternate;
 }
 @keyframes kenBurns {
-  0% { transform: scale(1); }
+  0% { transform: scale(1.02); }
   100% { transform: scale(1.15); }
 }
 .hero-overlay {
   position: absolute; inset: 0; z-index: 2;
   background:
     radial-gradient(circle at 50% 44%, rgba(191,216,244,.18), transparent 30%),
-    linear-gradient(180deg, rgba(16,42,76,0.64) 0%, rgba(16,42,76,0.22) 38%, rgba(8,24,46,0.86) 100%);
+    linear-gradient(180deg, rgba(16,42,76,0.64) 0%, rgba(16,42,76,0.22) 38%, rgba(16,42,76,0.8) 60%, var(--primary) 75%, var(--primary) 100%);
 }
 
 .hero-flight-path {
@@ -446,7 +448,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   background: rgba(255,255,255,.94); border-radius: var(--radius-md);
   display: grid; grid-template-columns: 1fr 1fr; max-width: 1000px; margin: 0 auto;
   box-shadow: 0 44px 110px rgba(8,24,46,.26); overflow: hidden;
-  border: 1px solid rgba(255,255,255,.65);
+  border: none;
   backdrop-filter: blur(18px);
 }
 .ev-card-content { padding: 64px 48px; display: flex; flex-direction: column; justify-content: center; }
@@ -457,7 +459,20 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
 .ev-list li { display: flex; flex-direction: column; gap: 4px; }
 .ev-list strong { color: var(--primary); font-size: 1.05rem; }
 .ev-list span { color: var(--text-secondary); font-size: 0.95rem; }
-.ev-card-image img { width: 100%; height: 100%; object-fit: cover; }
+.ev-card-image {
+  background: transparent;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.ev-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  outline: none;
+}
 
 /* ===== Editorial Promise ===== */
 .editorial-promise {
