@@ -32,7 +32,7 @@ const translations = {
     prof_m_f1: 'Hotelería cercana a congresos',
     prof_m_f2: 'Traslados, registros y agendas académicas',
     prof_m_f3: 'Acompañamiento para grupos profesionales',
-    prof_m_btn: 'Ver servicios profesionales',
+    prof_m_btn: 'Ver programa médico',
     prof_c_det_title: 'Servicios Corporativos Destacados',
     prof_c_det_p: 'Entendemos que un viaje corporativo es una inversión en tu equipo. Nos encargamos de todo el proceso para que tú te enfoques en los objetivos de la empresa:',
     prof_c_det_li1: '<strong>Viajes de Incentivo:</strong> Recompensa a tus mejores talentos con experiencias exclusivas y memorables.',
@@ -246,7 +246,7 @@ const translations = {
     prof_m_f1: 'Hotels near congresses',
     prof_m_f2: 'Transfers, registrations, and academic agendas',
     prof_m_f3: 'Support for professional groups',
-    prof_m_btn: 'View professional services',
+    prof_m_btn: 'View medical program',
     prof_c_det_title: 'Featured Corporate Services',
     prof_c_det_p: 'We understand that a corporate trip is an investment in your team. We handle the entire process so you can focus on your company\'s goals:',
     prof_c_det_li1: '<strong>Incentive Trips:</strong> Reward your best talent with exclusive and memorable experiences.',
@@ -614,7 +614,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroSlides = document.querySelectorAll('.hero-slide');
     const heroTexts = document.querySelectorAll('.hero-text-slide');
     const heroDots = document.querySelectorAll('.hero-progress-dot');
-    const desktopMotion = window.matchMedia('(min-width: 769px)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const desktopMotion = window.matchMedia('(min-width: 769px)').matches && !reducedMotion;
+    const heroScrollMotion = !reducedMotion;
+    const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
     
     const setStaticHeroStage = (index) => {
       heroSlides.forEach((slide, i) => slide.classList.toggle('active', i === index));
@@ -622,7 +625,7 @@ document.addEventListener('DOMContentLoaded', () => {
       heroDots.forEach((dot, i) => dot.classList.toggle('active', i === index));
     };
 
-    if (heroSlides.length > 0 && typeof MotionPathPlugin !== 'undefined' && desktopMotion) {
+    if (heroSlides.length > 0 && typeof MotionPathPlugin !== 'undefined' && heroScrollMotion) {
       let activeHeroStage = 0;
       gsap.set(heroSlides, { autoAlpha: 0 });
       gsap.set(heroTexts, { autoAlpha: 0, y: 18, filter: 'blur(3px)' });
@@ -659,9 +662,11 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
           trigger: '.hero',
           start: 'top top',
-          end: '+=1600',
+          end: () => isMobileViewport ? '+=1150' : '+=1600',
           pin: true,
-          scrub: 0.28,
+          scrub: isMobileViewport ? 0.18 : 0.28,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
           onUpdate: (self) => {
             const stage = self.progress < 0.34 ? 0 : self.progress < 0.68 ? 1 : 2;
             setHeroStage(stage);
@@ -693,7 +698,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Fade in the initial elements on load
       gsap.from('.header', { y: -100, autoAlpha: 0, duration: 1, ease: 'power4.out' });
       gsap.from('.nav-links li', { y: -20, autoAlpha: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out', delay: 0.5 });
-      gsap.from('.hero-kicker', { y: 18, autoAlpha: 0, duration: 0.7, ease: 'power3.out', delay: 0.25 });
+      const heroKicker = document.querySelector('.hero-kicker');
+      if (heroKicker) gsap.from(heroKicker, { y: 18, autoAlpha: 0, duration: 0.7, ease: 'power3.out', delay: 0.25 });
       gsap.fromTo(heroTexts[0], { y: 40, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 1, ease: 'power3.out', delay: 0.4 });
       gsap.from('.hero-progress-dot', { y: 10, autoAlpha: 0, duration: 0.5, stagger: 0.08, ease: 'power3.out', delay: 0.65 });
       gsap.from('.hero-search-bar', { y: 20, autoAlpha: 0, duration: 0.8, ease: 'power3.out', delay: 0.6 });
@@ -701,7 +707,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { x: -20, autoAlpha: 0 },
         { x: 0, autoAlpha: 1, duration: 0.6, stagger: 0.1, ease: 'power3.out', delay: 0.8 }
       );
-    } else {
+    } else if (heroSlides.length > 0) {
       setStaticHeroStage(0);
       gsap.set([...heroSlides, ...heroTexts], { clearProps: 'all' });
       const heroTl = gsap.timeline();
@@ -882,6 +888,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Contact form validation ---
   const form = document.getElementById('contact-form');
+  if (form) {
+    const steps = Array.from(form.querySelectorAll('.form-step'));
+    const stepDots = Array.from(form.querySelectorAll('.form-step-dot'));
+    const nextButton = form.querySelector('.form-next');
+    const prevButton = form.querySelector('.form-prev');
+    let currentStep = 0;
+
+    const setFormStep = (index) => {
+      currentStep = Math.max(0, Math.min(index, steps.length - 1));
+      steps.forEach((step, stepIndex) => step.classList.toggle('active', stepIndex === currentStep));
+      stepDots.forEach((dot, dotIndex) => {
+        dot.classList.toggle('active', dotIndex === currentStep);
+        dot.classList.toggle('complete', dotIndex < currentStep);
+      });
+    };
+
+    const validateFields = (fields) => {
+      let valid = true;
+      fields.forEach(field => {
+        if (field.hasAttribute('required') && !field.value.trim()) {
+          field.style.borderColor = '#ef4444';
+          valid = false;
+        } else {
+          field.style.borderColor = '';
+        }
+        if (field.type === 'email' && field.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
+          field.style.borderColor = '#ef4444';
+          valid = false;
+        }
+      });
+      return valid;
+    };
+
+    nextButton?.addEventListener('click', () => {
+      const currentFields = Array.from(steps[currentStep].querySelectorAll('input, select, textarea'));
+      if (!validateFields(currentFields)) return;
+      setFormStep(currentStep + 1);
+    });
+
+    prevButton?.addEventListener('click', () => setFormStep(currentStep - 1));
+    setFormStep(0);
+  }
+
   form?.addEventListener('submit', async e => {
     e.preventDefault();
     const formData = new FormData(form);
@@ -939,6 +988,63 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.disabled = false;
       }, 3500);
     }
+  });
+
+  document.querySelectorAll('#b2b-contact-form, #medical-contact-form').forEach(landingForm => {
+    landingForm.addEventListener('submit', async e => {
+      e.preventDefault();
+      let valid = true;
+
+      landingForm.querySelectorAll('[required]').forEach(field => {
+        if (!field.value.trim()) {
+          field.style.borderColor = '#ef4444';
+          valid = false;
+        } else {
+          field.style.borderColor = '';
+        }
+      });
+
+      const email = landingForm.querySelector('[type="email"]');
+      if (email && email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+        email.style.borderColor = '#ef4444';
+        valid = false;
+      }
+
+      if (!valid) return;
+
+      const btn = landingForm.querySelector('.form-submit');
+      const originalText = btn.textContent;
+      btn.textContent = 'Enviando solicitud...';
+      btn.disabled = true;
+
+      const lead = Object.fromEntries(new FormData(landingForm).entries());
+      lead.source = landingForm.dataset.source || 'b2b_landing_form';
+      lead.page = window.location.pathname;
+      lead.language = currentLang;
+
+      try {
+        await window.submitLeadToWix(lead);
+        window.csTrack('Lead', {
+          content_name: lead.source,
+          organization_type: lead.specialty ? 'medical_partner' : 'company',
+          interest: lead.interest || lead.specialty || '',
+          volume: lead.volume || lead.patient_volume || ''
+        });
+        btn.textContent = 'Solicitud recibida';
+        btn.style.background = '#183A63';
+        landingForm.reset();
+      } catch (error) {
+        console.error('Landing lead submit failed:', error);
+        btn.textContent = 'No se pudo enviar. Intenta de nuevo.';
+        btn.style.background = '#B91C1C';
+      }
+
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3500);
+    });
   });
 
   // --- Active nav link highlight ---
