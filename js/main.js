@@ -1010,56 +1010,25 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', activateLink, { passive: true });
 
   // --- B2B Profile Selection ---
-  const profileCards = document.querySelectorAll('.profile-card');
-  const detailsWrapper = document.getElementById('profile-details-wrapper');
-  const profileDetails = document.querySelectorAll('.profile-details');
-  const mobileBreakpoint = window.matchMedia('(max-width: 768px)');
-
+  const profileCards = document.querySelectorAll('.profile-card[data-href]');
   profileCards.forEach(card => {
-    card.setAttribute('role', 'button');
+    const target = card.dataset.href;
+    if (!target) return;
+
+    card.setAttribute('role', 'link');
     card.setAttribute('tabindex', '0');
-    card.setAttribute('aria-expanded', 'false');
 
-    const activateProfile = () => {
-      const targetId = 'details-' + card.dataset.profile;
-      const isAlreadyActive = card.classList.contains('active');
-      const isMobile = mobileBreakpoint.matches;
-
-      if (isMobile && isAlreadyActive) {
-        card.classList.remove('active');
-        card.setAttribute('aria-expanded', 'false');
-        detailsWrapper?.classList.remove('active');
-        profileDetails.forEach(detail => detail.classList.remove('active'));
-        return;
-      }
-
-      profileCards.forEach(c => {
-        c.classList.remove('active');
-        c.setAttribute('aria-expanded', 'false');
-      });
-      card.classList.add('active');
-      card.setAttribute('aria-expanded', 'true');
-
-      detailsWrapper?.classList.add('active');
-
-      profileDetails.forEach(detail => {
-        detail.classList.toggle('active', detail.id === targetId);
-      });
-
-      setTimeout(() => {
-        const scrollTarget = isMobile ? card : detailsWrapper;
-        if (!scrollTarget) return;
-        const offset = isMobile ? 86 : 100;
-        const y = scrollTarget.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }, 100);
+    const goToTarget = (event) => {
+      const clickedButton = event?.target?.closest('a, button');
+      if (clickedButton) return;
+      window.location.href = target;
     };
 
-    card.addEventListener('click', activateProfile);
+    card.addEventListener('click', goToTarget);
     card.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        activateProfile();
+        window.location.href = target;
       }
     });
   });
@@ -1105,7 +1074,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     empresa: {
       messageKey: "chat_msg_emp",
-      action: { textKey: "chat_act_emp", target: "#perfiles", onclick: () => { document.querySelector('[data-profile="corporate"]')?.click(); } },
+      action: { textKey: "chat_act_emp", target: "empresas/index.html" },
       options: [
         { textKey: "chat_cot_now", next: "cotizar" },
         { textKey: "chat_back", next: "start" }
@@ -1113,7 +1082,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     medico: {
       messageKey: "chat_msg_med",
-      action: { textKey: "chat_act_med", target: "#perfiles", onclick: () => { document.querySelector('[data-profile="medical"]')?.click(); } },
+      action: { textKey: "chat_act_med", target: "medicos/index.html" },
       options: [
         { textKey: "chat_cot_now", next: "cotizar" },
         { textKey: "chat_back", next: "start" }
