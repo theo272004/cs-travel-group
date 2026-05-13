@@ -11,9 +11,9 @@ const translations = {
     nav_contact: 'Contacto',
     nav_cta: 'Cotizar ahora',
     hero_t1: 'Movemos <em>grupos</em> con respaldo internacional.',
-    hero_d1: 'Planificación profesional para empresas, universidades, colegios y equipos médicos. Vuelos, hoteles, traslados y soporte coordinados de principio a fin.',
+    hero_d1: 'Planificación profesional para empresas, universidades, colegios y equipos médicos. Vuelos, hoteles, traslados y soporte coordinados de principio&nbsp;a&nbsp;fin.',
     hero_t2: 'Viajes de incentivo que <em>motivan</em> a tu equipo.',
-    hero_d2: 'Recompensa el esfuerzo con experiencias inolvidables. Nosotros nos encargamos de toda la logística de principio a fin.',
+    hero_d2: 'Recompensa el esfuerzo con experiencias inolvidables. Nosotros nos encargamos de toda la logística de principio&nbsp;a&nbsp;fin.',
     hero_t3: 'Logística integral para <em>congresos</em> y misiones.',
     hero_d3: 'Hotelería cercana, traslados privados, agendas académicas y acompañamiento especializado para eventos de gran escala.',
     search_placeholder: '¿Hacia dónde viaja tu grupo?',
@@ -69,7 +69,7 @@ const translations = {
     stat_1_lbl: 'viajeros coordinados',
     stat_2_lbl: 'proveedores globales',
     stat_3_lbl: 'oficinas (EE.UU. + Colombia)',
-    stat_4_val: '24/7',
+    stat_4_val: '<span class="nowrap">24/7</span>',
     stat_4_lbl: 'soporte durante tu viaje',
     srv_grid_label: 'Nuestras Soluciones',
     srv_grid_title: 'Servicios corporativos integrales',
@@ -114,7 +114,7 @@ const translations = {
     proc_s3_t: 'Confirmación',
     proc_s3_d: 'Una vez aprobado el plan, gestionamos todas las reservas: vuelos, hoteles, transporte, seguros y actividades.',
     proc_s4_t: 'El viaje',
-    proc_s4_d: 'Tu grupo viaja con respaldo total. Nuestro equipo está disponible 24/7 durante toda la experiencia.',
+    proc_s4_d: 'Tu grupo viaja con respaldo total. Nuestro equipo está disponible <span class="nowrap">24/7</span> durante toda la experiencia.',
     dest_label: 'Destinos Globales',
     dest_title: 'Viaja más allá de los <em>tópicos.</em>',
     dest_subtitle: 'Explora nuestras rutas exclusivas diseñadas para grupos institucionales y corporativos.',
@@ -285,7 +285,7 @@ const translations = {
     stat_1_lbl: 'coordinated travelers',
     stat_2_lbl: 'global suppliers',
     stat_3_lbl: 'offices (USA + Colombia)',
-    stat_4_val: '24/7',
+    stat_4_val: '<span class="nowrap">24/7</span>',
     stat_4_lbl: 'support during your trip',
     srv_grid_label: 'Our Solutions',
     srv_grid_title: 'Integrated corporate travel services',
@@ -330,7 +330,7 @@ const translations = {
     proc_s3_t: 'Confirmation',
     proc_s3_d: 'Once the plan is approved, we manage all reservations: flights, hotels, transport, insurance, and activities.',
     proc_s4_t: 'The trip',
-    proc_s4_d: 'Your group travels with full support. Our team is available 24/7 throughout the experience.',
+    proc_s4_d: 'Your group travels with full support. Our team is available <span class="nowrap">24/7</span> throughout the experience.',
     dest_label: 'Global Destinations',
     dest_title: 'Travel beyond the <em>clichés.</em>',
     dest_subtitle: 'Explore our exclusive routes designed for institutional and corporate groups.',
@@ -526,6 +526,24 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       updateLanguage(btn.dataset.lang);
     });
+  });
+
+  document.querySelectorAll('.lang-trigger').forEach(trigger => {
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const switcher = trigger.closest('.lang-switcher');
+      document.querySelectorAll('.lang-switcher.open').forEach(openSwitcher => {
+        if (openSwitcher !== switcher) openSwitcher.classList.remove('open');
+      });
+      switcher?.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.lang-switcher')) {
+      document.querySelectorAll('.lang-switcher.open').forEach(openSwitcher => openSwitcher.classList.remove('open'));
+    }
   });
 
   // Initial language load
@@ -986,28 +1004,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 3500);
     });
   });
-
-  // --- Active nav link highlight ---
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-
-  const activateLink = () => {
-    const scrollY = window.scrollY + 120;
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      const id = section.getAttribute('id');
-      if (scrollY >= top && scrollY < top + height) {
-        navLinks.forEach(link => {
-          link.style.color = '';
-          if (link.getAttribute('href') === '#' + id) {
-            link.style.color = '#F4D068';
-          }
-        });
-      }
-    });
-  };
-  window.addEventListener('scroll', activateLink, { passive: true });
 
   // --- B2B Profile Selection ---
   const profileCards = document.querySelectorAll('.profile-card[data-href]');
