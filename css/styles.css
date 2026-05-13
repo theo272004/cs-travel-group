@@ -23,16 +23,16 @@
   --border: #DCE8F4;
   
   /* Shadows - Softer for premium feel */
-  --shadow-sm: 0 4px 20px rgba(18,38,64,.04);
-  --shadow-md: 0 12px 32px rgba(18,38,64,.06);
-  --shadow-lg: 0 24px 48px rgba(18,38,64,.08);
-  --shadow-xl: 0 32px 64px rgba(18,38,64,.12);
+  --shadow-sm: 0 10px 26px rgba(18,38,64,.08);
+  --shadow-md: 0 18px 40px rgba(18,38,64,.12);
+  --shadow-lg: 0 28px 60px rgba(18,38,64,.16);
+  --shadow-xl: 0 40px 86px rgba(18,38,64,.2);
   
   /* Border radius - Reduced for editorial look */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
   
   /* Typography */
   --font-heading: 'Manrope', sans-serif;
@@ -105,6 +105,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   display: inline-flex; align-items: center; gap: 8px;
   padding: 14px 32px; border-radius: var(--radius-sm); font-weight: 700;
   font-size: 0.95rem; transition: all var(--transition); position: relative; overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 .btn-primary {
   background: var(--primary); color: #fff;
@@ -478,7 +479,7 @@ body.b2b-landing .header.scrolled .nav-cta {
 .ev-card {
   background: rgba(255,255,255,.94); border-radius: var(--radius-md);
   display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(340px, 0.8fr); max-width: 1180px; margin: 0 auto;
-  box-shadow: 0 44px 110px rgba(8,24,46,.26); overflow: hidden;
+  box-shadow: var(--shadow-xl); overflow: hidden;
   border: none;
   backdrop-filter: blur(18px);
 }
@@ -676,7 +677,7 @@ body.b2b-landing .header.scrolled .nav-cta {
   background: rgba(255,255,255,.1); backdrop-filter: blur(24px);
   border: 1px solid rgba(191,216,244,.26); border-radius: var(--radius-md);
   padding: 40px;
-  box-shadow: 0 34px 80px rgba(0,0,0,.18);
+  box-shadow: var(--shadow-xl);
 }
 .form-group { margin-bottom: 20px; }
 .form-group label {
@@ -824,7 +825,7 @@ body.b2b-landing .header.scrolled .nav-cta {
   background: var(--surface);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 18px 52px rgba(16,42,76,.08);
+  box-shadow: var(--shadow-md);
   transition: all var(--transition);
   cursor: pointer;
   border: 1px solid rgba(16,42,76,.08);
@@ -833,7 +834,7 @@ body.b2b-landing .header.scrolled .nav-cta {
 }
 .profile-card:hover, .profile-card.active {
   transform: translateY(-10px);
-  box-shadow: 0 34px 80px rgba(16,42,76,.16);
+  box-shadow: var(--shadow-xl);
   border-color: rgba(106,155,200,.45);
 }
 .profile-image {
@@ -1625,14 +1626,14 @@ body.b2b-landing .header.scrolled .nav-cta {
   background: #fff;
   padding: clamp(28px, 2.7vw, 40px);
   border-radius: var(--radius-sm);
-  box-shadow: 0 10px 40px rgba(16,42,76,0.05);
+  box-shadow: var(--shadow-md);
   border: 1px solid rgba(16,42,76,0.05);
   transition: transform var(--transition), box-shadow var(--transition);
   min-height: 250px;
 }
 .srv-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 60px rgba(16,42,76,0.1);
+  box-shadow: var(--shadow-xl);
 }
 .srv-icon {
   width: 52px;
@@ -1887,7 +1888,7 @@ body.b2b-landing .header.scrolled .nav-cta {
   background: var(--surface);
   border-radius: var(--radius-xl);
   padding: 56px 48px;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-xl);
   border: 1px solid rgba(16,42,76,.05);
 }
 .b2b-fit-card.pro {
@@ -2209,6 +2210,7 @@ body.b2b-landing .header.scrolled .nav-cta {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
   transition: all var(--transition-fast);
 }
 .faq-item:hover {
@@ -2450,7 +2452,7 @@ body.b2b-landing .header.scrolled .nav-cta {
   background:
     linear-gradient(180deg, rgba(234,244,255,.8) 0%, rgba(255,255,255,.96) 44%),
     var(--surface);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
   overflow: hidden;
 }
 .timeline-step::after {
@@ -2517,7 +2519,7 @@ body.b2b-landing .header.scrolled .nav-cta {
     linear-gradient(145deg, rgba(255,255,255,.94), rgba(255,255,255,.72)),
     radial-gradient(circle at 20% 20%, rgba(255,210,0,.24), transparent 34%);
   border: 1px solid rgba(16,42,76,.08);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 .medical-specialties {
   padding: var(--section-py) 0;
@@ -2539,7 +2541,7 @@ body.b2b-landing .header.scrolled .nav-cta {
   background: #FFFFFF;
   color: var(--primary);
   font-weight: 600;
-  box-shadow: 0 10px 28px rgba(16,42,76,.04);
+  box-shadow: var(--shadow-sm);
 }
 .medical-brand {
   padding: 110px 0;

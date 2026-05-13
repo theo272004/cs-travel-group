@@ -435,6 +435,217 @@ const translations = {
   }
 };
 
+const pageTranslations = {
+  es: {
+    company: {
+      company_nav_advantages: 'Ventajas',
+      company_nav_solutions: 'Soluciones',
+      company_nav_faqs: 'FAQs',
+      company_hero_kicker: 'Agencia de viajes empresariales en Colombia',
+      company_hero_title: 'Si coordinar los viajes de tu empresa te quita tiempo, estás pagando un precio muy alto',
+      company_hero_desc: 'En CS Travel Group gestionamos los viajes de tu empresa con tarifas que no consigues solo, un equipo ágil y beneficios que tus empleados te van a agradecer.',
+      company_hero_cta: 'Quiero saber más',
+      company_statement_title: 'El costo real de tus viajes empresariales <em>no está en las facturas.</em>',
+      company_statement_p1: 'Tu empresa paga más de lo que debería en tiquetes y hospedajes porque nadie negoció las tarifas. Los cambios de último minuto no son atendidos a tiempo porque los imprevistos no siempre ocurren en horarios laborales, y coordinar viajes se ha convertido en un segundo cargo para tu equipo que lo retrasa en sus tareas más importantes.',
+      company_statement_highlight: 'Ese es el precio invisible que nadie está midiendo. Nosotros estamos para que dejes de pagarlo.',
+      company_ed_title: 'Un frente de viajes corporativos que piensa como tu empresa, responde como tu equipo y ejecuta con criterio propio.',
+      company_ed_desc: 'No entramos solo a cotizar trayectos. Entramos a ordenar decisiones, anticipar cambios y convertir una tarea dispersa en una operación confiable para tu gente y tus finanzas.',
+      company_ed_1_t: 'Continuidad operativa real',
+      company_ed_1_d: 'Cuando cambia la agenda, cambia la operación con ella. Reacomodamos rutas, horarios y reservas sin convertir cada ajuste en un nuevo problema interno.',
+      company_ed_2_t: 'Criterio antes de la cotización',
+      company_ed_2_d: 'No te mandamos veinte opciones para que adivines cuál conviene. Filtramos, comparamos y proponemos con lógica de costo, comodidad y objetivo del viaje.',
+      company_ed_3_t: 'Control visible del gasto',
+      company_ed_3_d: 'La operación queda más clara para aprobar, reportar y revisar. Menos fugas por urgencias mal gestionadas, menos sobrecostos por compras desordenadas.',
+      company_ed_4_t: 'Atención que protege reputación interna',
+      company_ed_4_d: 'Tus viajeros sienten acompañamiento de principio&nbsp;a&nbsp;fin. Eso mejora la experiencia del equipo y evita que RR. HH., finanzas o gerencia terminen apagando incendios.',
+      company_ev_title: 'Sin costo adicional <br><em>para la empresa</em>',
+      company_ev_p1: 'Con CS Travel, tu empresa reduce costos y tu equipo gana beneficios. ¿Sabías que los incentivos de viaje son de los más valorados por los equipos pero de los menos ofrecidos en Colombia?',
+      company_ev_p2: 'Al afiliarte con nosotros, tus empleados acceden a tarifas diferenciales en vuelos, hoteles y planes para sus viajes personales.',
+      company_ev_l1_t: 'Activación inmediata:',
+      company_ev_l1_d: 'El beneficio se activa automáticamente con tu afiliación corporativa.',
+      company_ev_l2_t: 'Acceso exclusivo:',
+      company_ev_l2_d: 'Tu equipo accede a tarifas que no encuentra en buscadores genéricos.',
+      company_ev_l3_t: 'Fidelización real:',
+      company_ev_l3_d: 'Un beneficio altamente valorado que aumenta el sentido de pertenencia.',
+      company_ev_cta: 'Quiero saber más',
+      company_sol_title: 'Nuestras soluciones para empresas',
+      company_sol_desc: 'Tres formas de acompañar tu operación según el tipo de viaje que hoy más presión le genera a tu equipo.',
+      company_card1_tag: 'Viajes recurrentes',
+      company_card1_desc: 'Para compañías con ejecutivos, comerciales o equipos que se mueven seguido. Centralizamos reservas, cambios y seguimiento para que viajar deje de ser una carga interna.',
+      company_card1_cta: 'Quiero este formato',
+      company_card2_tag: 'Logística y eventos',
+      company_card2_desc: 'Para convenciones, comités, viajes de prensa o grupos comerciales. Diseñamos llegadas, hospedaje y movilidad como una sola secuencia operativa.',
+      company_card2_cta: 'Explorar esta solución',
+      company_card3_tag: 'Viajes de incentivo',
+      company_card3_desc: 'Para marcas que quieren premiar desempeño o fortalecer cultura. Creamos experiencias memorables sin perder trazabilidad, control ni calidad percibida.',
+      company_card3_cta: 'Diseñar viaje incentivo',
+      company_fit_title: 'Cómo saber si este modelo encaja con tu empresa',
+      company_fit_desc: 'No trabajamos para todo el mundo. Funcionamos mejor cuando el viaje ya pesa en la operación y alguien necesita recuperarlo en orden, tiempo y criterio.',
+      company_fit_pro_title: 'CS Travel encaja contigo si:',
+      company_fit_con_title: 'Probablemente no somos la mejor opción si:',
+      company_phil_title: 'Esto es lo que significa trabajar con nosotros',
+      company_phil_desc: 'No reemplazamos un buscador. Reemplazamos fricción, desorden y desgaste operativo con acompañamiento serio.',
+      company_booking_title: '¿Y si coordinar viajes te está costando más de lo que crees?',
+      company_booking_desc: 'Muchas empresas no saben cuánto les está costando coordinar viajes sin un aliado experto. Tú solo escríbenos, nosotros nos encargamos del resto.',
+      company_booking_cta: 'Ponte en contacto ✦',
+      company_faq_title: 'FAQs sobre nuestra agencia de viajes empresariales',
+      company_contact_title: 'Comienza a reducir los costos de viaje de tu empresa',
+      company_contact_desc: 'Déjanos tus datos y un ejecutivo se pondrá en contacto contigo para presentarte una propuesta en menos de 48 horas.',
+      company_form_name: 'Nombre completo',
+      company_form_company: 'Empresa',
+      company_form_email: 'Correo corporativo',
+      company_form_phone: 'Teléfono / WhatsApp',
+      company_form_volume: 'Frecuencia de viajes aprox.',
+      company_form_interest: 'Servicio de interés',
+      company_form_message: 'Mensaje adicional (Opcional)',
+      company_form_submit: 'Solicitar propuesta corporativa →',
+      company_footer_desc: 'Agencia de viajes acreditada internacionalmente, especializada en la planificación de viajes corporativos para empresas e instituciones.'
+    },
+    medical: {
+      medical_nav_program: 'Programa',
+      medical_nav_process: 'Proceso',
+      medical_nav_services: 'Servicios',
+      medical_nav_faqs: 'FAQs',
+      medical_nav_cta: 'Agendar llamada',
+      medical_hero_kicker: 'Para médicos y clínicas con pacientes que viajan',
+      medical_hero_title: 'Ofrécele a tus pacientes un servicio completo.',
+      medical_hero_desc: 'CS Travel coordina vuelos, hospedajes, seguros y traslados para pacientes nacionales y extranjeros, bajo tu marca y sin carga operativa adicional para tu consulta.',
+      medical_hero_cta_1: '¿Cómo funciona?',
+      medical_hero_cta_2: 'Habla con un asesor',
+      medical_program_title: 'Tus pacientes ya van a viajar. ¿Por qué no ganar con eso?',
+      medical_program_p1: 'Cuando un paciente confirma un procedimiento, CS Travel toma el relevo logístico: vuelos, hospedaje cercano a la clínica, traslados privados y acompañamiento durante el viaje.',
+      medical_program_p2: 'La experiencia se presenta bajo tu nombre, tu identidad y tu estándar de servicio. El paciente recibe un proceso más organizado y tú generas un ingreso adicional sin invertir en operación turística.',
+      medical_core_title: 'Un modelo white-label para fortalecer tu consulta',
+      medical_process_title: 'Así se integra la logística sin recargar tu operación clínica',
+      medical_services_title: 'La parte más sensible del viaje deja de improvisarse.',
+      medical_services_desc: 'Un paciente que viaja para atenderse necesita más que reservas. Necesita claridad, confianza y continuidad. Convertimos esa necesidad en una operación discreta, ordenada y fácil de acompañar desde tu consulta.',
+      medical_services_cta: 'Habla con un asesor',
+      medical_specialties_title: 'Especialmente útil para prácticas donde el viaje afecta la decisión del paciente',
+      medical_specialties_desc: 'No todas las especialidades viven la misma complejidad logística. Estas son las que más se benefician de una experiencia coordinada antes, durante y después del traslado.',
+      medical_fit_pro_title: 'Lo que mejora cuando la logística se resuelve bien',
+      medical_fit_con_title: 'Operación discreta para una experiencia más tranquila',
+      medical_brand_title: 'Tu consulta conserva el protagonismo. Nosotros sostenemos la experiencia.',
+      medical_brand_desc: 'No venimos a disputar la relación con tu paciente, sino a reforzarla. Operamos detrás de escena para que el viaje se sienta tan cuidado como la atención médica: claro, humano y confiable.',
+      medical_faq_title: 'Lo que normalmente pregunta un médico antes de iniciar',
+      medical_contact_title: '¿Cuántos pacientes dejaste ir porque la logística del viaje no estaba resuelta?',
+      medical_contact_desc: 'Una conversación de 20 minutos basta para revisar si el modelo aplica para tu consulta, clínica o centro médico.',
+      medical_form_name: 'Nombre completo',
+      medical_form_clinic: 'Clínica o consultorio',
+      medical_form_email: 'Correo profesional',
+      medical_form_phone: 'Teléfono / WhatsApp',
+      medical_form_specialty: 'Especialidad',
+      medical_form_volume: 'Pacientes viajeros aprox.',
+      medical_form_message: 'Mensaje adicional',
+      medical_form_submit: 'Agendar una llamada',
+      medical_footer_desc: 'Logística de viajes para empresas, instituciones y profesionales que necesitan una operación organizada, humana y medible.'
+    }
+  },
+  en: {
+    company: {
+      company_nav_advantages: 'Advantages',
+      company_nav_solutions: 'Solutions',
+      company_nav_faqs: 'FAQs',
+      company_hero_kicker: 'Corporate travel agency in Colombia',
+      company_hero_title: 'If coordinating your company trips takes time away from you, you are paying too high a price',
+      company_hero_desc: 'At CS Travel Group, we manage your company travel with fares you cannot get on your own, an agile team, and benefits your employees will appreciate.',
+      company_hero_cta: 'I want to know more',
+      company_statement_title: 'The real cost of your corporate travel <em>is not on the invoices.</em>',
+      company_statement_p1: 'Your company pays more than it should for tickets and lodging because no one negotiated the rates. Last-minute changes are not handled in time because surprises do not always happen during business hours, and coordinating travel has become a second job for your team that delays their most important tasks.',
+      company_statement_highlight: 'That is the invisible cost nobody is measuring. We are here so you stop paying it.',
+      company_ed_title: 'A corporate travel front that thinks like your company, responds like your team, and executes with sound judgment.',
+      company_ed_desc: 'We do not come in just to quote routes. We come in to organize decisions, anticipate changes, and turn a scattered task into a reliable operation for your people and your finances.',
+      company_ed_1_t: 'Real operational continuity',
+      company_ed_1_d: 'When the agenda changes, the operation changes with it. We rearrange routes, schedules, and bookings without turning each adjustment into a new internal problem.',
+      company_ed_2_t: 'Judgment before quoting',
+      company_ed_2_d: 'We do not send twenty options and ask you to guess which one works. We filter, compare, and propose with a logic based on cost, comfort, and trip purpose.',
+      company_ed_3_t: 'Visible spending control',
+      company_ed_3_d: 'The operation becomes clearer to approve, report, and review. Fewer leaks from poorly managed urgencies, fewer overruns from disorganized purchases.',
+      company_ed_4_t: 'Care that protects internal reputation',
+      company_ed_4_d: 'Your travelers feel supported from start&nbsp;to&nbsp;finish. That improves the team experience and keeps HR, finance, or leadership from having to put out fires.',
+      company_ev_title: 'At no additional cost <br><em>to the company</em>',
+      company_ev_p1: 'With CS Travel, your company reduces costs and your team gains benefits. Did you know travel incentives are among the most valued perks by teams, yet among the least offered in Colombia?',
+      company_ev_p2: 'By joining us, your employees gain access to preferential rates on flights, hotels, and plans for their personal trips.',
+      company_ev_l1_t: 'Immediate activation:',
+      company_ev_l1_d: 'The benefit is activated automatically with your corporate affiliation.',
+      company_ev_l2_t: 'Exclusive access:',
+      company_ev_l2_d: 'Your team gets fares they cannot find in generic search engines.',
+      company_ev_l3_t: 'Real retention:',
+      company_ev_l3_d: 'A highly valued benefit that increases belonging and loyalty.',
+      company_ev_cta: 'I want to know more',
+      company_sol_title: 'Our solutions for companies',
+      company_sol_desc: 'Three ways to support your operation depending on the type of travel currently creating the most pressure for your team.',
+      company_card1_tag: 'Frequent travel',
+      company_card1_desc: 'For companies with executives, sales staff, or teams that move often. We centralize bookings, changes, and follow-up so travel stops being an internal burden.',
+      company_card1_cta: 'I want this format',
+      company_card2_tag: 'Logistics and events',
+      company_card2_desc: 'For conventions, committees, press trips, or commercial groups. We design arrivals, lodging, and mobility as a single operational sequence.',
+      company_card2_cta: 'Explore this solution',
+      company_card3_tag: 'Incentive travel',
+      company_card3_desc: 'For brands that want to reward performance or strengthen culture. We create memorable experiences without losing traceability, control, or perceived quality.',
+      company_card3_cta: 'Design incentive trip',
+      company_fit_title: 'How to know if this model fits your company',
+      company_fit_desc: 'We do not work for everyone. We work best when travel is already weighing on the operation and someone needs to recover order, time, and judgment.',
+      company_fit_pro_title: 'CS Travel fits you if:',
+      company_fit_con_title: 'We are probably not the best option if:',
+      company_phil_title: 'This is what it means to work with us',
+      company_phil_desc: 'We do not replace a search engine. We replace friction, disorder, and operational wear with serious support.',
+      company_booking_title: 'What if coordinating travel is costing you more than you think?',
+      company_booking_desc: 'Many companies do not realize how much it costs to coordinate travel without an expert partner. You just write to us, and we take care of the rest.',
+      company_booking_cta: 'Get in touch ✦',
+      company_faq_title: 'FAQs about our corporate travel agency',
+      company_contact_title: 'Start reducing your company travel costs',
+      company_contact_desc: 'Leave us your details and an executive will contact you with a proposal in less than 48 hours.',
+      company_form_name: 'Full name',
+      company_form_company: 'Company',
+      company_form_email: 'Corporate email',
+      company_form_phone: 'Phone / WhatsApp',
+      company_form_volume: 'Approx. travel frequency',
+      company_form_interest: 'Service of interest',
+      company_form_message: 'Additional message (Optional)',
+      company_form_submit: 'Request corporate proposal →',
+      company_footer_desc: 'Internationally accredited travel agency specialized in planning corporate travel for companies and institutions.'
+    },
+    medical: {
+      medical_nav_program: 'Program',
+      medical_nav_process: 'Process',
+      medical_nav_services: 'Services',
+      medical_nav_faqs: 'FAQs',
+      medical_nav_cta: 'Schedule a call',
+      medical_hero_kicker: 'For doctors and clinics with traveling patients',
+      medical_hero_title: 'Offer your patients a complete service.',
+      medical_hero_desc: 'CS Travel coordinates flights, lodging, insurance, and transfers for domestic and international patients under your brand and without extra operational load for your practice.',
+      medical_hero_cta_1: 'How does it work?',
+      medical_hero_cta_2: 'Talk to an advisor',
+      medical_program_title: 'Your patients are already going to travel. Why not benefit from it?',
+      medical_program_p1: 'When a patient confirms a procedure, CS Travel takes over the logistics: flights, lodging near the clinic, private transfers, and support throughout the trip.',
+      medical_program_p2: 'The experience is presented under your name, your identity, and your service standard. The patient receives a more organized process, and you generate additional income without investing in tourism operations.',
+      medical_core_title: 'A white-label model to strengthen your practice',
+      medical_process_title: 'This is how travel logistics integrate without overloading your clinical operation',
+      medical_services_title: 'The most sensitive part of the trip stops being improvised.',
+      medical_services_desc: 'A patient who travels for treatment needs more than reservations. They need clarity, confidence, and continuity. We turn that need into a discreet, orderly operation that is easy to support from your practice.',
+      medical_services_cta: 'Talk to an advisor',
+      medical_specialties_title: 'Especially useful for practices where travel affects the patient’s decision',
+      medical_specialties_desc: 'Not every specialty faces the same logistical complexity. These are the ones that benefit most from a coordinated experience before, during, and after the transfer.',
+      medical_fit_pro_title: 'What improves when logistics are handled well',
+      medical_fit_con_title: 'Discreet operation for a calmer experience',
+      medical_brand_title: 'Your practice keeps the spotlight. We support the experience.',
+      medical_brand_desc: 'We are not here to compete for the relationship with your patient, but to reinforce it. We work behind the scenes so the trip feels as carefully handled as the medical care itself: clear, human, and reliable.',
+      medical_faq_title: 'What a doctor usually asks before getting started',
+      medical_contact_title: 'How many patients did you lose because the travel logistics were not resolved?',
+      medical_contact_desc: 'A 20-minute conversation is enough to review whether the model applies to your practice, clinic, or medical center.',
+      medical_form_name: 'Full name',
+      medical_form_clinic: 'Clinic or practice',
+      medical_form_email: 'Professional email',
+      medical_form_phone: 'Phone / WhatsApp',
+      medical_form_specialty: 'Specialty',
+      medical_form_volume: 'Approx. traveling patients',
+      medical_form_message: 'Additional message',
+      medical_form_submit: 'Schedule a call',
+      medical_footer_desc: 'Travel logistics for companies, institutions, and professionals who need an organized, human, and measurable operation.'
+    }
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   let chatOpened = false;
 
@@ -483,6 +694,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateLanguage = (lang) => {
     currentLang = lang;
     localStorage.setItem('cs_lang', lang);
+    const pageKey = document.body.classList.contains('medical-landing')
+      ? 'medical'
+      : (document.body.classList.contains('b2b-landing') ? 'company' : null);
+    const activeTranslations = {
+      ...translations[lang],
+      ...(pageKey ? pageTranslations[lang]?.[pageKey] || {} : {})
+    };
     
     // Update active state in switchers
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -497,16 +715,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update all elements with data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n;
-      if (translations[lang][key]) {
-        el.innerHTML = translations[lang][key];
+      if (activeTranslations[key]) {
+        el.innerHTML = activeTranslations[key];
       }
     });
 
     // Update all elements with data-i18n-placeholder
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const key = el.dataset.i18nPlaceholder;
-      if (translations[lang][key]) {
-        el.placeholder = translations[lang][key];
+      if (activeTranslations[key]) {
+        el.placeholder = activeTranslations[key];
       }
     });
 
