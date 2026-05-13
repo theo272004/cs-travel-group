@@ -727,7 +727,7 @@ const pageTranslations = {
       medical_step2_d: 'The quote organizes flights, accommodation, transfers, and suggested coverage in a format that is easier to explain, approve, and sell to the patient.',
       medical_step3_t: 'We take care of the journey; you take care of the procedure',
       medical_step3_d: 'We coordinate the travel experience, accompany changes, and handle logistical incidents so that your team can focus on medical care.',
-      medical_footer_desc: 'Travel logistics for companies, institutions, and professionals who need an organized, human, and measurable operation.',,
+      medical_footer_desc: 'Travel logistics for companies, institutions, and professionals who need an organized, human, and measurable operation.',
       medical_testimonials_title: 'Trust from those who already operate with us',
       medical_test1_text: 'Placeholder: "Offering the complete logistical package has greatly improved my international patients experience."',
       medical_test1_author: 'Placeholder: Dr. Robert Smith',
