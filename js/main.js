@@ -445,9 +445,9 @@ const pageTranslations = {
       company_hero_title: 'Si coordinar los viajes de tu empresa te quita tiempo, estás pagando un precio muy alto',
       company_hero_desc: 'En CS Travel Group gestionamos los viajes de tu empresa con tarifas que no consigues solo, un equipo ágil y beneficios que tus empleados te van a agradecer.',
       company_hero_cta: 'Quiero saber más',
-      company_statement_title: 'El costo real de tus viajes empresariales <em>no está en las facturas.</em>',
+      company_statement_title: 'El costo real de tus viajes empresariales <br><em>no está en las facturas.</em>',
       company_statement_p1: 'Tu empresa paga más de lo que debería en tiquetes y hospedajes porque nadie negoció las tarifas. Los cambios de último minuto no son atendidos a tiempo porque los imprevistos no siempre ocurren en horarios laborales, y coordinar viajes se ha convertido en un segundo cargo para tu equipo que lo retrasa en sus tareas más importantes.',
-      company_statement_highlight: 'Ese es el precio invisible que nadie está midiendo. Nosotros estamos para que dejes de pagarlo.',
+      company_statement_highlight: '"Ese es el precio invisible que nadie está midiendo. Nosotros estamos para que dejes de pagarlo."',
       company_ed_title: 'Un frente de viajes corporativos que piensa como tu empresa, responde como tu equipo y ejecuta con criterio propio.',
       company_ed_desc: 'No entramos solo a cotizar trayectos. Entramos a ordenar decisiones, anticipar cambios y convertir una tarea dispersa en una operación confiable para tu gente y tus finanzas.',
       company_ed_1_t: 'Continuidad operativa real',
@@ -499,7 +499,20 @@ const pageTranslations = {
       company_form_interest: 'Servicio de interés',
       company_form_message: 'Mensaje adicional (Opcional)',
       company_form_submit: 'Solicitar propuesta corporativa →',
-      company_footer_desc: 'Agencia de viajes acreditada internacionalmente, especializada en la planificación de viajes corporativos para empresas e instituciones.'
+      company_footer_desc: 'Agencia de viajes acreditada internacionalmente, especializada en la planificación de viajes corporativos para empresas e instituciones.',
+      company_testimonials_title: 'Lo que dicen quienes ya viajan con nosotros',
+      company_test1_text: 'Placeholder: "El soporte 24/7 y la agilidad para resolver cambios de último minuto han sido fundamentales para nuestro equipo comercial."',
+      company_test1_author: 'Placeholder: Juan Pérez',
+      company_test1_role: 'Gerente Administrativo',
+      company_fit_si_1: 'Tu equipo viaja al menos una vez al mes.',
+      company_fit_si_2: 'Coordinas viajes por correo o WhatsApp personal.',
+      company_fit_si_3: 'No tienes tarifas negociadas con aerolíneas ni hoteles.',
+      company_fit_si_4: 'Te gustaría dar un beneficio real a tus empleados sin costo extra.',
+      company_fit_si_5: 'Necesitas control del gasto en viajes sin dedicarle tiempo.',
+      company_fit_no_1: 'Viajas menos de una vez al mes.',
+      company_fit_no_2: 'Ya tienes un departamento de viajes propio.',
+      company_fit_no_3: 'Necesitas integración con sistemas ERP complejos.',
+      company_fit_no_4: 'Buscas una plataforma de autogestión sin contacto humano.'
     },
     medical: {
       medical_nav_program: 'Programa',
@@ -537,7 +550,11 @@ const pageTranslations = {
       medical_form_volume: 'Pacientes viajeros aprox.',
       medical_form_message: 'Mensaje adicional',
       medical_form_submit: 'Agendar una llamada',
-      medical_footer_desc: 'Logística de viajes para empresas, instituciones y profesionales que necesitan una operación organizada, humana y medible.'
+      medical_footer_desc: 'Logística de viajes para empresas, instituciones y profesionales que necesitan una operación organizada, humana y medible.',
+      medical_testimonials_title: 'Confianza de quienes ya operan con nosotros',
+      medical_test1_text: 'Placeholder: "Ofrecer el paquete logístico completo ha mejorado mucho la experiencia de mis pacientes internacionales."',
+      medical_test1_author: 'Placeholder: Dr. Roberto Gómez',
+      medical_test1_role: 'Cirujano Plástico'
     }
   },
   en: {
@@ -549,9 +566,9 @@ const pageTranslations = {
       company_hero_title: 'If coordinating your company trips takes time away from you, you are paying too high a price',
       company_hero_desc: 'At CS Travel Group, we manage your company travel with fares you cannot get on your own, an agile team, and benefits your employees will appreciate.',
       company_hero_cta: 'I want to know more',
-      company_statement_title: 'The real cost of your corporate travel <em>is not on the invoices.</em>',
+      company_statement_title: 'The real cost of your corporate travel <br><em>is not on the invoices.</em>',
       company_statement_p1: 'Your company pays more than it should for tickets and lodging because no one negotiated the rates. Last-minute changes are not handled in time because surprises do not always happen during business hours, and coordinating travel has become a second job for your team that delays their most important tasks.',
-      company_statement_highlight: 'That is the invisible cost nobody is measuring. We are here so you stop paying it.',
+      company_statement_highlight: '"That is the invisible cost nobody is measuring. We are here so you stop paying it."',
       company_ed_title: 'A corporate travel front that thinks like your company, responds like your team, and executes with sound judgment.',
       company_ed_desc: 'We do not come in just to quote routes. We come in to organize decisions, anticipate changes, and turn a scattered task into a reliable operation for your people and your finances.',
       company_ed_1_t: 'Real operational continuity',
@@ -603,7 +620,20 @@ const pageTranslations = {
       company_form_interest: 'Service of interest',
       company_form_message: 'Additional message (Optional)',
       company_form_submit: 'Request corporate proposal →',
-      company_footer_desc: 'Internationally accredited travel agency specialized in planning corporate travel for companies and institutions.'
+      company_footer_desc: 'Internationally accredited travel agency, specialized in corporate travel planning for companies and institutions.',
+      company_testimonials_title: 'What those who already travel with us say',
+      company_test1_text: 'Placeholder: "The 24/7 support and agility in resolving last-minute changes have been fundamental for our sales team."',
+      company_test1_author: 'Placeholder: John Doe',
+      company_test1_role: 'Administrative Manager',
+      company_fit_si_1: 'Your team travels at least once a month.',
+      company_fit_si_2: 'You coordinate travel via email or personal WhatsApp.',
+      company_fit_si_3: 'You do not have negotiated rates with airlines or hotels.',
+      company_fit_si_4: 'You would like to give a real benefit to your employees at no extra cost.',
+      company_fit_si_5: 'You need control over travel spending without dedicating time to it.',
+      company_fit_no_1: 'You travel less than once a month.',
+      company_fit_no_2: 'You already have your own travel department.',
+      company_fit_no_3: 'You need integration with complex ERP systems.',
+      company_fit_no_4: 'You are looking for a self-management platform without human contact.'
     },
     medical: {
       medical_nav_program: 'Program',
@@ -641,7 +671,11 @@ const pageTranslations = {
       medical_form_volume: 'Approx. traveling patients',
       medical_form_message: 'Additional message',
       medical_form_submit: 'Schedule a call',
-      medical_footer_desc: 'Travel logistics for companies, institutions, and professionals who need an organized, human, and measurable operation.'
+      medical_footer_desc: 'Travel logistics for companies, institutions, and professionals who need an organized, human, and measurable operation.',
+      medical_testimonials_title: 'Trust from those who already operate with us',
+      medical_test1_text: 'Placeholder: "Offering the complete logistical package has greatly improved my international patients experience."',
+      medical_test1_author: 'Placeholder: Dr. Robert Smith',
+      medical_test1_role: 'Plastic Surgeon'
     }
   }
 };
@@ -902,7 +936,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
           trigger: '.hero',
           start: 'top top',
-          end: () => isMobileViewport ? '+=1150' : '+=1600',
+          end: () => isMobileViewport ? '+=860' : '+=1500',
           pin: true,
           scrub: isMobileViewport ? 0.18 : 0.28,
           anticipatePin: 1,
@@ -1067,8 +1101,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (form) {
     const steps = Array.from(form.querySelectorAll('.form-step'));
     const stepDots = Array.from(form.querySelectorAll('.form-step-dot'));
-    const nextButton = form.querySelector('.form-next');
-    const prevButton = form.querySelector('.form-prev');
+    const nextButtons = Array.from(form.querySelectorAll('.form-next'));
+    const prevButtons = Array.from(form.querySelectorAll('.form-prev'));
     let currentStep = 0;
 
     const setFormStep = (index) => {
@@ -1097,13 +1131,13 @@ document.addEventListener('DOMContentLoaded', () => {
       return valid;
     };
 
-    nextButton?.addEventListener('click', () => {
+    nextButtons.forEach(nextButton => nextButton.addEventListener('click', () => {
       const currentFields = Array.from(steps[currentStep].querySelectorAll('input, select, textarea'));
       if (!validateFields(currentFields)) return;
       setFormStep(currentStep + 1);
-    });
+    }));
 
-    prevButton?.addEventListener('click', () => setFormStep(currentStep - 1));
+    prevButtons.forEach(prevButton => prevButton.addEventListener('click', () => setFormStep(currentStep - 1)));
     setFormStep(0);
   }
 
