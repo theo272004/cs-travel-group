@@ -9,9 +9,9 @@
   --secondary-light: #BFD8F4;
   --sky: #BFD8F4;
   --sky-soft: #EAF4FF;
-  --accent: #5EA8FF;
-  --accent-strong: #2F7EEA;
-  --accent-light: #DCEEFF;
+  --accent: #FFD200;
+  --accent-strong: #E0B800;
+  --accent-light: #FFF2A6;
   
   --bg: #F8FAFC;
   --bg-alt: #EAF4FF;
@@ -107,7 +107,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-strong) 0%, var(--accent) 100%); color: #fff;
 }
-.btn-primary:hover { background: linear-gradient(135deg, var(--accent) 0%, #78B8FF 100%); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.btn-primary:hover { background: linear-gradient(135deg, var(--accent) 0%, #FFE169 100%); transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .btn-secondary {
   background: transparent; color: var(--surface); border: 1.5px solid rgba(255,255,255,.3);
 }
@@ -317,7 +317,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
 }
 .flight-svg { width: 100%; height: 100%; }
 .flight-route { opacity: .26; }
-.flight-route-active { opacity: .62; filter: drop-shadow(0 0 10px rgba(94,168,255,.28)); }
+.flight-route-active { opacity: .62; filter: drop-shadow(0 0 10px rgba(255,210,0,.28)); }
 .airplane { opacity: .86; }
 
 .hero-content {
@@ -347,7 +347,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   height: 7px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 18px rgba(94,168,255,.75);
+  box-shadow: 0 0 18px rgba(255,210,0,.75);
 }
 .hero-text-container {
   position: relative; width: 100%; min-height: 260px; display: flex; justify-content: center; align-items: center;
@@ -862,7 +862,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   inset: 0;
   background:
     linear-gradient(0deg, rgba(8,24,46,0.9) 0%, rgba(16,42,76,0.24) 100%),
-    radial-gradient(circle at 20% 20%, rgba(94,168,255,.18), transparent 32%);
+    radial-gradient(circle at 20% 20%, rgba(255,210,0,.18), transparent 32%);
 }
 .profile-title {
   position: absolute;
@@ -2584,7 +2584,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   border-radius: var(--radius-md);
   background:
     linear-gradient(145deg, rgba(255,255,255,.94), rgba(255,255,255,.72)),
-    radial-gradient(circle at 20% 20%, rgba(94,168,255,.24), transparent 34%);
+    radial-gradient(circle at 20% 20%, rgba(255,210,0,.24), transparent 34%);
   border: 1px solid rgba(16,42,76,.08);
   box-shadow: var(--shadow-sm);
 }
