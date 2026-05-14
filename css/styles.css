@@ -508,13 +508,13 @@ body.b2b-landing .header.scrolled .nav-cta {
 
 /* ===== Editorial Promise ===== */
 .editorial-promise {
-  padding: 140px 0; background: linear-gradient(180deg, var(--bg) 0%, #FFFFFF 100%);
+  padding: 80px 0; background: linear-gradient(180deg, var(--bg) 0%, #FFFFFF 100%);
 }
 .ed-header {
-  display: flex; flex-direction: column; gap: 16px; margin-bottom: 80px; max-width: 600px;
+  display: flex; flex-direction: column; gap: 16px; margin-bottom: 50px; max-width: 760px; margin-left: auto; margin-right: auto; text-align: center;
 }
 .ed-header h2 {
-  font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1.1; color: var(--primary);
+  font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.1; color: var(--primary);
 }
 .ed-header h2 em {
   font-style: normal; color: var(--accent); font-family: var(--font-heading); font-weight: 800;
@@ -2006,7 +2006,7 @@ body.b2b-landing .ed-card {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  aspect-ratio: 1/1;
+  aspect-ratio: 4/5;
   background: #fff;
   cursor: pointer;
 }

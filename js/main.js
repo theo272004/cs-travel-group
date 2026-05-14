@@ -448,7 +448,7 @@ const pageTranslations = {
       company_statement_title: 'El costo real de tus viajes&nbsp;empresariales <em>no está en las facturas.</em>',
       company_statement_p1: 'Tu empresa paga más de lo que debería en tiquetes y hospedajes porque nadie negoció las tarifas. Los cambios de último minuto no son atendidos a tiempo porque los imprevistos no siempre ocurren en horarios laborales, y coordinar viajes se ha convertido en un segundo cargo para tu equipo que lo retrasa en sus tareas más importantes.',
       company_statement_highlight: '"Ese es el precio invisible que nadie está midiendo. Nosotros estamos para que dejes de pagarlo."',
-      company_ed_title: 'Aquí en CS Travel es el equipo de viajes que no tienes, pero que siempre deberías haber tenido.',
+      company_ed_title: 'El equipo de viajes corporativos que siempre debiste tener.',
       company_ed_desc: 'Sin los costos de una agencia grande. Sin los tiempos de respuesta de una tradicional. Un equipo dedicado que conoce tu empresa, negocia tus tarifas y se encarga de todo.',
       company_ed_1_t: 'Operación sin intermediarios',
       company_ed_1_d: 'Trabajamos con red propia y acreditación IATA. Sin márgenes ocultos de la cadena tradicional.',
