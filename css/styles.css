@@ -3684,3 +3684,6 @@ body {
 body.b2b-landing .profile-card { transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s ease !important; }
 body.b2b-landing .profile-card:hover { transform: translateY(-12px) !important; box-shadow: 0 25px 50px rgba(16,42,76,0.15), 0 0 20px rgba(255, 184, 0, 0.15) !important; border-color: var(--accent) !important; }
 
+
+.b2b-premium-logos .marquee-track { display: inline-flex !important; width: max-content !important; align-items: center; }
+
