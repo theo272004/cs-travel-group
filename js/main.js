@@ -4,8 +4,8 @@ const translations = {
   es: {
     logo: 'CS<span>Travel</span> Group',
     nav_services: 'Servicios',
-    nav_why: '¿Por qué nosotros?',
-    nav_process: 'Proceso',
+    nav_why: 'Empresas',
+    nav_process: 'Médicos',
     nav_destinations: 'Destinos',
     nav_about: 'Nosotros',
     nav_contact: 'Contacto',
@@ -220,8 +220,8 @@ const translations = {
   en: {
     logo: 'CS<span>Travel</span> Group',
     nav_services: 'Services',
-    nav_why: 'Why Us?',
-    nav_process: 'Process',
+    nav_why: 'Companies',
+    nav_process: 'Medical',
     nav_destinations: 'Destinations',
     nav_about: 'About Us',
     nav_contact: 'Contact',
