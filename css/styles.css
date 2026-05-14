@@ -1989,12 +1989,66 @@ body.b2b-landing .statement-content p {
 }
 
 body.b2b-landing .ed-grid-4 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(28px, 4vw, 52px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
 }
 
 body.b2b-landing .ed-card {
   min-height: 100%;
+  padding: 0;
+  border: none;
+  gap: 0;
+  align-items: center;
+}
+
+.ed-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/5;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.ed-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ed-card:hover img {
+  transform: scale(1.08);
+}
+
+.ed-number-large {
+  position: absolute;
+  bottom: -0.15em;
+  right: -5%;
+  color: #fff;
+  font-size: clamp(8rem, 14vw, 13rem);
+  font-weight: 900;
+  line-height: 0.75;
+  z-index: 2;
+  font-family: var(--font-heading);
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  body.b2b-landing .ed-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  body.b2b-landing .ed-grid-4 {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .ed-number-large {
+    font-size: 10rem;
+  }
 }
 
 .ev-director-benefit {
