@@ -1811,7 +1811,7 @@ body.b2b-landing .header.scrolled .nav-cta {
   border-top: 1px solid rgba(16,42,76,.06);
   padding: 48px 0;
 }
-.b2b-premium-logos .marquee-item {
+.b2b-premium-logos .marquee-item-box {
   display: inline-block;
   padding: 0 48px;
   font-family: var(--font-body);
@@ -2338,7 +2338,7 @@ body.b2b-landing .b2b-fit-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 100px 8% 60px;
+  padding: 0 8%;
 }
 .split-hero-kicker {
   color: var(--accent-strong);
@@ -2392,7 +2392,7 @@ body.b2b-landing .b2b-fit-card {
     position: static;
   }
   .split-hero-content {
-    padding: 100px 24px 60px;
+    padding: 60px 24px;
     order: 1;
   }
 }
@@ -2613,7 +2613,7 @@ body.b2b-landing .b2b-fit-card {
 
 @media (min-width: 761px) and (max-width: 1100px) {
   .split-hero-content {
-    padding: 96px 5% 56px;
+    padding: 0 5%;
   }
 
   .split-hero-title {
@@ -3666,3 +3666,21 @@ body {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Overrides applied for execution plan */
+.b2b-premium-logos .marquee-track { display: flex; align-items: center; }
+.b2b-premium-logos .marquee-item-box { display: flex; align-items: center; justify-content: center; width: 140px; height: 60px; margin: 0 40px; flex-shrink: 0; }
+.b2b-premium-logos .marquee-item-box img { max-width: 100%; max-height: 100%; object-fit: contain; filter: grayscale(100%) opacity(0.5); mix-blend-mode: multiply; transition: all 0.3s ease; }
+.b2b-premium-logos .marquee-item-box:hover img { filter: grayscale(0%) opacity(1); }
+
+
+.ed-card { min-height: 400px; aspect-ratio: auto !important; }
+
+
+.ev-services { background: var(--bg); }
+.ev-bg img { opacity: 1 !important; filter: brightness(0.4) !important; }
+
+
+body.b2b-landing .profile-card { transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s ease !important; }
+body.b2b-landing .profile-card:hover { transform: translateY(-12px) !important; box-shadow: 0 25px 50px rgba(16,42,76,0.15), 0 0 20px rgba(255, 184, 0, 0.15) !important; border-color: var(--accent) !important; }
+

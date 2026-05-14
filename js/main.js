@@ -453,7 +453,7 @@ const pageTranslations = {
       company_ed_1_t: 'Operación sin intermediarios',
       company_ed_1_d: 'Trabajamos con red propia y acreditación IATA. Sin márgenes ocultos de la cadena tradicional.',
       company_ed_2_t: 'Acompañamiento humano real',
-      company_ed_2_d: 'Atención personalizada antes, durante y después de cada viaje. Sin bots, sin esperas, sin excusas.',
+      company_ed_2_d: 'Acompañamiento humano real. Atención personalizada antes, durante y después de cada viaje. Sin bots, sin esperas, sin excusas.',
       company_ed_3_t: 'Tarifas diferenciales',
       company_ed_3_d: 'Nuestras alianzas directas con aerolíneas, hoteles, cruceros, aseguradoras y servicios de traslado nos permiten ofrecer precios especiales. Lo que cotizamos es lo que pagas.',
       company_ed_4_t: 'Tus empleados también ganan',
