@@ -1972,11 +1972,11 @@ body.b2b-landing .hero-highlight {
 }
 
 body.b2b-landing .statement-grid {
-  grid-template-columns: .75fr 1.25fr;
+  grid-template-columns: .6fr 1.4fr;
 }
 
 body.b2b-landing .statement-content {
-  padding-left: clamp(36px, 5vw, 86px);
+  padding-left: 20px;
 }
 
 body.b2b-landing .statement-title h2 {
