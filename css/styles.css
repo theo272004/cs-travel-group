@@ -3687,3 +3687,7 @@ body.b2b-landing .profile-card:hover { transform: translateY(-12px) !important; 
 
 .b2b-premium-logos .marquee-track { display: inline-flex !important; width: max-content !important; align-items: center; }
 
+
+body.b2b-landing .split-hero, body.b2b-landing .b2b-dark-statement, body.b2b-landing .editorial-promise, body.b2b-landing .ev-services, body.b2b-landing .profiles-section, body.b2b-landing .b2b-fit-section, body.b2b-landing .philosophy-section, body.b2b-landing .booking-cta, body.b2b-landing .b2b-testimonials { flex-direction: column !important; justify-content: center !important; }
+.container { width: 100%; }
+
