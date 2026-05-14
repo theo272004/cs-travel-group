@@ -1965,18 +1965,26 @@ body.b2b-landing .split-hero-kicker {
 body.b2b-landing .hero-highlight {
   display: inline-block;
   color: #fff;
-  background: linear-gradient(135deg, #3B73D9 0%, #6A9BC8 100%);
+  background: #4D7FD6;
   padding: .02em .12em .08em;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 
+body.b2b-landing .statement-grid {
+  grid-template-columns: .92fr 1.08fr;
+}
+
 body.b2b-landing .statement-content {
-  padding-left: clamp(24px, 4vw, 64px);
+  padding-left: clamp(36px, 5vw, 86px);
 }
 
 body.b2b-landing .statement-title h2 {
   max-width: 720px;
+}
+
+body.b2b-landing .statement-content p {
+  max-width: 680px;
 }
 
 body.b2b-landing .ed-grid-4 {
@@ -2208,7 +2216,8 @@ body.b2b-landing .b2b-fit-card {
   position: relative;
 }
 .split-hero-content {
-  flex: 1;
+  flex: 0 0 58%;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2239,7 +2248,8 @@ body.b2b-landing .b2b-fit-card {
   max-width: 600px;
 }
 .split-hero-image {
-  flex: 1;
+  flex: 1 1 42%;
+  min-width: 0;
   position: relative;
 }
 .split-hero-image img {
@@ -3511,6 +3521,14 @@ body {
   body.b2b-landing .philosophy-section,
   body.b2b-landing .b2b-testimonials {
     padding-block: clamp(72px, 8vh, 104px);
+  }
+
+  body.b2b-landing .split-hero {
+    align-items: stretch;
+  }
+
+  body.b2b-landing .split-hero-image {
+    min-height: 100svh;
   }
 }
 
