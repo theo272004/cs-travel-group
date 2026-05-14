@@ -442,7 +442,7 @@ const pageTranslations = {
       company_nav_solutions: 'Soluciones',
       company_nav_faqs: 'FAQs',
       company_hero_kicker: 'Somos la agencia de viajes empresariales que mereces',
-      company_hero_title: 'Si coordinar los viajes de tu empresa <span class="hero-highlight">te quita tiempo</span>, estás pagando un precio muy alto',
+      company_hero_title: 'Si coordinar los viajes de tu empresa <span class="hero-highlight">te quita tiempo</span> estás pagando un precio muy alto',
       company_hero_desc: 'En CS Travel Group gestionamos los viajes de tu empresa con tarifas que no consigues solo, un equipo ágil y beneficios que tus empleados te van a agradecer.',
       company_hero_cta: 'Quiero saber más',
       company_statement_title: 'El costo real de tus viajes&nbsp;empresariales <em>no está en las facturas.</em>',

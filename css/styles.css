@@ -1973,6 +1973,7 @@ body.b2b-landing .hero-highlight {
 
 body.b2b-landing .statement-grid {
   grid-template-columns: .6fr 1.4fr;
+  gap: 40px;
 }
 
 body.b2b-landing .statement-content {
