@@ -1940,7 +1940,8 @@ body.b2b-landing .header.scrolled .nav-cta {
 }
 
 body.b2b-landing .header:not(.scrolled) .nav-links,
-body.b2b-landing .header:not(.scrolled) .nav-links li {
+body.b2b-landing .header:not(.scrolled) .nav-links li,
+body.b2b-landing .header:not(.scrolled) .lang-switcher {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none;
@@ -1948,7 +1949,8 @@ body.b2b-landing .header:not(.scrolled) .nav-links li {
 }
 
 body.b2b-landing .header.scrolled .nav-links,
-body.b2b-landing .header.scrolled .nav-links li {
+body.b2b-landing .header.scrolled .nav-links li,
+body.b2b-landing .header.scrolled .lang-switcher {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -1958,6 +1960,23 @@ body.b2b-landing .header.scrolled .nav-links li {
 
 body.b2b-landing .split-hero-kicker {
   color: var(--secondary);
+}
+
+body.b2b-landing .hero-highlight {
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(135deg, #3B73D9 0%, #6A9BC8 100%);
+  padding: .02em .12em .08em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+body.b2b-landing .statement-content {
+  padding-left: clamp(24px, 4vw, 64px);
+}
+
+body.b2b-landing .statement-title h2 {
+  max-width: 720px;
 }
 
 body.b2b-landing .ed-grid-4 {
@@ -1973,6 +1992,21 @@ body.b2b-landing .ed-card {
   margin-top: 18px;
 }
 
+body.b2b-landing .b2b-fit-section .container {
+  max-width: 1080px;
+}
+
+body.b2b-landing .b2b-fit-grid {
+  gap: clamp(24px, 3vw, 36px);
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+body.b2b-landing .b2b-fit-card {
+  padding: clamp(30px, 3vw, 42px);
+  border-radius: var(--radius-md);
+}
+
 @media (max-width: 900px) {
   .statement-grid,
   .b2b-fit-grid {
@@ -1984,6 +2018,12 @@ body.b2b-landing .ed-card {
   }
   .b2b-landing .profiles-grid {
     grid-template-columns: 1fr !important;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 900px) {
+  body.b2b-landing .b2b-fit-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -2210,7 +2250,7 @@ body.b2b-landing .ed-card {
   top: 0;
   left: 0;
 }
-@media (max-width: 900px) {
+@media (max-width: 760px) {
   .split-hero {
     flex-direction: column;
     min-height: 100vh;
@@ -2441,6 +2481,20 @@ body.b2b-landing .ed-card {
   .ed-grid, .ed-grid-4, .profiles-grid-3 { 
     grid-template-columns: 1fr !important; 
     gap: 32px !important; 
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  .split-hero-content {
+    padding: 96px 5% 56px;
+  }
+
+  .split-hero-title {
+    font-size: clamp(2.25rem, 4.2vw, 3.2rem);
+  }
+
+  .split-hero-desc {
+    font-size: 1.05rem;
   }
 }
 
@@ -3332,6 +3386,7 @@ body {
   min-height: 360px;
   padding: clamp(28px, 3vw, 40px);
   border: 1px solid rgba(255,255,255,.14);
+  border-radius: var(--radius-md);
   background: rgba(255,255,255,.08);
   box-shadow: 0 24px 70px rgba(0,0,0,.22);
   backdrop-filter: blur(18px);
@@ -3384,6 +3439,7 @@ body {
   margin-top: 38px;
   padding: 18px;
   border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius-md);
   background: rgba(255,255,255,.06);
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -3421,5 +3477,57 @@ body {
   .b2b-testimonial-proof span + span {
     border-left: 0;
     border-top: 1px solid rgba(255,255,255,.12);
+  }
+}
+
+@media (min-width: 1100px) {
+  @supports selector(html:has(body.b2b-landing)) {
+    html:has(body.b2b-landing) {
+      scroll-snap-type: y proximity;
+    }
+  }
+
+  body.b2b-landing main > section {
+    scroll-snap-align: start;
+  }
+
+  body.b2b-landing .split-hero,
+  body.b2b-landing .b2b-dark-statement,
+  body.b2b-landing .editorial-promise,
+  body.b2b-landing .ev-services,
+  body.b2b-landing .profiles-section,
+  body.b2b-landing .b2b-fit-section,
+  body.b2b-landing .philosophy-section,
+  body.b2b-landing .booking-cta,
+  body.b2b-landing .b2b-testimonials {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+  }
+
+  body.b2b-landing .profiles-section,
+  body.b2b-landing .editorial-promise,
+  body.b2b-landing .b2b-fit-section,
+  body.b2b-landing .philosophy-section,
+  body.b2b-landing .b2b-testimonials {
+    padding-block: clamp(72px, 8vh, 104px);
+  }
+}
+
+@media (min-width: 769px) {
+  body.b2b-landing .b2b-fit-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: min(100%, 980px);
+  }
+
+  body.b2b-landing .b2b-fit-card li {
+    font-size: clamp(.96rem, 1.1vw, 1.05rem);
+  }
+}
+
+@media (max-width: 768px) {
+  body.b2b-landing .b2b-fit-grid {
+    grid-template-columns: 1fr !important;
   }
 }
