@@ -467,7 +467,7 @@ body.b2b-landing .header.scrolled .nav-cta {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(90deg, rgba(16,42,76,.72), rgba(16,42,76,.18) 48%, rgba(16,42,76,.72));
+  background: transparent;
 }
 .ev-bg {
   position: absolute; inset: 0; z-index: 1;
@@ -1935,7 +1935,7 @@ body.b2b-landing .header.scrolled .nav-cta {
 }
 .b2b-landing .profile-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   border-color: var(--accent);
 }
 
@@ -1972,7 +1972,7 @@ body.b2b-landing .hero-highlight {
 }
 
 body.b2b-landing .statement-grid {
-  grid-template-columns: .92fr 1.08fr;
+  grid-template-columns: .75fr 1.25fr;
 }
 
 body.b2b-landing .statement-content {
@@ -1984,7 +1984,7 @@ body.b2b-landing .statement-title h2 {
 }
 
 body.b2b-landing .statement-content p {
-  max-width: 680px;
+  max-width: none;
 }
 
 body.b2b-landing .ed-grid-4 {
