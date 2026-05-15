@@ -59,7 +59,7 @@ const translations = {
     prom_desc: 'No usamos paquetes estándar. Diseñamos viajes a la medida con expertos que conocen el destino de primera mano.',
     prom_c1_t: 'Expertos locales en el destino',
     prom_c1_s: 'Más del 95% de satisfacción.',
-    prom_c1_d: 'Organiza un viaje a medida junto a nuestro equipo bilingüe en EE.UU. y Colombia, y nuestra red global de proveedores.',
+    prom_c1_d: 'Organiza un viaje a medida junto a nuestro equipo bilingüe en Colombia y nuestra red global de proveedores.',
     prom_c2_t: 'Experiencias inolvidables',
     prom_c2_s: 'Logística impecable.',
     prom_c2_d: 'Actividades únicas que no encontrarás en catálogos genéricos, pensadas exactamente para el perfil de tu grupo.',
@@ -68,9 +68,9 @@ const translations = {
     prom_c3_d: 'Licencias activas en Florida y California, acreditación IATA y afiliación a Archer Travel Group.',
     stat_1_lbl: 'viajeros coordinados',
     stat_2_lbl: 'proveedores globales',
-    stat_3_lbl: 'oficinas (EE.UU. + Colombia)',
+    stat_3_lbl: 'oficina en Colombia',
     stat_4_val: '<span class="nowrap">24/7</span>',
-    stat_4_lbl: 'soporte durante tu viaje',
+    stat_4_lbl: 'soporte en tu viaje',
     srv_grid_label: 'Nuestras Soluciones',
     srv_grid_title: 'Servicios corporativos integrales',
     srv_grid_subtitle: 'Cada servicio resuelve una parte crítica del viaje, pero el verdadero valor está en coordinarlos como una sola operación.',
@@ -135,8 +135,8 @@ const translations = {
     dest_c5_d: 'Rutas académicas y de humanidades.',
     cred_label: 'Respaldo Internacional',
     cred_title: 'Acreditaciones que nos guían',
-    cred_l1_t: 'IATA & ARC',
-    cred_l1_d: 'Contamos con acreditación internacional IATA (#05824840) y Airlines Reporting Corp., lo que nos permite emitir boletos globalmente con las mejores tarifas garantizadas.',
+    cred_l1_t: 'IATA · ARC · CLIA',
+    cred_l1_d: 'Contamos con acreditación internacional IATA (#05824840), Airlines Reporting Corp. y afiliación CLIA, lo que nos permite gestionar viajes aéreos y cruceros con respaldo global.',
     cred_l2_t: 'Licencias Estatales (EE.UU.)',
     cred_l2_d: 'Operamos bajo estricto cumplimiento legal con licencias activas en Florida (#35395) y California (CST #2001330-10), protegiendo tu inversión.',
     cred_l3_t: 'Archer Travel Group',
@@ -145,7 +145,7 @@ const translations = {
     about_title: 'Detrás de CS Travel Group',
     about_p1: 'CS Travel Group nació de una idea sencilla pero poderosa: compartir nuestra pasión por descubrir el mundo y acompañar a quienes quieren hacerlo con respaldo real.',
     about_p2: 'Fundada oficialmente el 27 de octubre de 2025 y respaldada por Archer Travel Service Inc., nuestra agencia combina la cercanía del trato personalizado con la solidez de las acreditaciones internacionales más importantes del sector.',
-    about_p3: 'Con presencia en Doral, Florida (EE.UU.) y Barranquilla, Colombia, atendemos organizaciones en ambos mercados que buscan un aliado confiable para mover grupos de manera profesional, segura y a precios justos.',
+    about_p3: 'Desde nuestra oficina en Barranquilla, Colombia, atendemos organizaciones que buscan un aliado confiable para mover grupos de manera profesional, segura y a precios justos.',
     cont_label: 'Contacto',
     cont_title: '¿Listo para planificar el próximo viaje de tu organización?',
     cont_subtitle: 'Cuéntanos sobre tu grupo y destino. Te responderemos con una propuesta personalizada en menos de 48 horas.',
@@ -275,7 +275,7 @@ const translations = {
     prom_desc: 'We don\'t use standard packages. We design custom trips with experts who know the destination first-hand.',
     prom_c1_t: 'Local experts at the destination',
     prom_c1_s: 'Over 95% satisfaction.',
-    prom_c1_d: 'Organize a custom trip with our bilingual team in the US and Colombia, and our global network of suppliers.',
+    prom_c1_d: 'Organize a custom trip with our bilingual team in Colombia and our global supplier network.',
     prom_c2_t: 'Unforgettable experiences',
     prom_c2_s: 'Impeccable logistics.',
     prom_c2_d: 'Unique activities you won\'t find in generic catalogs, designed exactly for your group\'s profile.',
@@ -284,9 +284,9 @@ const translations = {
     prom_c3_d: 'Active licenses in Florida and California, IATA accreditation, and affiliation with Archer Travel Group.',
     stat_1_lbl: 'coordinated travelers',
     stat_2_lbl: 'global suppliers',
-    stat_3_lbl: 'offices (USA + Colombia)',
+    stat_3_lbl: 'office in Colombia',
     stat_4_val: '<span class="nowrap">24/7</span>',
-    stat_4_lbl: 'support during your trip',
+    stat_4_lbl: 'support on your trip',
     srv_grid_label: 'Our Solutions',
     srv_grid_title: 'Integrated corporate travel services',
     srv_grid_subtitle: 'Each service solves a critical part of the trip, but the real value comes from coordinating them as one operation.',
@@ -351,8 +351,8 @@ const translations = {
     dest_c5_d: 'Academic and humanities routes.',
     cred_label: 'International Backing',
     cred_title: 'Accreditations that guide us',
-    cred_l1_t: 'IATA & ARC',
-    cred_l1_d: 'We have IATA international accreditation (#05824840) and Airlines Reporting Corp., allowing us to issue tickets globally with the best guaranteed rates.',
+    cred_l1_t: 'IATA · ARC · CLIA',
+    cred_l1_d: 'We have IATA international accreditation (#05824840), Airlines Reporting Corp., and CLIA affiliation, allowing us to manage air travel and cruises with global backing.',
     cred_l2_t: 'State Licenses (USA)',
     cred_l2_d: 'We operate under strict legal compliance with active licenses in Florida (#35395) and California (CST #2001330-10), protecting your investment.',
     cred_l3_t: 'Archer Travel Group',
@@ -361,7 +361,7 @@ const translations = {
     about_title: 'Behind CS Travel Group',
     about_p1: 'CS Travel Group was born from a simple but powerful idea: to share our passion for discovering the world and accompany those who want to do it with real backing.',
     about_p2: 'Officially founded on October 27, 2025, and backed by Archer Travel Service Inc., our agency combines personal treatment with the solidity of the industry\'s most important international accreditations.',
-    about_p3: 'With a presence in Doral, Florida (USA) and Barranquilla, Colombia, we serve organizations in both markets looking for a reliable partner to move groups professionally, safely, and at fair prices.',
+    about_p3: 'From our office in Barranquilla, Colombia, we serve organizations looking for a reliable partner to move groups professionally, safely, and at fair prices.',
     cont_label: 'Contact',
     cont_title: 'Ready to plan your organization\'s next trip?',
     cont_subtitle: 'Tell us about your group and destination. We will respond with a personalized proposal in less than 48 hours.',
@@ -591,10 +591,10 @@ const pageTranslations = {
       medical_form_message: 'Mensaje adicional',
       medical_form_submit: 'Agendar una llamada',
       medical_footer_desc: 'Logística de viajes para empresas, instituciones y profesionales que necesitan una operación organizada, humana y medible.',
-      medical_testimonials_title: 'Confianza de quienes ya operan con nosotros',
-      medical_test1_text: 'Placeholder: "Ofrecer el paquete logístico completo ha mejorado mucho la experiencia de mis pacientes internacionales."',
-      medical_test1_author: 'Placeholder: Dr. Roberto Gómez',
-      medical_test1_role: 'Cirujano Plástico'
+      medical_testimonials_title: 'Cuando el viaje está resuelto, el paciente llega más tranquilo',
+      medical_test1_text: '"El valor está en quitarle incertidumbre al paciente: sabe dónde llega, quién lo recoge, dónde se queda y a quién escribir si algo cambia."',
+      medical_test1_author: 'Equipo CS Travel Group',
+      medical_test1_role: 'Operación de pacientes viajeros'
     }
   },
   en: {
@@ -750,10 +750,10 @@ const pageTranslations = {
       medical_step3_t: 'We take care of the journey; you take care of the procedure',
       medical_step3_d: 'We coordinate the travel experience, accompany changes, and handle logistical incidents so that your team can focus on medical care.',
       medical_footer_desc: 'Travel logistics for companies, institutions, and professionals who need an organized, human, and measurable operation.',
-      medical_testimonials_title: 'Trust from those who already operate with us',
-      medical_test1_text: 'Placeholder: "Offering the complete logistical package has greatly improved my international patients experience."',
-      medical_test1_author: 'Placeholder: Dr. Robert Smith',
-      medical_test1_role: 'Plastic Surgeon'
+      medical_testimonials_title: 'When travel is resolved, the patient arrives calmer',
+      medical_test1_text: '"The value is removing uncertainty for the patient: they know where they arrive, who picks them up, where they stay, and who to contact if something changes."',
+      medical_test1_author: 'CS Travel Group team',
+      medical_test1_role: 'Traveling patient operations'
     }
   }
 };
@@ -1054,18 +1054,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (heroKicker) gsap.from(heroKicker, { y: 18, autoAlpha: 0, duration: 0.7, ease: 'power3.out', delay: 0.25 });
       gsap.fromTo(heroTexts[0], { y: 40, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 1, ease: 'power3.out', delay: 0.4 });
       gsap.from('.hero-progress-dot', { y: 10, autoAlpha: 0, duration: 0.5, stagger: 0.08, ease: 'power3.out', delay: 0.65 });
-      gsap.from('.hero-search-bar', { y: 20, autoAlpha: 0, duration: 0.8, ease: 'power3.out', delay: 0.6 });
-      gsap.fromTo('.hero-search-bar > *',
-        { x: -20, autoAlpha: 0 },
-        { x: 0, autoAlpha: 1, duration: 0.6, stagger: 0.1, ease: 'power3.out', delay: 0.8 }
-      );
+      gsap.from('.hero-cta-container', { y: 14, duration: 0.65, ease: 'power3.out', delay: 0.55 });
     } else if (heroSlides.length > 0) {
       setStaticHeroStage(0);
       gsap.set([...heroSlides, ...heroTexts], { clearProps: 'all' });
       const heroTl = gsap.timeline();
       heroTl.from('.hero-title', { y: 26, autoAlpha: 0, duration: 0.7, ease: 'power3.out' }, '-=0.2')
             .from('.hero-desc', { y: 14, autoAlpha: 0, duration: 0.55, ease: 'power3.out' }, '-=0.35')
-            .from('.hero-search-bar', { y: 14, autoAlpha: 0, duration: 0.55, ease: 'power3.out' }, '-=0.3');
+            .from('.hero-cta-container', { y: 12, duration: 0.45, ease: 'power3.out' }, '-=0.3');
 
       // Mobile Autoplay Slideshow & Interactive Dots
       let mobileStage = 0;
