@@ -4668,9 +4668,10 @@ body:not(.b2b-landing) .stat-divider {
 @media (max-width: 520px) {
   body:not(.b2b-landing) {
     --home-page-x: clamp(16px, 5vw, 22px);
-    --home-hero-title: clamp(1.68rem, 1.04rem + 5.2vw, 2.05rem);
-    --home-hero-desc: clamp(.86rem, .74rem + .72vw, .94rem);
-    --home-hero-copy-min: clamp(238px, 34vh, 304px);
+    --home-hero-title: clamp(1.42rem, .98rem + 4.5vw, 1.78rem);
+    --home-hero-desc: clamp(.78rem, .7rem + .48vw, .86rem);
+    --home-hero-copy-min: clamp(318px, 42vh, 374px);
+    --home-hero-cta-gap: clamp(14px, 2.2vh, 24px);
     --home-stat-number: clamp(2.15rem, 1.42rem + 7vw, 2.85rem);
     --home-stat-label: clamp(.64rem, .52rem + .85vw, .72rem);
   }
@@ -4680,13 +4681,13 @@ body:not(.b2b-landing) .stat-divider {
   }
 
   body:not(.b2b-landing) .hero-title {
-    line-height: 1.04;
-    max-width: 10.8ch;
+    line-height: 1.03;
+    max-width: 14ch;
   }
 
   body:not(.b2b-landing) .hero-desc {
-    line-height: 1.5;
-    max-width: 36ch;
+    line-height: 1.42;
+    max-width: 39ch;
   }
 
   body:not(.b2b-landing) .hero-progress-dot {
