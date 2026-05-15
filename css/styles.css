@@ -3699,3 +3699,32 @@ body.b2b-landing .editorial-promise, body.b2b-landing .ev-services, body.b2b-lan
 
 body.b2b-landing .editorial-promise, body.b2b-landing .ev-services, body.b2b-landing .profiles-section, body.b2b-landing .b2b-fit-section, body.b2b-landing .philosophy-section, body.b2b-landing .booking-cta, body.b2b-landing .b2b-testimonials { flex-direction: column !important; justify-content: center !important; }
 
+
+/* Philosophy Section Redesign (Editorial Sky) */
+.philosophy-section.sky-background { background: #f0f7ff !important; position: relative; overflow: visible; }
+.booking-cta.sky-background { background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%) !important; position: relative; }
+
+.philosophy-split { display: flex; align-items: center; gap: 64px; width: 100%; min-height: 80vh; }
+
+.philosophy-visual { flex: 0 0 50%; position: relative; }
+
+.airplane-img { width: 140%; max-width: none; height: auto; transform: translateX(-20%) translateY(20px); filter: drop-shadow(0 30px 60px rgba(15, 42, 76, 0.15)); z-index: 2; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.philosophy-visual:hover .airplane-img { transform: translateX(-18%) translateY(0); }
+
+.philosophy-text { flex: 0 0 50%; z-index: 3; }
+
+.philosophy-title { font-size: 3.5rem !important; line-height: 1.05 !important; margin-bottom: 40px !important; color: var(--primary); font-weight: 800; letter-spacing: -0.02em; }
+
+.philosophy-p { font-size: 1.35rem !important; line-height: 1.5 !important; margin-bottom: 28px !important; color: var(--text-secondary); max-width: 540px; }
+
+.philosophy-p.secondary { font-size: 1.15rem !important; opacity: 0.75; line-height: 1.6; }
+
+@media (max-width: 991px) {
+  .philosophy-split { flex-direction: column; gap: 40px; text-align: left; padding-top: 60px; }
+  .philosophy-visual { order: 2; width: 100%; flex: none; }
+  .philosophy-text { order: 1; width: 100%; flex: none; }
+  .airplane-img { width: 110%; transform: translateX(-5%); }
+  .philosophy-title { font-size: 2.5rem !important; }
+  .philosophy-p { font-size: 1.2rem !important; }
+}
+
