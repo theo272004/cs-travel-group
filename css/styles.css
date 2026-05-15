@@ -3739,3 +3739,10 @@ body.b2b-landing .editorial-promise, body.b2b-landing .ev-services, body.b2b-lan
 .airplane-img { width: 160% !important; transform: translateX(-25%) translateY(10px) !important; z-index: 1000 !important; }
 .philosophy-p.secondary { font-size: 1.35rem !important; opacity: 1 !important; line-height: 1.5 !important; color: var(--text-secondary) !important; }
 
+
+/* Reverting Philosophy Section Adjustments based on User Feedback */
+.philosophy-visual { margin-right: 0 !important; z-index: 10; }
+.airplane-img { width: 115% !important; transform: translateX(-10%) translateY(0) !important; transition: none !important; z-index: 10 !important; }
+.philosophy-visual:hover .airplane-img { transform: translateX(-10%) translateY(0) !important; }
+.philosophy-text { flex: 0 0 50%; text-align: left; }
+
