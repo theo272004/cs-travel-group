@@ -4795,6 +4795,56 @@ body.medical-landing .medical-ed-grid .ed-number-large {
   opacity: .32;
 }
 
+/* Final interaction fixes for B2B landings. Keep the opening hero clean and
+   restore editorial card copy only on hover/focus across Empresas and Medicos. */
+body.b2b-landing .header:not(.scrolled) {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(-100%) !important;
+  visibility: hidden !important;
+}
+
+body.b2b-landing .header.scrolled {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+  visibility: visible !important;
+}
+
+body.b2b-landing .ed-card .ed-overlay,
+body.medical-landing .medical-ed-grid .ed-overlay {
+  background: linear-gradient(180deg, rgba(15,42,76,.08), rgba(15,42,76,.9));
+  opacity: 0 !important;
+}
+
+body.b2b-landing .ed-card .ed-text-content,
+body.medical-landing .medical-ed-grid .ed-text-content {
+  opacity: 0 !important;
+  transform: translateY(18px) !important;
+}
+
+body.b2b-landing .ed-card:hover .ed-overlay,
+body.b2b-landing .ed-card:focus-within .ed-overlay,
+body.medical-landing .medical-ed-grid .ed-card:hover .ed-overlay,
+body.medical-landing .medical-ed-grid .ed-card:focus-within .ed-overlay {
+  opacity: .84 !important;
+}
+
+body.b2b-landing .ed-card:hover .ed-text-content,
+body.b2b-landing .ed-card:focus-within .ed-text-content,
+body.medical-landing .medical-ed-grid .ed-card:hover .ed-text-content,
+body.medical-landing .medical-ed-grid .ed-card:focus-within .ed-text-content {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+body.b2b-landing .ed-card:hover .ed-number-large,
+body.b2b-landing .ed-card:focus-within .ed-number-large,
+body.medical-landing .medical-ed-grid .ed-card:hover .ed-number-large,
+body.medical-landing .medical-ed-grid .ed-card:focus-within .ed-number-large {
+  opacity: 0 !important;
+}
+
 body.medical-landing .medical-process {
   background:
     linear-gradient(180deg, #fff 0%, #f6fbff 100%);

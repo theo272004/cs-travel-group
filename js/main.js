@@ -968,7 +968,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroDots = document.querySelectorAll('.hero-progress-dot');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const desktopMotion = window.matchMedia('(min-width: 769px)').matches && !reducedMotion;
-    const heroScrollMotion = !reducedMotion;
+    const heroScrollMotion = window.matchMedia('(min-width: 1024px) and (min-height: 700px)').matches && !reducedMotion;
     const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
     
     const setStaticHeroStage = (index) => {
@@ -1063,24 +1063,13 @@ document.addEventListener('DOMContentLoaded', () => {
             .from('.hero-desc', { y: 14, autoAlpha: 0, duration: 0.55, ease: 'power3.out' }, '-=0.35')
             .from('.hero-cta-container', { y: 12, duration: 0.45, ease: 'power3.out' }, '-=0.3');
 
-      // Mobile Autoplay Slideshow & Interactive Dots
+      // Static fallback when the scroll-based hero animation is unavailable.
       let mobileStage = 0;
-      let mobileInterval = setInterval(() => {
-        mobileStage = (mobileStage + 1) % heroSlides.length;
-        setStaticHeroStage(mobileStage);
-      }, 5000);
 
       heroDots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
-          clearInterval(mobileInterval);
           mobileStage = index;
           setStaticHeroStage(mobileStage);
-          
-          // Restart interval
-          mobileInterval = setInterval(() => {
-            mobileStage = (mobileStage + 1) % heroSlides.length;
-            setStaticHeroStage(mobileStage);
-          }, 5000);
         });
       });
     }
