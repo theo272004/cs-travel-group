@@ -3746,3 +3746,8 @@ body.b2b-landing .editorial-promise, body.b2b-landing .ev-services, body.b2b-lan
 .philosophy-visual:hover .airplane-img { transform: translateX(-10%) translateY(0) !important; }
 .philosophy-text { flex: 0 0 50%; text-align: left; }
 
+
+/* Resizing B2B Marquee Logos */
+.b2b-premium-logos .marquee-item-box { width: 280px !important; height: 120px !important; margin: 0 60px !important; }
+.b2b-premium-logos .marquee-item-box img { max-height: 80% !important; }
+
