@@ -3728,3 +3728,8 @@ body.b2b-landing .editorial-promise, body.b2b-landing .ev-services, body.b2b-lan
   .philosophy-p { font-size: 1.2rem !important; }
 }
 
+
+/* Static Airplane Image Overrides */
+.airplane-img { transform: translateX(-15%) translateY(10px) !important; transition: none !important; z-index: 10 !important; }
+.philosophy-visual:hover .airplane-img { transform: translateX(-15%) translateY(10px) !important; }
+
