@@ -54,7 +54,13 @@ html {
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  scrollbar-width: none;
   width: 100%;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 body {
@@ -69,6 +75,8 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   width: 100%;
   position: relative;
 }
@@ -648,6 +656,64 @@ body.b2b-landing .header.scrolled .nav-cta {
   display: flex; align-items: center; justify-content: center;
   color: var(--primary);
 }
+.cred-brand-stack,
+.cred-license-mark,
+.cred-archer-mark {
+  border: 1px solid rgba(16,42,76,.14);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(16,42,76,.08);
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-weight: 800;
+}
+.cred-brand-stack {
+  align-content: center;
+  display: grid;
+  gap: 2px;
+  line-height: 1;
+  padding: 8px;
+  text-align: center;
+}
+.cred-brand-stack span:first-child {
+  color: #1f6db3;
+  font-size: .98rem;
+  letter-spacing: .03em;
+}
+.cred-brand-stack span:nth-child(2) {
+  color: #0f2f57;
+  font-size: .88rem;
+}
+.cred-brand-stack span:nth-child(3) {
+  color: #1677a8;
+  font-size: .8rem;
+}
+.cred-license-mark {
+  gap: 4px;
+  padding: 8px;
+}
+.cred-license-mark span {
+  align-items: center;
+  background: rgba(106,155,200,.14);
+  border-radius: 8px;
+  color: var(--primary);
+  display: inline-flex;
+  font-size: .82rem;
+  height: 28px;
+  justify-content: center;
+  width: 24px;
+}
+.cred-archer-mark span {
+  align-items: center;
+  background: var(--primary);
+  border-radius: 50%;
+  color: var(--accent);
+  display: inline-flex;
+  font-size: 1.6rem;
+  height: 44px;
+  justify-content: center;
+  width: 44px;
+}
 .cred-text h4 { font-size: 1.25rem; margin-bottom: 8px; color: var(--primary); }
 .cred-text p { color: var(--text-secondary); line-height: 1.72; font-size: 1.03rem; }
 
@@ -790,20 +856,13 @@ body.b2b-landing .header.scrolled .nav-cta {
 /* Hide elements initially to avoid FOUC before GSAP loads */
 .reveal, .reveal-text { visibility: hidden; }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
+/* Native scrollbars hidden by design. */
+* {
+  scrollbar-width: none;
 }
-::-webkit-scrollbar-track {
-  background: var(--bg);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--primary-light);
-  border-radius: 10px;
-  border: 2px solid var(--bg);
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 /* Mouse Effects Disabled */
@@ -3792,6 +3851,34 @@ body.b2b-landing .editorial-promise, body.b2b-landing .ev-services, body.b2b-lan
 /* Philosophy Section Redesign (Editorial Sky) */
 .philosophy-section.sky-background { background: #f0f7ff !important; position: relative; overflow: visible; }
 .booking-cta.sky-background { background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%) !important; position: relative; }
+
+body:not(.b2b-landing) .booking-cta {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.78)),
+    url("../assets/images/optimized/booking-sky-cta.jpg") center / cover no-repeat;
+}
+
+body:not(.b2b-landing) .booking-cta-inner {
+  background:
+    linear-gradient(135deg, rgba(12,35,66,.82), rgba(16,42,76,.64)),
+    rgba(16,42,76,.72);
+  border: 1px solid rgba(255,255,255,.24);
+  box-shadow: 0 28px 72px rgba(12,35,66,.2);
+  backdrop-filter: blur(4px);
+}
+
+body:not(.b2b-landing) .booking-cta-inner .btn {
+  background: var(--accent);
+  border: 2px solid rgba(255,255,255,.92);
+  box-shadow: 0 16px 34px rgba(12,35,66,.22);
+  color: var(--primary);
+}
+
+body:not(.b2b-landing) .booking-cta-inner .btn:hover {
+  background: #fff;
+  color: var(--primary);
+  transform: translateY(-2px);
+}
 
 .philosophy-split { display: flex; align-items: center; gap: 64px; width: 100%; min-height: 80vh; }
 
