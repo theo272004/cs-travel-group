@@ -1150,7 +1150,13 @@ document.addEventListener('DOMContentLoaded', () => {
           const target = parseInt(el.dataset.count, 10);
           const suffix = el.dataset.suffix || '';
           const prefix = el.dataset.prefix || '';
-          const duration = 2000;
+          if (el.dataset.static === 'true' || target <= 2) {
+            el.textContent = prefix + target.toLocaleString() + suffix;
+            counterObserver.unobserve(el);
+            return;
+          }
+
+          const duration = 650;
           const start = performance.now();
 
           const animate = (now) => {

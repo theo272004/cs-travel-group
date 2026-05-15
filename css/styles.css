@@ -270,15 +270,33 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
 .lang-sep { opacity: 0.3; }
 
 body.b2b-landing .nav-cta {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-6px);
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
   transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 body.b2b-landing .header.scrolled .nav-cta {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+body.b2b-landing .header {
+  background: rgba(255,255,255,.88);
+  padding: 12px 0;
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(16,42,76,.08);
+}
+
+body.b2b-landing .header .nav-links a,
+body.b2b-landing .header .lang-trigger {
+  color: var(--text);
+}
+
+body.b2b-landing .header .nav-logo-img {
+  height: 55px;
 }
 
 .hamburger {
@@ -2062,10 +2080,10 @@ body.b2b-landing .header.scrolled .nav-cta {
 body.b2b-landing .header:not(.scrolled) .nav-links,
 body.b2b-landing .header:not(.scrolled) .nav-links li,
 body.b2b-landing .header:not(.scrolled) .lang-switcher {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none;
-  transform: translateY(-6px);
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 body.b2b-landing .header.scrolled .nav-links,
@@ -3853,18 +3871,18 @@ body.b2b-landing .editorial-promise, body.b2b-landing .ev-services, body.b2b-lan
 .booking-cta.sky-background { background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%) !important; position: relative; }
 
 body:not(.b2b-landing) .booking-cta {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.78)),
-    url("../assets/images/optimized/booking-sky-cta.jpg") center / cover no-repeat;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8fd 100%);
 }
 
 body:not(.b2b-landing) .booking-cta-inner {
   background:
-    linear-gradient(135deg, rgba(12,35,66,.82), rgba(16,42,76,.64)),
-    rgba(16,42,76,.72);
+    linear-gradient(135deg, rgba(12,35,66,.88), rgba(16,42,76,.68)),
+    url("../assets/images/optimized/booking-sky-cta.jpg") center / cover no-repeat;
   border: 1px solid rgba(255,255,255,.24);
   box-shadow: 0 28px 72px rgba(12,35,66,.2);
   backdrop-filter: blur(4px);
+  overflow: hidden;
+  position: relative;
 }
 
 body:not(.b2b-landing) .booking-cta-inner .btn {
