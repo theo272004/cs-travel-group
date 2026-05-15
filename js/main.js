@@ -591,10 +591,10 @@ const pageTranslations = {
       medical_form_message: 'Mensaje adicional',
       medical_form_submit: 'Agendar una llamada',
       medical_footer_desc: 'Logística de viajes para empresas, instituciones y profesionales que necesitan una operación organizada, humana y medible.',
-      medical_testimonials_title: 'Confianza de quienes ya operan con nosotros',
-      medical_test1_text: 'Placeholder: "Ofrecer el paquete logístico completo ha mejorado mucho la experiencia de mis pacientes internacionales."',
-      medical_test1_author: 'Placeholder: Dr. Roberto Gómez',
-      medical_test1_role: 'Cirujano Plástico'
+      medical_testimonials_title: 'Cuando el viaje está resuelto, el paciente llega más tranquilo',
+      medical_test1_text: '"El valor está en quitarle incertidumbre al paciente: sabe dónde llega, quién lo recoge, dónde se queda y a quién escribir si algo cambia."',
+      medical_test1_author: 'Equipo CS Travel Group',
+      medical_test1_role: 'Operación de pacientes viajeros'
     }
   },
   en: {
@@ -750,10 +750,10 @@ const pageTranslations = {
       medical_step3_t: 'We take care of the journey; you take care of the procedure',
       medical_step3_d: 'We coordinate the travel experience, accompany changes, and handle logistical incidents so that your team can focus on medical care.',
       medical_footer_desc: 'Travel logistics for companies, institutions, and professionals who need an organized, human, and measurable operation.',
-      medical_testimonials_title: 'Trust from those who already operate with us',
-      medical_test1_text: 'Placeholder: "Offering the complete logistical package has greatly improved my international patients experience."',
-      medical_test1_author: 'Placeholder: Dr. Robert Smith',
-      medical_test1_role: 'Plastic Surgeon'
+      medical_testimonials_title: 'When travel is resolved, the patient arrives calmer',
+      medical_test1_text: '"The value is removing uncertainty for the patient: they know where they arrive, who picks them up, where they stay, and who to contact if something changes."',
+      medical_test1_author: 'CS Travel Group team',
+      medical_test1_role: 'Traveling patient operations'
     }
   }
 };
@@ -1054,18 +1054,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (heroKicker) gsap.from(heroKicker, { y: 18, autoAlpha: 0, duration: 0.7, ease: 'power3.out', delay: 0.25 });
       gsap.fromTo(heroTexts[0], { y: 40, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 1, ease: 'power3.out', delay: 0.4 });
       gsap.from('.hero-progress-dot', { y: 10, autoAlpha: 0, duration: 0.5, stagger: 0.08, ease: 'power3.out', delay: 0.65 });
-      gsap.from('.hero-search-bar', { y: 20, autoAlpha: 0, duration: 0.8, ease: 'power3.out', delay: 0.6 });
-      gsap.fromTo('.hero-search-bar > *',
-        { x: -20, autoAlpha: 0 },
-        { x: 0, autoAlpha: 1, duration: 0.6, stagger: 0.1, ease: 'power3.out', delay: 0.8 }
-      );
+      gsap.from('.hero-cta-container', { y: 14, duration: 0.65, ease: 'power3.out', delay: 0.55 });
     } else if (heroSlides.length > 0) {
       setStaticHeroStage(0);
       gsap.set([...heroSlides, ...heroTexts], { clearProps: 'all' });
       const heroTl = gsap.timeline();
       heroTl.from('.hero-title', { y: 26, autoAlpha: 0, duration: 0.7, ease: 'power3.out' }, '-=0.2')
             .from('.hero-desc', { y: 14, autoAlpha: 0, duration: 0.55, ease: 'power3.out' }, '-=0.35')
-            .from('.hero-search-bar', { y: 14, autoAlpha: 0, duration: 0.55, ease: 'power3.out' }, '-=0.3');
+            .from('.hero-cta-container', { y: 12, duration: 0.45, ease: 'power3.out' }, '-=0.3');
 
       // Mobile Autoplay Slideshow & Interactive Dots
       let mobileStage = 0;

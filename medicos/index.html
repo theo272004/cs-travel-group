@@ -10,7 +10,8 @@
   <meta property="og:description" content="Programa de aliados para médicos y clínicas con pacientes que viajan a Colombia para procedimientos de salud.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.cstravelgroup.com/medicos/">
-  <link rel="stylesheet" href="../css/styles.css?v=23">
+  <link rel="preload" as="image" href="../assets/images/optimized/medical-consult.webp" fetchpriority="high">
+  <link rel="stylesheet" href="../css/styles.css?v=31">
   <link rel="icon" type="image/png" href="../assets/images/logo-cstravel-cropped.png">
 </head>
 <body class="b2b-landing medical-landing">
@@ -75,18 +76,17 @@
   </div>
 
   <main>
-    <section class="split-hero medical-hero">
-      <div class="split-hero-content">
-        <p class="split-hero-kicker reveal" data-i18n="medical_hero_kicker">Para médicos y clínicas con pacientes que viajan</p>
-        <h1 class="split-hero-title reveal reveal-delay-1" data-i18n="medical_hero_title">Ofrécele a tus pacientes un servicio completo.</h1>
-        <p class="split-hero-desc reveal reveal-delay-2" data-i18n="medical_hero_desc">CS Travel coordina vuelos, hospedajes, seguros y traslados para pacientes nacionales y extranjeros, bajo tu marca y sin carga operativa adicional para tu consulta.</p>
-        <div class="hero-actions reveal reveal-delay-3">
-          <a href="#funciona" class="btn btn-primary" data-i18n="medical_hero_cta_1">¿Cómo funciona?</a>
-          <a href="#contacto" class="btn btn-outline" data-i18n="medical_hero_cta_2">Habla con un asesor</a>
+    <section class="split-hero medical-hero" id="inicio">
+      <div class="split-hero-content reveal">
+        <p class="split-hero-kicker" data-i18n="medical_hero_kicker">Para médicos y clínicas con pacientes que viajan</p>
+        <h1 class="split-hero-title" data-i18n="medical_hero_title">Ofrécele a tus pacientes un servicio completo.</h1>
+        <p class="split-hero-desc" data-i18n="medical_hero_desc">CS Travel coordina vuelos, hospedajes, seguros y traslados para pacientes nacionales y extranjeros, bajo tu marca y sin carga operativa adicional para tu consulta.</p>
+        <div>
+          <a href="#contacto" class="btn btn-dark medical-primary-cta" data-i18n="medical_hero_cta_2">Habla con un asesor</a>
         </div>
       </div>
       <div class="split-hero-image">
-        <img src="../assets/images/optimized/medical-consult.webp" alt="Médico asesorando a una paciente internacional" decoding="async">
+        <img src="../assets/images/optimized/medical-consult.webp" alt="Médico asesorando a una paciente internacional" loading="eager" decoding="async" fetchpriority="high">
       </div>
     </section>
 
@@ -107,30 +107,54 @@
 
     <section class="editorial-promise">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Lo esencial</span>
+        <div class="ed-header reveal">
           <h2 data-i18n="medical_core_title">Un modelo white-label para fortalecer tu consulta</h2>
+          <p>La logística deja de sentirse como un favor improvisado y se convierte en una extensión clara, discreta y rentable de tu atención médica.</p>
         </div>
-        <div class="ed-grid ed-grid-4">
+        <div class="ed-grid-4 medical-ed-grid">
           <article class="ed-card reveal">
-            <span class="ed-num">01</span>
-            <h3 data-i18n="medical_pillar1_t">Tu marca. Tu crédito.</h3>
-            <p data-i18n="medical_pillar1_d">La comunicación llega con tu nombre, tu logo y tu identidad. CS Travel opera detrás de la experiencia.</p>
+            <div class="ed-image-wrap">
+              <img src="../assets/images/optimized/profile-professionals.webp" alt="Consulta médica coordinada" loading="lazy" decoding="async">
+            </div>
+            <div class="ed-overlay"></div>
+            <div class="ed-number-large">1</div>
+            <div class="ed-text-content">
+              <h3 data-i18n="medical_pillar1_t">Tu marca. Tu crédito.</h3>
+              <p data-i18n="medical_pillar1_d">La comunicación llega con tu nombre, tu logo y tu identidad. CS Travel opera detrás de la experiencia.</p>
+            </div>
           </article>
           <article class="ed-card reveal reveal-delay-1">
-            <span class="ed-num">02</span>
-            <h3 data-i18n="medical_pillar2_t">Tu paciente llega con todo resuelto.</h3>
-            <p data-i18n="medical_pillar2_d">Coordinamos vuelo, alojamiento cercano, traslados y seguros sin que tu equipo tenga que gestionarlo.</p>
+            <div class="ed-image-wrap">
+              <img src="../assets/images/optimized/section-airport-checkin.webp" alt="Paciente viajando con soporte" loading="lazy" decoding="async">
+            </div>
+            <div class="ed-overlay"></div>
+            <div class="ed-number-large">2</div>
+            <div class="ed-text-content">
+              <h3 data-i18n="medical_pillar2_t">Tu paciente llega con todo resuelto.</h3>
+              <p data-i18n="medical_pillar2_d">Coordinamos vuelo, alojamiento cercano, traslados y seguros sin que tu equipo tenga que gestionarlo.</p>
+            </div>
           </article>
           <article class="ed-card reveal reveal-delay-2">
-            <span class="ed-num">03</span>
-            <h3 data-i18n="medical_pillar3_t">Te diferencias de otros especialistas.</h3>
-            <p data-i18n="medical_pillar3_d">Un servicio integral puede ser el factor que ayuda al paciente a decidirse por tu procedimiento.</p>
+            <div class="ed-image-wrap">
+              <img src="../assets/images/optimized/section-group-travel.webp" alt="Acompañantes y paciente coordinados" loading="lazy" decoding="async">
+            </div>
+            <div class="ed-overlay"></div>
+            <div class="ed-number-large">3</div>
+            <div class="ed-text-content">
+              <h3 data-i18n="medical_pillar3_t">Te diferencias de otros especialistas.</h3>
+              <p data-i18n="medical_pillar3_d">Un servicio integral puede ser el factor que ayuda al paciente a decidirse por tu procedimiento.</p>
+            </div>
           </article>
           <article class="ed-card reveal reveal-delay-3">
-            <span class="ed-num">04</span>
-            <h3 data-i18n="medical_pillar4_t">Generas ingresos adicionales.</h3>
-            <p data-i18n="medical_pillar4_d">Por cada paciente confirmado puedes capturar margen sin cambiar tu operación clínica.</p>
+            <div class="ed-image-wrap">
+              <img src="../assets/images/optimized/hero-business.webp" alt="Modelo aliado para clínicas" loading="lazy" decoding="async">
+            </div>
+            <div class="ed-overlay"></div>
+            <div class="ed-number-large">4</div>
+            <div class="ed-text-content">
+              <h3 data-i18n="medical_pillar4_t">Generas ingresos adicionales.</h3>
+              <p data-i18n="medical_pillar4_d">Por cada paciente confirmado puedes capturar margen sin cambiar tu operación clínica.</p>
+            </div>
           </article>
         </div>
       </div>
@@ -162,11 +186,13 @@
       </div>
     </section>
 
-    <section class="medical-services" id="servicios">
+    <section class="medical-services ev-services" id="servicios">
+      <div class="ev-bg">
+        <img src="../assets/images/optimized/medical-consult.webp" alt="Coordinación de viaje médico" loading="lazy" decoding="async">
+      </div>
       <div class="container">
         <div class="medical-services-grid">
           <div class="medical-copy reveal">
-            <span class="section-label">Coordinación integral</span>
             <h2 data-i18n="medical_services_title">La parte más sensible del viaje deja de improvisarse.</h2>
             <p data-i18n="medical_services_desc">Un paciente que viaja para atenderse necesita más que reservas. Necesita claridad, confianza y continuidad. Convertimos esa necesidad en una operación discreta, ordenada y fácil de acompañar desde tu consulta.</p>
             <a href="#contacto" class="btn btn-primary" data-i18n="medical_services_cta">Habla con un asesor</a>
@@ -204,7 +230,7 @@
       </div>
     </section>
 
-    <section class="b2b-fit">
+    <section class="b2b-fit-section medical-fit-section">
       <div class="container">
         <div class="b2b-fit-grid">
           <div class="b2b-fit-card pro reveal">
@@ -226,7 +252,7 @@
       </div>
     </section>
 
-    <section class="medical-brand">
+    <section class="medical-brand booking-cta">
       <div class="container">
         <div class="medical-brand-inner reveal">
           <span class="section-label">Detrás de tu marca</span>
@@ -237,7 +263,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials">
+    <section class="testimonials b2b-testimonials medical-testimonials">
       <div class="container">
         <div class="reveal" style="text-align:center; margin-bottom: 64px;">
           <h2 data-i18n="medical_testimonials_title">Confianza de quienes ya operan con nosotros</h2>
@@ -408,7 +434,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="../js/main.js?v=18"></script>
+  <script src="../js/main.js?v=31"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.faq-item').forEach(item => {
