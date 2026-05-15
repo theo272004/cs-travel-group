@@ -48,15 +48,18 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { 
-  scroll-behavior: smooth; 
-  font-size: 16px; 
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   width: 100%;
 }
 
 body {
   font-family: var(--font-body);
+  font-synthesis: none;
   font-size: 1.02rem;
   color: var(--text);
   background: var(--bg);
@@ -3824,8 +3827,8 @@ body.b2b-landing .editorial-promise, body.b2b-landing .ev-services, body.b2b-lan
    across small laptops and phones without one-off viewport jumps. */
 body:not(.b2b-landing) {
   --home-page-x: clamp(16px, 3.2vw, 48px);
-  --home-hero-title: clamp(2.05rem, 1.08rem + 4.05vw, 5.35rem);
-  --home-hero-desc: clamp(.95rem, .82rem + .48vw, 1.28rem);
+  --home-hero-title: clamp(1.95rem, 1.02rem + 3.72vw, 5rem);
+  --home-hero-desc: clamp(.92rem, .8rem + .42vw, 1.18rem);
   --home-hero-copy: min(960px, calc(100vw - (var(--home-page-x) * 2)));
   --home-hero-copy-min: clamp(232px, 29vh, 292px);
   --home-hero-cta-gap: clamp(20px, 4.4vh, 66px);
@@ -3839,7 +3842,7 @@ body:not(.b2b-landing) .container {
 
 body:not(.b2b-landing) .hero {
   min-height: 100svh;
-  padding-block: clamp(86px, 12svh, 132px) clamp(44px, 8svh, 88px);
+  padding-block: clamp(76px, 10svh, 116px) clamp(44px, 8svh, 88px);
 }
 
 body:not(.b2b-landing) .pin-spacer:has(> .hero),
@@ -3849,7 +3852,7 @@ body:not(.b2b-landing) .hero {
 
 body:not(.b2b-landing) .hero-content {
   justify-content: center;
-  padding-top: clamp(4px, 3vh, 34px);
+  padding-top: clamp(0px, 1.4vh, 18px);
 }
 
 body:not(.b2b-landing) .hero-text-container {
@@ -3900,9 +3903,9 @@ body:not(.b2b-landing) .hero-cta {
   align-items: center;
   display: inline-flex;
   justify-content: center;
-  min-height: clamp(48px, 5.4vh, 58px);
-  min-width: clamp(188px, 18vw, 232px);
-  padding: clamp(13px, 1.4vh, 16px) clamp(26px, 3vw, 36px);
+  min-height: clamp(46px, 5vh, 54px);
+  min-width: clamp(176px, 16vw, 214px);
+  padding: clamp(12px, 1.2vh, 15px) clamp(24px, 2.6vw, 32px);
   white-space: nowrap;
   width: auto;
 }
@@ -3957,12 +3960,12 @@ body:not(.b2b-landing) .stat-divider {
 
 @media (max-width: 1180px) {
   body:not(.b2b-landing) {
-    --home-hero-title: clamp(2.35rem, 1.35rem + 3.9vw, 4.15rem);
-    --home-hero-desc: clamp(.95rem, .78rem + .58vw, 1.12rem);
-    --home-hero-copy-min: clamp(212px, 28vh, 246px);
-    --home-hero-cta-gap: clamp(20px, 3.4vh, 42px);
-    --home-stat-number: clamp(2.85rem, 2rem + 2.35vw, 3.65rem);
-    --home-stat-label: clamp(.7rem, .56rem + .28vw, .78rem);
+    --home-hero-title: clamp(2.18rem, 1.22rem + 3.45vw, 3.75rem);
+    --home-hero-desc: clamp(.9rem, .76rem + .48vw, 1.04rem);
+    --home-hero-copy-min: clamp(196px, 25vh, 226px);
+    --home-hero-cta-gap: clamp(18px, 2.7vh, 34px);
+    --home-stat-number: clamp(2.55rem, 1.82rem + 2vw, 3.35rem);
+    --home-stat-label: clamp(.66rem, .54rem + .22vw, .74rem);
   }
 }
 
@@ -4025,7 +4028,7 @@ body:not(.b2b-landing) .stat-divider {
     width: 42px;
   }
 
-body:not(.b2b-landing) .stats-grid {
+  body:not(.b2b-landing) .stats-grid {
     gap: 24px 12px;
   }
 }
@@ -4033,10 +4036,10 @@ body:not(.b2b-landing) .stats-grid {
 /* Medical landing premium pass */
 body.medical-landing {
   --medical-page-x: clamp(20px, 4vw, 64px);
-  --medical-title: clamp(2.15rem, 1.28rem + 3.35vw, 4.6rem);
-  --medical-h2: clamp(2rem, 1.34rem + 2.3vw, 3.55rem);
-  --medical-copy: clamp(.98rem, .88rem + .34vw, 1.18rem);
-  --medical-section-pad: clamp(54px, 7.4vh, 88px);
+  --medical-title: clamp(2.02rem, 1.18rem + 3vw, 4.12rem);
+  --medical-h2: clamp(1.92rem, 1.24rem + 2.02vw, 3.18rem);
+  --medical-copy: clamp(.94rem, .84rem + .28vw, 1.08rem);
+  --medical-section-pad: clamp(50px, 6.4vh, 78px);
   background: #f7fbff;
 }
 
@@ -4053,6 +4056,7 @@ body.medical-landing .split-hero-content {
   flex-basis: 56%;
   opacity: 1 !important;
   padding-inline: clamp(28px, 6vw, 96px);
+  padding-top: clamp(12px, 2vh, 28px);
   transform: none !important;
   visibility: visible !important;
 }
@@ -4068,7 +4072,7 @@ body.medical-landing .split-hero-title {
   font-size: var(--medical-title);
   line-height: 1.03;
   letter-spacing: 0;
-  max-width: 13ch;
+  max-width: 12.5ch;
   text-wrap: balance;
 }
 
@@ -4085,10 +4089,10 @@ body.medical-landing .medical-primary-cta {
   border-radius: 999px;
   color: #fff;
   display: inline-flex;
-  font-size: clamp(1rem, .9rem + .28vw, 1.1rem);
+  font-size: clamp(.94rem, .86rem + .22vw, 1.04rem);
   justify-content: center;
-  min-height: 54px;
-  padding: 16px 36px;
+  min-height: 50px;
+  padding: 14px 30px;
   width: auto;
 }
 
@@ -4365,7 +4369,7 @@ body.medical-landing .contact-form {
   }
 
   body.medical-landing .split-hero-content {
-    padding: 92px var(--medical-page-x) 42px;
+    padding: 82px var(--medical-page-x) 42px;
   }
 
   body.medical-landing .split-hero-title {
@@ -4395,8 +4399,8 @@ body.medical-landing .contact-form {
 @media (max-width: 640px) {
   body.medical-landing {
     --medical-page-x: 18px;
-    --medical-title: clamp(2.05rem, 1.3rem + 6.2vw, 2.82rem);
-    --medical-h2: clamp(1.85rem, 1.24rem + 4.8vw, 2.42rem);
+    --medical-title: clamp(1.86rem, 1.18rem + 5.6vw, 2.48rem);
+    --medical-h2: clamp(1.7rem, 1.14rem + 4.25vw, 2.22rem);
   }
 
   body.medical-landing .split-hero-title {
@@ -4410,11 +4414,30 @@ body.medical-landing .contact-form {
   }
 
   body.medical-landing .medical-hero .split-hero-content {
+    flex-basis: 100%;
     justify-content: center;
     min-height: 100svh;
-    padding-block: 86px 42px;
+    min-width: 0;
+    padding-block: 72px 38px;
+    width: 100%;
     position: relative;
     z-index: 2;
+  }
+
+  body.medical-landing .split-hero-kicker,
+  body.medical-landing .split-hero-desc {
+    overflow-wrap: anywhere;
+  }
+
+  body.medical-landing .split-hero-kicker {
+    font-size: .92rem;
+    line-height: 1.45;
+    max-width: 28ch;
+  }
+
+  body.medical-landing .split-hero-desc {
+    line-height: 1.58;
+    max-width: 34ch;
   }
 
   body.medical-landing .medical-hero .split-hero-image {
@@ -4434,7 +4457,8 @@ body.medical-landing .contact-form {
   }
 
   body.medical-landing .medical-primary-cta {
-    width: 100%;
+    max-width: 100%;
+    width: min(100%, 330px);
   }
 
   body.medical-landing .medical-ed-grid,
