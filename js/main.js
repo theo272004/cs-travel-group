@@ -128,6 +128,10 @@ const translations = {
     bk_title: '¿Prefieres hablar con un experto primero?',
     bk_desc: 'Agenda una asesoría gratuita por videollamada para discutir las necesidades de viaje de tu organización.',
     bk_btn: 'Agendar asesoría (45 min) ✦',
+    final_cta_label: 'Siguiente paso',
+    final_cta_title: 'Cuéntanos cómo viaja tu empresa hoy',
+    final_cta_desc: 'Muchos de nuestros aliados no sabían cuánto les estaba costando no tener esto resuelto hasta que hicimos el cálculo juntos. Escríbenos y lo hacemos en una conversación.',
+    final_cta_btn: 'Escríbenos',
     proc_label: 'Nuestro proceso',
     proc_title: 'De la idea al viaje en 4 pasos',
     proc_subtitle: 'Un proceso claro y sin complicaciones para que tu organización viaje con total confianza.',
@@ -173,6 +177,8 @@ const translations = {
     cont_label: 'Contacto',
     cont_title: '¿Listo para planificar el próximo viaje de tu organización?',
     cont_subtitle: 'Cuéntanos sobre tu grupo y destino. Te responderemos con una propuesta personalizada en menos de 48 horas.',
+    contact_page_title: 'Cuéntanos cómo viaja tu empresa hoy',
+    contact_page_desc: 'Muchos de nuestros aliados no sabían cuánto les estaba costando no tener esto resuelto hasta que hicimos el cálculo juntos. Escríbenos y lo hacemos en una conversación.',
     cont_email_t: 'Correo electrónico',
     cont_col_t: 'Colombia',
     cont_col_d: 'Barranquilla, Atlántico',
@@ -208,6 +214,14 @@ const translations = {
     form_budget_ph: 'Opcional',
     form_msg_lbl: 'Cuéntanos sobre tu viaje',
     form_msg_ph: 'Destino, número aproximado de personas, fechas tentativas, presupuesto estimado...',
+    form_step1_t: 'Datos iniciales',
+    form_step1_d: 'Primero entendemos quién solicita la cotización y qué tipo de organización representa.',
+    form_step2_t: 'Detalles del viaje',
+    form_step2_d: 'Con esta información preparamos una respuesta más útil para tu equipo.',
+    form_step3_t: 'Últimos detalles',
+    form_step3_d: 'Agrega fechas, presupuesto o contexto para que la primera respuesta sea más precisa.',
+    form_next: 'Continuar',
+    form_prev: 'Volver',
     form_btn: 'Enviar solicitud de cotización →',
     foot_desc: 'Agencia de viajes acreditada internacionalmente, especializada en la planificación de viajes grupales para instituciones educativas, empresas y organizaciones.',
     foot_nav_t: 'Navegación',
@@ -368,6 +382,10 @@ const translations = {
     bk_title: 'Prefer to talk to an expert first?',
     bk_desc: 'Schedule a free video call consultation to discuss your organization\'s travel needs.',
     bk_btn: 'Schedule consultation (45 min) ✦',
+    final_cta_label: 'Next step',
+    final_cta_title: 'Tell us how your company travels today',
+    final_cta_desc: 'Many of our partners did not know how much it was costing them to leave this unresolved until we calculated it together. Write to us and we will review it in one conversation.',
+    final_cta_btn: 'Write to us',
     proc_label: 'Our process',
     proc_title: 'From idea to trip in 4 steps',
     proc_subtitle: 'A clear and simple process so your organization travels with total confidence.',
@@ -413,6 +431,8 @@ const translations = {
     cont_label: 'Contact',
     cont_title: 'Ready to plan your organization\'s next trip?',
     cont_subtitle: 'Tell us about your group and destination. We will respond with a personalized proposal in less than 48 hours.',
+    contact_page_title: 'Tell us how your company travels today',
+    contact_page_desc: 'Many of our partners did not know how much it was costing them to leave this unresolved until we calculated it together. Write to us and we will review it in one conversation.',
     cont_email_t: 'Email Address',
     cont_col_t: 'Colombia',
     cont_col_d: 'Barranquilla, Atlántico',
@@ -448,6 +468,14 @@ const translations = {
     form_budget_ph: 'Optional',
     form_msg_lbl: 'Tell us about your trip',
     form_msg_ph: 'Destination, approximate number of people, tentative dates, estimated budget...',
+    form_step1_t: 'Initial details',
+    form_step1_d: 'First we understand who is requesting the quote and what type of organization they represent.',
+    form_step2_t: 'Trip details',
+    form_step2_d: 'With this information we prepare a more useful response for your team.',
+    form_step3_t: 'Final details',
+    form_step3_d: 'Add dates, budget, or context so the first response is more precise.',
+    form_next: 'Continue',
+    form_prev: 'Back',
     form_btn: 'Send quote request →',
     foot_desc: 'Internationally accredited travel agency, specialized in planning group trips for educational institutions, companies, and organizations.',
     foot_nav_t: 'Navigation',
@@ -981,14 +1009,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitHeroSearch = (e) => {
       e?.preventDefault();
       const dest = searchInput.value.trim();
+      const params = new URLSearchParams();
       if (dest) {
-        const destinationInput = document.querySelector('#destination');
-        const contactMsg = document.querySelector('#message');
-        if (destinationInput) destinationInput.value = dest;
-        if (contactMsg) contactMsg.value = `Hola, me gustaría cotizar un viaje para mi grupo hacia ${dest}.`;
+        params.set('destination', dest);
+        params.set('message', `Hola, me gustaría cotizar un viaje para mi grupo hacia ${dest}.`);
       }
-      const contactSection = document.querySelector('#contacto');
-      if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.location.href = `contacto/${params.toString() ? `?${params.toString()}` : ''}`;
     };
 
     searchBtn.addEventListener('click', submitHeroSearch);
@@ -1256,6 +1282,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     prevButtons.forEach(prevButton => prevButton.addEventListener('click', () => setFormStep(currentStep - 1)));
     setFormStep(0);
+
+    const params = new URLSearchParams(window.location.search);
+    const destinationParam = params.get('destination');
+    const messageParam = params.get('message');
+    const destinationInput = form.querySelector('#destination');
+    const messageInput = form.querySelector('#message');
+    if (destinationParam && destinationInput) destinationInput.value = destinationParam;
+    if (messageParam && messageInput) messageInput.value = messageParam;
   }
 
   form?.addEventListener('submit', async e => {
@@ -1413,6 +1447,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (messageInput) {
       messageInput.value = `Hola, estoy interesado en información sobre: ${messagePrefix}.\n\nMis necesidades son: `;
+    } else {
+      const params = new URLSearchParams({ message: `Hola, estoy interesado en información sobre: ${messagePrefix}.\n\nMis necesidades son: ` });
+      window.location.href = `contacto/?${params.toString()}`;
     }
   };
 
@@ -1496,6 +1533,8 @@ document.addEventListener('DOMContentLoaded', () => {
           if (targetEl) {
             const y = targetEl.getBoundingClientRect().top + window.scrollY - 100;
             window.scrollTo({ top: y, behavior: 'smooth' });
+          } else {
+            window.location.href = 'contacto/';
           }
         }
         if (action.onclick) action.onclick();

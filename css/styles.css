@@ -783,6 +783,27 @@ body.b2b-landing .header .nav-logo-img {
 .contact-item a { color: var(--accent); }
 .contact-item a:hover { color: var(--accent); }
 
+.contact-page .contact {
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-top: calc(var(--section-py) + 72px);
+}
+
+.contact-page .contact-grid,
+.contact-page .contact-info,
+.contact-page .contact-form {
+  min-width: 0;
+}
+
+.contact-page .contact h1 {
+  color: #fff;
+  font-size: clamp(2.35rem, 1.35rem + 3.2vw, 4.4rem);
+  line-height: 1.05;
+  max-width: 920px;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
 .contact-form {
   background: rgba(255,255,255,.1); backdrop-filter: blur(24px);
   border: 1px solid rgba(191,216,244,.26); border-radius: var(--radius-md);
@@ -849,6 +870,63 @@ body.b2b-landing .header .nav-logo-img {
 .form-step-copy p { color: rgba(255,255,255,.68); line-height: 1.65; font-size: 1rem; margin: 0; }
 .form-actions { display: grid; grid-template-columns: .42fr 1fr; gap: 14px; }
 .form-next { width: 100%; justify-content: center; }
+
+/* ===== Home final CTA ===== */
+.home-final-cta {
+  background:
+    linear-gradient(180deg, #fff 0%, #f7fbff 100%);
+  padding: clamp(70px, 9vw, 120px) 0;
+}
+
+.home-final-cta-inner {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255,208,0,.2), transparent 28%),
+    linear-gradient(135deg, var(--primary) 0%, #0C2342 56%, var(--primary-light) 100%);
+  border-radius: 24px;
+  box-shadow: 0 26px 70px rgba(16,42,76,.18);
+  color: #fff;
+  margin-inline: auto;
+  max-width: 1040px;
+  overflow: hidden;
+  padding: clamp(38px, 6vw, 72px);
+  position: relative;
+  text-align: center;
+}
+
+.home-final-cta-inner::before {
+  background: url("../assets/images/optimized/airplane-editorial-optimized.png") center / cover no-repeat;
+  content: "";
+  inset: 0;
+  opacity: .1;
+  position: absolute;
+}
+
+.home-final-cta-inner > * {
+  position: relative;
+  z-index: 1;
+}
+
+.home-final-cta .section-label {
+  color: var(--accent);
+  justify-content: center;
+}
+
+.home-final-cta h2 {
+  color: #fff;
+  font-size: clamp(2rem, 1.22rem + 2.7vw, 3.75rem);
+  line-height: 1.06;
+  margin: 12px auto 18px;
+  max-width: 820px;
+  text-wrap: balance;
+}
+
+.home-final-cta p {
+  color: rgba(255,255,255,.78);
+  font-size: clamp(1rem, .9rem + .35vw, 1.18rem);
+  line-height: 1.7;
+  margin: 0 auto 30px;
+  max-width: 720px;
+}
 
 /* ===== Footer ===== */
 .footer { background: var(--primary); color: rgba(255,255,255,.7); padding: 64px 0 0; }
@@ -3513,6 +3591,20 @@ body {
 
   .form-progress {
     margin-bottom: 18px;
+  }
+
+  .contact-page .contact h1 {
+    font-size: clamp(1.75rem, 9.5vw, 2.25rem);
+    max-width: calc(100vw - 44px);
+  }
+
+  .contact-page .contact .section-subtitle {
+    font-size: 1rem;
+    max-width: calc(100vw - 44px);
+  }
+
+  .contact-page .contact-form {
+    width: 100%;
   }
 
   .form-step-copy {
