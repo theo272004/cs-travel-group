@@ -5830,76 +5830,79 @@ body:not(.b2b-landing) .ev-feature {
 body:not(.b2b-landing) .proof-section {
   background:
     linear-gradient(180deg, #ffffff 0%, #f4fbff 100%);
-  padding-block: clamp(58px, 7vw, 92px);
+  padding-block: clamp(48px, 5.2vw, 64px);
 }
 
 body:not(.b2b-landing) .proof-comparison-layout {
   align-items: start;
   display: grid;
-  gap: clamp(32px, 5vw, 64px);
-  grid-template-columns: minmax(0, 1.28fr) minmax(360px, .95fr);
-  max-width: 1240px;
+  gap: clamp(28px, 3.2vw, 40px);
+  grid-template-columns: minmax(0, 1.2fr) minmax(380px, 460px);
+  max-width: 1180px;
 }
 
 body:not(.b2b-landing) .proof-header {
-  margin: 0 0 24px;
+  margin: 0 0 18px;
   text-align: left;
 }
 
 body:not(.b2b-landing) .proof-header h2 {
-  font-size: clamp(1.65rem, 1.22rem + 1.55vw, 2.45rem);
+  font-size: clamp(1.55rem, 1.16rem + 1.35vw, 2.16rem);
+  line-height: 1.05;
 }
 
 body:not(.b2b-landing) .proof-title-line {
   margin-left: 0;
+  margin-top: 9px;
+  width: 34px;
 }
 
 body:not(.b2b-landing) .proof-grid {
-  gap: 16px;
+  gap: clamp(14px, 1.5vw, 18px);
   max-width: none;
 }
 
 body:not(.b2b-landing) .proof-card {
   background: rgba(255, 255, 255, 0.86);
-  border: 1px solid rgba(148, 163, 184, 0.28);
+  border: 1px solid rgba(11, 37, 69, 0.08);
   border-radius: 12px;
-  box-shadow: 0 18px 42px rgba(16, 42, 76, 0.07);
-  min-height: 272px;
-  padding: clamp(22px, 2.4vw, 30px);
+  box-shadow: 0 8px 24px rgba(16, 42, 67, 0.05);
+  min-height: 228px;
+  padding: clamp(20px, 1.9vw, 26px);
 }
 
 body:not(.b2b-landing) .proof-quote-mark {
   color: var(--secondary);
   display: block;
   font-family: Georgia, serif;
-  font-size: 3rem;
+  font-size: 2.35rem;
   font-weight: 800;
   line-height: .75;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 body:not(.b2b-landing) .proof-card p {
   color: #284260;
-  font-size: clamp(.92rem, .82rem + .2vw, 1rem);
-  line-height: 1.62;
-  margin-bottom: 28px;
+  font-size: clamp(.88rem, .82rem + .12vw, .96rem);
+  line-height: 1.5;
+  margin-bottom: 22px;
 }
 
 body:not(.b2b-landing) .proof-person {
   display: grid;
-  gap: 8px;
+  gap: 6px;
   grid-template-columns: 1fr;
 }
 
 body:not(.b2b-landing) .proof-person strong {
   color: var(--primary);
-  font-size: .96rem;
+  font-size: .94rem;
 }
 
 body:not(.b2b-landing) .proof-person small {
   color: #51657b;
-  font-size: .82rem;
-  line-height: 1.45;
+  font-size: .78rem;
+  line-height: 1.38;
 }
 
 body:not(.b2b-landing) .difference-block {
@@ -5909,21 +5912,22 @@ body:not(.b2b-landing) .difference-block {
 
 body:not(.b2b-landing) .difference-table {
   background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(148, 163, 184, 0.3);
-  border-radius: 14px;
-  box-shadow: 0 20px 50px rgba(16, 42, 76, 0.08);
+  border: 1px solid rgba(11, 37, 69, 0.09);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(16, 42, 67, 0.055);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(40px, auto) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1fr);
   overflow: hidden;
 }
 
 body:not(.b2b-landing) .difference-head {
   align-items: center;
   display: flex;
+  font-size: .96rem;
   font-weight: 800;
   justify-content: center;
-  min-height: 70px;
-  padding: 16px;
+  min-height: 56px;
+  padding: 12px 14px;
 }
 
 body:not(.b2b-landing) .difference-head.without {
@@ -5933,7 +5937,7 @@ body:not(.b2b-landing) .difference-head.without {
 }
 
 body:not(.b2b-landing) .difference-head.with {
-  background: var(--secondary);
+  background: #0067c7;
   color: #fff;
   grid-column: 3 / 4;
 }
@@ -5947,32 +5951,36 @@ body:not(.b2b-landing) .difference-arrow {
   align-items: center;
   border-top: 1px solid rgba(148, 163, 184, 0.22);
   display: flex;
-  min-height: 78px;
-  padding: 16px 18px;
+  min-height: 64px;
+  padding: 12px 14px;
 }
 
 body:not(.b2b-landing) .difference-cell.without {
   color: #5d6d7f;
-  gap: 12px;
+  font-size: .9rem;
+  gap: 10px;
+  line-height: 1.38;
 }
 
 body:not(.b2b-landing) .difference-cell.with {
   color: var(--primary);
+  font-size: .92rem;
   font-weight: 800;
-  line-height: 1.35;
+  line-height: 1.32;
 }
 
 body:not(.b2b-landing) .difference-arrow {
   color: var(--accent);
-  font-size: 1.6rem;
+  font-size: 1.35rem;
   font-weight: 900;
   justify-content: center;
-  padding-inline: 10px;
+  padding-inline: 4px;
 }
 
 body:not(.b2b-landing) .diff-icon {
   color: #8796a8;
   flex: 0 0 auto;
+  font-size: .98rem;
   font-weight: 800;
 }
 
