@@ -6643,6 +6643,8 @@ body.medical-landing .contact-form {
 .contact-page .ticket-shell {
   --stub-width: clamp(260px, 25.8vw, 390px);
   --ticket-strip-w: clamp(172px, 12vw, 230px);
+  --notch-size: 52px;
+  --notch-radius: calc(var(--notch-size) / 2);
   background:
     radial-gradient(circle at 28% 26%, rgba(255,255,255,.08), transparent 30%),
     linear-gradient(115deg, rgba(6,43,85,.96), rgba(3,27,52,.9));
@@ -6653,37 +6655,20 @@ body.medical-landing .contact-form {
   display: grid;
   grid-template-columns: var(--stub-width) minmax(620px, 1fr) var(--ticket-strip-w);
   min-height: min(680px, calc(100svh - 184px));
-  overflow: visible;
+  overflow: hidden;
   position: relative;
-}
-
-.contact-page .ticket-shell::before,
-.contact-page .ticket-shell::after {
-  content: "";
-  position: absolute;
-  left: var(--stub-width);
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background:
-    var(--ticket-page-grid),
-    var(--ticket-page-bg);
-  background-attachment: fixed;
-  background-size: 42px 42px, 42px 42px, auto;
-  border: 1px solid rgba(191, 216, 244, 0.28);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
-  pointer-events: none;
-  z-index: 6;
-}
-
-.contact-page .ticket-shell::before {
-  top: 0;
-  transform: translate(-50%, -50%);
-}
-
-.contact-page .ticket-shell::after {
-  bottom: 0;
-  transform: translate(-50%, 50%);
+  -webkit-mask-image:
+    radial-gradient(circle var(--notch-radius) at var(--stub-width) 0, transparent 98%, #000 100%),
+    radial-gradient(circle var(--notch-radius) at var(--stub-width) 100%, transparent 98%, #000 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-composite: source-in;
+  mask-image:
+    radial-gradient(circle var(--notch-radius) at var(--stub-width) 0, transparent 98%, #000 100%),
+    radial-gradient(circle var(--notch-radius) at var(--stub-width) 100%, transparent 98%, #000 100%);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  mask-composite: intersect;
 }
 
 .contact-page .ticket-stub,
@@ -7146,11 +7131,9 @@ body.medical-landing .contact-form {
   .contact-page .ticket-shell {
     border-radius: 22px;
     grid-template-columns: 1fr;
-    overflow: hidden;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
-
-  .contact-page .ticket-shell::before,
-  .contact-page .ticket-shell::after { display: none; }
 
   .contact-page .ticket-stub {
     border-bottom: 2px dashed rgba(191,216,244,.36);
