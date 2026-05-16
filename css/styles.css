@@ -5836,9 +5836,14 @@ body:not(.b2b-landing) .proof-section {
 body:not(.b2b-landing) .proof-comparison-layout {
   align-items: start;
   display: grid;
-  gap: clamp(28px, 3.2vw, 40px);
-  grid-template-columns: minmax(0, 1.2fr) minmax(380px, 460px);
-  max-width: 1180px;
+  gap: clamp(42px, 4.4vw, 62px);
+  grid-template-columns: minmax(0, 1.12fr) minmax(390px, 460px);
+  max-width: 1240px;
+}
+
+body:not(.b2b-landing) .proof-side {
+  justify-self: start;
+  width: 100%;
 }
 
 body:not(.b2b-landing) .proof-header {
@@ -5858,7 +5863,7 @@ body:not(.b2b-landing) .proof-title-line {
 }
 
 body:not(.b2b-landing) .proof-grid {
-  gap: clamp(14px, 1.5vw, 18px);
+  gap: clamp(16px, 1.8vw, 22px);
   max-width: none;
 }
 
@@ -5906,8 +5911,10 @@ body:not(.b2b-landing) .proof-person small {
 }
 
 body:not(.b2b-landing) .difference-block {
-  margin: 0;
+  justify-self: end;
+  margin: 4px 0 0;
   max-width: none;
+  width: 100%;
 }
 
 body:not(.b2b-landing) .difference-table {
@@ -5962,6 +5969,16 @@ body:not(.b2b-landing) .difference-cell.without {
   line-height: 1.38;
 }
 
+body:not(.b2b-landing) .difference-cell.without .diff-icon {
+  align-items: center;
+  border: 1px solid rgba(135, 150, 168, 0.28);
+  border-radius: 999px;
+  display: inline-flex;
+  height: 20px;
+  justify-content: center;
+  width: 20px;
+}
+
 body:not(.b2b-landing) .difference-cell.with {
   color: var(--primary);
   font-size: .92rem;
@@ -6007,7 +6024,13 @@ body:not(.b2b-landing) .diff-icon {
 @media (max-width: 980px) {
 
   body:not(.b2b-landing) .proof-comparison-layout {
+    gap: 30px;
     grid-template-columns: 1fr;
+  }
+
+  body:not(.b2b-landing) .difference-block {
+    justify-self: stretch;
+    margin-top: 0;
   }
 
   body:not(.b2b-landing) .proof-grid {
