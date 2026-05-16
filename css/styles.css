@@ -1021,29 +1021,32 @@ body.b2b-landing .header .nav-logo-img {
 .home-final-cta {
   background:
     linear-gradient(180deg, #fff 0%, #f7fbff 100%);
-  padding: clamp(70px, 9vw, 120px) 0;
+  padding: clamp(64px, 8vw, 110px) 0;
 }
 
 .home-final-cta-inner {
   background:
-    radial-gradient(circle at 82% 18%, rgba(255,208,0,.2), transparent 28%),
-    linear-gradient(135deg, var(--primary) 0%, #0C2342 56%, var(--primary-light) 100%);
-  border-radius: 24px;
-  box-shadow: 0 26px 70px rgba(16,42,76,.18);
-  color: #fff;
+    linear-gradient(90deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.82) 48%, rgba(255,255,255,.64) 100%),
+    url("../assets/images/optimized/booking-sky-cta.jpg") center / cover no-repeat;
+  border: 1px solid rgba(106,155,200,.18);
+  border-radius: 22px;
+  box-shadow: 0 24px 60px rgba(16,42,76,.1);
+  color: var(--primary);
   margin-inline: auto;
-  max-width: 1040px;
+  max-width: 1060px;
   overflow: hidden;
-  padding: clamp(38px, 6vw, 72px);
+  padding: clamp(30px, 4.6vw, 58px) clamp(24px, 5vw, 72px);
   position: relative;
-  text-align: center;
+  text-align: left;
 }
 
 .home-final-cta-inner::before {
-  background: url("../assets/images/optimized/airplane-editorial-optimized.png") center / cover no-repeat;
+  background:
+    radial-gradient(circle at 12% 50%, rgba(191,216,244,.24), transparent 28%),
+    linear-gradient(90deg, rgba(255,255,255,.3), transparent);
   content: "";
   inset: 0;
-  opacity: .1;
+  opacity: .78;
   position: absolute;
 }
 
@@ -1054,24 +1057,73 @@ body.b2b-landing .header .nav-logo-img {
 
 .home-final-cta .section-label {
   color: var(--accent);
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .home-final-cta h2 {
-  color: #fff;
-  font-size: clamp(2rem, 1.22rem + 2.7vw, 3.75rem);
-  line-height: 1.06;
-  margin: 12px auto 18px;
-  max-width: 820px;
+  color: var(--primary);
+  font-size: clamp(2rem, 1.42rem + 1.9vw, 3.15rem);
+  line-height: 1.04;
+  margin: 0 0 14px;
+  max-width: 650px;
   text-wrap: balance;
 }
 
 .home-final-cta p {
-  color: rgba(255,255,255,.78);
-  font-size: clamp(1rem, .9rem + .35vw, 1.18rem);
-  line-height: 1.7;
-  margin: 0 auto 30px;
-  max-width: 720px;
+  color: var(--text-secondary);
+  font-size: clamp(.98rem, .92rem + .22vw, 1.12rem);
+  line-height: 1.62;
+  margin: 0 0 24px;
+  max-width: 620px;
+}
+
+.home-final-contact-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.home-final-contact-pill {
+  align-items: center;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(106,155,200,.26);
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(16,42,76,.07);
+  color: var(--primary);
+  display: inline-flex;
+  font-size: .96rem;
+  font-weight: 800;
+  gap: 10px;
+  min-height: 48px;
+  padding: 10px 16px 10px 12px;
+  text-decoration: none;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.home-final-contact-pill:hover {
+  border-color: rgba(106,155,200,.5);
+  box-shadow: 0 16px 34px rgba(16,42,76,.11);
+  transform: translateY(-1px);
+}
+
+.home-final-contact-icon {
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(106,155,200,.24);
+  border-radius: 12px;
+  color: var(--secondary);
+  display: inline-flex;
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+}
+
+.home-final-button {
+  border-radius: 16px;
+  min-height: 48px;
+  padding-inline: 24px;
+  white-space: nowrap;
 }
 
 /* ===== Footer ===== */
@@ -7752,6 +7804,32 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
 
   body.b2b-landing:not(.medical-landing) .split-hero-content {
     padding-bottom: clamp(44px, 10vw, 68px);
+  }
+}
+
+@media (max-width: 680px) {
+  .home-final-cta-inner {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.76) 100%),
+      url("../assets/images/optimized/booking-sky-cta.jpg") center / cover no-repeat;
+    border-radius: 18px;
+    padding: 30px 20px;
+    text-align: left;
+  }
+
+  .home-final-contact-row,
+  .home-final-contact-pill,
+  .home-final-button {
+    width: 100%;
+  }
+
+  .home-final-contact-pill,
+  .home-final-button {
+    justify-content: center;
+  }
+
+  .home-final-contact-pill {
+    font-size: .9rem;
   }
 }
 
