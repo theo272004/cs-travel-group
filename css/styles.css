@@ -6617,7 +6617,7 @@ body.medical-landing .contact-form {
     linear-gradient(135deg, #031b34 0%, #062b55 48%, #031b34 100%);
   min-height: 100svh;
   overflow: hidden;
-  padding: clamp(118px, 13vh, 150px) 0 clamp(54px, 8vh, 86px);
+  padding: clamp(92px, 10vh, 118px) 0 clamp(28px, 4.5vh, 52px);
 }
 
 .contact-page .ticket-contact::before {
@@ -6633,12 +6633,14 @@ body.medical-landing .contact-form {
 }
 
 .contact-page .ticket-container {
-  max-width: 1480px;
+  max-width: min(1760px, calc(100vw - 36px));
   position: relative;
   z-index: 2;
 }
 
 .contact-page .ticket-shell {
+  --ticket-stub-w: clamp(260px, 25.8vw, 390px);
+  --ticket-strip-w: clamp(172px, 12vw, 230px);
   background:
     radial-gradient(circle at 28% 26%, rgba(255,255,255,.08), transparent 30%),
     linear-gradient(115deg, rgba(6,43,85,.96), rgba(3,27,52,.9));
@@ -6647,8 +6649,8 @@ body.medical-landing .contact-form {
   box-shadow: 0 34px 100px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255,255,255,.12);
   color: #fff;
   display: grid;
-  grid-template-columns: minmax(260px, .82fr) minmax(520px, 1.78fr) minmax(178px, .48fr);
-  min-height: 680px;
+  grid-template-columns: var(--ticket-stub-w) minmax(620px, 1fr) var(--ticket-strip-w);
+  min-height: min(700px, calc(100svh - 150px));
   overflow: hidden;
   position: relative;
 }
@@ -6657,9 +6659,9 @@ body.medical-landing .contact-form {
 .contact-page .ticket-shell::after {
   content: "";
   position: absolute;
-  left: 29.3%;
-  width: 58px;
-  height: 58px;
+  left: var(--ticket-stub-w);
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   background: #031b34;
   border: 1px solid rgba(191, 216, 244, 0.28);
@@ -6667,8 +6669,8 @@ body.medical-landing .contact-form {
   transform: translateX(-50%);
 }
 
-.contact-page .ticket-shell::before { top: -29px; }
-.contact-page .ticket-shell::after { bottom: -29px; }
+.contact-page .ticket-shell::before { top: -27px; }
+.contact-page .ticket-shell::after { bottom: -27px; }
 
 .contact-page .ticket-stub,
 .contact-page .ticket-form,
@@ -6684,8 +6686,8 @@ body.medical-landing .contact-form {
   border-right: 2px dashed rgba(191,216,244,.4);
   display: flex;
   flex-direction: column;
-  gap: clamp(24px, 3.2vw, 42px);
-  padding: clamp(34px, 4vw, 56px) clamp(26px, 3vw, 48px);
+  gap: clamp(18px, 2.1vw, 30px);
+  padding: clamp(28px, 3vw, 42px) clamp(22px, 2.6vw, 40px);
 }
 
 .contact-page .ticket-stub::before {
@@ -6698,14 +6700,6 @@ body.medical-landing .contact-form {
   background-size: 9px 9px;
   opacity: .12;
   pointer-events: none;
-}
-
-.contact-page .ticket-brand img {
-  display: block;
-  filter: brightness(0) invert(1);
-  height: auto;
-  max-width: 190px;
-  width: 72%;
 }
 
 .contact-page .ticket-stub-copy {
@@ -6728,7 +6722,7 @@ body.medical-landing .contact-form {
 .contact-page .ticket-stub h1 {
   color: #fff;
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 2.7vw, 3.05rem);
+  font-size: clamp(1.85rem, 2.25vw, 2.7rem);
   line-height: .98;
   margin: 18px 0;
   text-transform: uppercase;
@@ -6745,16 +6739,16 @@ body.medical-landing .contact-form {
 
 .contact-page .ticket-stub-copy p {
   color: rgba(255,255,255,.74);
-  font-size: clamp(.95rem, .86rem + .18vw, 1.06rem);
-  line-height: 1.58;
-  max-width: 34ch;
+  font-size: clamp(.88rem, .82rem + .14vw, 1rem);
+  line-height: 1.5;
+  max-width: 36ch;
 }
 
 .contact-page .ticket-contact-list {
   border-top: 1px dashed rgba(191,216,244,.28);
   display: grid;
-  gap: 18px;
-  padding-top: 24px;
+  gap: 13px;
+  padding-top: 20px;
   position: relative;
   top: auto;
   z-index: 1;
@@ -6763,8 +6757,8 @@ body.medical-landing .contact-form {
 .contact-page .contact-item {
   align-items: center;
   display: grid;
-  gap: 14px;
-  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 12px;
+  grid-template-columns: 42px minmax(0, 1fr);
 }
 
 .contact-page .contact-item .ci-icon {
@@ -6772,13 +6766,13 @@ body.medical-landing .contact-form {
   border: 1px solid rgba(255,255,255,.14);
   border-radius: 14px;
   color: #ffd21f;
-  height: 46px;
-  width: 46px;
+  height: 42px;
+  width: 42px;
 }
 
 .contact-page .contact-item h4 {
   color: rgba(255,255,255,.94);
-  font-size: .95rem;
+  font-size: .88rem;
   font-weight: 800;
   margin-bottom: 3px;
 }
@@ -6786,7 +6780,7 @@ body.medical-landing .contact-form {
 .contact-page .contact-item p,
 .contact-page .contact-item a {
   color: #ffd21f;
-  font-size: .94rem;
+  font-size: .88rem;
   line-height: 1.35;
 }
 
@@ -6797,7 +6791,7 @@ body.medical-landing .contact-form {
   box-shadow: none;
   margin: 0;
   max-width: none;
-  padding: clamp(38px, 4.8vw, 68px) clamp(34px, 4.6vw, 70px);
+  padding: clamp(28px, 3.2vw, 46px) clamp(34px, 4vw, 64px);
 }
 
 .contact-page .form-progress {
@@ -6806,8 +6800,8 @@ body.medical-landing .contact-form {
   display: grid;
   gap: 16px;
   grid-template-columns: auto minmax(34px, 1fr) auto minmax(34px, 1fr) auto;
-  margin-bottom: clamp(28px, 4vh, 46px);
-  padding-bottom: 28px;
+  margin-bottom: clamp(20px, 2.7vh, 34px);
+  padding-bottom: 20px;
 }
 
 .contact-page .form-step-node {
@@ -6822,8 +6816,8 @@ body.medical-landing .contact-form {
   background: rgba(255,255,255,.08);
   border: 1px solid rgba(255,255,255,.22);
   color: rgba(255,255,255,.72);
-  height: 42px;
-  width: 42px;
+  height: 38px;
+  width: 38px;
 }
 
 .contact-page .form-step-dot.active,
@@ -6850,17 +6844,17 @@ body.medical-landing .contact-form {
 }
 
 .contact-page .form-step-line {
-  align-self: 21px;
+  align-self: 19px;
   background: rgba(255,210,31,.52);
   height: 1px;
 }
 
-.contact-page .form-step-copy { margin-bottom: 30px; }
+.contact-page .form-step-copy { margin-bottom: 22px; }
 
 .contact-page .form-step-copy span {
   color: #fff;
   font-family: var(--font-heading);
-  font-size: clamp(1.55rem, 1.18rem + 1.2vw, 2.3rem);
+  font-size: clamp(1.42rem, 1.12rem + .95vw, 2rem);
   letter-spacing: 0;
   line-height: 1.06;
   margin-bottom: 12px;
@@ -6868,19 +6862,19 @@ body.medical-landing .contact-form {
 
 .contact-page .form-step-copy p {
   color: rgba(255,255,255,.7);
-  font-size: clamp(.98rem, .88rem + .2vw, 1.08rem);
-  line-height: 1.58;
+  font-size: clamp(.9rem, .84rem + .14vw, 1rem);
+  line-height: 1.5;
   max-width: 72ch;
 }
 
-.contact-page .form-row { gap: 22px; }
-.contact-page .form-group { margin-bottom: 22px; }
+.contact-page .form-row { gap: 18px; }
+.contact-page .form-group { margin-bottom: 16px; }
 
 .contact-page .form-group label {
   color: rgba(255,255,255,.86);
-  font-size: .94rem;
+  font-size: .88rem;
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .contact-page .form-group input,
@@ -6890,12 +6884,12 @@ body.medical-landing .contact-form {
   border: 1px solid rgba(191,216,244,.22);
   border-radius: 14px;
   color: #fff;
-  min-height: 60px;
-  padding: 17px 18px;
+  min-height: 54px;
+  padding: 14px 16px;
 }
 
 .contact-page .form-group textarea {
-  min-height: 152px;
+  min-height: 126px;
   resize: vertical;
 }
 
@@ -6923,7 +6917,7 @@ body.medical-landing .contact-form {
   display: grid;
   gap: clamp(14px, 2vw, 28px);
   grid-template-columns: minmax(150px, .42fr) minmax(0, 1fr);
-  margin-top: 24px;
+  margin-top: 18px;
 }
 
 .contact-page .form-next,
@@ -6931,7 +6925,7 @@ body.medical-landing .contact-form {
 .contact-page .form-prev {
   border-radius: 14px;
   font-weight: 900;
-  min-height: 58px;
+  min-height: 54px;
 }
 
 .contact-page .form-next,
@@ -6964,19 +6958,19 @@ body.medical-landing .contact-form {
   border-left: 2px dashed rgba(191,216,244,.38);
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: clamp(34px, 3.2vw, 50px) clamp(20px, 2.2vw, 32px);
+  gap: 18px;
+  padding: clamp(28px, 2.6vw, 40px) clamp(18px, 1.8vw, 28px);
 }
 
 .contact-page .boarding-top {
   border-bottom: 1px dashed rgba(191,216,244,.26);
-  padding-bottom: 24px;
+  padding-bottom: 18px;
 }
 
 .contact-page .boarding-top strong {
   color: #fff;
   display: block;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 8px 0;
   white-space: nowrap;
 }
@@ -6993,7 +6987,7 @@ body.medical-landing .contact-form {
   align-items: center;
   display: flex;
   flex-direction: column;
-  min-height: 220px;
+  min-height: 176px;
 }
 
 .contact-page .plane-mark {
@@ -7018,16 +7012,16 @@ body.medical-landing .contact-form {
 
 .contact-page .boarding-route {
   display: grid;
-  gap: 54px;
-  margin-top: -166px;
-  padding-left: 24px;
+  gap: 40px;
+  margin-top: -132px;
+  padding-left: 18px;
 }
 
 .contact-page .boarding-route strong {
   color: #fff;
   display: block;
   font-family: var(--font-heading);
-  font-size: clamp(1.55rem, 2vw, 2.2rem);
+  font-size: clamp(1.25rem, 1.5vw, 1.8rem);
   line-height: 1;
 }
 
@@ -7056,7 +7050,7 @@ body.medical-landing .contact-form {
 
 .contact-page .boarding-meta dd {
   color: #ffd21f;
-  font-size: .86rem;
+  font-size: .78rem;
   font-weight: 900;
   margin-top: 6px;
   text-transform: uppercase;
@@ -7066,7 +7060,7 @@ body.medical-landing .contact-form {
   align-items: stretch;
   display: flex;
   gap: 3px;
-  height: 62px;
+  height: 50px;
   margin-top: 6px;
 }
 
@@ -7092,7 +7086,8 @@ body.medical-landing .contact-form {
 
 @media (max-width: 1180px) {
   .contact-page .ticket-shell {
-    grid-template-columns: minmax(240px, .75fr) minmax(0, 1.45fr);
+    --ticket-stub-w: clamp(240px, 32vw, 340px);
+    grid-template-columns: var(--ticket-stub-w) minmax(0, 1fr);
   }
 
   .contact-page .boarding-strip {
@@ -7129,7 +7124,6 @@ body.medical-landing .contact-form {
     border-right: 0;
   }
 
-  .contact-page .ticket-brand img { max-width: 160px; }
   .contact-page .ticket-form { padding: 30px 22px; }
 
   .contact-page .form-progress {
