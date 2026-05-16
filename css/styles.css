@@ -5378,7 +5378,7 @@ body:not(.b2b-landing) .ev-panel {
   border-radius: 0;
   box-shadow: none;
   display: grid;
-  grid-template-columns: minmax(360px, 1.45fr) repeat(4, minmax(170px, 1fr));
+  grid-template-columns: minmax(380px, 1.28fr) repeat(3, minmax(220px, 1fr));
   max-width: none;
   min-height: 0;
   padding-block: clamp(20px, 2.3vw, 30px);
@@ -5703,6 +5703,8 @@ body:not(.b2b-landing) .profile-card {
 body:not(.b2b-landing) .profile-image {
   aspect-ratio: 16 / 5.4;
   min-height: 154px;
+  overflow: visible;
+  position: relative;
 }
 
 body:not(.b2b-landing) .profile-title {
@@ -5710,23 +5712,33 @@ body:not(.b2b-landing) .profile-title {
 }
 
 body:not(.b2b-landing) .profile-content {
-  padding: clamp(20px, 2.4vw, 28px);
+  padding: clamp(44px, 4vw, 54px) clamp(20px, 2.4vw, 28px) clamp(20px, 2.4vw, 28px);
 }
 
-body:not(.b2b-landing) .profile-content::before {
+body:not(.b2b-landing) .profile-badge {
   align-items: center;
   background: var(--secondary);
-  border: 5px solid #fff;
+  border: 6px solid #fff;
   border-radius: 50%;
   color: #fff;
-  content: "";
   display: flex;
-  height: 58px;
+  height: 68px;
   justify-content: center;
-  margin-top: -58px;
-  position: relative;
-  width: 58px;
-  z-index: 2;
+  left: clamp(20px, 2.8vw, 34px);
+  position: absolute;
+  bottom: -34px;
+  width: 68px;
+  z-index: 4;
+}
+
+body:not(.b2b-landing) .profile-badge svg {
+  fill: none;
+  height: 30px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.9;
+  width: 30px;
 }
 
 body:not(.b2b-landing) .profile-content p {
@@ -5763,7 +5775,7 @@ body:not(.b2b-landing) .profile-btn:hover {
 }
 
 body:not(.b2b-landing) .ev-panel {
-  grid-template-columns: minmax(360px, 1.45fr) repeat(4, minmax(170px, 1fr));
+  grid-template-columns: minmax(380px, 1.28fr) repeat(3, minmax(220px, 1fr));
 }
 
 body:not(.b2b-landing) .ev-intro {
@@ -5963,7 +5975,7 @@ body:not(.b2b-landing) .diff-icon {
 
   body:not(.b2b-landing) .ev-feature-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   body:not(.b2b-landing) .ev-feature {
