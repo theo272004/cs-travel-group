@@ -5663,7 +5663,7 @@ body:not(.b2b-landing) .hero-cta-secondary:hover {
 
 body:not(.b2b-landing) .profiles-section {
   background:
-    linear-gradient(180deg, rgba(239, 248, 255, 0.9) 0%, rgba(255, 255, 255, 0.82) 100%),
+    linear-gradient(180deg, rgba(239, 248, 255, 0.62) 0%, rgba(255, 255, 255, 0.56) 100%),
     url("../assets/images/profiles-sky-bg.png") center top / cover no-repeat;
   padding-bottom: clamp(28px, 4vw, 46px);
 }
@@ -5708,6 +5708,18 @@ body:not(.b2b-landing) .profile-image {
   position: relative;
 }
 
+body:not(.b2b-landing) .profile-image img,
+body:not(.b2b-landing) .profile-overlay {
+  border-radius: 14px 14px 0 0;
+}
+
+body:not(.b2b-landing) .profile-overlay {
+  background:
+    linear-gradient(180deg, rgba(6, 43, 85, 0.02) 0%, rgba(3, 27, 52, 0.34) 100%),
+    linear-gradient(90deg, rgba(3, 27, 52, 0.18) 0%, rgba(3, 27, 52, 0.04) 56%, rgba(3, 27, 52, 0.18) 100%);
+  z-index: 1;
+}
+
 body:not(.b2b-landing) .profile-title {
   display: none;
 }
@@ -5718,7 +5730,7 @@ body:not(.b2b-landing) .profile-content {
 
 body:not(.b2b-landing) .profile-badge {
   align-items: center;
-  background: var(--secondary);
+  background: #075fb8;
   border: 6px solid #fff;
   border-radius: 50%;
   color: #fff;
@@ -5729,7 +5741,7 @@ body:not(.b2b-landing) .profile-badge {
   position: absolute;
   bottom: -34px;
   width: 68px;
-  z-index: 4;
+  z-index: 5;
 }
 
 body:not(.b2b-landing) .profile-badge svg {
