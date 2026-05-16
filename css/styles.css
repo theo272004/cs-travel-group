@@ -6617,7 +6617,7 @@ body.medical-landing .contact-form {
     linear-gradient(135deg, #031b34 0%, #062b55 48%, #031b34 100%);
   min-height: 100svh;
   overflow: hidden;
-  padding: clamp(92px, 10vh, 118px) 0 clamp(28px, 4.5vh, 52px);
+  padding: clamp(118px, 13vh, 148px) 0 clamp(28px, 4.5vh, 52px);
 }
 
 .contact-page .ticket-contact::before {
@@ -6650,7 +6650,7 @@ body.medical-landing .contact-form {
   color: #fff;
   display: grid;
   grid-template-columns: var(--ticket-stub-w) minmax(620px, 1fr) var(--ticket-strip-w);
-  min-height: min(700px, calc(100svh - 150px));
+  min-height: min(680px, calc(100svh - 184px));
   overflow: hidden;
   position: relative;
 }
@@ -6660,17 +6660,18 @@ body.medical-landing .contact-form {
   content: "";
   position: absolute;
   left: var(--ticket-stub-w);
-  width: 54px;
-  height: 54px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   background: #031b34;
   border: 1px solid rgba(191, 216, 244, 0.28);
-  z-index: 5;
+  box-shadow: 0 0 0 8px #031b34, inset 0 0 0 1px rgba(255,255,255,.08);
+  z-index: 8;
   transform: translateX(-50%);
 }
 
-.contact-page .ticket-shell::before { top: -27px; }
-.contact-page .ticket-shell::after { bottom: -27px; }
+.contact-page .ticket-shell::before { top: -29px; }
+.contact-page .ticket-shell::after { bottom: -29px; }
 
 .contact-page .ticket-stub,
 .contact-page .ticket-form,
@@ -6722,8 +6723,8 @@ body.medical-landing .contact-form {
 .contact-page .ticket-stub h1 {
   color: #fff;
   font-family: var(--font-heading);
-  font-size: clamp(1.85rem, 2.25vw, 2.7rem);
-  line-height: .98;
+  font-size: clamp(1.58rem, 1.95vw, 2.34rem);
+  line-height: 1.08;
   margin: 18px 0;
   text-transform: uppercase;
 }
@@ -6735,6 +6736,7 @@ body.medical-landing .contact-form {
 
 .contact-page .ticket-stub h1 strong {
   color: #ffd21f;
+  white-space: nowrap;
 }
 
 .contact-page .ticket-stub-copy p {
@@ -6976,7 +6978,6 @@ body.medical-landing .contact-form {
 }
 
 .contact-page .boarding-top p,
-.contact-page .boarding-route span,
 .contact-page .boarding-footer {
   color: rgba(255,255,255,.62);
   font-size: .78rem;
@@ -6984,16 +6985,19 @@ body.medical-landing .contact-form {
 }
 
 .contact-page .flight-route-mini {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  min-height: 176px;
+  margin: 4px 0 0;
+  min-height: 154px;
+  padding-left: 18px;
+  padding-top: 22px;
 }
 
 .contact-page .plane-mark {
   color: rgba(255,255,255,.78);
   font-size: 2rem;
-  transform: rotate(-18deg);
+  transform: rotate(-34deg);
 }
 
 .contact-page .route-dot {
@@ -7012,9 +7016,10 @@ body.medical-landing .contact-form {
 
 .contact-page .boarding-route {
   display: grid;
-  gap: 40px;
-  margin-top: -132px;
-  padding-left: 18px;
+  gap: 62px;
+  margin-top: -138px;
+  padding-left: 50px;
+  text-align: left;
 }
 
 .contact-page .boarding-route strong {
@@ -7025,17 +7030,9 @@ body.medical-landing .contact-form {
   line-height: 1;
 }
 
-.contact-page .boarding-route span {
-  display: block;
-  font-weight: 800;
-  letter-spacing: .05em;
-  margin-top: 7px;
-  text-transform: uppercase;
-}
-
 .contact-page .boarding-meta {
   display: grid;
-  gap: 8px;
+  gap: 6px;
   grid-template-columns: repeat(3, 1fr);
   margin-top: auto;
 }
@@ -7043,14 +7040,15 @@ body.medical-landing .contact-form {
 .contact-page .boarding-meta div {
   border-right: 1px solid rgba(191,216,244,.22);
   min-width: 0;
-  padding-right: 8px;
+  padding-right: 6px;
+  text-align: center;
 }
 
 .contact-page .boarding-meta div:last-child { border-right: 0; }
 
 .contact-page .boarding-meta dd {
   color: #ffd21f;
-  font-size: .78rem;
+  font-size: .72rem;
   font-weight: 900;
   margin-top: 6px;
   text-transform: uppercase;
@@ -7109,7 +7107,7 @@ body.medical-landing .contact-form {
 }
 
 @media (max-width: 860px) {
-  .contact-page .ticket-contact { padding-top: 104px; }
+  .contact-page .ticket-contact { padding-top: 124px; }
 
   .contact-page .ticket-shell {
     border-radius: 22px;
