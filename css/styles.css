@@ -5663,7 +5663,8 @@ body:not(.b2b-landing) .hero-cta-secondary:hover {
 
 body:not(.b2b-landing) .profiles-section {
   background:
-    linear-gradient(180deg, #eef8ff 0%, #ffffff 100%);
+    linear-gradient(180deg, rgba(239, 248, 255, 0.9) 0%, rgba(255, 255, 255, 0.82) 100%),
+    url("../assets/images/profiles-sky-bg.png") center top / cover no-repeat;
   padding-bottom: clamp(28px, 4vw, 46px);
 }
 
