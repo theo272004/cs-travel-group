@@ -6609,3 +6609,574 @@ body.medical-landing .contact-form {
 .b2b-premium-logos .marquee-item-box { width: 280px !important; height: 120px !important; margin: 0 60px !important; }
 .b2b-premium-logos .marquee-item-box img { max-height: 80% !important; }
 
+/* ===== Contact Boarding Pass Redesign ===== */
+.contact-page .ticket-contact {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(14, 74, 134, 0.46), transparent 34%),
+    radial-gradient(circle at 86% 14%, rgba(255, 210, 31, 0.12), transparent 28%),
+    linear-gradient(135deg, #031b34 0%, #062b55 48%, #031b34 100%);
+  min-height: 100svh;
+  overflow: hidden;
+  padding: clamp(118px, 13vh, 150px) 0 clamp(54px, 8vh, 86px);
+}
+
+.contact-page .ticket-contact::before {
+  background:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  border-radius: 0;
+  inset: 0;
+  opacity: .42;
+  width: auto;
+  height: auto;
+}
+
+.contact-page .ticket-container {
+  max-width: 1480px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-page .ticket-shell {
+  background:
+    radial-gradient(circle at 28% 26%, rgba(255,255,255,.08), transparent 30%),
+    linear-gradient(115deg, rgba(6,43,85,.96), rgba(3,27,52,.9));
+  border: 1px solid rgba(191, 216, 244, 0.28);
+  border-radius: 28px;
+  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255,255,255,.12);
+  color: #fff;
+  display: grid;
+  grid-template-columns: minmax(260px, .82fr) minmax(520px, 1.78fr) minmax(178px, .48fr);
+  min-height: 680px;
+  overflow: hidden;
+  position: relative;
+}
+
+.contact-page .ticket-shell::before,
+.contact-page .ticket-shell::after {
+  content: "";
+  position: absolute;
+  left: 29.3%;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #031b34;
+  border: 1px solid rgba(191, 216, 244, 0.28);
+  z-index: 5;
+  transform: translateX(-50%);
+}
+
+.contact-page .ticket-shell::before { top: -29px; }
+.contact-page .ticket-shell::after { bottom: -29px; }
+
+.contact-page .ticket-stub,
+.contact-page .ticket-form,
+.contact-page .boarding-strip {
+  min-width: 0;
+  position: relative;
+}
+
+.contact-page .ticket-stub {
+  background:
+    radial-gradient(circle at 42% 46%, rgba(191,216,244,.09), transparent 35%),
+    linear-gradient(180deg, rgba(6,43,85,.88), rgba(3,27,52,.74));
+  border-right: 2px dashed rgba(191,216,244,.4);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 3.2vw, 42px);
+  padding: clamp(34px, 4vw, 56px) clamp(26px, 3vw, 48px);
+}
+
+.contact-page .ticket-stub::before {
+  content: "";
+  position: absolute;
+  inset: 12% 6% auto auto;
+  width: 70%;
+  aspect-ratio: 1.4;
+  background-image: radial-gradient(rgba(255,255,255,.16) 1px, transparent 1.5px);
+  background-size: 9px 9px;
+  opacity: .12;
+  pointer-events: none;
+}
+
+.contact-page .ticket-brand img {
+  display: block;
+  filter: brightness(0) invert(1);
+  height: auto;
+  max-width: 190px;
+  width: 72%;
+}
+
+.contact-page .ticket-stub-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-page .ticket-eyebrow,
+.contact-page .ticket-contact-title,
+.contact-page .boarding-top span,
+.contact-page .boarding-meta dt {
+  color: rgba(255,255,255,.58);
+  display: block;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.contact-page .ticket-stub h1 {
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 2.7vw, 3.05rem);
+  line-height: .98;
+  margin: 18px 0;
+  text-transform: uppercase;
+}
+
+.contact-page .ticket-stub h1 span,
+.contact-page .ticket-stub h1 strong {
+  display: block;
+}
+
+.contact-page .ticket-stub h1 strong {
+  color: #ffd21f;
+}
+
+.contact-page .ticket-stub-copy p {
+  color: rgba(255,255,255,.74);
+  font-size: clamp(.95rem, .86rem + .18vw, 1.06rem);
+  line-height: 1.58;
+  max-width: 34ch;
+}
+
+.contact-page .ticket-contact-list {
+  border-top: 1px dashed rgba(191,216,244,.28);
+  display: grid;
+  gap: 18px;
+  padding-top: 24px;
+  position: relative;
+  top: auto;
+  z-index: 1;
+}
+
+.contact-page .contact-item {
+  align-items: center;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 46px minmax(0, 1fr);
+}
+
+.contact-page .contact-item .ci-icon {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 14px;
+  color: #ffd21f;
+  height: 46px;
+  width: 46px;
+}
+
+.contact-page .contact-item h4 {
+  color: rgba(255,255,255,.94);
+  font-size: .95rem;
+  font-weight: 800;
+  margin-bottom: 3px;
+}
+
+.contact-page .contact-item p,
+.contact-page .contact-item a {
+  color: #ffd21f;
+  font-size: .94rem;
+  line-height: 1.35;
+}
+
+.contact-page .ticket-form {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  max-width: none;
+  padding: clamp(38px, 4.8vw, 68px) clamp(34px, 4.6vw, 70px);
+}
+
+.contact-page .form-progress {
+  align-items: start;
+  border-bottom: 1px solid rgba(191,216,244,.2);
+  display: grid;
+  gap: 16px;
+  grid-template-columns: auto minmax(34px, 1fr) auto minmax(34px, 1fr) auto;
+  margin-bottom: clamp(28px, 4vh, 46px);
+  padding-bottom: 28px;
+}
+
+.contact-page .form-step-node {
+  align-items: center;
+  display: grid;
+  gap: 11px;
+  justify-items: center;
+  min-width: 110px;
+}
+
+.contact-page .form-step-dot {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.22);
+  color: rgba(255,255,255,.72);
+  height: 42px;
+  width: 42px;
+}
+
+.contact-page .form-step-dot.active,
+.contact-page .form-step-dot.complete {
+  background: #ffd21f;
+  border-color: #ffd21f;
+  box-shadow: 0 0 0 6px rgba(255,210,31,.12);
+  color: #031b34;
+}
+
+.contact-page .form-step-label {
+  color: rgba(255,255,255,.56);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contact-page .form-step-node:has(.form-step-dot.active) .form-step-label,
+.contact-page .form-step-node:has(.form-step-dot.complete) .form-step-label {
+  color: #ffd21f;
+}
+
+.contact-page .form-step-line {
+  align-self: 21px;
+  background: rgba(255,210,31,.52);
+  height: 1px;
+}
+
+.contact-page .form-step-copy { margin-bottom: 30px; }
+
+.contact-page .form-step-copy span {
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(1.55rem, 1.18rem + 1.2vw, 2.3rem);
+  letter-spacing: 0;
+  line-height: 1.06;
+  margin-bottom: 12px;
+}
+
+.contact-page .form-step-copy p {
+  color: rgba(255,255,255,.7);
+  font-size: clamp(.98rem, .88rem + .2vw, 1.08rem);
+  line-height: 1.58;
+  max-width: 72ch;
+}
+
+.contact-page .form-row { gap: 22px; }
+.contact-page .form-group { margin-bottom: 22px; }
+
+.contact-page .form-group label {
+  color: rgba(255,255,255,.86);
+  font-size: .94rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.contact-page .form-group input,
+.contact-page .form-group select,
+.contact-page .form-group textarea {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(191,216,244,.22);
+  border-radius: 14px;
+  color: #fff;
+  min-height: 60px;
+  padding: 17px 18px;
+}
+
+.contact-page .form-group textarea {
+  min-height: 152px;
+  resize: vertical;
+}
+
+.contact-page .form-group input::placeholder,
+.contact-page .form-group textarea::placeholder {
+  color: rgba(255,255,255,.44);
+}
+
+.contact-page .form-group input:hover,
+.contact-page .form-group select:hover,
+.contact-page .form-group textarea:hover {
+  border-color: rgba(255,210,31,.5);
+}
+
+.contact-page .form-group input:focus,
+.contact-page .form-group select:focus,
+.contact-page .form-group textarea:focus {
+  border-color: #ffd21f;
+  box-shadow: 0 0 0 4px rgba(255,210,31,.14);
+  outline: none;
+}
+
+.contact-page .form-actions {
+  align-items: center;
+  display: grid;
+  gap: clamp(14px, 2vw, 28px);
+  grid-template-columns: minmax(150px, .42fr) minmax(0, 1fr);
+  margin-top: 24px;
+}
+
+.contact-page .form-next,
+.contact-page .form-submit,
+.contact-page .form-prev {
+  border-radius: 14px;
+  font-weight: 900;
+  min-height: 58px;
+}
+
+.contact-page .form-next,
+.contact-page .form-submit {
+  background: #ffd21f;
+  box-shadow: 0 16px 34px rgba(255,210,31,.22);
+  color: #031b34;
+}
+
+.contact-page .form-next:hover,
+.contact-page .form-submit:hover {
+  background: #ffc928;
+  transform: translateY(-1px);
+}
+
+.contact-page .form-prev,
+.contact-page .btn-outline {
+  background: transparent;
+  border-color: rgba(255,255,255,.46);
+  color: #fff;
+}
+
+.contact-page .form-prev:hover,
+.contact-page .btn-outline:hover {
+  background: rgba(255,255,255,.09);
+  border-color: rgba(255,255,255,.72);
+}
+
+.contact-page .boarding-strip {
+  border-left: 2px dashed rgba(191,216,244,.38);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: clamp(34px, 3.2vw, 50px) clamp(20px, 2.2vw, 32px);
+}
+
+.contact-page .boarding-top {
+  border-bottom: 1px dashed rgba(191,216,244,.26);
+  padding-bottom: 24px;
+}
+
+.contact-page .boarding-top strong {
+  color: #fff;
+  display: block;
+  font-size: 1.1rem;
+  margin: 8px 0;
+  white-space: nowrap;
+}
+
+.contact-page .boarding-top p,
+.contact-page .boarding-route span,
+.contact-page .boarding-footer {
+  color: rgba(255,255,255,.62);
+  font-size: .78rem;
+  line-height: 1.45;
+}
+
+.contact-page .flight-route-mini {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+
+.contact-page .plane-mark {
+  color: rgba(255,255,255,.78);
+  font-size: 2rem;
+  transform: rotate(-18deg);
+}
+
+.contact-page .route-dot {
+  background: rgba(255,255,255,.78);
+  border-radius: 50%;
+  height: 7px;
+  width: 7px;
+}
+
+.contact-page .route-line {
+  background: repeating-linear-gradient(to bottom, rgba(255,255,255,.42) 0 8px, transparent 8px 16px);
+  flex: 1;
+  margin: 8px 0;
+  width: 1px;
+}
+
+.contact-page .boarding-route {
+  display: grid;
+  gap: 54px;
+  margin-top: -166px;
+  padding-left: 24px;
+}
+
+.contact-page .boarding-route strong {
+  color: #fff;
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(1.55rem, 2vw, 2.2rem);
+  line-height: 1;
+}
+
+.contact-page .boarding-route span {
+  display: block;
+  font-weight: 800;
+  letter-spacing: .05em;
+  margin-top: 7px;
+  text-transform: uppercase;
+}
+
+.contact-page .boarding-meta {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: auto;
+}
+
+.contact-page .boarding-meta div {
+  border-right: 1px solid rgba(191,216,244,.22);
+  min-width: 0;
+  padding-right: 8px;
+}
+
+.contact-page .boarding-meta div:last-child { border-right: 0; }
+
+.contact-page .boarding-meta dd {
+  color: #ffd21f;
+  font-size: .86rem;
+  font-weight: 900;
+  margin-top: 6px;
+  text-transform: uppercase;
+}
+
+.contact-page .boarding-barcode {
+  align-items: stretch;
+  display: flex;
+  gap: 3px;
+  height: 62px;
+  margin-top: 6px;
+}
+
+.contact-page .boarding-barcode span {
+  background: rgba(255,255,255,.86);
+  display: block;
+  width: 4px;
+}
+
+.contact-page .boarding-barcode span:nth-child(2),
+.contact-page .boarding-barcode span:nth-child(5),
+.contact-page .boarding-barcode span:nth-child(8) { width: 9px; }
+
+.contact-page .boarding-barcode span:nth-child(4),
+.contact-page .boarding-barcode span:nth-child(9) { width: 2px; }
+
+.contact-page .boarding-footer {
+  font-weight: 900;
+  letter-spacing: .28em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1180px) {
+  .contact-page .ticket-shell {
+    grid-template-columns: minmax(240px, .75fr) minmax(0, 1.45fr);
+  }
+
+  .contact-page .boarding-strip {
+    border-left: 0;
+    border-top: 2px dashed rgba(191,216,244,.36);
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(180px, .8fr) minmax(180px, .8fr) minmax(160px, .65fr);
+    min-height: 0;
+  }
+
+  .contact-page .flight-route-mini { display: none; }
+
+  .contact-page .boarding-route {
+    gap: 18px;
+    margin: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .contact-page .ticket-contact { padding-top: 104px; }
+
+  .contact-page .ticket-shell {
+    border-radius: 22px;
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page .ticket-shell::before,
+  .contact-page .ticket-shell::after { display: none; }
+
+  .contact-page .ticket-stub {
+    border-bottom: 2px dashed rgba(191,216,244,.36);
+    border-right: 0;
+  }
+
+  .contact-page .ticket-brand img { max-width: 160px; }
+  .contact-page .ticket-form { padding: 30px 22px; }
+
+  .contact-page .form-progress {
+    gap: 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page .form-step-line { display: none; }
+
+  .contact-page .form-step-node {
+    grid-template-columns: 42px 1fr;
+    justify-items: start;
+    min-width: 0;
+  }
+
+  .contact-page .form-step-label { text-align: left; }
+
+  .contact-page .form-row,
+  .contact-page .form-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page .form-actions .btn { width: 100%; }
+
+  .contact-page .boarding-strip {
+    grid-template-columns: 1fr;
+    padding: 28px 22px;
+  }
+
+  .contact-page .boarding-meta { max-width: 360px; }
+  .contact-page .boarding-barcode { max-width: 260px; }
+}
+
+@media (max-width: 520px) {
+  .contact-page .ticket-container { padding-inline: 14px; }
+  .contact-page .ticket-stub { padding: 28px 20px; }
+
+  .contact-page .contact-item {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .contact-page .contact-item .ci-icon {
+    height: 42px;
+    width: 42px;
+  }
+
+  .contact-page .ticket-stub h1 { font-size: 2rem; }
+  .contact-page .form-step-copy span { font-size: 1.45rem; }
+}
+

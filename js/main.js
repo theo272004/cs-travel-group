@@ -184,7 +184,7 @@ const translations = {
     contact_page_desc: 'Muchos de nuestros aliados no sabían cuánto les estaba costando no tener esto resuelto hasta que hicimos el cálculo juntos. Escríbenos y lo hacemos en una conversación.',
     cont_email_t: 'Correo electrónico',
     cont_col_t: 'Colombia',
-    cont_col_d: 'Barranquilla, Atlántico',
+    cont_col_d: 'Barranquilla, Atlántico, Colombia',
     form_name_lbl: 'Nombre completo',
     form_name_ph: 'Tu nombre',
     form_email_lbl: 'Correo electrónico',
@@ -441,7 +441,7 @@ const translations = {
     contact_page_desc: 'Many of our partners did not know how much it was costing them to leave this unresolved until we calculated it together. Write to us and we will review it in one conversation.',
     cont_email_t: 'Email Address',
     cont_col_t: 'Colombia',
-    cont_col_d: 'Barranquilla, Atlántico',
+    cont_col_d: 'Barranquilla, Atlántico, Colombia',
     form_name_lbl: 'Full Name',
     form_name_ph: 'Your name',
     form_email_lbl: 'Email Address',
@@ -1260,6 +1260,11 @@ document.addEventListener('DOMContentLoaded', () => {
       stepDots.forEach((dot, dotIndex) => {
         dot.classList.toggle('active', dotIndex === currentStep);
         dot.classList.toggle('complete', dotIndex < currentStep);
+        if (dotIndex === currentStep) {
+          dot.setAttribute('aria-current', 'step');
+        } else {
+          dot.removeAttribute('aria-current');
+        }
       });
     };
 
