@@ -7833,3 +7833,128 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
   }
 }
 
+/* Final layout pass for testimonials and full-width cloud CTA */
+body:not(.b2b-landing) .proof-comparison-layout {
+  gap: clamp(42px, 4.4vw, 68px);
+  grid-template-columns: minmax(720px, 1.5fr) minmax(390px, .72fr);
+  max-width: none;
+  padding-inline: max(var(--home-page-x), calc((100vw - 1480px) / 2));
+  width: 100%;
+}
+
+body:not(.b2b-landing) .proof-side,
+body:not(.b2b-landing) .proof-header,
+body:not(.b2b-landing) .proof-grid {
+  justify-self: start;
+  max-width: 100%;
+  width: 100%;
+}
+
+body:not(.b2b-landing) .proof-header {
+  margin-bottom: clamp(18px, 2vw, 28px);
+}
+
+body:not(.b2b-landing) .proof-header h2 {
+  font-size: clamp(2rem, 1.42rem + 1.8vw, 3.05rem);
+}
+
+body:not(.b2b-landing) .proof-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body:not(.b2b-landing) .proof-card {
+  aspect-ratio: 1 / 1.04;
+  border-radius: 16px;
+  min-height: 0;
+  padding: clamp(26px, 2.2vw, 34px);
+}
+
+body:not(.b2b-landing) .proof-card p {
+  font-size: clamp(.98rem, .9rem + .22vw, 1.08rem);
+  line-height: 1.48;
+}
+
+.home-final-cta {
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.94) 0%, rgba(255,255,255,.84) 48%, rgba(255,255,255,.62) 100%),
+    url("../assets/images/optimized/booking-sky-cta.jpg") center / cover no-repeat;
+  overflow: hidden;
+  padding: clamp(78px, 8vw, 128px) 0;
+  position: relative;
+}
+
+.home-final-cta::before {
+  background:
+    radial-gradient(circle at 12% 50%, rgba(191,216,244,.28), transparent 30%),
+    linear-gradient(180deg, rgba(255,255,255,.2), transparent);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.home-final-cta .container {
+  position: relative;
+  z-index: 1;
+}
+
+.home-final-cta-inner {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  max-width: 1160px;
+  overflow: visible;
+  padding: 0;
+}
+
+.home-final-cta-inner::before {
+  display: none;
+}
+
+.home-final-cta h2,
+.home-final-cta p {
+  max-width: 680px;
+}
+
+.home-final-contact-row {
+  max-width: 980px;
+}
+
+@media (max-width: 1180px) {
+  body:not(.b2b-landing) .proof-comparison-layout {
+    grid-template-columns: 1fr;
+  }
+
+  body:not(.b2b-landing) .proof-grid {
+    max-width: 920px;
+  }
+
+  body:not(.b2b-landing) .proof-card {
+    aspect-ratio: auto;
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 760px) {
+  body:not(.b2b-landing) .proof-comparison-layout {
+    padding-inline: var(--home-page-x);
+  }
+
+  body:not(.b2b-landing) .proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body:not(.b2b-landing) .proof-card {
+    min-height: 0;
+  }
+
+  .home-final-cta {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.94) 0%, rgba(255,255,255,.72) 100%),
+      url("../assets/images/optimized/booking-sky-cta.jpg") center / cover no-repeat;
+    padding: 70px 0;
+  }
+}
+
