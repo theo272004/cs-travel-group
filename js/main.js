@@ -3,6 +3,7 @@
 const translations = {
   es: {
     logo: 'CS<span>Travel</span> Group',
+    nav_home: 'Inicio',
     nav_services: 'Servicios',
     nav_why: 'Empresas',
     nav_process: 'Médicos',
@@ -260,6 +261,7 @@ const translations = {
   },
   en: {
     logo: 'CS<span>Travel</span> Group',
+    nav_home: 'Home',
     nav_services: 'Services',
     nav_why: 'Companies',
     nav_process: 'Medical',
