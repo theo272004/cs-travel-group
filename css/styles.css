@@ -3972,6 +3972,7 @@ body.b2b-landing:not(.medical-landing) .split-hero-content {
   opacity: 1 !important;
   padding-inline: clamp(28px, 6vw, 96px);
   padding-top: clamp(12px, 2vh, 28px);
+  row-gap: clamp(16px, 2.4vh, 26px);
   transform: none !important;
   visibility: visible !important;
 }
@@ -3989,15 +3990,29 @@ body.b2b-landing:not(.medical-landing) .split-hero-title {
   letter-spacing: 0;
   line-height: 1.03;
   max-width: 13.7ch;
+  margin-bottom: 0;
   text-wrap: balance;
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero-copy {
+  display: grid;
+  gap: 12px;
+  max-width: 58ch;
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero-desc {
   color: var(--text-secondary) !important;
   font-size: var(--company-copy);
   line-height: 1.65;
-  margin-bottom: clamp(28px, 4vh, 44px);
+  margin: 0;
   max-width: 56ch;
+}
+
+body.b2b-landing:not(.medical-landing) .hero-action-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: clamp(4px, 1vh, 10px);
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero-image {
@@ -4309,12 +4324,15 @@ body.b2b-landing:not(.medical-landing) .booking-cta-inner {
 
   body.b2b-landing:not(.medical-landing) .split-hero-desc {
     line-height: 1.55;
-    margin-bottom: 26px;
     max-width: 46ch;
   }
 
   body.b2b-landing:not(.medical-landing) .split-hero .btn-dark {
     padding: 14px 28px !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .hero-action-row {
+    margin-top: 6px;
   }
 }
 
@@ -4410,6 +4428,10 @@ body.b2b-landing:not(.medical-landing) .booking-cta-inner {
     justify-content: center;
     max-width: 100%;
     width: min(100%, 330px);
+  }
+
+  body.b2b-landing:not(.medical-landing) .hero-action-row {
+    width: 100%;
   }
 
   body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box {
@@ -5100,10 +5122,11 @@ body.medical-landing .split-hero {
 }
 
 body.medical-landing .split-hero-content {
-  flex-basis: 56%;
+  flex-basis: 58%;
   opacity: 1 !important;
-  padding-inline: clamp(28px, 6vw, 96px);
+  padding-inline: clamp(28px, 5.5vw, 88px);
   padding-top: clamp(12px, 2vh, 28px);
+  row-gap: clamp(14px, 2.2vh, 24px);
   transform: none !important;
   visibility: visible !important;
 }
@@ -5119,16 +5142,36 @@ body.medical-landing .split-hero-title {
   font-size: var(--medical-title);
   line-height: 1.03;
   letter-spacing: 0;
-  max-width: 12.5ch;
+  margin-bottom: 0;
+  max-width: 13.8ch;
   text-wrap: balance;
+}
+
+body.medical-landing .split-hero-copy {
+  display: grid;
+  gap: 12px;
+  max-width: min(62ch, 100%);
 }
 
 body.medical-landing .split-hero-desc {
   color: var(--text-secondary) !important;
   font-size: var(--medical-copy);
-  line-height: 1.65;
-  margin-bottom: clamp(28px, 4vh, 44px);
-  max-width: 56ch;
+  line-height: 1.58;
+  margin: 0;
+  max-width: 60ch;
+}
+
+body.medical-landing .split-hero-desc:first-child {
+  color: var(--primary) !important;
+  font-weight: 650;
+  max-width: 50ch;
+}
+
+body.medical-landing .hero-action-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: clamp(4px, 1vh, 10px);
 }
 
 body.medical-landing .medical-primary-cta {
@@ -5141,6 +5184,13 @@ body.medical-landing .medical-primary-cta {
   min-height: 50px;
   padding: 14px 30px;
   width: auto;
+}
+
+body.medical-landing .statement-copy-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  padding: clamp(22px, 3vw, 34px);
 }
 
 body.medical-landing .split-hero-image {
@@ -5481,7 +5531,15 @@ body.medical-landing .medical-reasons-grid .logistics-list {
 }
 
 body.medical-landing .medical-reasons-grid .logistics-list div {
+  align-items: flex-start;
   line-height: 1.55;
+  min-height: auto;
+}
+
+body.medical-landing .medical-sticky-copy {
+  align-self: start;
+  position: sticky;
+  top: 110px;
 }
 
 body.medical-landing .medical-specialty-note {
@@ -5592,6 +5650,10 @@ body.medical-landing .contact-form {
     grid-template-columns: 1fr;
   }
 
+  body.medical-landing .medical-sticky-copy {
+    position: static;
+  }
+
   body.medical-landing .medical-ed-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 18px !important;
@@ -5649,6 +5711,14 @@ body.medical-landing .contact-form {
   body.medical-landing .split-hero-desc {
     line-height: 1.58;
     max-width: 34ch;
+  }
+
+  body.medical-landing .split-hero-copy {
+    gap: 10px;
+  }
+
+  body.medical-landing .hero-action-row {
+    width: 100%;
   }
 
   body.medical-landing .medical-hero .split-hero-image {
