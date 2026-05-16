@@ -4333,6 +4333,18 @@ body.b2b-landing:not(.medical-landing) .booking-cta-inner {
   body.b2b-landing:not(.medical-landing) .b2b-fit-grid {
     grid-template-columns: 1fr !important;
   }
+
+  body.b2b-landing:not(.medical-landing) .assurance-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  body.b2b-landing:not(.medical-landing) .assurance-item:nth-child(2n) {
+    border-right: 0;
+  }
+
+  body.b2b-landing:not(.medical-landing) .assurance-item:nth-child(-n+2) {
+    border-bottom: 1px solid rgba(148, 163, 184, 0.36);
+  }
 }
 
 @media (max-width: 640px) {
@@ -4411,6 +4423,20 @@ body.b2b-landing:not(.medical-landing) .booking-cta-inner {
     gap: 18px !important;
   }
 
+  body.b2b-landing:not(.medical-landing) .assurance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.b2b-landing:not(.medical-landing) .assurance-item {
+    justify-content: flex-start;
+    border-right: 0;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.36);
+  }
+
+  body.b2b-landing:not(.medical-landing) .assurance-item:last-child {
+    border-bottom: 0;
+  }
+
   body.b2b-landing:not(.medical-landing) .ed-grid-4 .ed-card {
     aspect-ratio: 5 / 4.8 !important;
     min-height: 310px !important;
@@ -4486,6 +4512,51 @@ body.b2b-landing .b2b-testimonials {
 
 body.b2b-landing:not(.medical-landing) .company-benefits-section {
   background: #f8fbff !important;
+}
+
+body.b2b-landing:not(.medical-landing) .company-assurance-strip {
+  background: #eef5ff;
+  border-block: 1px solid rgba(191, 219, 254, 0.9);
+  padding: 22px 0;
+}
+
+body.b2b-landing:not(.medical-landing) .assurance-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+body.b2b-landing:not(.medical-landing) .assurance-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 68px;
+  padding: 14px 22px;
+  color: var(--primary);
+  font-weight: 700;
+  border-right: 1px solid rgba(148, 163, 184, 0.36);
+}
+
+body.b2b-landing:not(.medical-landing) .assurance-item:last-child {
+  border-right: 0;
+}
+
+body.b2b-landing:not(.medical-landing) .assurance-check {
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: #dff3d5;
+  color: #2f7a32;
+  font-weight: 800;
 }
 
 body.b2b-landing:not(.medical-landing) .company-benefits-section::after {
@@ -5403,6 +5474,43 @@ body.medical-landing .medical-testimonials {
 body.medical-landing .medical-testimonials .testimonial-card {
   max-width: 780px;
   margin-inline: auto;
+}
+
+body.medical-landing .medical-reasons-grid .logistics-list {
+  gap: 14px;
+}
+
+body.medical-landing .medical-reasons-grid .logistics-list div {
+  line-height: 1.55;
+}
+
+body.medical-landing .medical-specialty-note {
+  margin: 40px auto 0;
+  max-width: 760px;
+  text-align: center;
+}
+
+body.medical-landing .medical-specialty-note h3 {
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 1rem + 1vw, 2rem);
+  margin-bottom: 12px;
+}
+
+body.medical-landing .medical-specialty-note p {
+  color: var(--text-secondary);
+  margin-bottom: 22px;
+}
+
+body.medical-landing .medical-final-cta {
+  background: #f0f7ff;
+}
+
+body.medical-landing .medical-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
 }
 
 body.medical-landing .contact-grid {
