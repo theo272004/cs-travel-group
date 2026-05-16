@@ -4832,7 +4832,7 @@ body:not(.b2b-landing) {
   --home-page-x: clamp(16px, 3.2vw, 48px);
   --home-hero-title: clamp(1.95rem, 1.02rem + 3.72vw, 5rem);
   --home-hero-desc: clamp(.92rem, .8rem + .42vw, 1.18rem);
-  --home-hero-copy: min(960px, calc(100vw - (var(--home-page-x) * 2)));
+  --home-hero-copy: min(1120px, calc(100vw - (var(--home-page-x) * 2)));
   --home-hero-copy-min: clamp(232px, 29vh, 292px);
   --home-hero-cta-gap: clamp(20px, 4.4vh, 66px);
   --home-stat-number: clamp(2.35rem, 1.65rem + 2.55vw, 4rem);
@@ -4888,7 +4888,7 @@ body:not(.b2b-landing) .hero-title {
 body:not(.b2b-landing) .hero-desc {
   font-size: var(--home-hero-desc);
   line-height: 1.56;
-  max-width: min(760px, calc(100vw - (var(--home-page-x) * 2)));
+  max-width: min(880px, calc(100vw - (var(--home-page-x) * 2)));
   text-wrap: pretty;
 }
 
