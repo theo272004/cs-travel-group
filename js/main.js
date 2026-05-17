@@ -1028,7 +1028,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroSlides.length > 0 && typeof MotionPathPlugin !== 'undefined' && heroScrollMotion) {
       let activeHeroStage = 0;
       gsap.set(heroSlides, { autoAlpha: 0 });
-      gsap.set(heroTexts, { autoAlpha: 0, y: 14, filter: 'blur(2px)' });
+      gsap.set(heroTexts, { autoAlpha: 0, y: 18, filter: 'blur(3px)' });
       gsap.set(heroSlides[0], { autoAlpha: 1 });
       gsap.set(heroTexts[0], { autoAlpha: 1, y: 0, filter: 'blur(0px)' });
 
@@ -1040,12 +1040,12 @@ document.addEventListener('DOMContentLoaded', () => {
         heroTexts.forEach((text, i) => text.classList.toggle('active', i === index));
         heroDots.forEach((dot, i) => dot.classList.toggle('active', i === index));
 
-        gsap.to(heroSlides, { autoAlpha: 0, duration: 0.34, ease: 'power2.out', overwrite: true });
-        gsap.to(heroSlides[index], { autoAlpha: 1, duration: 0.5, ease: 'power2.out', overwrite: true });
-        gsap.to(heroTexts, { autoAlpha: 0, y: -10, filter: 'blur(2px)', duration: 0.16, ease: 'power2.inOut', overwrite: true });
+        gsap.to(heroSlides, { autoAlpha: 0, duration: 0.28, ease: 'power2.out', overwrite: true });
+        gsap.to(heroSlides[index], { autoAlpha: 1, duration: 0.42, ease: 'power2.out', overwrite: true });
+        gsap.to(heroTexts, { autoAlpha: 0, y: -14, filter: 'blur(3px)', duration: 0.12, ease: 'power2.in', overwrite: true });
         gsap.fromTo(heroTexts[index],
-          { autoAlpha: 0, y: 14, filter: 'blur(2px)' },
-          { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.38, ease: 'power3.out', overwrite: true }
+          { autoAlpha: 0, y: 20, filter: 'blur(3px)' },
+          { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.22, ease: 'power3.out', overwrite: true }
         );
       };
 
@@ -1062,9 +1062,9 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
           trigger: '.hero',
           start: 'top top',
-          end: () => isMobileViewport ? '+=760' : '+=1280',
+          end: () => isMobileViewport ? '+=860' : '+=1500',
           pin: true,
-          scrub: isMobileViewport ? 0.14 : 0.22,
+          scrub: isMobileViewport ? 0.18 : 0.28,
           anticipatePin: 1,
           invalidateOnRefresh: true,
           onUpdate: (self) => {
@@ -1096,20 +1096,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Fade in the initial elements on load
-      gsap.from('.header', { y: -72, autoAlpha: 0, duration: 0.74, ease: 'power3.out' });
-      gsap.from(['.nav-links', '.lang-switcher'], { y: -14, autoAlpha: 0, duration: 0.56, ease: 'power3.out', delay: 0.28 });
+      gsap.from('.header', { y: -100, autoAlpha: 0, duration: 1, ease: 'power4.out' });
+      gsap.from(['.nav-links', '.lang-switcher'], { y: -20, autoAlpha: 0, duration: 0.72, ease: 'power3.out', delay: 0.42 });
       const heroKicker = document.querySelector('.hero-kicker');
-      if (heroKicker) gsap.from(heroKicker, { y: 14, autoAlpha: 0, duration: 0.58, ease: 'power3.out', delay: 0.2 });
-      gsap.fromTo(heroTexts[0], { y: 28, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.78, ease: 'power3.out', delay: 0.3 });
-      gsap.from('.hero-progress-dot', { y: 8, autoAlpha: 0, duration: 0.42, stagger: 0.06, ease: 'power3.out', delay: 0.5 });
-      gsap.from('.hero-cta-container', { y: 18, autoAlpha: 0, duration: 0.58, ease: 'power3.out', delay: 0.48 });
+      if (heroKicker) gsap.from(heroKicker, { y: 18, autoAlpha: 0, duration: 0.7, ease: 'power3.out', delay: 0.25 });
+      gsap.fromTo(heroTexts[0], { y: 40, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 1, ease: 'power3.out', delay: 0.4 });
+      gsap.from('.hero-progress-dot', { y: 10, autoAlpha: 0, duration: 0.5, stagger: 0.08, ease: 'power3.out', delay: 0.65 });
+      gsap.from('.hero-cta-container', { y: 14, duration: 0.65, ease: 'power3.out', delay: 0.55 });
     } else if (heroSlides.length > 0) {
       setStaticHeroStage(0);
       gsap.set([...heroSlides, ...heroTexts], { clearProps: 'all' });
       const heroTl = gsap.timeline();
-      heroTl.from('.hero-title', { y: 22, autoAlpha: 0, duration: 0.62, ease: 'power3.out' }, '-=0.2')
-            .from('.hero-desc', { y: 12, autoAlpha: 0, duration: 0.48, ease: 'power3.out' }, '-=0.34')
-            .from('.hero-cta-container', { y: 16, autoAlpha: 0, duration: 0.48, ease: 'power3.out' }, '-=0.26');
+      heroTl.from('.hero-title', { y: 26, autoAlpha: 0, duration: 0.7, ease: 'power3.out' }, '-=0.2')
+            .from('.hero-desc', { y: 14, autoAlpha: 0, duration: 0.55, ease: 'power3.out' }, '-=0.35')
+            .from('.hero-cta-container', { y: 12, duration: 0.45, ease: 'power3.out' }, '-=0.3');
 
       // Static fallback when the scroll-based hero animation is unavailable.
       let mobileStage = 0;
@@ -1124,7 +1124,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // 2. Horizontal Scroll Destinations
       const scrollWrapper = document.querySelector('.scroll-wrapper');
-      if (scrollWrapper && wideDesktopMotion && scrollWrapper.scrollWidth > window.innerWidth) {
+      if (scrollWrapper && !reducedMotion && scrollWrapper.scrollWidth > window.innerWidth) {
         gsap.to(scrollWrapper, {
           x: () => -(scrollWrapper.scrollWidth - window.innerWidth),
           ease: 'none',
@@ -1143,20 +1143,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const revealElements = document.querySelectorAll('.reveal');
       if (desktopMotion) {
         revealElements.forEach(el => {
-          const delay = el.classList.contains('reveal-delay-2') ? 0.16 : el.classList.contains('reveal-delay-1') ? 0.08 : 0;
-          const isCard = el.matches('.profile-card, .profile-card-minimal, .proof-card, .cred-card, .ed-card, .b2b-testimonial-card, .stat-item');
-          gsap.fromTo(el,
-            { autoAlpha: 0, y: isCard ? 28 : 22, scale: isCard ? 0.985 : 1 },
+          gsap.fromTo(el, 
+            { autoAlpha: 0, y: 50 },
             {
-              autoAlpha: 1, y: 0, scale: 1,
-              duration: isCard ? 0.62 : 0.68,
-              delay,
+              autoAlpha: 1, y: 0,
+              duration: 1,
               ease: 'power3.out',
               scrollTrigger: {
                 trigger: el,
-                start: 'top 88%',
-                toggleActions: 'play none none none',
-                once: true
+                start: 'top 85%',
+                toggleActions: 'play none none reverse'
               }
             }
           );
