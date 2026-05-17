@@ -10791,32 +10791,3 @@ body.b2b-landing:not(.medical-landing) .faq-question span {
     padding-right: 18px !important;
   }
 }
-
-/* Home hero critical fix: keep only the active copy visible and place the CTA
-   clearly below the rotating copy. */
-body:not(.b2b-landing):not(.contact-page) .hero-text-slide:not(.active) {
-  opacity: 0 !important;
-  pointer-events: none;
-  visibility: hidden !important;
-}
-
-body:not(.b2b-landing):not(.contact-page) .hero-text-slide.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-body:not(.b2b-landing):not(.contact-page) .hero-cta-container {
-  margin-top: clamp(140px, 20vh, 230px) !important;
-}
-
-@media (max-width: 900px) {
-  body:not(.b2b-landing):not(.contact-page) .hero-cta-container {
-    margin-top: clamp(86px, 12vh, 128px) !important;
-  }
-}
-
-@media (max-width: 640px) {
-  body:not(.b2b-landing):not(.contact-page) .hero-cta-container {
-    margin-top: clamp(58px, 9vh, 88px) !important;
-  }
-}

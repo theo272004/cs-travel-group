@@ -1115,10 +1115,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (heroKicker) heroIntroTl.from(heroKicker, { y: 14, autoAlpha: 0, duration: 0.42 }, 0.18);
     } else if (heroSlides.length > 0) {
       setStaticHeroStage(0);
-      gsap.set(heroSlides, { autoAlpha: 0 });
-      gsap.set(heroTexts, { autoAlpha: 0, y: 0, filter: 'blur(0px)' });
-      gsap.set(heroSlides[0], { autoAlpha: 1 });
-      gsap.set(heroTexts[0], { autoAlpha: 1 });
+      gsap.set([...heroSlides, ...heroTexts], { clearProps: 'all' });
       const activeHero = document.querySelector('.hero-text-slide.active');
       const heroTl = gsap.timeline();
       heroTl.from(activeHero?.querySelector('.hero-title'), { y: 22, autoAlpha: 0, duration: 0.56, ease: 'power3.out' }, '-=0.1')
