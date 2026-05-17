@@ -4217,11 +4217,23 @@ body.b2b-landing:not(.medical-landing) .hero-action-row {
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero-image {
-  overflow: hidden;
+  overflow: visible;
+  z-index: 1;
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero-image img {
   filter: saturate(.96) contrast(1.03);
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
+  filter: none;
+  height: 100%;
+  left: auto;
+  max-width: none;
+  object-fit: contain;
+  object-position: right center;
+  right: 0;
+  width: clamp(820px, 64vw, 1240px);
 }
 
 body.b2b-landing:not(.medical-landing) .trust-banner {
