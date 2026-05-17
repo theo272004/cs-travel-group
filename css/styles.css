@@ -6110,7 +6110,7 @@ body:not(.b2b-landing) .proof-title-line {
 body:not(.b2b-landing) .proof-grid {
   gap: clamp(16px, 1.8vw, 22px);
   max-width: none;
-  padding-top: 22px;
+  padding-top: 34px;
 }
 
 body:not(.b2b-landing) .proof-card {
@@ -6130,10 +6130,11 @@ body:not(.b2b-landing) .proof-quote-mark {
 
 body:not(.b2b-landing) .proof-plane {
   height: auto;
-  left: 18px;
+  filter: none;
+  left: -4px;
   position: absolute;
-  top: -22px;
-  width: 64px;
+  top: -34px;
+  width: 84px;
   z-index: 2;
 }
 
@@ -9301,3 +9302,23 @@ body:not(.b2b-landing) .dest-card-content h3 {
   }
 }
 
+/* Align home value icons and titles on a common visual row. */
+body:not(.b2b-landing) .ev-feature {
+  justify-content: flex-start;
+}
+
+body:not(.b2b-landing) .ev-feature-icon {
+  align-items: flex-start;
+  flex: 0 0 42px;
+  height: 42px;
+  width: 42px;
+}
+
+body:not(.b2b-landing) .ev-feature-icon svg {
+  height: 40px;
+  width: 40px;
+}
+
+body:not(.b2b-landing) .ev-feature h3 {
+  min-height: 2.4em;
+}
