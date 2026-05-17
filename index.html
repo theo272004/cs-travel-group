@@ -186,11 +186,7 @@
 
         <div class="hero-text-container">
           <div class="hero-text-slide active">
-            <h1 class="hero-title" data-i18n="hero_t1"> Tus viajes corporativos, <em> Tus viajes corporativos,
-                convertimos en ingresos pasivos
-                para
-                tu empresa</em>
-            </h1>
+            <h1 class="hero-title" data-i18n="hero_t1">Tus viajes corporativos<br><em>convertidos en ingresos pasivos</em></h1>
             <p class="hero-desc" data-i18n="hero_d1">Somos la única empresa en Colombia que convierte el gasto operativo
               de los viajes corporativos en una fuente de ingresos pasivos. Operamos completamente bajo tu marca, sin
               carga operativa adicional para ti y con retorno económico desde la primera operación.</p>
@@ -279,48 +275,39 @@
         </div>
 
 
-        <div class="profiles-grid">
+        <div class="profiles-grid minimal-profiles">
           <!-- Corporate -->
-          <div class="profile-card reveal reveal-delay-1" data-profile="corporate" data-href="empresas/index.html">
-            <div class="profile-image">
-              <img src="assets/images/profile-corporate-new.png" alt="Empresas corporativas" loading="lazy"
-                decoding="async">
-              <div class="profile-overlay"></div>
-              <span class="profile-badge" aria-hidden="true"><svg viewBox="0 0 24 24">
-                  <rect x="3" y="7" width="18" height="13" rx="2"></rect>
-                  <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                  <path d="M3 12h18"></path>
-                  <path d="M12 12v2"></path>
-                </svg></span>
-            </div>
-            <div class="profile-content">
+          <div class="profile-card-minimal reveal reveal-delay-1" data-href="empresas/index.html" onclick="window.location.href='empresas/index.html'">
+            <div class="profile-card-header">
+              <div class="profile-icon icon-corporate">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
               <h3 data-i18n="prof_c_title">Empresas</h3>
-              <p data-i18n="prof_c_desc">Coordinamos tus viajes corporativos con tarifas diferenciales y beneficios
-                exclusivos para ti y tus empleados. Sin permanencia ni costos ocultos.</p>
-              <a href="empresas/index.html" class="profile-btn" data-i18n="prof_c_cta">Conoce cómo funciona</a>
+            </div>
+            <div class="profile-content-minimal">
+              <p data-i18n="prof_c_desc">Coordinamos tus viajes corporativos con tarifas diferenciales y beneficios exclusivos para ti y tus empleados. Sin permanencia ni costos ocultos.</p>
+              <span class="profile-link" data-i18n="prof_c_cta">Conoce cómo funciona &rarr;</span>
             </div>
           </div>
-
 
           <!-- Medical / Institutional -->
-          <div class="profile-card reveal reveal-delay-2" data-profile="medical" data-href="medicos/index.html">
-            <div class="profile-image">
-              <img src="assets/images/profile-medical-new.png" alt="Sector Salud" loading="lazy" decoding="async">
-              <div class="profile-overlay"></div>
-              <span class="profile-badge" aria-hidden="true"><svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="8.5"></circle>
-                  <path d="M12 8v8"></path>
-                  <path d="M8 12h8"></path>
-                </svg></span>
-            </div>
-            <div class="profile-content">
+          <div class="profile-card-minimal reveal reveal-delay-2" data-href="medicos/index.html" onclick="window.location.href='medicos/index.html'">
+            <div class="profile-card-header">
+              <div class="profile-icon icon-medical">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
               <h3 data-i18n="prof_m_title">Médicos y clínicas</h3>
-              <p data-i18n="prof_m_desc">Coordinamos el viaje completo de tus pacientes extranjeros bajo tu marca.
-                Genera ingresos por cada viaje sin trabajo ni costos adicionales para ti.</p>
-              <a href="medicos/index.html" class="profile-btn" data-i18n="prof_m_cta">Conoce el programa</a>
+            </div>
+            <div class="profile-content-minimal">
+              <p data-i18n="prof_m_desc">Coordinamos el viaje completo de tus pacientes extranjeros bajo tu marca. Genera ingresos por cada viaje sin trabajo ni costos adicionales para ti.</p>
+              <span class="profile-link" data-i18n="prof_m_cta">Conoce el programa &rarr;</span>
             </div>
           </div>
-
         </div>
 
       </div>
@@ -658,7 +645,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
-  <script src="js/main.js?v=67"></script>
+  <script src="js/main.js?v=68"></script>
 </body>
 
 </html>

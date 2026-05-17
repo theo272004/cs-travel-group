@@ -5134,7 +5134,7 @@ body:not(.b2b-landing) .hero-progress {
 }
 
 body:not(.b2b-landing) .hero-cta-container {
-  margin-top: calc(var(--home-hero-cta-gap) + 62px);
+  margin-top: calc(var(--home-hero-cta-gap) + 120px);
   animation: heroButtonFadeIn 0.8s ease 0.45s forwards;
   opacity: 0;
 }
@@ -8764,7 +8764,7 @@ body:not(.b2b-landing) .hero-desc {
 }
 
 body:not(.b2b-landing) .hero-cta-container {
-  margin-top: calc(var(--home-hero-cta-gap) + 88px);
+  margin-top: calc(var(--home-hero-cta-gap) + 140px);
 }
 
 body:not(.b2b-landing) .proof-section {
@@ -8881,7 +8881,7 @@ body:not(.b2b-landing) .instagram-feed .ig-follow-btn:hover {
 
 @media (max-width: 900px) {
   body:not(.b2b-landing) .hero-cta-container {
-    margin-top: calc(var(--home-hero-cta-gap) + 66px);
+    margin-top: calc(var(--home-hero-cta-gap) + 120px);
   }
 
   body:not(.b2b-landing) .credentials {
@@ -9876,4 +9876,85 @@ body.medical-landing .faq-question {
   .calc-results { grid-template-columns: 1fr; gap: 14px; }
   .calc-slider-wrap { gap: 14px; }
   .calc-range-value { min-width: 65px; font-size: 1rem; }
+}
+
+/* Minimal Profiles Section */
+.minimal-profiles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.profile-card-minimal {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 32px 40px;
+  box-shadow: 0 4px 16px rgba(6, 43, 85, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.profile-card-minimal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(6, 43, 85, 0.1);
+}
+.profile-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.profile-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.icon-corporate {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+.icon-medical {
+  background-color: #8bb0f1;
+  color: #ffffff;
+}
+.profile-card-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+.profile-content-minimal {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.profile-content-minimal p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+.profile-link {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+.profile-card-minimal:hover .profile-link {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .minimal-profiles {
+    grid-template-columns: 1fr;
+  }
+  .profile-card-minimal {
+    padding: 24px;
+  }
 }
