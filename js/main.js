@@ -150,16 +150,16 @@ const translations = {
     dest_label: 'Servicios',
     dest_title: 'Un servicio para cada <em>necesidad</em>',
     dest_subtitle: 'Desde los viajes recurrentes de tu equipo hasta la logística médica de tus pacientes. Todo bajo tu marca, sin carga operativa para ti.',
-    dest_c1_tag: 'Viajes corporativos',
+    dest_c1_tag: 'CS Viajes corporativos',
     dest_c1_t: 'Viajes recurrentes de tu equipo',
     dest_c1_d: '',
-    dest_c2_tag: 'Eventos y grupos',
+    dest_c2_tag: 'CS eventos y grupos',
     dest_c2_t: 'Grupos, eventos y prensa',
     dest_c2_d: '',
-    dest_c3_tag: 'Viajes de incentivo',
+    dest_c3_tag: 'CS Viajes de incentivo',
     dest_c3_t: 'Viajes que tu equipo recuerda',
     dest_c3_d: '',
-    dest_c4_tag: 'Concierge médico',
+    dest_c4_tag: 'CS Concierge médico',
     dest_c4_t: 'Logística médica para tus pacientes',
     dest_c4_d: '',
     cred_label: 'Respaldo Internacional',
@@ -994,7 +994,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
       e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute('href'));
+      const href = anchor.getAttribute('href');
+      if (href === '#top' || href === '#inicio') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+      const target = document.querySelector(href);
       if (target) {
         const offset = 80;
         const top = target.getBoundingClientRect().top + window.scrollY - offset;

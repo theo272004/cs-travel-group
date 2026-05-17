@@ -5989,9 +5989,9 @@ body:not(.b2b-landing) .profile-badge svg {
 
 body:not(.b2b-landing) .profile-content p {
   color: var(--primary);
-  font-size: clamp(1rem, .93rem + .18vw, 1.1rem);
-  font-weight: 500;
-  line-height: 1.55;
+  font-size: clamp(.88rem, .82rem + .12vw, .96rem);
+  font-weight: 400;
+  line-height: 1.5;
   margin-bottom: 0;
   text-wrap: pretty;
 }
