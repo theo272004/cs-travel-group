@@ -9658,20 +9658,13 @@ body.medical-landing .faq-question {
 
 /* ===== Home work meaning card ===== */
 body:not(.b2b-landing) .work-meaning-section {
-  background:
-    linear-gradient(180deg, rgba(239, 248, 255, 0.76) 0%, rgba(255, 255, 255, 0.9) 100%),
-    url("../assets/images/profiles-sky-bg.png") center top / cover no-repeat;
-  padding: clamp(64px, 8vw, 110px) 0;
+  background: transparent;
+  padding: clamp(40px, 6vw, 80px) 0;
 }
 
 body:not(.b2b-landing) .work-meaning-card {
-  background: rgba(255, 255, 255, 0.98);
-  border: 1px solid rgba(106, 155, 200, 0.18);
-  border-radius: 32px;
-  box-shadow: 0 30px 70px rgba(16, 42, 76, 0.12);
   margin: 0 auto;
   max-width: 1320px;
-  padding: clamp(30px, 3.5vw, 48px);
 }
 
 body:not(.b2b-landing) .work-meaning-head {
@@ -9685,6 +9678,8 @@ body:not(.b2b-landing) .work-meaning-title {
   line-height: 1.08;
   margin: 0;
   text-wrap: balance;
+  position: relative;
+  z-index: 2;
 }
 
 body:not(.b2b-landing) .work-meaning-title-line {
@@ -9704,10 +9699,14 @@ body:not(.b2b-landing) .plane-showcase-frame {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 100%),
     url("../assets/images/profiles-sky-bg.png") center center / cover no-repeat;
-  border-radius: 48px;
-  min-height: clamp(270px, 35vw, 460px);
-  overflow: hidden;
-  padding: clamp(18px, 2.8vw, 34px);
+  border-radius: 999px;
+  height: clamp(160px, 20vw, 240px);
+  margin: 0 auto 60px;
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 
@@ -9715,19 +9714,18 @@ body:not(.b2b-landing) .plane-showcase-sky {
   background:
     radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.66), transparent 30%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: inherit;
   inset: 0;
   position: absolute;
 }
 
 body:not(.b2b-landing) .plane-showcase-image {
   display: block;
-  height: 100%;
-  margin: 0 auto;
-  max-height: clamp(240px, 32vw, 390px);
-  max-width: min(1160px, 100%);
+  width: 135%;
+  max-width: 1400px;
   object-fit: contain;
   position: relative;
-  width: 100%;
+  transform: translateY(8%);
   z-index: 1;
 }
 
@@ -9737,6 +9735,9 @@ body:not(.b2b-landing) .benefits-band {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   overflow: hidden;
+  position: relative;
+  z-index: 2;
+  margin-top: 40px;
 }
 
 body:not(.b2b-landing) .benefit-item {
@@ -9794,8 +9795,8 @@ body:not(.b2b-landing) .benefit-item p {
   }
 
   body:not(.b2b-landing) .plane-showcase-frame {
-    border-radius: 36px;
-    min-height: 240px;
+    border-radius: 999px;
+    min-height: 200px;
   }
 
   body:not(.b2b-landing) .benefits-band {
@@ -9827,9 +9828,9 @@ body:not(.b2b-landing) .benefit-item p {
   }
 
   body:not(.b2b-landing) .plane-showcase-frame {
-    border-radius: 28px;
-    min-height: 180px;
-    padding: 14px;
+    border-radius: 999px;
+    min-height: 140px;
+    padding: 0;
   }
 
   body:not(.b2b-landing) .benefits-band {
