@@ -4900,6 +4900,61 @@ body.b2b-landing:not(.medical-landing) .statement-art img {
   }
 }
 
+/* Final cleanup: remove home about, center CTA, restore dark statement */
+body:not(.b2b-landing) .proof-comparison-layout.proof-single-column {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  max-width: min(1180px, calc(100vw - (var(--home-page-x) * 2)));
+  padding-inline: 0;
+}
+
+body:not(.b2b-landing) .proof-single-column .proof-side,
+body:not(.b2b-landing) .proof-single-column .proof-header,
+body:not(.b2b-landing) .proof-single-column .proof-grid {
+  max-width: 100%;
+  width: 100%;
+}
+
+.home-final-cta .container {
+  display: flex;
+  justify-content: center;
+}
+
+.home-final-cta-inner {
+  text-align: center;
+}
+
+.home-final-cta h2,
+.home-final-cta p,
+.home-final-contact-row {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-final-contact-row {
+  justify-content: center;
+}
+
+body.b2b-landing:not(.medical-landing) .b2b-dark-statement {
+  background:
+    radial-gradient(circle at 84% 18%, rgba(255, 210, 0, .08), transparent 20%),
+    linear-gradient(135deg, #07172b 0%, #0b2746 58%, #17375e 100%);
+  color: #fff;
+}
+
+body.b2b-landing:not(.medical-landing) .statement-title h2,
+body.b2b-landing:not(.medical-landing) .statement-title em {
+  color: #fff;
+}
+
+body.b2b-landing:not(.medical-landing) .statement-content p {
+  color: rgba(255,255,255,.8);
+}
+
+body.b2b-landing:not(.medical-landing) .statement-quote {
+  color: var(--accent);
+}
+
 body.b2b-landing:not(.medical-landing) .company-benefits-section::after {
   display: none;
 }
