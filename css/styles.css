@@ -7052,7 +7052,7 @@ body:not(.b2b-landing) .cred-grid {
   gap: clamp(18px, 2vw, 28px);
   grid-template-columns: repeat(6, minmax(0, 1fr));
   margin-inline: auto;
-  max-width: 1280px;
+  max-width: min(1560px, calc(100vw - 48px));
 }
 
 body:not(.b2b-landing) .cred-card {
@@ -7062,11 +7062,11 @@ body:not(.b2b-landing) .cred-card {
   border-radius: 18px;
   box-shadow: 0 18px 44px rgba(16,42,76,.08);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 210px;
-  padding: 26px 18px;
-  text-align: center;
+  gap: clamp(18px, 2vw, 28px);
+  justify-content: flex-start;
+  min-height: 182px;
+  padding: clamp(26px, 2.2vw, 34px);
+  text-align: left;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
@@ -7079,43 +7079,63 @@ body:not(.b2b-landing) .cred-card:hover {
 body:not(.b2b-landing) .cred-logo {
   align-items: center;
   display: flex;
-  height: 72px;
+  flex: 0 0 auto;
   justify-content: center;
-  margin-bottom: 18px;
-  width: 100%;
+  margin-bottom: 0;
 }
 
-body:not(.b2b-landing) .cred-logo span {
-  color: var(--primary);
-  display: inline-flex;
-  font-family: var(--font-heading);
-  font-size: clamp(1.45rem, 1.2vw, 1.8rem);
-  font-weight: 900;
-  letter-spacing: .02em;
+body:not(.b2b-landing) .cred-copy {
+  max-width: 34ch;
 }
 
-body:not(.b2b-landing) .cred-logo-iata span,
-body:not(.b2b-landing) .cred-logo-arc span,
-body:not(.b2b-landing) .cred-logo-clia span {
-  border-bottom: 4px solid var(--secondary);
-  padding-bottom: 4px;
+body:not(.b2b-landing) .cred-logo-img {
+  display: block;
+  height: auto;
+  max-height: 58px;
+  max-width: 100%;
+  object-fit: contain;
+  width: auto;
 }
 
-body:not(.b2b-landing) .cred-logo-license span {
+body:not(.b2b-landing) .cred-logo-stack {
   align-items: center;
-  border: 2px solid rgba(16,42,76,.18);
-  border-radius: 50%;
-  height: 62px;
-  justify-content: center;
-  width: 62px;
+  gap: clamp(12px, 1.6vw, 18px);
+  justify-content: flex-start;
+  min-height: 72px;
+  min-width: clamp(215px, 23vw, 298px);
 }
 
-body:not(.b2b-landing) .cred-logo-archer span {
-  background: var(--primary);
-  border-radius: 999px;
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 10px 18px;
+body:not(.b2b-landing) .cred-logo-img-iata {
+  max-height: 46px;
+  width: clamp(62px, 7vw, 84px);
+}
+
+body:not(.b2b-landing) .cred-logo-img-arc {
+  max-height: 50px;
+  width: clamp(92px, 10vw, 128px);
+}
+
+body:not(.b2b-landing) .cred-logo-img-clia {
+  max-height: 42px;
+  width: clamp(56px, 6vw, 80px);
+}
+
+body:not(.b2b-landing) .cred-logo-shield {
+  color: var(--primary);
+  min-width: 88px;
+}
+
+body:not(.b2b-landing) .cred-shield-icon {
+  width: clamp(58px, 5.6vw, 74px);
+}
+
+body:not(.b2b-landing) .cred-logo-archer {
+  min-width: clamp(138px, 14vw, 176px);
+}
+
+body:not(.b2b-landing) .cred-logo-img-archer {
+  max-height: 74px;
+  width: clamp(132px, 13vw, 170px);
 }
 
 body:not(.b2b-landing) .cred-card h3 {
@@ -7127,8 +7147,8 @@ body:not(.b2b-landing) .cred-card h3 {
 
 body:not(.b2b-landing) .cred-card p {
   color: var(--text-secondary);
-  font-size: .92rem;
-  line-height: 1.35;
+  font-size: .94rem;
+  line-height: 1.45;
   margin: 0;
 }
 
@@ -7148,7 +7168,7 @@ body:not(.b2b-landing) .cred-card strong {
   }
 
   body:not(.b2b-landing) .cred-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
@@ -7175,6 +7195,18 @@ body:not(.b2b-landing) .cred-card strong {
 
   body:not(.b2b-landing) .cred-grid {
     grid-template-columns: 1fr;
+  }
+
+  body:not(.b2b-landing) .cred-card {
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  body:not(.b2b-landing) .cred-logo-stack,
+  body:not(.b2b-landing) .cred-logo-archer,
+  body:not(.b2b-landing) .cred-logo-shield {
+    min-width: 0;
   }
 }
 
@@ -8155,6 +8187,7 @@ body:not(.b2b-landing) .destinations-scroll .scroll-title .section-label {
 
 body:not(.b2b-landing) .proof-grid {
   align-items: start;
+  grid-auto-rows: 1fr;
 }
 
 body:not(.b2b-landing) .profiles-section h2::after,
@@ -8207,7 +8240,10 @@ body:not(.b2b-landing) .profile-card.active .profile-overlay {
 body:not(.b2b-landing) .proof-card {
   align-content: start;
   aspect-ratio: auto;
+  display: flex;
+  flex-direction: column;
   height: auto;
+  height: 100%;
   min-height: 0;
   padding: clamp(22px, 1.8vw, 28px);
 }
@@ -8218,6 +8254,40 @@ body:not(.b2b-landing) .proof-card p {
 
 body:not(.b2b-landing) .proof-person {
   gap: 4px;
+  margin-top: auto;
+}
+
+body:not(.b2b-landing) .cred-grid.cred-grid-three {
+  align-content: start;
+  align-items: start;
+  gap: clamp(22px, 2vw, 30px);
+  grid-auto-rows: max-content;
+  grid-template-columns: minmax(0, 1.28fr) minmax(0, 1fr) minmax(0, 1.12fr);
+  max-width: min(1580px, calc(100vw - 48px));
+  width: 100%;
+}
+
+body:not(.b2b-landing) .cred-grid-three .cred-card {
+  align-self: stretch;
+  align-items: center;
+  display: flex;
+  gap: clamp(20px, 1.8vw, 28px);
+  height: 100%;
+  justify-content: flex-start;
+  min-height: 186px;
+}
+
+body:not(.b2b-landing) .cred-grid-three .cred-logo {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  height: auto;
+  width: 100%;
+}
+
+body:not(.b2b-landing) .cred-grid-three .cred-copy {
+  flex: 1 1 auto;
+  max-width: 34ch;
 }
 
 body:not(.b2b-landing) .instagram-feed {
@@ -8303,8 +8373,24 @@ body:not(.b2b-landing) .ev-feature p {
     min-height: 0;
   }
 
+  body:not(.b2b-landing) .cred-grid.cred-grid-three {
+    grid-template-columns: 1fr;
+    max-width: min(920px, calc(100vw - 32px));
+  }
+
+  body:not(.b2b-landing) .cred-grid-three .cred-card {
+    align-items: center;
+  }
+
   body:not(.b2b-landing) .ev-feature {
     justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  body:not(.b2b-landing) .cred-grid-three .cred-card {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 
