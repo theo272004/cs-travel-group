@@ -5122,9 +5122,14 @@ body:not(.b2b-landing) .hero-progress {
 }
 
 body:not(.b2b-landing) .hero-cta-container {
-  margin-top: var(--home-hero-cta-gap);
-  opacity: 1 !important;
-  visibility: visible !important;
+  margin-top: calc(var(--home-hero-cta-gap) + 42px);
+  animation: heroButtonFadeIn 0.8s ease 0.45s forwards;
+  opacity: 0;
+}
+
+@keyframes heroButtonFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 body:not(.b2b-landing) .hero-cta {
