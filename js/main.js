@@ -10,7 +10,7 @@ const translations = {
     nav_destinations: 'Destinos',
     nav_about: 'Nosotros',
     nav_contact: 'Contacto',
-    nav_cta: 'Cotizar ahora',
+    nav_cta: 'Hablémos hoy',
     hero_cta: 'Quiero saber más',
     hero_t1: 'Convertimos los viajes corporativos en <em>ingresos pasivos</em> para tu empresa',
     hero_d1: 'Somos la única empresa en Colombia que convierte el gasto operativo de los viajes corporativos en una fuente de ingresos pasivos. Operamos completamente bajo tu marca, sin carga operativa adicional para ti y con retorno económico desde la primera operación.',
