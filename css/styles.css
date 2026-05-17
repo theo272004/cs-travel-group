@@ -8764,7 +8764,7 @@ body:not(.b2b-landing) .hero-desc {
 }
 
 body:not(.b2b-landing) .hero-cta-container {
-  margin-top: calc(var(--home-hero-cta-gap) + 140px);
+  margin-top: calc(var(--home-hero-cta-gap) + 180px);
 }
 
 body:not(.b2b-landing) .proof-section {
@@ -8881,7 +8881,7 @@ body:not(.b2b-landing) .instagram-feed .ig-follow-btn:hover {
 
 @media (max-width: 900px) {
   body:not(.b2b-landing) .hero-cta-container {
-    margin-top: calc(var(--home-hero-cta-gap) + 120px);
+    margin-top: calc(var(--home-hero-cta-gap) + 160px);
   }
 
   body:not(.b2b-landing) .credentials {

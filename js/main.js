@@ -1072,6 +1072,8 @@ document.addEventListener('DOMContentLoaded', () => {
             setHeroStage(stage);
           }
         }
+          }
+        }
       });
 
       // Animate the airplane along the path
@@ -1095,14 +1097,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 0);
       }
 
-      // Fade in the initial elements on load
-      gsap.from('.header', { y: -100, autoAlpha: 0, duration: 1, ease: 'power4.out' });
-      gsap.from(['.nav-links', '.lang-switcher'], { y: -20, autoAlpha: 0, duration: 0.72, ease: 'power3.out', delay: 0.42 });
+      // Fade in the initial elements on load sequentially
+      const loadTl = gsap.timeline();
+      
+      loadTl.from('.header', { y: -30, autoAlpha: 0, duration: 0.8, ease: 'power3.out' })
+            .from(['.nav-links', '.lang-switcher'], { y: -10, autoAlpha: 0, duration: 0.6, ease: 'power3.out', stagger: 0.1 }, "-=0.4");
+            
       const heroKicker = document.querySelector('.hero-kicker');
-      if (heroKicker) gsap.from(heroKicker, { y: 18, autoAlpha: 0, duration: 0.7, ease: 'power3.out', delay: 0.25 });
-      gsap.fromTo(heroTexts[0], { y: 40, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 1, ease: 'power3.out', delay: 0.4 });
-      gsap.from('.hero-progress-dot', { y: 10, autoAlpha: 0, duration: 0.5, stagger: 0.08, ease: 'power3.out', delay: 0.65 });
-      gsap.from('.hero-cta-container', { y: 14, duration: 0.65, ease: 'power3.out', delay: 0.55 });
+      if (heroKicker) {
+          loadTl.from(heroKicker, { y: 20, autoAlpha: 0, duration: 0.6, ease: 'power3.out' }, "-=0.2");
+      }
+      
+      loadTl.fromTo(heroTexts[0].querySelector('.hero-title'), { y: 30, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.8, ease: 'power3.out' }, "-=0.4")
+            .fromTo(heroTexts[0].querySelector('.hero-desc'), { y: 20, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.8, ease: 'power3.out' }, "-=0.6")
+            .from('.hero-cta-container', { y: 20, autoAlpha: 0, duration: 0.8, ease: 'power3.out' }, "-=0.6")
+            .from('.hero-progress-dot', { y: 10, autoAlpha: 0, duration: 0.4, stagger: 0.08, ease: 'power3.out' }, "-=0.4");
+
     } else if (heroSlides.length > 0) {
       setStaticHeroStage(0);
       gsap.set([...heroSlides, ...heroTexts], { clearProps: 'all' });
