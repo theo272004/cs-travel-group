@@ -9656,6 +9656,196 @@ body.medical-landing .faq-question {
   font-size: 1.02rem;
 }
 
+/* ===== Home work meaning card ===== */
+body:not(.b2b-landing) .work-meaning-section {
+  background:
+    linear-gradient(180deg, rgba(239, 248, 255, 0.76) 0%, rgba(255, 255, 255, 0.9) 100%),
+    url("../assets/images/profiles-sky-bg.png") center top / cover no-repeat;
+  padding: clamp(64px, 8vw, 110px) 0;
+}
+
+body:not(.b2b-landing) .work-meaning-card {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(106, 155, 200, 0.18);
+  border-radius: 32px;
+  box-shadow: 0 30px 70px rgba(16, 42, 76, 0.12);
+  margin: 0 auto;
+  max-width: 1320px;
+  padding: clamp(30px, 3.5vw, 48px);
+}
+
+body:not(.b2b-landing) .work-meaning-head {
+  margin-bottom: clamp(22px, 3vw, 32px);
+  text-align: center;
+}
+
+body:not(.b2b-landing) .work-meaning-title {
+  color: var(--primary);
+  font-size: clamp(2rem, 1.45rem + 2vw, 3.2rem);
+  line-height: 1.08;
+  margin: 0;
+  text-wrap: balance;
+}
+
+body:not(.b2b-landing) .work-meaning-title-line {
+  background: var(--accent);
+  border-radius: 999px;
+  display: block;
+  height: 4px;
+  margin: 14px auto 0;
+  width: 54px;
+}
+
+body:not(.b2b-landing) .plane-showcase {
+  margin-bottom: 20px;
+}
+
+body:not(.b2b-landing) .plane-showcase-frame {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 100%),
+    url("../assets/images/profiles-sky-bg.png") center center / cover no-repeat;
+  border-radius: 48px;
+  min-height: clamp(270px, 35vw, 460px);
+  overflow: hidden;
+  padding: clamp(18px, 2.8vw, 34px);
+  position: relative;
+}
+
+body:not(.b2b-landing) .plane-showcase-sky {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.66), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
+  inset: 0;
+  position: absolute;
+}
+
+body:not(.b2b-landing) .plane-showcase-image {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  max-height: clamp(240px, 32vw, 390px);
+  max-width: min(1160px, 100%);
+  object-fit: contain;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+body:not(.b2b-landing) .benefits-band {
+  background: linear-gradient(135deg, #031b34 0%, #062b55 58%, #031b34 100%);
+  border-radius: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: hidden;
+}
+
+body:not(.b2b-landing) .benefit-item {
+  color: #fff;
+  padding: clamp(26px, 2.6vw, 36px);
+  position: relative;
+}
+
+body:not(.b2b-landing) .benefit-item:not(:last-child)::after {
+  background: rgba(255, 255, 255, 0.14);
+  content: "";
+  height: calc(100% - 52px);
+  position: absolute;
+  right: 0;
+  top: 26px;
+  width: 1px;
+}
+
+body:not(.b2b-landing) .benefit-icon {
+  color: var(--accent);
+  display: inline-flex;
+  margin-bottom: 18px;
+}
+
+body:not(.b2b-landing) .benefit-icon svg {
+  fill: none;
+  height: 32px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  width: 32px;
+}
+
+body:not(.b2b-landing) .benefit-item h3 {
+  color: #fff;
+  font-size: clamp(1.18rem, 1rem + 0.45vw, 1.46rem);
+  line-height: 1.16;
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+
+body:not(.b2b-landing) .benefit-item p {
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 1rem;
+  line-height: 1.58;
+  margin: 0;
+  max-width: 28ch;
+}
+
+@media (max-width: 1024px) {
+  body:not(.b2b-landing) .work-meaning-card {
+    border-radius: 28px;
+    padding: 28px;
+  }
+
+  body:not(.b2b-landing) .plane-showcase-frame {
+    border-radius: 36px;
+    min-height: 240px;
+  }
+
+  body:not(.b2b-landing) .benefits-band {
+    grid-template-columns: 1fr;
+  }
+
+  body:not(.b2b-landing) .benefit-item:not(:last-child)::after {
+    height: 1px;
+    left: 26px;
+    right: 26px;
+    top: auto;
+    bottom: 0;
+    width: auto;
+  }
+
+  body:not(.b2b-landing) .benefit-item p {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  body:not(.b2b-landing) .work-meaning-section {
+    padding: 52px 0;
+  }
+
+  body:not(.b2b-landing) .work-meaning-card {
+    border-radius: 24px;
+    padding: 22px;
+  }
+
+  body:not(.b2b-landing) .plane-showcase-frame {
+    border-radius: 28px;
+    min-height: 180px;
+    padding: 14px;
+  }
+
+  body:not(.b2b-landing) .benefits-band {
+    border-radius: 20px;
+  }
+
+  body:not(.b2b-landing) .benefit-item {
+    padding: 22px 20px;
+  }
+
+  body:not(.b2b-landing) .benefit-item:not(:last-child)::after {
+    left: 20px;
+    right: 20px;
+  }
+}
+
 @media (max-width: 1024px) {
   body.medical-landing .statement-grid,
   body.medical-landing .medical-timeline,
