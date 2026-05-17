@@ -1126,7 +1126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Fade in the initial elements on load
       gsap.from('.header', { y: -100, autoAlpha: 0, duration: 1, ease: 'power4.out' });
-      gsap.from(['.nav-links', '.lang-switcher', '.nav-cta'], { y: -20, autoAlpha: 0, duration: 0.72, ease: 'power3.out', delay: 0.42 });
+      gsap.from(['.nav-links', '.lang-switcher'], { y: -20, autoAlpha: 0, duration: 0.72, ease: 'power3.out', delay: 0.42 });
       const heroKicker = document.querySelector('.hero-kicker');
       if (heroKicker) gsap.from(heroKicker, { y: 18, autoAlpha: 0, duration: 0.7, ease: 'power3.out', delay: 0.25 });
       gsap.fromTo(heroTexts[0], { y: 40, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 1, ease: 'power3.out', delay: 0.4 });
@@ -1166,53 +1166,6 @@ document.addEventListener('DOMContentLoaded', () => {
             invalidateOnRefresh: true,
           }
         });
-      }
-
-      // 2.5. Connector airplane between profile and value sections
-      const connectorWrap = document.querySelector('.home-section-flight-wrap');
-      const connectorPlane = document.querySelector('#section-flight-plane');
-      const connectorActivePath = document.querySelector('#section-flight-route-active');
-      if (connectorWrap && connectorPlane && connectorActivePath && typeof MotionPathPlugin !== 'undefined' && wideDesktopMotion) {
-        const connectorPathLength = connectorActivePath.getTotalLength();
-        connectorActivePath.style.strokeDasharray = connectorPathLength;
-        connectorActivePath.style.strokeDashoffset = connectorPathLength;
-        gsap.set(connectorPlane, { autoAlpha: 0, scale: 0.84 });
-
-        const connectorTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: connectorWrap,
-            start: 'top 72%',
-            end: 'bottom 36%',
-            scrub: 0.85,
-            invalidateOnRefresh: true
-          }
-        });
-
-        connectorTl.to(connectorPlane, {
-          autoAlpha: 1,
-          scale: 1,
-          duration: 0.35,
-          ease: 'power2.out'
-        }, 0);
-
-        connectorTl.to(connectorPlane, {
-          motionPath: {
-            path: '#section-flight-route',
-            align: '#section-flight-route',
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true
-          },
-          duration: 1,
-          ease: 'none'
-        }, 0);
-
-        connectorTl.to(connectorActivePath, {
-          strokeDashoffset: 0,
-          duration: 1,
-          ease: 'none'
-        }, 0);
-      } else if (connectorPlane) {
-        gsap.set(connectorPlane, { autoAlpha: 0 });
       }
 
       // 3. Section Reveals
