@@ -10,7 +10,7 @@
   <meta property="og:description" content="Gestionamos tus viajes corporativos en Colombia con tarifas insuperables, atención personalizada y beneficios para tu equipo. Sin permanencia ni costos ocultos">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.cstravelgroup.com/empresas/">
-  <link rel="stylesheet" href="../css/styles.css?v=72">
+  <link rel="stylesheet" href="../css/styles.css?v=80">
   <link rel="icon" type="image/png" href="../assets/images/logo-cstravel-cropped.png">
 
   <script type="application/ld+json">
@@ -105,12 +105,12 @@
     <section class="split-hero" id="inicio">
       <div class="split-hero-content reveal">
         <p class="split-hero-kicker" data-i18n="company_hero_kicker">Agencia de viajes empresariales en Colombia</p>
-        <h1 class="split-hero-title" data-i18n="company_hero_title">Si coordinar los viajes de tu empresa <span class="hero-highlight">te quita tiempo,</span> estás pagando un precio muy alto</h1>
+        <h1 class="split-hero-title" data-i18n="company_hero_title">Tu empresa lleva años pagando por viajes. Es hora de que esos viajes <span class="hero-highlight">te paguen a ti</span></h1>
         <div class="split-hero-copy">
-          <p class="split-hero-desc" data-i18n="company_hero_desc">En CS Travel Group gestionamos los viajes de tu empresa con tarifas que no consigues solo, un equipo ágil y beneficios que tus empleados te van a agradecer.</p>
+          <p class="split-hero-desc" data-i18n="company_hero_desc">CS Travel se integra a tu operación, gestiona cada viaje bajo tu marca y convierte lo que hoy es un gasto en una fuente de beneficios y retorno económico. Sin que cambies nada de lo que ya haces.</p>
         </div>
         <div class="hero-action-row">
-          <a href="../contacto/" class="btn btn-dark" style="font-size: 1.1rem; padding: 16px 36px; display: inline-flex; font-weight: 600;" data-i18n="company_hero_cta">Quiero saber más</a>
+          <a href="../contacto/" class="btn btn-dark" style="font-size: 1.1rem; padding: 16px 36px; display: inline-flex; font-weight: 600;" data-i18n="company_hero_cta">Quiero saber cómo</a>
         </div>
       </div>
       <div class="split-hero-image">
@@ -156,11 +156,11 @@
       <div class="container">
         <div class="statement-grid">
           <div class="statement-title reveal">
-            <h2 data-i18n="company_statement_title">El costo real de tus viajes&nbsp;empresariales <em>no está en las facturas.</em></h2>
+            <h2 data-i18n="company_statement_title">La mayoría de empresas no sabe que sus viajes <em>pueden generarles ingresos.</em></h2>
           </div>
           <div class="statement-content reveal reveal-delay-1">
-            <p data-i18n="company_statement_p1">Tu empresa paga más de lo que debería en tiquetes y hospedajes porque nadie negoció las tarifas. Los cambios de último minuto no son atendidos a tiempo porque los imprevistos no siempre ocurren en horarios laborales, y coordinar viajes se ha convertido en un segundo cargo para tu equipo que lo retrasa en sus tareas más importantes.</p>
-            <p class="statement-quote" data-i18n="company_statement_highlight">"Ese es el precio invisible que nadie está midiendo. Nosotros estamos para que dejes de pagarlo."</p>
+            <p data-i18n="company_statement_p1">Cada tiquete que compra tu empresa, cada hotel que reserva, cada traslado que gestiona — todo genera valor económico que hoy se queda en manos de terceros. No porque no puedas capturarlo. Sino porque nadie te había mostrado cómo.</p>
+            <p class="statement-quote" data-i18n="company_statement_highlight">CS Travel existe exactamente para eso.</p>
           </div>
           <div class="statement-art reveal reveal-delay-2" aria-hidden="true">
             <img src="../assets/images/avioncito-01.png" alt="" loading="lazy" decoding="async">
@@ -169,90 +169,97 @@
       </div>
     </section>
 
-    <!-- Pillars (Editorial Style) -->
-    <section class="editorial-promise">
+    <!-- Calculator Section -->
+    <section class="calc-section" id="calculadora">
       <div class="container">
-        <div class="ed-header reveal" style="max-width: 860px;">
-          <h2 data-i18n="company_ed_title">CS Travel es el equipo de viajes que no tienes, pero que siempre deberías haber tenido.</h2>
-          <p data-i18n="company_ed_desc">Sin los costos de una agencia grande. Sin los tiempos de respuesta de una tradicional. Un equipo dedicado que conoce tu empresa, negocia tus tarifas y se encarga de todo.</p>
-        </div>
-
-        <div class="ed-grid-4">
-          <div class="ed-card reveal">
-            <div class="ed-image-wrap">
-              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=600&auto=format&fit=crop" alt="Operación sin intermediarios" loading="lazy">
-            </div>
-            <div class="ed-overlay"></div>
-            <div class="ed-number-large">1</div>
-            <div class="ed-text-content">
-              <h3 data-i18n="company_ed_1_t">Operación sin intermediarios</h3>
-              <p data-i18n="company_ed_1_d">Trabajamos con red propia y acreditación IATA. Sin márgenes ocultos de la cadena tradicional.</p>
-            </div>
+        <div class="calc-card reveal">
+          <div class="calc-header">
+            <h2 data-i18n="company_calc_title">¿Cuánto puede estar dejando de ganar tu empresa?</h2>
           </div>
-
-          <div class="ed-card reveal reveal-delay-1">
-            <div class="ed-image-wrap">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" alt="Acompañamiento humano real" loading="lazy">
+          <div class="calc-body">
+            <div class="calc-inputs">
+              <div class="calc-input-group">
+                <label for="calc-trips" data-i18n="company_calc_trips_label">Número de viajes al mes</label>
+                <div class="calc-slider-wrap">
+                  <input type="range" id="calc-trips" min="1" max="100" value="10" class="calc-range">
+                  <span class="calc-range-value" id="calc-trips-val">10</span>
+                </div>
+              </div>
+              <div class="calc-input-group">
+                <label for="calc-value" data-i18n="company_calc_value_label">Valor promedio por viaje (USD)</label>
+                <div class="calc-slider-wrap">
+                  <input type="range" id="calc-value" min="100" max="10000" value="2500" step="100" class="calc-range">
+                  <span class="calc-range-value" id="calc-value-val">$2,500</span>
+                </div>
+              </div>
             </div>
-            <div class="ed-overlay"></div>
-            <div class="ed-number-large">2</div>
-            <div class="ed-text-content">
-              <h3 data-i18n="company_ed_2_t">Acompañamiento humano real</h3>
-              <p data-i18n="company_ed_2_d">Atención personalizada antes, durante y después de cada viaje. Sin bots, sin esperas, sin excusas.</p>
-            </div>
-          </div>
-
-          <div class="ed-card reveal reveal-delay-2">
-            <div class="ed-image-wrap">
-              <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=600&auto=format&fit=crop" alt="Tarifas diferenciales" loading="lazy">
-            </div>
-            <div class="ed-overlay"></div>
-            <div class="ed-number-large">3</div>
-            <div class="ed-text-content">
-              <h3 data-i18n="company_ed_3_t">Tarifas diferenciales</h3>
-              <p data-i18n="company_ed_3_d">Nuestras alianzas directas con aerolíneas, hoteles, cruceros, aseguradoras y servicios de traslado nos permiten ofrecer precios especiales. Lo que cotizamos es lo que pagas.</p>
-            </div>
-          </div>
-
-          <div class="ed-card reveal reveal-delay-3">
-            <div class="ed-image-wrap">
-              <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=600&auto=format&fit=crop" alt="Tus empleados también ganan" loading="lazy">
-            </div>
-            <div class="ed-overlay"></div>
-            <div class="ed-number-large">4</div>
-            <div class="ed-text-content">
-              <h3 data-i18n="company_ed_4_t">Tus empleados también ganan</h3>
-              <p data-i18n="company_ed_4_d">Cuando tu empresa se afilia, tu equipo accede a tarifas diferenciales para sus viajes personales. Sin costo adicional para la empresa.</p>
+            <div class="calc-results">
+              <div class="calc-result-card accent">
+                <span class="calc-result-number" id="calc-monthly">$296</span>
+                <span class="calc-result-label" data-i18n="company_calc_return_monthly">Tu retorno mensual</span>
+              </div>
+              <div class="calc-result-card">
+                <span class="calc-result-number" id="calc-annual">$3,557</span>
+                <span class="calc-result-label" data-i18n="company_calc_return_annual">Tu retorno anual</span>
+              </div>
+              <div class="calc-result-card">
+                <span class="calc-result-number" id="calc-saving">$24,000</span>
+                <span class="calc-result-label" data-i18n="company_calc_saving">Ahorro anual vs. mostrador</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Employee Benefits (Evaneos Parallax Style) -->
-    <section class="ev-services company-benefits-section">
-      <div class="ev-bg">
-        <img src="../assets/images/optimized/company-benefits-team.jpg" alt="Equipo corporativo" loading="lazy" decoding="async">
-      </div>
-      <div class="container ev-container">
-        <div class="ev-card reveal">
-          <div class="ev-card-content">
-            <h2 class="ev-title" data-i18n="company_ev_title">Con CS Travel, tu empresa reduce costos y tu equipo gana beneficios.</h2>
-            <p data-i18n="company_ev_p1">¿Sabías que los incentivos de viaje son de los más valorados por los equipos, pero de los menos ofrecidos en Colombia?</p>
-            <p style="margin-top:-16px;" data-i18n="company_ev_p2">Al afiliarte con nosotros, tus empleados acceden a tarifas diferenciales en vuelos, hoteles y planes para sus viajes personales, sin costo adicional para tu empresa.</p>
+    <!-- Model in 3 steps -->
+    <section class="editorial-promise" id="modelo">
+      <div class="container">
+        <div class="ed-header reveal" style="max-width: 860px;">
+          <h2 data-i18n="company_model_title">El modelo en tres pasos</h2>
+          <p data-i18n="company_model_desc">La cadena de distribución turística genera márgenes en cada operación. Hoy esos márgenes se quedan en intermediarios. CS Travel los redistribuye hacia sus aliados. Tú eres el aliado.</p>
+        </div>
 
-            <ul class="company-benefits-list">
-              <li data-i18n="company_ev_l1_d">El beneficio se activa automáticamente con tu afiliación</li>
-              <li data-i18n="company_ev_l2_d">Tu equipo accede a tarifas que no encuentra por su cuenta</li>
-              <li data-i18n="company_ev_l3_d">Un beneficio que valoran y que fideliza a tu equipo</li>
-            </ul>
-            <p class="ev-director-benefit" style="font-weight: 600; color: var(--primary);" data-i18n="company_ev_p3">Y tú, como directivo, accedes a tarifas mayoristas netas para tus viajes laborales y personales.</p>
-            <a href="../contacto/" class="btn btn-primary" style="margin-top: 24px; align-self: flex-start;" data-i18n="company_ev_cta">Quiero saber más</a>
+        <div class="ed-grid-4" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="ed-card reveal">
+            <div class="ed-image-wrap">
+              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600&auto=format&fit=crop" alt="Afiliación" loading="lazy">
+            </div>
+            <div class="ed-overlay"></div>
+            <div class="ed-number-large">1</div>
+            <div class="ed-text-content">
+              <h3 data-i18n="company_model_s1_t">Tu empresa se afilia a CS Travel</h3>
+              <p data-i18n="company_model_s1_d">Sin inversión, sin permanencia, sin cambiar nada de tu operación actual.</p>
+            </div>
           </div>
 
-          <div class="ev-card-image">
-            <img src="../assets/images/optimized/company-benefits-team.jpg" alt="Beneficios para empleados" loading="lazy" decoding="async">
+          <div class="ed-card reveal reveal-delay-1">
+            <div class="ed-image-wrap">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" alt="Gestión bajo tu marca" loading="lazy">
+            </div>
+            <div class="ed-overlay"></div>
+            <div class="ed-number-large">2</div>
+            <div class="ed-text-content">
+              <h3 data-i18n="company_model_s2_t">Gestionamos cada viaje bajo tu marca</h3>
+              <p data-i18n="company_model_s2_d">Vuelos, hoteles, traslados. Todo coordinado por nuestro equipo, con tus tarifas negociadas, operando de manera invisible bajo tu marca.</p>
+            </div>
           </div>
+
+          <div class="ed-card reveal reveal-delay-2">
+            <div class="ed-image-wrap">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" alt="Retorno económico" loading="lazy">
+            </div>
+            <div class="ed-overlay"></div>
+            <div class="ed-number-large">3</div>
+            <div class="ed-text-content">
+              <h3 data-i18n="company_model_s3_t">Tú capturas el retorno económico</h3>
+              <p data-i18n="company_model_s3_d">Por cada operación que pasa por CS Travel generas un retorno. Lo ves en tiempo real con transparencia. Se liquida quincenalmente. Sin gestión de cobro de tu parte.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 48px;" class="reveal">
+          <a href="../contacto/" class="btn btn-primary" data-i18n="company_model_cta">Quiero saber más</a>
         </div>
       </div>
     </section>
@@ -261,7 +268,7 @@
     <section class="profiles-section" id="soluciones" style="background: var(--bg);">
       <div class="container">
         <div class="reveal" style="text-align:center; max-width:720px; margin:0 auto 64px;">
-          <h2 data-i18n="company_sol_title">Nuestras soluciones para empresas</h2>
+          <h2 data-i18n="company_sol_title">Tres servicios. Una sola infraestructura.</h2>
         </div>
 
         <div class="profiles-grid profiles-grid-3">
@@ -315,6 +322,17 @@
               <a href="../contacto/" class="btn btn-primary" style="width: 100%; justify-content:center;" data-i18n="company_card3_cta">Ver detalle</a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sin Riesgo (Trust Block) -->
+    <section class="b2b-dark-statement no-risk-section">
+      <div class="container">
+        <div class="no-risk-content reveal" style="text-align: center; max-width: 860px; margin: 0 auto;">
+          <h2 data-i18n="company_norisk_title">Sin riesgo. Sin permanencia. Sin cambios.</h2>
+          <p data-i18n="company_norisk_desc" style="font-size: 1.15rem; color: rgba(255,255,255,.82); margin-bottom: 24px;">No hay inversión inicial. No hay mínimos de volumen. No hay cláusulas de permanencia. Si en algún momento decides que CS Travel no es para ti, terminas el convenio y te ayudamos a migrar sin fricción. Nuestra retención se basa en resultados, no en contratos.</p>
+          <p data-i18n="company_norisk_p2" style="font-size: 1.1rem; color: var(--accent); font-weight: 600;">Lo único que cambia cuando llegas a CS Travel es que los viajes de tu empresa empiezan a generarte ingresos.</p>
         </div>
       </div>
     </section>
@@ -609,7 +627,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="../js/main.js?v=60"></script>
+  <script src="../js/main.js?v=80"></script>
   <script>
     // FAQ Accordion Script
     document.addEventListener('DOMContentLoaded', () => {
@@ -632,6 +650,36 @@
           }
         });
       });
+    });
+  </script>
+  <script>
+    // Calculator Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const tripsSlider = document.getElementById('calc-trips');
+      const valueSlider = document.getElementById('calc-value');
+      const tripsVal = document.getElementById('calc-trips-val');
+      const valueVal = document.getElementById('calc-value-val');
+      const monthlyEl = document.getElementById('calc-monthly');
+      const annualEl = document.getElementById('calc-annual');
+      const savingEl = document.getElementById('calc-saving');
+      if (!tripsSlider || !valueSlider) return;
+      const fmt = n => '$' + Math.round(n).toLocaleString('en-US');
+      const calculate = () => {
+        const trips = parseInt(tripsSlider.value);
+        const value = parseInt(valueSlider.value);
+        const annualTrips = trips * 12;
+        const retornoAnual = annualTrips * value * 0.11 * 0.82 * 0.36;
+        const ahorroAnual = annualTrips * value * 0.08;
+        const retornoMensual = retornoAnual / 12;
+        tripsVal.textContent = trips;
+        valueVal.textContent = fmt(value);
+        monthlyEl.textContent = fmt(retornoMensual);
+        annualEl.textContent = fmt(retornoAnual);
+        savingEl.textContent = fmt(ahorroAnual);
+      };
+      tripsSlider.addEventListener('input', calculate);
+      valueSlider.addEventListener('input', calculate);
+      calculate();
     });
   </script>
 </body>
