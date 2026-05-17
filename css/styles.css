@@ -8132,6 +8132,18 @@ body:not(.b2b-landing) .proof-card p {
 }
 
 /* Final home adjustments */
+body:not(.b2b-landing) .hero::after {
+  height: 48vh;
+  background: linear-gradient(180deg, rgba(6,43,85,0.12) 0%, rgba(6,43,85,0.2) 18%, rgba(6,43,85,0.56) 46%, rgba(6,43,85,0.9) 74%, var(--primary) 100%);
+}
+
+body:not(.b2b-landing) .hero-overlay {
+  inset: -2px 0 -14vh 0;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(191,216,244,.12), transparent 34%),
+    linear-gradient(180deg, rgba(6,43,85,.66) 0%, rgba(6,43,85,.34) 28%, rgba(6,43,85,.58) 52%, rgba(6,43,85,.92) 80%, var(--primary) 100%);
+}
+
 body:not(.b2b-landing) .destinations-scroll .scroll-title,
 body:not(.b2b-landing) .destinations-scroll .scroll-title h2,
 body:not(.b2b-landing) .destinations-scroll .scroll-title p,
@@ -8143,6 +8155,53 @@ body:not(.b2b-landing) .destinations-scroll .scroll-title .section-label {
 
 body:not(.b2b-landing) .proof-grid {
   align-items: start;
+}
+
+body:not(.b2b-landing) .profiles-section h2::after,
+body:not(.b2b-landing) .ev-title::after,
+body:not(.b2b-landing) .proof-header h2::after,
+body:not(.b2b-landing) .scroll-title h2::after,
+body:not(.b2b-landing) .credentials-header h2::after,
+body:not(.b2b-landing) .ig-header h3::after,
+body:not(.b2b-landing) .home-final-cta h2::after {
+  background: var(--accent);
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 12px;
+  width: 42px;
+}
+
+body:not(.b2b-landing) .profiles-section h2::after,
+body:not(.b2b-landing) .credentials-header h2::after,
+body:not(.b2b-landing) .home-final-cta h2::after {
+  margin-inline: auto;
+}
+
+body:not(.b2b-landing) .proof-header h2::after,
+body:not(.b2b-landing) .scroll-title h2::after,
+body:not(.b2b-landing) .ig-header h3::after,
+body:not(.b2b-landing) .ev-title::after {
+  margin-inline: 0;
+}
+
+body:not(.b2b-landing) .profiles-section .proof-title-line,
+body:not(.b2b-landing) .proof-title-line,
+body:not(.b2b-landing) .ev-title-line {
+  display: none;
+}
+
+body:not(.b2b-landing) .profile-image img,
+body:not(.b2b-landing) .profile-overlay {
+  clip-path: inset(0 round 14px 14px 0 0);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+body:not(.b2b-landing) .profile-card:hover .profile-image img,
+body:not(.b2b-landing) .profile-card:hover .profile-overlay,
+body:not(.b2b-landing) .profile-card.active .profile-image img,
+body:not(.b2b-landing) .profile-card.active .profile-overlay {
+  transform: scale(1.05);
 }
 
 body:not(.b2b-landing) .proof-card {
@@ -8180,14 +8239,18 @@ body:not(.b2b-landing) .instagram-feed .ig-card {
 }
 
 body:not(.b2b-landing) .instagram-feed .ig-follow-btn {
-  background: rgba(255, 255, 255, 0.85);
-  border-color: rgba(16, 42, 76, 0.14);
-  color: var(--primary) !important;
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  color: var(--accent) !important;
+  min-height: 48px;
+  padding: 0 24px;
 }
 
 body:not(.b2b-landing) .instagram-feed .ig-follow-btn:hover {
-  background: #fff;
-  border-color: rgba(16, 42, 76, 0.24);
+  background: #0b2f59;
+  border-color: #0b2f59;
+  color: var(--accent) !important;
 }
 
 .home-final-cta .container {
@@ -8210,9 +8273,38 @@ body:not(.b2b-landing) .instagram-feed .ig-follow-btn:hover {
   margin-inline: auto;
 }
 
+body:not(.b2b-landing) .ev-panel {
+  align-items: center;
+}
+
+body:not(.b2b-landing) .ev-intro p {
+  font-size: clamp(.98rem, .9rem + .24vw, 1.08rem);
+  line-height: 1.62;
+  max-width: 460px;
+}
+
+body:not(.b2b-landing) .ev-feature {
+  justify-content: center;
+  text-align: left;
+}
+
+body:not(.b2b-landing) .ev-feature h3 {
+  font-size: clamp(1rem, .94rem + .18vw, 1.08rem);
+  line-height: 1.2;
+}
+
+body:not(.b2b-landing) .ev-feature p {
+  font-size: clamp(.93rem, .88rem + .12vw, 1rem);
+  line-height: 1.56;
+}
+
 @media (max-width: 900px) {
   body:not(.b2b-landing) .proof-card {
     min-height: 0;
+  }
+
+  body:not(.b2b-landing) .ev-feature {
+    justify-content: flex-start;
   }
 }
 
