@@ -8185,6 +8185,10 @@ body:not(.b2b-landing) .destinations-scroll .scroll-title .section-label {
   visibility: visible !important;
 }
 
+body:not(.b2b-landing) .dest-card-content p:empty {
+  display: none;
+}
+
 body:not(.b2b-landing) .proof-grid {
   align-items: start;
   grid-auto-rows: 1fr;
