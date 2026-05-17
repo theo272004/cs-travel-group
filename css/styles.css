@@ -6110,6 +6110,7 @@ body:not(.b2b-landing) .proof-title-line {
 body:not(.b2b-landing) .proof-grid {
   gap: clamp(16px, 1.8vw, 22px);
   max-width: none;
+  padding-top: 22px;
 }
 
 body:not(.b2b-landing) .proof-card {
@@ -6118,17 +6119,22 @@ body:not(.b2b-landing) .proof-card {
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(16, 42, 67, 0.05);
   min-height: 228px;
+  overflow: visible;
   padding: clamp(20px, 1.9vw, 26px);
+  position: relative;
 }
 
 body:not(.b2b-landing) .proof-quote-mark {
-  color: var(--secondary);
-  display: block;
-  font-family: Georgia, serif;
-  font-size: 2.35rem;
-  font-weight: 800;
-  line-height: .75;
-  margin-bottom: 8px;
+  display: none;
+}
+
+body:not(.b2b-landing) .proof-plane {
+  height: auto;
+  left: 18px;
+  position: absolute;
+  top: -22px;
+  width: 64px;
+  z-index: 2;
 }
 
 body:not(.b2b-landing) .proof-card p {
@@ -6136,6 +6142,7 @@ body:not(.b2b-landing) .proof-card p {
   font-size: clamp(.88rem, .82rem + .12vw, .96rem);
   line-height: 1.5;
   margin-bottom: 22px;
+  margin-top: 28px;
 }
 
 body:not(.b2b-landing) .proof-person {
@@ -6146,13 +6153,17 @@ body:not(.b2b-landing) .proof-person {
 
 body:not(.b2b-landing) .proof-person strong {
   color: var(--primary);
+  display: block;
   font-size: .94rem;
+  line-height: 1.2;
 }
 
 body:not(.b2b-landing) .proof-person small {
   color: #51657b;
+  display: block;
   font-size: .78rem;
   line-height: 1.38;
+  margin-top: 6px;
 }
 
 body:not(.b2b-landing) .difference-block {

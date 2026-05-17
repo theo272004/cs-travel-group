@@ -51,7 +51,7 @@ const translations = {
     prof_m_det_li3: '<strong>Itinerarios combinados:</strong> Opciones para extender el viaje con actividades de turismo en la ciudad anfitriona.',
     prof_m_det_btn: 'Cotizar viaje para congreso',
     serv_title: 'Lo que significa trabajar con nosotros',
-    serv_desc: 'Operamos detrás de tu marca. Tu cliente, paciente o empleado interactúa "contigo". Cuando en realidad nosotros ejecutamos la logística completa, negociamos las tarifas y resolvemos imprevisto. Tú te llevas el crédito y el retorno económico.',
+    serv_desc: 'Operamos detrás de tu marca. Tu cliente, paciente o empleado interactúa "contigo". Cuando en realidad nosotros ejecutamos la logística completa, negociamos las tarifas y resolvemos imprevistos. Tú te llevas el crédito y el retorno económico.',
     serv_quote: '"Me encargo de que cada empresa y cada médico sienta que tiene un equipo de viajes propio."',
     serv_quote_author: 'Andrés, fundador de CS Travel Group',
     serv_l1_t: 'Tarifas de proveedor directo',
