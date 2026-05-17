@@ -9339,3 +9339,100 @@ body:not(.b2b-landing) .ev-feature h3 {
   margin-top: 0;
   min-height: 2.4em;
 }
+
+/* Final home polish: deeper opening gradient, wider profile cards, compact proof cards. */
+body:not(.b2b-landing) .hero::after {
+  height: 74vh;
+  background: linear-gradient(180deg, rgba(6,43,85,0) 0%, rgba(6,43,85,.2) 10%, rgba(6,43,85,.52) 28%, rgba(6,43,85,.78) 48%, rgba(6,43,85,.95) 68%, var(--primary) 100%);
+}
+
+body:not(.b2b-landing) .hero-overlay {
+  background:
+    radial-gradient(circle at 50% 40%, rgba(191,216,244,.06), transparent 36%),
+    linear-gradient(180deg, rgba(6,43,85,.64) 0%, rgba(6,43,85,.58) 20%, rgba(6,43,85,.64) 38%, rgba(6,43,85,.78) 56%, rgba(6,43,85,.94) 76%, var(--primary) 100%);
+}
+
+body:not(.b2b-landing) .hero-content {
+  transform: translateY(clamp(28px, 5.6vh, 64px));
+}
+
+body:not(.b2b-landing) .hero-cta-container {
+  animation: none;
+  margin-top: clamp(28px, 4.2vh, 48px);
+  opacity: 1;
+  transform: none;
+}
+
+body:not(.b2b-landing) .profiles-grid {
+  gap: clamp(22px, 3vw, 38px);
+  max-width: min(1520px, calc(100vw - (var(--home-page-x) * 2)));
+}
+
+body:not(.b2b-landing) .profile-card {
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s ease;
+}
+
+body:not(.b2b-landing) .profile-card:hover,
+body:not(.b2b-landing) .profile-card.active {
+  border-color: var(--accent);
+  box-shadow: 0 25px 50px rgba(16,42,76,0.15), 0 0 20px rgba(255, 184, 0, 0.15);
+  transform: translateY(-12px);
+}
+
+body:not(.b2b-landing) .profile-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
+}
+
+body:not(.b2b-landing) .profile-content p {
+  margin-bottom: 22px;
+}
+
+body:not(.b2b-landing) .profile-btn {
+  align-items: center;
+  color: var(--primary);
+  display: inline-flex;
+  font-size: .94rem;
+  font-weight: 800;
+  gap: 8px;
+  margin-top: auto;
+  width: fit-content;
+}
+
+body:not(.b2b-landing) .profile-btn::after {
+  content: "->";
+  line-height: 1;
+}
+
+body:not(.b2b-landing) .proof-grid {
+  padding-top: 0;
+}
+
+body:not(.b2b-landing) .proof-plane {
+  display: none;
+}
+
+body:not(.b2b-landing) .proof-card {
+  min-height: 176px;
+  padding: clamp(18px, 1.45vw, 22px);
+}
+
+body:not(.b2b-landing) .proof-card p {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+body:not(.b2b-landing) .proof-stars {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  body:not(.b2b-landing) .hero-content {
+    transform: translateY(22px);
+  }
+
+  body:not(.b2b-landing) .profile-content {
+    min-height: 0;
+  }
+}
