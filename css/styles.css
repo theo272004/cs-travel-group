@@ -8866,3 +8866,119 @@ body:not(.b2b-landing) .instagram-feed .ig-follow-btn:hover {
   }
 }
 
+/* ===== Home layout tightening and section order refinements ===== */
+body:not(.b2b-landing) .destinations-scroll {
+  padding-block: clamp(44px, 4.5vw, 64px);
+}
+
+body:not(.b2b-landing) .scroll-container {
+  height: min(88vh, 860px);
+}
+
+body:not(.b2b-landing) .scroll-wrapper {
+  gap: 44px;
+  padding-inline: clamp(20px, 7vw, 112px);
+}
+
+body:not(.b2b-landing) .scroll-title {
+  min-width: 440px;
+  padding-right: 42px;
+}
+
+body:not(.b2b-landing) .scroll-title h2 {
+  margin-bottom: 16px;
+}
+
+body:not(.b2b-landing) .scroll-title p {
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+body:not(.b2b-landing) .dest-card {
+  height: 590px;
+  width: 470px;
+}
+
+body:not(.b2b-landing) .dest-card-content {
+  padding: 38px 34px;
+}
+
+body:not(.b2b-landing) .profile-content h3 {
+  max-width: 15ch;
+}
+
+body:not(.b2b-landing) .profile-card[data-profile="medical"] .profile-content h3 {
+  max-width: none;
+  white-space: nowrap;
+}
+
+body:not(.b2b-landing) .ev-panel {
+  grid-template-columns: minmax(520px, 2.25fr) repeat(3, minmax(180px, .88fr));
+  padding-inline: max(var(--home-page-x), calc((100vw - 1500px) / 2));
+}
+
+body:not(.b2b-landing) .ev-intro {
+  padding-right: clamp(34px, 3.2vw, 56px);
+}
+
+body:not(.b2b-landing) .ev-intro::after {
+  display: none;
+}
+
+body:not(.b2b-landing) .ev-title {
+  max-width: 640px;
+}
+
+body:not(.b2b-landing) .ev-intro p {
+  max-width: 600px;
+}
+
+body:not(.b2b-landing) .ev-feature {
+  padding: 0 clamp(18px, 1.4vw, 24px) 0 clamp(28px, 2vw, 34px);
+}
+
+body:not(.b2b-landing) .ev-feature::before {
+  height: 66%;
+  left: 0;
+  top: 17%;
+}
+
+body:not(.b2b-landing) .credentials {
+  padding-block: clamp(30px, 3.2vw, 42px);
+}
+
+@media (max-width: 1100px) {
+  body:not(.b2b-landing) .profile-card[data-profile="medical"] .profile-content h3 {
+    white-space: normal;
+  }
+
+  body:not(.b2b-landing) .ev-panel {
+    grid-template-columns: minmax(420px, 1.5fr) repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  body:not(.b2b-landing) .scroll-container {
+    height: auto;
+  }
+
+  body:not(.b2b-landing) .destinations-scroll {
+    padding-block: 40px;
+  }
+
+  body:not(.b2b-landing) .scroll-wrapper {
+    gap: 14px;
+    padding-inline: 18px;
+  }
+
+  body:not(.b2b-landing) .scroll-title {
+    min-width: 0;
+    padding-right: 0;
+  }
+
+  body:not(.b2b-landing) .dest-card {
+    height: auto;
+    width: 100%;
+  }
+}
+
