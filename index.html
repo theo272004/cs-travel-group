@@ -10,7 +10,7 @@
   <meta property="og:description" content="Agencia de viajes Colombia — Coordinamos vuelos, hoteles, traslados, congresos médicos y viajes de incentivo para empresas y organizaciones. IATA · ARC · CLIA.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.cstravelgroup.com">
-  <link rel="stylesheet" href="css/styles.css?v=65">
+  <link rel="stylesheet" href="css/styles.css?v=66">
   <link rel="icon" type="image/png" href="assets/images/logo-cstravel-cropped.png">
   
   <!-- Structured Data (JSON-LD) para SEO B2B -->
@@ -246,7 +246,7 @@
             <div class="profile-image">
               <img src="assets/images/profile-medical-new.png" alt="Sector Salud" loading="lazy" decoding="async">
               <div class="profile-overlay"></div>
-              <span class="profile-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3v5a6 6 0 0 0 12 0V3"></path><path d="M4 3h4"></path><path d="M16 3h4"></path><path d="M12 14v3a4 4 0 0 0 8 0v-2"></path><circle cx="20" cy="15" r="2"></circle></svg></span>
+              <span class="profile-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 8v8"></path><path d="M8 12h8"></path></svg></span>
             </div>
             <div class="profile-content">
               <h3 data-i18n="prof_m_title">Médicos y clínicas</h3>
@@ -373,7 +373,7 @@
 
           <div class="dest-card">
             <div class="dest-card-inner">
-              <img src="assets/images/service-medical-concierge.png?v=20260516b" alt="CS Medical Concierge" loading="lazy">
+              <img src="assets/images/service-medical-concierge.png?v=20260516d" alt="CS Medical Concierge" loading="lazy">
               <div class="dest-card-content">
                 <span data-i18n="dest_c4_tag">CS Medical Concierge</span>
                 <h3 data-i18n="dest_c4_t">Logística médica para tus pacientes</h3>
@@ -386,170 +386,6 @@
       </div>
     </section>
 
-
-    <!-- Instagram Feed -->
-    <section class="instagram-feed">
-      <div class="container">
-        <div class="ig-header reveal">
-          <div>
-            <h3 data-i18n="ig_title">Conecta con nosotros</h3>
-            <p data-i18n="ig_desc">Descubre destinos, tips de viajes corporativos y nuestro día a día.</p>
-          </div>
-          <a href="https://www.instagram.com/cstravelgroup" target="_blank" rel="noopener" class="btn btn-outline ig-follow-btn" data-i18n="ig_btn">Síguenos @cstravelgroup</a>
-        </div>
-        
-        <style>
-          .ig-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-          }
-          .ig-card {
-            position: relative;
-            display: block;
-            aspect-ratio: 1 / 1;
-            border-radius: 12px;
-            overflow: hidden;
-            background: var(--surface);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-decoration: none;
-          }
-          .ig-card-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-          }
-          .ig-card-overlay {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(8, 24, 46, 0.85);
-            color: #fff;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-          }
-          .ig-card:hover .ig-card-img {
-            transform: scale(1.05);
-          }
-          .ig-card:hover .ig-card-overlay {
-            opacity: 1;
-          }
-          .ig-card-icon {
-            margin-bottom: 12px;
-            transform: translateY(-10px);
-            transition: transform 0.3s ease;
-          }
-          .ig-card:hover .ig-card-icon {
-            transform: translateY(0);
-          }
-          .ig-card-desc {
-            font-size: 0.9rem;
-            line-height: 1.4;
-            display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            transform: translateY(10px);
-            transition: transform 0.3s ease;
-          }
-          .ig-card:hover .ig-card-desc {
-            transform: translateY(0);
-          }
-          @media (max-width: 900px) {
-            .ig-cards-grid {
-              grid-template-columns: repeat(2, 1fr);
-            }
-          }
-          @media (max-width: 480px) {
-            .ig-cards-grid {
-              grid-template-columns: 1fr;
-            }
-          }
-        </style>
-        
-        <!-- Contenedor para el Widget de Instagram (Actualmente simulado con HTML/CSS estático) -->
-        <!-- NOTA: Para conexión automática, reemplazar este div con el código de un widget como Elfsight -->
-        <div class="ig-cards-grid reveal reveal-delay-1" id="instagram-widget-container">
-          
-          <button type="button" class="ig-card" data-index="0" data-img="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=600&auto=format&fit=crop" data-desc='"Creemos que viajar es una forma de crear recuerdos y de abrir nuevos caminos."<br><br>¡Hola! Somos Andrés y Angélica, fundadores de CS Travel Group. Nacimos en la Puerta Dorada de Colombia y compartimos una pasión por descubrir el mundo, su gente y sus culturas.<br><br>Viajamos constantemente y queremos inspirarte a vivir cada destino con el corazón porque viajar no solo es conocer lugares, ¡es crear recuerdos para toda la vida!' data-date="Abril 9, 2026" data-link="https://www.instagram.com/cstravelgroup">
-            <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=600&auto=format&fit=crop" alt="Post 1" class="ig-card-img" loading="lazy">
-            <div class="ig-card-overlay">
-              <div class="ig-card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              </div>
-              <p class="ig-card-desc">"Creemos que viajar es una forma de crear recuerdos y de abrir nuevos caminos." ¡Hola! Somos Andrés y Angélica...</p>
-            </div>
-          </button>
-
-          <button type="button" class="ig-card" data-index="1" data-img="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=600&auto=format&fit=crop" data-desc='¿Mi vuelo se retrasó, qué hago? ✈️<br><br>Te compartimos 3 tips esenciales para manejar retrasos corporativos sin perder reuniones clave:<br><br>1. Mantén la calma y comunícate con tu asesor de viajes.<br>2. Revisa las políticas de compensación de la aerolínea.<br>3. Aprovecha las salas VIP si tienes acceso.<br><br>En CS Travel Group estamos 24/7 para apoyarte.' data-date="Abril 5, 2026" data-link="https://www.instagram.com/cstravelgroup">
-            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=600&auto=format&fit=crop" alt="Post 2" class="ig-card-img" loading="lazy">
-            <div class="ig-card-overlay">
-              <div class="ig-card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              </div>
-              <p class="ig-card-desc">¿Mi vuelo se retrasó, qué hago? ✈️ Te compartimos 3 tips esenciales para manejar retrasos corporativos sin perder reuniones clave.</p>
-            </div>
-          </button>
-
-          <button type="button" class="ig-card" data-index="2" data-img="https://images.unsplash.com/photo-1583335513577-224a1329528f?q=80&w=600&auto=format&fit=crop" data-desc='Cartagena, La Heroica.<br><br>Historia, fe y mar en un solo lugar. Procesiones y atardeceres mágicos para tus retiros de equipo o viajes de incentivo.<br><br>Conecta a tu equipo con la magia del caribe colombiano y fomenta el liderazgo en un entorno inigualable. 🌴✨' data-date="Marzo 28, 2026" data-link="https://www.instagram.com/cstravelgroup">
-            <img src="https://images.unsplash.com/photo-1583335513577-224a1329528f?q=80&w=600&auto=format&fit=crop" alt="Post 3" class="ig-card-img" loading="lazy">
-            <div class="ig-card-overlay">
-              <div class="ig-card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              </div>
-              <p class="ig-card-desc">Cartagena, La Heroica. Historia, fe y mar en un solo lugar. Procesiones y atardeceres mágicos para tus retiros de equipo.</p>
-            </div>
-          </button>
-
-          <button type="button" class="ig-card" data-index="3" data-img="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600&auto=format&fit=crop" data-desc='Mis vacaciones en Bayahibe con precios especiales. 🏖️<br><br>Lo dejas para después y pierdes el mejor precio. ¡Cotiza tu viaje de incentivo hoy!<br><br>Garantiza las mejores tarifas aéreas y hoteleras reservando con antelación para grupos corporativos.' data-date="Marzo 15, 2026" data-link="https://www.instagram.com/cstravelgroup">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600&auto=format&fit=crop" alt="Post 4" class="ig-card-img" loading="lazy">
-            <div class="ig-card-overlay">
-              <div class="ig-card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              </div>
-              <p class="ig-card-desc">Mis vacaciones en Bayahibe con precios especiales. Lo dejas para después y pierdes el mejor precio. ¡Cotiza tu viaje de incentivo hoy!</p>
-            </div>
-          </button>
-
-        </div>
-
-        <!-- Instagram Custom Modal -->
-        <div class="ig-modal-backdrop" id="ig-modal" aria-hidden="true">
-          <div class="ig-modal-container">
-            <button class="ig-modal-close" id="ig-modal-close" aria-label="Cerrar modal">&times;</button>
-            <button class="ig-modal-nav prev" id="ig-modal-prev" aria-label="Publicación anterior"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-            <button class="ig-modal-nav next" id="ig-modal-next" aria-label="Siguiente publicación"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-            <div class="ig-modal-content">
-              <div class="ig-modal-image">
-                <img src="" alt="Instagram Post" id="ig-modal-img">
-              </div>
-              <div class="ig-modal-sidebar">
-                <div class="ig-modal-header">
-                  <div class="ig-modal-author">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    <strong>cstravelgroup</strong>
-                  </div>
-                </div>
-                <div class="ig-modal-body">
-                  <p id="ig-modal-desc"></p>
-                </div>
-                <div class="ig-modal-footer">
-                  <span class="ig-modal-date" id="ig-modal-date"></span>
-                  <a href="https://www.instagram.com/cstravelgroup" target="_blank" rel="noopener" id="ig-modal-link" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">Ver en Instagram</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Credentials -->
     <section class="credentials" id="credenciales">
@@ -714,6 +550,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
-  <script src="js/main.js?v=63"></script>
+  <script src="js/main.js?v=64"></script>
 </body>
 </html>

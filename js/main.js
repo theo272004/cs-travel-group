@@ -1044,6 +1044,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroDots = document.querySelectorAll('.hero-progress-dot');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const desktopMotion = window.matchMedia('(min-width: 769px)').matches && !reducedMotion;
+    const wideDesktopMotion = window.matchMedia('(min-width: 1101px)').matches && !reducedMotion;
     const heroScrollMotion = !reducedMotion;
     const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
     
@@ -1125,7 +1126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Fade in the initial elements on load
       gsap.from('.header', { y: -100, autoAlpha: 0, duration: 1, ease: 'power4.out' });
-      gsap.from('.nav-links li', { y: -20, autoAlpha: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out', delay: 0.5 });
+      gsap.from(['.nav-links', '.lang-switcher', '.nav-cta'], { y: -20, autoAlpha: 0, duration: 0.72, ease: 'power3.out', delay: 0.42 });
       const heroKicker = document.querySelector('.hero-kicker');
       if (heroKicker) gsap.from(heroKicker, { y: 18, autoAlpha: 0, duration: 0.7, ease: 'power3.out', delay: 0.25 });
       gsap.fromTo(heroTexts[0], { y: 40, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 1, ease: 'power3.out', delay: 0.4 });
@@ -1152,7 +1153,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // 2. Horizontal Scroll Destinations
       const scrollWrapper = document.querySelector('.scroll-wrapper');
-      if (scrollWrapper && desktopMotion && scrollWrapper.scrollWidth > window.innerWidth) {
+      if (scrollWrapper && !reducedMotion && scrollWrapper.scrollWidth > window.innerWidth) {
         gsap.to(scrollWrapper, {
           x: () => -(scrollWrapper.scrollWidth - window.innerWidth),
           ease: 'none',
@@ -1171,7 +1172,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const connectorWrap = document.querySelector('.home-section-flight-wrap');
       const connectorPlane = document.querySelector('#section-flight-plane');
       const connectorActivePath = document.querySelector('#section-flight-route-active');
-      if (connectorWrap && connectorPlane && connectorActivePath && typeof MotionPathPlugin !== 'undefined' && desktopMotion) {
+      if (connectorWrap && connectorPlane && connectorActivePath && typeof MotionPathPlugin !== 'undefined' && wideDesktopMotion) {
         const connectorPathLength = connectorActivePath.getTotalLength();
         connectorActivePath.style.strokeDasharray = connectorPathLength;
         connectorActivePath.style.strokeDashoffset = connectorPathLength;
