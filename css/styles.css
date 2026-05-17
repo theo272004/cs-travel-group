@@ -8982,3 +8982,74 @@ body:not(.b2b-landing) .credentials {
   }
 }
 
+/* ===== Home connector flight between profiles and value section ===== */
+body:not(.b2b-landing) .home-section-flight-wrap {
+  position: relative;
+  isolation: isolate;
+}
+
+body:not(.b2b-landing) .home-section-flight-wrap .profiles-section,
+body:not(.b2b-landing) .home-section-flight-wrap .ev-services {
+  position: relative;
+  z-index: 2;
+}
+
+body:not(.b2b-landing) .section-flight-connector {
+  inset: 40px auto 0 0;
+  pointer-events: none;
+  position: absolute;
+  width: clamp(170px, 18vw, 320px);
+  z-index: 1;
+  height: calc(100% - 64px);
+}
+
+body:not(.b2b-landing) .section-flight-svg {
+  height: 100%;
+  overflow: visible;
+  width: 100%;
+}
+
+body:not(.b2b-landing) .section-flight-route,
+body:not(.b2b-landing) .section-flight-route-active {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4;
+}
+
+body:not(.b2b-landing) .section-flight-route {
+  opacity: .42;
+  stroke: rgba(230, 188, 0, 0.42);
+  stroke-dasharray: 10 12;
+}
+
+body:not(.b2b-landing) .section-flight-route-active {
+  filter: drop-shadow(0 0 12px rgba(230, 188, 0, 0.18));
+  opacity: .95;
+  stroke: #E6BC00;
+  stroke-dasharray: 12 10;
+}
+
+body:not(.b2b-landing) .section-flight-plane {
+  height: auto;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transform-origin: center center;
+  width: clamp(46px, 4.2vw, 74px);
+  will-change: transform, opacity;
+  filter: drop-shadow(0 10px 24px rgba(6, 43, 85, 0.18));
+}
+
+@media (max-width: 1100px) {
+  body:not(.b2b-landing) .section-flight-connector {
+    width: clamp(120px, 14vw, 180px);
+  }
+}
+
+@media (max-width: 900px) {
+  body:not(.b2b-landing) .section-flight-connector {
+    display: none;
+  }
+}
+

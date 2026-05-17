@@ -1167,6 +1167,53 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
+      // 2.5. Connector airplane between profile and value sections
+      const connectorWrap = document.querySelector('.home-section-flight-wrap');
+      const connectorPlane = document.querySelector('#section-flight-plane');
+      const connectorActivePath = document.querySelector('#section-flight-route-active');
+      if (connectorWrap && connectorPlane && connectorActivePath && typeof MotionPathPlugin !== 'undefined' && desktopMotion) {
+        const connectorPathLength = connectorActivePath.getTotalLength();
+        connectorActivePath.style.strokeDasharray = connectorPathLength;
+        connectorActivePath.style.strokeDashoffset = connectorPathLength;
+        gsap.set(connectorPlane, { autoAlpha: 0, scale: 0.84 });
+
+        const connectorTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: connectorWrap,
+            start: 'top 72%',
+            end: 'bottom 36%',
+            scrub: 0.85,
+            invalidateOnRefresh: true
+          }
+        });
+
+        connectorTl.to(connectorPlane, {
+          autoAlpha: 1,
+          scale: 1,
+          duration: 0.35,
+          ease: 'power2.out'
+        }, 0);
+
+        connectorTl.to(connectorPlane, {
+          motionPath: {
+            path: '#section-flight-route',
+            align: '#section-flight-route',
+            alignOrigin: [0.5, 0.5],
+            autoRotate: true
+          },
+          duration: 1,
+          ease: 'none'
+        }, 0);
+
+        connectorTl.to(connectorActivePath, {
+          strokeDashoffset: 0,
+          duration: 1,
+          ease: 'none'
+        }, 0);
+      } else if (connectorPlane) {
+        gsap.set(connectorPlane, { autoAlpha: 0 });
+      }
+
       // 3. Section Reveals
       const revealElements = document.querySelectorAll('.reveal');
       if (desktopMotion) {
