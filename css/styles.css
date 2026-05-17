@@ -9057,7 +9057,10 @@ body:not(.b2b-landing) .section-flight-plane {
 body:not(.b2b-landing) .destinations-scroll,
 body:not(.b2b-landing) .proof-section,
 body:not(.b2b-landing) .credentials {
-  background: linear-gradient(180deg, #ffffff 0%, #f4fbff 100%);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(191, 216, 244, .2), transparent 28%),
+    radial-gradient(circle at 88% 78%, rgba(255, 210, 0, .065), transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
 }
 
 body:not(.b2b-landing) .dest-card-inner,
