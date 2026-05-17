@@ -5109,9 +5109,9 @@ body:not(.b2b-landing) .hero-text-slide {
 }
 
 body:not(.b2b-landing) .hero-text-slide.active {
-  filter: blur(0) !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+  filter: blur(0);
+  opacity: 1;
+  visibility: visible;
 }
 
 body:not(.b2b-landing) .hero-title {
@@ -10272,7 +10272,7 @@ body:not(.b2b-landing):not(.contact-page) .hero-desc {
 
 body:not(.b2b-landing):not(.contact-page) .hero-cta-container {
   justify-content: center;
-  margin-top: clamp(56px, 8vh, 104px);
+  margin-top: clamp(108px, 15vh, 178px);
   width: 100%;
 }
 
@@ -10586,7 +10586,7 @@ body.b2b-landing:not(.medical-landing) .faq-question span {
   }
 
   body:not(.b2b-landing):not(.contact-page) .hero-cta-container {
-    margin-top: clamp(36px, 5vh, 58px);
+    margin-top: clamp(74px, 9vh, 110px);
   }
 
   body:not(.b2b-landing):not(.contact-page) .scroll-wrapper {
@@ -10694,7 +10694,7 @@ body.b2b-landing:not(.medical-landing) .faq-question span {
   }
 
   body:not(.b2b-landing):not(.contact-page) .hero-cta-container {
-    margin-top: clamp(22px, 4vh, 36px);
+    margin-top: clamp(44px, 7vh, 72px);
   }
 
   body:not(.b2b-landing):not(.contact-page) .hero-cta,
