@@ -1156,8 +1156,8 @@ body.b2b-landing .header .nav-logo-img {
 .footer-social a:hover { background: var(--accent); color: var(--primary); border-color: var(--accent); }
 
 /* ===== GSAP Setup & Premium UI ===== */
-/* Hide elements initially to avoid FOUC before GSAP loads */
-.reveal, .reveal-text { visibility: hidden; }
+/* Keep content visible if JavaScript or an external animation library fails. */
+.reveal, .reveal-text { visibility: visible; }
 
 /* Native scrollbars hidden by design. */
 * {
@@ -9358,7 +9358,7 @@ body:not(.b2b-landing) .hero-content {
 
 body:not(.b2b-landing) .hero-cta-container {
   animation: none;
-  margin-top: clamp(28px, 4.2vh, 48px);
+  margin-top: clamp(44px, 6vh, 72px);
   opacity: 1;
   transform: none;
 }

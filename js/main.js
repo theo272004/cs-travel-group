@@ -1072,8 +1072,6 @@ document.addEventListener('DOMContentLoaded', () => {
             setHeroStage(stage);
           }
         }
-          }
-        }
       });
 
       // Animate the airplane along the path
