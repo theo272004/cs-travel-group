@@ -5603,7 +5603,7 @@ body:not(.b2b-landing) .ev-panel {
   border-radius: 0;
   box-shadow: none;
   display: grid;
-  grid-template-columns: minmax(380px, 1.28fr) repeat(3, minmax(220px, 1fr));
+  grid-template-columns: minmax(440px, 1.8fr) repeat(3, minmax(220px, 1fr));
   max-width: none;
   min-height: 0;
   padding-block: clamp(20px, 2.3vw, 30px);
@@ -5636,7 +5636,7 @@ body:not(.b2b-landing) .ev-title {
   font-size: clamp(1.6rem, 1.05rem + 1.72vw, 2.55rem);
   line-height: 1;
   margin-bottom: 10px;
-  max-width: 390px;
+  max-width: 500px;
 }
 
 body:not(.b2b-landing) .ev-title em {
@@ -5656,7 +5656,7 @@ body:not(.b2b-landing) .ev-intro p {
   font-size: clamp(.8rem, .76rem + .1vw, .9rem);
   line-height: 1.42;
   margin: 0;
-  max-width: 380px;
+  max-width: 480px;
 }
 
 body:not(.b2b-landing) .ev-feature-grid {
