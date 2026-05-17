@@ -8131,3 +8131,88 @@ body:not(.b2b-landing) .proof-card p {
   }
 }
 
+/* Final home adjustments */
+body:not(.b2b-landing) .destinations-scroll .scroll-title,
+body:not(.b2b-landing) .destinations-scroll .scroll-title h2,
+body:not(.b2b-landing) .destinations-scroll .scroll-title p,
+body:not(.b2b-landing) .destinations-scroll .scroll-title .section-label {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+body:not(.b2b-landing) .proof-grid {
+  align-items: start;
+}
+
+body:not(.b2b-landing) .proof-card {
+  align-content: start;
+  aspect-ratio: auto;
+  height: auto;
+  min-height: 0;
+  padding: clamp(22px, 1.8vw, 28px);
+}
+
+body:not(.b2b-landing) .proof-card p {
+  margin-bottom: 16px;
+}
+
+body:not(.b2b-landing) .proof-person {
+  gap: 4px;
+}
+
+body:not(.b2b-landing) .instagram-feed {
+  background: linear-gradient(180deg, #eef2f6 0%, #f6f8fb 100%);
+  color: var(--primary);
+}
+
+body:not(.b2b-landing) .instagram-feed .ig-header h3 {
+  color: var(--primary);
+}
+
+body:not(.b2b-landing) .instagram-feed .ig-header p {
+  color: var(--text-secondary);
+}
+
+body:not(.b2b-landing) .instagram-feed .ig-card {
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 26px rgba(16, 42, 76, 0.08);
+}
+
+body:not(.b2b-landing) .instagram-feed .ig-follow-btn {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(16, 42, 76, 0.14);
+  color: var(--primary) !important;
+}
+
+body:not(.b2b-landing) .instagram-feed .ig-follow-btn:hover {
+  background: #fff;
+  border-color: rgba(16, 42, 76, 0.24);
+}
+
+.home-final-cta .container {
+  display: flex;
+  justify-content: center;
+}
+
+.home-final-cta-inner {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-final-cta h2,
+.home-final-cta p {
+  margin-inline: auto;
+}
+
+.home-final-contact-row {
+  justify-content: center;
+  margin-inline: auto;
+}
+
+@media (max-width: 900px) {
+  body:not(.b2b-landing) .proof-card {
+    min-height: 0;
+  }
+}
+
