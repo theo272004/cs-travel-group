@@ -5960,7 +5960,7 @@ body:not(.b2b-landing) .profile-content {
 
 body:not(.b2b-landing) .profile-badge {
   align-items: center;
-  background: #075fb8;
+  background: var(--primary);
   border: 6px solid #fff;
   border-radius: 50%;
   color: #fff;
@@ -5986,10 +5986,22 @@ body:not(.b2b-landing) .profile-badge svg {
 
 body:not(.b2b-landing) .profile-content p {
   color: var(--primary);
-  font-size: clamp(1.05rem, .96rem + .28vw, 1.22rem);
+  font-size: clamp(1rem, .93rem + .18vw, 1.1rem);
+  font-weight: 500;
+  line-height: 1.55;
+  margin-bottom: 0;
+  text-wrap: pretty;
+}
+
+body:not(.b2b-landing) .profile-content h3 {
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: clamp(1.45rem, 1.16rem + .9vw, 1.95rem);
   font-weight: 800;
-  line-height: 1.25;
-  margin-bottom: 16px;
+  line-height: 1.08;
+  margin-bottom: 14px;
+  max-width: 13ch;
+  text-wrap: balance;
 }
 
 body:not(.b2b-landing) .profile-features {
