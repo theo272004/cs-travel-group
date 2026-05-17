@@ -327,10 +327,10 @@ body.b2b-landing .header .nav-logo-img {
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 42vh;
+  height: 52vh;
   z-index: 3;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(6,43,85,0) 0%, rgba(6,43,85,0) 18%, rgba(6,43,85,.42) 48%, rgba(6,43,85,.86) 76%, var(--primary) 100%);
+  background: linear-gradient(180deg, rgba(6,43,85,0) 0%, rgba(6,43,85,0.08) 22%, rgba(6,43,85,.30) 42%, rgba(6,43,85,.62) 62%, rgba(6,43,85,.88) 80%, var(--primary) 100%);
 }
 .hero-slides {
   position: absolute; inset: 0; z-index: 1;
@@ -356,7 +356,7 @@ body.b2b-landing .header .nav-logo-img {
   position: absolute; inset: -2px 0 -12vh 0; z-index: 2;
   background:
     radial-gradient(circle at 50% 44%, rgba(191,216,244,.10), transparent 34%),
-    linear-gradient(180deg, rgba(6,43,85,.52) 0%, rgba(6,43,85,.20) 34%, rgba(6,43,85,.48) 58%, rgba(6,43,85,.88) 82%, var(--primary) 100%);
+    linear-gradient(180deg, rgba(6,43,85,.48) 0%, rgba(6,43,85,.38) 20%, rgba(6,43,85,.42) 40%, rgba(6,43,85,.52) 55%, rgba(6,43,85,.72) 70%, rgba(6,43,85,.92) 85%, var(--primary) 100%);
 }
 
 .hero-flight-path {
@@ -1111,7 +1111,7 @@ body.b2b-landing .header .nav-logo-img {
   align-items: center;
   background: #fff;
   border: 1px solid rgba(106,155,200,.24);
-  border-radius: 12px;
+  border-radius: 50%;
   color: var(--secondary);
   display: inline-flex;
   height: 32px;
@@ -7122,11 +7122,11 @@ body:not(.b2b-landing) .cred-logo-img-clia {
 
 body:not(.b2b-landing) .cred-logo-shield {
   color: var(--primary);
-  min-width: 88px;
+  min-width: 108px;
 }
 
 body:not(.b2b-landing) .cred-shield-icon {
-  width: clamp(58px, 5.6vw, 74px);
+  width: clamp(78px, 7vw, 94px);
 }
 
 body:not(.b2b-landing) .cred-logo-archer {
@@ -7857,18 +7857,19 @@ body:not(.b2b-landing) .about-editorial-grid .about-text p {
 body:not(.b2b-landing) .cred-grid.cred-grid-three {
   gap: clamp(20px, 3vw, 34px);
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: 1180px;
+  max-width: min(1480px, calc(100vw - 48px));
+  width: 100%;
 }
 
 body:not(.b2b-landing) .cred-grid-three .cred-card {
   align-items: center;
-  display: grid;
-  gap: 24px;
-  grid-template-columns: minmax(112px, 150px) minmax(0, 1fr);
-  justify-content: start;
-  min-height: 164px;
-  padding: clamp(24px, 2.4vw, 34px);
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: flex-start;
+  min-height: 0;
+  padding: clamp(28px, 3vw, 42px) clamp(24px, 2.6vw, 38px);
+  text-align: center;
 }
 
 body:not(.b2b-landing) .cred-grid-three .cred-logo {
@@ -7969,11 +7970,14 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
 @media (max-width: 1100px) {
   body:not(.b2b-landing) .cred-grid.cred-grid-three {
     grid-template-columns: 1fr;
-    max-width: 760px;
+    max-width: min(920px, calc(100vw - 32px));
   }
 
   body:not(.b2b-landing) .cred-grid-three .cred-card {
     min-height: 0;
+    flex-direction: row;
+    text-align: left;
+    gap: clamp(18px, 2vw, 28px);
   }
 }
 
@@ -8165,15 +8169,15 @@ body:not(.b2b-landing) .proof-card p {
 
 /* Final home adjustments */
 body:not(.b2b-landing) .hero::after {
-  height: 48vh;
-  background: linear-gradient(180deg, rgba(6,43,85,0.12) 0%, rgba(6,43,85,0.2) 18%, rgba(6,43,85,0.56) 46%, rgba(6,43,85,0.9) 74%, var(--primary) 100%);
+  height: 52vh;
+  background: linear-gradient(180deg, rgba(6,43,85,0) 0%, rgba(6,43,85,0.08) 22%, rgba(6,43,85,0.30) 42%, rgba(6,43,85,0.62) 62%, rgba(6,43,85,0.88) 80%, var(--primary) 100%);
 }
 
 body:not(.b2b-landing) .hero-overlay {
   inset: -2px 0 -14vh 0;
   background:
-    radial-gradient(circle at 50% 42%, rgba(191,216,244,.12), transparent 34%),
-    linear-gradient(180deg, rgba(6,43,85,.66) 0%, rgba(6,43,85,.34) 28%, rgba(6,43,85,.58) 52%, rgba(6,43,85,.92) 80%, var(--primary) 100%);
+    radial-gradient(circle at 50% 42%, rgba(191,216,244,.08), transparent 40%),
+    linear-gradient(180deg, rgba(6,43,85,.48) 0%, rgba(6,43,85,.38) 20%, rgba(6,43,85,.42) 40%, rgba(6,43,85,.52) 55%, rgba(6,43,85,.72) 70%, rgba(6,43,85,.92) 85%, var(--primary) 100%);
 }
 
 body:not(.b2b-landing) .destinations-scroll .scroll-title,
@@ -8201,12 +8205,23 @@ body:not(.b2b-landing) .scroll-title h2::after,
 body:not(.b2b-landing) .credentials-header h2::after,
 body:not(.b2b-landing) .ig-header h3::after,
 body:not(.b2b-landing) .home-final-cta h2::after {
-  background: var(--accent);
+  background: #E6BC00;
   content: "";
   display: block;
   height: 3px;
   margin-top: 12px;
   width: 42px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+body:not(.b2b-landing) .profiles-section h2,
+body:not(.b2b-landing) .proof-header h2,
+body:not(.b2b-landing) .scroll-title h2,
+body:not(.b2b-landing) .credentials-header h2,
+body:not(.b2b-landing) .ig-header h3,
+body:not(.b2b-landing) .home-final-cta h2,
+body:not(.b2b-landing) .ev-title {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }
 
 body:not(.b2b-landing) .profiles-section h2::after,
@@ -8263,11 +8278,11 @@ body:not(.b2b-landing) .proof-person {
 
 body:not(.b2b-landing) .cred-grid.cred-grid-three {
   align-content: start;
-  align-items: start;
+  align-items: stretch;
   gap: clamp(22px, 2vw, 30px);
   grid-auto-rows: max-content;
-  grid-template-columns: minmax(0, 1.28fr) minmax(0, 1fr) minmax(0, 1.12fr);
-  max-width: min(1580px, calc(100vw - 48px));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: min(1480px, calc(100vw - 48px));
   width: 100%;
 }
 
@@ -8275,10 +8290,12 @@ body:not(.b2b-landing) .cred-grid-three .cred-card {
   align-self: stretch;
   align-items: center;
   display: flex;
-  gap: clamp(20px, 1.8vw, 28px);
+  flex-direction: column;
+  gap: 18px;
   height: 100%;
   justify-content: flex-start;
-  min-height: 186px;
+  min-height: 0;
+  text-align: center;
 }
 
 body:not(.b2b-landing) .cred-grid-three .cred-logo {
@@ -8286,12 +8303,13 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo {
   border: 0;
   border-radius: 0;
   height: auto;
-  width: 100%;
+  width: auto;
+  margin-bottom: 4px;
 }
 
 body:not(.b2b-landing) .cred-grid-three .cred-copy {
   flex: 1 1 auto;
-  max-width: 34ch;
+  max-width: none;
 }
 
 body:not(.b2b-landing) .instagram-feed {
@@ -8316,7 +8334,7 @@ body:not(.b2b-landing) .instagram-feed .ig-follow-btn {
   background: var(--primary);
   border: 1px solid var(--primary);
   border-radius: 999px;
-  color: var(--accent) !important;
+  color: #fff !important;
   min-height: 48px;
   padding: 0 24px;
 }
@@ -8324,7 +8342,7 @@ body:not(.b2b-landing) .instagram-feed .ig-follow-btn {
 body:not(.b2b-landing) .instagram-feed .ig-follow-btn:hover {
   background: #0b2f59;
   border-color: #0b2f59;
-  color: var(--accent) !important;
+  color: #fff !important;
 }
 
 .home-final-cta .container {
@@ -8393,8 +8411,34 @@ body:not(.b2b-landing) .ev-feature p {
 
 @media (max-width: 640px) {
   body:not(.b2b-landing) .cred-grid-three .cred-card {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
+    text-align: center;
   }
+}
+
+/* ===== Unified Button Curvature — All buttons pill-shaped ===== */
+body:not(.b2b-landing) .btn,
+body:not(.b2b-landing) .nav-cta,
+body:not(.b2b-landing) .home-final-button,
+body:not(.b2b-landing) .home-final-contact-pill,
+body:not(.b2b-landing) .profile-btn {
+  border-radius: 999px !important;
+}
+
+/* ===== Profile Category Label Overlay ===== */
+.profile-category-label {
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  z-index: 3;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.40);
+  pointer-events: none;
 }
 
