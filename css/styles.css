@@ -10849,27 +10849,29 @@ body.b2b-landing:not(.medical-landing) .company-calc-feature {
     url("../assets/images/profiles-sky-bg.png") center center / cover no-repeat;
 }
 
+body.b2b-landing:not(.medical-landing) .company-calc-feature .container {
+  max-width: min(1460px, calc(100% - clamp(32px, 5vw, 88px)));
+  padding-inline: 0;
+}
+
 body.b2b-landing:not(.medical-landing) .company-calc-shell {
   display: grid;
-  grid-template-columns: minmax(300px, 0.95fr) minmax(520px, 1.35fr);
+  grid-template-columns: minmax(480px, 1.12fr) minmax(540px, 1fr);
   align-items: center;
-  gap: clamp(28px, 4vw, 48px);
-  max-width: 1240px;
+  gap: clamp(42px, 6vw, 96px);
+  max-width: 100%;
   margin: 0 auto;
 }
 
 body.b2b-landing:not(.medical-landing) .company-calc-intro {
-  display: grid;
-  grid-template-columns: 68px minmax(0, 1fr);
-  gap: clamp(18px, 2vw, 28px);
-  align-items: start;
+  max-width: 760px;
 }
 
 body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text h2 {
-  font-size: clamp(2rem, 1.46rem + 1.9vw, 3.18rem);
+  font-size: clamp(2.24rem, 1.56rem + 2vw, 3.45rem);
   line-height: 1.05;
-  margin-bottom: 18px;
-  max-width: 12ch;
+  margin-bottom: 24px;
+  max-width: 18ch;
 }
 
 body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text h2 em {
@@ -10877,12 +10879,15 @@ body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text h2 
 }
 
 body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text p {
-  font-size: clamp(1rem, 0.92rem + 0.22vw, 1.08rem);
-  max-width: 34ch;
+  font-size: clamp(1.04rem, 0.94rem + 0.26vw, 1.16rem);
+  line-height: 1.76;
+  max-width: 58ch;
 }
 
 body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-quote {
-  margin-top: 18px !important;
+  font-size: clamp(1.08rem, 0.98rem + 0.22vw, 1.18rem) !important;
+  margin-top: 22px !important;
+  max-width: 58ch !important;
 }
 
 body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-card {
@@ -10936,6 +10941,10 @@ body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box img 
 }
 
 @media (max-width: 1024px) {
+  body.b2b-landing:not(.medical-landing) .company-calc-feature .container {
+    max-width: min(100% - 32px, 900px);
+  }
+
   body.b2b-landing:not(.medical-landing) .company-calc-shell {
     grid-template-columns: 1fr;
   }
@@ -10948,8 +10957,7 @@ body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box img 
 
 @media (max-width: 640px) {
   body.b2b-landing:not(.medical-landing) .company-calc-intro {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    max-width: none;
   }
 
   body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-header {
@@ -11075,36 +11083,40 @@ body.b2b-landing:not(.medical-landing) .company-model-cta {
 
 /* ===== Company trust + testimonials ===== */
 body.b2b-landing:not(.medical-landing) .company-trust-proof {
-  background: linear-gradient(180deg, #eef7ff 0%, #ffffff 100%);
-  padding-block: clamp(56px, 6vw, 88px);
+  background: linear-gradient(135deg, #07172b 0%, #062b55 58%, #0a3665 100%);
+  padding-block: clamp(64px, 7vw, 104px);
+}
+
+body.b2b-landing:not(.medical-landing) .company-trust-proof .container {
+  max-width: min(1380px, calc(100% - 48px));
 }
 
 body.b2b-landing:not(.medical-landing) .company-trust-proof-grid {
   display: grid;
-  gap: 22px;
-  grid-template-columns: minmax(320px, 1.05fr) minmax(0, 1.75fr);
-  align-items: stretch;
+  gap: clamp(30px, 4vw, 46px);
+  grid-template-columns: 1fr;
+  align-items: start;
 }
 
 body.b2b-landing:not(.medical-landing) .company-trust-panel {
-  background: linear-gradient(135deg, #07172b 0%, #062b55 62%, #0a3665 100%);
-  border-radius: 24px;
   color: #fff;
-  padding: clamp(26px, 2.8vw, 34px);
-  box-shadow: 0 18px 42px rgba(16, 42, 76, 0.12);
+  max-width: 1120px;
+  padding: 0;
 }
 
 body.b2b-landing:not(.medical-landing) .company-trust-panel h2 {
   color: #fff;
   line-height: 1.08;
-  margin-bottom: 16px;
-  max-width: 12ch;
+  margin-bottom: 18px;
+  max-width: 24ch;
 }
 
 body.b2b-landing:not(.medical-landing) .company-trust-panel p {
   color: rgba(255,255,255,.82);
-  line-height: 1.65;
+  font-size: clamp(1.02rem, .94rem + .24vw, 1.15rem);
+  line-height: 1.66;
   margin: 0;
+  max-width: 92ch;
 }
 
 body.b2b-landing:not(.medical-landing) .company-trust-highlight {
@@ -11114,28 +11126,28 @@ body.b2b-landing:not(.medical-landing) .company-trust-highlight {
 }
 
 body.b2b-landing:not(.medical-landing) .company-trust-points {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 24px;
-  border: 1px solid rgba(255,255,255,.18);
-  border-radius: 18px;
-  overflow: hidden;
 }
 
 body.b2b-landing:not(.medical-landing) .company-trust-point {
   align-items: center;
   color: #fff;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   justify-content: center;
-  min-height: 118px;
-  padding: 18px 14px;
+  min-height: 0;
+  padding: 12px 16px;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
   text-align: center;
 }
 
 body.b2b-landing:not(.medical-landing) .company-trust-point:not(:last-child) {
-  border-right: 1px solid rgba(255,255,255,.16);
+  border-right: 1px solid rgba(255,255,255,.18);
 }
 
 body.b2b-landing:not(.medical-landing) .company-trust-point-icon {
@@ -11145,12 +11157,12 @@ body.b2b-landing:not(.medical-landing) .company-trust-point-icon {
 
 body.b2b-landing:not(.medical-landing) .company-trust-point-icon svg {
   fill: none;
-  height: 26px;
+  height: 20px;
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.8;
-  width: 26px;
+  width: 20px;
 }
 
 body.b2b-landing:not(.medical-landing) .company-trust-point span:last-child {
@@ -11162,19 +11174,26 @@ body.b2b-landing:not(.medical-landing) .company-trust-point span:last-child {
 body.b2b-landing:not(.medical-landing) .company-proof-cards {
   align-items: stretch;
   display: grid;
-  gap: 18px;
+  gap: clamp(16px, 2vw, 24px);
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 0;
   max-width: none;
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-card {
-  min-height: 100%;
+  min-height: 0 !important;
+  padding: clamp(20px, 2vw, 26px) !important;
+}
+
+body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-card p {
+  font-size: clamp(.94rem, .88rem + .14vw, 1rem);
+  line-height: 1.46;
+  margin-bottom: 16px;
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards .testimonial-stars {
   justify-content: flex-start;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards .testimonial-avatar--placeholder {
@@ -11199,20 +11218,14 @@ body.b2b-landing:not(.medical-landing) .company-booking-inner p {
 }
 
 @media (max-width: 1024px) {
-  body.b2b-landing:not(.medical-landing) .company-trust-proof-grid,
   body.b2b-landing:not(.medical-landing) .company-proof-cards {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 640px) {
-  body.b2b-landing:not(.medical-landing) .company-trust-points {
-    grid-template-columns: 1fr;
-  }
-
   body.b2b-landing:not(.medical-landing) .company-trust-point:not(:last-child) {
-    border-bottom: 1px solid rgba(255,255,255,.16);
-    border-right: 0;
+    border-right: 1px solid rgba(255,255,255,.18);
   }
 }
 
