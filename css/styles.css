@@ -2399,7 +2399,7 @@ body.b2b-landing .hero-highlight {
 /* Move testimonial blocks slightly to the right on B2B landings (desktop/tablet) */
 body.b2b-landing:not(.medical-landing) .company-proof-cards,
 body.medical-landing .medical-proof-cards {
-  margin-left: clamp(12px, 1.8vw, 28px);
+  margin-left: clamp(28px, 3.8vw, 64px);
 }
 
 @media (max-width: 900px) {
