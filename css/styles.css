@@ -9813,6 +9813,9 @@ body:not(.b2b-landing) .work-meaning-title-line {
 
 body:not(.b2b-landing) .plane-showcase {
   margin-bottom: 0;
+  position: relative;
+  z-index: 20 !important;
+  isolation: isolate;
 }
 
 body:not(.b2b-landing) .plane-showcase-frame {
@@ -9829,8 +9832,8 @@ body:not(.b2b-landing) .plane-showcase-frame {
   justify-content: center;
   position: relative;
   transform: translateY(34px);
-  z-index: 6;
-  overflow: visible;
+  z-index: 20 !important;
+  overflow: visible !important;
 }
 
 body:not(.b2b-landing) .plane-showcase-sky {
@@ -9849,7 +9852,7 @@ body:not(.b2b-landing) .plane-showcase-image {
   object-fit: contain;
   position: relative;
   transform: translateY(10%);
-  z-index: 7;
+  z-index: 30 !important;
   pointer-events: none;
 }
 
@@ -9860,8 +9863,8 @@ body:not(.b2b-landing) .benefits-band {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   overflow: hidden;
   position: relative;
-  z-index: 3;
-  margin-top: -26px;
+  z-index: 5 !important;
+  margin-top: -20px;
 }
 
 body:not(.b2b-landing) .benefit-item {
