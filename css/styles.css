@@ -56,13 +56,26 @@ html {
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: #0F5EA8 transparent;
   width: 100%;
 }
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0F5EA8;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #062B55;
 }
 
 body {
@@ -77,14 +90,16 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
   width: 100%;
   position: relative;
 }
 
 p, li, h1, h2, h3, h4, h5 {
   overflow-wrap: break-word;
+}
+
+p, li {
+  text-wrap: pretty;
 }
 
 .nowrap {
@@ -100,7 +115,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
 section[id] { scroll-margin-top: 104px; }
 
 /* ===== Typography ===== */
-h1, h2, h3, h4, h5 { font-family: var(--font-heading); line-height: 1.1; font-weight: 800; color: var(--text); text-wrap: pretty; }
+h1, h2, h3, h4, h5 { font-family: var(--font-heading); line-height: 1.1; font-weight: 800; color: var(--text); text-wrap: balance; }
 h1 { font-size: clamp(2.5rem, 6vw, 4rem); letter-spacing: -0.02em; }
 h2 { font-size: clamp(2rem, 4.5vw, 3rem); letter-spacing: -0.01em; }
 h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
@@ -416,7 +431,7 @@ body.b2b-landing .header .nav-logo-img {
 .hero-badge .dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; }
 .hero-title {
   color: #fff; font-size: clamp(3.2rem, 6.2vw, 5.5rem);
-  line-height: 0.98; max-width: 980px; margin-bottom: 26px;
+  line-height: 1.05; max-width: 980px; margin-bottom: 26px;
   margin-top: 18px;
   letter-spacing: 0;
   text-shadow: 0 22px 60px rgba(0,0,0,.34);
@@ -1635,7 +1650,7 @@ body.b2b-landing .header .nav-logo-img {
   }
   .hero-title {
     font-size: clamp(2.24rem, 12vw, 3.2rem);
-    line-height: 1.04;
+    line-height: 1.08;
     margin-top: 0;
     margin-bottom: 18px;
     max-width: 100%;
@@ -5116,7 +5131,7 @@ body:not(.b2b-landing) .hero-text-slide.active {
 
 body:not(.b2b-landing) .hero-title {
   font-size: var(--home-hero-title);
-  line-height: .99;
+  line-height: 1.05;
   margin: 0 0 clamp(16px, 2.2vh, 26px);
   max-width: var(--home-hero-copy);
   text-wrap: balance;
@@ -9744,6 +9759,7 @@ body:not(.b2b-landing) .benefit-item {
   color: #fff;
   padding: clamp(26px, 2.6vw, 36px);
   position: relative;
+  text-align: center;
 }
 
 body:not(.b2b-landing) .benefit-item:not(:last-child)::after {
@@ -10079,17 +10095,19 @@ body:not(.b2b-landing) .benefit-item p {
 }
 .profile-card-minimal {
   background: #ffffff;
+  border: 2px solid transparent;
   border-radius: var(--radius-lg);
   padding: 32px 40px;
   box-shadow: 0 4px 16px rgba(6, 43, 85, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
 }
 .profile-card-minimal:hover {
+  border-color: var(--accent);
   transform: translateY(-5px);
-  box-shadow: 0 12px 32px rgba(6, 43, 85, 0.1);
+  box-shadow: 0 14px 36px rgba(6, 43, 85, 0.12), 0 4px 20px rgba(255, 210, 31, 0.18);
 }
 .profile-card-header {
   display: flex;
@@ -10149,3 +10167,516 @@ body:not(.b2b-landing) .benefit-item p {
     padding: 24px;
   }
 }
+
+/* ===== Text Readability System — Widows, Orphans & Line Balance ===== */
+
+/* Medical landing: hero heading */
+body.medical-landing .split-hero-title {
+  text-wrap: balance;
+  max-width: 20ch;
+  line-height: 1.08;
+}
+
+/* Medical landing: all section h2 */
+body.medical-landing h2 {
+  text-wrap: balance;
+}
+
+/* Medical landing: CTA heading — long sentence, constrain to ~3-4 balanced lines */
+body.medical-landing .booking-cta h2,
+body.medical-landing .medical-final-cta h2 {
+  max-width: 22ch;
+  text-wrap: balance;
+}
+
+/* Medical landing: desc paragraphs — responsive font size */
+body.medical-landing .split-hero-desc {
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.22rem);
+  line-height: 1.68;
+  max-width: 56ch;
+  text-wrap: pretty;
+}
+
+/* Medical landing: process steps and timeline text */
+body.medical-landing .timeline-step h3 {
+  text-wrap: balance;
+  max-width: 18ch;
+}
+
+/* Medical landing: statement section */
+body.medical-landing .statement-title h2 {
+  max-width: 17ch;
+  text-wrap: balance;
+}
+
+body.medical-landing .statement-content p {
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+
+/* Medical landing: specialty grid — centered, balanced text */
+.specialty-grid span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-wrap: balance;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+/* Medical landing: responsive container padding */
+body.medical-landing .container {
+  padding-inline: clamp(20px, 4vw, 56px);
+}
+
+/* Medical landing: section header subtitles */
+body.medical-landing .section-subtitle {
+  max-width: 58ch;
+  text-wrap: pretty;
+}
+
+/* Home page: section headings balance */
+body:not(.b2b-landing) .profiles-section h2,
+body:not(.b2b-landing) .credentials-header h2,
+body:not(.b2b-landing) .scroll-title h2,
+body:not(.b2b-landing) .work-meaning-title {
+  text-wrap: balance;
+}
+
+/* Home page: destination scroll title — allow wider */
+body:not(.b2b-landing) .scroll-title h2 {
+  max-width: 22ch;
+}
+
+/* Home page: proof / testimonial card text */
+body:not(.b2b-landing) .proof-card p,
+.b2b-testimonial-card p {
+  text-wrap: pretty;
+  max-width: 54ch;
+}
+
+/* All pages: booking CTA headings */
+.booking-cta-inner h2 {
+  text-wrap: balance;
+}
+
+.booking-cta-inner p {
+  text-wrap: pretty;
+  max-width: 60ch;
+}
+
+/* Company page: booking CTA */
+body.b2b-landing:not(.medical-landing) .booking-cta-inner h2 {
+  max-width: 22ch;
+}
+
+/* FAQs: question text wrapping */
+.faq-question span {
+  text-wrap: pretty;
+  max-width: 62ch;
+}
+
+/* Footer: prevent long email/phone from causing layout issues */
+.footer ul a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Footer: brand description */
+.footer-brand p {
+  text-wrap: pretty;
+}
+
+/* Footer bottom: registry text */
+.footer-bottom {
+  overflow-wrap: anywhere;
+}
+
+/* Home CTA contact pills — prevent overflow on very small screens */
+.home-final-contact-pill {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+/* Responsive: mobile-specific line balance adjustments */
+@media (max-width: 640px) {
+  /* Tighten heading max-widths slightly for phone-sized columns */
+  body.medical-landing .split-hero-title {
+    max-width: 100%;
+    font-size: clamp(1.9rem, 1.4rem + 4vw, 2.6rem);
+  }
+
+  body.medical-landing .booking-cta h2,
+  body.medical-landing .medical-final-cta h2 {
+    max-width: 100%;
+    font-size: clamp(1.5rem, 1.1rem + 4.5vw, 2.2rem);
+  }
+
+  body.medical-landing .statement-title h2 {
+    max-width: 100%;
+  }
+
+  /* Prevent FAQs from having single-word lines */
+  .faq-question span {
+    max-width: 100%;
+  }
+
+  /* Proof cards: full width on mobile */
+  body:not(.b2b-landing) .proof-card p,
+  .b2b-testimonial-card p {
+    max-width: 100%;
+  }
+
+  /* Booking CTA: full-width readable text */
+  .booking-cta-inner h2 {
+    max-width: 100%;
+  }
+
+  .booking-cta-inner p {
+    max-width: 100%;
+  }
+
+  /* Ensure no heading has lines that are only 1-2 words */
+  h2, h3 {
+    max-width: 100%;
+  }
+}
+
+/* Responsive: tablet range */
+@media (min-width: 641px) and (max-width: 900px) {
+  body.medical-landing .split-hero-title {
+    max-width: 24ch;
+    font-size: clamp(2rem, 1.5rem + 2.5vw, 2.8rem);
+  }
+
+  body.medical-landing .booking-cta h2,
+  body.medical-landing .medical-final-cta h2 {
+    max-width: 26ch;
+  }
+
+  body.medical-landing .statement-title h2 {
+    max-width: 20ch;
+  }
+}
+
+/* Ensure split-hero-title on ALL split-hero pages gets line balance */
+.split-hero-title {
+  text-wrap: balance;
+}
+
+/* Ensure all section headers get balanced headings */
+.section-header h2,
+.ed-header h2 {
+  text-wrap: balance;
+}
+
+/* Ensure no-risk section h2 is balanced */
+.no-risk-section h2 {
+  text-wrap: balance;
+  max-width: 22ch;
+}
+
+/* Philosophy section */
+.philosophy-title {
+  text-wrap: balance;
+  max-width: 20ch;
+}
+
+/* Stats section: stat labels */
+.stat-label {
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+
+/* Credential cards */
+.cred-copy h3 {
+  text-wrap: balance;
+}
+
+.cred-copy p {
+  text-wrap: pretty;
+}
+
+/* Work-meaning section */
+body:not(.b2b-landing) .work-meaning-title {
+  max-width: 22ch;
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* Profile card descriptions */
+.profile-content-minimal p {
+  text-wrap: pretty;
+}
+
+/* Ensure long inline anchors never overflow */
+a[href^="mailto"],
+a[href^="tel"] {
+  overflow-wrap: anywhere;
+}
+
+/* Very small screens: minimal padding safety net */
+@media (max-width: 360px) {
+  .container {
+    padding-inline: 16px;
+  }
+
+  .home-final-contact-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  h1, h2 {
+    hyphens: auto;
+  }
+}
+
+
+/* ===== B2B Landing: testimonials section ===== */
+.b2b-testimonials-section {
+  background: #f4f8fc;
+  padding-block: clamp(56px, 6.5vw, 90px);
+}
+
+.b2b-proof-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.b2b-proof-grid .proof-card {
+  background: #ffffff;
+  border: 1px solid rgba(6, 43, 85, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(6, 43, 85, 0.07);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.b2b-proof-grid .proof-card:hover {
+  box-shadow: 0 8px 32px rgba(6, 43, 85, 0.12);
+  transform: translateY(-3px);
+}
+
+.b2b-proof-grid .proof-card > p {
+  color: #2a3f5a;
+  font-size: 0.95rem;
+  line-height: 1.62;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  text-wrap: pretty;
+}
+
+.b2b-proof-grid .proof-stars {
+  color: #FFD21F;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+  margin-top: 0;
+}
+
+.b2b-proof-grid .proof-person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.b2b-proof-grid .proof-avatar,
+.b2b-proof-grid .proof-avatar-initials {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.b2b-proof-grid .proof-avatar {
+  object-fit: cover;
+  border: 2px solid rgba(106, 155, 200, 0.3);
+}
+
+.b2b-proof-grid .proof-avatar-initials {
+  background: #d4e8f7;
+  color: #062B55;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(6, 43, 85, 0.12);
+  user-select: none;
+}
+
+.b2b-proof-grid .proof-person strong {
+  color: #062B55;
+  font-size: 0.88rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1.3;
+}
+
+.b2b-proof-grid .proof-person small {
+  color: #7a94ab;
+  font-size: 0.78rem;
+  display: block;
+  line-height: 1.3;
+}
+
+@media (max-width: 860px) {
+  .b2b-proof-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+
+  .b2b-proof-grid .proof-card {
+    min-height: 0;
+  }
+}
+
+/* ===== Consistent h2 sizes across all pages ===== */
+body:not(.b2b-landing) .profiles-section h2 {
+  font-size: clamp(1.9rem, 1.3rem + 1.6vw, 2.7rem);
+}
+
+body:not(.b2b-landing) .work-meaning-title {
+  font-size: clamp(1.9rem, 1.3rem + 1.6vw, 2.7rem);
+}
+
+body:not(.b2b-landing) .credentials-header h2 {
+  font-size: clamp(1.9rem, 1.3rem + 1.6vw, 2.7rem);
+  white-space: normal;
+}
+
+body.b2b-landing:not(.medical-landing) h2 {
+  font-size: clamp(1.9rem, 1.3rem + 1.6vw, 2.7rem);
+}
+
+body.medical-landing h2 {
+  font-size: clamp(1.9rem, 1.3rem + 1.6vw, 2.7rem);
+}
+
+/* ===== Reduce whitespace: credentials and destinations-scroll ===== */
+body:not(.b2b-landing) .credentials {
+  padding-block: clamp(24px, 2.8vw, 40px) !important;
+}
+
+body:not(.b2b-landing) .credentials-header {
+  margin-bottom: clamp(12px, 1.4vw, 18px);
+}
+
+body:not(.b2b-landing) .destinations-scroll {
+  padding-block: clamp(24px, 2.8vw, 40px) !important;
+}
+
+/* ===== Reduce whitespace: empresas and medicos sections ===== */
+body.b2b-landing .b2b-dark-statement,
+body.b2b-landing .editorial-promise,
+body.b2b-landing .ev-services,
+body.b2b-landing .profiles-section,
+body.b2b-landing .philosophy-section,
+body.b2b-landing .b2b-faqs,
+body.b2b-landing .calc-section,
+body.b2b-landing .medical-process {
+  padding-block: clamp(52px, 6vw, 88px);
+}
+
+/* ===== Company intro editorial block ===== */
+.company-intro-block {
+  background: linear-gradient(180deg, #eaf6ff 0%, #ffffff 100%);
+  padding-block: clamp(44px, 5vw, 68px);
+  border-bottom: 1px solid rgba(6, 43, 85, 0.07);
+}
+
+.intro-block-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(28px, 3.5vw, 48px);
+  max-width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.intro-block-icon {
+  flex-shrink: 0;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--sky-soft);
+  border: 1.5px solid rgba(6, 43, 85, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-top: 4px;
+}
+
+.intro-block-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.intro-block-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.intro-block-text h2 {
+  color: var(--primary);
+  font-size: clamp(1.55rem, 1rem + 1.5vw, 2.3rem);
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  max-width: 26ch;
+  margin-bottom: 16px;
+}
+
+.intro-block-text h2 em {
+  color: var(--primary-light);
+  font-style: normal;
+}
+
+.intro-block-text p {
+  color: var(--text-secondary);
+  font-size: clamp(0.97rem, 0.9rem + 0.26vw, 1.08rem);
+  line-height: 1.72;
+  text-wrap: pretty;
+  max-width: 60ch;
+  margin-bottom: 0;
+}
+
+.intro-block-quote {
+  color: var(--primary) !important;
+  font-weight: 600;
+  margin-top: 14px !important;
+  font-size: clamp(0.96rem, 0.9rem + 0.16vw, 1.04rem) !important;
+  text-wrap: balance;
+}
+
+@media (max-width: 640px) {
+  .intro-block-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .intro-block-icon {
+    width: 56px;
+    height: 56px;
+    margin-top: 0;
+  }
+
+  .intro-block-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .intro-block-text h2,
+  .intro-block-text p {
+    max-width: 100%;
+  }
+}
+

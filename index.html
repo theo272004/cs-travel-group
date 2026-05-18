@@ -14,7 +14,7 @@
     content="Agencia de viajes Colombia — Coordinamos vuelos, hoteles, traslados, congresos médicos y viajes de incentivo para empresas y organizaciones. IATA · ARC · CLIA.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.cstravelgroup.com">
-  <link rel="stylesheet" href="css/styles.css?v=81">
+  <link rel="stylesheet" href="css/styles.css?v=86">
   <link rel="icon" type="image/png" href="assets/images/logo-cstravel-cropped.png">
 
   <!-- Structured Data (JSON-LD) para SEO B2B -->
@@ -140,7 +140,7 @@
   <main>
 
     <!-- Hero Flight Interactive -->
-    <section class="hero" id="inicio">
+    <section class="hero" id="inicio" data-nav-label="Inicio">
       <!-- Background Slides -->
       <div class="hero-slides">
         <div class="hero-slide active">
@@ -267,7 +267,7 @@
     </section>
 
     <!-- Profile Selection (B2B Focus) -->
-    <section class="profiles-section" id="perfiles">
+    <section class="profiles-section" id="perfiles" data-nav-label="Equipo">
       <div class="container">
         <div class="reveal" style="text-align:center; max-width:640px; margin:0 auto 48px;">
           <span class="section-label" style="justify-content:center;" data-i18n="prof_label">Elige tu perfil</span>
@@ -313,7 +313,7 @@
       </div>
     </section>
 
-    <section class="work-meaning-section" id="servicios">
+    <section class="work-meaning-section" id="servicios" data-nav-label="Servicios">
       <div class="container">
         <div class="work-meaning-card">
           <div class="work-meaning-head reveal">
@@ -370,50 +370,8 @@
       </div>
     </section>
 
-    <section class="proof-section">
-      <div class="container proof-comparison-layout proof-single-column">
-        <div class="proof-side">
-          <div class="proof-grid">
-            <article class="proof-card reveal">
-              <p data-i18n="proof_q1">CS Travel Group es nuestro aliado estratégico. Su operación es impecable y siempre
-                están un paso adelante.</p>
-              <div class="proof-stars" aria-label="5 estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <div class="proof-person">
-                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=100&auto=format&fit=crop"
-                  alt="" class="proof-avatar" loading="lazy">
-                <div><strong data-i18n="proof_name_1">María A.</strong><small data-i18n="proof_role_1">Gerente de
-                    Operaciones<br>Sector Financiero</small></div>
-              </div>
-            </article>
-            <article class="proof-card reveal reveal-delay-1">
-              <p data-i18n="proof_q2">Gracias a CS, recibimos pacientes internacionales sin estrés. Ellos se encargan de
-                todo.</p>
-              <div class="proof-stars" aria-label="5 estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <div class="proof-person">
-                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=100&auto=format&fit=crop"
-                  alt="" class="proof-avatar" loading="lazy">
-                <div><strong data-i18n="proof_name_2">Dr. Alejandro R.</strong><small data-i18n="proof_role_2">Director
-                    Médico<br>Clínica de Especialistas</small></div>
-              </div>
-            </article>
-            <article class="proof-card reveal reveal-delay-2">
-              <p data-i18n="proof_q3">Rapidez, tarifas y atención humana. Eso es lo que necesitamos en cada viaje
-                corporativo.</p>
-              <div class="proof-stars" aria-label="5 estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <div class="proof-person">
-                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=100&auto=format&fit=crop"
-                  alt="" class="proof-avatar" loading="lazy">
-                <div><strong data-i18n="proof_name_3">Laura G.</strong><small data-i18n="proof_role_3">Coordinadora de
-                    Viajes<br>Industria Manufacturera</small></div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Destinations (Cinematic Horizontal Scroll) -->
-    <section class="destinations-scroll" id="destinos">
+    <section class="destinations-scroll" id="destinos" data-nav-label="Destinos">
       <div class="scroll-container">
         <div class="scroll-wrapper">
           <div class="scroll-title">
@@ -478,7 +436,7 @@
 
 
     <!-- Credentials -->
-    <section class="credentials" id="credenciales">
+    <section class="credentials" id="credenciales" data-nav-label="Acreditaciones">
       <div class="container">
         <div class="credentials-header reveal">
           <span class="section-label" style="justify-content:center;" data-i18n="cred_label">Respaldo
@@ -661,6 +619,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
   <script src="js/main.js?v=81"></script>
+
 </body>
 
 </html>

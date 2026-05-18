@@ -10,7 +10,7 @@
   <meta property="og:description" content="Gestionamos tus viajes corporativos en Colombia con tarifas insuperables, atención personalizada y beneficios para tu equipo. Sin permanencia ni costos ocultos">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.cstravelgroup.com/empresas/">
-  <link rel="stylesheet" href="../css/styles.css?v=81">
+  <link rel="stylesheet" href="../css/styles.css?v=87">
   <link rel="icon" type="image/png" href="../assets/images/logo-cstravel-cropped.png">
 
   <script type="application/ld+json">
@@ -102,7 +102,7 @@
 
   <main>
     <!-- Split Layout Hero (B2B) -->
-    <section class="split-hero" id="inicio">
+    <section class="split-hero" id="inicio" data-nav-label="Inicio">
       <div class="split-hero-content reveal">
         <p class="split-hero-kicker" data-i18n="company_hero_kicker">Agencia de viajes empresariales en Colombia</p>
         <h1 class="split-hero-title" data-i18n="company_hero_title">Tu empresa lleva años pagando por viajes. Es hora de que esos viajes <span class="hero-highlight">te paguen a ti</span></h1>
@@ -151,26 +151,27 @@
       </div>
     </section>
 
-    <!-- The Real Cost Section (Immersive Dark) -->
-    <section class="b2b-dark-statement" id="ventajas">
+    <!-- Intro Editorial Block -->
+    <section class="company-intro-block" id="ventajas">
       <div class="container">
-        <div class="statement-grid">
-          <div class="statement-title reveal">
+        <div class="intro-block-inner reveal">
+          <div class="intro-block-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="3 17 8 11 13 14 21 5"></polyline>
+              <circle cx="21" cy="5" r="1.5" fill="currentColor" stroke="none"></circle>
+            </svg>
+          </div>
+          <div class="intro-block-text">
             <h2 data-i18n="company_statement_title">La mayoría de empresas no sabe que sus viajes <em>pueden generarles ingresos.</em></h2>
-          </div>
-          <div class="statement-content reveal reveal-delay-1">
             <p data-i18n="company_statement_p1">Cada tiquete que compra tu empresa, cada hotel que reserva, cada traslado que gestiona — todo genera valor económico que hoy se queda en manos de terceros. No porque no puedas capturarlo. Sino porque nadie te había mostrado cómo.</p>
-            <p class="statement-quote" data-i18n="company_statement_highlight">CS Travel existe exactamente para eso.</p>
-          </div>
-          <div class="statement-art reveal reveal-delay-2" aria-hidden="true">
-            <img src="../assets/images/avioncito-01.png" alt="" loading="lazy" decoding="async">
+            <p class="intro-block-quote" data-i18n="company_statement_highlight">CS Travel existe exactamente para eso.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Calculator Section -->
-    <section class="calc-section" id="calculadora">
+    <section class="calc-section" id="calculadora" data-nav-label="Calculadora">
       <div class="container">
         <div class="calc-card reveal">
           <div class="calc-header">
@@ -213,7 +214,7 @@
     </section>
 
     <!-- Model in 3 steps -->
-    <section class="editorial-promise" id="modelo">
+    <section class="editorial-promise" id="modelo" data-nav-label="Modelo">
       <div class="container">
         <div class="ed-header reveal" style="max-width: 860px;">
           <h2 data-i18n="company_model_title">El modelo en tres pasos</h2>
@@ -265,7 +266,7 @@
     </section>
 
     <!-- Solutions (High-end Profile Cards style) -->
-    <section class="profiles-section" id="soluciones" style="background: var(--bg);">
+    <section class="profiles-section" id="soluciones" data-nav-label="Soluciones" style="background: var(--bg);">
       <div class="container">
         <div class="reveal" style="text-align:center; max-width:720px; margin:0 auto 64px;">
           <h2 data-i18n="company_sol_title">Tres servicios. Una sola infraestructura.</h2>
@@ -338,64 +339,45 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials b2b-testimonials" style="background: #f8fafc; color: var(--primary); padding: 100px 0;">
-      <div class="container">
-        <div class="b2b-testimonial-grid">
-          <!-- Testimonial 1 -->
-          <article class="b2b-testimonial-card reveal">
-            <span class="b2b-testimonial-quote">“</span>
-            <p data-i18n="company_test1_text">"Antes cada cambio de itinerario terminaba en una cadena de correos. Ahora tenemos una respuesta concreta y alguien que mueve la operación sin frenar al equipo."</p>
-            <div class="b2b-testimonial-footer">
-              <div class="b2b-testimonial-profile">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" alt="Gerencia administrativa" class="testimonial-avatar">
-                <div class="testimonial-info">
-                  <span class="testimonial-name" data-i18n="company_test1_author">Gerencia administrativa</span>
-                  <span class="testimonial-role" data-i18n="company_test1_role">Empresa de Viajes</span>
-                </div>
-              </div>
-              <div class="testimonial-stars">
-                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+    <section class=”b2b-testimonials-section”>
+      <div class=”container”>
+        <div class=”proof-grid b2b-proof-grid”>
+          <article class=”proof-card”>
+            <p data-i18n=”company_test1_text”>”Antes cada cambio de itinerario terminaba en una cadena de correos. Ahora tenemos una respuesta concreta y alguien que mueve la operación sin frenar al equipo.”</p>
+            <div class=”proof-stars” aria-label=”5 estrellas”>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class=”proof-person”>
+              <div class=”proof-avatar-initials” aria-hidden=”true”>GA</div>
+              <div>
+                <strong data-i18n=”company_test1_author”>Gerencia administrativa</strong>
+                <small data-i18n=”company_test1_role”>Empresa de Viajes</small>
               </div>
             </div>
           </article>
 
-          <!-- Testimonial 2 -->
-          <article class="b2b-testimonial-card reveal reveal-delay-1" style="background: #eff6ff;">
-            <span class="b2b-testimonial-quote">“</span>
-            <p data-i18n="company_test2_text">"La diferencia no fue solo el precio. Fue tener claridad para aprobar, ajustar y reportar cada viaje sin convertirlo en trabajo extra para varias áreas."</p>
-            <div class="b2b-testimonial-footer">
-              <div class="b2b-testimonial-profile">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop" alt="Dirección general" class="testimonial-avatar">
-                <div class="testimonial-info">
-                  <span class="testimonial-name" data-i18n="company_test2_author">Dirección general</span>
-                  <span class="testimonial-role" data-i18n="company_test2_role">Empresa Mediana</span>
-                </div>
-              </div>
-              <div class="testimonial-stars">
-                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          <article class=”proof-card”>
+            <p data-i18n=”company_test2_text”>”La diferencia no fue solo el precio. Fue tener claridad para aprobar, ajustar y reportar cada viaje sin convertirlo en trabajo extra para varias áreas.”</p>
+            <div class=”proof-stars” aria-label=”5 estrellas”>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class=”proof-person”>
+              <div class=”proof-avatar-initials” aria-hidden=”true”>DG</div>
+              <div>
+                <strong data-i18n=”company_test2_author”>Dirección general</strong>
+                <small data-i18n=”company_test2_role”>Empresa Mediana</small>
               </div>
             </div>
           </article>
 
-          <!-- Testimonial 3 -->
-          <article class="b2b-testimonial-card reveal reveal-delay-2">
-            <span class="b2b-testimonial-quote">“</span>
-            <p data-i18n="company_test3_text">"El beneficio para empleados nos ayudó a comunicar la afiliación como algo útil para la gente, no solo como una mejora administrativa."</p>
-            <div class="b2b-testimonial-footer">
-              <div class="b2b-testimonial-profile">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop" alt="Talento humano" class="testimonial-avatar">
-                <div class="testimonial-info">
-                  <span class="testimonial-name" data-i18n="company_test3_author">Talento humano</span>
-                  <span class="testimonial-role" data-i18n="company_test3_role">Equipo Corporativo</span>
-                </div>
-              </div>
-              <div class="testimonial-stars">
-                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          <article class=”proof-card”>
+            <p data-i18n=”company_test3_text”>”El beneficio para empleados nos ayudó a comunicar la afiliación como algo útil para la gente, no solo como una mejora administrativa.”</p>
+            <div class=”proof-stars” aria-label=”5 estrellas”>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class=”proof-person”>
+              <div class=”proof-avatar-initials” aria-hidden=”true”>TH</div>
+              <div>
+                <strong data-i18n=”company_test3_author”>Talento humano</strong>
+                <small data-i18n=”company_test3_role”>Equipo Corporativo</small>
               </div>
             </div>
           </article>
         </div>
-
       </div>
     </section>
 
@@ -433,7 +415,7 @@
 
 
     <!-- FAQs -->
-    <section class="b2b-faqs" id="faqs">
+    <section class="b2b-faqs" id="faqs" data-nav-label="FAQ">
       <div class="container">
         <div class="reveal" style="text-align:center; margin-bottom: 64px;">
           <h2 data-i18n="company_faq_title">FAQs sobre nuestra agencia de viajes empresariales en Colombia</h2>
@@ -620,5 +602,6 @@
       calculate();
     });
   </script>
+
 </body>
 </html>

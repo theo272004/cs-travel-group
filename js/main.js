@@ -1160,7 +1160,7 @@ document.addEventListener('DOMContentLoaded', () => {
               scrollTrigger: {
                 trigger: el,
                 start: 'top 85%',
-                toggleActions: 'play none none reverse'
+                toggleActions: 'play none none none'
               }
             }
           );
