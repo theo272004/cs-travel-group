@@ -12012,3 +12012,14 @@ body.medical-landing .medical-cta-action-bar .btn-outline {
   }
 }
 
+/* Final medical section background overrides */
+body.medical-landing main > section.medical-process-light {
+  background: #fff !important;
+  background-image: none !important;
+}
+
+body.medical-landing main > section.medical-specialties-light {
+  background: #eef7ff !important;
+  background-image: none !important;
+}
+
