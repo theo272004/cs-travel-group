@@ -11632,6 +11632,8 @@ body.medical-landing main > .medical-final-cta-light {
 }
 
 body.medical-landing .medical-process-light {
+  background: #fff !important;
+  background-image: none !important;
   padding-block: clamp(46px, 5vw, 72px) !important;
 }
 
@@ -11827,20 +11829,20 @@ body.medical-landing .medical-specialties-light .specialty-icon {
   color: #2e5f9f !important;
   display: inline-flex;
   flex: 0 0 auto;
-  height: 46px;
+  height: 64px;
   justify-content: center;
   margin-bottom: 0 !important;
-  width: 46px;
+  width: 64px;
 }
 
 body.medical-landing .medical-specialties-light .specialty-icon svg {
   fill: none;
-  height: 26px !important;
+  height: 42px !important;
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 1.75;
-  width: 26px !important;
+  stroke-width: 2;
+  width: 42px !important;
 }
 
 body.medical-landing .medical-specialties-light .specialty-icon svg * {
@@ -11848,7 +11850,7 @@ body.medical-landing .medical-specialties-light .specialty-icon svg * {
   stroke: currentColor !important;
   stroke-linecap: round !important;
   stroke-linejoin: round !important;
-  stroke-width: 1.75 !important;
+  stroke-width: 2 !important;
   vector-effect: non-scaling-stroke;
 }
 
