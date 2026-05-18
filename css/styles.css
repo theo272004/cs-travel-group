@@ -4266,8 +4266,21 @@ body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo 
   transform: none;
 }
 
-body.b2b-landing:not(.medical-landing) .trust-banner {
+body.b2b-landing:not(.medical-landing) .trust-banner,
+body.medical-landing .trust-banner {
   padding-block: clamp(18px, 2.8vh, 34px);
+}
+
+/* Medical: keep carousel-to-program spacing tight like company page */
+body.medical-landing .trust-banner.b2b-premium-logos {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+  margin-bottom: 0 !important;
+}
+
+body.medical-landing .medical-program-section {
+  margin-top: 0 !important;
+  padding-top: 10px !important;
 }
 
 body.b2b-landing:not(.medical-landing) .b2b-dark-statement {
@@ -4677,7 +4690,8 @@ body.b2b-landing:not(.medical-landing) .booking-cta-inner {
     width: 100%;
   }
 
-  body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box {
+  body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box,
+  body.medical-landing .b2b-premium-logos .marquee-item-box {
     height: 48px;
     margin-inline: 22px;
     width: 112px;
@@ -11021,13 +11035,15 @@ body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-result-card.a
 }
 
 /* ===== Smaller companies marquee ===== */
-body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box {
+body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box,
+body.medical-landing .b2b-premium-logos .marquee-item-box {
   width: 196px !important;
   height: 84px !important;
   margin: 0 42px !important;
 }
 
-body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box img {
+body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box img,
+body.medical-landing .b2b-premium-logos .marquee-item-box img {
   max-height: 72% !important;
 }
 
@@ -11064,7 +11080,8 @@ body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box img 
     border-top: 1px solid rgba(6, 43, 85, 0.08);
   }
 
-  body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box {
+  body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box,
+  body.medical-landing .b2b-premium-logos .marquee-item-box {
     width: 150px !important;
     height: 64px !important;
     margin: 0 28px !important;
@@ -12701,7 +12718,7 @@ body.b2b-landing:not(.medical-landing) .split-hero-image {
 
 /* Medical program section: background image (replaces airplane overlay) */
 body.medical-landing .medical-program-section {
-  background: url("../assets/images/medical-program-bg.png") center center / cover no-repeat !important;
+  background: url("../assets/images/medical-program-bg.png") center 20% / cover no-repeat !important;
 }
 
 body.medical-landing .medical-plane-divider {
@@ -12745,7 +12762,7 @@ body.medical-landing .medical-program-section .medical-program-text p:first-chil
 body.medical-landing .medical-program-section .medical-program-copy .medical-program-title-line {
   display: block;
   width: 100%;
-  text-align: left !important;
+  text-align: right !important;
   white-space: nowrap;
 }
 
@@ -13124,5 +13141,45 @@ p {
   .hero .hero-text-slide h1.hero-title,
   .hero .hero-text-slide h2.hero-title {
     font-size: clamp(1.55rem, 9.4vw, 2.1rem) !important;
+  }
+}
+
+/* Final lock: medical marquee must match company sizing and spacing */
+body.medical-landing .trust-banner.b2b-premium-logos {
+  padding-block: clamp(18px, 2.8vh, 34px) !important;
+  margin-bottom: 0 !important;
+}
+
+body.medical-landing .b2b-premium-logos .marquee-item-box {
+  width: 196px !important;
+  height: 84px !important;
+  margin: 0 42px !important;
+}
+
+body.medical-landing .b2b-premium-logos .marquee-item-box img {
+  max-height: 72% !important;
+}
+
+body.medical-landing .medical-program-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+@media (min-width: 1100px) {
+  body.medical-landing .trust-banner {
+    min-height: auto !important;
+    scroll-snap-align: none !important;
+  }
+
+  body.medical-landing .medical-program-section {
+    align-items: center !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body.medical-landing .b2b-premium-logos .marquee-item-box {
+    width: 150px !important;
+    height: 64px !important;
+    margin: 0 28px !important;
   }
 }
