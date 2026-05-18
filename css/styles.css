@@ -4237,6 +4237,10 @@ body.b2b-landing:not(.medical-landing) .hero-action-row {
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero-image {
+  align-items: flex-end;
+  background: linear-gradient(180deg, #ffffff 0%, #f2f8fe 100%);
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   z-index: 1;
 }
@@ -4250,8 +4254,9 @@ body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo 
   height: 100%;
   left: 0;
   max-width: none;
-  object-fit: cover;
-  object-position: right center;
+  object-fit: contain;
+  object-position: center bottom;
+  padding-top: clamp(12px, 2vw, 28px);
   right: auto;
   width: 100%;
 }
@@ -10947,6 +10952,41 @@ body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-header h2 {
   text-wrap: balance;
 }
 
+body.b2b-landing:not(.medical-landing) .statement-title h2::after,
+body.b2b-landing:not(.medical-landing) .ed-header h2::after,
+body.b2b-landing:not(.medical-landing) .section-header h2::after,
+body.b2b-landing:not(.medical-landing) .profiles-section h2::after,
+body.b2b-landing:not(.medical-landing) .b2b-fit-section h2::after,
+body.b2b-landing:not(.medical-landing) .booking-cta h2::after,
+body.b2b-landing:not(.medical-landing) .b2b-faqs h2::after,
+body.b2b-landing:not(.medical-landing) .contact h2::after {
+  background: #E6BC00;
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 12px;
+  width: 42px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+body.b2b-landing:not(.medical-landing) .ed-header h2::after,
+body.b2b-landing:not(.medical-landing) .profiles-section h2::after,
+body.b2b-landing:not(.medical-landing) .booking-cta h2::after,
+body.b2b-landing:not(.medical-landing) .b2b-faqs h2::after,
+body.b2b-landing:not(.medical-landing) .contact h2::after {
+  margin-inline: auto;
+}
+
+body.b2b-landing:not(.medical-landing) .statement-title h2::after,
+body.b2b-landing:not(.medical-landing) .section-header h2::after,
+body.b2b-landing:not(.medical-landing) .b2b-fit-section h2::after {
+  margin-inline: 0;
+}
+
+body.b2b-landing:not(.medical-landing) .btn {
+  border-radius: var(--radius-sm);
+}
+
 body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-body {
   padding: 28px 38px 34px;
 }
@@ -11077,7 +11117,7 @@ body.b2b-landing:not(.medical-landing) .company-model-icon {
 }
 
 body.b2b-landing:not(.medical-landing) .company-model-icon--accent {
-  color: var(--accent);
+  color: #2e75cf;
 }
 
 body.b2b-landing:not(.medical-landing) .company-model-icon svg {
@@ -11322,8 +11362,12 @@ body.b2b-landing:not(.medical-landing) .philosophy-p.secondary {
 }
 
 body.b2b-landing:not(.medical-landing) .philosophy-p[data-i18n="company_phil_p3"] {
-  color: inherit !important;
-  font-weight: inherit;
+  color: var(--text-secondary) !important;
+  font-size: var(--company-copy) !important;
+  font-weight: 400 !important;
+  line-height: 1.72 !important;
+  max-width: 58ch;
+  opacity: 1 !important;
 }
 
 body.b2b-landing:not(.medical-landing) .philosophy-p[data-i18n="company_phil_p3"] .circle-blue {
