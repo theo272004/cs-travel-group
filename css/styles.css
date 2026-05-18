@@ -9814,8 +9814,8 @@ body:not(.b2b-landing) .work-meaning-title-line {
 body:not(.b2b-landing) .plane-showcase {
   margin-bottom: 0;
   position: relative;
-  z-index: 2 !important;
-  isolation: isolate;
+  z-index: auto;
+  isolation: auto;
 }
 
 body:not(.b2b-landing) .plane-showcase-frame {
@@ -9832,7 +9832,7 @@ body:not(.b2b-landing) .plane-showcase-frame {
   justify-content: center;
   position: relative;
   transform: translateY(34px);
-  z-index: 1 !important;
+  z-index: auto;
   overflow: visible !important;
 }
 
@@ -9843,6 +9843,7 @@ body:not(.b2b-landing) .plane-showcase-sky {
   border-radius: inherit;
   inset: 0;
   position: absolute;
+  z-index: 1;
 }
 
 body:not(.b2b-landing) .plane-showcase-image {
@@ -9851,7 +9852,7 @@ body:not(.b2b-landing) .plane-showcase-image {
   max-width: 1400px;
   object-fit: contain;
   position: relative;
-  transform: translateY(2%);
+  transform: translateY(-6%);
   z-index: 30 !important;
   pointer-events: none;
 }
