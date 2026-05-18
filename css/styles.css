@@ -11181,19 +11181,45 @@ body.b2b-landing:not(.medical-landing) .company-proof-cards {
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-card {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
   min-height: 0 !important;
-  padding: clamp(20px, 2vw, 26px) !important;
+  padding: clamp(24px, 2.1vw, 30px) !important;
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-card p {
-  font-size: clamp(.94rem, .88rem + .14vw, 1rem);
-  line-height: 1.46;
-  margin-bottom: 16px;
+  color: #284260;
+  font-size: clamp(.95rem, .88rem + .14vw, 1.02rem);
+  line-height: 1.52;
+  margin-bottom: 20px;
+}
+
+body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-quote {
+  color: var(--secondary);
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 0.75;
+  margin-bottom: 8px;
+}
+
+body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-footer {
+  align-items: flex-end;
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  margin-top: auto;
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards .testimonial-stars {
-  justify-content: flex-start;
-  margin-bottom: 12px;
+  color: var(--accent);
+  flex: 0 0 auto;
+  font-size: 1rem;
+  justify-content: flex-end;
+  letter-spacing: .06em;
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards .testimonial-avatar--placeholder {
@@ -11205,6 +11231,56 @@ body.b2b-landing:not(.medical-landing) .company-proof-cards .testimonial-avatar-
   font-size: 0.78rem;
   font-weight: 800;
   justify-content: center;
+}
+
+body.b2b-landing:not(.medical-landing) .philosophy-section.sky-background {
+  min-height: auto !important;
+  overflow: hidden;
+  padding-block: clamp(44px, 5vw, 72px) !important;
+}
+
+body.b2b-landing:not(.medical-landing) .philosophy-section .container {
+  max-width: min(1280px, calc(100% - 48px));
+}
+
+body.b2b-landing:not(.medical-landing) .philosophy-split {
+  gap: clamp(24px, 4vw, 56px);
+  min-height: 0;
+}
+
+body.b2b-landing:not(.medical-landing) .philosophy-title {
+  font-size: clamp(2.1rem, 1.35rem + 2.2vw, 3rem) !important;
+  margin-bottom: 22px !important;
+}
+
+body.b2b-landing:not(.medical-landing) .philosophy-p {
+  font-size: clamp(1rem, .9rem + .32vw, 1.16rem) !important;
+  line-height: 1.48 !important;
+  margin-bottom: 16px !important;
+  max-width: 620px;
+}
+
+body.b2b-landing:not(.medical-landing) .philosophy-p.secondary {
+  font-size: clamp(.96rem, .88rem + .24vw, 1.08rem) !important;
+  line-height: 1.5 !important;
+}
+
+body.b2b-landing:not(.medical-landing) .philosophy-visual {
+  flex: 0 0 45%;
+  margin-right: 0 !important;
+}
+
+body.b2b-landing:not(.medical-landing) .philosophy-text {
+  flex: 1 1 0;
+}
+
+body.b2b-landing:not(.medical-landing) .airplane-img {
+  width: min(108%, 620px) !important;
+  transform: translateX(-6%) translateY(0) !important;
+}
+
+body.b2b-landing:not(.medical-landing) .philosophy-visual:hover .airplane-img {
+  transform: translateX(-6%) translateY(0) !important;
 }
 
 body.b2b-landing:not(.medical-landing) .company-booking-inner {
@@ -11220,6 +11296,16 @@ body.b2b-landing:not(.medical-landing) .company-booking-inner p {
 @media (max-width: 1024px) {
   body.b2b-landing:not(.medical-landing) .company-proof-cards {
     grid-template-columns: 1fr;
+  }
+
+  body.b2b-landing:not(.medical-landing) .philosophy-split {
+    flex-direction: column;
+  }
+
+  body.b2b-landing:not(.medical-landing) .philosophy-visual,
+  body.b2b-landing:not(.medical-landing) .philosophy-text {
+    flex: none;
+    width: 100%;
   }
 }
 
@@ -11297,8 +11383,45 @@ body.medical-landing .medical-program-card p {
   line-height: 1.72;
 }
 
+body.medical-landing .medical-program-direct {
+  margin: 0 auto;
+  max-width: 980px;
+  text-align: center;
+}
+
+body.medical-landing .medical-program-direct .medical-program-copy {
+  margin: 0 auto 18px;
+  max-width: 720px;
+}
+
+body.medical-landing .medical-program-direct .medical-program-copy h2 {
+  color: var(--primary) !important;
+  font-size: clamp(1.95rem, 1.28rem + 1.9vw, 3rem);
+  line-height: 1.08;
+  text-align: center;
+}
+
+body.medical-landing .medical-program-text {
+  margin: 0 auto;
+  max-width: 860px;
+}
+
+body.medical-landing .medical-program-text p {
+  color: var(--text-secondary);
+  font-size: clamp(1rem, .93rem + .22vw, 1.12rem);
+  line-height: 1.7;
+  margin: 0 auto 14px;
+  text-align: center;
+}
+
+body.medical-landing .medical-program-text p:last-child {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
 body.medical-landing .medical-process-light {
-  background: #f7fbff;
+  background: #fff;
 }
 
 body.medical-landing .medical-process-light .section-header {
@@ -11544,7 +11667,7 @@ body.medical-landing .medical-process-light .section-subtitle {
 
 body.medical-landing .medical-process-cards {
   display: grid !important;
-  gap: clamp(18px, 2vw, 26px) !important;
+  gap: 22px !important;
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   margin: 24px auto 0 !important;
 }
@@ -11557,8 +11680,8 @@ body.medical-landing .medical-process-cards .timeline-step {
   box-shadow: 0 16px 36px rgba(16, 42, 76, .08) !important;
   display: flex !important;
   flex-direction: column !important;
-  min-height: 268px !important;
-  padding: 24px 24px 26px !important;
+  min-height: 100% !important;
+  padding: 24px 24px 28px !important;
   position: relative !important;
   text-align: center !important;
 }
@@ -11583,31 +11706,36 @@ body.medical-landing .medical-process-cards .timeline-step > span {
 
 body.medical-landing .medical-process-cards .medical-step-icon {
   color: #1f6fbd !important;
-  margin: 28px auto 18px !important;
+  display: inline-flex !important;
+  margin: 26px auto 18px !important;
 }
 
 body.medical-landing .medical-process-cards .medical-step-icon svg {
-  height: 46px !important;
-  stroke-width: 1.65;
-  width: 46px !important;
+  fill: none;
+  height: 44px !important;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+  width: 44px !important;
 }
 
 body.medical-landing .medical-process-cards .timeline-step h3 {
   color: var(--primary) !important;
-  font-size: clamp(1.08rem, .98rem + .35vw, 1.28rem) !important;
-  line-height: 1.17 !important;
-  margin: 0 0 12px !important;
-  max-width: 20ch;
+  font-size: clamp(1.16rem, 1rem + 0.38vw, 1.36rem) !important;
+  line-height: 1.18 !important;
+  margin: 0 0 14px !important;
+  max-width: 22ch;
   text-align: center !important;
   text-wrap: balance;
 }
 
 body.medical-landing .medical-process-cards .timeline-step p {
   color: var(--text-secondary) !important;
-  font-size: .92rem !important;
-  line-height: 1.55 !important;
+  font-size: .98rem !important;
+  line-height: 1.58 !important;
   margin: 0 auto !important;
-  max-width: 31ch;
+  max-width: 24ch;
   text-align: center !important;
 }
 
