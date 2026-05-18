@@ -9785,6 +9785,23 @@ body:not(.b2b-landing) .work-meaning-section {
 body:not(.b2b-landing) .work-meaning-card {
   margin: 0 auto;
   max-width: 1320px;
+  position: relative;
+  isolation: isolate;
+}
+
+body:not(.b2b-landing) .work-meaning-card::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: clamp(124px, 12vw, 156px);
+  transform: translateX(-50%);
+  width: min(860px, calc(100% - 120px));
+  height: clamp(160px, 20vw, 240px);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 100%),
+    url("../assets/images/profiles-sky-bg.png") center center / cover no-repeat;
+  z-index: 5;
 }
 
 body:not(.b2b-landing) .work-meaning-head {
@@ -9813,46 +9830,38 @@ body:not(.b2b-landing) .work-meaning-title-line {
 
 body:not(.b2b-landing) .plane-showcase {
   margin-bottom: 0;
-  position: relative;
+  position: static;
   z-index: auto;
   isolation: auto;
 }
 
 body:not(.b2b-landing) .plane-showcase-frame {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 100%),
-    url("../assets/images/profiles-sky-bg.png") center center / cover no-repeat;
-  border-radius: 999px;
-  height: clamp(160px, 20vw, 240px);
-  margin: 0 auto;
+  background: none !important;
+  border-radius: 0;
+  height: 0;
+  margin: 0;
   width: 100%;
-  max-width: 860px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transform: translateY(34px);
+  max-width: none;
+  display: block;
+  position: static;
+  transform: none;
   z-index: auto;
   overflow: visible !important;
 }
 
 body:not(.b2b-landing) .plane-showcase-sky {
-  background:
-    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.66), transparent 30%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
-  border-radius: inherit;
-  inset: 0;
-  position: absolute;
-  z-index: 1;
+  display: none;
 }
 
 body:not(.b2b-landing) .plane-showcase-image {
   display: block;
-  width: 135%;
-  max-width: 1400px;
+  width: min(1120px, calc(100% - 40px));
+  max-width: 1120px;
   object-fit: contain;
-  position: relative;
-  transform: translateY(-6%);
+  position: absolute;
+  left: 50%;
+  top: clamp(100px, 9.6vw, 136px);
+  transform: translateX(-50%);
   z-index: 30 !important;
   pointer-events: none;
 }
@@ -9865,7 +9874,7 @@ body:not(.b2b-landing) .benefits-band {
   overflow: hidden;
   position: relative;
   z-index: 10 !important;
-  margin-top: -20px;
+  margin-top: clamp(26px, 3.2vw, 40px);
 }
 
 body:not(.b2b-landing) .benefit-item {
@@ -9924,13 +9933,24 @@ body:not(.b2b-landing) .benefit-item p {
   }
 
   body:not(.b2b-landing) .plane-showcase-frame {
-    border-radius: 999px;
-    min-height: 200px;
-    transform: translateY(24px);
+    border-radius: 0;
+    min-height: 0;
+    transform: none;
   }
 
   body:not(.b2b-landing) .benefits-band {
     grid-template-columns: 1fr;
+  }
+
+  body:not(.b2b-landing) .work-meaning-card::before {
+    top: 116px;
+    width: calc(100% - 56px);
+    height: 186px;
+  }
+
+  body:not(.b2b-landing) .plane-showcase-image {
+    top: 106px;
+    width: calc(100% - 24px);
   }
 
   body:not(.b2b-landing) .benefit-item:not(:last-child)::after {
@@ -9958,14 +9978,26 @@ body:not(.b2b-landing) .benefit-item p {
   }
 
   body:not(.b2b-landing) .plane-showcase-frame {
-    border-radius: 999px;
-    min-height: 140px;
+    border-radius: 0;
+    min-height: 0;
     padding: 0;
-    transform: translateY(14px);
+    transform: none;
   }
 
   body:not(.b2b-landing) .benefits-band {
     border-radius: 20px;
+    margin-top: 20px;
+  }
+
+  body:not(.b2b-landing) .work-meaning-card::before {
+    top: 108px;
+    width: calc(100% - 28px);
+    height: 138px;
+  }
+
+  body:not(.b2b-landing) .plane-showcase-image {
+    top: 100px;
+    width: calc(100% - 12px);
   }
 
   body:not(.b2b-landing) .benefit-item {
