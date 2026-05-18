@@ -11796,15 +11796,16 @@ body.medical-landing .medical-process-light {
   background: #fff !important;
   background-image: none !important;
   min-height: auto !important;
-  padding-block: clamp(26px, 3.4vw, 42px) clamp(46px, 5vw, 72px) !important;
+  padding-block: clamp(54px, 6.2vw, 92px) clamp(72px, 7.6vw, 118px) !important;
 }
 
 body.medical-landing .medical-process-light .container {
   max-width: 1240px;
+  padding-top: clamp(26px, 3.2vw, 44px) !important;
 }
 
 body.medical-landing .medical-process-light .section-header {
-  margin: 0 auto 24px !important;
+  margin: 0 auto 34px !important;
   max-width: 900px !important;
   text-align: center !important;
 }
@@ -11819,17 +11820,17 @@ body.medical-landing .medical-process-light .section-label {
 
 body.medical-landing .medical-process-light h2 {
   color: var(--primary) !important;
-  font-size: clamp(1.8rem, 1.25rem + 1.55vw, 2.55rem) !important;
+  font-size: clamp(2rem, 1.34rem + 1.85vw, 2.95rem) !important;
   line-height: 1.08 !important;
-  margin-bottom: 8px !important;
+  margin-bottom: 14px !important;
   text-wrap: balance;
 }
 
 body.medical-landing .medical-process-light .section-subtitle {
   color: var(--text-secondary) !important;
-  font-size: .98rem !important;
-  line-height: 1.55 !important;
-  margin: 8px auto 0 !important;
+  font-size: 1.06rem !important;
+  line-height: 1.66 !important;
+  margin: 22px auto 0 !important;
   max-width: 860px !important;
 }
 
@@ -12030,7 +12031,7 @@ body.medical-landing .medical-specialties-light .medical-specialty-note {
   display: flex !important;
   gap: 14px !important;
   justify-content: center !important;
-  margin-top: 18px !important;
+  margin-top: clamp(30px, 3.6vw, 46px) !important;
   text-align: center !important;
 }
 
@@ -12403,4 +12404,447 @@ body.medical-landing .medical-process-light {
     min-height: 100svh !important;
     height: 100svh !important;
   }
+}
+
+/* ===== Global consistency lock (home + empresas + medicos + contacto) ===== */
+:root {
+  --title-h1-consistent: clamp(2.2rem, 1.7rem + 2.8vw, 3.9rem);
+  --title-h2-consistent: clamp(1.7rem, 1.28rem + 1.7vw, 2.7rem);
+  --text-p-consistent: clamp(1rem, 0.96rem + 0.22vw, 1.12rem);
+  --btn-radius-consistent: 999px;
+  --card-radius-consistent: 24px;
+}
+
+h1 {
+  font-size: var(--title-h1-consistent) !important;
+  line-height: 1.08;
+}
+
+h2 {
+  font-size: var(--title-h2-consistent) !important;
+  line-height: 1.12;
+}
+
+p,
+li {
+  font-size: var(--text-p-consistent);
+  line-height: 1.65;
+}
+
+.btn,
+button.btn,
+a.btn {
+  border-radius: var(--btn-radius-consistent) !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  min-height: 50px;
+  padding: 14px 30px !important;
+}
+
+.profile-card,
+.profile-card-minimal,
+.profile-card .profile-image,
+.profile-card-minimal .profile-image,
+.profile-card .profile-content,
+.profile-card-minimal .profile-content,
+.profile-card .profile-btn,
+.profile-card-minimal .profile-btn {
+  border-radius: var(--card-radius-consistent);
+}
+
+.profile-card,
+.profile-card-minimal,
+.calc-card,
+.calc-result-card,
+.srv-card,
+.dest-card,
+.b2b-testimonial-card,
+.proof-card,
+.cred-card,
+.specialty-card,
+.timeline-step {
+  border-radius: var(--card-radius-consistent) !important;
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero,
+body.medical-landing .medical-hero {
+  min-height: calc(100vh - 88px) !important;
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero-image,
+body.medical-landing .medical-hero .split-hero-image {
+  min-height: clamp(420px, 58vh, 760px) !important;
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero-image img,
+body.medical-landing .medical-hero .split-hero-image img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero-title,
+body.medical-landing .split-hero-title {
+  font-size: var(--title-h1-consistent) !important;
+  line-height: 1.08 !important;
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero-desc,
+body.medical-landing .split-hero-desc {
+  font-size: var(--text-p-consistent) !important;
+  line-height: 1.65 !important;
+}
+
+/* Requested copy/layout tweaks */
+body.medical-landing .medical-hero .split-hero-kicker,
+body.b2b-landing:not(.medical-landing) .split-hero-kicker {
+  max-width: none !important;
+  overflow-wrap: normal !important;
+  white-space: nowrap !important;
+}
+
+body.medical-landing .medical-specialties-light .specialty-grid {
+  margin-top: clamp(36px, 4.2vw, 52px) !important;
+}
+
+@media (max-width: 900px) {
+  body.medical-landing .medical-hero .split-hero-kicker,
+  body.b2b-landing:not(.medical-landing) .split-hero-kicker {
+    white-space: normal !important;
+  }
+}
+
+body.medical-landing .medical-plane-divider {
+  height: 0;
+  position: relative;
+  z-index: 8;
+  overflow: visible;
+  pointer-events: none;
+}
+
+body.medical-landing .medical-plane-divider img {
+  left: clamp(-320px, -22vw, -170px);
+  position: absolute;
+  top: clamp(-1460px, -110vw, -1080px);
+  width: clamp(728px, 78vw, 1456px);
+  max-width: none;
+  height: auto;
+  opacity: 1;
+  transform: rotate(30deg);
+  transform-origin: left center;
+}
+
+body.medical-landing .medical-program-direct {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: clamp(120px, 10vw, 220px) !important;
+  padding-right: clamp(12px, 2vw, 28px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  transform: none !important;
+}
+
+body.medical-landing .medical-program-direct .medical-program-copy,
+body.medical-landing .medical-program-direct .medical-program-text {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 62ch !important;
+  text-align: right !important;
+}
+
+body.medical-landing .medical-program-direct .medical-program-copy h2 {
+  color: var(--primary) !important;
+  font-size: clamp(2rem, 1.4rem + 2.1vw, 3.2rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.12 !important;
+  position: relative;
+}
+
+body.medical-landing .medical-program-direct .medical-program-copy h2::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 2px;
+  background: var(--accent);
+  margin: 0 0 14px auto;
+  border-radius: 999px;
+}
+
+body.medical-landing .medical-program-direct .medical-program-text p {
+  text-align: right !important;
+}
+
+body.medical-landing .medical-program-direct .medical-program-text p:last-child {
+  font-weight: 700 !important;
+}
+
+@media (max-width: 900px) {
+  body.medical-landing .medical-plane-divider {
+    height: 0;
+  }
+
+  body.medical-landing .medical-plane-divider img {
+    left: 50%;
+    max-width: none;
+    top: -90px;
+    transform: translateX(-50%) rotate(24deg);
+    width: clamp(260px, 72vw, 520px);
+  }
+
+  body.medical-landing .medical-program-direct {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+    transform: none !important;
+  }
+
+  body.medical-landing .medical-program-direct .medical-program-copy,
+  body.medical-landing .medical-program-direct .medical-program-text {
+    max-width: 100% !important;
+  }
+}
+
+/* Final lock: medical hero must match company hero viewport behavior */
+body.b2b-landing:not(.medical-landing) .split-hero,
+body.medical-landing .medical-hero {
+  min-height: 100vh !important;
+  height: 100vh !important;
+  padding-top: 0 !important;
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero-content,
+body.medical-landing .medical-hero .split-hero-content {
+  min-height: 100vh !important;
+  padding-top: 88px !important;
+  padding-bottom: 28px !important;
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero-image,
+body.medical-landing .medical-hero .split-hero-image {
+  align-self: stretch !important;
+  min-height: 100vh !important;
+  height: 100vh !important;
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero-image img,
+body.medical-landing .medical-hero .split-hero-image img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  left: 0 !important;
+  top: 0 !important;
+  position: relative !important;
+}
+
+@media (max-width: 900px) {
+  body.b2b-landing:not(.medical-landing) .split-hero,
+  body.medical-landing .medical-hero,
+  body.b2b-landing:not(.medical-landing) .split-hero-content,
+  body.medical-landing .medical-hero .split-hero-content,
+  body.b2b-landing:not(.medical-landing) .split-hero-image,
+  body.medical-landing .medical-hero .split-hero-image {
+    min-height: 100svh !important;
+    height: 100svh !important;
+  }
+}
+
+/* Keep company hero PNG visually superposed (not clipped) */
+body.b2b-landing:not(.medical-landing) .split-hero-image {
+  overflow: visible !important;
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
+  position: relative !important;
+  z-index: 2;
+  width: auto !important;
+  max-width: none !important;
+  height: 100% !important;
+  right: 0 !important;
+  transform: none !important;
+  object-fit: contain !important;
+  object-position: right center !important;
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero {
+  overflow: visible !important;
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero-content {
+  position: relative;
+  z-index: 3 !important;
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero-image {
+  position: relative;
+  z-index: 2 !important;
+  overflow: visible !important;
+}
+
+/* Medical program section: background image (replaces airplane overlay) */
+body.medical-landing .medical-program-section {
+  background: url("../assets/images/medical-program-bg.png") center center / cover no-repeat !important;
+}
+
+body.medical-landing .medical-plane-divider {
+  display: none !important;
+}
+
+/* Final lock for "Tus pacientes..." block */
+body.medical-landing .medical-program-section .container {
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-direct {
+  width: min(62ch, 100%) !important;
+  max-width: 62ch !important;
+  margin: 0 !important;
+  padding: 0 clamp(0px, 0.2vw, 4px) 0 0 !important;
+  transform: translateX(clamp(84px, 8vw, 170px)) !important;
+  align-items: stretch !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-copy,
+body.medical-landing .medical-program-section .medical-program-text {
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 62ch !important;
+  text-align: right !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-copy h2 {
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  text-align: right !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-text p:first-child {
+  margin-top: 14px !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-copy .medical-program-title-line {
+  display: block;
+  width: 100%;
+  text-align: left !important;
+  white-space: nowrap;
+}
+
+body.medical-landing .medical-program-section .medical-program-text p {
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  text-align: right !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-text p:last-child {
+  font-weight: 700 !important;
+}
+
+@media (max-width: 900px) {
+  body.medical-landing .medical-program-section .container {
+    display: block !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-direct,
+  body.medical-landing .medical-program-section .medical-program-copy,
+  body.medical-landing .medical-program-section .medical-program-text {
+    max-width: 100% !important;
+    text-align: left !important;
+    transform: none !important;
+  }
+
+body.medical-landing .medical-program-section .medical-program-copy h2,
+body.medical-landing .medical-program-section .medical-program-text p {
+    text-align: left !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-copy .medical-program-title-line {
+    white-space: normal;
+  }
+}
+
+/* Home hero titles: same size across slide 1 (h1) and slide 2/3 (h2) */
+.hero .hero-text-slide h1.hero-title,
+.hero .hero-text-slide h2.hero-title {
+  font-size: clamp(2.95rem, 5.7vw, 5rem) !important;
+  line-height: 1.06 !important;
+  margin-top: 0 !important;
+  margin-bottom: clamp(18px, 2.2vw, 28px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: min(1120px, 94vw) !important;
+  text-align: center !important;
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero-title,
+body.medical-landing .split-hero-title {
+  font-size: clamp(2.2rem, 1.7rem + 2.8vw, 3.9rem) !important;
+}
+
+.hero-highlight-blue {
+  color: #1f6fbd !important;
+}
+
+.medical-hero-line-nowrap {
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .medical-hero-line-nowrap {
+    white-space: normal;
+  }
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero-title .company-hero-line {
+  display: block;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  body.b2b-landing:not(.medical-landing) .split-hero-title .company-hero-line {
+    white-space: normal;
+  }
+}
+
+/* Lower paragraph + CTA block under hero title (Company + Medical) */
+body.b2b-landing:not(.medical-landing) .split-hero-copy,
+body.medical-landing .split-hero-copy {
+  margin-top: clamp(16px, 2.2vw, 30px) !important;
+}
+
+body.b2b-landing:not(.medical-landing) .hero-action-row,
+body.medical-landing .hero-action-row {
+  margin-top: clamp(18px, 2.4vw, 34px) !important;
+}
+
+.hero .hero-text-slide .hero-desc {
+  margin-bottom: clamp(28px, 3.4vw, 44px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: min(1040px, 94vw) !important;
+  text-align: center !important;
+}
+
+.hero .hero-cta-container {
+  margin-top: clamp(66px, 9.6vh, 128px) !important;
+}
+
+.hero .hero-text-container {
+  min-height: clamp(360px, 42vh, 500px) !important;
+  align-items: flex-start !important;
+}
+
+.hero .hero-text-slide {
+  inset: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  justify-content: flex-start !important;
+  padding-top: clamp(10px, 1.8vh, 24px) !important;
 }
