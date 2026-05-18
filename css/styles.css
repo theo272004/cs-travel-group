@@ -8196,23 +8196,24 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
   visibility: visible !important;
 }
 
-.contact-page .header.scrolled {
+.contact-page .header {
   background: rgba(255, 255, 255, .94) !important;
   box-shadow: 0 1px 24px rgba(6, 43, 85, .06) !important;
+  padding: 12px 0 !important;
 }
 
-.contact-page .header.scrolled .nav-links a,
-.contact-page .header.scrolled .lang-trigger {
+.contact-page .header .nav-links a,
+.contact-page .header .lang-trigger {
   color: var(--primary) !important;
   opacity: 1 !important;
 }
 
-.contact-page .header.scrolled .lang-trigger {
+.contact-page .header .lang-trigger {
   background: rgba(6, 43, 85, .04) !important;
   border-color: rgba(6, 43, 85, .08) !important;
 }
 
-.contact-page .header.scrolled .hamburger span {
+.contact-page .header .hamburger span {
   background: var(--primary) !important;
 }
 
