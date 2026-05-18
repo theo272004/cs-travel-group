@@ -4237,7 +4237,7 @@ body.b2b-landing:not(.medical-landing) .hero-action-row {
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero-image {
-  overflow: hidden;
+  overflow: visible;
   background: transparent;
   z-index: 1;
 }
@@ -4254,9 +4254,10 @@ body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo 
   object-fit: contain;
   object-position: right bottom;
   padding-top: 0;
-  right: 0;
-  width: auto;
-  min-width: 100%;
+  right: -1.5%;
+  width: min(122%, 980px);
+  min-width: 0;
+  transform: translateX(-7%);
 }
 
 body.b2b-landing:not(.medical-landing) .trust-banner {
@@ -10983,6 +10984,10 @@ body.b2b-landing:not(.medical-landing) .b2b-fit-section h2::after {
 
 body.b2b-landing:not(.medical-landing) .btn {
   border-radius: 999px;
+}
+
+body.b2b-landing:not(.medical-landing) .profile-content .profile-btn {
+  margin-top: auto;
 }
 
 body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-body {
