@@ -11645,6 +11645,10 @@ body.medical-landing .medical-process-light .section-header {
   text-align: center !important;
 }
 
+body.medical-landing .medical-process-cards .timeline-step::after {
+  display: none !important;
+}
+
 body.medical-landing .medical-process-light .section-label {
   display: none !important;
 }
@@ -11837,6 +11841,15 @@ body.medical-landing .medical-specialties-light .specialty-icon svg {
   stroke-linejoin: round;
   stroke-width: 1.75;
   width: 26px !important;
+}
+
+body.medical-landing .medical-specialties-light .specialty-icon svg * {
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  stroke-width: 1.75 !important;
+  vector-effect: non-scaling-stroke;
 }
 
 body.medical-landing .medical-specialties-light .specialty-card h3 {
