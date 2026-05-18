@@ -1132,7 +1132,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // 2. Horizontal Scroll Destinations
       const scrollWrapper = document.querySelector('.scroll-wrapper');
-      if (scrollWrapper && !reducedMotion && scrollWrapper.scrollWidth > window.innerWidth) {
+      const shouldPinDestinations = window.matchMedia('(min-width: 901px)').matches;
+      if (scrollWrapper && shouldPinDestinations && !reducedMotion && scrollWrapper.scrollWidth > window.innerWidth) {
         gsap.to(scrollWrapper, {
           x: () => -(scrollWrapper.scrollWidth - window.innerWidth),
           ease: 'none',
