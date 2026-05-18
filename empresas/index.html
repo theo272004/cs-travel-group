@@ -151,61 +151,57 @@
       </div>
     </section>
 
-    <!-- Intro Editorial Block -->
-    <section class="company-intro-block" id="ventajas">
+    <section class="calc-section company-calc-feature" id="ventajas" data-nav-label="Calculadora">
       <div class="container">
-        <div class="intro-block-inner reveal">
-          <div class="intro-block-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="3 17 8 11 13 14 21 5"></polyline>
-              <circle cx="21" cy="5" r="1.5" fill="currentColor" stroke="none"></circle>
-            </svg>
-          </div>
-          <div class="intro-block-text">
-            <h2 data-i18n="company_statement_title">La mayoría de empresas no sabe que sus viajes <em>pueden generarles ingresos.</em></h2>
-            <p data-i18n="company_statement_p1">Cada tiquete que compra tu empresa, cada hotel que reserva, cada traslado que gestiona — todo genera valor económico que hoy se queda en manos de terceros. No porque no puedas capturarlo. Sino porque nadie te había mostrado cómo.</p>
-            <p class="intro-block-quote" data-i18n="company_statement_highlight">CS Travel existe exactamente para eso.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Calculator Section -->
-    <section class="calc-section" id="calculadora" data-nav-label="Calculadora">
-      <div class="container">
-        <div class="calc-card reveal">
-          <div class="calc-header">
-            <h2 data-i18n="company_calc_title">¿Cuánto puede estar dejando de ganar tu empresa?</h2>
-          </div>
-          <div class="calc-body">
-            <div class="calc-inputs">
-              <div class="calc-input-group">
-                <label for="calc-trips" data-i18n="company_calc_trips_label">Número de viajes al mes</label>
-                <div class="calc-slider-wrap">
-                  <input type="range" id="calc-trips" min="1" max="100" value="10" class="calc-range">
-                  <span class="calc-range-value" id="calc-trips-val">10</span>
-                </div>
-              </div>
-              <div class="calc-input-group">
-                <label for="calc-value" data-i18n="company_calc_value_label">Valor promedio por viaje (USD)</label>
-                <div class="calc-slider-wrap">
-                  <input type="range" id="calc-value" min="100" max="10000" value="2500" step="100" class="calc-range">
-                  <span class="calc-range-value" id="calc-value-val">$2,500</span>
-                </div>
-              </div>
+        <div class="company-calc-shell reveal">
+          <div class="company-calc-intro">
+            <div class="intro-block-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="3 17 8 11 13 14 21 5"></polyline>
+                <circle cx="21" cy="5" r="1.5" fill="currentColor" stroke="none"></circle>
+              </svg>
             </div>
-            <div class="calc-results">
-              <div class="calc-result-card accent">
-                <span class="calc-result-number" id="calc-monthly">$296</span>
-                <span class="calc-result-label" data-i18n="company_calc_return_monthly">Tu retorno mensual</span>
+            <div class="intro-block-text">
+              <h2 data-i18n="company_statement_title">La mayoría de empresas no sabe que sus viajes <em>pueden generarles ingresos.</em></h2>
+              <p data-i18n="company_statement_p1">Cada tiquete que compra tu empresa, cada hotel que reserva, cada traslado que gestiona — todo genera valor económico que hoy se queda en manos de terceros. No porque no puedas capturarlo. Sino porque nadie te había mostrado cómo.</p>
+              <p class="intro-block-quote" data-i18n="company_statement_highlight">CS Travel existe exactamente para eso.</p>
+            </div>
+          </div>
+
+          <div class="calc-card">
+            <div class="calc-header">
+              <h2 data-i18n="company_calc_title">¿Cuánto puede estar dejando de ganar tu empresa?</h2>
+            </div>
+            <div class="calc-body">
+              <div class="calc-inputs">
+                <div class="calc-input-group">
+                  <label for="calc-trips" data-i18n="company_calc_trips_label">Número de viajes al mes</label>
+                  <div class="calc-slider-wrap">
+                    <input type="range" id="calc-trips" min="1" max="100" value="10" class="calc-range">
+                    <span class="calc-range-value" id="calc-trips-val">10</span>
+                  </div>
+                </div>
+                <div class="calc-input-group">
+                  <label for="calc-value" data-i18n="company_calc_value_label">Valor promedio por viaje (USD)</label>
+                  <div class="calc-slider-wrap">
+                    <input type="range" id="calc-value" min="100" max="10000" value="2500" step="100" class="calc-range">
+                    <span class="calc-range-value" id="calc-value-val">$2,500</span>
+                  </div>
+                </div>
               </div>
-              <div class="calc-result-card">
-                <span class="calc-result-number" id="calc-annual">$3,557</span>
-                <span class="calc-result-label" data-i18n="company_calc_return_annual">Tu retorno anual</span>
-              </div>
-              <div class="calc-result-card">
-                <span class="calc-result-number" id="calc-saving">$24,000</span>
-                <span class="calc-result-label" data-i18n="company_calc_saving">Ahorro anual vs. mostrador</span>
+              <div class="calc-results">
+                <div class="calc-result-card accent">
+                  <span class="calc-result-number" id="calc-monthly">$296</span>
+                  <span class="calc-result-label" data-i18n="company_calc_return_monthly">Tu retorno mensual</span>
+                </div>
+                <div class="calc-result-card">
+                  <span class="calc-result-number" id="calc-annual">$3,557</span>
+                  <span class="calc-result-label" data-i18n="company_calc_return_annual">Tu retorno anual</span>
+                </div>
+                <div class="calc-result-card">
+                  <span class="calc-result-number" id="calc-saving">$24,000</span>
+                  <span class="calc-result-label" data-i18n="company_calc_saving">Ahorro anual vs. mostrador</span>
+                </div>
               </div>
             </div>
           </div>
@@ -214,52 +210,67 @@
     </section>
 
     <!-- Model in 3 steps -->
-    <section class="editorial-promise" id="modelo" data-nav-label="Modelo">
+    <section class="editorial-promise company-model-steps" id="modelo" data-nav-label="Modelo">
       <div class="container">
-        <div class="ed-header reveal" style="max-width: 860px;">
+        <div class="ed-header reveal company-model-header" style="max-width: 860px;">
           <h2 data-i18n="company_model_title">El modelo en tres pasos</h2>
           <p data-i18n="company_model_desc">La cadena de distribución turística genera márgenes en cada operación. Hoy esos márgenes se quedan en intermediarios. CS Travel los redistribuye hacia sus aliados. Tú eres el aliado.</p>
         </div>
 
-        <div class="ed-grid-4" style="grid-template-columns: repeat(3, 1fr);">
-          <div class="ed-card reveal">
-            <div class="ed-image-wrap">
-              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600&auto=format&fit=crop" alt="Afiliación" loading="lazy">
-            </div>
-            <div class="ed-overlay"></div>
-            <div class="ed-number-large">1</div>
-            <div class="ed-text-content">
+        <div class="company-model-grid">
+          <article class="company-model-card reveal">
+            <span class="company-model-number">1</span>
+            <span class="company-model-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 21h18"></path>
+                <path d="M5 21V9"></path>
+                <path d="M10 21V5"></path>
+                <path d="M15 21v-8"></path>
+                <path d="M19 21v-4"></path>
+                <path d="M4 9h12"></path>
+              </svg>
+            </span>
+            <div class="company-model-copy">
               <h3 data-i18n="company_model_s1_t">Tu empresa se afilia a CS Travel</h3>
               <p data-i18n="company_model_s1_d">Sin inversión, sin permanencia, sin cambiar nada de tu operación actual.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="ed-card reveal reveal-delay-1">
-            <div class="ed-image-wrap">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" alt="Gestión bajo tu marca" loading="lazy">
-            </div>
-            <div class="ed-overlay"></div>
-            <div class="ed-number-large">2</div>
-            <div class="ed-text-content">
+          <article class="company-model-card reveal reveal-delay-1">
+            <span class="company-model-number">2</span>
+            <span class="company-model-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 11l9 4 9-11"></path>
+                <path d="M12 15v6"></path>
+                <path d="M9 21h6"></path>
+                <path d="M5 7l7 3"></path>
+              </svg>
+            </span>
+            <div class="company-model-copy">
               <h3 data-i18n="company_model_s2_t">Gestionamos cada viaje bajo tu marca</h3>
               <p data-i18n="company_model_s2_d">Vuelos, hoteles, traslados. Todo coordinado por nuestro equipo, con tus tarifas negociadas, operando de manera invisible bajo tu marca.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="ed-card reveal reveal-delay-2">
-            <div class="ed-image-wrap">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" alt="Retorno económico" loading="lazy">
-            </div>
-            <div class="ed-overlay"></div>
-            <div class="ed-number-large">3</div>
-            <div class="ed-text-content">
+          <article class="company-model-card reveal reveal-delay-2">
+            <span class="company-model-number">3</span>
+            <span class="company-model-icon company-model-icon--accent" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 20V10"></path>
+                <path d="M10 20V6"></path>
+                <path d="M16 20v-8"></path>
+                <path d="M22 20V3"></path>
+                <path d="M2 20h22"></path>
+              </svg>
+            </span>
+            <div class="company-model-copy">
               <h3 data-i18n="company_model_s3_t">Tú capturas el retorno económico</h3>
               <p data-i18n="company_model_s3_d">Por cada operación que pasa por CS Travel generas un retorno. Lo ves en tiempo real con transparencia. Se liquida quincenalmente. Sin gestión de cobro de tu parte.</p>
             </div>
-          </div>
+          </article>
         </div>
 
-        <div style="text-align: center; margin-top: 48px;" class="reveal">
+        <div class="company-model-cta reveal">
           <a href="../contacto/" class="btn btn-primary" data-i18n="company_model_cta">Quiero saber más</a>
         </div>
       </div>
