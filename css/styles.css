@@ -4023,7 +4023,12 @@ body {
 .testimonial-avatar {
   width: 44px;
   height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  flex: 0 0 44px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
+  overflow: hidden;
   object-fit: cover;
 }
 
@@ -4232,7 +4237,7 @@ body.b2b-landing:not(.medical-landing) .hero-action-row {
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero-image {
-  overflow: visible;
+  overflow: hidden;
   z-index: 1;
 }
 
@@ -4243,12 +4248,12 @@ body.b2b-landing:not(.medical-landing) .split-hero-image img {
 body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
   filter: none;
   height: 100%;
-  left: auto;
+  left: 0;
   max-width: none;
-  object-fit: contain;
+  object-fit: cover;
   object-position: right center;
-  right: 0;
-  width: clamp(820px, 64vw, 1240px);
+  right: auto;
+  width: 100%;
 }
 
 body.b2b-landing:not(.medical-landing) .trust-banner {
@@ -11088,19 +11093,21 @@ body.b2b-landing:not(.medical-landing) .company-trust-proof {
 }
 
 body.b2b-landing:not(.medical-landing) .company-trust-proof .container {
-  max-width: min(1380px, calc(100% - 48px));
+  max-width: min(1540px, calc(100% - 16px));
 }
 
 body.b2b-landing:not(.medical-landing) .company-trust-proof-grid {
   display: grid;
-  gap: clamp(30px, 4vw, 46px);
-  grid-template-columns: minmax(0, 0.82fr) minmax(560px, 1.18fr);
-  align-items: start;
+  gap: clamp(22px, 3vw, 34px);
+  grid-template-columns: minmax(0, 0.72fr) minmax(760px, 1.58fr);
+  align-items: center;
 }
 
 body.b2b-landing:not(.medical-landing) .company-trust-panel {
   color: #fff;
-  max-width: 620px;
+  justify-self: start;
+  margin-left: clamp(-20px, -1.8vw, -8px);
+  max-width: 680px;
   padding: 0;
   text-align: left;
 }
@@ -11174,12 +11181,14 @@ body.b2b-landing:not(.medical-landing) .company-trust-point span:last-child {
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards {
+  align-self: center;
   align-items: stretch;
   display: grid;
   gap: clamp(14px, 1.6vw, 18px);
   grid-template-columns: 1fr;
   margin: 0;
-  max-width: none;
+  max-width: 100%;
+  width: 100%;
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-card {
@@ -11209,19 +11218,28 @@ body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-quo
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-footer {
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   gap: 14px;
   justify-content: space-between;
   margin-top: auto;
+  min-width: 0;
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards .testimonial-stars {
   color: var(--accent);
+  display: inline-flex;
   flex: 0 0 auto;
-  font-size: 1rem;
+  font-size: .95rem;
   justify-content: flex-end;
-  letter-spacing: .06em;
+  letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-profile {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards .testimonial-avatar--placeholder {
@@ -11267,6 +11285,21 @@ body.b2b-landing:not(.medical-landing) .philosophy-p.secondary {
   line-height: 1.5 !important;
 }
 
+body.b2b-landing:not(.medical-landing) .philosophy-p[data-i18n="company_phil_p3"] {
+  color: inherit !important;
+  font-weight: inherit;
+}
+
+body.b2b-landing:not(.medical-landing) .philosophy-p[data-i18n="company_phil_p3"] .circle-blue {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border: 2px solid #0f5ea8;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
 body.b2b-landing:not(.medical-landing) .philosophy-visual {
   flex: 0 0 45%;
   margin-right: 0 !important;
@@ -11301,6 +11334,7 @@ body.b2b-landing:not(.medical-landing) .company-booking-inner p {
   }
 
   body.b2b-landing:not(.medical-landing) .company-trust-panel {
+    margin-left: 0;
     max-width: 760px;
   }
 
@@ -11331,9 +11365,7 @@ body.medical-landing {
 }
 
 body.medical-landing .medical-hero {
-  background:
-    linear-gradient(180deg, rgba(239,248,255,.74) 0%, rgba(255,255,255,.96) 100%),
-    url("../assets/images/profiles-sky-bg.png") center top / cover no-repeat;
+  background: #fff;
 }
 
 body.medical-landing .medical-hero .split-hero-content {
@@ -11348,8 +11380,14 @@ body.medical-landing .medical-hero .split-hero-desc {
   max-width: 62ch;
 }
 
+body.medical-landing .medical-hero .split-hero-image {
+  background: #fff !important;
+}
+
+body.medical-landing .medical-hero .split-hero-image::before,
 body.medical-landing .medical-hero .split-hero-image::after {
-  background: linear-gradient(180deg, rgba(8,24,46,.02), rgba(8,24,46,.08));
+  content: none !important;
+  background: none !important;
 }
 
 body.medical-landing .medical-program-section {
@@ -12031,6 +12069,17 @@ body.medical-landing .medical-cta-action-bar .btn-outline {
   body.medical-landing .medical-specialties-light .specialty-grid {
     grid-template-columns: 1fr !important;
   }
+}
+
+/* ===== Hero viewport fit fix (company + medical) ===== */
+body.b2b-landing:not(.medical-landing) .split-hero,
+body.medical-landing .medical-hero {
+  min-height: calc(100vh - 88px) !important;
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero-content,
+body.medical-landing .medical-hero .split-hero-content {
+  padding-block: clamp(24px, 4.8vh, 56px) !important;
 }
 
 /* Final medical section background overrides */
