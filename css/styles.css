@@ -11485,15 +11485,17 @@ body.medical-landing .medical-hero .split-hero-image::after {
 }
 
 body.medical-landing .medical-hero .split-hero-image img {
-  height: 100%;
+  height: auto;
   left: -18%;
   max-width: none;
   object-fit: contain;
   object-position: right bottom;
   position: absolute;
   right: auto;
-  top: 0;
+  bottom: -3%;
+  top: auto;
   width: min(136%, 1120px);
+  min-height: 106%;
 }
 
 body.medical-landing .medical-program-section {
