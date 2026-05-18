@@ -16,7 +16,7 @@ const translations = {
     hero_d1: 'Somos la única empresa en Colombia que convierte el gasto operativo de los viajes corporativos en una fuente de ingresos pasivos. Operamos completamente bajo tu marca, sin carga operativa adicional para ti y con retorno económico desde la primera operación.',
     hero_t2: 'Cada viaje que gestiona tu empresa hoy es dinero que todavía no estás <em>capturando</em>',
     hero_d2: 'Las empresas que mueven viajes sin un aliado estratégico dejan valor en manos de terceros. Con CS Travel capturas ese valor desde la primera operación, sin contratar personal, sin cambiar tu operación y sin que nadie sepa que existimos.',
-    hero_t3: 'Tu marca al frente. Nosotros detrás. El crédito, <em>tuyo.</em>',
+    hero_t3: 'Tu marca al frente. Nosotros detrás. El crédito, <em>tuyo</em>',
     hero_d3: 'CS Travel opera como tu infraestructura invisible de viajes. Tu cliente, empleado o paciente interactúa contigo. Nosotros ejecutamos la logística, negociamos las tarifas y resolvemos cada imprevisto. Tú te llevas el crédito y el retorno económico de cada operación.',
     search_placeholder: '¿Hacia dónde viaja tu grupo?',
     hero_search_btn: 'Cotizar itinerario ✦',
