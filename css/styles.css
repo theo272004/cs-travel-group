@@ -10129,7 +10129,7 @@ body:not(.b2b-landing) .benefit-item p {
   color: #ffffff;
 }
 .icon-medical {
-  background-color: #8bb0f1;
+  background-color: var(--primary);
   color: #ffffff;
 }
 .profile-card-header h3 {
@@ -10584,6 +10584,58 @@ body.b2b-landing .b2b-faqs,
 body.b2b-landing .calc-section,
 body.b2b-landing .medical-process {
   padding-block: clamp(52px, 6vw, 88px);
+}
+
+/* ===== Home mobile alignment fixes ===== */
+body:not(.b2b-landing) .benefit-item p {
+  margin-inline: auto;
+}
+
+body:not(.b2b-landing) .benefit-item h3,
+body:not(.b2b-landing) .benefit-item p {
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  body:not(.b2b-landing) .stat-item {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 8px;
+    text-align: center;
+  }
+
+  body:not(.b2b-landing) .stat-icon {
+    justify-content: center;
+  }
+
+  body:not(.b2b-landing) .stat-copy {
+    justify-items: center;
+  }
+}
+
+@media (max-width: 900px) {
+  body:not(.b2b-landing) .scroll-container {
+    height: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+  }
+
+  body:not(.b2b-landing) .scroll-wrapper {
+    align-items: stretch;
+    width: max-content;
+  }
+
+  body:not(.b2b-landing) .scroll-title {
+    align-self: center;
+    min-width: min(78vw, 320px);
+  }
+
+  body:not(.b2b-landing) .dest-card {
+    flex: 0 0 min(78vw, 330px);
+    height: clamp(360px, 68vh, 460px);
+    width: min(78vw, 330px);
+  }
 }
 
 /* ===== Company intro editorial block ===== */
