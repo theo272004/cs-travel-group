@@ -2306,13 +2306,6 @@ body.b2b-landing .header .nav-logo-img {
   border-left: 2px solid var(--accent);
 }
 
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0;
-  margin-top: 16px;
-}
-
 /* Fit Section (Alineación) */
 .b2b-fit-grid {
   display: grid;
