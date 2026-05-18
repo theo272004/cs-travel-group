@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.cstravelgroup.com/medicos/">
   <link rel="preload" as="image" href="../assets/images/optimized/medical-consult.webp" fetchpriority="high">
-  <link rel="stylesheet" href="../css/styles.css?v=87">
+  <link rel="stylesheet" href="../css/styles.css?v=88">
   <link rel="icon" type="image/png" href="../assets/images/logo-cstravel-cropped.png">
 </head>
 <body class="b2b-landing medical-landing">
@@ -90,14 +90,15 @@
       </div>
     </section>
 
-    <section class="b2b-dark-statement" id="programa" data-nav-label="Programa">
+    <section class="b2b-dark-statement medical-program-section" id="programa" data-nav-label="Programa">
       <div class="container">
-        <div class="statement-grid">
-          <div class="statement-title reveal">
-            <span class="section-label">Programa de aliados</span>
-            <h2>Tus pacientes ya van a viajar. ¿Por qué no ganar con eso?</h2>
+        <div class="statement-grid medical-program-grid">
+          <div class="statement-title medical-program-title reveal">
+            <div class="medical-program-copy">
+              <h2>Tus pacientes ya van a viajar. ¿Por qué no ganar con eso?</h2>
+            </div>
           </div>
-          <div class="statement-content statement-copy-card reveal reveal-delay-1">
+          <div class="statement-content statement-copy-card medical-program-card reveal reveal-delay-1">
             <p>Cuando un paciente confirma su procedimiento contigo, nosotros tomamos el relevo. Coordinamos su vuelo, su hospedaje cerca de tu clínica y sus traslados. Todo bajo tu nombre. Tu paciente vive una experiencia organizada y sin fricciones desde el momento en que sale de su país hasta que regresa.</p>
             <p>Y por cada paciente que confirma su viaje, recibes un ingreso adicional sin trabajo ni inversión de tu parte.</p>
           </div>
@@ -105,34 +106,61 @@
       </div>
     </section>
 
-    <section class="medical-process" id="funciona" data-nav-label="Proceso">
+    <section class="medical-process medical-process-light" id="funciona" data-nav-label="Proceso">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-label">Proceso</span>
           <h2>Así funciona el programa de aliados</h2>
           <p class="section-subtitle" style="margin-top:18px;">Nuestro modelo está pensado para que tu única intervención sea mencionar que ofreces el paquete completo. De todo lo que ocurre después nos encargamos nosotros.</p>
         </div>
-        <div class="medical-timeline">
+        <div class="medical-timeline medical-process-cards">
           <div class="timeline-step reveal">
             <span>01</span>
+            <div class="medical-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="8" cy="8" r="3"></circle>
+                <path d="M3.5 19a4.5 4.5 0 0 1 9 0"></path>
+                <rect x="14" y="5" width="6" height="8" rx="1"></rect>
+                <path d="M16 9h2"></path>
+              </svg>
+            </div>
             <h3>El paciente quiere operarse contigo</h3>
             <p>Le cuentas que además del procedimiento, pueden ofrecerle el paquete logístico completo: vuelo, hospedaje y traslados. Si le interesa, pides la cotización.</p>
           </div>
           <div class="timeline-step reveal reveal-delay-1">
             <span>02</span>
+            <div class="medical-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="5" y="3" width="14" height="18" rx="2"></rect>
+                <path d="M9 8h6"></path>
+                <path d="M9 12h6"></path>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                <path d="M18.5 17v1.5l1 1"></path>
+              </svg>
+            </div>
             <h3>Nosotros enviamos la cotización en menos de 24 horas</h3>
             <p>La cotización llega con tu logo y tu nombre, CS Travel no aparece en ningún momento. Además, te indicamos el precio base para que definas exactamente cuánto quieres ganar encima. El paciente te paga directamente.</p>
           </div>
           <div class="timeline-step reveal reveal-delay-2">
             <span>03</span>
+            <div class="medical-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="7.5" r="3"></circle>
+                <path d="M6 20a6 6 0 0 1 12 0"></path>
+                <path d="M18 10l1.5 1.5L22 9"></path>
+              </svg>
+            </div>
             <h3>Tu paciente llega. Tú operas.</h3>
             <p>Nosotros coordinamos vuelo, hospedaje y traslados. Si hay algún imprevisto logístico, lo resolvemos nosotros. Tu responsabilidad sigue siendo exclusivamente médica.</p>
           </div>
         </div>
+        <div class="medical-process-cta reveal reveal-delay-2">
+          <a href="../contacto/" class="btn btn-primary">Quiero saber más</a>
+        </div>
       </div>
     </section>
 
-    <section class="medical-specialties">
+    <section class="medical-specialties medical-specialties-light">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-label">Especialidades</span>
@@ -140,19 +168,18 @@
           <p class="section-subtitle" style="margin-top:18px;">Estas son algunas de las especialidades con las que trabajamos hoy</p>
         </div>
         <div class="specialty-grid reveal reveal-delay-1">
-          <span>Cirugía plástica y estética</span>
-          <span>Odontología estética e implantología</span>
-          <span>Cirugía bariátrica</span>
-          <span>Medicina funcional y longevidad</span>
-          <span>Fertilidad y reproducción asistida</span>
-          <span>Rehabilitación y salud mental</span>
-          <span>Ortopedia y cirugía programada</span>
-          <span>Medical Spa y bienestar integral</span>
-          <span>Cardiología y cirugía cardiovascular</span>
+          <article class="specialty-card"><span class="specialty-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 5c0-1.7 1.3-3 3-3s3 1.3 3 3v1.5c0 1.2-.5 2.4-1.4 3.2L12 11l-1.6-1.3A4.2 4.2 0 0 1 9 6.5V5z"></path><path d="M12 11v10"></path><path d="M8 17h8"></path></svg></span><span>Cirugía plástica y estética</span></article>
+          <article class="specialty-card"><span class="specialty-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 11c0-3.3 2.7-6 6-6s6 2.7 6 6c0 4.6-3.4 8-6 8s-6-3.4-6-8z"></path><path d="M5 10c0-1.7 1.3-3 3-3"></path></svg></span><span>Odontología estética e implantología</span></article>
+          <article class="specialty-card"><span class="specialty-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5c3 0 5 2.2 5 5.2V19"></path><path d="M16 5c-3 0-5 2.2-5 5.2"></path><path d="M7 19h10"></path></svg></span><span>Cirugía bariátrica</span></article>
+          <article class="specialty-card"><span class="specialty-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4c3.2 2.2 5 4.6 5 7.2A5 5 0 0 1 12 16a5 5 0 0 1-5-4.8C7 8.6 8.8 6.2 12 4z"></path><path d="M12 16v4"></path></svg></span><span>Medicina funcional y longevidad</span></article>
+          <article class="specialty-card"><span class="specialty-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 7a4 4 0 0 1 8 0c0 3-4 4.3-4 7 0-2.7-4-4-4-7z"></path><path d="M6 18c1.5-1.7 3.5-2.5 6-2.5s4.5.8 6 2.5"></path></svg></span><span>Fertilidad y reproducción asistida</span></article>
+          <article class="specialty-card"><span class="specialty-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 19c0-4 2.2-7 5-9 2.8 2 5 5 5 9"></path><path d="M9 8c0-1.7 1.3-3 3-3"></path><path d="M12 5c1.7 0 3 1.3 3 3"></path></svg></span><span>Rehabilitación y salud mental</span></article>
+          <article class="specialty-card"><span class="specialty-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 18l3-8 4-2 3-3"></path><path d="M5 21l4-3 2-4 2-1"></path></svg></span><span>Ortopedia y cirugía programada</span></article>
+          <article class="specialty-card"><span class="specialty-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4c1.7 2.2 4 4.3 4 7a4 4 0 1 1-8 0c0-2.7 2.3-4.8 4-7z"></path><path d="M8 18c1 .8 2.3 1.2 4 1.2s3-.4 4-1.2"></path></svg></span><span>Medical Spa y bienestar integral</span></article>
+          <article class="specialty-card"><span class="specialty-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7-3.8-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.2-7 9-7 9z"></path><path d="M9.5 12h5"></path><path d="M12 9.5v5"></path></svg></span><span>Cardiología y cirugía cardiovascular</span></article>
         </div>
         <div class="medical-specialty-note reveal reveal-delay-2">
-          <h3>¿No ves tu especialidad?</h3>
-          <p>Si atiendes pacientes que viajan y no encontraste tu especialidad aquí, escríbenos. Seguramente podremos ayudarte.</p>
+          <p><strong>¿No ves tu especialidad?</strong> Si atiendes pacientes que viajan y no encontraste tu especialidad aquí, escríbenos. Seguramente podremos ayudarte.</p>
           <a href="../contacto/" class="btn btn-primary">Habla con un asesor</a>
         </div>
       </div>
@@ -215,14 +242,17 @@
       </div>
     </section>
 
-    <section class="booking-cta medical-final-cta">
+    <section class="booking-cta medical-final-cta medical-final-cta-light">
       <div class="container">
-        <div class="booking-cta-inner reveal">
+        <div class="booking-cta-inner reveal medical-final-cta-inner">
           <h2>¿Cuántos pacientes dejaste ir el último año porque la logística del viaje no estaba resuelta?</h2>
           <p>Una conversación de 20 minutos es suficiente para ver si el modelo funciona para tu especialidad y tu volumen de pacientes. Sin compromisos.</p>
-          <div class="medical-cta-actions">
+          <div class="medical-cta-actions medical-cta-action-bar">
             <a href="../contacto/" class="btn btn-primary btn-large">Agendar una llamada</a>
             <a href="https://wa.me/573146103599" class="btn btn-dark btn-large">Escribir por WhatsApp</a>
+            <a href="mailto:info.cstravelgroup@gmail.com" class="btn btn-outline btn-large">info.cstravelgroup@gmail.com</a>
+            <a href="https://wa.me/573146103599" class="btn btn-outline btn-large">+57 314 610 3599</a>
+            <a href="../contacto/" class="btn btn-primary btn-large">Hablemos hoy</a>
           </div>
         </div>
       </div>
