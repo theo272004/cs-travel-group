@@ -9834,7 +9834,8 @@ body:not(.b2b-landing) .plane-showcase-frame {
   align-items: center;
   justify-content: center;
   position: relative;
-  transform: translateY(18px);
+  transform: translateY(34px);
+  z-index: 1;
 }
 
 body:not(.b2b-landing) .plane-showcase-sky {
@@ -9852,8 +9853,9 @@ body:not(.b2b-landing) .plane-showcase-image {
   max-width: 1400px;
   object-fit: contain;
   position: relative;
-  transform: translateY(18%);
-  z-index: 1;
+  transform: translateY(10%);
+  z-index: 5;
+  pointer-events: none;
 }
 
 body:not(.b2b-landing) .benefits-band {
@@ -9864,7 +9866,7 @@ body:not(.b2b-landing) .benefits-band {
   overflow: hidden;
   position: relative;
   z-index: 2;
-  margin-top: -10px;
+  margin-top: -26px;
 }
 
 body:not(.b2b-landing) .benefit-item {
@@ -9925,7 +9927,7 @@ body:not(.b2b-landing) .benefit-item p {
   body:not(.b2b-landing) .plane-showcase-frame {
     border-radius: 999px;
     min-height: 200px;
-    transform: translateY(12px);
+    transform: translateY(24px);
   }
 
   body:not(.b2b-landing) .benefits-band {
@@ -9960,7 +9962,7 @@ body:not(.b2b-landing) .benefit-item p {
     border-radius: 999px;
     min-height: 140px;
     padding: 0;
-    transform: translateY(8px);
+    transform: translateY(14px);
   }
 
   body:not(.b2b-landing) .benefits-band {
