@@ -926,6 +926,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Header scroll effect ---
   const header = document.querySelector('.header');
   const onScroll = () => {
+    if (document.body.classList.contains('contact-page')) {
+      header.classList.add('scrolled');
+      return;
+    }
     header.classList.toggle('scrolled', window.scrollY > 60);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
