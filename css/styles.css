@@ -9861,7 +9861,7 @@ body:not(.b2b-landing) .plane-showcase-image {
   max-width: 1400px;
   object-fit: contain;
   position: relative;
-  transform: translateY(-2%);
+  transform: translateY(-4%);
   z-index: 30 !important;
   pointer-events: none;
 }
