@@ -12848,3 +12848,268 @@ body.medical-landing .hero-action-row {
   justify-content: flex-start !important;
   padding-top: clamp(10px, 1.8vh, 24px) !important;
 }
+
+/* ===============================
+   Responsive Stability Layer
+   =============================== */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  min-width: 0;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 4.5vw, 64px);
+}
+
+@media (min-width: 1537px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+section {
+  scroll-margin-top: 96px;
+}
+
+h1,
+.hero-title,
+.split-hero-title {
+  line-height: 1.08;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+h2,
+h3,
+h4,
+p,
+li,
+a,
+button {
+  overflow-wrap: break-word;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.btn {
+  white-space: normal;
+}
+
+[class*="grid"],
+[class*="row"],
+[class*="shell"],
+[class*="layout"],
+[class*="content"] {
+  min-width: 0;
+}
+
+/* Desktop + laptop baseline */
+.hero,
+.split-hero,
+.ticket-shell,
+.company-calc-shell,
+.medical-program-direct,
+.medical-proof-merged-grid {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 901px - 1200px */
+@media (max-width: 1200px) {
+  .container {
+    padding-inline: clamp(24px, 4.2vw, 48px);
+  }
+
+  .hero .hero-text-slide h1.hero-title,
+  .hero .hero-text-slide h2.hero-title {
+    font-size: clamp(2.2rem, 4.7vw, 3.9rem) !important;
+    max-width: min(980px, 100%) !important;
+  }
+
+  .hero .hero-text-slide .hero-desc {
+    max-width: min(860px, 100%) !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .split-hero,
+  body.medical-landing .medical-hero {
+    min-height: auto !important;
+    height: auto !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .split-hero-content,
+  body.medical-landing .medical-hero .split-hero-content,
+  body.b2b-landing:not(.medical-landing) .split-hero-image,
+  body.medical-landing .medical-hero .split-hero-image {
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-direct {
+    transform: translateX(clamp(20px, 3vw, 56px)) !important;
+  }
+}
+
+/* Tablet 641px - 900px */
+@media (max-width: 900px) {
+  .container {
+    padding-inline: 32px;
+  }
+
+  body.b2b-landing:not(.medical-landing) .split-hero,
+  body.medical-landing .medical-hero {
+    grid-template-columns: 1fr !important;
+    padding-top: 96px !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .split-hero-image,
+  body.medical-landing .medical-hero .split-hero-image {
+    order: 2;
+    min-height: clamp(280px, 42vw, 460px) !important;
+    overflow: hidden !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .split-hero-content,
+  body.medical-landing .medical-hero .split-hero-content {
+    order: 1;
+    padding-top: 0 !important;
+    padding-inline: 0 !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo,
+  body.medical-landing .medical-hero .split-hero-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-direct {
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .form-progress {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Mobile up to 640px */
+@media (max-width: 640px) {
+  .container {
+    padding-inline: 20px;
+  }
+
+  .header .container {
+    padding-inline: 16px;
+  }
+
+  .hero .hero-text-slide h1.hero-title,
+  .hero .hero-text-slide h2.hero-title {
+    font-size: clamp(1.7rem, 9vw, 2.4rem) !important;
+    line-height: 1.12 !important;
+    max-width: 100% !important;
+  }
+
+  .hero .hero-text-slide .hero-desc {
+    font-size: clamp(0.98rem, 3.8vw, 1.08rem) !important;
+    line-height: 1.58 !important;
+    max-width: 100% !important;
+  }
+
+  .hero .hero-cta-container {
+    margin-top: clamp(28px, 6vh, 56px) !important;
+  }
+
+  .hero .hero-text-container {
+    min-height: auto !important;
+  }
+
+  .mobile-nav,
+  .mobile-nav a {
+    max-width: 100%;
+  }
+
+  .services-grid,
+  .clients-grid,
+  .profiles-grid,
+  .srv-grid,
+  .b2b-testimonial-grid,
+  .company-model-grid,
+  .specialty-grid,
+  .destinations-grid,
+  .ig-grid,
+  .footer-grid,
+  .contact-grid,
+  .ticket-shell {
+    grid-template-columns: 1fr !important;
+  }
+
+  .split-hero-copy,
+  .split-hero-desc,
+  .medical-program-text,
+  .medical-specialty-note p {
+    max-width: 100% !important;
+  }
+
+  .ticket-shell,
+  .ticket-stub,
+  .ticket-form,
+  .boarding-strip {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  .container {
+    padding-inline: 18px;
+  }
+
+  .btn,
+  .btn-primary,
+  .btn-dark,
+  .btn-outline,
+  .hero-cta,
+  .nav-cta {
+    min-height: 46px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .hero .hero-text-slide h1.hero-title,
+  .hero .hero-text-slide h2.hero-title {
+    font-size: clamp(1.55rem, 9.4vw, 2.1rem) !important;
+  }
+}
