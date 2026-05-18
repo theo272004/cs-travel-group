@@ -8215,13 +8215,7 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
   border-color: rgba(6, 43, 85, .08) !important;
 }
 
-.contact-page .header .nav-links a,
-.contact-page .header .lang-trigger {
-  color: var(--primary) !important;
-  opacity: 1 !important;
-}
-
-.contact-page .header .hamburger span {
+.contact-page .header.scrolled .hamburger span {
   background: var(--primary) !important;
 }
 
