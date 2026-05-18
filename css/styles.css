@@ -9808,7 +9808,7 @@ body:not(.b2b-landing) .work-meaning-title-line {
 }
 
 body:not(.b2b-landing) .plane-showcase {
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 body:not(.b2b-landing) .plane-showcase-frame {
@@ -9817,13 +9817,14 @@ body:not(.b2b-landing) .plane-showcase-frame {
     url("../assets/images/profiles-sky-bg.png") center center / cover no-repeat;
   border-radius: 999px;
   height: clamp(160px, 20vw, 240px);
-  margin: 0 auto 60px;
+  margin: 0 auto;
   width: 100%;
   max-width: 860px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  transform: translateY(18px);
 }
 
 body:not(.b2b-landing) .plane-showcase-sky {
@@ -9841,7 +9842,7 @@ body:not(.b2b-landing) .plane-showcase-image {
   max-width: 1400px;
   object-fit: contain;
   position: relative;
-  transform: translateY(8%);
+  transform: translateY(18%);
   z-index: 1;
 }
 
@@ -9853,7 +9854,7 @@ body:not(.b2b-landing) .benefits-band {
   overflow: hidden;
   position: relative;
   z-index: 2;
-  margin-top: 40px;
+  margin-top: -10px;
 }
 
 body:not(.b2b-landing) .benefit-item {
@@ -9914,6 +9915,7 @@ body:not(.b2b-landing) .benefit-item p {
   body:not(.b2b-landing) .plane-showcase-frame {
     border-radius: 999px;
     min-height: 200px;
+    transform: translateY(12px);
   }
 
   body:not(.b2b-landing) .benefits-band {
@@ -9948,6 +9950,7 @@ body:not(.b2b-landing) .benefit-item p {
     border-radius: 999px;
     min-height: 140px;
     padding: 0;
+    transform: translateY(8px);
   }
 
   body:not(.b2b-landing) .benefits-band {
