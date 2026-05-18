@@ -4237,11 +4237,8 @@ body.b2b-landing:not(.medical-landing) .hero-action-row {
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero-image {
-  align-items: flex-end;
-  background: linear-gradient(180deg, #ffffff 0%, #f2f8fe 100%);
-  display: flex;
-  justify-content: center;
   overflow: hidden;
+  background: transparent;
   z-index: 1;
 }
 
@@ -4252,13 +4249,14 @@ body.b2b-landing:not(.medical-landing) .split-hero-image img {
 body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
   filter: none;
   height: 100%;
-  left: 0;
+  left: auto;
   max-width: none;
   object-fit: contain;
-  object-position: center bottom;
-  padding-top: clamp(12px, 2vw, 28px);
-  right: auto;
-  width: 100%;
+  object-position: right bottom;
+  padding-top: 0;
+  right: 0;
+  width: auto;
+  min-width: 100%;
 }
 
 body.b2b-landing:not(.medical-landing) .trust-banner {
@@ -10984,7 +10982,7 @@ body.b2b-landing:not(.medical-landing) .b2b-fit-section h2::after {
 }
 
 body.b2b-landing:not(.medical-landing) .btn {
-  border-radius: var(--radius-sm);
+  border-radius: 999px;
 }
 
 body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-body {
@@ -11193,6 +11191,16 @@ body.b2b-landing:not(.medical-landing) .company-trust-panel h2 {
   line-height: 1.08;
   margin-bottom: 18px;
   max-width: 14ch;
+}
+
+body.b2b-landing:not(.medical-landing) .company-trust-panel h2::after {
+  background: #E6BC00;
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 12px;
+  width: 42px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 body.b2b-landing:not(.medical-landing) .company-trust-panel p {
