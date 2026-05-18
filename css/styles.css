@@ -4249,15 +4249,15 @@ body.b2b-landing:not(.medical-landing) .split-hero-image img {
 body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
   filter: none;
   height: 100%;
-  left: auto;
+  left: -12%;
   max-width: none;
   object-fit: contain;
   object-position: right bottom;
   padding-top: 0;
-  right: -1.5%;
-  width: min(122%, 980px);
+  right: auto;
+  width: min(126%, 1020px);
   min-width: 0;
-  transform: translateX(-7%);
+  transform: none;
 }
 
 body.b2b-landing:not(.medical-landing) .trust-banner {
