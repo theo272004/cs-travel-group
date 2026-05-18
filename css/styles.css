@@ -9829,7 +9829,8 @@ body:not(.b2b-landing) .plane-showcase-frame {
   justify-content: center;
   position: relative;
   transform: translateY(34px);
-  z-index: 1;
+  z-index: 6;
+  overflow: visible;
 }
 
 body:not(.b2b-landing) .plane-showcase-sky {
@@ -9848,7 +9849,7 @@ body:not(.b2b-landing) .plane-showcase-image {
   object-fit: contain;
   position: relative;
   transform: translateY(10%);
-  z-index: 5;
+  z-index: 7;
   pointer-events: none;
 }
 
@@ -9859,7 +9860,7 @@ body:not(.b2b-landing) .benefits-band {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   overflow: hidden;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   margin-top: -26px;
 }
 
