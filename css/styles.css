@@ -2389,11 +2389,24 @@ body.b2b-landing .split-hero-kicker {
 
 body.b2b-landing .hero-highlight {
   display: inline-block;
-  color: #fff;
-  background: #4D7FD6;
+  color: #102A4C;
+  background: #FFD21F;
   padding: .02em .12em .08em;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+}
+
+/* Move testimonial blocks slightly to the right on B2B landings (desktop/tablet) */
+body.b2b-landing:not(.medical-landing) .company-proof-cards,
+body.medical-landing .medical-proof-cards {
+  margin-left: clamp(12px, 1.8vw, 28px);
+}
+
+@media (max-width: 900px) {
+  body.b2b-landing:not(.medical-landing) .company-proof-cards,
+  body.medical-landing .medical-proof-cards {
+    margin-left: 0;
+  }
 }
 
 body.b2b-landing .statement-grid {
