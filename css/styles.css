@@ -11475,12 +11475,25 @@ body.medical-landing .medical-hero .split-hero-desc {
 
 body.medical-landing .medical-hero .split-hero-image {
   background: #fff !important;
+  overflow: visible;
 }
 
 body.medical-landing .medical-hero .split-hero-image::before,
 body.medical-landing .medical-hero .split-hero-image::after {
   content: none !important;
   background: none !important;
+}
+
+body.medical-landing .medical-hero .split-hero-image img {
+  height: 100%;
+  left: -18%;
+  max-width: none;
+  object-fit: contain;
+  object-position: right bottom;
+  position: absolute;
+  right: auto;
+  top: 0;
+  width: min(136%, 1120px);
 }
 
 body.medical-landing .medical-program-section {
