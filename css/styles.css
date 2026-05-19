@@ -14530,7 +14530,7 @@ body.b2b-landing:not(.medical-landing) .split-hero {
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero-image {
-  align-items: flex-end !important;
+  align-items: stretch !important;
   display: flex !important;
   justify-content: flex-end !important;
   min-width: 0 !important;
@@ -14541,6 +14541,7 @@ body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo 
   height: 100% !important;
   max-height: none !important;
   max-width: none !important;
+  min-width: 100% !important;
   object-fit: contain !important;
   object-position: right top !important;
   width: auto !important;
@@ -14564,13 +14565,14 @@ body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo 
 
   body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
     bottom: 0 !important;
-    height: calc(100% + clamp(150px, 16vh, 220px)) !important;
+    height: 100% !important;
     left: auto !important;
     max-width: none !important;
+    min-width: 100% !important;
     object-fit: contain !important;
-    object-position: right bottom !important;
+    object-position: right top !important;
     right: 0 !important;
-    top: auto !important;
+    top: 0 !important;
     width: auto !important;
   }
 }
@@ -14603,13 +14605,14 @@ body.b2b-landing:not(.medical-landing) .company-model-card:hover {
 
   body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
     bottom: 0 !important;
-    height: calc(100% + clamp(150px, 16vh, 220px)) !important;
+    height: 100% !important;
     left: auto !important;
     max-width: none !important;
+    min-width: 100% !important;
     object-fit: contain !important;
-    object-position: right bottom !important;
+    object-position: right top !important;
     right: 0 !important;
-    top: auto !important;
+    top: 0 !important;
     width: auto !important;
   }
 }
