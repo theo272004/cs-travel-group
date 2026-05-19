@@ -14528,3 +14528,23 @@ body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo 
   object-position: center center !important;
   width: 100% !important;
 }
+
+/* Match home profile-card hover effect on process/model cards. */
+body.medical-landing .medical-process-cards .timeline-step,
+body.b2b-landing:not(.medical-landing) .company-model-card {
+  border: 2px solid transparent !important;
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease,
+    background-color .3s ease !important;
+}
+
+body.medical-landing .medical-process-cards .timeline-step:hover,
+body.b2b-landing:not(.medical-landing) .company-model-card:hover {
+  border-color: var(--accent) !important;
+  box-shadow:
+    0 14px 36px rgba(6, 43, 85, .12),
+    0 4px 20px rgba(255, 210, 31, .18) !important;
+  transform: translateY(-5px) !important;
+}
