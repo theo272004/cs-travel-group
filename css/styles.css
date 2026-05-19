@@ -7614,7 +7614,8 @@ body:not(.b2b-landing) .cred-card strong {
 
 .contact-page .ticket-stub h1 strong {
   color: #ffd21f;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .contact-page .ticket-stub-copy p {
