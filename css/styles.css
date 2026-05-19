@@ -7890,11 +7890,11 @@ body:not(.b2b-landing) .cred-card strong {
 
 .contact-page .plane-mark-top {
   color: rgba(255,255,255,.82);
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   position: absolute;
-  right: 0;
-  top: -12px;
-  transform: rotate(-38deg);
+  left: -70px;
+  top: -8px;
+  transform: rotate(-36deg);
   z-index: 2;
 }
 
@@ -7945,6 +7945,15 @@ body:not(.b2b-landing) .cred-card strong {
   font-family: var(--font-heading);
   font-size: clamp(1.25rem, 1.5vw, 1.8rem);
   line-height: 1;
+}
+
+.contact-page .boarding-route span {
+  color: rgba(255,255,255,.82);
+  display: block;
+  font-size: .88rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+  margin-top: 6px;
 }
 
 .contact-page .boarding-meta {
