@@ -14891,3 +14891,15 @@ body.medical-landing .trust-banner.b2b-premium-logos .marquee-container {
   position: relative;
   z-index: 9;
 }
+
+/* Company hero photo lock: fill the entire right side without shortening the book. */
+@media (min-width: 1024px) {
+  body.b2b-landing:not(.medical-landing) .split-hero-image {
+    background: url("../assets/images/empresas-hero.png?v=20260518a") right top / auto 100% no-repeat !important;
+    overflow: visible !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
+    display: none !important;
+  }
+}
