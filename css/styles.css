@@ -9922,11 +9922,15 @@ body.medical-landing .medical-testimonials {
 }
 
 body.medical-landing .medical-testimonials .b2b-testimonial-grid {
-  max-width: 1180px;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: 0;
+  gap: clamp(14px, 1.6vw, 20px);
 }
 
 body.medical-landing .medical-testimonials .b2b-testimonial-card {
-  min-height: 320px;
+  min-height: 260px;
+  padding: clamp(18px, 1.8vw, 24px);
 }
 
 body.medical-landing .testimonial-avatar--placeholder {
@@ -11385,8 +11389,8 @@ body.b2b-landing:not(.medical-landing) .company-trust-proof .container {
 
 body.b2b-landing:not(.medical-landing) .company-trust-proof-grid {
   display: grid;
-  gap: clamp(22px, 3vw, 34px);
-  grid-template-columns: minmax(0, 0.72fr) minmax(760px, 1.58fr);
+  gap: clamp(34px, 4.5vw, 64px);
+  grid-template-columns: minmax(0, 0.68fr) minmax(760px, 1.32fr);
   align-items: center;
 }
 
@@ -11483,9 +11487,10 @@ body.b2b-landing:not(.medical-landing) .company-proof-cards {
   display: grid;
   gap: clamp(14px, 1.6vw, 18px);
   grid-template-columns: 1fr;
-  margin: 0;
-  max-width: 100%;
-  width: 100%;
+  justify-self: end;
+  margin: 0 0 0 auto;
+  max-width: 92%;
+  width: min(100%, 860px);
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-card {
@@ -11494,14 +11499,14 @@ body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-car
   border-radius: 16px;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
   min-height: 0 !important;
-  padding: clamp(20px, 1.8vw, 26px) !important;
+  padding: clamp(16px, 1.4vw, 22px) !important;
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-card p {
   color: #284260;
-  font-size: clamp(.95rem, .88rem + .14vw, 1.02rem);
-  line-height: 1.52;
-  margin-bottom: 20px;
+  font-size: clamp(.88rem, .82rem + .12vw, .96rem);
+  line-height: 1.46;
+  margin-bottom: 14px;
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-quote {
@@ -12602,11 +12607,12 @@ body.medical-landing .medical-hero .split-hero-image img {
 }
 
 body.medical-landing .medical-program-section {
+  background-position: center top !important;
   padding-block: 12px 20px !important;
 }
 
 body.medical-landing .medical-program-direct .medical-program-copy {
-  margin: -6px auto 40px !important;
+  margin: -10px auto 52px !important;
 }
 
 body.medical-landing .medical-process-light {
@@ -12618,6 +12624,38 @@ body.medical-landing .medical-process-light {
     min-height: 100svh !important;
     height: 100svh !important;
   }
+}
+
+body.medical-landing .medical-final-cta-light .medical-final-cta-inner {
+  max-width: 960px;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+body.b2b-landing .b2b-faqs .section-header,
+body.b2b-landing .b2b-faqs .faq-list,
+body.b2b-landing .b2b-faqs .faq-question,
+body.b2b-landing .b2b-faqs .faq-answer p {
+  text-align: center;
+}
+
+body.b2b-landing .b2b-faqs .faq-question {
+  justify-content: center;
+  gap: 12px;
+}
+
+body.b2b-landing .b2b-faqs .faq-question svg {
+  margin-left: 0;
+}
+
+body.b2b-landing .b2b-faqs .section-header h2::after {
+  background: #E6BC00;
+  content: "";
+  display: block;
+  height: 3px;
+  margin: 12px auto 0;
+  width: 42px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 /* ===== Global consistency lock (home + empresas + medicos + contacto) ===== */
