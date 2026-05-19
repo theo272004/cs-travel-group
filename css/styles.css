@@ -7614,8 +7614,8 @@ body:not(.b2b-landing) .cred-card strong {
 
 .contact-page .ticket-stub h1 strong {
   color: #ffd21f;
-  white-space: normal;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
+  overflow-wrap: normal;
 }
 
 .contact-page .ticket-stub-copy p {
@@ -7892,8 +7892,10 @@ body:not(.b2b-landing) .cred-card strong {
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 0;
-  padding-top: 10px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   z-index: 0;
 }
 
@@ -7918,9 +7920,10 @@ body:not(.b2b-landing) .cred-card strong {
 }
 
 .contact-page .boarding-route {
-  align-content: space-between;
-  display: grid;
-  padding: 40px 0 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 18px 0;
   text-align: left;
   z-index: 1;
 }
@@ -7963,6 +7966,10 @@ body:not(.b2b-landing) .cred-card strong {
   gap: 3px;
   height: 50px;
   margin-top: 6px;
+  justify-content: center;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 130px;
 }
 
 .contact-page .boarding-barcode span {
@@ -7982,6 +7989,7 @@ body:not(.b2b-landing) .cred-card strong {
   font-weight: 900;
   letter-spacing: .28em;
   margin: 0;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -8226,9 +8234,9 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
 /* Desktop fit pass: keep full contact ticket visible on common Mac viewports */
 @media (min-width: 901px) {
   .contact-page .ticket-contact {
-    align-items: flex-start;
+    align-items: center;
     min-height: calc(100svh - 88px);
-    padding: 80px 0 10px;
+    padding: 88px 0 18px;
   }
 
   .contact-page .ticket-shell {
