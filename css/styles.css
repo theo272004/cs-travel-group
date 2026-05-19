@@ -14564,7 +14564,7 @@ body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo 
 
   body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
     bottom: 0 !important;
-    height: calc(100% + 72px) !important;
+    height: calc(100% + clamp(150px, 16vh, 220px)) !important;
     left: auto !important;
     max-width: none !important;
     object-fit: contain !important;
@@ -14603,7 +14603,7 @@ body.b2b-landing:not(.medical-landing) .company-model-card:hover {
 
   body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
     bottom: 0 !important;
-    height: calc(100% + 72px) !important;
+    height: calc(100% + clamp(150px, 16vh, 220px)) !important;
     left: auto !important;
     max-width: none !important;
     object-fit: contain !important;
