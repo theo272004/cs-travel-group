@@ -14538,9 +14538,9 @@ body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo 
   height: 100% !important;
   max-height: none !important;
   max-width: none !important;
-  object-fit: cover !important;
+  object-fit: contain !important;
   object-position: right top !important;
-  width: min(118%, 980px) !important;
+  width: auto !important;
 }
 
 /* Match home profile-card hover effect on process/model cards. */
