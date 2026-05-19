@@ -11486,11 +11486,10 @@ body.b2b-landing:not(.medical-landing) .company-proof-cards {
   align-items: stretch;
   display: grid;
   gap: clamp(14px, 1.6vw, 18px);
-  grid-template-columns: 1fr;
-  justify-self: end;
-  margin: 0 0 0 auto;
-  max-width: 92%;
-  width: min(100%, 860px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
 }
 
 body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-card {
@@ -12323,7 +12322,7 @@ body.medical-landing .medical-cta-action-bar {
 }
 
 body.medical-landing .medical-cta-action-bar .btn {
-  border-radius: 10px !important;
+  border-radius: 999px !important;
   box-shadow: 0 10px 22px rgba(16, 42, 76, .08);
   font-size: .9rem !important;
   justify-content: center;
@@ -13481,6 +13480,19 @@ body.medical-landing .medical-program-section {
   }
 
   body.medical-landing main > section {
+    scroll-snap-align: none !important;
+  }
+}
+
+/* Company page: disable snap-lock behavior to improve nav/scroll smoothness */
+@media (min-width: 1100px) {
+  @supports selector(html:has(body.b2b-landing:not(.medical-landing))) {
+    html:has(body.b2b-landing:not(.medical-landing)) {
+      scroll-snap-type: none !important;
+    }
+  }
+
+  body.b2b-landing:not(.medical-landing) main > section {
     scroll-snap-align: none !important;
   }
 }
