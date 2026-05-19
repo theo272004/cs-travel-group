@@ -7882,10 +7882,20 @@ body:not(.b2b-landing) .cred-card strong {
 .contact-page .boarding-route-layout {
   align-items: stretch;
   display: grid;
-  gap: 16px;
+  gap: 18px;
   grid-template-columns: 28px minmax(0, 1fr);
   min-height: 178px;
   position: relative;
+}
+
+.contact-page .plane-mark-top {
+  color: rgba(255,255,255,.82);
+  font-size: 2.2rem;
+  position: absolute;
+  right: 0;
+  top: -12px;
+  transform: rotate(-38deg);
+  z-index: 2;
 }
 
 .contact-page .flight-route-mini {
@@ -7900,16 +7910,17 @@ body:not(.b2b-landing) .cred-card strong {
 }
 
 .contact-page .plane-mark {
-  color: rgba(255,255,255,.78);
+  color: rgba(255,255,255,.8);
   font-size: 2rem;
-  transform: rotate(-34deg);
+  line-height: 1;
+  transform: rotate(-34deg) translateY(2px);
 }
 
 .contact-page .route-dot {
   background: rgba(255,255,255,.78);
   border-radius: 50%;
-  height: 7px;
-  width: 7px;
+  height: 8px;
+  width: 8px;
 }
 
 .contact-page .route-line {
