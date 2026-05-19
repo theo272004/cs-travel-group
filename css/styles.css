@@ -7614,8 +7614,10 @@ body:not(.b2b-landing) .cred-card strong {
 
 .contact-page .ticket-stub h1 strong {
   color: #ffd21f;
-  white-space: nowrap;
+  white-space: normal;
   overflow-wrap: normal;
+  word-break: keep-all;
+  line-height: 1.05;
 }
 
 .contact-page .ticket-stub-copy p {
@@ -7777,7 +7779,7 @@ body:not(.b2b-landing) .cred-card strong {
 .contact-page .form-group textarea {
   background: rgba(255,255,255,.07);
   border: 1px solid rgba(191,216,244,.22);
-  border-radius: 14px;
+  border-radius: 999px;
   color: #fff;
   min-height: 54px;
   padding: 14px 16px;
@@ -7785,6 +7787,7 @@ body:not(.b2b-landing) .cred-card strong {
 
 .contact-page .form-group textarea {
   min-height: 126px;
+  border-radius: 32px;
   resize: vertical;
 }
 
@@ -7818,9 +7821,13 @@ body:not(.b2b-landing) .cred-card strong {
 .contact-page .form-next,
 .contact-page .form-submit,
 .contact-page .form-prev {
-  border-radius: 14px;
+  border-radius: 999px;
   font-weight: 900;
   min-height: 54px;
+}
+
+.contact-page .form-step[data-step="1"] .form-next {
+  margin-top: 12px;
 }
 
 .contact-page .form-next,
@@ -7894,7 +7901,7 @@ body:not(.b2b-landing) .cred-card strong {
   position: absolute;
   left: -70px;
   top: -8px;
-  transform: rotate(-36deg);
+  transform: rotate(-90deg);
   z-index: 2;
 }
 
@@ -7913,7 +7920,7 @@ body:not(.b2b-landing) .cred-card strong {
   color: rgba(255,255,255,.8);
   font-size: 2rem;
   line-height: 1;
-  transform: rotate(-34deg) translateY(2px);
+  transform: rotate(-90deg);
 }
 
 .contact-page .route-dot {
