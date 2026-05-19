@@ -2418,7 +2418,7 @@ body.medical-landing .medical-proof-cards {
 /* Hero highlight safety: avoid overlap with upper line (company + medical) */
 body.b2b-landing:not(.medical-landing) .split-hero-title,
 body.medical-landing .split-hero-title {
-  line-height: 1.2 !important;
+  line-height: 1.26 !important;
 }
 
 body.b2b-landing .hero-highlight {
