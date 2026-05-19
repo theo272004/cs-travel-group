@@ -11316,7 +11316,7 @@ body.b2b-landing:not(.medical-landing) .company-model-card {
   border-radius: 24px;
   box-shadow: 0 16px 36px rgba(16, 42, 76, 0.08);
   min-height: 100%;
-  padding: 24px 24px 28px;
+  padding: 58px 24px 30px;
   position: relative;
   text-align: center;
 }
@@ -14530,7 +14530,7 @@ body.b2b-landing:not(.medical-landing) .split-hero {
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero-image {
-  align-items: flex-start !important;
+  align-items: flex-end !important;
   display: flex !important;
   justify-content: flex-end !important;
   min-width: 0 !important;
@@ -14563,11 +14563,15 @@ body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo 
   }
 
   body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
-    width: auto !important;
-    height: 100% !important;
+    bottom: 0 !important;
+    height: calc(100% + 72px) !important;
+    left: auto !important;
     max-width: none !important;
     object-fit: contain !important;
-    object-position: right top !important;
+    object-position: right bottom !important;
+    right: 0 !important;
+    top: auto !important;
+    width: auto !important;
   }
 }
 
@@ -14598,15 +14602,22 @@ body.b2b-landing:not(.medical-landing) .company-model-card:hover {
   }
 
   body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
-    height: 100% !important;
-    width: auto !important;
+    bottom: 0 !important;
+    height: calc(100% + 72px) !important;
+    left: auto !important;
     max-width: none !important;
     object-fit: contain !important;
-    object-position: right top !important;
+    object-position: right bottom !important;
+    right: 0 !important;
+    top: auto !important;
+    width: auto !important;
   }
 }
 
-body.b2b-landing:not(.medical-landing) .split-hero .split-hero-title,
+body.b2b-landing:not(.medical-landing) .split-hero .split-hero-title {
+  line-height: 1.16 !important;
+}
+
 body.medical-landing .medical-hero .split-hero-title {
   line-height: 1.4 !important;
 }
