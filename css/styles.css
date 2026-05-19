@@ -13664,3 +13664,194 @@ body.medical-landing .medical-program-section {
     width: 100%;
   }
 }
+
+/* ==========================================
+   Overflow Repair Pass (medical/company pages)
+   ========================================== */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+main,
+main > section,
+.container {
+  min-width: 0;
+}
+
+body.medical-landing .medical-program-section {
+  min-height: auto !important;
+  overflow: hidden !important;
+  padding-block: 78px !important;
+}
+
+body.medical-landing .medical-program-section .container {
+  display: flex !important;
+  justify-content: flex-end !important;
+  max-width: min(1320px, calc(100vw - 64px)) !important;
+  padding-inline: 32px !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-direct {
+  margin-left: auto !important;
+  max-width: 680px !important;
+  padding: 0 !important;
+  transform: none !important;
+  width: min(680px, 48%) !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-copy,
+body.medical-landing .medical-program-section .medical-program-text {
+  max-width: 100% !important;
+  overflow-wrap: normal !important;
+  text-align: right !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-copy h2 {
+  font-size: 3rem !important;
+  line-height: 1.08 !important;
+  max-width: 100% !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-copy .medical-program-title-line {
+  display: block;
+  max-width: 100%;
+  text-align: right !important;
+  white-space: normal !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-text p {
+  font-size: 1.08rem !important;
+  line-height: 1.62 !important;
+  max-width: 100% !important;
+  text-align: right !important;
+}
+
+body.medical-landing .medical-final-cta-light {
+  overflow: hidden !important;
+  padding-block: 76px !important;
+}
+
+body.medical-landing .medical-final-cta-light .container {
+  max-width: min(1280px, calc(100vw - 64px)) !important;
+  padding-inline: 32px !important;
+}
+
+body.medical-landing .medical-proof-merged-grid {
+  grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.42fr) !important;
+  gap: 28px !important;
+  width: 100% !important;
+}
+
+body.medical-landing .medical-proof-panel {
+  max-width: 520px !important;
+  min-width: 0 !important;
+}
+
+body.medical-landing .medical-proof-panel h2 {
+  font-size: 2.35rem !important;
+  line-height: 1.12 !important;
+}
+
+body.medical-landing .medical-proof-panel p {
+  font-size: 1rem !important;
+  line-height: 1.55 !important;
+}
+
+body.medical-landing .medical-proof-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  min-width: 0 !important;
+}
+
+body.medical-landing .medical-proof-cards .b2b-testimonial-card {
+  min-width: 0 !important;
+}
+
+body.medical-landing .medical-proof-cards .b2b-testimonial-card p {
+  font-size: .96rem !important;
+  line-height: 1.5 !important;
+}
+
+@media (max-width: 1280px) {
+  body.medical-landing .medical-program-section {
+    background-position: 31% center !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-direct {
+    width: min(620px, 52%) !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-copy h2 {
+    font-size: 2.55rem !important;
+  }
+
+  body.medical-landing .medical-proof-merged-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.medical-landing .medical-proof-panel {
+    max-width: 760px !important;
+  }
+
+  body.medical-landing .medical-proof-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 980px) {
+  body.medical-landing .medical-program-section {
+    background:
+      linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.82) 100%),
+      url("../assets/images/medical-program-bg.png") 30% center / cover no-repeat !important;
+  }
+
+  body.medical-landing .medical-program-section .container {
+    display: block !important;
+    max-width: min(760px, calc(100vw - 40px)) !important;
+    padding-inline: 20px !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-direct {
+    width: 100% !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-copy,
+  body.medical-landing .medical-program-section .medical-program-text,
+  body.medical-landing .medical-program-section .medical-program-copy .medical-program-title-line,
+  body.medical-landing .medical-program-section .medical-program-text p {
+    text-align: left !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-copy h2,
+  body.medical-landing .medical-proof-panel h2 {
+    font-size: 2.15rem !important;
+  }
+
+  body.medical-landing .medical-proof-cards {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body.medical-landing .medical-program-section,
+  body.medical-landing .medical-final-cta-light {
+    padding-block: 52px !important;
+  }
+
+  body.medical-landing .medical-program-section .container,
+  body.medical-landing .medical-final-cta-light .container {
+    max-width: calc(100vw - 32px) !important;
+    padding-inline: 16px !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-copy h2,
+  body.medical-landing .medical-proof-panel h2 {
+    font-size: 1.78rem !important;
+  }
+
+  body.medical-landing .medical-cta-action-bar {
+    grid-template-columns: 1fr !important;
+  }
+}
