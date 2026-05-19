@@ -2415,6 +2415,17 @@ body.medical-landing .medical-proof-cards {
   }
 }
 
+/* Final company model card alignment lock. */
+body.b2b-landing:not(.medical-landing) .company-model-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+body.b2b-landing:not(.medical-landing) .company-model-copy {
+  margin-block: auto !important;
+}
+
 /* Hero highlight safety: avoid overlap with upper line (company + medical) */
 body.b2b-landing:not(.medical-landing) .split-hero-title,
 body.medical-landing .split-hero-title {
@@ -11315,10 +11326,17 @@ body.b2b-landing:not(.medical-landing) .company-model-card {
   border: 1px solid rgba(6, 43, 85, 0.08);
   border-radius: 24px;
   box-shadow: 0 16px 36px rgba(16, 42, 76, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-height: 100%;
   padding: 58px 24px 30px;
   position: relative;
   text-align: center;
+}
+
+body.b2b-landing:not(.medical-landing) .company-model-copy {
+  margin-block: auto;
 }
 
 body.b2b-landing:not(.medical-landing) .company-model-number {
