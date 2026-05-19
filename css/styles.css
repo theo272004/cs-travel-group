@@ -2418,11 +2418,14 @@ body.medical-landing .medical-proof-cards {
 /* Hero highlight safety: avoid overlap with upper line (company + medical) */
 body.b2b-landing:not(.medical-landing) .split-hero-title,
 body.medical-landing .split-hero-title {
-  line-height: 1.16 !important;
+  line-height: 1.2 !important;
 }
 
 body.b2b-landing .hero-highlight {
-  padding: 0 .1em .02em !important;
+  padding: 0 .12em .08em !important;
+  line-height: 1.08 !important;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 body.b2b-landing .statement-grid {
