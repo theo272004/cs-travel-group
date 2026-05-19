@@ -14874,3 +14874,20 @@ body.medical-landing .medical-hero .split-hero-title {
     width: auto !important;
   }
 }
+
+/* Keep the medical logo strip above the hero image overflow. */
+body.medical-landing .medical-hero {
+  position: relative;
+  z-index: 1;
+}
+
+body.medical-landing .trust-banner.b2b-premium-logos {
+  background: #f4f6f8 !important;
+  position: relative !important;
+  z-index: 8 !important;
+}
+
+body.medical-landing .trust-banner.b2b-premium-logos .marquee-container {
+  position: relative;
+  z-index: 9;
+}
