@@ -14758,3 +14758,78 @@ body.medical-landing .medical-proof-cards {
     width: auto !important;
   }
 }
+
+/* Medical page polish: hero rhythm, title rules, and CTA spacing. */
+body.medical-landing .medical-hero .split-hero-title {
+  line-height: 1.16 !important;
+}
+
+@media (min-width: 1024px) {
+  body.medical-landing .medical-hero .split-hero-image {
+    overflow: hidden !important;
+  }
+
+  body.medical-landing .medical-hero .split-hero-image img {
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: right center !important;
+    transform: scale(1.08) !important;
+    transform-origin: right center !important;
+    width: 100% !important;
+  }
+}
+
+body.medical-landing .medical-program-section .medical-program-copy h2::before {
+  display: none !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-copy h2::after,
+body.medical-landing .medical-process-light .section-header h2::after,
+body.medical-landing .medical-specialties-light .section-header h2::after {
+  background: var(--accent) !important;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(255, 210, 31, .4);
+  content: "" !important;
+  display: block !important;
+  height: 3px;
+  margin-top: 14px;
+  width: 42px;
+}
+
+body.medical-landing .medical-program-section .medical-program-copy h2::after {
+  margin-left: auto;
+}
+
+body.medical-landing .medical-process-light .section-header h2::after,
+body.medical-landing .medical-specialties-light .section-header h2::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.medical-landing .medical-process-cta {
+  margin-top: 38px !important;
+}
+
+body.medical-landing .medical-specialty-note .btn {
+  min-width: 210px !important;
+  padding-inline: 28px !important;
+}
+
+body.medical-landing .medical-cta-action-bar .btn-dark {
+  background: #fff !important;
+  border-color: rgba(16, 42, 76, .18) !important;
+  color: var(--primary) !important;
+}
+
+body.medical-landing .medical-cta-action-bar .btn-dark:hover {
+  background: rgba(16, 42, 76, .06) !important;
+  border-color: rgba(16, 42, 76, .32) !important;
+  color: var(--primary) !important;
+}
+
+@media (max-width: 900px) {
+  body.medical-landing .medical-program-section .medical-program-copy h2::after {
+    margin-left: 0;
+  }
+}
