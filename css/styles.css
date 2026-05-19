@@ -14525,22 +14525,26 @@ body.contact-page .ticket-card {
   }
 }
 
-/* Company desktop hero: keep the decorative image inside its column. */
+/* Company desktop hero: show full PNG without clipping. */
 body.b2b-landing:not(.medical-landing) .split-hero {
-  overflow: hidden !important;
+  overflow: visible !important;
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero-image {
+  align-items: flex-end !important;
+  display: flex !important;
+  justify-content: flex-end !important;
   min-width: 0 !important;
-  overflow: hidden !important;
+  overflow: visible !important;
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
-  height: 100% !important;
-  max-width: 100% !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  width: 100% !important;
+  height: auto !important;
+  max-height: calc(100svh - 96px) !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  object-position: right bottom !important;
+  width: min(118%, 980px) !important;
 }
 
 /* Match home profile-card hover effect on process/model cards. */
