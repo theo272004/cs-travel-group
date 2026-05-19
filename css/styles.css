@@ -14903,3 +14903,38 @@ body.medical-landing .trust-banner.b2b-premium-logos .marquee-container {
     display: none !important;
   }
 }
+
+/* Company hero: keep the same photo placement but let the book overflow. */
+@media (min-width: 1024px) {
+  body.b2b-landing:not(.medical-landing) .split-hero {
+    overflow: visible !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .split-hero-content {
+    position: relative;
+    z-index: 3;
+  }
+
+  body.b2b-landing:not(.medical-landing) .split-hero-image {
+    background: none !important;
+    overflow: visible !important;
+    position: relative;
+    z-index: 2;
+  }
+
+  body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
+    display: block !important;
+    height: 100% !important;
+    left: auto !important;
+    max-height: none !important;
+    max-width: none !important;
+    min-width: 100% !important;
+    object-fit: contain !important;
+    object-position: right top !important;
+    pointer-events: none;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: auto !important;
+  }
+}
