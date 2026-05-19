@@ -7857,6 +7857,9 @@ body:not(.b2b-landing) .cred-card strong {
 }
 
 .contact-page .boarding-strip {
+  background:
+    radial-gradient(circle at 42% 46%, rgba(191,216,244,.09), transparent 35%),
+    linear-gradient(180deg, rgba(6,43,85,.88), rgba(3,27,52,.74));
   border-left: 2px dashed rgba(191,216,244,.38);
   border-radius: 0 28px 28px 0;
   display: flex;
