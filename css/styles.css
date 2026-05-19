@@ -8223,6 +8223,19 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
   min-height: min(680px, calc(100svh - 178px));
 }
 
+/* Desktop fit pass: keep full contact ticket visible on common Mac viewports */
+@media (min-width: 901px) {
+  .contact-page .ticket-contact {
+    align-items: flex-start;
+    min-height: calc(100svh - 88px);
+    padding: 88px 0 18px;
+  }
+
+  .contact-page .ticket-shell {
+    min-height: min(620px, calc(100svh - 116px));
+  }
+}
+
 .contact-page .header,
 .contact-page .ticket-shell.reveal {
   opacity: 1 !important;
