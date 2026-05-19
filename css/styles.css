@@ -13269,3 +13269,16 @@ body.medical-landing .medical-program-section {
     line-height: 1.62 !important;
   }
 }
+
+/* Medical page: disable snap-lock behavior that causes intermittent scroll stalls */
+@media (min-width: 1100px) {
+  @supports selector(html:has(body.medical-landing)) {
+    html:has(body.medical-landing) {
+      scroll-snap-type: none !important;
+    }
+  }
+
+  body.medical-landing main > section {
+    scroll-snap-align: none !important;
+  }
+}
