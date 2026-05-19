@@ -14544,15 +14544,26 @@ body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo 
 }
 
 @media (min-width: 1024px) {
+  /* Company hero must mirror medical hero behavior */
   body.b2b-landing:not(.medical-landing) .split-hero {
     align-items: stretch !important;
-    height: auto !important;
-    min-height: auto !important;
+    height: 100svh !important;
+    min-height: 100svh !important;
     padding-block: 0 !important;
   }
 
+  body.b2b-landing:not(.medical-landing) .split-hero-content,
   body.b2b-landing:not(.medical-landing) .split-hero-image {
+    height: 100svh !important;
+    min-height: 100svh !important;
     align-self: stretch !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
   }
 }
 
