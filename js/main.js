@@ -1020,8 +1020,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const desktopMotion = window.matchMedia('(min-width: 769px)').matches && !reducedMotion;
     const wideDesktopMotion = window.matchMedia('(min-width: 1101px)').matches && !reducedMotion;
-    const heroScrollMotion = !reducedMotion;
     const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
+    const heroScrollMotion = !reducedMotion && !isMobileViewport;
     
     const setStaticHeroStage = (index) => {
       heroSlides.forEach((slide, i) => slide.classList.toggle('active', i === index));
@@ -1132,6 +1132,42 @@ document.addEventListener('DOMContentLoaded', () => {
           setStaticHeroStage(mobileStage);
         });
       });
+
+      if (isMobileViewport && typeof MotionPathPlugin !== 'undefined' && !reducedMotion) {
+        const activePath = document.querySelector('#flight-route-active');
+        if (activePath) {
+          const pathLength = activePath.getTotalLength();
+          activePath.style.strokeDasharray = pathLength;
+          activePath.style.strokeDashoffset = pathLength;
+        }
+
+        const mobileFlightTl = gsap.timeline({ repeat: -1, repeatDelay: 0.8 });
+        mobileFlightTl
+          .call(() => setStaticHeroStage(0), null, 0)
+          .to('#airplane', {
+            motionPath: {
+              path: '#flight-route',
+              align: '#flight-route',
+              alignOrigin: [0.5, 0.5],
+              autoRotate: true
+            },
+            duration: 8,
+            ease: 'none'
+          }, 0);
+
+        if (activePath) {
+          mobileFlightTl.to(activePath, {
+            strokeDashoffset: 0,
+            duration: 8,
+            ease: 'none'
+          }, 0);
+        }
+
+        mobileFlightTl
+          .call(() => setStaticHeroStage(1), null, 2.7)
+          .call(() => setStaticHeroStage(2), null, 5.4)
+          .call(() => setStaticHeroStage(0), null, 8);
+      }
     }
 
       // 2. Horizontal Scroll Destinations
