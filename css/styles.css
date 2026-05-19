@@ -14527,7 +14527,7 @@ body.b2b-landing:not(.medical-landing) .split-hero {
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero-image {
-  align-items: flex-end !important;
+  align-items: flex-start !important;
   display: flex !important;
   justify-content: flex-end !important;
   min-width: 0 !important;
@@ -14535,11 +14535,11 @@ body.b2b-landing:not(.medical-landing) .split-hero-image {
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
-  height: auto !important;
-  max-height: calc(100svh - 96px) !important;
+  height: calc(100svh - 88px) !important;
+  max-height: none !important;
   max-width: none !important;
   object-fit: contain !important;
-  object-position: right bottom !important;
+  object-position: right top !important;
   width: min(118%, 980px) !important;
 }
 
