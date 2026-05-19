@@ -14563,8 +14563,9 @@ body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo 
   }
 
   body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
-    width: 100% !important;
+    width: auto !important;
     height: 100% !important;
+    max-width: none !important;
     object-fit: contain !important;
     object-position: right top !important;
   }
@@ -14588,4 +14589,30 @@ body.b2b-landing:not(.medical-landing) .company-model-card:hover {
     0 14px 36px rgba(6, 43, 85, .12),
     0 4px 20px rgba(255, 210, 31, .18) !important;
   transform: translateY(-5px) !important;
+}
+
+/* Final hero lock: full-size company image and non-overlapping highlights. */
+@media (min-width: 1024px) {
+  body.b2b-landing:not(.medical-landing) .split-hero-image {
+    overflow: visible !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
+    height: 100% !important;
+    width: auto !important;
+    max-width: none !important;
+    object-fit: contain !important;
+    object-position: right top !important;
+  }
+}
+
+body.b2b-landing:not(.medical-landing) .split-hero .split-hero-title,
+body.medical-landing .medical-hero .split-hero-title {
+  line-height: 1.4 !important;
+}
+
+body.b2b-landing .split-hero-title .hero-highlight {
+  padding: 0 .1em .08em !important;
+  position: relative;
+  top: .08em;
 }
