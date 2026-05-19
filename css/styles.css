@@ -2415,6 +2415,16 @@ body.medical-landing .medical-proof-cards {
   }
 }
 
+/* Hero highlight safety: avoid overlap with upper line (company + medical) */
+body.b2b-landing:not(.medical-landing) .split-hero-title,
+body.medical-landing .split-hero-title {
+  line-height: 1.16 !important;
+}
+
+body.b2b-landing .hero-highlight {
+  padding: 0 .1em .02em !important;
+}
+
 body.b2b-landing .statement-grid {
   grid-template-columns: .4fr 1.6fr;
   gap: 40px;
@@ -12907,19 +12917,23 @@ body.medical-landing .medical-hero .split-hero-image img {
 
 /* Keep company hero PNG visually superposed (not clipped) */
 body.b2b-landing:not(.medical-landing) .split-hero-image {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
   overflow: visible !important;
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero-image img.company-hero-photo {
   position: relative !important;
   z-index: 2;
-  width: auto !important;
+  width: min(118%, 980px) !important;
   max-width: none !important;
-  height: 100% !important;
+  height: auto !important;
+  max-height: calc(100svh - 96px) !important;
   right: 0 !important;
   transform: none !important;
   object-fit: contain !important;
-  object-position: right center !important;
+  object-position: right bottom !important;
 }
 
 body.b2b-landing:not(.medical-landing) .split-hero {
