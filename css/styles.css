@@ -14227,9 +14227,7 @@ textarea {
 
 /* Medical "Tus pacientes..." section: prevent desktop/laptop clipping. */
 body.medical-landing .medical-program-section {
-  background:
-    linear-gradient(90deg, rgba(255,255,255,.08) 0%, rgba(255,255,255,.42) 48%, rgba(255,255,255,.9) 100%),
-    url("../assets/images/medical-program-bg.png") 24% center / cover no-repeat !important;
+  background: url("../assets/images/medical-program-bg.png") 24% center / cover no-repeat !important;
   min-height: 0 !important;
   padding-block: clamp(70px, 7vw, 116px) !important;
 }
@@ -14247,7 +14245,7 @@ body.medical-landing .medical-program-section .medical-program-direct {
   margin-left: auto !important;
   max-width: 620px !important;
   padding: 0 !important;
-  transform: none !important;
+  transform: translateX(clamp(24px, 2vw, 42px)) !important;
   width: min(620px, 50%) !important;
 }
 
@@ -14294,9 +14292,7 @@ body.medical-landing .medical-program-section .medical-program-text p {
 
 @media (max-width: 1200px) {
   body.medical-landing .medical-program-section {
-    background:
-      linear-gradient(90deg, rgba(255,255,255,.42) 0%, rgba(255,255,255,.78) 52%, rgba(255,255,255,.96) 100%),
-      url("../assets/images/medical-program-bg.png") 30% center / cover no-repeat !important;
+    background: url("../assets/images/medical-program-bg.png") 30% center / cover no-repeat !important;
   }
 
   body.medical-landing .medical-program-section .medical-program-direct {
