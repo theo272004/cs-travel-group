@@ -14836,3 +14836,41 @@ body.medical-landing .medical-cta-action-bar .btn-dark:hover {
     margin-left: 0;
   }
 }
+
+/* Medical hero refinement: preserve zoom while letting the tablet breathe. */
+body.medical-landing .medical-hero .split-hero-title {
+  line-height: 1.11 !important;
+}
+
+@media (min-width: 1024px) {
+  body.medical-landing .medical-hero,
+  body.medical-landing .medical-hero .split-hero-image {
+    overflow: visible !important;
+  }
+
+  body.medical-landing .medical-hero .split-hero-content {
+    position: relative;
+    z-index: 3;
+  }
+
+  body.medical-landing .medical-hero .split-hero-image {
+    position: relative;
+    z-index: 2;
+  }
+
+  body.medical-landing .medical-hero .split-hero-image img {
+    bottom: auto !important;
+    height: 100% !important;
+    left: auto !important;
+    max-height: none !important;
+    max-width: none !important;
+    object-fit: contain !important;
+    object-position: right center !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) scale(1.08) !important;
+    transform-origin: right center !important;
+    width: auto !important;
+  }
+}
