@@ -11227,6 +11227,10 @@ body.b2b-landing:not(.medical-landing) .b2b-fit-section h2::after {
   margin-inline: 0;
 }
 
+body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text h2::after {
+  margin-top: 22px;
+}
+
 body.b2b-landing:not(.medical-landing) .btn {
   border-radius: 999px;
 }
