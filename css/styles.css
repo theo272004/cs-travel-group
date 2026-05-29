@@ -11262,6 +11262,99 @@ body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-result-card.a
   border-color: rgba(6, 43, 85, 0.08);
 }
 
+/* ===== Medical integrated calculator block ===== */
+body.medical-landing .medical-calc-feature {
+  background:
+    linear-gradient(180deg, rgba(239, 248, 255, 0.78) 0%, rgba(255, 255, 255, 0.92) 100%),
+    url("../assets/images/profiles-sky-bg.png") center center / cover no-repeat;
+}
+
+body.medical-landing .medical-calc-feature .container {
+  max-width: min(1460px, calc(100% - clamp(32px, 5vw, 88px)));
+  padding-inline: 0;
+}
+
+body.medical-landing .medical-calc-feature .company-calc-shell {
+  display: grid;
+  grid-template-columns: minmax(480px, 1.12fr) minmax(540px, 1fr);
+  align-items: center;
+  gap: clamp(42px, 6vw, 96px);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+body.medical-landing .medical-calc-feature .company-calc-intro {
+  max-width: 760px;
+}
+
+body.medical-landing .medical-calc-feature .company-calc-intro .intro-block-text h2 {
+  font-size: clamp(2.24rem, 1.56rem + 2vw, 3.45rem);
+  line-height: 1.05;
+  margin-bottom: 24px;
+  max-width: 18ch;
+}
+
+body.medical-landing .medical-calc-feature .company-calc-intro .intro-block-text h2::after {
+  background: #E6BC00;
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 22px;
+  width: 42px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+body.medical-landing .medical-calc-feature .company-calc-intro .intro-block-text p {
+  font-size: clamp(1.04rem, 0.94rem + 0.26vw, 1.16rem);
+  line-height: 1.76;
+  max-width: 58ch;
+}
+
+body.medical-landing .medical-calc-feature .company-calc-intro .intro-block-quote {
+  font-size: clamp(1.08rem, 0.98rem + 0.22vw, 1.18rem) !important;
+  margin-top: 22px !important;
+  max-width: 58ch !important;
+}
+
+body.medical-landing .medical-calc-feature .calc-card {
+  border-radius: 28px;
+  box-shadow: 0 24px 64px rgba(16, 42, 76, 0.1);
+  max-width: none;
+}
+
+body.medical-landing .medical-calc-feature .calc-header {
+  padding: 34px 38px 0;
+}
+
+body.medical-landing .medical-calc-feature .calc-header h2 {
+  font-size: clamp(2rem, 1.5rem + 1.5vw, 2.75rem);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+body.medical-landing .medical-calc-feature .calc-body {
+  padding: 28px 38px 34px;
+}
+
+body.medical-landing .medical-calc-feature .calc-results {
+  gap: 0;
+}
+
+body.medical-landing .medical-calc-feature .calc-result-card {
+  border-radius: 0;
+  box-shadow: none;
+  border-top: 1px solid rgba(6, 43, 85, 0.08);
+  border-bottom: 1px solid rgba(6, 43, 85, 0.08);
+}
+
+body.medical-landing .medical-calc-feature .calc-result-card + .calc-result-card {
+  border-left: 1px solid rgba(6, 43, 85, 0.08);
+}
+
+body.medical-landing .medical-calc-feature .calc-result-card.accent {
+  border-color: rgba(6, 43, 85, 0.08);
+}
+
 /* ===== Smaller companies marquee ===== */
 body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box,
 body.medical-landing .b2b-premium-logos .marquee-item-box {
@@ -11276,34 +11369,42 @@ body.medical-landing .b2b-premium-logos .marquee-item-box img {
 }
 
 @media (max-width: 1024px) {
-  body.b2b-landing:not(.medical-landing) .company-calc-feature .container {
+  body.b2b-landing:not(.medical-landing) .company-calc-feature .container,
+  body.medical-landing .medical-calc-feature .container {
     max-width: min(100% - 32px, 900px);
   }
 
-  body.b2b-landing:not(.medical-landing) .company-calc-shell {
+  body.b2b-landing:not(.medical-landing) .company-calc-shell,
+  body.medical-landing .medical-calc-feature .company-calc-shell {
     grid-template-columns: 1fr;
   }
 
   body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text h2,
-  body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text p {
+  body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text p,
+  body.medical-landing .medical-calc-feature .company-calc-intro .intro-block-text h2,
+  body.medical-landing .medical-calc-feature .company-calc-intro .intro-block-text p {
     max-width: none;
   }
 }
 
 @media (max-width: 640px) {
-  body.b2b-landing:not(.medical-landing) .company-calc-intro {
+  body.b2b-landing:not(.medical-landing) .company-calc-intro,
+  body.medical-landing .medical-calc-feature .company-calc-intro {
     max-width: none;
   }
 
-  body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-header {
+  body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-header,
+  body.medical-landing .medical-calc-feature .calc-header {
     padding: 26px 22px 0;
   }
 
-  body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-body {
+  body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-body,
+  body.medical-landing .medical-calc-feature .calc-body {
     padding: 22px 22px 26px;
   }
 
-  body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-result-card + .calc-result-card {
+  body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-result-card + .calc-result-card,
+  body.medical-landing .medical-calc-feature .calc-result-card + .calc-result-card {
     border-left: 0;
     border-top: 1px solid rgba(6, 43, 85, 0.08);
   }

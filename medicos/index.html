@@ -194,6 +194,58 @@
       </div>
     </section>
 
+    <section class="calc-section company-calc-feature medical-calc-feature" id="calculadora" data-nav-label="Calculadora">
+      <div class="container">
+        <div class="company-calc-shell reveal">
+          <div class="company-calc-intro">
+            <div class="intro-block-text">
+              <h2>Cada vez que un paciente viaja, tu consulta puede generar un retorno adicional</h2>
+              <p>Tus pacientes ya necesitan vuelos, hospedaje y traslados para llegar a su procedimiento. Con CS Travel, esa logística se convierte en una experiencia organizada para ellos y en un ingreso adicional para ti.</p>
+              <p class="intro-block-quote">Sin trabajo ni inversión adicional.</p>
+            </div>
+          </div>
+
+          <div class="calc-card">
+            <div class="calc-header">
+              <h2 data-i18n="company_calc_title">Calcula tu retorno</h2>
+            </div>
+            <div class="calc-body">
+              <div class="calc-inputs">
+                <div class="calc-input-group">
+                  <label for="calc-trips" data-i18n="company_calc_trips_label">Número de viajes al mes</label>
+                  <div class="calc-slider-wrap">
+                    <input type="range" id="calc-trips" min="1" max="100" value="10" class="calc-range">
+                    <span class="calc-range-value" id="calc-trips-val">10</span>
+                  </div>
+                </div>
+                <div class="calc-input-group">
+                  <label for="calc-value" data-i18n="company_calc_value_label">Valor promedio por viaje (USD)</label>
+                  <div class="calc-slider-wrap">
+                    <input type="range" id="calc-value" min="100" max="10000" value="2500" step="100" class="calc-range">
+                    <span class="calc-range-value" id="calc-value-val">$2,500</span>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-results">
+                <div class="calc-result-card accent">
+                  <span class="calc-result-number" id="calc-monthly">$296</span>
+                  <span class="calc-result-label" data-i18n="company_calc_return_monthly">Tu retorno mensual</span>
+                </div>
+                <div class="calc-result-card">
+                  <span class="calc-result-number" id="calc-annual">$3,557</span>
+                  <span class="calc-result-label" data-i18n="company_calc_return_annual">Tu retorno anual</span>
+                </div>
+                <div class="calc-result-card">
+                  <span class="calc-result-number" id="calc-saving">$24,000</span>
+                  <span class="calc-result-label" data-i18n="company_calc_saving">Ahorro anual vs. mostrador</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="medical-specialties medical-specialties-light">
       <div class="container">
         <div class="section-header reveal">
@@ -382,6 +434,37 @@
           }
         });
       });
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tripsSlider = document.getElementById('calc-trips');
+      const valueSlider = document.getElementById('calc-value');
+      const tripsVal = document.getElementById('calc-trips-val');
+      const valueVal = document.getElementById('calc-value-val');
+      const monthlyEl = document.getElementById('calc-monthly');
+      const annualEl = document.getElementById('calc-annual');
+      const savingEl = document.getElementById('calc-saving');
+      if (!tripsSlider || !valueSlider) return;
+
+      const fmt = n => '$' + Math.round(n).toLocaleString('en-US');
+      const calculate = () => {
+        const trips = parseInt(tripsSlider.value);
+        const value = parseInt(valueSlider.value);
+        const annualTrips = trips * 12;
+        const retornoAnual = annualTrips * value * 0.11 * 0.82 * 0.36;
+        const ahorroAnual = annualTrips * value * 0.08;
+        const retornoMensual = retornoAnual / 12;
+        tripsVal.textContent = trips;
+        valueVal.textContent = fmt(value);
+        monthlyEl.textContent = fmt(retornoMensual);
+        annualEl.textContent = fmt(retornoAnual);
+        savingEl.textContent = fmt(ahorroAnual);
+      };
+
+      tripsSlider.addEventListener('input', calculate);
+      valueSlider.addEventListener('input', calculate);
+      calculate();
     });
   </script>
 
