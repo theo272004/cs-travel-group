@@ -15146,9 +15146,22 @@ body.medical-landing .medical-hero .split-hero-desc {
   text-shadow: none !important;
 }
 
+body.medical-landing .medical-program-section {
+  background-position: 20% center !important;
+  min-height: clamp(620px, 70vh, 760px) !important;
+  padding-block: clamp(92px, 8vw, 130px) !important;
+}
+
+body.medical-landing .medical-program-section .container {
+  max-width: 1440px !important;
+  padding-left: clamp(20px, 5vw, 64px) !important;
+  padding-right: clamp(18px, 2vw, 32px) !important;
+}
+
 body.medical-landing .medical-program-section .medical-program-direct {
-  max-width: 780px !important;
-  width: min(780px, 58%) !important;
+  max-width: 760px !important;
+  transform: translateX(clamp(12px, 1.8vw, 30px)) !important;
+  width: min(760px, 56%) !important;
 }
 
 body.medical-landing .medical-program-section .medical-program-copy h2 {
@@ -15266,9 +15279,134 @@ body.medical-landing .medical-process-cards.company-model-grid .company-model-ca
   border-color: var(--accent) !important;
 }
 
+body.medical-landing .medical-specialty-carousel-section {
+  background: linear-gradient(180deg, #fff 0%, #f6fbff 100%) !important;
+  overflow: hidden;
+  padding-block: clamp(76px, 8vw, 112px) !important;
+}
+
+body.medical-landing .medical-specialty-carousel-wrap {
+  align-items: center;
+  display: flex;
+  gap: clamp(28px, 4vw, 58px);
+  margin-top: clamp(-120px, -8vw, -72px);
+  padding-left: clamp(24px, 5vw, 76px);
+  padding-right: 0;
+}
+
+body.medical-landing .medical-specialty-intro {
+  flex: 0 0 clamp(320px, 26vw, 440px);
+  max-width: 440px;
+}
+
+body.medical-landing .medical-specialty-intro h2 {
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: clamp(2.1rem, 3vw, 3.05rem);
+  line-height: 1.08;
+  margin: 0 0 18px;
+}
+
+body.medical-landing .medical-specialty-intro h2::after {
+  background: var(--accent);
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 14px;
+  width: 44px;
+}
+
+body.medical-landing .medical-specialty-intro p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin: 0 0 16px;
+}
+
+body.medical-landing .medical-specialty-intro .medical-specialty-note-text {
+  margin-bottom: 26px;
+}
+
+body.medical-landing .medical-specialty-carousel {
+  display: flex;
+  gap: clamp(18px, 2.2vw, 28px);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding: 8px clamp(24px, 5vw, 80px) 20px 0;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+body.medical-landing .medical-specialty-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+body.medical-landing .medical-specialty-slide {
+  background: var(--primary);
+  border-radius: 20px;
+  box-shadow: 0 28px 70px rgba(6, 43, 85, .16);
+  flex: 0 0 clamp(320px, 29vw, 430px);
+  height: clamp(420px, 52vw, 560px);
+  overflow: hidden;
+  position: relative;
+  scroll-snap-align: start;
+}
+
+body.medical-landing .medical-specialty-slide::after {
+  background: linear-gradient(180deg, rgba(3, 23, 45, 0) 34%, rgba(3, 23, 45, .84) 100%);
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+body.medical-landing .medical-specialty-slide img {
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.01);
+  transition: transform .35s ease;
+  width: 100%;
+}
+
+body.medical-landing .medical-specialty-slide:first-child img {
+  object-position: 72% center;
+}
+
+body.medical-landing .medical-specialty-slide:hover img {
+  transform: scale(1.055);
+}
+
+body.medical-landing .medical-specialty-slide-copy {
+  bottom: clamp(26px, 3vw, 38px);
+  left: clamp(24px, 3vw, 34px);
+  max-width: min(82%, 330px);
+  position: absolute;
+  right: clamp(24px, 3vw, 34px);
+  z-index: 2;
+}
+
+body.medical-landing .medical-specialty-slide-copy span {
+  color: var(--accent);
+  display: block;
+  font-family: var(--font-heading);
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+body.medical-landing .medical-specialty-slide-copy h3 {
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(1.7rem, 2.3vw, 2.25rem);
+  line-height: 1.02;
+  margin: 0;
+}
+
 @media (max-width: 1280px) {
   body.medical-landing .medical-program-section .medical-program-direct {
-    width: min(720px, 62%) !important;
+    width: min(720px, 58%) !important;
   }
 
   body.medical-landing .medical-process-cards.company-model-grid {
@@ -15288,13 +15426,39 @@ body.medical-landing .medical-process-cards.company-model-grid .company-model-ca
 }
 
 @media (max-width: 900px) {
+  body.medical-landing .medical-program-section {
+    min-height: 0 !important;
+  }
+
   body.medical-landing .medical-program-section .medical-program-direct {
     max-width: 100% !important;
+    transform: none !important;
     width: 100% !important;
   }
 
   body.medical-landing .medical-program-section .medical-program-copy .medical-program-title-line {
     text-align: left !important;
+  }
+
+  body.medical-landing .medical-specialty-carousel-wrap {
+    align-items: stretch;
+    display: block;
+    margin-top: 0;
+    padding-left: 24px;
+  }
+
+  body.medical-landing .medical-specialty-intro {
+    max-width: min(620px, calc(100vw - 48px));
+  }
+
+  body.medical-landing .medical-specialty-carousel {
+    margin-top: 28px;
+    padding-left: 0;
+  }
+
+  body.medical-landing .medical-specialty-slide {
+    flex-basis: min(78vw, 380px);
+    height: 430px;
   }
 }
 
