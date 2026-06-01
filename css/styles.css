@@ -15140,8 +15140,10 @@ body.medical-landing .medical-hero-highlight-nowrap {
 }
 
 body.medical-landing .medical-hero .split-hero-desc {
+  color: var(--text-secondary) !important;
   font-weight: 400 !important;
   max-width: 44rem !important;
+  text-shadow: none !important;
 }
 
 body.medical-landing .medical-program-section .medical-program-direct {
