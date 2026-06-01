@@ -1234,6 +1234,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
+      const medicalSpecialtyWrapper = document.querySelector('.medical-specialty-carousel-wrap');
+      const shouldPinMedicalSpecialties = window.matchMedia('(min-width: 901px)').matches;
+      if (medicalSpecialtyWrapper && shouldPinMedicalSpecialties && !reducedMotion && medicalSpecialtyWrapper.scrollWidth > window.innerWidth) {
+        gsap.to(medicalSpecialtyWrapper, {
+          x: () => -(medicalSpecialtyWrapper.scrollWidth - window.innerWidth),
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.medical-specialty-carousel-section',
+            start: 'top top',
+            end: () => `+=${medicalSpecialtyWrapper.scrollWidth - window.innerWidth}`,
+            pin: true,
+            scrub: 1,
+            invalidateOnRefresh: true,
+          }
+        });
+      }
+
       // 3. Section Reveals
       const revealElements = document.querySelectorAll('.reveal');
       if (desktopMotion) {

@@ -15292,6 +15292,7 @@ body.medical-landing .medical-specialty-carousel-wrap {
   margin-top: clamp(-120px, -8vw, -72px);
   padding-left: clamp(24px, 5vw, 76px);
   padding-right: 0;
+  width: max-content;
 }
 
 body.medical-landing .medical-specialty-intro {
@@ -15330,7 +15331,7 @@ body.medical-landing .medical-specialty-intro .medical-specialty-note-text {
 body.medical-landing .medical-specialty-carousel {
   display: flex;
   gap: clamp(18px, 2.2vw, 28px);
-  overflow-x: auto;
+  overflow: visible;
   overscroll-behavior-x: contain;
   padding: 8px clamp(24px, 5vw, 80px) 20px 0;
   scroll-snap-type: x mandatory;
@@ -15345,8 +15346,8 @@ body.medical-landing .medical-specialty-slide {
   background: var(--primary);
   border-radius: 20px;
   box-shadow: 0 28px 70px rgba(6, 43, 85, .16);
-  flex: 0 0 clamp(320px, 29vw, 430px);
-  height: clamp(420px, 52vw, 560px);
+  flex: 0 0 clamp(310px, 25vw, 380px);
+  height: clamp(310px, 25vw, 380px);
   overflow: hidden;
   position: relative;
   scroll-snap-align: start;
@@ -15377,31 +15378,37 @@ body.medical-landing .medical-specialty-slide:hover img {
 }
 
 body.medical-landing .medical-specialty-slide-copy {
-  bottom: clamp(26px, 3vw, 38px);
+  bottom: clamp(24px, 2.6vw, 34px);
+  display: grid;
+  grid-template-rows: 18px 1fr;
   left: clamp(24px, 3vw, 34px);
   max-width: min(82%, 330px);
+  min-height: 104px;
   position: absolute;
   right: clamp(24px, 3vw, 34px);
   z-index: 2;
 }
 
 body.medical-landing .medical-specialty-slide-copy span {
+  align-self: start;
   color: var(--accent);
   display: block;
   font-family: var(--font-heading);
   font-size: .82rem;
   font-weight: 800;
   letter-spacing: .12em;
-  margin-bottom: 16px;
+  line-height: 1;
+  margin: 0;
   text-transform: uppercase;
 }
 
 body.medical-landing .medical-specialty-slide-copy h3 {
+  align-self: start;
   color: #fff;
   font-family: var(--font-heading);
-  font-size: clamp(1.7rem, 2.3vw, 2.25rem);
-  line-height: 1.02;
-  margin: 0;
+  font-size: clamp(1.55rem, 1.8vw, 1.95rem);
+  line-height: 1.05;
+  margin: 16px 0 0;
 }
 
 @media (max-width: 1280px) {
@@ -15445,6 +15452,7 @@ body.medical-landing .medical-specialty-slide-copy h3 {
     display: block;
     margin-top: 0;
     padding-left: 24px;
+    width: auto;
   }
 
   body.medical-landing .medical-specialty-intro {
@@ -15453,12 +15461,13 @@ body.medical-landing .medical-specialty-slide-copy h3 {
 
   body.medical-landing .medical-specialty-carousel {
     margin-top: 28px;
+    overflow-x: auto;
     padding-left: 0;
   }
 
   body.medical-landing .medical-specialty-slide {
     flex-basis: min(78vw, 380px);
-    height: 430px;
+    height: min(78vw, 380px);
   }
 }
 
