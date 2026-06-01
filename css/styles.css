@@ -15285,18 +15285,18 @@ body.medical-landing .medical-complete-service {
 }
 
 body.medical-landing .medical-complete-service .container {
-  max-width: 1240px;
+  max-width: min(1460px, calc(100vw - 64px));
 }
 
 body.medical-landing .medical-complete-service-grid {
   align-items: center;
   display: grid;
-  gap: clamp(34px, 5vw, 72px);
-  grid-template-columns: minmax(0, .95fr) minmax(420px, 1.05fr);
+  gap: clamp(48px, 7vw, 118px);
+  grid-template-columns: minmax(430px, .88fr) minmax(560px, 1.12fr);
 }
 
 body.medical-landing .medical-complete-service-copy {
-  max-width: 560px;
+  max-width: 620px;
 }
 
 body.medical-landing .medical-complete-service-copy h2 {
@@ -15349,16 +15349,15 @@ body.medical-landing .medical-complete-service-list li {
 
 body.medical-landing .medical-complete-service-list li::before {
   align-items: center;
-  background: var(--accent);
+  background: transparent;
+  border: 2px solid #0d65bf;
   border-radius: 999px;
-  color: var(--primary);
-  content: "✓";
+  content: "";
   display: inline-flex;
-  font-size: .82rem;
-  font-weight: 900;
-  height: 22px;
+  height: 10px;
   justify-content: center;
-  width: 22px;
+  margin-left: 5px;
+  width: 10px;
 }
 
 body.medical-landing .medical-complete-service-media {
@@ -15369,7 +15368,7 @@ body.medical-landing .medical-complete-service-media {
 }
 
 body.medical-landing .medical-complete-service-media img {
-  aspect-ratio: 1.34 / 1;
+  aspect-ratio: 1.5 / 1;
   display: block;
   height: 100%;
   object-fit: cover;
@@ -15385,7 +15384,7 @@ body.medical-landing .medical-standards {
 }
 
 body.medical-landing .medical-standards .container {
-  max-width: 1210px;
+  max-width: min(1360px, calc(100vw - 64px));
 }
 
 body.medical-landing .medical-standards-header {
@@ -15427,8 +15426,10 @@ body.medical-landing .medical-standards-header p {
 
 body.medical-landing .medical-standards-grid {
   display: grid;
-  gap: 22px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-inline: auto;
+  max-width: 1180px;
 }
 
 body.medical-landing .medical-standard-card {
@@ -15440,8 +15441,8 @@ body.medical-landing .medical-standard-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 230px;
-  padding: 30px 24px;
+  min-height: 190px;
+  padding: 34px 40px;
   text-align: center;
 }
 
@@ -15746,6 +15747,11 @@ body.medical-landing .medical-specialty-slide-copy h3 {
 
   body.medical-landing .medical-complete-service-grid {
     grid-template-columns: 1fr;
+  }
+
+  body.medical-landing .medical-complete-service .container,
+  body.medical-landing .medical-standards .container {
+    max-width: min(100%, calc(100vw - 40px));
   }
 
   body.medical-landing .medical-complete-service-copy {
