@@ -15176,12 +15176,12 @@ body.medical-landing .medical-program-section .medical-program-copy .medical-pro
 }
 
 body.medical-landing .medical-program-section .medical-program-text p {
-  font-size: .98rem !important;
+  font-size: 1rem !important;
   line-height: 1.56 !important;
   font-weight: 400 !important;
   max-width: 100% !important;
   text-align: justify !important;
-  text-align-last: left;
+  text-align-last: right;
 }
 
 body.medical-landing .medical-program-section .medical-program-text p strong {
@@ -15269,7 +15269,7 @@ body.medical-landing .medical-process-cards.company-model-grid .company-model-co
 
 body.medical-landing .medical-process-cards.company-model-grid .company-model-copy p {
   color: var(--text-secondary) !important;
-  font-size: .94rem !important;
+  font-size: .98rem !important;
   line-height: 1.5 !important;
   margin: 0 auto !important;
   max-width: 27ch !important;
@@ -15320,7 +15320,7 @@ body.medical-landing .medical-complete-service-copy h2::after {
 
 body.medical-landing .medical-complete-service-copy p {
   color: var(--text-secondary);
-  font-size: .98rem;
+  font-size: 1rem;
   line-height: 1.62;
   margin: 0 0 18px;
   text-align: justify;
@@ -15344,8 +15344,8 @@ body.medical-landing .medical-complete-service-list li {
   align-items: center;
   color: var(--primary);
   display: grid;
-  font-size: .98rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 400;
   gap: 12px;
   grid-template-columns: 22px minmax(0, 1fr);
   line-height: 1.35;
@@ -15422,7 +15422,7 @@ body.medical-landing .medical-behind-scenes-copy h2::after {
 
 body.medical-landing .medical-standards-header p {
   color: var(--text-secondary);
-  font-size: .98rem;
+  font-size: 1rem;
   line-height: 1.55;
   margin: 20px auto 0;
   max-width: 720px;
@@ -15466,7 +15466,7 @@ body.medical-landing .medical-standard-card h3 {
 
 body.medical-landing .medical-standard-card p {
   color: var(--text-secondary);
-  font-size: .98rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin: 0;
 }
@@ -15489,7 +15489,7 @@ body.medical-landing .medical-behind-scenes-copy .section-label {
 
 body.medical-landing .medical-behind-scenes-copy p {
   color: var(--text-secondary);
-  font-size: .98rem;
+  font-size: 1rem;
   line-height: 1.62;
   margin: 22px auto 0;
   max-width: 800px;
@@ -15552,8 +15552,8 @@ body.medical-landing .medical-closing-cta .medical-proof-panel h2::after {
 
 body.medical-landing .medical-closing-cta .medical-proof-panel p {
   color: rgba(255, 255, 255, .88) !important;
-  font-size: .98rem !important;
-  font-weight: 500;
+  font-size: 1rem !important;
+  font-weight: 400;
   line-height: 1.58 !important;
   margin: 22px auto 0 !important;
   max-width: 680px !important;
@@ -15567,8 +15567,9 @@ body.medical-landing .medical-closing-cta .medical-cta-action-bar {
   display: flex !important;
   gap: 14px !important;
   justify-content: center !important;
-  margin-top: 34px !important;
+  margin: 34px auto 0 !important;
   padding: 0 !important;
+  width: fit-content !important;
 }
 
 body.medical-landing .medical-closing-cta .btn-primary {
@@ -15645,7 +15646,7 @@ body.medical-landing .medical-specialty-intro h2::after {
 
 body.medical-landing .medical-specialty-intro p {
   color: var(--text-secondary);
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.55;
   margin: 0 0 16px;
 }
@@ -15843,6 +15844,7 @@ body.medical-landing .medical-specialty-slide-copy h3 {
   body.medical-landing .medical-closing-cta .medical-cta-action-bar {
     align-items: stretch !important;
     flex-direction: column !important;
+    width: 100% !important;
   }
 
   body.medical-landing .medical-closing-cta .medical-cta-action-bar .btn {
