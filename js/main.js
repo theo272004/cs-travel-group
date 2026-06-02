@@ -1227,21 +1227,26 @@ document.addEventListener('DOMContentLoaded', () => {
       const shouldPinDestinations = window.matchMedia('(min-width: 901px)').matches;
       if (scrollWrapper && shouldPinDestinations && !reducedMotion && scrollWrapper.scrollWidth > window.innerWidth) {
         const getDestinationScrollDistance = () => {
-          const finalBreathingRoom = Math.min(180, window.innerWidth * 0.1);
-          return scrollWrapper.scrollWidth - window.innerWidth + finalBreathingRoom;
+          return scrollWrapper.scrollWidth - window.innerWidth;
         };
-        gsap.to(scrollWrapper, {
-          x: () => -getDestinationScrollDistance(),
-          ease: 'none',
+        const destinationsTimeline = gsap.timeline({
           scrollTrigger: {
             trigger: '.destinations-scroll',
             start: 'top top',
-            end: () => `+=${getDestinationScrollDistance() + 260}`,
+            end: () => `+=${getDestinationScrollDistance() + 320}`,
             pin: true,
-            scrub: 0.6,
+            scrub: 0.35,
             invalidateOnRefresh: true,
           }
         });
+
+        destinationsTimeline
+          .to(scrollWrapper, {
+            x: () => -getDestinationScrollDistance(),
+            ease: 'none',
+            duration: 1,
+          })
+          .to({}, { duration: 0.16 });
       }
 
       const medicalSpecialtyWrapper = document.querySelector('.medical-specialty-carousel');
