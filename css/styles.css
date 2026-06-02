@@ -15472,7 +15472,7 @@ body.medical-landing .medical-standard-card p {
 }
 
 body.medical-landing .medical-behind-scenes {
-  background: #fff;
+  background: linear-gradient(135deg, #07172b 0%, var(--primary) 58%, #17375e 100%);
   min-height: 0 !important;
   padding-block: clamp(66px, 7vw, 102px);
 }
@@ -15485,10 +15485,15 @@ body.medical-landing .medical-behind-scenes-copy {
 
 body.medical-landing .medical-behind-scenes-copy .section-label {
   justify-content: center;
+  color: var(--accent) !important;
+}
+
+body.medical-landing .medical-behind-scenes-copy h2 {
+  color: #fff !important;
 }
 
 body.medical-landing .medical-behind-scenes-copy p {
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.8) !important;
   font-size: 1rem;
   line-height: 1.62;
   margin: 22px auto 0;
