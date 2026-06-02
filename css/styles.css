@@ -15989,31 +15989,27 @@ body.medical-landing .medical-patient-grid {
 
 body.medical-landing .medical-patient-card {
   width: 100%;
-  max-width: 360px;
+  max-width: 440px; /* Made them bigger! */
   display: flex;
   justify-content: center;
 }
 
 body.medical-landing .medical-patient-phone-wrapper {
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
-  border-radius: 28px;
-  box-shadow: 0 20px 48px rgba(6, 43, 85, 0.05);
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
-  background: transparent;
-  aspect-ratio: 1480 / 480; /* Clip to show only the question bubble initially */
-}
-
-body.medical-landing .medical-patient-phone-wrapper:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 28px 58px rgba(6, 43, 85, 0.12);
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 body.medical-landing .medical-patient-phone-scroll {
   width: 100%;
   display: block;
-  transition: transform 0.8s cubic-bezier(0.25, 1, 0.36, 1);
+  transition: clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  clip-path: inset(0 0 68% 0); /* Hide the answer bubble initially */
   transform: translateY(0);
 }
 
@@ -16024,7 +16020,12 @@ body.medical-landing .medical-patient-phone-img {
 }
 
 body.medical-landing .medical-patient-card:hover .medical-patient-phone-scroll {
-  transform: translateY(-27%); /* Slide up to reveal the answer bubble */
+  clip-path: inset(0 0 0% 0); /* Reveal the entire phone, showing both question and answer */
+  transform: translateY(-25px); /* Slide up to show both bubbles */
+}
+
+body.medical-landing .medical-patient-card:hover .medical-patient-phone-wrapper {
+  transform: translateY(-8px); /* Lift phone slightly on hover */
 }
 
 /* Yellow patient benefit banner */
@@ -16060,17 +16061,18 @@ body.medical-landing .medical-patient-banner p {
   }
 
   body.medical-landing .medical-patient-phone-wrapper {
-    aspect-ratio: 1480 / 1518; /* Show the entire phone screen on mobile */
-    border-radius: 0;
-    box-shadow: none;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
   }
   
   body.medical-landing .medical-patient-phone-wrapper:hover {
     transform: none;
-    box-shadow: none;
   }
   
   body.medical-landing .medical-patient-phone-scroll {
+    clip-path: none !important; /* Show full phone on mobile */
     transform: none !important;
   }
 }
