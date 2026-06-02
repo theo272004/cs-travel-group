@@ -1244,7 +1244,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
-      const medicalSpecialtyWrapper = document.querySelector('.medical-specialty-carousel-wrap');
+      const medicalSpecialtyWrapper = document.querySelector('.medical-specialty-carousel');
       const shouldPinMedicalSpecialties = window.matchMedia('(min-width: 901px)').matches;
       if (medicalSpecialtyWrapper && shouldPinMedicalSpecialties && !reducedMotion && medicalSpecialtyWrapper.scrollWidth > window.innerWidth) {
         gsap.to(medicalSpecialtyWrapper, {
