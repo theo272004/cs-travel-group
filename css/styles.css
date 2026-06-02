@@ -15982,7 +15982,7 @@ body.medical-landing .medical-patient-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(20px, 3.2vw, 44px);
-  margin-top: 50px;
+  margin-top: clamp(96px, 8vw, 132px);
   justify-items: center;
   align-items: start;
 }
@@ -15992,25 +15992,26 @@ body.medical-landing .medical-patient-card {
   max-width: 440px; /* Made them bigger! */
   display: flex;
   justify-content: center;
+  min-height: clamp(260px, 22vw, 320px);
 }
 
 body.medical-landing .medical-patient-phone-wrapper {
   width: 100%;
-  margin-top: 16px;
+  height: clamp(92px, 7.2vw, 106px);
+  margin-top: 0;
   overflow: hidden;
   position: relative;
-  border-radius: 28px;
-  box-shadow: 0 20px 48px rgba(6, 43, 85, 0.05);
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+  border-radius: 0;
+  box-shadow: none;
+  transition: height 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
   transform: translateY(0);
   background: transparent;
-  aspect-ratio: 1480 / 430; /* Clip before the answer bubble in the resting state */
 }
 
 body.medical-landing .medical-patient-phone-wrapper:hover,
 body.medical-landing .medical-patient-card.is-phone-hovered .medical-patient-phone-wrapper {
-  transform: translateY(-26px);
-  box-shadow: 0 28px 58px rgba(6, 43, 85, 0.12);
+  height: clamp(238px, 19vw, 282px);
+  transform: translateY(-92px);
 }
 
 body.medical-landing .medical-patient-phone-scroll {
@@ -16029,7 +16030,7 @@ body.medical-landing .medical-patient-phone-img {
 body.medical-landing .medical-patient-card:hover .medical-patient-phone-scroll,
 body.medical-landing .medical-patient-phone-wrapper:hover .medical-patient-phone-scroll,
 body.medical-landing .medical-patient-card.is-phone-hovered .medical-patient-phone-scroll {
-  transform: translateY(-27.5%); /* Slide up only through the answer bubble */
+  transform: translateY(-18%);
 }
 
 /* Yellow patient benefit banner */
@@ -16038,7 +16039,7 @@ body.medical-landing .medical-patient-banner {
   border-radius: 20px;
   padding: clamp(20px, 3vw, 30px) clamp(24px, 4vw, 48px);
   max-width: 960px;
-  margin: clamp(48px, 6vw, 76px) auto 0;
+  margin: clamp(72px, 8vw, 116px) auto 0;
   text-align: center;
   box-shadow: 0 14px 32px rgba(255, 210, 31, 0.14);
 }

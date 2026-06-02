@@ -1266,13 +1266,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
-      document.querySelectorAll('.medical-patient-card').forEach(card => {
-        const hoverTargets = [card, card.querySelector('.medical-patient-phone-wrapper'), card.querySelector('.medical-patient-phone-img')].filter(Boolean);
-        hoverTargets.forEach(target => {
-          target.addEventListener('pointerenter', () => card.classList.add('is-phone-hovered'));
+      const patientPhoneCards = document.querySelectorAll('.medical-patient-card');
+      const patientPhoneGrid = document.querySelector('.medical-patient-grid');
+      if (patientPhoneCards.length && patientPhoneGrid) {
+        document.addEventListener('pointermove', (event) => {
+          patientPhoneCards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            const isInside = event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom;
+            card.classList.toggle('is-phone-hovered', isInside);
+          });
         });
-        card.addEventListener('pointerleave', () => card.classList.remove('is-phone-hovered'));
-      });
+      }
 
       // 3. Section Reveals
       const revealElements = document.querySelectorAll('.reveal');
