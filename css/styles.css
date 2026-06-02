@@ -15996,20 +15996,27 @@ body.medical-landing .medical-patient-card {
 
 body.medical-landing .medical-patient-phone-wrapper {
   width: 100%;
-  overflow: visible;
+  margin-top: 16px;
+  overflow: hidden;
   position: relative;
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  border-radius: 0 !important;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 28px;
+  box-shadow: 0 20px 48px rgba(6, 43, 85, 0.05);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+  transform: translateY(0);
+  background: transparent;
+  aspect-ratio: 1480 / 430; /* Clip before the answer bubble in the resting state */
+}
+
+body.medical-landing .medical-patient-phone-wrapper:hover,
+body.medical-landing .medical-patient-card.is-phone-hovered .medical-patient-phone-wrapper {
+  transform: translateY(-26px);
+  box-shadow: 0 28px 58px rgba(6, 43, 85, 0.12);
 }
 
 body.medical-landing .medical-patient-phone-scroll {
   width: 100%;
   display: block;
-  transition: clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  clip-path: inset(0 0 68% 0); /* Hide the answer bubble initially */
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   transform: translateY(0);
 }
 
@@ -16019,13 +16026,10 @@ body.medical-landing .medical-patient-phone-img {
   display: block;
 }
 
-body.medical-landing .medical-patient-card:hover .medical-patient-phone-scroll {
-  clip-path: inset(0 0 0% 0); /* Reveal the entire phone, showing both question and answer */
-  transform: translateY(-25px); /* Slide up to show both bubbles */
-}
-
-body.medical-landing .medical-patient-card:hover .medical-patient-phone-wrapper {
-  transform: translateY(-8px); /* Lift phone slightly on hover */
+body.medical-landing .medical-patient-card:hover .medical-patient-phone-scroll,
+body.medical-landing .medical-patient-phone-wrapper:hover .medical-patient-phone-scroll,
+body.medical-landing .medical-patient-card.is-phone-hovered .medical-patient-phone-scroll {
+  transform: translateY(-27.5%); /* Slide up only through the answer bubble */
 }
 
 /* Yellow patient benefit banner */
@@ -16042,7 +16046,7 @@ body.medical-landing .medical-patient-banner {
 body.medical-landing .medical-patient-banner p {
   color: var(--primary) !important;
   font-family: var(--font-heading);
-  font-size: clamp(1.05rem, 1.3vw, 1.25rem) !important;
+  font-size: clamp(1rem, 1.08vw, 1.14rem) !important;
   font-weight: 700 !important;
   line-height: 1.45 !important;
   margin: 0 !important;
@@ -16061,10 +16065,10 @@ body.medical-landing .medical-patient-banner p {
   }
 
   body.medical-landing .medical-patient-phone-wrapper {
-    background: transparent !important;
-    box-shadow: none !important;
-    border: none !important;
-    border-radius: 0 !important;
+    aspect-ratio: 1480 / 1518; /* Show the entire phone screen on mobile */
+    border-radius: 0;
+    margin-top: 0;
+    box-shadow: none;
   }
   
   body.medical-landing .medical-patient-phone-wrapper:hover {
@@ -16076,4 +16080,3 @@ body.medical-landing .medical-patient-banner p {
     transform: none !important;
   }
 }
-
