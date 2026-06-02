@@ -15992,33 +15992,33 @@ body.medical-landing .medical-patient-card {
   max-width: 440px; /* Made them bigger! */
   display: flex;
   justify-content: center;
-  min-height: clamp(260px, 22vw, 320px);
+  align-items: flex-start;
+  min-height: clamp(238px, 19vw, 282px);
 }
 
 body.medical-landing .medical-patient-phone-wrapper {
   width: 100%;
-  height: clamp(92px, 7.2vw, 106px);
+  height: clamp(238px, 19vw, 282px);
   margin-top: 0;
   overflow: hidden;
   position: relative;
   border-radius: 0;
   box-shadow: none;
-  transition: height 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
   transform: translateY(0);
   background: transparent;
 }
 
 body.medical-landing .medical-patient-phone-wrapper:hover,
 body.medical-landing .medical-patient-card.is-phone-hovered .medical-patient-phone-wrapper {
-  height: clamp(238px, 19vw, 282px);
-  transform: translateY(-92px);
+  transform: none;
 }
 
 body.medical-landing .medical-patient-phone-scroll {
   width: 100%;
   display: block;
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  transform: translateY(0);
+  transform: translateY(clamp(150px, 12vw, 176px));
 }
 
 body.medical-landing .medical-patient-phone-img {
@@ -16030,7 +16030,7 @@ body.medical-landing .medical-patient-phone-img {
 body.medical-landing .medical-patient-card:hover .medical-patient-phone-scroll,
 body.medical-landing .medical-patient-phone-wrapper:hover .medical-patient-phone-scroll,
 body.medical-landing .medical-patient-card.is-phone-hovered .medical-patient-phone-scroll {
-  transform: translateY(-18%);
+  transform: translateY(clamp(4px, .7vw, 12px));
 }
 
 /* Yellow patient benefit banner */
@@ -16039,7 +16039,7 @@ body.medical-landing .medical-patient-banner {
   border-radius: 20px;
   padding: clamp(20px, 3vw, 30px) clamp(24px, 4vw, 48px);
   max-width: 960px;
-  margin: clamp(72px, 8vw, 116px) auto 0;
+  margin: clamp(28px, 3.2vw, 44px) auto 0;
   text-align: center;
   box-shadow: 0 14px 32px rgba(255, 210, 31, 0.14);
 }
