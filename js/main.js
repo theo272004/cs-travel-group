@@ -1226,15 +1226,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const scrollWrapper = document.querySelector('.scroll-wrapper');
       const shouldPinDestinations = window.matchMedia('(min-width: 901px)').matches;
       if (scrollWrapper && shouldPinDestinations && !reducedMotion && scrollWrapper.scrollWidth > window.innerWidth) {
+        const getDestinationScrollDistance = () => {
+          const finalBreathingRoom = Math.min(180, window.innerWidth * 0.1);
+          return scrollWrapper.scrollWidth - window.innerWidth + finalBreathingRoom;
+        };
         gsap.to(scrollWrapper, {
-          x: () => -(scrollWrapper.scrollWidth - window.innerWidth),
+          x: () => -getDestinationScrollDistance(),
           ease: 'none',
           scrollTrigger: {
             trigger: '.destinations-scroll',
             start: 'top top',
-            end: () => `+=${scrollWrapper.scrollWidth - window.innerWidth}`,
+            end: () => `+=${getDestinationScrollDistance() + 260}`,
             pin: true,
-            scrub: 1,
+            scrub: 0.6,
             invalidateOnRefresh: true,
           }
         });
