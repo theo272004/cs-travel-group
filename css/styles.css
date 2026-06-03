@@ -2415,6 +2415,235 @@ body.medical-landing .medical-proof-cards {
   }
 }
 
+/* ===== Medical page final coherence pass ===== */
+body.medical-landing .medical-hero .hero-highlight {
+  display: inline-block;
+  margin-top: 0.12em;
+  padding-top: 0.02em;
+}
+
+body.medical-landing .medical-program-section {
+  background:
+    linear-gradient(90deg, rgba(246, 251, 255, .96) 0%, rgba(246, 251, 255, .86) 42%, rgba(246, 251, 255, .46) 100%),
+    url("../assets/images/medical-program-office-bg.png") center center / cover no-repeat !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-direct {
+  margin-left: auto !important;
+  margin-right: clamp(42px, 6vw, 96px) !important;
+  transform: none !important;
+  width: min(720px, 52vw) !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-copy h2 {
+  font-size: clamp(2.05rem, 2.25vw, 2.55rem) !important;
+  max-width: 100% !important;
+}
+
+body.medical-landing .medical-complete-service {
+  background: linear-gradient(180deg, #f8fbff 0%, #ffffff 58%, #f6faff 100%) !important;
+}
+
+body.medical-landing .medical-process-light,
+body.medical-landing .medical-specialty-carousel-section,
+body.medical-landing .medical-patient-journey,
+body.medical-landing .b2b-faqs {
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%) !important;
+}
+
+body.medical-landing .medical-complete-service-copy p strong {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+body.medical-landing .medical-standard-card:hover,
+body.medical-landing .medical-standard-card:focus-within,
+body.medical-landing .medical-standard-card:active {
+  border-color: #E6BC00 !important;
+  outline: 1px solid #E6BC00 !important;
+  outline-offset: 0 !important;
+  box-shadow: 0 24px 58px rgba(16, 42, 76, .14), 0 0 0 1px rgba(230, 188, 0, .28) !important;
+}
+
+body.medical-landing .medical-behind-scenes.company-trust-proof {
+  background: linear-gradient(135deg, #07172b 0%, #062b55 58%, #0a3665 100%) !important;
+  padding-block: clamp(64px, 7vw, 104px) !important;
+}
+
+body.medical-landing .medical-behind-scenes.company-trust-proof .container {
+  max-width: min(1540px, calc(100% - 16px));
+}
+
+body.medical-landing .medical-trust-proof-grid {
+  align-items: center;
+  display: grid;
+  gap: clamp(34px, 4.5vw, 64px);
+  grid-template-columns: minmax(0, .68fr) minmax(760px, 1.32fr);
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-panel {
+  color: #fff;
+  justify-self: start;
+  margin-left: clamp(-20px, -1.8vw, -8px);
+  max-width: 680px;
+  padding: 0;
+  text-align: left;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-panel .section-label {
+  color: var(--accent) !important;
+  justify-content: flex-start;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-panel h2 {
+  color: #fff !important;
+  font-family: var(--font-heading);
+  font-size: clamp(2.15rem, 3vw, 3.15rem);
+  line-height: 1.08;
+  margin: 0 0 18px;
+  max-width: 14ch;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-panel h2::after {
+  background: #E6BC00;
+  content: "";
+  display: block;
+  height: 3px;
+  margin: 12px 0 0;
+  width: 42px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12);
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-panel p {
+  color: rgba(255, 255, 255, .82) !important;
+  font-size: clamp(1.02rem, .94rem + .24vw, 1.15rem) !important;
+  line-height: 1.66 !important;
+  margin: 0 !important;
+  max-width: 56ch;
+  text-align: left !important;
+  text-align-last: left !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-highlight {
+  color: var(--accent) !important;
+  font-weight: 700;
+  margin-top: 18px !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+  margin-top: 24px;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-point {
+  align-items: center;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 999px;
+  color: #fff;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 12px 16px;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-point-icon svg {
+  fill: none;
+  height: 20px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  width: 20px;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards {
+  align-self: center;
+  align-items: stretch;
+  display: grid;
+  gap: clamp(14px, 1.6vw, 18px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonial-card {
+  background: rgba(255, 255, 255, .94) !important;
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .16);
+  min-height: 0 !important;
+  padding: clamp(16px, 1.4vw, 22px) !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonial-card p {
+  color: #284260 !important;
+  font-size: clamp(.88rem, .82rem + .12vw, .96rem) !important;
+  line-height: 1.46 !important;
+  margin-bottom: 14px !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonial-quote {
+  color: var(--secondary);
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: .75;
+  margin-bottom: 8px;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonial-footer {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  margin-top: auto;
+  min-width: 0;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards .testimonial-stars {
+  color: var(--accent);
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: .95rem;
+  justify-content: flex-end;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+body.medical-landing .medical-patient-grid {
+  margin-top: clamp(66px, 5.6vw, 92px);
+}
+
+@media (max-width: 1180px) {
+  body.medical-landing .medical-trust-proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.medical-landing .medical-behind-scenes .company-trust-panel {
+    margin-left: 0;
+    max-width: 760px;
+  }
+
+  body.medical-landing .medical-behind-scenes .company-proof-cards {
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+}
+
+@media (max-width: 760px) {
+  body.medical-landing .medical-behind-scenes .company-proof-cards {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+}
+
 /* Final company model card alignment lock. */
 body.b2b-landing:not(.medical-landing) .company-model-card {
   display: flex !important;
@@ -16079,5 +16308,233 @@ body.medical-landing .medical-patient-banner p {
   body.medical-landing .medical-patient-phone-scroll {
     clip-path: none !important; /* Show full phone on mobile */
     transform: none !important;
+  }
+}
+
+/* ===== Medical page definitive visual alignment ===== */
+body.medical-landing .medical-hero .hero-highlight {
+  display: inline-block !important;
+  margin-top: 0.12em !important;
+  padding-top: 0.02em !important;
+}
+
+body.medical-landing .medical-program-section {
+  background:
+    linear-gradient(90deg, rgba(246, 251, 255, .96) 0%, rgba(246, 251, 255, .86) 42%, rgba(246, 251, 255, .46) 100%),
+    url("../assets/images/medical-program-office-bg.png") center center / cover no-repeat !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-direct {
+  margin-left: auto !important;
+  margin-right: clamp(42px, 6vw, 96px) !important;
+  transform: none !important;
+  width: min(720px, 52vw) !important;
+}
+
+body.medical-landing .medical-program-section .medical-program-copy h2 {
+  font-size: clamp(2.05rem, 2.25vw, 2.55rem) !important;
+  max-width: 100% !important;
+}
+
+body.medical-landing .medical-complete-service {
+  background: linear-gradient(180deg, #f8fbff 0%, #ffffff 58%, #f6faff 100%) !important;
+}
+
+body.medical-landing .medical-process-light,
+body.medical-landing .medical-specialty-carousel-section,
+body.medical-landing .medical-patient-journey,
+body.medical-landing .b2b-faqs {
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%) !important;
+}
+
+body.medical-landing .medical-complete-service-copy p strong {
+  color: var(--primary) !important;
+  font-weight: 800 !important;
+}
+
+body.medical-landing .medical-standard-card:hover,
+body.medical-landing .medical-standard-card:focus-within,
+body.medical-landing .medical-standard-card:active {
+  border-color: #E6BC00 !important;
+  outline: 1px solid #E6BC00 !important;
+  outline-offset: 0 !important;
+  box-shadow: 0 24px 58px rgba(16, 42, 76, .14), 0 0 0 1px rgba(230, 188, 0, .28) !important;
+}
+
+body.medical-landing .medical-behind-scenes.company-trust-proof {
+  background: linear-gradient(135deg, #07172b 0%, #062b55 58%, #0a3665 100%) !important;
+  padding-block: clamp(64px, 7vw, 104px) !important;
+}
+
+body.medical-landing .medical-behind-scenes.company-trust-proof .container {
+  max-width: min(1540px, calc(100% - 16px)) !important;
+}
+
+body.medical-landing .medical-trust-proof-grid {
+  align-items: center !important;
+  display: grid !important;
+  gap: clamp(34px, 4.5vw, 64px) !important;
+  grid-template-columns: minmax(0, .68fr) minmax(760px, 1.32fr) !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-panel {
+  color: #fff !important;
+  justify-self: start !important;
+  margin: 0 0 0 clamp(-20px, -1.8vw, -8px) !important;
+  max-width: 680px !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-panel .section-label {
+  color: var(--accent) !important;
+  justify-content: flex-start !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-panel h2 {
+  color: #fff !important;
+  font-family: var(--font-heading) !important;
+  font-size: clamp(2.15rem, 3vw, 3.15rem) !important;
+  line-height: 1.08 !important;
+  margin: 0 0 18px !important;
+  max-width: 14ch !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-panel h2::after {
+  background: #E6BC00 !important;
+  content: "" !important;
+  display: block !important;
+  height: 3px !important;
+  margin: 12px 0 0 !important;
+  width: 42px !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-panel p {
+  color: rgba(255, 255, 255, .82) !important;
+  font-size: clamp(1.02rem, .94rem + .24vw, 1.15rem) !important;
+  line-height: 1.66 !important;
+  margin: 0 !important;
+  max-width: 56ch !important;
+  text-align: left !important;
+  text-align-last: left !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-highlight {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-top: 18px !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-points {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  justify-content: flex-start !important;
+  margin-top: 24px !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-point {
+  align-items: center !important;
+  background: rgba(255, 255, 255, .06) !important;
+  border: 1px solid rgba(255, 255, 255, .18) !important;
+  border-radius: 999px !important;
+  color: #fff !important;
+  display: flex !important;
+  gap: 10px !important;
+  justify-content: center !important;
+  padding: 12px 16px !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-point-icon svg {
+  fill: none !important;
+  height: 20px !important;
+  stroke: currentColor !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  stroke-width: 1.8 !important;
+  width: 20px !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards {
+  align-self: center !important;
+  align-items: stretch !important;
+  display: grid !important;
+  gap: clamp(14px, 1.6vw, 18px) !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonial-card {
+  background: rgba(255, 255, 255, .94) !important;
+  border: 1px solid rgba(255, 255, 255, .22) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .16) !important;
+  min-height: 0 !important;
+  padding: clamp(16px, 1.4vw, 22px) !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonial-card p {
+  color: #284260 !important;
+  font-size: clamp(.88rem, .82rem + .12vw, .96rem) !important;
+  line-height: 1.46 !important;
+  margin-bottom: 14px !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonial-quote {
+  color: var(--secondary) !important;
+  display: block !important;
+  font-family: Georgia, serif !important;
+  font-size: 2.3rem !important;
+  font-weight: 800 !important;
+  line-height: .75 !important;
+  margin-bottom: 8px !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonial-footer {
+  align-items: center !important;
+  display: flex !important;
+  gap: 14px !important;
+  justify-content: space-between !important;
+  margin-top: auto !important;
+  min-width: 0 !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards .testimonial-stars {
+  color: var(--accent) !important;
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  font-size: .95rem !important;
+  justify-content: flex-end !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+body.medical-landing .medical-patient-grid {
+  margin-top: clamp(66px, 5.6vw, 92px) !important;
+}
+
+@media (max-width: 1180px) {
+  body.medical-landing .medical-trust-proof-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.medical-landing .medical-behind-scenes .company-trust-panel {
+    margin-left: 0 !important;
+    max-width: 760px !important;
+  }
+
+  body.medical-landing .medical-behind-scenes .company-proof-cards {
+    grid-template-columns: repeat(3, minmax(240px, 1fr)) !important;
+    overflow-x: auto !important;
+    padding-bottom: 8px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  body.medical-landing .medical-behind-scenes .company-proof-cards {
+    grid-template-columns: 1fr !important;
+    overflow: visible !important;
   }
 }
