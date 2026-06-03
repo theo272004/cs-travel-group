@@ -2423,11 +2423,14 @@ body.medical-landing .medical-hero .hero-highlight {
 }
 
 body.medical-landing .medical-program-section {
-  background: url("../assets/images/medical-program-office-bg.png") center top / 100% auto no-repeat !important;
+  background-image: url("../assets/images/medical-program-office-bg.png") !important;
+  background-position: center clamp(-56px, -3vw, -28px) !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
   background-color: #fff !important;
-  height: 57.13vw !important;
+  height: 52.4vw !important;
   margin-top: 0 !important;
-  min-height: 720px !important;
+  min-height: 660px !important;
   padding-block: 0 !important;
 }
 
@@ -16329,11 +16332,14 @@ body.medical-landing .trust-banner.b2b-premium-logos {
 }
 
 body.medical-landing .medical-program-section {
-  background: url("../assets/images/medical-program-office-bg.png") center top / 100% auto no-repeat !important;
+  background-image: url("../assets/images/medical-program-office-bg.png") !important;
+  background-position: center clamp(-56px, -3vw, -28px) !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
   background-color: #fff !important;
-  height: 57.13vw !important;
+  height: 52.4vw !important;
   margin-top: 0 !important;
-  min-height: 720px !important;
+  min-height: 660px !important;
   padding-block: 0 !important;
 }
 
