@@ -2423,17 +2423,18 @@ body.medical-landing .medical-hero .hero-highlight {
 }
 
 body.medical-landing .medical-program-section {
-  background: url("../assets/images/medical-program-office-bg.png") center center / 100% auto no-repeat !important;
+  background: url("../assets/images/medical-program-office-bg.png") center top / 100% auto no-repeat !important;
   background-color: #f4f8fc !important;
-  min-height: max(760px, 57.14vw) !important;
-  padding-block: clamp(72px, 6vw, 112px) !important;
+  margin-top: 0 !important;
+  min-height: max(720px, 57.13vw) !important;
+  padding-block: clamp(64px, 5.2vw, 96px) !important;
 }
 
 body.medical-landing .medical-program-section .medical-program-direct {
   margin-left: auto !important;
-  margin-right: clamp(42px, 6vw, 96px) !important;
+  margin-right: clamp(12px, 2.4vw, 42px) !important;
   transform: none !important;
-  width: min(720px, 52vw) !important;
+  width: min(780px, 56vw) !important;
 }
 
 body.medical-landing .medical-program-section .medical-program-copy h2 {
@@ -16318,18 +16319,24 @@ body.medical-landing .medical-hero .hero-highlight {
   padding-top: 0.02em !important;
 }
 
+body.medical-landing .trust-banner.b2b-premium-logos {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 body.medical-landing .medical-program-section {
-  background: url("../assets/images/medical-program-office-bg.png") center center / 100% auto no-repeat !important;
+  background: url("../assets/images/medical-program-office-bg.png") center top / 100% auto no-repeat !important;
   background-color: #f4f8fc !important;
-  min-height: max(760px, 57.14vw) !important;
-  padding-block: clamp(72px, 6vw, 112px) !important;
+  margin-top: 0 !important;
+  min-height: max(720px, 57.13vw) !important;
+  padding-block: clamp(64px, 5.2vw, 96px) !important;
 }
 
 body.medical-landing .medical-program-section .medical-program-direct {
   margin-left: auto !important;
-  margin-right: clamp(42px, 6vw, 96px) !important;
+  margin-right: clamp(12px, 2.4vw, 42px) !important;
   transform: none !important;
-  width: min(720px, 52vw) !important;
+  width: min(780px, 56vw) !important;
 }
 
 body.medical-landing .medical-program-section .medical-program-copy h2 {
@@ -16513,7 +16520,7 @@ body.medical-landing .medical-behind-scenes .company-proof-cards .testimonial-st
 }
 
 body.medical-landing .medical-patient-grid {
-  margin-top: clamp(44px, 4.2vw, 68px) !important;
+  margin-top: clamp(18px, 2.4vw, 34px) !important;
 }
 
 @media (max-width: 1180px) {
