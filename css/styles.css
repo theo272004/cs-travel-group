@@ -2424,17 +2424,18 @@ body.medical-landing .medical-hero .hero-highlight {
 
 body.medical-landing .medical-program-section {
   background: url("../assets/images/medical-program-office-bg.png") center top / 100% auto no-repeat !important;
-  background-color: #f4f8fc !important;
+  background-color: #fff !important;
+  height: 57.13vw !important;
   margin-top: 0 !important;
-  min-height: max(720px, 57.13vw) !important;
-  padding-block: clamp(64px, 5.2vw, 96px) !important;
+  min-height: 720px !important;
+  padding-block: 0 !important;
 }
 
 body.medical-landing .medical-program-section .medical-program-direct {
   margin-left: auto !important;
-  margin-right: clamp(12px, 2.4vw, 42px) !important;
-  transform: none !important;
-  width: min(780px, 56vw) !important;
+  margin-right: clamp(0px, .8vw, 16px) !important;
+  transform: translateX(clamp(12px, 1.8vw, 34px)) !important;
+  width: min(820px, 58vw) !important;
 }
 
 body.medical-landing .medical-program-section .medical-program-copy h2 {
@@ -2447,9 +2448,12 @@ body.medical-landing .medical-complete-service {
 }
 
 body.medical-landing .medical-process-light,
-body.medical-landing .medical-specialty-carousel-section,
 body.medical-landing .medical-patient-journey,
 body.medical-landing .b2b-faqs {
+  background: #fff !important;
+}
+
+body.medical-landing .medical-specialty-carousel-section {
   background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%) !important;
 }
 
@@ -16326,17 +16330,18 @@ body.medical-landing .trust-banner.b2b-premium-logos {
 
 body.medical-landing .medical-program-section {
   background: url("../assets/images/medical-program-office-bg.png") center top / 100% auto no-repeat !important;
-  background-color: #f4f8fc !important;
+  background-color: #fff !important;
+  height: 57.13vw !important;
   margin-top: 0 !important;
-  min-height: max(720px, 57.13vw) !important;
-  padding-block: clamp(64px, 5.2vw, 96px) !important;
+  min-height: 720px !important;
+  padding-block: 0 !important;
 }
 
 body.medical-landing .medical-program-section .medical-program-direct {
   margin-left: auto !important;
-  margin-right: clamp(12px, 2.4vw, 42px) !important;
-  transform: none !important;
-  width: min(780px, 56vw) !important;
+  margin-right: clamp(0px, .8vw, 16px) !important;
+  transform: translateX(clamp(12px, 1.8vw, 34px)) !important;
+  width: min(820px, 58vw) !important;
 }
 
 body.medical-landing .medical-program-section .medical-program-copy h2 {
@@ -16349,9 +16354,12 @@ body.medical-landing .medical-complete-service {
 }
 
 body.medical-landing .medical-process-light,
-body.medical-landing .medical-specialty-carousel-section,
 body.medical-landing .medical-patient-journey,
 body.medical-landing .b2b-faqs {
+  background: #fff !important;
+}
+
+body.medical-landing .medical-specialty-carousel-section {
   background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%) !important;
 }
 
@@ -16520,7 +16528,12 @@ body.medical-landing .medical-behind-scenes .company-proof-cards .testimonial-st
 }
 
 body.medical-landing .medical-patient-grid {
-  margin-top: clamp(18px, 2.4vw, 34px) !important;
+  margin-top: 0 !important;
+  transform: translateY(clamp(-26px, -2.2vw, -14px)) !important;
+}
+
+body.medical-landing .medical-patient-journey .section-header {
+  margin-bottom: clamp(14px, 1.8vw, 24px) !important;
 }
 
 @media (max-width: 1180px) {
