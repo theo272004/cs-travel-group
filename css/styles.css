@@ -16741,3 +16741,35 @@ body.medical-landing .medical-patient-journey .section-header {
     display: block !important;
   }
 }
+
+/* ============================================================
+   Mobile Fixes Round 3 — June 2026
+   ============================================================ */
+
+/* 12. Médicos hero: force white text for ALL text inside the hero on mobile.
+       Base rules have !important + competing specificity — override here at end of file. */
+@media (max-width: 900px) {
+  body.medical-landing .medical-hero .split-hero-content,
+  body.medical-landing .medical-hero .split-hero-content p,
+  body.medical-landing .medical-hero .split-hero-content .split-hero-kicker,
+  body.medical-landing .medical-hero .split-hero-content .split-hero-title,
+  body.medical-landing .medical-hero .split-hero-content .split-hero-desc {
+    color: #fff !important;
+    text-shadow: none !important;
+  }
+}
+
+/* 13. Médicos program section: white text since background is now dark blue overlay */
+@media (max-width: 900px) {
+  body.medical-landing .medical-program-section .medical-program-copy h2,
+  body.medical-landing .medical-program-section .medical-program-copy .medical-program-title-line {
+    color: #fff !important;
+    text-shadow: none !important;
+  }
+  body.medical-landing .medical-program-section .medical-program-text p,
+  body.medical-landing .medical-program-section .medical-program-text p:last-child,
+  body.medical-landing .medical-program-section .medical-program-text p strong {
+    color: rgba(255, 255, 255, 0.88) !important;
+    text-shadow: none !important;
+  }
+}
