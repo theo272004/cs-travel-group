@@ -16565,3 +16565,124 @@ body.medical-landing .medical-patient-journey .section-header {
     overflow: visible !important;
   }
 }
+
+/* ============================================================
+   Mobile Responsive Fixes — June 2026
+   ============================================================ */
+
+/* 1. Navbar: remove gray box from lang-trigger and hamburger buttons */
+@media (max-width: 900px) {
+  .lang-trigger {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+  .hamburger {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* 2. Stats section (home): 2×2 grid on mobile instead of single column */
+@media (max-width: 560px) {
+  body:not(.b2b-landing) .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  /* Bottom row (items 3 & 4): no bottom border */
+  body:not(.b2b-landing) .stat-item:nth-child(5),
+  body:not(.b2b-landing) .stat-item:nth-child(7) {
+    border-bottom: 0 !important;
+  }
+  /* Left column (items 1 & 3): add right divider */
+  body:not(.b2b-landing) .stat-item:nth-child(1),
+  body:not(.b2b-landing) .stat-item:nth-child(5) {
+    border-right: 1px solid rgba(148, 163, 184, 0.28) !important;
+  }
+}
+
+/* 3. Hero split-image: keep hidden at ≤900px (background is set on parent) */
+@media (max-width: 900px) {
+  body.b2b-landing:not(.medical-landing) .split-hero-image,
+  body.medical-landing .medical-hero .split-hero-image {
+    display: none !important;
+  }
+}
+
+/* 4. Hero-highlight: remove text-shadow inherited from title on mobile */
+@media (max-width: 900px) {
+  body.b2b-landing .split-hero-title .hero-highlight,
+  body.medical-landing .split-hero-title .hero-highlight {
+    text-shadow: none !important;
+    color: #102A4C !important;
+    background: #FFD21F !important;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+}
+
+/* 5. Médicos "Tus pacientes ya van a viajar" section:
+      dark overlay so background image doesn't bleed into white text */
+@media (max-width: 900px) {
+  body.medical-landing .medical-program-section {
+    background:
+      linear-gradient(rgba(6, 43, 85, 0.82), rgba(6, 43, 85, 0.82)),
+      url("../assets/images/medical-program-office-bg.png") center center / cover no-repeat !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding-block: 64px 52px !important;
+  }
+  body.medical-landing .medical-program-section .medical-program-direct {
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+    transform: none !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+  body.medical-landing .medical-program-section .medical-program-copy h2 {
+    font-size: clamp(1.7rem, 6vw, 2.1rem) !important;
+    max-width: 100% !important;
+    text-align: left !important;
+  }
+  body.medical-landing .medical-program-section .medical-program-text {
+    text-align: left !important;
+  }
+  body.medical-landing .medical-program-section .medical-program-text p {
+    max-width: 100% !important;
+    text-align: left !important;
+  }
+}
+
+/* 6. Médicos patient journey: reduce title size on small screens */
+@media (max-width: 560px) {
+  body.medical-landing .medical-patient-journey h2 {
+    font-size: clamp(1.6rem, 7vw, 2rem) !important;
+    line-height: 1.14 !important;
+  }
+  body.medical-landing .medical-patient-journey .section-subtitle {
+    font-size: 0.97rem !important;
+  }
+}
+
+/* 7. Médicos phone cards: slide-up animation when scrolled into view on mobile */
+@media (max-width: 900px) {
+  body.medical-landing .medical-patient-card {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.55s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  body.medical-landing .medical-patient-card.is-phone-hovered {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
+/* 8. General: prevent accidental horizontal overflow in sections */
+@media (max-width: 900px) {
+  body.medical-landing main > section,
+  body.b2b-landing main > section {
+    overflow-x: hidden;
+  }
+}

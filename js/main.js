@@ -1269,13 +1269,27 @@ document.addEventListener('DOMContentLoaded', () => {
       const patientPhoneCards = document.querySelectorAll('.medical-patient-card');
       const patientPhoneGrid = document.querySelector('.medical-patient-grid');
       if (patientPhoneCards.length && patientPhoneGrid) {
-        document.addEventListener('pointermove', (event) => {
-          patientPhoneCards.forEach(card => {
-            const rect = card.getBoundingClientRect();
-            const isInside = event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom;
-            card.classList.toggle('is-phone-hovered', isInside);
+        const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+        if (isTouchDevice) {
+          // Mobile: trigger slide-up animation when card scrolls into view
+          const mobilePhoneObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('is-phone-hovered'), 80);
+                mobilePhoneObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.25 });
+          patientPhoneCards.forEach(card => mobilePhoneObserver.observe(card));
+        } else {
+          document.addEventListener('pointermove', (event) => {
+            patientPhoneCards.forEach(card => {
+              const rect = card.getBoundingClientRect();
+              const isInside = event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom;
+              card.classList.toggle('is-phone-hovered', isInside);
+            });
           });
-        });
+        }
       }
 
       // 3. Section Reveals
