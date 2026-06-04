@@ -17090,68 +17090,87 @@ body.medical-landing .medical-patient-journey .section-header {
 }
 
 /* ============================================================
-   Home Mobile — Stats 1×4 + Plane/Sky fixes
+   Home Mobile — Stats 2×2 bonito + Plane centrado y abajo
    ============================================================ */
 
-/* Stats: single horizontal row (1×4) — compact and small */
+/* ─── STATS: 2×2 grid con íconos, limpio y legible ─── */
 @media (max-width: 768px) {
   body:not(.b2b-landing) .stats-grid {
-    grid-template-columns: repeat(4, 1fr) !important;
+    grid-template-columns: 1fr 1fr !important;
     gap: 0 !important;
-    padding: 10px 4px !important;
+    padding: 6px !important;
   }
-  /* Clear borders from the previous 2×2 rules */
+  /* Todos los items: reset + base style */
   body:not(.b2b-landing) .stat-item {
-    border-bottom: none !important;
-    border-right: none !important;
-    padding: 10px 6px !important;
-    min-height: 0 !important;
-    border-left: 1px solid rgba(148, 163, 184, 0.22) !important;
-  }
-  body:not(.b2b-landing) .stat-item:first-child,
-  body:not(.b2b-landing) .stat-item:nth-child(1) {
+    align-items: center !important;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.14) !important;
     border-left: none !important;
+    border-right: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 0 !important;
+    padding: 18px 10px 14px !important;
+    text-align: center !important;
   }
-  /* Smaller numbers and labels to fit 4 in a row */
+  /* Columna derecha: separador vertical izquierdo */
+  body:not(.b2b-landing) .stat-item:nth-child(3),
+  body:not(.b2b-landing) .stat-item:nth-child(7) {
+    border-left: 1px solid rgba(148, 163, 184, 0.14) !important;
+  }
+  /* Fila inferior: sin borde abajo */
+  body:not(.b2b-landing) .stat-item:nth-child(5),
+  body:not(.b2b-landing) .stat-item:nth-child(7) {
+    border-bottom: none !important;
+  }
+  /* Ícono visible y bien tamaño */
+  body:not(.b2b-landing) .stat-icon {
+    display: inline-flex !important;
+    margin-bottom: 8px !important;
+    color: var(--primary-light) !important;
+  }
+  body:not(.b2b-landing) .stat-icon svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+  /* Números */
   body:not(.b2b-landing) .stat-number {
-    font-size: clamp(1.2rem, 4.5vw, 1.55rem) !important;
+    font-size: clamp(1.45rem, 5.8vw, 1.8rem) !important;
     line-height: 1.1 !important;
   }
+  /* Etiquetas */
   body:not(.b2b-landing) .stat-label {
-    font-size: clamp(0.56rem, 2vw, 0.72rem) !important;
-    line-height: 1.3 !important;
-  }
-  body:not(.b2b-landing) .stat-icon {
-    display: none !important;
+    font-size: clamp(0.68rem, 2.4vw, 0.8rem) !important;
+    line-height: 1.35 !important;
+    margin-top: 2px !important;
   }
 }
 
-/* Work-meaning: fix sky position, enlarge plane, tighter to cards */
+/* ─── WORK-MEANING: sky más abajo, avión más grande y centrado ─── */
 @media (max-width: 640px) {
-  /* More breathing room between title and showcase */
+  /* Más separación entre título y avión */
   body:not(.b2b-landing) .work-meaning-head {
-    margin-bottom: 40px !important;
+    margin-bottom: 44px !important;
   }
-  /* Sky: lower it into the plane area (was too high at 80px) */
+  /* Sky: bajar al nivel del avión */
   body:not(.b2b-landing) .work-meaning-card::before {
-    top: 150px !important;
-    height: 200px !important;
+    top: 170px !important;
+    height: 210px !important;
     width: calc(100% - 44px) !important;
   }
-  /* Plane frame: taller + bigger translate to sit right above cards */
+  /* Frame del avión: más alto y más abajo */
   body:not(.b2b-landing) .plane-showcase-frame {
-    min-height: 260px !important;
-    height: 260px !important;
-    transform: translateY(26px) !important;
+    min-height: 270px !important;
+    height: 270px !important;
+    transform: translateY(28px) !important;
   }
-  /* Plane image: bigger */
+  /* Avión: más grande y centrado */
   body:not(.b2b-landing) .plane-showcase-image {
-    width: 210% !important;
-    transform: translateX(-2%) translateY(-10%) !important;
+    width: 220% !important;
+    transform: translateX(0%) translateY(-6%) !important;
   }
-  /* Cards: tighter overlap with plane */
+  /* Tarjetas pegadas al avión */
   body:not(.b2b-landing) .benefits-band {
-    margin-top: -28px !important;
+    margin-top: -30px !important;
     position: relative !important;
     z-index: 5 !important;
   }
