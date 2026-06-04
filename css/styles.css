@@ -16903,27 +16903,188 @@ body.medical-landing .medical-patient-journey .section-header {
   }
 }
 
-/* ── 7. PLANE + WORK-MEANING: bigger plane, unified sky+plane+cards ── */
+/* ============================================================
+   Home Mobile — DEFINITIVE FIXES (override all previous)
+   ============================================================ */
+
+/* ═══ HERO: bigger titles, content higher ═══ */
+@media (max-width: 768px) {
+  body:not(.b2b-landing) .hero {
+    padding-top: 82px !important;
+    padding-bottom: 52px !important;
+  }
+  body:not(.b2b-landing) .hero-content {
+    justify-content: flex-start !important;
+    padding-top: 0 !important;
+    padding-inline: 22px !important;
+  }
+  body:not(.b2b-landing) .hero-text-container {
+    min-height: 0 !important;
+    position: static !important;
+  }
+  body:not(.b2b-landing) .hero-text-slide {
+    position: static !important;
+    inset: auto !important;
+  }
+  body:not(.b2b-landing) .hero .hero-title {
+    font-size: clamp(1.78rem, 7.6vw, 2.5rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.02em !important;
+    max-width: none !important;
+    text-wrap: initial !important;
+    margin-bottom: 18px !important;
+  }
+  body:not(.b2b-landing) .hero .hero-desc {
+    font-size: clamp(0.88rem, 3.8vw, 1.02rem) !important;
+    line-height: 1.65 !important;
+    max-width: 30ch !important;
+    margin-top: 0 !important;
+  }
+  body:not(.b2b-landing) .hero-progress {
+    margin-top: 22px !important;
+  }
+  body:not(.b2b-landing) .hero-cta-container {
+    margin-top: 26px !important;
+    animation: none !important;
+    opacity: 1 !important;
+  }
+  body:not(.b2b-landing) .hero-cta {
+    min-width: 0 !important;
+    width: auto !important;
+    padding: 14px 32px !important;
+  }
+}
+
+/* ═══ STATS: float at the hero ↔ profiles boundary ═══ */
+@media (max-width: 768px) {
+  body:not(.b2b-landing) .stats-section {
+    background: transparent !important;
+    margin-top: -38px !important;
+    padding: 0 16px 0 !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+  body:not(.b2b-landing) .stats-grid {
+    background: #ffffff !important;
+    border: 1px solid rgba(191, 216, 244, 0.55) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 8px 36px rgba(6, 43, 85, 0.13) !important;
+    margin-inline: 0 !important;
+    padding: 18px 12px !important;
+  }
+  body:not(.b2b-landing) .profiles-section {
+    padding-top: 48px !important;
+  }
+}
+
+/* ═══ PLANE + WORK-MEANING: bigger and tighter ═══ */
 @media (max-width: 640px) {
   body:not(.b2b-landing) .plane-showcase-frame {
-    min-height: 225px !important;
-    height: 225px !important;
-    transform: translateY(14px) !important;
+    min-height: 240px !important;
+    height: 240px !important;
+    transform: translateY(20px) !important;
   }
   body:not(.b2b-landing) .plane-showcase-image {
-    width: 185% !important;
-    transform: translateX(0.35%) translateY(-8%) !important;
+    width: 200% !important;
+    transform: translateX(0%) translateY(-12%) !important;
   }
-  /* Sky gradient element: taller so it visually connects plane to cards */
   body:not(.b2b-landing) .work-meaning-card::before {
-    top: 92px !important;
-    height: 175px !important;
+    top: 80px !important;
+    height: 190px !important;
     width: calc(100% - 44px) !important;
   }
-  /* Benefits band: pulled up more to overlap the plane  */
   body:not(.b2b-landing) .benefits-band {
-    margin-top: -20px !important;
+    margin-top: -24px !important;
     position: relative !important;
     z-index: 5 !important;
+  }
+}
+
+/* ═══ CAROUSEL: restore horizontal scroll like desktop ═══ */
+@media (max-width: 768px) {
+  /* Override previous column-flex change — back to horizontal */
+  body:not(.b2b-landing) .scroll-container {
+    height: auto !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  body:not(.b2b-landing) .scroll-wrapper {
+    flex-direction: row !important;
+    min-width: max-content !important;
+    gap: 12px !important;
+    padding: 0 16px 20px !important;
+    align-items: stretch !important;
+    overflow: visible !important;
+  }
+  /* Title: first item in the scroll, visible before swiping */
+  body:not(.b2b-landing) .scroll-title {
+    width: 76vw !important;
+    min-width: 76vw !important;
+    flex-shrink: 0 !important;
+    padding-right: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    padding-bottom: 8px !important;
+  }
+  body:not(.b2b-landing) .scroll-title::after {
+    display: none !important;
+  }
+  body:not(.b2b-landing) .scroll-title h2 {
+    font-size: clamp(1.55rem, 6.5vw, 2.1rem) !important;
+    margin-bottom: 10px !important;
+    line-height: 1.1 !important;
+  }
+  body:not(.b2b-landing) .scroll-title p {
+    font-size: 0.87rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+  }
+  /* Cards: swipeable, proper size to show images */
+  body:not(.b2b-landing) .dest-card {
+    width: 72vw !important;
+    height: 320px !important;
+    flex-shrink: 0 !important;
+    scroll-snap-align: start !important;
+    border-radius: 18px !important;
+  }
+  body:not(.b2b-landing) .dest-card-inner {
+    height: 100% !important;
+    border-radius: 18px !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  body:not(.b2b-landing) .dest-card-inner img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+  body:not(.b2b-landing) .dest-card-content {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    padding: 20px 18px !important;
+    background: linear-gradient(to top, rgba(8, 24, 46, 0.97) 0%, rgba(16, 42, 76, 0.52) 60%, transparent 100%) !important;
+  }
+  body:not(.b2b-landing) .dest-card-content h3 {
+    font-size: 1.18rem !important;
+    line-height: 1.18 !important;
+    margin-bottom: 4px !important;
+    color: #fff !important;
+  }
+  body:not(.b2b-landing) .dest-card-content span {
+    font-size: 0.68rem !important;
+    min-height: 0 !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+  }
+  body:not(.b2b-landing) .dest-card-content p {
+    display: none !important;
   }
 }
