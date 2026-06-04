@@ -16775,99 +16775,86 @@ body.medical-landing .medical-patient-journey .section-header {
 }
 
 /* ============================================================
-   Home Page Mobile Fixes — June 2026
+   Home Page Mobile — Complete Overhaul
    ============================================================ */
 
-/* H1. Hero: stabilize text container so slides don't change the hero height */
 @media (max-width: 768px) {
+
+  /* ── 1. HERO TITLE: smaller font so <br> tags give clean 3-line layout ── */
   body:not(.b2b-landing) .hero-text-container {
-    min-height: clamp(300px, 56svh, 400px) !important;
-    position: relative !important;
+    min-height: 0 !important;
+    position: static !important;
   }
   body:not(.b2b-landing) .hero-text-slide {
-    position: absolute !important;
-    inset: 0 !important;
-    display: none !important;
-    padding-top: 0 !important;
+    position: static !important;
+    inset: auto !important;
   }
-  body:not(.b2b-landing) .hero-text-slide.active {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-  }
-}
-
-/* H2. Hero: reduce title and copy 1-2pt so text breathes better */
-@media (max-width: 768px) {
   body:not(.b2b-landing) .hero .hero-title {
-    font-size: clamp(1.75rem, 7.8vw, 2.35rem) !important;
-    line-height: 1.08 !important;
-    max-width: 13ch !important;
-    margin-bottom: 14px !important;
+    font-size: clamp(1.38rem, 5.4vw, 1.85rem) !important;
+    line-height: 1.14 !important;
+    max-width: none !important;
+    letter-spacing: -0.01em !important;
+    margin-bottom: 18px !important;
   }
-  body:not(.b2b-landing) .hero .hero-desc {
-    font-size: clamp(0.83rem, 3.4vw, 0.94rem) !important;
-    line-height: 1.56 !important;
-    max-width: 34ch !important;
-  }
-}
 
-/* H3. Stats: flush against hero bottom, light-blue background to match profiles */
-@media (max-width: 768px) {
+  /* ── 2. HERO DESC: more air between title and paragraph ── */
+  body:not(.b2b-landing) .hero .hero-desc {
+    font-size: clamp(0.84rem, 3.5vw, 0.95rem) !important;
+    line-height: 1.68 !important;
+    max-width: 32ch !important;
+    margin-top: 2px !important;
+  }
+
+  /* ── 3. HERO CTA: pull up so it sits closer to text ── */
+  body:not(.b2b-landing) .hero-cta-container {
+    margin-top: 24px !important;
+    animation: none !important;
+    opacity: 1 !important;
+  }
+  body:not(.b2b-landing) .hero-progress {
+    margin-top: 20px !important;
+  }
+
+  /* ── 4. STATS: flush against hero, connects visually to profiles ── */
   body:not(.b2b-landing) .hero {
     padding-bottom: 0 !important;
   }
   body:not(.b2b-landing) .stats-section {
-    background: #EAF6FF !important;
+    background: linear-gradient(180deg, #f0f7ff 0%, #EAF6FF 100%) !important;
     margin-top: 0 !important;
-    padding-top: 20px !important;
-    padding-bottom: 28px !important;
+    padding: 14px 0 36px !important;
   }
   body:not(.b2b-landing) .stats-grid {
-    border-radius: 14px !important;
-    box-shadow: 0 4px 18px rgba(6, 43, 85, 0.07) !important;
-    background: rgba(255, 255, 255, 0.94) !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(191, 216, 244, 0.5) !important;
+    box-shadow: 0 4px 20px rgba(6, 43, 85, 0.06) !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    margin-inline: 4px !important;
   }
-}
 
-/* H4. Profiles: more space between title and cards */
-@media (max-width: 768px) {
+  /* ── 5. PROFILES: a bit more gap between title and cards ── */
   body:not(.b2b-landing) .minimal-profiles {
     margin-top: 16px !important;
   }
-}
 
-/* H5. Plane showcase: bigger on mobile */
-@media (max-width: 640px) {
-  body:not(.b2b-landing) .plane-showcase-frame {
-    min-height: 195px !important;
-    transform: translateY(8px) !important;
-  }
-  body:not(.b2b-landing) .plane-showcase-image {
-    width: 170% !important;
-  }
-}
-
-/* H6. Destinations carousel: vertical stack on mobile so title is always visible */
-@media (max-width: 768px) {
+  /* ── 6. CAROUSEL: vertical stack with properly visible cards ── */
   body:not(.b2b-landing) .scroll-container {
     height: auto !important;
-    overflow-x: visible !important;
-    overflow-y: visible !important;
+    overflow: visible !important;
     scroll-snap-type: none !important;
   }
   body:not(.b2b-landing) .scroll-wrapper {
     flex-direction: column !important;
     min-width: 0 !important;
-    gap: 16px !important;
-    padding: 0 var(--home-page-x) !important;
+    gap: 14px !important;
+    padding: 0 16px !important;
     overflow: visible !important;
   }
   body:not(.b2b-landing) .scroll-title {
     min-width: 0 !important;
     width: 100% !important;
     padding-right: 0 !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 6px !important;
     display: block !important;
   }
   body:not(.b2b-landing) .scroll-title::after {
@@ -16876,22 +16863,67 @@ body.medical-landing .medical-patient-journey .section-header {
   body:not(.b2b-landing) .scroll-title h2 {
     font-size: clamp(1.7rem, 7vw, 2.2rem) !important;
   }
+  /* Card: explicit height so image fills correctly */
   body:not(.b2b-landing) .dest-card {
     width: 100% !important;
-    height: 220px !important;
+    height: 260px !important;
     scroll-snap-align: none !important;
-    border-radius: 18px !important;
+    flex-shrink: 0;
+  }
+  body:not(.b2b-landing) .dest-card-inner {
+    height: 100% !important;
+    border-radius: 16px !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  /* Image as absolute fill so it covers the card */
+  body:not(.b2b-landing) .dest-card-inner img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
   }
   body:not(.b2b-landing) .dest-card-content {
-    padding: 20px 18px !important;
+    padding: 18px 20px 20px !important;
   }
   body:not(.b2b-landing) .dest-card-content h3 {
-    font-size: 1.2rem !important;
+    font-size: 1.22rem !important;
     line-height: 1.2 !important;
-    margin-bottom: 6px !important;
+    margin-bottom: 4px !important;
   }
   body:not(.b2b-landing) .dest-card-content span {
-    font-size: 0.72rem !important;
+    font-size: 0.7rem !important;
     min-height: 0 !important;
+    margin-bottom: 8px !important;
+  }
+  body:not(.b2b-landing) .dest-card-content p {
+    font-size: 0.85rem !important;
+    line-height: 1.45 !important;
+  }
+}
+
+/* ── 7. PLANE + WORK-MEANING: bigger plane, unified sky+plane+cards ── */
+@media (max-width: 640px) {
+  body:not(.b2b-landing) .plane-showcase-frame {
+    min-height: 225px !important;
+    height: 225px !important;
+    transform: translateY(14px) !important;
+  }
+  body:not(.b2b-landing) .plane-showcase-image {
+    width: 185% !important;
+    transform: translateX(0.35%) translateY(-8%) !important;
+  }
+  /* Sky gradient element: taller so it visually connects plane to cards */
+  body:not(.b2b-landing) .work-meaning-card::before {
+    top: 92px !important;
+    height: 175px !important;
+    width: calc(100% - 44px) !important;
+  }
+  /* Benefits band: pulled up more to overlap the plane  */
+  body:not(.b2b-landing) .benefits-band {
+    margin-top: -20px !important;
+    position: relative !important;
+    z-index: 5 !important;
   }
 }
