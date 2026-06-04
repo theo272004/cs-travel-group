@@ -16686,3 +16686,58 @@ body.medical-landing .medical-patient-journey .section-header {
     overflow-x: hidden;
   }
 }
+
+/* ============================================================
+   Mobile Fixes Round 2 — June 2026
+   ============================================================ */
+
+/* 9. Mobile nav: CTA button "Hablemos hoy" — accent background so text is readable
+      (.mobile-nav .btn sets color: var(--primary) which makes btn-primary invisible) */
+.mobile-nav .btn.btn-primary {
+  background: var(--accent) !important;
+  color: var(--primary) !important;
+  border-color: transparent !important;
+  font-weight: 700 !important;
+}
+
+/* 10. Médicos hero: darken right-side gradient so white text is always readable
+       (original has rgba(255,255,255,.2) on right which makes text disappear) */
+@media (max-width: 900px) {
+  body.medical-landing .medical-hero {
+    background:
+      linear-gradient(180deg, rgba(4, 18, 42, .78) 0%, rgba(4, 18, 42, .72) 100%),
+      url("../assets/images/service-medical-concierge.png?v=20260517c") center center / cover no-repeat !important;
+  }
+}
+
+/* 11. Médicos "Tus pacientes ya van a viajar" — fix container alignment and title overflow */
+@media (max-width: 900px) {
+  body.medical-landing .medical-program-section .container {
+    justify-content: center !important;
+    padding-inline: 24px !important;
+  }
+  body.medical-landing .medical-program-section .medical-program-direct {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+  body.medical-landing .medical-program-section .medical-program-copy h2 {
+    font-size: clamp(1.55rem, 5.5vw, 2rem) !important;
+    max-width: 100% !important;
+    text-align: left !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  body.medical-landing .medical-program-section .medical-program-text p {
+    max-width: 100% !important;
+    text-align: left !important;
+    word-break: break-word !important;
+  }
+  .medical-program-title-line {
+    display: block !important;
+  }
+}
