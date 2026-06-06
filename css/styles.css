@@ -18120,3 +18120,54 @@ body.b2b-landing:not(.medical-landing) .company-trust-point span:last-child {
     max-width: 100% !important;
   }
 }
+
+/* ============================================================
+   Empresas — final typography reference lock
+   Copy matches the service-card body copy: 0.95rem.
+   Section titles match the company hero title scale without hero line-height.
+   ============================================================ */
+body.b2b-landing:not(.medical-landing) {
+  --company-copy-reference: 0.95rem;
+  --company-title-reference: var(--company-title);
+  --section-copy-uniform: var(--company-copy-reference);
+  --company-copy-compact: var(--company-copy-reference);
+}
+
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .company-calc-intro h2,
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .calc-header h2,
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .ed-header h2,
+body.b2b-landing:not(.medical-landing) main > section.profiles-section h2,
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .company-trust-panel h2,
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .philosophy-title,
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .booking-cta-inner h2,
+body.b2b-landing:not(.medical-landing) main > section.b2b-faqs h2 {
+  font-size: var(--company-title-reference) !important;
+  line-height: 1.14 !important;
+  letter-spacing: 0 !important;
+}
+
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) p,
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) li,
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) label,
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .calc-result-label,
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .testimonial-role,
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .faq-question {
+  font-size: var(--company-copy-reference) !important;
+  line-height: 1.6 !important;
+}
+
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .profile-content p {
+  font-size: var(--company-copy-reference) !important;
+  line-height: 1.58 !important;
+}
+
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .testimonial-name {
+  font-size: var(--company-copy-reference) !important;
+  line-height: 1.35 !important;
+}
+
+@media (max-width: 900px) {
+  body.b2b-landing:not(.medical-landing) {
+    --company-copy-reference: 0.95rem;
+  }
+}
