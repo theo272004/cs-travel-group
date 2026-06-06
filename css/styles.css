@@ -18985,3 +18985,9 @@ body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonia
     overflow: visible !important;
   }
 }
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  body.medical-landing .medical-hero .split-hero-kicker {
+    transform: translateY(-8px) !important;
+  }
+}
