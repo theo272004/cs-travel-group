@@ -19193,3 +19193,59 @@ html body:not(.b2b-landing) .stats-section::after {
   display: none !important;
   content: none !important;
 }
+
+
+/* ============================================================
+   UNIFICACIÓN HERO empresas/médicos — misma posición exacta
+   de título, texto y botón (geometría de columnas idéntica).
+   Solo escritorio/laptop (>=901px); en móvil ambos apilan.
+   ============================================================ */
+@media (min-width: 901px) {
+  html body.b2b-landing:not(.medical-landing) .split-hero-content,
+  html body.medical-landing .medical-hero .split-hero-content {
+    flex: 0 0 56% !important;
+    max-width: 56% !important;
+    box-sizing: border-box !important;
+    padding-inline: clamp(28px, 6vw, 96px) !important;
+    padding-top: 88px !important;
+    padding-bottom: 28px !important;
+    justify-content: center !important;
+    row-gap: clamp(16px, 2.2vh, 24px) !important;
+  }
+
+  html body.b2b-landing:not(.medical-landing) .split-hero-image,
+  html body.medical-landing .medical-hero .split-hero-image {
+    flex: 1 1 44% !important;
+    max-width: 44% !important;
+  }
+
+  /* Título y descripción con el mismo ancho de envoltura */
+  html body.b2b-landing:not(.medical-landing) .split-hero-title,
+  html body.medical-landing .medical-hero .split-hero-title {
+    max-width: 16ch !important;
+    margin-bottom: 0 !important;
+  }
+
+  html body.b2b-landing:not(.medical-landing) .split-hero-copy,
+  html body.medical-landing .medical-hero .split-hero-copy {
+    max-width: 54ch !important;
+  }
+
+  html body.b2b-landing:not(.medical-landing) .split-hero-desc,
+  html body.medical-landing .medical-hero .split-hero-desc {
+    max-width: 54ch !important;
+  }
+}
+
+/* Título de médicos en 3 líneas con saltos coherentes (igual que
+   empresas). En móvil se permite el reflow natural. */
+html body.medical-landing .medical-hero .split-hero-title .medical-hero-line {
+  display: block !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 900px) {
+  html body.medical-landing .medical-hero .split-hero-title .medical-hero-line {
+    white-space: normal !important;
+  }
+}
