@@ -18858,3 +18858,26 @@ body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonia
     --medical-title-reference: clamp(2.15rem, 10vw, 3.05rem);
   }
 }
+
+/* Medicos laptop — every non-title text matches service-list copy size */
+@media (min-width: 901px) and (max-width: 1440px) {
+  body.medical-landing {
+    --medical-laptop-copy-size: 1.03rem;
+  }
+
+  body.medical-landing .medical-hero .split-hero-kicker,
+  body.medical-landing .medical-hero .split-hero-desc,
+  body.medical-landing main > section p,
+  body.medical-landing main > section li,
+  body.medical-landing main > section .section-label,
+  body.medical-landing main > section .faq-question,
+  body.medical-landing main > section .testimonial-name,
+  body.medical-landing main > section .testimonial-role,
+  body.medical-landing main > section .medical-specialty-slide-copy span,
+  body.medical-landing main > section .medical-patient-banner span,
+  body.medical-landing main > section .medical-patient-banner strong,
+  body.medical-landing main > section .btn {
+    font-size: var(--medical-laptop-copy-size) !important;
+    line-height: 1.6 !important;
+  }
+}
