@@ -18911,3 +18911,77 @@ body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonia
     line-height: 1.6 !important;
   }
 }
+
+/* Medicos laptop — final requested responsive pass */
+@media (min-width: 901px) and (max-width: 1440px) {
+  body.medical-landing {
+    --medical-requested-copy-size: 1.03rem;
+    --medical-requested-title-size: clamp(2.62rem, 1.95rem + 2.05vw, 3.45rem);
+  }
+
+  body.medical-landing main > section:not(.medical-hero) .section-header > h2,
+  body.medical-landing main > section:not(.medical-hero) .medical-program-copy > h2,
+  body.medical-landing main > section:not(.medical-hero) .medical-complete-service-copy > h2,
+  body.medical-landing main > section:not(.medical-hero) .medical-standards-header > h2,
+  body.medical-landing main > section:not(.medical-hero) .company-trust-panel > h2,
+  body.medical-landing main > section:not(.medical-hero) .medical-specialty-intro > h2,
+  body.medical-landing main > section:not(.medical-hero) .medical-proof-panel > h2,
+  body.medical-landing main > section:not(.medical-hero) .b2b-faqs h2 {
+    font-size: var(--medical-requested-title-size) !important;
+    line-height: 1.05 !important;
+    letter-spacing: 0 !important;
+  }
+
+  body.medical-landing .medical-program-text p,
+  body.medical-landing .medical-program-text p strong,
+  body.medical-landing .medical-process-cards .company-model-copy p,
+  body.medical-landing .medical-complete-service-copy p,
+  body.medical-landing .medical-complete-service-copy p strong,
+  body.medical-landing .medical-complete-service-list li,
+  body.medical-landing .medical-standards-header p,
+  body.medical-landing .medical-standard-card p,
+  body.medical-landing .medical-behind-scenes .company-trust-panel p,
+  body.medical-landing .medical-behind-scenes .company-trust-panel p strong,
+  body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonial-card p,
+  body.medical-landing .medical-specialty-intro .section-subtitle,
+  body.medical-landing .medical-specialty-note-text,
+  body.medical-landing .medical-patient-journey .section-subtitle,
+  body.medical-landing .medical-patient-banner p,
+  body.medical-landing .medical-patient-banner span,
+  body.medical-landing .medical-patient-banner strong,
+  body.medical-landing .medical-proof-panel p,
+  body.medical-landing .medical-closing-cta .medical-proof-panel p {
+    font-size: var(--medical-requested-copy-size) !important;
+    line-height: 1.6 !important;
+  }
+
+  body.medical-landing .medical-specialty-carousel-section {
+    overflow: visible !important;
+    padding-bottom: clamp(96px, 8vw, 124px) !important;
+  }
+
+  body.medical-landing .medical-specialty-carousel-wrap {
+    overflow: visible !important;
+    padding-block: 10px 40px !important;
+  }
+
+  body.medical-landing .medical-specialty-carousel {
+    padding-bottom: 56px !important;
+  }
+
+  body.medical-landing .medical-specialty-slide-copy {
+    bottom: clamp(24px, 2.2vw, 32px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    grid-template-rows: none !important;
+    min-height: 0 !important;
+  }
+
+  body.medical-landing .medical-specialty-slide-copy h3 {
+    font-size: clamp(1.38rem, 1.45vw, 1.72rem) !important;
+    line-height: 1.12 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+}
