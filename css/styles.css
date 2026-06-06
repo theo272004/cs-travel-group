@@ -18587,3 +18587,63 @@ body:not(.b2b-landing) .profiles-section {
     padding-bottom: 86px !important;
   }
 }
+
+/* ============================================================
+   Empresas — final readable title and calculator scale
+   ============================================================ */
+body.b2b-landing:not(.medical-landing) {
+  --company-section-title-final: clamp(2.85rem, 2.1rem + 2vw, 4rem);
+  --company-calculator-title-final: clamp(2.15rem, 1.65rem + 1.35vw, 2.95rem);
+}
+
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .company-calc-intro h2,
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .ed-header h2,
+body.b2b-landing:not(.medical-landing) main > section.profiles-section h2,
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .company-trust-panel h2,
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .philosophy-title,
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .booking-cta-inner h2 {
+  font-size: var(--company-section-title-final) !important;
+  line-height: 1.05 !important;
+  letter-spacing: 0 !important;
+}
+
+body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-header h2 {
+  font-size: var(--company-calculator-title-final) !important;
+  line-height: 1.08 !important;
+}
+
+body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-result-card {
+  padding: 22px 16px !important;
+}
+
+body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-result-number {
+  font-size: clamp(1.34rem, 1.08rem + .72vw, 1.78rem) !important;
+  line-height: 1.08 !important;
+}
+
+body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-result-label {
+  font-size: 0.76rem !important;
+  line-height: 1.25 !important;
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  body.b2b-landing:not(.medical-landing) {
+    --company-section-title-final: clamp(2.45rem, 1.75rem + 1.85vw, 3.25rem);
+    --company-calculator-title-final: clamp(2rem, 1.45rem + 1.35vw, 2.55rem);
+  }
+
+  body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-result-number {
+    font-size: clamp(1.24rem, 1rem + .62vw, 1.56rem) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body.b2b-landing:not(.medical-landing) {
+    --company-section-title-final: clamp(2.15rem, 10vw, 3.05rem);
+    --company-calculator-title-final: clamp(1.9rem, 8vw, 2.45rem);
+  }
+
+  body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-result-number {
+    font-size: 1.42rem !important;
+  }
+}
