@@ -18249,3 +18249,45 @@ body:not(.b2b-landing) .profiles-section {
     padding-top: 70px !important;
   }
 }
+
+/* ============================================================
+   Empresas — title scale + line-length refinement
+   ============================================================ */
+body.b2b-landing:not(.medical-landing) {
+  --company-editorial-title-reference: clamp(2.205rem, 1.775rem + 1.15vw, 2.845rem);
+  --company-utility-title-reference: clamp(1.675rem, 1.405rem + .72vw, 2.025rem);
+}
+
+body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text h2 {
+  max-width: 22ch !important;
+}
+
+body.b2b-landing:not(.medical-landing) .philosophy-title {
+  max-width: 23ch !important;
+}
+
+body.b2b-landing:not(.medical-landing) .company-booking-inner h2 {
+  max-width: 28ch !important;
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text h2 {
+    max-width: 21.5ch !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .philosophy-title {
+    max-width: 22.5ch !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .company-booking-inner h2 {
+    max-width: 27ch !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text h2,
+  body.b2b-landing:not(.medical-landing) .philosophy-title,
+  body.b2b-landing:not(.medical-landing) .company-booking-inner h2 {
+    max-width: 100% !important;
+  }
+}
