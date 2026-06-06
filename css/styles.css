@@ -18647,3 +18647,88 @@ body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-result-label 
     font-size: 1.42rem !important;
   }
 }
+
+/* ============================================================
+   Medicos — unified copy, titles, service list and logo centering
+   ============================================================ */
+body.medical-landing {
+  --medical-copy-reference: 1rem;
+  --medical-title-reference: clamp(2.55rem, 1.9rem + 1.75vw, 3.55rem);
+}
+
+body.medical-landing main > section:not(.medical-hero) .section-header > h2,
+body.medical-landing main > section:not(.medical-hero) .medical-program-copy > h2,
+body.medical-landing main > section:not(.medical-hero) .medical-complete-service-copy > h2,
+body.medical-landing main > section:not(.medical-hero) .medical-standards-header > h2,
+body.medical-landing main > section:not(.medical-hero) .company-trust-panel > h2,
+body.medical-landing main > section:not(.medical-hero) .medical-specialty-intro > h2,
+body.medical-landing main > section:not(.medical-hero) .medical-proof-panel > h2,
+body.medical-landing main > section:not(.medical-hero) .b2b-faqs h2 {
+  font-size: var(--medical-title-reference) !important;
+  line-height: 1.06 !important;
+  letter-spacing: 0 !important;
+}
+
+body.medical-landing main > section:not(.medical-hero) p,
+body.medical-landing main > section:not(.medical-hero) li,
+body.medical-landing main > section:not(.medical-hero) .section-subtitle,
+body.medical-landing main > section:not(.medical-hero) .faq-question,
+body.medical-landing main > section:not(.medical-hero) .testimonial-role {
+  font-size: var(--medical-copy-reference) !important;
+  line-height: 1.6 !important;
+}
+
+body.medical-landing .medical-complete-service-list li {
+  color: var(--text-secondary) !important;
+  font-size: var(--medical-copy-reference) !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+}
+
+body.medical-landing .medical-complete-service-list li::before {
+  border-color: var(--primary) !important;
+}
+
+body.medical-landing .trust-banner.b2b-premium-logos {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+body.medical-landing .b2b-premium-logos .marquee-container,
+body.medical-landing .b2b-premium-logos .marquee-track,
+body.medical-landing .b2b-premium-logos .marquee-item-box {
+  align-items: center !important;
+}
+
+body.medical-landing .b2b-premium-logos .marquee-item-box {
+  display: flex !important;
+  justify-content: center !important;
+  line-height: 0 !important;
+  padding: 0 !important;
+}
+
+body.medical-landing .b2b-premium-logos .marquee-item-box img {
+  display: block !important;
+  margin: auto !important;
+  object-position: center center !important;
+  transform: translateY(-2px) !important;
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  body.medical-landing {
+    --medical-copy-reference: 1rem;
+    --medical-title-reference: clamp(2.28rem, 1.64rem + 1.65vw, 3rem);
+  }
+}
+
+@media (max-width: 640px) {
+  body.medical-landing {
+    --medical-copy-reference: 1rem;
+    --medical-title-reference: clamp(2rem, 9.5vw, 2.85rem);
+  }
+
+  body.medical-landing .b2b-premium-logos .marquee-item-box img {
+    transform: translateY(-1px) !important;
+  }
+}
