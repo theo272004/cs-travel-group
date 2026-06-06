@@ -18378,3 +18378,65 @@ body.b2b-landing:not(.medical-landing) .company-booking-inner h2 {
     --company-key-title-reference: clamp(2rem, 9vw, 2.75rem);
   }
 }
+
+/* Empresas — thinner logo strip and stronger key titles */
+body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos {
+  padding-block: clamp(10px, 1.5vh, 18px) !important;
+}
+
+body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-container {
+  min-height: 0 !important;
+}
+
+body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box {
+  height: 58px !important;
+  margin: 0 34px !important;
+  width: 150px !important;
+}
+
+body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box img {
+  max-height: 48px !important;
+}
+
+body.b2b-landing:not(.medical-landing) {
+  --company-key-title-reference: clamp(2.55rem, 1.98rem + 1.65vw, 3.45rem);
+}
+
+body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text h2,
+body.b2b-landing:not(.medical-landing) .philosophy-title,
+body.b2b-landing:not(.medical-landing) .company-booking-inner h2 {
+  font-size: var(--company-key-title-reference) !important;
+  line-height: 1.04 !important;
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  body.b2b-landing:not(.medical-landing) {
+    --company-key-title-reference: clamp(2.35rem, 1.72rem + 1.65vw, 3.05rem);
+  }
+
+  body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box {
+    height: 52px !important;
+    margin: 0 28px !important;
+    width: 136px !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box img {
+    max-height: 42px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body.b2b-landing:not(.medical-landing) {
+    --company-key-title-reference: clamp(2.1rem, 10vw, 3rem);
+  }
+
+  body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box {
+    height: 42px !important;
+    margin: 0 18px !important;
+    width: 112px !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box img {
+    max-height: 34px !important;
+  }
+}
