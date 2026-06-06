@@ -18124,25 +18124,31 @@ body.b2b-landing:not(.medical-landing) .company-trust-point span:last-child {
 /* ============================================================
    Empresas — final typography reference lock
    Copy matches the service-card body copy: 0.95rem.
-   Section titles match the company hero title scale without hero line-height.
+   Editorial section titles stay larger without affecting calculator/cards.
    ============================================================ */
 body.b2b-landing:not(.medical-landing) {
   --company-copy-reference: 0.95rem;
-  --company-title-reference: var(--company-title);
+  --company-editorial-title-reference: clamp(2.08rem, 1.65rem + 1.15vw, 2.72rem);
+  --company-utility-title-reference: clamp(1.55rem, 1.28rem + .72vw, 1.9rem);
   --section-copy-uniform: var(--company-copy-reference);
   --company-copy-compact: var(--company-copy-reference);
 }
 
 body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .company-calc-intro h2,
-body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .calc-header h2,
 body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .ed-header h2,
 body.b2b-landing:not(.medical-landing) main > section.profiles-section h2,
 body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .company-trust-panel h2,
 body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .philosophy-title,
-body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .booking-cta-inner h2,
-body.b2b-landing:not(.medical-landing) main > section.b2b-faqs h2 {
-  font-size: var(--company-title-reference) !important;
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .booking-cta-inner h2 {
+  font-size: var(--company-editorial-title-reference) !important;
   line-height: 1.14 !important;
+  letter-spacing: 0 !important;
+}
+
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .calc-header h2,
+body.b2b-landing:not(.medical-landing) main > section.b2b-faqs h2 {
+  font-size: var(--company-utility-title-reference) !important;
+  line-height: 1.16 !important;
   letter-spacing: 0 !important;
 }
 
