@@ -18558,3 +18558,32 @@ body:not(.b2b-landing) .profiles-section {
     padding-top: 136px !important;
   }
 }
+
+/* Home — move only the profile title/cards down, not the sky background */
+body:not(.b2b-landing) .profiles-section > .container {
+  transform: translateY(34px) !important;
+}
+
+body:not(.b2b-landing) .profiles-section {
+  padding-bottom: calc(clamp(46px, 5.2vw, 72px) + 34px) !important;
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  body:not(.b2b-landing) .profiles-section > .container {
+    transform: translateY(36px) !important;
+  }
+
+  body:not(.b2b-landing) .profiles-section {
+    padding-bottom: 100px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  body:not(.b2b-landing) .profiles-section > .container {
+    transform: translateY(28px) !important;
+  }
+
+  body:not(.b2b-landing) .profiles-section {
+    padding-bottom: 86px !important;
+  }
+}
