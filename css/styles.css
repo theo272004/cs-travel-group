@@ -17695,3 +17695,215 @@ body.medical-landing .medical-patient-banner strong {
     margin-left: 0 !important;
   }
 }
+
+/* ============================================================
+   Home — compact small-laptop responsive pass
+   ============================================================ */
+@media (min-width: 901px) and (max-width: 1440px) {
+  body:not(.b2b-landing) section:not(.hero) {
+    padding-block: clamp(28px, 3vw, 48px) !important;
+  }
+
+  body:not(.b2b-landing) .stats-section {
+    padding-block: 28px !important;
+  }
+
+  body:not(.b2b-landing) .stats-grid {
+    padding: 22px 26px !important;
+  }
+
+  body:not(.b2b-landing) .stat-number {
+    font-size: clamp(1.55rem, 2vw, 2rem) !important;
+  }
+
+  body:not(.b2b-landing) .stat-label {
+    font-size: 0.82rem !important;
+  }
+
+  body:not(.b2b-landing) .profiles-section h2,
+  body:not(.b2b-landing) .work-meaning-title,
+  body:not(.b2b-landing) .credentials-header h2 {
+    font-size: clamp(1.65rem, 1.7vw, 2.25rem) !important;
+  }
+
+  body:not(.b2b-landing) .profiles-section .container > .reveal,
+  body:not(.b2b-landing) .credentials-header {
+    margin-bottom: 22px !important;
+  }
+
+  body:not(.b2b-landing) .minimal-profiles {
+    gap: 18px !important;
+    max-width: 880px !important;
+  }
+
+  body:not(.b2b-landing) .profile-card-minimal {
+    padding: 24px 30px !important;
+  }
+
+  body:not(.b2b-landing) .profile-icon {
+    height: 48px !important;
+    width: 48px !important;
+  }
+
+  body:not(.b2b-landing) .profile-card-header h3 {
+    font-size: 1.18rem !important;
+  }
+
+  body:not(.b2b-landing) .profile-content-minimal p {
+    font-size: 0.88rem !important;
+    line-height: 1.48 !important;
+    margin-bottom: 16px !important;
+  }
+
+  body:not(.b2b-landing) .work-meaning-section {
+    padding-block: 28px 38px !important;
+  }
+
+  body:not(.b2b-landing) .work-meaning-card::before {
+    height: 150px !important;
+    top: 104px !important;
+    width: min(680px, calc(100% - 180px)) !important;
+  }
+
+  body:not(.b2b-landing) .plane-showcase-frame {
+    height: 154px !important;
+    max-width: 720px !important;
+    transform: translateY(24px) !important;
+  }
+
+  body:not(.b2b-landing) .plane-showcase-image {
+    width: 122% !important;
+  }
+
+  body:not(.b2b-landing) .benefits-band {
+    border-radius: 18px !important;
+    margin-top: -18px !important;
+  }
+
+  body:not(.b2b-landing) .benefit-item {
+    padding: 24px 22px !important;
+  }
+
+  body:not(.b2b-landing) .benefit-icon {
+    margin-bottom: 12px !important;
+  }
+
+  body:not(.b2b-landing) .benefit-icon svg {
+    height: 26px !important;
+    width: 26px !important;
+  }
+
+  body:not(.b2b-landing) .benefit-item h3 {
+    font-size: 1.05rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  body:not(.b2b-landing) .benefit-item p {
+    font-size: 0.88rem !important;
+    line-height: 1.48 !important;
+  }
+
+  body:not(.b2b-landing) .destinations-scroll {
+    padding-block: 18px 32px !important;
+  }
+
+  body:not(.b2b-landing) .scroll-container {
+    align-items: flex-start !important;
+    box-sizing: border-box !important;
+    height: min(72vh, 640px) !important;
+    min-height: 560px !important;
+    overflow: visible !important;
+    padding-top: 76px !important;
+  }
+
+  body:not(.b2b-landing) .scroll-wrapper {
+    align-items: flex-start !important;
+    gap: 24px !important;
+    padding-inline: clamp(28px, 5vw, 72px) !important;
+  }
+
+  body:not(.b2b-landing) .scroll-title {
+    min-width: 340px !important;
+    padding-right: 16px !important;
+  }
+
+  body:not(.b2b-landing) .scroll-title h2 {
+    font-size: clamp(1.75rem, 2.3vw, 2.45rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  body:not(.b2b-landing) .scroll-title p {
+    font-size: 0.92rem !important;
+    line-height: 1.5 !important;
+    max-width: 390px !important;
+  }
+
+  body:not(.b2b-landing) .dest-card {
+    height: min(54vh, 460px) !important;
+    min-height: 410px !important;
+    width: 360px !important;
+  }
+
+  body:not(.b2b-landing) .dest-card-content {
+    min-height: 132px !important;
+    padding: 24px 22px !important;
+  }
+
+  body:not(.b2b-landing) .dest-card-content span {
+    font-size: 0.66rem !important;
+    min-height: 0 !important;
+  }
+
+  body:not(.b2b-landing) .dest-card-content h3 {
+    font-size: 1.32rem !important;
+    line-height: 1.12 !important;
+  }
+
+  body:not(.b2b-landing) .cred-grid-three .cred-card {
+    padding: 16px !important;
+  }
+
+  body:not(.b2b-landing) .cred-copy h3 {
+    font-size: 1rem !important;
+  }
+
+  body:not(.b2b-landing) .cred-copy p {
+    font-size: 0.82rem !important;
+  }
+
+  body:not(.b2b-landing) .home-credentials-testimonials {
+    gap: 18px !important;
+    margin-top: 26px !important;
+  }
+
+  body:not(.b2b-landing) .home-testimonial-card {
+    padding: 22px !important;
+  }
+
+  body:not(.b2b-landing) .home-testimonial-card .b2b-testimonial-quote {
+    font-size: 2rem !important;
+    margin-bottom: 16px !important;
+  }
+
+  body:not(.b2b-landing) .home-testimonial-card p {
+    font-size: 0.9rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 20px !important;
+  }
+
+  body:not(.b2b-landing) .home-testimonial-card .testimonial-name {
+    font-size: 0.94rem !important;
+  }
+
+  body:not(.b2b-landing) .home-testimonial-card .testimonial-role {
+    font-size: 0.84rem !important;
+  }
+
+  body:not(.b2b-landing) .home-final-cta {
+    padding-block: 46px !important;
+  }
+
+  body:not(.b2b-landing) .home-final-cta-inner h2 {
+    font-size: clamp(1.75rem, 2.2vw, 2.55rem) !important;
+  }
+}
