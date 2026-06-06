@@ -17660,11 +17660,20 @@ body.medical-landing .medical-patient-banner {
 body.medical-landing .medical-patient-banner p {
   color: #fff !important;
   font-size: clamp(1rem, 1.2vw, 1.18rem) !important;
-  font-weight: 800 !important;
+  font-weight: 500 !important;
   line-height: 1.28 !important;
   margin: 0 auto !important;
   max-width: 76ch !important;
   text-align: center !important;
+}
+
+body.medical-landing .medical-patient-banner-line {
+  display: block;
+}
+
+body.medical-landing .medical-patient-banner strong {
+  color: #fff !important;
+  font-weight: 800 !important;
 }
 
 @media (max-width: 768px) {
