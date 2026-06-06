@@ -137,7 +137,7 @@ const translations = {
     final_cta_label: 'Siguiente paso',
     final_cta_title: 'Cuéntanos cómo viaja tu empresa hoy',
     final_cta_desc: 'Solicita una propuesta corporativa sin compromiso. Estamos listos para convertirnos en tu mejor aliado.',
-    final_cta_btn: 'Escríbenos',
+    final_cta_btn: 'Contáctanos',
     proc_label: 'Nuestro proceso',
     proc_title: 'De la idea al viaje en 4 pasos',
     proc_subtitle: 'Un proceso claro y sin complicaciones para que tu organización viaje con total confianza.',
