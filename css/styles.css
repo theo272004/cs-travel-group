@@ -17972,3 +17972,60 @@ body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-
     --section-copy-uniform: 0.92rem;
   }
 }
+
+/* ============================================================
+   Empresas — compact typography pass outside cards/hero/media
+   ============================================================ */
+body.b2b-landing:not(.medical-landing) {
+  --section-title-uniform: clamp(1.74rem, 1.22rem + 1.35vw, 2.38rem);
+  --section-copy-uniform: clamp(0.92rem, 0.86rem + 0.16vw, 1rem);
+  --company-copy-compact: clamp(0.92rem, 0.86rem + 0.16vw, 1rem);
+}
+
+body.b2b-landing:not(.medical-landing) main > section:not(.split-hero):not(.booking-cta) {
+  font-size: var(--company-copy-compact);
+}
+
+body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text h2,
+body.b2b-landing:not(.medical-landing) .ed-header h2,
+body.b2b-landing:not(.medical-landing) .profiles-section > .container > .reveal > h2,
+body.b2b-landing:not(.medical-landing) .company-trust-panel h2,
+body.b2b-landing:not(.medical-landing) .philosophy-title,
+body.b2b-landing:not(.medical-landing) .b2b-faqs h2 {
+  font-size: var(--section-title-uniform) !important;
+  line-height: 1.08 !important;
+}
+
+body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text p,
+body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-quote,
+body.b2b-landing:not(.medical-landing) .ed-header p,
+body.b2b-landing:not(.medical-landing) .company-trust-panel > p,
+body.b2b-landing:not(.medical-landing) .philosophy-p,
+body.b2b-landing:not(.medical-landing) .philosophy-p.secondary {
+  font-size: var(--company-copy-compact) !important;
+  line-height: 1.58 !important;
+}
+
+body.b2b-landing:not(.medical-landing) .company-trust-point span:last-child {
+  font-size: 0.86rem !important;
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  body.b2b-landing:not(.medical-landing) {
+    --section-title-uniform: clamp(1.54rem, 1.45vw, 2.04rem);
+    --section-copy-uniform: 0.88rem;
+    --company-copy-compact: 0.88rem;
+  }
+
+  body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text h2,
+  body.b2b-landing:not(.medical-landing) .company-trust-panel h2,
+  body.b2b-landing:not(.medical-landing) .philosophy-title {
+    max-width: 18ch;
+  }
+
+  body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text p,
+  body.b2b-landing:not(.medical-landing) .company-trust-panel > p,
+  body.b2b-landing:not(.medical-landing) .philosophy-p {
+    max-width: 54ch;
+  }
+}
