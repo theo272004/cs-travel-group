@@ -18177,3 +18177,75 @@ body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .testimon
     --company-copy-reference: 0.95rem;
   }
 }
+
+/* ============================================================
+   Home — copy size bump and profile-section breathing room
+   ============================================================ */
+body:not(.b2b-landing) .hero-desc {
+  font-size: calc(var(--home-hero-desc, 1rem) + 0.0625rem) !important;
+}
+
+body:not(.b2b-landing) .profile-content-minimal p,
+body:not(.b2b-landing) .benefit-item p,
+body:not(.b2b-landing) .scroll-title p,
+body:not(.b2b-landing) .dest-card-content p,
+body:not(.b2b-landing) .cred-copy p,
+body:not(.b2b-landing) .home-testimonial-card p,
+body:not(.b2b-landing) .home-testimonial-card .testimonial-role,
+body:not(.b2b-landing) .home-final-cta p {
+  font-size: calc(1em + 0.0625rem) !important;
+}
+
+body:not(.b2b-landing) .profiles-section {
+  margin-top: clamp(18px, 3vw, 42px) !important;
+  padding-top: clamp(78px, 8vw, 116px) !important;
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  body:not(.b2b-landing) .profile-content-minimal p {
+    font-size: 0.9425rem !important;
+  }
+
+  body:not(.b2b-landing) .benefit-item p {
+    font-size: 0.9425rem !important;
+  }
+
+  body:not(.b2b-landing) .scroll-title p {
+    font-size: 0.9825rem !important;
+  }
+
+  body:not(.b2b-landing) .cred-copy p {
+    font-size: 0.8825rem !important;
+  }
+
+  body:not(.b2b-landing) .home-testimonial-card p {
+    font-size: 0.9625rem !important;
+  }
+
+  body:not(.b2b-landing) .home-testimonial-card .testimonial-role {
+    font-size: 0.9025rem !important;
+  }
+
+  body:not(.b2b-landing) .profiles-section {
+    margin-top: clamp(24px, 3vw, 46px) !important;
+    padding-top: 82px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  body:not(.b2b-landing) .profile-content-minimal p {
+    font-size: 0.9625rem !important;
+  }
+
+  body:not(.b2b-landing) .benefit-item p,
+  body:not(.b2b-landing) .scroll-title p,
+  body:not(.b2b-landing) .home-testimonial-card p,
+  body:not(.b2b-landing) .home-final-cta p {
+    font-size: 1.0125rem !important;
+  }
+
+  body:not(.b2b-landing) .profiles-section {
+    margin-top: 24px !important;
+    padding-top: 70px !important;
+  }
+}
