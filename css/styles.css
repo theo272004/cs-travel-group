@@ -18538,3 +18538,23 @@ body:not(.b2b-landing) .profiles-section > .container {
     inset: -86px 0 0 !important;
   }
 }
+
+/* Home — lower profile content only, keep sky start fixed */
+body:not(.b2b-landing) .profiles-section {
+  padding-bottom: clamp(46px, 5.2vw, 72px) !important;
+  padding-top: clamp(154px, 11vw, 188px) !important;
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  body:not(.b2b-landing) .profiles-section {
+    padding-bottom: 64px !important;
+    padding-top: 168px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  body:not(.b2b-landing) .profiles-section {
+    padding-bottom: 58px !important;
+    padding-top: 136px !important;
+  }
+}
