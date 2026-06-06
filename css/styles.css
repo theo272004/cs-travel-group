@@ -17926,3 +17926,49 @@ body.medical-landing .medical-patient-banner strong {
     font-size: clamp(1.75rem, 2.2vw, 2.55rem) !important;
   }
 }
+
+/* ============================================================
+   Global section typography consistency
+   Applies to section titles/copy, excluding heroes and framed cards.
+   ============================================================ */
+:root {
+  --section-title-uniform: clamp(1.9rem, 1.28rem + 1.55vw, 2.7rem);
+  --section-copy-uniform: clamp(0.98rem, 0.9rem + 0.2vw, 1.08rem);
+}
+
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) > .container > .reveal > h2,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .section-header > h2,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .credentials-header > h2,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .scroll-title > h2,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .work-meaning-title,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .medical-specialty-intro > h2,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .medical-program-copy > h2,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .intro-block-text > h2,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .company-trust-panel > h2,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .medical-complete-service-copy > h2,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .medical-standards-header > h2,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .medical-behind-scenes-copy > h2 {
+  font-size: var(--section-title-uniform) !important;
+  line-height: 1.08 !important;
+}
+
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .section-subtitle,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .section-header > p,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .scroll-title > p,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .intro-block-text > p,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .company-trust-panel > p,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .medical-specialty-intro > p,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .medical-program-text > p,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .medical-complete-service-copy > p,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .medical-standards-header > p,
+body:not(.contact-page) main > section:not(.hero):not(.split-hero):not(.medical-hero):not(.home-final-cta) .medical-behind-scenes-text > p {
+  font-size: var(--section-copy-uniform) !important;
+  line-height: 1.6 !important;
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  :root {
+    --section-title-uniform: clamp(1.65rem, 1.7vw, 2.25rem);
+    --section-copy-uniform: 0.92rem;
+  }
+}
