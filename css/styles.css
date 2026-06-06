@@ -17627,6 +17627,21 @@ body:not(.b2b-landing) .home-testimonial-card .testimonial-stars {
     font-size: 1.04rem !important;
     line-height: 1.48 !important;
   }
+
+  body:not(.b2b-landing) .home-testimonial-card .testimonial-name {
+    font-size: 0.96rem !important;
+    line-height: 1.18 !important;
+    margin-bottom: 6px !important;
+  }
+
+  body:not(.b2b-landing) .home-testimonial-card .testimonial-role {
+    font-size: 0.88rem !important;
+    line-height: 1.22 !important;
+  }
+
+  body:not(.b2b-landing) .home-testimonial-card .testimonial-stars {
+    font-size: 0.96rem !important;
+  }
 }
 
 /* ============================================================
