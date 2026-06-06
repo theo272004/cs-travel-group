@@ -17279,3 +17279,56 @@ body.medical-landing .medical-patient-journey .section-header {
     padding: 18px 20px !important;
   }
 }
+
+/* ============================================================
+   Empresas Mobile — testimonials and FAQ alignment refinements
+   ============================================================ */
+@media (max-width: 768px) {
+  body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-card,
+  body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-card p {
+    text-align: left !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-footer {
+    align-items: baseline !important;
+    display: grid !important;
+    gap: 4px 8px !important;
+    grid-template-columns: auto auto !important;
+    justify-content: start !important;
+    text-align: left !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-profile,
+  body.b2b-landing:not(.medical-landing) .company-proof-cards .testimonial-info {
+    display: contents !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .company-proof-cards .testimonial-name {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    text-align: left !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .company-proof-cards .testimonial-stars {
+    align-self: baseline !important;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .company-proof-cards .testimonial-role {
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    text-align: left !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .b2b-faqs h2 {
+    text-align: center !important;
+  }
+
+  body.b2b-landing:not(.medical-landing) .b2b-faqs h2::after {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
