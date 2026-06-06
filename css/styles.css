@@ -19133,20 +19133,26 @@ html body.b2b-landing .hero-action-row .hero-primary-cta {
 }
 
 /* ---- 4. Carrusel de logos: mismo tamaño (empresas y médicos) ---- */
+/* Caja contenedora idéntica en empresas y médicos */
 html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box,
 html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box {
-  width: 160px !important;
-  height: 64px !important;
-  margin: 0 38px !important;
+  width: 168px !important;
+  height: 70px !important;
+  margin: 0 clamp(20px, 2.6vw, 44px) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   padding: 0 !important;
+  flex-shrink: 0 !important;
 }
+/* Altura FIJA del logo => todos se ven del mismo tamaño visual.
+   width auto mantiene la proporción; max-width evita que un logo
+   ancho invada el espacio del siguiente (no se superponen). */
 html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box img,
 html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img {
-  max-width: 100% !important;
-  max-height: 54px !important;
+  height: 46px !important;
+  width: auto !important;
+  max-width: 150px !important;
   object-fit: contain !important;
   margin: auto !important;
   transform: none !important;
@@ -19155,26 +19161,42 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
 @media (min-width: 901px) and (max-width: 1440px) {
   html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box,
   html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box {
-    width: 142px !important;
-    height: 56px !important;
-    margin: 0 30px !important;
+    width: 150px !important;
+    height: 62px !important;
+    margin: 0 28px !important;
   }
   html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box img,
   html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img {
-    max-height: 46px !important;
+    height: 40px !important;
+    max-width: 132px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box,
+  html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box {
+    width: 132px !important;
+    height: 54px !important;
+    margin: 0 22px !important;
+  }
+  html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box img,
+  html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img {
+    height: 36px !important;
+    max-width: 116px !important;
   }
 }
 
 @media (max-width: 640px) {
   html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box,
   html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box {
-    width: 120px !important;
+    width: 116px !important;
     height: 48px !important;
-    margin: 0 18px !important;
+    margin: 0 16px !important;
   }
   html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box img,
   html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img {
-    max-height: 38px !important;
+    height: 32px !important;
+    max-width: 100px !important;
   }
 }
 
@@ -19219,33 +19241,34 @@ html body:not(.b2b-landing) .stats-section::after {
     max-width: 44% !important;
   }
 
-  /* Título y descripción con el mismo ancho de envoltura */
+  /* Título y descripción: tamaño que cabe en la columna y SIEMPRE
+     dentro de su espacio (nunca sobre la imagen del lado). */
   html body.b2b-landing:not(.medical-landing) .split-hero-title,
   html body.medical-landing .medical-hero .split-hero-title {
-    max-width: 16ch !important;
+    font-size: clamp(1.85rem, 1.05rem + 2vw, 3.35rem) !important;
+    line-height: 1.08 !important;
+    max-width: 100% !important;
     margin-bottom: 0 !important;
+    overflow-wrap: break-word !important;
   }
 
   html body.b2b-landing:not(.medical-landing) .split-hero-copy,
   html body.medical-landing .medical-hero .split-hero-copy {
-    max-width: 54ch !important;
+    max-width: min(100%, 52ch) !important;
   }
 
   html body.b2b-landing:not(.medical-landing) .split-hero-desc,
   html body.medical-landing .medical-hero .split-hero-desc {
-    max-width: 54ch !important;
+    max-width: min(100%, 52ch) !important;
   }
 }
 
-/* Título de médicos en 3 líneas con saltos coherentes (igual que
-   empresas). En móvil se permite el reflow natural. */
+/* Líneas del título (empresas y médicos): se agrupan en bloque y
+   envuelven dentro de la columna en vez de desbordar sobre la
+   imagen. Mantiene los 3 saltos coherentes cuando caben. */
+html body.b2b-landing:not(.medical-landing) .split-hero-title .company-hero-line,
 html body.medical-landing .medical-hero .split-hero-title .medical-hero-line {
   display: block !important;
-  white-space: nowrap !important;
-}
-
-@media (max-width: 900px) {
-  html body.medical-landing .medical-hero .split-hero-title .medical-hero-line {
-    white-space: normal !important;
-  }
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
 }
