@@ -1295,10 +1295,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const mobileProfileCards = document.querySelectorAll('body:not(.b2b-landing) .profile-card-minimal');
       if (mobileProfileCards.length) {
         mobileProfileCards.forEach(card => {
-          card.addEventListener('pointerdown', () => {
-            if (!window.matchMedia('(max-width: 768px)').matches) return;
+          const activateMobileProfileCard = () => {
             mobileProfileCards.forEach(item => item.classList.remove('is-mobile-selected'));
             card.classList.add('is-mobile-selected');
+          };
+
+          card.addEventListener('pointerdown', () => {
+            if (!window.matchMedia('(max-width: 768px)').matches) return;
+            activateMobileProfileCard();
+          });
+
+          card.addEventListener('click', (event) => {
+            if (window.matchMedia('(max-width: 768px)').matches) {
+              event.preventDefault();
+              activateMobileProfileCard();
+              return;
+            }
+
+            const href = card.dataset.href;
+            if (href) window.location.href = href;
           });
         });
       }
