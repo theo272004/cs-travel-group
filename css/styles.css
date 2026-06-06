@@ -18291,3 +18291,20 @@ body.b2b-landing:not(.medical-landing) .company-booking-inner h2 {
     max-width: 100% !important;
   }
 }
+
+/* Empresas — stronger body text scale */
+body.b2b-landing:not(.medical-landing) {
+  --company-copy-reference: 1.05rem;
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  body.b2b-landing:not(.medical-landing) {
+    --company-copy-reference: 1.03rem;
+  }
+}
+
+@media (max-width: 640px) {
+  body.b2b-landing:not(.medical-landing) {
+    --company-copy-reference: 1rem;
+  }
+}
