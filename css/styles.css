@@ -18732,3 +18732,129 @@ body.medical-landing .b2b-premium-logos .marquee-item-box img {
     transform: translateY(-1px) !important;
   }
 }
+
+/* ============================================================
+   Medicos — final correction: match Empresas scale and card layout
+   ============================================================ */
+body.medical-landing {
+  --medical-copy-reference: 1.05rem;
+  --medical-title-reference: clamp(2.85rem, 2.1rem + 2vw, 4rem);
+}
+
+body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box {
+  align-items: center !important;
+  display: flex !important;
+  height: 60px !important;
+  justify-content: center !important;
+  margin: 0 40px !important;
+  padding: 0 !important;
+  width: 140px !important;
+}
+
+body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img {
+  display: block !important;
+  margin: auto !important;
+  max-height: 42px !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  transform: translateY(-4px) !important;
+}
+
+body.medical-landing .medical-complete-service-list li,
+body.medical-landing .medical-complete-service-copy p,
+body.medical-landing .medical-standard-card p,
+body.medical-landing .medical-program-text p,
+body.medical-landing .medical-standards-header p,
+body.medical-landing .medical-specialty-intro p,
+body.medical-landing .medical-specialty-note-text,
+body.medical-landing .medical-patient-journey .section-subtitle,
+body.medical-landing .medical-proof-panel p,
+body.medical-landing .faq-answer p {
+  color: var(--text-secondary) !important;
+  font-size: var(--medical-copy-reference) !important;
+  line-height: 1.6 !important;
+}
+
+body.medical-landing .medical-complete-service-list li::before {
+  border-color: var(--secondary) !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards .testimonial-name,
+body.medical-landing .medical-proof-cards .testimonial-name {
+  color: var(--primary) !important;
+  font-size: 1.03rem !important;
+  font-weight: 800 !important;
+  line-height: 1.22 !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards .testimonial-role,
+body.medical-landing .medical-proof-cards .testimonial-role {
+  color: #5f6f82 !important;
+  font-size: 0.94rem !important;
+  font-weight: 500 !important;
+  line-height: 1.32 !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-trust-panel h2,
+body.medical-landing .medical-specialty-intro h2,
+body.medical-landing .medical-closing-cta .medical-proof-panel h2,
+body.medical-landing .medical-proof-panel h2 {
+  font-size: var(--medical-title-reference) !important;
+  line-height: 1.05 !important;
+}
+
+body.medical-landing .medical-trust-proof-grid {
+  gap: clamp(34px, 4.5vw, 70px) !important;
+  grid-template-columns: minmax(330px, .58fr) minmax(940px, 1.42fr) !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards {
+  gap: clamp(20px, 2vw, 28px) !important;
+  grid-template-columns: repeat(3, minmax(280px, 1fr)) !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonial-card {
+  border-radius: 18px !important;
+  min-height: 360px !important;
+  padding: clamp(26px, 2.2vw, 34px) !important;
+}
+
+body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonial-card p {
+  font-size: var(--medical-copy-reference) !important;
+  line-height: 1.5 !important;
+  margin-bottom: 22px !important;
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  body.medical-landing {
+    --medical-copy-reference: 1.03rem;
+    --medical-title-reference: clamp(2.45rem, 1.75rem + 1.85vw, 3.25rem);
+  }
+
+  body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box {
+    height: 52px !important;
+    margin: 0 34px !important;
+    width: 132px !important;
+  }
+
+  body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img {
+    max-height: 38px !important;
+    transform: translateY(-4px) !important;
+  }
+
+  body.medical-landing .medical-trust-proof-grid {
+    grid-template-columns: minmax(310px, .54fr) minmax(760px, 1.46fr) !important;
+  }
+
+  body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonial-card {
+    min-height: 330px !important;
+    padding: 26px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body.medical-landing {
+    --medical-copy-reference: 1rem;
+    --medical-title-reference: clamp(2.15rem, 10vw, 3.05rem);
+  }
+}
