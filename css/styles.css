@@ -18491,3 +18491,50 @@ body:not(.b2b-landing) .destinations-scroll .scroll-title p {
     min-height: 320px !important;
   }
 }
+
+/* Home — keep profile content lower while extending only the background upward */
+body:not(.b2b-landing) .profiles-section {
+  background: transparent !important;
+  isolation: isolate !important;
+  margin-top: 0 !important;
+  overflow: visible !important;
+  padding-top: clamp(112px, 9vw, 146px) !important;
+}
+
+body:not(.b2b-landing) .profiles-section::before {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(191,216,244,.18), transparent 50%),
+    linear-gradient(180deg, #EAF6FF 0%, #FFFFFF 100%);
+  content: "" !important;
+  inset: -118px 0 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  z-index: -1 !important;
+}
+
+body:not(.b2b-landing) .profiles-section > .container {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  body:not(.b2b-landing) .profiles-section {
+    margin-top: 0 !important;
+    padding-top: 124px !important;
+  }
+
+  body:not(.b2b-landing) .profiles-section::before {
+    inset: -104px 0 0 !important;
+  }
+}
+
+@media (max-width: 900px) {
+  body:not(.b2b-landing) .profiles-section {
+    margin-top: 0 !important;
+    padding-top: 96px !important;
+  }
+
+  body:not(.b2b-landing) .profiles-section::before {
+    inset: -86px 0 0 !important;
+  }
+}
