@@ -18992,3 +18992,204 @@ body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonia
     transform: translateY(-8px) !important;
   }
 }
+
+
+/* ============================================================
+   UNIFICACIÓN GLOBAL (bloque maestro — anexado al final para
+   ganar la cascada). Aplica a escritorio y a TODAS las
+   versiones responsive.
+   - Títulos de sección: mismo tamaño que el home ("¿Con quién
+     trabajamos?") en home, empresas y médicos.
+   - Párrafos: tamaño unificado en toda la página.
+   - Hero empresas/médicos: kicker, título, descripción y botón
+     unificados (mismo tamaño, posición y texto).
+   - Carrusel de logos: mismo tamaño en empresas y médicos.
+   - Stats: contenedor superpuesto y centrado, sin elementos
+     extra en responsive.
+   ============================================================ */
+:root {
+  --u-section-title: clamp(1.9rem, 1.3rem + 1.55vw, 2.7rem);
+  --u-body-text: clamp(1rem, 0.95rem + 0.22vw, 1.1rem);
+  --u-kicker: clamp(0.86rem, 0.78rem + 0.18vw, 1rem);
+}
+
+/* ---- 1. Títulos de sección unificados ---- */
+/* Home */
+html body:not(.b2b-landing) main section .profiles-section h2,
+html body:not(.b2b-landing) main section.profiles-section h2,
+html body:not(.b2b-landing) main .work-meaning-title,
+html body:not(.b2b-landing) main .credentials-header h2,
+html body:not(.b2b-landing) main .scroll-title h2,
+html body:not(.b2b-landing) main .proof-header h2,
+html body:not(.b2b-landing) main .home-final-cta-inner h2,
+/* Empresas */
+html body.b2b-landing:not(.medical-landing) main section .intro-block-text h2,
+html body.b2b-landing:not(.medical-landing) main section .calc-header h2,
+html body.b2b-landing:not(.medical-landing) main section .ed-header h2,
+html body.b2b-landing:not(.medical-landing) main section.profiles-section h2,
+html body.b2b-landing:not(.medical-landing) main section .company-trust-panel h2,
+html body.b2b-landing:not(.medical-landing) main section .philosophy-title,
+html body.b2b-landing:not(.medical-landing) main section .booking-cta-inner h2,
+html body.b2b-landing:not(.medical-landing) main section .company-booking-inner h2,
+html body.b2b-landing:not(.medical-landing) main section.b2b-faqs h2,
+/* Médicos */
+html body.medical-landing main section .medical-program-copy h2,
+html body.medical-landing main section .section-header h2,
+html body.medical-landing main section .medical-complete-service-copy h2,
+html body.medical-landing main section .medical-standards-header h2,
+html body.medical-landing main section .company-trust-panel h2,
+html body.medical-landing main section .medical-behind-scenes-copy h2,
+html body.medical-landing main section .medical-specialty-intro h2,
+html body.medical-landing main section .medical-patient-journey h2,
+html body.medical-landing main section .medical-proof-panel h2,
+html body.medical-landing main section.b2b-faqs h2 {
+  font-size: var(--u-section-title) !important;
+  line-height: 1.1 !important;
+}
+
+/* ---- 2. Párrafos / copy de sección unificados ---- */
+/* Home */
+html body:not(.b2b-landing) main .scroll-title p,
+html body:not(.b2b-landing) main .credentials-header p,
+html body:not(.b2b-landing) main .proof-header p,
+html body:not(.b2b-landing) main .home-final-cta-inner p,
+html body:not(.b2b-landing) main .profile-content-minimal p,
+html body:not(.b2b-landing) main .benefit-item p,
+/* Empresas */
+html body.b2b-landing:not(.medical-landing) main section .intro-block-text p,
+html body.b2b-landing:not(.medical-landing) main section .intro-block-quote,
+html body.b2b-landing:not(.medical-landing) main section .ed-header p,
+html body.b2b-landing:not(.medical-landing) main section .company-trust-panel p,
+html body.b2b-landing:not(.medical-landing) main section .philosophy-p,
+html body.b2b-landing:not(.medical-landing) main section .booking-cta-inner p,
+html body.b2b-landing:not(.medical-landing) main section .company-model-copy p,
+/* Médicos */
+html body.medical-landing main section .medical-program-text p,
+html body.medical-landing main section .medical-process-cards .company-model-copy p,
+html body.medical-landing main section .medical-complete-service-copy p,
+html body.medical-landing main section .medical-complete-service-list li,
+html body.medical-landing main section .medical-standards-header p,
+html body.medical-landing main section .medical-standard-card p,
+html body.medical-landing main section .company-trust-panel p,
+html body.medical-landing main section .medical-specialty-intro .section-subtitle,
+html body.medical-landing main section .medical-specialty-note-text,
+html body.medical-landing main section .medical-patient-journey .section-subtitle,
+html body.medical-landing main section .medical-proof-panel p,
+html body.medical-landing main section .section-header p {
+  font-size: var(--u-body-text) !important;
+  line-height: 1.6 !important;
+}
+
+/* ---- 3. Hero empresas/médicos: paridad ---- */
+/* Kicker mismo tamaño en ambas páginas y en responsive */
+html body.b2b-landing:not(.medical-landing) .split-hero-kicker,
+html body.medical-landing .medical-hero .split-hero-kicker {
+  font-size: var(--u-kicker) !important;
+  line-height: 1.45 !important;
+  letter-spacing: 0.08em !important;
+  margin-bottom: clamp(10px, 1.6vh, 18px) !important;
+  transform: none !important;
+}
+
+/* Título y descripción del hero idénticos en ambas */
+html body.b2b-landing:not(.medical-landing) .split-hero-title,
+html body.medical-landing .medical-hero .split-hero-title {
+  font-size: var(--title-h1-consistent) !important;
+  line-height: 1.08 !important;
+}
+html body.b2b-landing:not(.medical-landing) .split-hero-desc,
+html body.medical-landing .medical-hero .split-hero-desc {
+  font-size: var(--text-p-consistent) !important;
+  line-height: 1.65 !important;
+}
+
+/* Contenido del hero: misma posición vertical y agrupación */
+html body.b2b-landing:not(.medical-landing) .split-hero-content,
+html body.medical-landing .medical-hero .split-hero-content {
+  justify-content: center !important;
+  row-gap: clamp(16px, 2.2vh, 24px) !important;
+}
+
+/* Fila de acción y botón principal idénticos en ambas páginas */
+html body.b2b-landing:not(.medical-landing) .hero-action-row,
+html body.medical-landing .medical-hero .hero-action-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin-top: clamp(6px, 1.4vh, 14px) !important;
+}
+html body.b2b-landing .hero-action-row .hero-primary-cta {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border-radius: 999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: clamp(0.94rem, 0.86rem + 0.22vw, 1.04rem) !important;
+  font-weight: 600 !important;
+  min-height: 50px !important;
+  padding: 14px 30px !important;
+  width: auto !important;
+}
+
+/* ---- 4. Carrusel de logos: mismo tamaño (empresas y médicos) ---- */
+html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box,
+html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box {
+  width: 160px !important;
+  height: 64px !important;
+  margin: 0 38px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+}
+html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box img,
+html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img {
+  max-width: 100% !important;
+  max-height: 54px !important;
+  object-fit: contain !important;
+  margin: auto !important;
+  transform: none !important;
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box,
+  html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box {
+    width: 142px !important;
+    height: 56px !important;
+    margin: 0 30px !important;
+  }
+  html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box img,
+  html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img {
+    max-height: 46px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box,
+  html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box {
+    width: 120px !important;
+    height: 48px !important;
+    margin: 0 18px !important;
+  }
+  html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box img,
+  html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img {
+    max-height: 38px !important;
+  }
+}
+
+/* ---- 5. Stats: superpuesto, centrado y sin cajas extra ---- */
+html body:not(.b2b-landing) .stats-grid {
+  margin-inline: auto !important;
+}
+/* La sección no aporta fondo/caja propia; solo la tarjeta de stats */
+html body:not(.b2b-landing) .stats-section {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+html body:not(.b2b-landing) .stats-section::before,
+html body:not(.b2b-landing) .stats-section::after {
+  display: none !important;
+  content: none !important;
+}
