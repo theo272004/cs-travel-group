@@ -18360,3 +18360,21 @@ body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .testimon
     padding-left: 0 !important;
   }
 }
+
+/* Empresas — match key editorial titles to calculator title scale */
+body.b2b-landing:not(.medical-landing) {
+  --company-key-title-reference: clamp(2rem, 1.5rem + 1.5vw, 2.75rem);
+}
+
+body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text h2,
+body.b2b-landing:not(.medical-landing) .philosophy-title,
+body.b2b-landing:not(.medical-landing) .company-booking-inner h2 {
+  font-size: var(--company-key-title-reference) !important;
+  line-height: 1.08 !important;
+}
+
+@media (max-width: 640px) {
+  body.b2b-landing:not(.medical-landing) {
+    --company-key-title-reference: clamp(2rem, 9vw, 2.75rem);
+  }
+}
