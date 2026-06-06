@@ -17332,3 +17332,67 @@ body.medical-landing .medical-patient-journey .section-header {
     margin-right: auto !important;
   }
 }
+
+/* ============================================================
+   Medicos Mobile — hero highlight, program copy, phone spacing
+   ============================================================ */
+@media (max-width: 900px) {
+  body.medical-landing .medical-hero .split-hero-title .hero-highlight.medical-hero-highlight-nowrap {
+    align-items: flex-start !important;
+    background: transparent !important;
+    box-decoration-break: initial !important;
+    -webkit-box-decoration-break: initial !important;
+    color: #102A4C !important;
+    display: inline-flex !important;
+    flex-direction: column !important;
+    gap: 0.14em !important;
+    padding: 0 !important;
+    white-space: normal !important;
+  }
+
+  body.medical-landing .medical-hero .split-hero-title .medical-hero-highlight-piece {
+    background: #FFD21F !important;
+    color: #102A4C !important;
+    display: inline-block !important;
+    line-height: 1.04 !important;
+    padding: 0 .12em .04em !important;
+    text-shadow: none !important;
+    width: fit-content !important;
+  }
+
+  body.medical-landing .medical-program-section .container {
+    justify-content: flex-start !important;
+    padding-inline: 24px !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-direct {
+    align-items: flex-start !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    max-width: 560px !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-copy,
+  body.medical-landing .medical-program-section .medical-program-text,
+  body.medical-landing .medical-program-section .medical-program-copy h2,
+  body.medical-landing .medical-program-section .medical-program-copy .medical-program-title-line,
+  body.medical-landing .medical-program-section .medical-program-text p,
+  body.medical-landing .medical-program-section .medical-program-text p:last-child,
+  body.medical-landing .medical-program-section .medical-program-text p strong {
+    max-width: 100% !important;
+    text-align: left !important;
+    text-align-last: left !important;
+  }
+
+  body.medical-landing .medical-patient-grid {
+    margin-top: 64px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  body.medical-landing .medical-patient-grid {
+    margin-top: 72px !important;
+  }
+}
