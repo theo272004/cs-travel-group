@@ -1292,6 +1292,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
+      const mobileProfileCards = document.querySelectorAll('body:not(.b2b-landing) .profile-card-minimal');
+      if (mobileProfileCards.length) {
+        mobileProfileCards.forEach(card => {
+          card.addEventListener('pointerdown', () => {
+            if (!window.matchMedia('(max-width: 768px)').matches) return;
+            mobileProfileCards.forEach(item => item.classList.remove('is-mobile-selected'));
+            card.classList.add('is-mobile-selected');
+          });
+        });
+      }
+
       // 3. Section Reveals
       const revealElements = document.querySelectorAll('.reveal');
       if (desktopMotion) {
