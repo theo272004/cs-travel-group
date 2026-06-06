@@ -17628,3 +17628,46 @@ body:not(.b2b-landing) .home-testimonial-card .testimonial-stars {
     line-height: 1.48 !important;
   }
 }
+
+/* ============================================================
+   Medicos — patient banner and mobile FAQ arrows
+   ============================================================ */
+body.medical-landing .medical-patient-banner {
+  background: #062b55 !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  margin: clamp(28px, 3.2vw, 44px) auto 0 !important;
+  max-width: min(1120px, calc(100vw - 96px)) !important;
+  padding: clamp(18px, 2.2vw, 26px) clamp(28px, 5vw, 72px) !important;
+  text-align: center !important;
+}
+
+body.medical-landing .medical-patient-banner p {
+  color: #fff !important;
+  font-size: clamp(1rem, 1.2vw, 1.18rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.28 !important;
+  margin: 0 auto !important;
+  max-width: 76ch !important;
+  text-align: center !important;
+}
+
+@media (max-width: 768px) {
+  body.medical-landing .medical-patient-banner {
+    max-width: calc(100vw - 40px) !important;
+    padding: 18px 24px !important;
+  }
+
+  body.medical-landing .b2b-faqs .faq-question {
+    align-items: center !important;
+    display: grid !important;
+    gap: 16px !important;
+    grid-template-columns: minmax(0, 1fr) 22px !important;
+    justify-content: stretch !important;
+  }
+
+  body.medical-landing .b2b-faqs .faq-question svg {
+    justify-self: end !important;
+    margin-left: 0 !important;
+  }
+}
