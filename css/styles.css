@@ -17705,15 +17705,26 @@ body.medical-landing .medical-patient-banner strong {
   }
 
   body:not(.b2b-landing) .stats-section {
-    padding-block: 28px !important;
+    padding-block: 22px !important;
   }
 
   body:not(.b2b-landing) .stats-grid {
-    padding: 22px 26px !important;
+    padding: 18px 24px !important;
+  }
+
+  body:not(.b2b-landing) .stat-icon {
+    height: 34px !important;
+    width: 34px !important;
+  }
+
+  body:not(.b2b-landing) .stat-icon svg {
+    height: 18px !important;
+    width: 18px !important;
   }
 
   body:not(.b2b-landing) .stat-number {
-    font-size: clamp(1.55rem, 2vw, 2rem) !important;
+    font-size: clamp(1.28rem, 1.55vw, 1.62rem) !important;
+    line-height: 1.04 !important;
   }
 
   body:not(.b2b-landing) .stat-label {
@@ -17726,7 +17737,15 @@ body.medical-landing .medical-patient-banner strong {
     font-size: clamp(1.65rem, 1.7vw, 2.25rem) !important;
   }
 
-  body:not(.b2b-landing) .profiles-section .container > .reveal,
+  body:not(.b2b-landing) .profiles-section {
+    min-height: 430px !important;
+    padding-block: 58px 66px !important;
+  }
+
+  body:not(.b2b-landing) .profiles-section .container > .reveal {
+    margin-bottom: 30px !important;
+  }
+
   body:not(.b2b-landing) .credentials-header {
     margin-bottom: 22px !important;
   }
