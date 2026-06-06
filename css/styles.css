@@ -18029,3 +18029,94 @@ body.b2b-landing:not(.medical-landing) .company-trust-point span:last-child {
     max-width: 54ch;
   }
 }
+
+/* ============================================================
+   Medicos — laptop typography and alignment refinement
+   ============================================================ */
+@media (min-width: 901px) and (max-width: 1440px) {
+  body.medical-landing {
+    --section-title-uniform: clamp(1.56rem, 1.5vw, 2.08rem);
+    --section-copy-uniform: 0.9rem;
+  }
+
+  body.medical-landing .medical-hero .split-hero-kicker {
+    font-size: 0.68rem !important;
+    letter-spacing: 0.11em !important;
+  }
+
+  body.medical-landing .medical-hero .split-hero-title {
+    font-size: clamp(1.95rem, 3.05vw, 2.8rem) !important;
+    line-height: 1.08 !important;
+    max-width: 13.8ch !important;
+  }
+
+  body.medical-landing .medical-hero .split-hero-desc {
+    font-size: 0.95rem !important;
+    line-height: 1.58 !important;
+    max-width: 34rem !important;
+  }
+
+  body.medical-landing main > section:not(.medical-hero) .section-header > h2,
+  body.medical-landing main > section:not(.medical-hero) .medical-specialty-intro > h2,
+  body.medical-landing main > section:not(.medical-hero) .medical-program-copy > h2,
+  body.medical-landing main > section:not(.medical-hero) .company-trust-panel > h2,
+  body.medical-landing main > section:not(.medical-hero) .medical-patient-journey h2,
+  body.medical-landing main > section:not(.medical-hero) .b2b-faqs h2 {
+    font-size: var(--section-title-uniform) !important;
+    line-height: 1.08 !important;
+  }
+
+  body.medical-landing main > section:not(.medical-hero) .section-subtitle,
+  body.medical-landing main > section:not(.medical-hero) .section-header > p,
+  body.medical-landing main > section:not(.medical-hero) .medical-specialty-intro > p,
+  body.medical-landing main > section:not(.medical-hero) .medical-program-text > p,
+  body.medical-landing main > section:not(.medical-hero) .company-trust-panel > p,
+  body.medical-landing main > section:not(.medical-hero) .medical-patient-journey .section-subtitle {
+    font-size: var(--section-copy-uniform) !important;
+    line-height: 1.58 !important;
+  }
+
+  body.medical-landing .medical-program-section .container {
+    padding-left: clamp(28px, 5vw, 72px) !important;
+    padding-right: clamp(52px, 7vw, 108px) !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-direct {
+    margin-left: auto !important;
+    margin-right: clamp(12px, 2.5vw, 42px) !important;
+    max-width: 560px !important;
+    transform: none !important;
+    width: min(560px, 46%) !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-copy,
+  body.medical-landing .medical-program-section .medical-program-text {
+    max-width: 100% !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-copy .medical-program-title-line {
+    text-align: right !important;
+  }
+
+  body.medical-landing .medical-program-section .medical-program-text p {
+    text-align: right !important;
+    text-align-last: right !important;
+  }
+
+  body.medical-landing .medical-trust-proof-grid {
+    gap: clamp(34px, 4vw, 62px) !important;
+    grid-template-columns: minmax(340px, 0.82fr) minmax(680px, 1.18fr) !important;
+  }
+
+  body.medical-landing .medical-behind-scenes .company-trust-panel {
+    justify-self: center !important;
+    margin-left: 0 !important;
+    max-width: 560px !important;
+    transform: translateX(12px) !important;
+  }
+
+  body.medical-landing .medical-behind-scenes .company-trust-panel h2,
+  body.medical-landing .medical-behind-scenes .company-trust-panel p {
+    max-width: 100% !important;
+  }
+}
