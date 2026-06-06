@@ -18440,3 +18440,54 @@ body.b2b-landing:not(.medical-landing) .company-booking-inner h2 {
     max-height: 34px !important;
   }
 }
+
+/* ============================================================
+   Home — profiles background extension + carousel intro alignment
+   ============================================================ */
+body:not(.b2b-landing) .profiles-section {
+  margin-top: -96px !important;
+  padding-top: calc(clamp(78px, 8vw, 116px) + 96px) !important;
+}
+
+body:not(.b2b-landing) .destinations-scroll .scroll-wrapper {
+  align-items: center !important;
+}
+
+body:not(.b2b-landing) .destinations-scroll .scroll-title {
+  align-self: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-height: 590px !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  text-align: left !important;
+}
+
+body:not(.b2b-landing) .destinations-scroll .scroll-title .section-label,
+body:not(.b2b-landing) .destinations-scroll .scroll-title h2,
+body:not(.b2b-landing) .destinations-scroll .scroll-title p {
+  text-align: left !important;
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  body:not(.b2b-landing) .profiles-section {
+    margin-top: -82px !important;
+    padding-top: calc(82px + 82px) !important;
+  }
+
+  body:not(.b2b-landing) .destinations-scroll .scroll-title {
+    min-height: 410px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  body:not(.b2b-landing) .profiles-section {
+    margin-top: -74px !important;
+    padding-top: calc(70px + 74px) !important;
+  }
+
+  body:not(.b2b-landing) .destinations-scroll .scroll-title {
+    min-height: 320px !important;
+  }
+}
