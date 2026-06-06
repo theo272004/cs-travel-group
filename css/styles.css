@@ -18498,13 +18498,13 @@ body:not(.b2b-landing) .profiles-section {
   isolation: isolate !important;
   margin-top: 0 !important;
   overflow: visible !important;
-  padding-top: clamp(112px, 9vw, 146px) !important;
+  padding-top: clamp(132px, 10vw, 168px) !important;
 }
 
 body:not(.b2b-landing) .profiles-section::before {
   background:
-    radial-gradient(ellipse at 50% 0%, rgba(191,216,244,.18), transparent 50%),
-    linear-gradient(180deg, #EAF6FF 0%, #FFFFFF 100%);
+    linear-gradient(180deg, rgba(239, 248, 255, 0.62) 0%, rgba(255, 255, 255, 0.56) 100%),
+    url("../assets/images/profiles-sky-bg.png") center top / cover no-repeat;
   content: "" !important;
   inset: -118px 0 0 !important;
   pointer-events: none !important;
@@ -18520,7 +18520,7 @@ body:not(.b2b-landing) .profiles-section > .container {
 @media (min-width: 901px) and (max-width: 1440px) {
   body:not(.b2b-landing) .profiles-section {
     margin-top: 0 !important;
-    padding-top: 124px !important;
+    padding-top: 146px !important;
   }
 
   body:not(.b2b-landing) .profiles-section::before {
@@ -18531,7 +18531,7 @@ body:not(.b2b-landing) .profiles-section > .container {
 @media (max-width: 900px) {
   body:not(.b2b-landing) .profiles-section {
     margin-top: 0 !important;
-    padding-top: 96px !important;
+    padding-top: 116px !important;
   }
 
   body:not(.b2b-landing) .profiles-section::before {
