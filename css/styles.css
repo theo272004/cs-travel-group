@@ -19666,3 +19666,34 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
   }
 }
 
+/* ============================================================
+   Carrusel de marcas — todos los logos al MISMO tamaño y centrados.
+   Se usan versiones normalizadas (recortadas y con fondo transparente)
+   en assets/images/logos/norm/, así basta una altura uniforme: el
+   contenido visible queda a la misma altura, centrado y sin cajas de
+   fondo. Doble variante (b2b/medical) para ganar especificidad.
+   ============================================================ */
+html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box,
+html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box {
+  width: clamp(138px, 12.5vw, 196px) !important;
+  height: clamp(58px, 5.2vw, 76px) !important;
+  margin-inline: clamp(8px, 1.4vw, 24px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  flex: 0 0 auto !important;
+}
+html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box img,
+html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img {
+  width: auto !important;
+  height: clamp(25px, 2.35vw, 31px) !important;
+  max-width: clamp(122px, 12vw, 178px) !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  margin: auto !important;
+  transform: none !important;
+  mix-blend-mode: multiply !important;
+}
