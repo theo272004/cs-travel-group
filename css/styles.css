@@ -19613,10 +19613,12 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
     margin-top: -42px !important;
     margin-bottom: -58px !important;
     padding-top: 0 !important;
-    z-index: 2 !important;
+    z-index: 40 !important;
   }
 
   html body:not(.b2b-landing) .stats-grid {
+    position: relative !important;
     transform: translateY(-26px) !important;
+    z-index: 41 !important;
   }
 }
