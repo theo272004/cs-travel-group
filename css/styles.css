@@ -19647,3 +19647,40 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
     transform: none !important;
   }
 }
+
+/* En pantallas grandes, replicar el tratamiento del hero de Empresas:
+   imagen anclada a la derecha, ocupa el mismo ancho (y se sale del panel). */
+@media (min-width: 1024px) {
+  html body.medical-landing .medical-hero {
+    overflow: visible !important;
+  }
+
+  html body.medical-landing .medical-hero .split-hero-image {
+    background: none !important;
+    overflow: visible !important;
+    display: block !important;
+    position: relative !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    z-index: 2 !important;
+  }
+
+  html body.medical-landing .medical-hero .split-hero-image img {
+    aspect-ratio: auto !important;
+    display: block !important;
+    height: 100% !important;
+    width: auto !important;
+    min-width: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    object-fit: cover !important;
+    object-position: right top !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    left: auto !important;
+    inset: auto !important;
+    transform: none !important;
+  }
+}
