@@ -19633,7 +19633,7 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
 @media (min-width: 901px) {
   html body.b2b-landing.medical-landing section.split-hero.medical-hero {
     display: grid !important;
-    grid-template-columns: minmax(0, 43%) minmax(0, 57%) !important;
+    grid-template-columns: minmax(0, 53%) minmax(0, 47%) !important;
   }
 
   html body.b2b-landing.medical-landing section.split-hero.medical-hero .split-hero-image {
@@ -19662,7 +19662,31 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
 
 @media (min-width: 901px) and (max-width: 1180px) {
   html body.b2b-landing.medical-landing section.split-hero.medical-hero {
-    grid-template-columns: minmax(0, 50%) minmax(0, 50%) !important;
+    grid-template-columns: minmax(0, 56%) minmax(0, 44%) !important;
+  }
+}
+
+/* ============================================================
+   Heroes empresas + médicos: título 3px más pequeño y unificado.
+   Ambos comparten el mismo font-size y la misma grilla, así que el
+   texto y los botones quedan en la misma posición al cambiar de
+   página (solo cambian el texto y la foto). 3 líneas en escritorio.
+   ============================================================ */
+html body.b2b-landing:not(.medical-landing) .split-hero-title,
+html body.medical-landing .medical-hero .split-hero-title {
+  font-size: clamp(1.61rem, 0.95rem + 1.86vw, 3.06rem) !important;
+  line-height: 1.1 !important;
+  max-width: 26ch !important;
+}
+/* Cada línea del título en su propia línea (3 líneas), sin partirse */
+html body.b2b-landing:not(.medical-landing) .split-hero-title .company-hero-line,
+html body.medical-landing .medical-hero .split-hero-title .medical-hero-line {
+  display: block !important;
+}
+@media (min-width: 901px) {
+  html body.b2b-landing:not(.medical-landing) .split-hero-title .company-hero-line,
+  html body.medical-landing .medical-hero .split-hero-title .medical-hero-line {
+    white-space: nowrap !important;
   }
 }
 
