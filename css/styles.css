@@ -5820,7 +5820,7 @@ body:not(.b2b-landing) .stats-section {
   border: 0;
   box-shadow: none;
   color: var(--primary);
-  margin: -36px 0 -36px;
+  margin: -62px 0 -62px;
   padding: 0;
   position: relative;
   z-index: 12;
@@ -5848,18 +5848,18 @@ body:not(.b2b-landing) .stats-grid {
 body:not(.b2b-landing) .stat-item {
   align-items: center;
   display: grid;
-  gap: clamp(8px, 1.2vw, 14px);
+  gap: clamp(12px, 1.5vw, 18px);
   grid-template-columns: auto minmax(0, 1fr);
   justify-content: start;
-  min-height: 64px;
-  padding: 10px clamp(12px, 1.8vw, 24px);
+  min-height: 106px;
+  padding: clamp(20px, 2.7vw, 32px);
   text-align: left;
 }
 
 body:not(.b2b-landing) .stat-icon {
   color: var(--primary);
   display: inline-flex;
-  width: clamp(26px, 2.8vw, 34px);
+  width: clamp(42px, 4vw, 54px);
 }
 
 body:not(.b2b-landing) .stat-icon svg {
@@ -5874,7 +5874,7 @@ body:not(.b2b-landing) .stat-icon svg {
 
 body:not(.b2b-landing) .stat-copy {
   display: grid;
-  gap: 2px;
+  gap: 4px;
   min-width: 0;
 }
 
@@ -5882,7 +5882,7 @@ body:not(.b2b-landing) .stat-number {
   color: var(--primary);
   display: block;
   font-family: var(--font-body);
-  font-size: clamp(1rem, 0.9rem + 0.4vw, 1.32rem);
+  font-size: clamp(1.15rem, 1rem + 0.65vw, 1.68rem);
   font-weight: 800;
   letter-spacing: 0;
   line-height: 1.05;
@@ -5891,13 +5891,13 @@ body:not(.b2b-landing) .stat-number {
 }
 
 body:not(.b2b-landing) .stat-number.stat-plain {
-  font-size: clamp(0.95rem, .88rem + .28vw, 1.2rem);
+  font-size: clamp(1.05rem, .98rem + .32vw, 1.34rem);
 }
 
 body:not(.b2b-landing) .stat-label {
   color: #5f6f82;
   display: block;
-  font-size: clamp(.68rem, .64rem + .12vw, .8rem);
+  font-size: clamp(.74rem, .68rem + .22vw, .9rem);
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1.25;
@@ -17649,32 +17649,7 @@ body.medical-landing .medical-patient-banner strong {
     padding-block: clamp(28px, 3vw, 48px) !important;
   }
 
-  body:not(.b2b-landing) .stats-section {
-    padding-block: 22px !important;
-  }
 
-  body:not(.b2b-landing) .stats-grid {
-    padding: 18px 24px !important;
-  }
-
-  body:not(.b2b-landing) .stat-icon {
-    height: 34px !important;
-    width: 34px !important;
-  }
-
-  body:not(.b2b-landing) .stat-icon svg {
-    height: 18px !important;
-    width: 18px !important;
-  }
-
-  body:not(.b2b-landing) .stat-number {
-    font-size: clamp(1.28rem, 1.55vw, 1.62rem) !important;
-    line-height: 1.04 !important;
-  }
-
-  body:not(.b2b-landing) .stat-label {
-    font-size: 0.82rem !important;
-  }
 
   body:not(.b2b-landing) .profiles-section h2,
   body:not(.b2b-landing) .work-meaning-title,
