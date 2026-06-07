@@ -19571,3 +19571,27 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
     width: 1px !important;
   }
 }
+
+/* Home stats bridge — final cascade lock after later responsive passes */
+@media (min-width: 901px) {
+  html body:not(.b2b-landing) .stats-section {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    margin-top: -62px !important;
+    margin-bottom: -62px !important;
+    padding: 0 !important;
+    position: relative !important;
+    z-index: 20 !important;
+  }
+
+  html body:not(.b2b-landing) .stats-grid {
+    background: rgba(255, 255, 255, 0.96) !important;
+    border: 1px solid rgba(226, 232, 240, 0.9) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 22px 60px rgba(8, 24, 46, 0.18) !important;
+    grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr) 1px minmax(0, 1fr) 1px minmax(0, 1fr) !important;
+    max-width: 1180px !important;
+    padding: 0 !important;
+  }
+}
