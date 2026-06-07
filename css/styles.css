@@ -19704,3 +19704,23 @@ html body.medical-landing .trust-banner.b2b-premium-logos {
   padding-top: clamp(10px, 1.6vh, 20px) !important;
   padding-bottom: clamp(10px, 1.6vh, 20px) !important;
 }
+
+/* Empresas y Medicos: keep every section title at the same visual
+   hierarchy as the Home section title "Con quien trabajamos?". */
+html body.b2b-landing {
+  --landing-section-title: var(--u-section-title);
+}
+
+/* Every h2 below the landing heroes is a section heading and must
+   remain visually stronger than its supporting copy. */
+#landing-main > section:not(.split-hero):not(.medical-hero) h2 {
+  font-size: var(--landing-section-title) !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0 !important;
+}
+
+#landing-main .medical-program-title-line {
+  max-width: 100% !important;
+  overflow-wrap: anywhere !important;
+  white-space: normal !important;
+}
