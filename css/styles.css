@@ -19187,11 +19187,11 @@ html body:not(.b2b-landing) .stats-section::after {
     flex: 0 0 56% !important;
     max-width: 56% !important;
     box-sizing: border-box !important;
-    padding-inline: clamp(28px, 6vw, 96px) !important;
-    padding-top: 88px !important;
-    padding-bottom: 28px !important;
+    padding-inline: clamp(28px, 5vw, 92px) !important;
+    padding-top: clamp(78px, 9vh, 104px) !important;
+    padding-bottom: clamp(24px, 4vh, 40px) !important;
     justify-content: center !important;
-    row-gap: clamp(16px, 2.2vh, 24px) !important;
+    row-gap: clamp(14px, 2vh, 24px) !important;
   }
 
   html body.b2b-landing:not(.medical-landing) .split-hero-image,
