@@ -19935,3 +19935,26 @@ body.medical-landing .company-sky-cta.medical-booking-cta .btn-dark:hover {
     display: none !important;
   }
 }
+
+/* Medicos hero: en laptop/escritorio la foto debe cubrir de arriba a
+   abajo y quedar ligeramente ampliada, sin tocar textos ni logos. */
+@media (min-width: 901px) {
+  html body.b2b-landing.medical-landing section.split-hero.medical-hero {
+    padding-bottom: 0 !important;
+  }
+
+  html body.b2b-landing.medical-landing section.split-hero.medical-hero .split-hero-image {
+    height: calc(100svh + clamp(58px, 5.2vw, 76px)) !important;
+    min-height: calc(100svh + clamp(58px, 5.2vw, 76px)) !important;
+    overflow: hidden !important;
+  }
+
+  html body.b2b-landing.medical-landing section.split-hero.medical-hero .split-hero-image img {
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: scale(1.035) !important;
+    transform-origin: center center !important;
+    width: 100% !important;
+  }
+}
