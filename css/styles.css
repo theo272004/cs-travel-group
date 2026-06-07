@@ -19670,7 +19670,7 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
     display: block !important;
     height: 100% !important;
     width: auto !important;
-    min-width: 100% !important;
+    min-width: 128% !important;
     max-width: none !important;
     max-height: none !important;
     min-height: 0 !important;
