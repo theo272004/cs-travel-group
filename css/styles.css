@@ -19624,22 +19624,34 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
 }
 
 /* ============================================================
-   Médicos hero image — igualar tamaño al de Empresas
-   (llenar el panel con cover, mismo ancho y alto, sin caja 1:1)
+   Médicos hero image — igualar tamaño/ancho al de Empresas.
+   Se usa selector de ALTA especificidad (las dos clases del body
+   + section.split-hero.medical-hero) porque hay reglas previas que
+   fuerzan display:flex en el contenedor y aspect-ratio:1/1 + contain
+   en la imagen, anulando un selector más simple.
    ============================================================ */
 @media (min-width: 901px) {
-  html body.medical-landing .medical-hero .split-hero-image {
-    background: none !important;
-    display: block !important;
+  html body.b2b-landing.medical-landing section.split-hero.medical-hero {
+    display: grid !important;
+    grid-template-columns: minmax(0, 43%) minmax(0, 57%) !important;
   }
 
-  html body.medical-landing .medical-hero .split-hero-image img {
+  html body.b2b-landing.medical-landing section.split-hero.medical-hero .split-hero-image {
+    display: block !important;
+    background: none !important;
+    overflow: hidden !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+  }
+
+  html body.b2b-landing.medical-landing section.split-hero.medical-hero .split-hero-image img {
     aspect-ratio: auto !important;
     width: 100% !important;
     height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
     max-width: none !important;
     max-height: none !important;
-    min-height: 0 !important;
     object-fit: cover !important;
     object-position: center center !important;
     position: relative !important;
@@ -19648,16 +19660,9 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
   }
 }
 
-/* Ensanchar la COLUMNA de la imagen del hero de médicos (el texto cede
-   espacio), para que la imagen se vea claramente más grande/ancha. */
-@media (min-width: 901px) {
-  html body.medical-landing .medical-hero {
-    grid-template-columns: minmax(0, 42%) minmax(0, 58%) !important;
+@media (min-width: 901px) and (max-width: 1180px) {
+  html body.b2b-landing.medical-landing section.split-hero.medical-hero {
+    grid-template-columns: minmax(0, 50%) minmax(0, 50%) !important;
   }
 }
 
-@media (min-width: 901px) and (max-width: 1180px) {
-  html body.medical-landing .medical-hero {
-    grid-template-columns: minmax(0, 46%) minmax(0, 54%) !important;
-  }
-}
