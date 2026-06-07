@@ -19724,3 +19724,79 @@ html body.b2b-landing {
   overflow-wrap: anywhere !important;
   white-space: normal !important;
 }
+
+/* ============================================================
+   Médicos — sección de cierre "Empieza a ganar más..." con el
+   MISMO aspecto que la booking-cta de Empresas (mismos fondos,
+   tonos y estilos). Las reglas de Empresas están scopeadas a
+   :not(.medical-landing), así que se replican aquí para medical.
+   ============================================================ */
+body.medical-landing .company-sky-cta.medical-booking-cta {
+  background:
+    linear-gradient(180deg, rgba(248,251,255,.92), rgba(255,255,255,.7)),
+    url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat !important;
+  overflow: hidden !important;
+}
+body.medical-landing .company-sky-cta.medical-booking-cta .booking-cta-inner {
+  background:
+    linear-gradient(135deg, rgba(12,35,66,.78), rgba(16,42,76,.48)),
+    url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat !important;
+  border: 1px solid rgba(255,255,255,.34) !important;
+  box-shadow: 0 28px 74px rgba(16,42,76,.18) !important;
+  text-align: center !important;
+}
+body.medical-landing .company-sky-cta.medical-booking-cta .company-booking-inner h2 {
+  font-size: clamp(2.55rem, 1.98rem + 1.65vw, 3.45rem) !important;
+  line-height: 1.04 !important;
+  max-width: 28ch !important;
+  margin: 0 auto 16px !important;
+  color: #fff !important;
+  text-align: center !important;
+}
+body.medical-landing .company-sky-cta.medical-booking-cta .company-booking-inner h2::after {
+  background: #E6BC00;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 42px;
+  margin: 12px auto 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,.12);
+}
+body.medical-landing .company-sky-cta.medical-booking-cta .company-booking-inner p {
+  color: #fff !important;
+  opacity: .9 !important;
+  max-width: 600px !important;
+  margin: 0 auto 32px !important;
+  text-align: center !important;
+}
+body.medical-landing .company-sky-cta.medical-booking-cta .medical-cta-action-bar {
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+}
+body.medical-landing .company-sky-cta.medical-booking-cta .btn-primary {
+  background: var(--accent) !important;
+  border: 2px solid rgba(255,255,255,.9) !important;
+  color: var(--primary) !important;
+}
+body.medical-landing .company-sky-cta.medical-booking-cta .btn-primary:hover {
+  background: #fff !important;
+  color: var(--primary) !important;
+}
+body.medical-landing .company-sky-cta.medical-booking-cta .btn-dark {
+  background: transparent !important;
+  border: 2px solid rgba(255,255,255,.6) !important;
+  color: #fff !important;
+}
+body.medical-landing .company-sky-cta.medical-booking-cta .btn-dark:hover {
+  background: rgba(255,255,255,.12) !important;
+  color: #fff !important;
+}
+
+/* Home móvil: bajar el encabezado "¿Con quién trabajamos?" */
+@media (max-width: 640px) {
+  body:not(.b2b-landing) .profiles-section .profiles-intro {
+    margin-top: 36px !important;
+  }
+}
