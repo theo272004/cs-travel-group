@@ -5820,7 +5820,7 @@ body:not(.b2b-landing) .stats-section {
   border: 0;
   box-shadow: none;
   color: var(--primary);
-  margin: -62px 0 -62px;
+  margin: -62px 0 -62px !important;
   padding: 0;
   position: relative;
   z-index: 12;
