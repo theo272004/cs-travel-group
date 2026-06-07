@@ -19414,3 +19414,55 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
   transform: none !important;
   width: auto !important;
 }
+
+/* ============================================================
+   Follow-up positioning pass: medical hero + home overlays
+   ============================================================ */
+@media (min-width: 901px) {
+  html body.medical-landing .medical-hero .split-hero-image {
+    background: #eef6fb !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  html body.medical-landing .medical-hero .split-hero-image img {
+    aspect-ratio: 1 / 1 !important;
+    bottom: auto !important;
+    height: auto !important;
+    inset: auto !important;
+    max-height: 100% !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: 100% !important;
+  }
+
+  html body:not(.b2b-landing) .stats-section {
+    margin-top: clamp(-132px, -8vw, -86px) !important;
+    padding-top: 0 !important;
+    z-index: 20 !important;
+  }
+
+  html body:not(.b2b-landing) .work-meaning-card::before {
+    top: clamp(180px, 15vw, 232px) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  html body:not(.b2b-landing) .stats-section {
+    margin-top: -72px !important;
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  html body:not(.b2b-landing) .work-meaning-card::before {
+    top: 220px !important;
+  }
+}
