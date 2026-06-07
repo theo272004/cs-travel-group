@@ -19697,3 +19697,10 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
   transform: none !important;
   mix-blend-mode: multiply !important;
 }
+/* Médicos: la sección del carrusel tenía padding-bottom:0 y padding-top
+   mayor (asimétrico) => los logos quedaban más abajo. Se restaura el
+   padding simétrico para centrarlos vertical igual que en Empresas. */
+html body.medical-landing .trust-banner.b2b-premium-logos {
+  padding-top: clamp(10px, 1.6vh, 20px) !important;
+  padding-bottom: clamp(10px, 1.6vh, 20px) !important;
+}
