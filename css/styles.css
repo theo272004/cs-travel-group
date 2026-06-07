@@ -19466,3 +19466,108 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
     top: 170px !important;
   }
 }
+
+/* Home laptop/desktop — restore the floating stats bridge from Jun 4 */
+@media (min-width: 901px) {
+  body:not(.b2b-landing) .stats-section {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    color: var(--primary) !important;
+    margin: -62px 0 -62px !important;
+    padding: 0 !important;
+    position: relative !important;
+    z-index: 12 !important;
+  }
+
+  body:not(.b2b-landing) .stats-section::before {
+    display: none !important;
+  }
+
+  body:not(.b2b-landing) .stats-grid {
+    align-items: stretch !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    border: 1px solid rgba(226, 232, 240, 0.9) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 22px 60px rgba(8, 24, 46, 0.18) !important;
+    display: grid !important;
+    gap: 0 !important;
+    grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr) 1px minmax(0, 1fr) 1px minmax(0, 1fr) !important;
+    max-width: 1180px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+  }
+
+  body:not(.b2b-landing) .stat-item {
+    align-items: center !important;
+    display: grid !important;
+    gap: clamp(12px, 1.5vw, 18px) !important;
+    grid-template-columns: auto minmax(0, 1fr) !important;
+    justify-content: start !important;
+    min-height: 106px !important;
+    padding: clamp(20px, 2.7vw, 32px) !important;
+    text-align: left !important;
+  }
+
+  body:not(.b2b-landing) .stat-icon {
+    color: var(--primary) !important;
+    display: inline-flex !important;
+    height: auto !important;
+    width: clamp(42px, 4vw, 54px) !important;
+  }
+
+  body:not(.b2b-landing) .stat-icon svg {
+    fill: none !important;
+    height: auto !important;
+    stroke: currentColor !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    stroke-width: 1.7 !important;
+    width: 100% !important;
+  }
+
+  body:not(.b2b-landing) .stat-copy {
+    display: grid !important;
+    gap: 4px !important;
+    min-width: 0 !important;
+  }
+
+  body:not(.b2b-landing) .stat-number {
+    color: var(--primary) !important;
+    display: block !important;
+    font-family: var(--font-body) !important;
+    font-size: clamp(1.15rem, 1rem + 0.65vw, 1.68rem) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.05 !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  body:not(.b2b-landing) .stat-number.stat-plain {
+    font-size: clamp(1.05rem, .98rem + .32vw, 1.34rem) !important;
+  }
+
+  body:not(.b2b-landing) .stat-label {
+    color: #5f6f82 !important;
+    display: block !important;
+    font-size: clamp(.74rem, .68rem + .22vw, .9rem) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.25 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    opacity: 1 !important;
+    text-transform: none !important;
+  }
+
+  body:not(.b2b-landing) .stat-divider {
+    align-self: center !important;
+    background: rgba(148, 163, 184, 0.36) !important;
+    display: block !important;
+    height: 52% !important;
+    width: 1px !important;
+  }
+}
