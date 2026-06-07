@@ -19595,3 +19595,28 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
     padding: 0 !important;
   }
 }
+
+/* Home hero handoff — stats rise after the pinned flight finishes */
+@media (min-width: 901px) {
+  html body:not(.b2b-landing) .hero {
+    z-index: 4 !important;
+  }
+
+  html body:not(.b2b-landing) .hero-content,
+  html body:not(.b2b-landing) .hero-text-slide,
+  html body:not(.b2b-landing) .hero-title,
+  html body:not(.b2b-landing) .hero-desc {
+    transform: none !important;
+  }
+
+  html body:not(.b2b-landing) .stats-section {
+    margin-top: -42px !important;
+    margin-bottom: -58px !important;
+    padding-top: 0 !important;
+    z-index: 2 !important;
+  }
+
+  html body:not(.b2b-landing) .stats-grid {
+    transform: translateY(-26px) !important;
+  }
+}

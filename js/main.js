@@ -1084,7 +1084,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroSlides.length > 0 && typeof MotionPathPlugin !== 'undefined' && heroScrollMotion) {
       let activeHeroStage = 0;
       gsap.set(heroSlides, { autoAlpha: 0 });
-      gsap.set(heroTexts, { autoAlpha: 0, y: 18, filter: 'blur(3px)' });
+      gsap.set(heroTexts, { autoAlpha: 0, y: 0, filter: 'blur(3px)' });
       gsap.set(heroSlides[0], { autoAlpha: 1 });
       gsap.set(heroTexts[0], { autoAlpha: 1, y: 0, filter: 'blur(0px)' });
 
@@ -1098,9 +1098,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         gsap.to(heroSlides, { autoAlpha: 0, duration: 0.28, ease: 'power2.out', overwrite: true });
         gsap.to(heroSlides[index], { autoAlpha: 1, duration: 0.42, ease: 'power2.out', overwrite: true });
-        gsap.to(heroTexts, { autoAlpha: 0, y: -14, filter: 'blur(3px)', duration: 0.12, ease: 'power2.in', overwrite: true });
+        gsap.to(heroTexts, { autoAlpha: 0, y: 0, filter: 'blur(3px)', duration: 0.12, ease: 'power2.in', overwrite: true });
         gsap.fromTo(heroTexts[index],
-          { autoAlpha: 0, y: 20, filter: 'blur(3px)' },
+          { autoAlpha: 0, y: 0, filter: 'blur(3px)' },
           { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.22, ease: 'power3.out', overwrite: true }
         );
       };
