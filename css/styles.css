@@ -19255,3 +19255,162 @@ html body .destinations-scroll .dest-card-content h3 {
 html body main img:not([class*="hero"]):not(.company-hero-photo) {
   max-width: 100%;
 }
+
+/* ============================================================
+   Responsive hero and logo pass: empresas / medicos
+   ============================================================ */
+:root {
+  --landing-hero-title: clamp(2.45rem, 1.85rem + 2.15vw, 3.7rem);
+  --landing-hero-copy: clamp(1rem, 0.94rem + 0.22vw, 1.12rem);
+  --landing-logo-box-w: clamp(120px, 10.8vw, 158px);
+  --landing-logo-box-h: clamp(50px, 4.4vw, 64px);
+  --landing-logo-h: clamp(32px, 2.65vw, 40px);
+}
+
+@media (min-width: 901px) {
+  html body.b2b-landing:not(.medical-landing) .split-hero,
+  html body.medical-landing .medical-hero {
+    display: grid !important;
+    grid-template-columns: minmax(0, 53%) minmax(0, 47%) !important;
+    min-height: min(900px, 100svh) !important;
+    overflow: hidden !important;
+  }
+
+  html body.b2b-landing:not(.medical-landing) .split-hero-content,
+  html body.medical-landing .medical-hero .split-hero-content {
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex: none !important;
+    grid-column: 1 !important;
+    height: 100% !important;
+    justify-content: center !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    padding: clamp(88px, 10vh, 118px) clamp(56px, 5.8vw, 92px) clamp(44px, 6vh, 76px) clamp(52px, 5vw, 84px) !important;
+    row-gap: clamp(14px, 1.8vh, 22px) !important;
+    width: 100% !important;
+  }
+
+  html body.b2b-landing:not(.medical-landing) .split-hero-image,
+  html body.medical-landing .medical-hero .split-hero-image {
+    flex: none !important;
+    grid-column: 2 !important;
+    height: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  html body.b2b-landing:not(.medical-landing) .split-hero-image img,
+  html body.medical-landing .medical-hero .split-hero-image img {
+    display: block !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    width: 100% !important;
+  }
+
+  html body.b2b-landing:not(.medical-landing) .split-hero-title,
+  html body.medical-landing .medical-hero .split-hero-title {
+    font-size: var(--landing-hero-title) !important;
+    line-height: 1.08 !important;
+    max-width: min(100%, 15.6ch) !important;
+    overflow-wrap: normal !important;
+    text-wrap: balance !important;
+  }
+
+  html body.b2b-landing:not(.medical-landing) .split-hero-copy,
+  html body.medical-landing .medical-hero .split-hero-copy,
+  html body.b2b-landing:not(.medical-landing) .split-hero-desc,
+  html body.medical-landing .medical-hero .split-hero-desc {
+    max-width: min(100%, 45ch) !important;
+  }
+
+  html body.b2b-landing:not(.medical-landing) .split-hero-desc,
+  html body.medical-landing .medical-hero .split-hero-desc {
+    font-size: var(--landing-hero-copy) !important;
+    line-height: 1.62 !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  html body.b2b-landing:not(.medical-landing) .split-hero,
+  html body.medical-landing .medical-hero {
+    grid-template-columns: minmax(0, 56%) minmax(0, 44%) !important;
+    min-height: max(700px, 100svh) !important;
+  }
+
+  html body.b2b-landing:not(.medical-landing) .split-hero-content,
+  html body.medical-landing .medical-hero .split-hero-content {
+    padding-inline: clamp(44px, 5vw, 58px) clamp(38px, 4.4vw, 54px) !important;
+  }
+
+  html body.b2b-landing:not(.medical-landing) .split-hero-title,
+  html body.medical-landing .medical-hero .split-hero-title {
+    font-size: clamp(2.28rem, 1.7rem + 2.25vw, 3rem) !important;
+    max-width: min(100%, 15ch) !important;
+  }
+
+  html body.b2b-landing:not(.medical-landing) .split-hero-copy,
+  html body.medical-landing .medical-hero .split-hero-copy,
+  html body.b2b-landing:not(.medical-landing) .split-hero-desc,
+  html body.medical-landing .medical-hero .split-hero-desc {
+    max-width: min(100%, 42ch) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  html body.b2b-landing:not(.medical-landing) .split-hero-title,
+  html body.medical-landing .medical-hero .split-hero-title {
+    font-size: clamp(2.05rem, 8.6vw, 3.08rem) !important;
+    max-width: 100% !important;
+    text-wrap: balance !important;
+  }
+
+  html body.b2b-landing:not(.medical-landing) .split-hero-desc,
+  html body.medical-landing .medical-hero .split-hero-desc {
+    font-size: clamp(1rem, 2.8vw, 1.08rem) !important;
+    max-width: 100% !important;
+  }
+}
+
+html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos,
+html body.medical-landing .trust-banner.b2b-premium-logos {
+  overflow: hidden !important;
+}
+
+html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-container,
+html body.medical-landing .trust-banner.b2b-premium-logos .marquee-container {
+  display: flex !important;
+  align-items: center !important;
+}
+
+html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-track,
+html body.medical-landing .trust-banner.b2b-premium-logos .marquee-track {
+  align-items: center !important;
+}
+
+html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box,
+html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box {
+  align-items: center !important;
+  display: flex !important;
+  flex: 0 0 var(--landing-logo-box-w) !important;
+  height: var(--landing-logo-box-h) !important;
+  justify-content: center !important;
+  margin-inline: clamp(16px, 2.1vw, 32px) !important;
+  padding: 0 !important;
+  width: var(--landing-logo-box-w) !important;
+}
+
+html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .marquee-item-box img,
+html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img {
+  display: block !important;
+  height: var(--landing-logo-h) !important;
+  margin: auto !important;
+  max-height: var(--landing-logo-h) !important;
+  max-width: calc(var(--landing-logo-box-w) - 18px) !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
+  width: auto !important;
+}
