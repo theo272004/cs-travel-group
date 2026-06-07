@@ -19936,6 +19936,12 @@ body.medical-landing .company-sky-cta.medical-booking-cta .btn-dark:hover {
   }
 }
 
+@media (max-width: 768px) {
+  body:not(.b2b-landing) .home-testimonials-header {
+    margin-top: clamp(58px, 16vw, 88px) !important;
+  }
+}
+
 /* Medicos hero: en laptop/escritorio la foto debe cubrir de arriba a
    abajo y quedar ligeramente ampliada, sin tocar textos ni logos. */
 @media (min-width: 901px) {
