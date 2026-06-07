@@ -19622,3 +19622,28 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
     z-index: 41 !important;
   }
 }
+
+/* ============================================================
+   Médicos hero image — igualar tamaño al de Empresas
+   (llenar el panel con cover, mismo ancho y alto, sin caja 1:1)
+   ============================================================ */
+@media (min-width: 901px) {
+  html body.medical-landing .medical-hero .split-hero-image {
+    background: none !important;
+    display: block !important;
+  }
+
+  html body.medical-landing .medical-hero .split-hero-image img {
+    aspect-ratio: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    position: relative !important;
+    inset: auto !important;
+    transform: none !important;
+  }
+}
