@@ -19174,3 +19174,84 @@ html body.medical-landing {
   --medical-requested-copy-size: clamp(0.98rem, 0.92rem + 0.28vw, 1.1rem) !important;
   --section-copy-uniform: clamp(0.98rem, 0.92rem + 0.28vw, 1.1rem) !important;
 }
+
+/* ============================================================
+   SISTEMA FLUIDO GLOBAL (v2) — escala tipográfica y de espaciado
+   continua para todo el sitio. Anexado al final como fuente única
+   de verdad: elimina los saltos bruscos entre pantallas cercanas.
+   No modifica la estructura del home (solo escala/ritmo).
+   ============================================================ */
+:root {
+  /* Escala tipográfica fluida */
+  --fs-h1: clamp(1.8rem, 1.10rem + 2.00vw, 3.25rem);
+  --fs-h2: clamp(1.60rem, 1.15rem + 1.50vw, 2.55rem);
+  --fs-h3: clamp(1.15rem, 1.00rem + 0.55vw, 1.45rem);
+  --fs-p:  clamp(1.00rem, 0.95rem + 0.20vw, 1.12rem);
+  --fs-small: clamp(0.82rem, 0.78rem + 0.18vw, 0.92rem);
+  --fs-btn:   clamp(0.95rem, 0.92rem + 0.18vw, 1.05rem);
+  /* Ritmo vertical fluido de secciones */
+  --section-py: clamp(56px, 2.5rem + 4vw, 120px);
+  --section-tight: clamp(48px, 2rem + 3.4vw, 104px);
+  --section-loose: clamp(64px, 3rem + 4.6vw, 132px);
+}
+
+/* Re-apunto los tokens unificados existentes a la escala fluida */
+:root {
+  --u-section-title: var(--fs-h2);
+  --u-body-text: var(--fs-p);
+  --u-kicker: var(--fs-small);
+  --section-copy-uniform: var(--fs-p);
+  --section-title-uniform: var(--fs-h2);
+}
+
+/* Copy de empresas/médicos a la escala fluida (sin valores duros) */
+html body.b2b-landing:not(.medical-landing) {
+  --company-copy-compact: var(--fs-p) !important;
+  --section-copy-uniform: var(--fs-p) !important;
+  --company-key-title-reference: var(--fs-h2) !important;
+  --company-section-title-final: var(--fs-h2) !important;
+  --company-editorial-title-reference: var(--fs-h2) !important;
+}
+html body.medical-landing {
+  --medical-copy-reference: var(--fs-p) !important;
+  --medical-laptop-copy-size: var(--fs-p) !important;
+  --medical-requested-copy-size: var(--fs-p) !important;
+  --section-copy-uniform: var(--fs-p) !important;
+  --medical-title-reference: var(--fs-h2) !important;
+  --medical-requested-title-size: var(--fs-h2) !important;
+}
+
+/* Título del hero a la escala h1 fluida (empresas y médicos) */
+html body.b2b-landing:not(.medical-landing) .split-hero-title,
+html body.medical-landing .medical-hero .split-hero-title {
+  font-size: var(--fs-h1) !important;
+  line-height: 1.08 !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Botones con tamaño de texto fluido y alto cómodo */
+html body .btn,
+html body button.btn,
+html body a.btn {
+  font-size: var(--fs-btn) !important;
+  min-height: clamp(44px, 2.4rem + 0.6vw, 52px) !important;
+}
+
+/* Títulos de tarjetas (h3 de contenido) con escala fluida coherente */
+html body .company-model-card .company-model-copy h3,
+html body .medical-standard-card h3,
+html body .benefit-item h3,
+html body:not(.b2b-landing) .profile-content-minimal h3,
+html body .cred-card .cred-copy h3,
+html body .medical-specialty-slide-copy h3,
+html body .destinations-scroll .dest-card-content h3 {
+  font-size: var(--fs-h3) !important;
+  line-height: 1.18 !important;
+}
+
+/* Imágenes de contenido: evitar desbordes. No toca imágenes
+   cover/con marco de aspect-ratio (hero, showcase, value-capture)
+   para no romper sus proporciones de diseño. */
+html body main img:not([class*="hero"]):not(.company-hero-photo) {
+  max-width: 100%;
+}
