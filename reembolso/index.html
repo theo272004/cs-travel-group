@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="es" data-astro-cid-dpidqgiz> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Política de Reembolso / Refund Policy | CS Travel Group</title><meta name="description" content="Refund Policy of CS Travel Group: supplier-determined refunds, non-refundable Agent Service Fee, timelines, and governing law (Florida / Colombia). / Política de Reembolso de CS Travel Group: reembolsos según cada proveedor, honorario del agente no reembolsable, plazos y ley aplicable."><meta name="robots" content="index,follow"><link rel="stylesheet" href="../css/styles.css?v=20260613a"><link rel="icon" type="image/webp" href="../assets/images/logo-cstravel-cropped.webp"><style>
+body{margin:0;background:var(--bg);color:var(--text-secondary)}
+
+/* ---------- Cabecera de la página ---------- */
+.legal-hero{position:relative;overflow:hidden;text-align:center;
+  background:var(--primary) url("../assets/images/legal-hero.webp") center center / cover no-repeat;
+  border-bottom:5px solid var(--accent);padding-bottom:34px}
+/* Velo navy suave: lo justo para que el texto se lea, dejando ver la foto.
+   Va más cargado abajo, que es donde se apoya el bloque de texto.
+   Debajo queda el navy sólido por si la imagen no carga. */
+.legal-hero:before{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(3,24,56,.30) 0%,rgba(3,24,56,.48) 55%,rgba(3,24,56,.70) 100%)}
+.legal-hero .container{position:relative;z-index:2}
+.legal-hero__inner{max-width:none;margin:0 auto}
+
+.legal-eyebrow{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);border:1.5px solid var(--accent);border-radius:999px;padding:7px 18px;margin:0 0 18px;background:rgba(6,18,36,.38);backdrop-filter:blur(3px)}
+.legal-hero h1{font-family:var(--font-heading),Manrope,sans-serif;font-weight:800;
+  font-size:clamp(1.95rem,1.35rem+1.9vw,2.9rem)!important;letter-spacing:-.04em;line-height:1.08!important;
+  color:#fff;margin:0;text-shadow:0 2px 12px rgba(6,18,36,.72)}
+.legal-hero h1 em{font-style:italic;color:var(--accent)}
+.legal-hero__en{font-family:var(--font-heading),Manrope,sans-serif;font-weight:700;
+  font-size:clamp(1rem,.86rem+.55vw,1.35rem)!important;letter-spacing:-.02em;color:#EAF6FF;margin:8px 0 0;text-shadow:0 2px 10px rgba(6,18,36,.7)}
+.legal-rule{width:42px;height:3px;background:var(--accent);border:0;margin:18px auto 0}
+.legal-page__updated{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--secondary-light);font-style:normal;margin:16px 0 0;
+  border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 16px;background:rgba(6,18,36,.38);backdrop-filter:blur(3px)}
+
+/* ---------- Cuerpo ---------- */
+.legal-main{padding:0 0 92px;background:var(--bg)}
+.legal-cols{max-width:none;margin:0 auto}
+
+.legal-intro{max-width:880px;margin:48px auto 0}
+.legal-intro p{font-size:1.02rem!important;line-height:1.78!important;
+  color:var(--text-secondary);margin:0 0 14px;text-align:justify!important;hyphens:auto!important;-webkit-hyphens:auto!important}
+
+/* Índice: tarjeta ancha, en dos columnas.
+   Centrar cada fila por separado dejaba los números en zigzag; en dos
+   columnas alineadas a la izquierda quedan en dos hileras limpias. */
+.legal-toc{max-width:none;margin:48px auto 0;background:#fff;border:1px solid var(--border);
+  border-top:4px solid var(--accent-strong);border-radius:16px;padding:30px 38px 32px}
+.legal-toc__titulo{text-align:center;font-size:11px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--text-light);margin:0 0 24px}
+/* grid-auto-flow:column + filas fijas = 01-03 a la izquierda, 04-06 a la
+   derecha. Por filas saldría 01,02 arriba, que no es lo pedido. */
+.legal-toc ol{list-style:none;margin:0;padding:0;display:grid;
+  grid-auto-flow:column;column-gap:44px;row-gap:15px}
+.legal-toc li{margin:0}
+.legal-toc a{display:flex;align-items:center;justify-content:flex-start;gap:13px;
+  font-size:.92rem;font-weight:600;line-height:1.45;color:var(--text);text-decoration:none;text-align:left;min-height:34px}
+/* Círculos más grandes. El número iba descentrado por la altura de línea
+   heredada: con line-height:1 y sin márgenes el glifo queda al medio. */
+.legal-n{flex:0 0 34px;width:34px;height:34px;box-sizing:border-box;
+  border:1.5px solid var(--accent-strong);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-heading),Manrope,sans-serif;
+  font-weight:800;font-size:12.5px;line-height:1!important;color:var(--text);
+  font-variant-numeric:tabular-nums;margin:0;padding-top:2px}
+.legal-toc a:hover{color:var(--primary-light)}
+.legal-toc a:hover .legal-n{background:var(--accent);border-color:var(--accent)}
+
+/* Secciones: el cuerpo se recoge, la cabecera y el indice no */
+.legal-body{max-width:880px;margin:0 auto}
+.legal-seccion{padding-top:28px!important;margin-top:28px!important;margin-bottom:0!important;border-top:1px solid var(--border);scroll-margin-top:130px}
+/* El ultimo elemento de cada seccion arrastraba su margen (15px un parrafo,
+   20 una lista, 38 los botones): por eso unos huecos salian mas grandes que
+   otros. A cero, todas las separaciones quedan iguales. */
+.legal-seccion > *:last-child{margin-bottom:0!important}
+.legal-body h2{display:flex;align-items:center;justify-content:center;gap:13px;
+  font-family:var(--font-heading),Manrope,sans-serif;font-weight:800;font-size:1.12rem!important;letter-spacing:-.025em;
+  color:var(--text);line-height:1.4!important;margin:0 0 22px;text-align:center}
+/* El cuerpo justificado: bloque parejo por los dos lados */
+.legal-body p,
+.legal-body li{font-size:.97rem!important;line-height:1.8!important;
+  color:var(--text-secondary);text-align:justify!important;text-justify:inter-word;hyphens:auto!important;-webkit-hyphens:auto!important}
+.legal-body p{margin:0 0 15px}
+/* Las listas van centradas como el resto de la página. Los ítems son cortos
+   (contacto, tipos de dato), así que centrados se leen bien. La viñeta va
+   "inside" para que acompañe al texto en vez de quedarse colgada a la izquierda. */
+.legal-body ul{max-width:660px;margin:0 auto 20px;padding-left:0;
+  list-style-position:inside}
+.legal-body ul li{margin-bottom:10px;
+  text-align:center!important;hyphens:none!important}
+.legal-body li::marker{color:var(--accent-strong)}
+/* Contacto en botones: la lista de correo/teléfono/web se vuelve una fila
+   de píldoras. El icono sustituye a la etiqueta ("Email / Correo:"), que
+   queda en el aria-label para quien use lector de pantalla. */
+.legal-contacto{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin:36px 0 38px}
+.legal-contacto a{display:inline-flex;align-items:center;gap:10px;
+  background:#fff;border:1px solid var(--border);border-radius:999px;padding:12px 22px;
+  font-size:.92rem;font-weight:600;color:var(--primary-light);text-decoration:none;
+  box-shadow:0 1px 2px rgba(6,43,85,.04);transition:border-color .16s ease,box-shadow .16s ease,transform .16s ease}
+.legal-contacto a:hover{border-color:var(--accent-strong);
+  box-shadow:0 6px 18px rgba(6,43,85,.08);transform:translateY(-1px)}
+.legal-contacto svg{width:17px;height:17px;flex:0 0 17px;stroke:currentColor;fill:none;
+  stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:620px){
+ .legal-contacto{flex-direction:column;align-items:stretch}
+ .legal-contacto a{justify-content:center}
+}
+.legal-body strong{color:var(--text);font-weight:700}
+.legal-body a{color:var(--primary-light);font-weight:600}
+
+.legal-volver{margin:56px 0 0;padding-top:28px;border-top:1px solid var(--border);
+  font-size:.9rem;font-weight:700;text-align:center}
+.legal-volver a{color:var(--primary-light);text-decoration:none}
+
+/* Dos columnas solo si hay sitio de verdad */
+@media(max-width:880px){
+ .legal-toc ol{grid-auto-flow:row!important;grid-template-rows:none!important}
+}
+@media(max-width:760px){
+ .legal-toc{padding:22px 20px}
+ .legal-hero{padding-bottom:32px}
+ /* en pantalla angosta justificar abre huecos feos: mejor alineado a la izquierda */
+ .legal-body p,
+ .legal-body li,
+ .legal-intro p{text-align:left!important}
+}</style><script>window.commonConfig =
+            {
+  "locale": "en-US",
+  "language": "en"
+};</script>
+<script>window.essentials =
+            {
+  "locale": "en-US",
+  "language": "en",
+  "timeZone": "America/Bogota"
+};</script>
+<script>window.wixEmbedsAPI = {
+          registerToEvent: () => {},
+          getExternalBaseUrl: () => "https://www.wixapis.com",
+          getHtmlSiteId: () => "dummy-site-id",
+          getMetaSiteId: () => "cc9dc53e-c5a8-4c67-a696-4ab3d3a7443e",
+          getLanguage: () => "en",
+          isWixSite: () => false,
+          getAccessTokenFunction: function getAccessTokenFunction() { return () => window.__wix_context__?.client?.auth?.getAuthHeaders?.()?.then((res) =>  {  return res.headers.Authorization })}
+        };</script>
+<script id=site-bi-navigation>!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define("site-bi",[],t):"object"==typeof exports?exports["site-bi"]=t():e["site-bi"]=t()}("undefined"!=typeof self?self:this,(()=>(()=>{"use strict";var e={d:(t,o)=>{for(var n in o)e.o(o,n)&&!e.o(t,n)&&Object.defineProperty(t,n,{enumerable:!0,get:o[n]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t),r:e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})}},t={};e.r(t),e.d(t,{resetNavigation:()=>r});let o=1;const n=()=>++o;let i=new URL(document.location.href);const r=()=>{i=new URL(window.location.origin+"/__dummy__")},a=e=>{if(!e)return;let t=null;try{const o="string"==typeof e&&e.startsWith("/")?window.location.origin+e:e;t=new URL(o)}catch(e){}if(t&&t.origin===i.origin){if(t.pathname!==i.pathname){const e=n();setTimeout((()=>{window.dispatchEvent(new CustomEvent("wix:bi:navigation",{detail:{pageNumber:e}}))}))}i=t}};return["pushState","replaceState"].forEach((e=>{const t=window.history[e];window.history[e]=function(){for(var e=arguments.length,o=new Array(e),n=0;n<e;n++)o[n]=arguments[n];a(o[2]),t.apply(window.history,o)}})),window.addEventListener("popstate",(()=>a(window.location.href))),t})()));</script>
+<script src=https://static.parastorage.com/services/cookie-consent-policy-client/1.983.0/headlessApp.bundle.min.js defer=defer></script>
+<script id=site-consent-policy src=https://static.parastorage.com/services/site-consent-policy/1.10.0/site-consent-policy.umd.min.js defer=defer data-default-consent-policy=""></script></head> <body data-astro-cid-dpidqgiz> <header class="header" id="top"> <div class="container"> <nav class="nav"> <a href="../" class="nav-logo"> <img loading="lazy" decoding="async" src="../assets/images/logo-cstravel-cropped.webp" alt="CS Travel Group" class="nav-logo-img"> </a> <div class="nav-right"> <ul class="nav-links"> <li><a href="../#inicio" data-i18n="nav_home">Inicio</a></li> <li><a href="../empresas/" data-i18n="nav_why">Empresas</a></li> <li><a href="../medicos/" data-i18n="nav_process">Médicos</a></li> </ul> <div class="lang-switcher"> <div class="lang-trigger"> <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> <span class="current-lang">Español</span> <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> </div> <div class="lang-dropdown"> <div class="lang-divider"></div> <button class="lang-btn" data-lang="en">English (US)</button> <button class="lang-btn active" data-lang="es">Español</button> </div> </div> <a href="../contacto/" class="btn btn-primary nav-cta" data-i18n="nav_cta">Hablémos hoy</a> </div> <button class="hamburger" aria-label="Abrir menú"> <span></span><span></span><span></span> </button> </nav> </div> </header> <section class="legal-hero" data-astro-cid-dpidqgiz>
+<div aria-hidden="true" style="height:62px" data-astro-cid-dpidqgiz></div>
+<div class="container" data-astro-cid-dpidqgiz>
+<div class="legal-hero__inner" data-astro-cid-dpidqgiz>
+<p class="legal-eyebrow" data-astro-cid-dpidqgiz>Legal</p>
+<h1 data-astro-cid-dpidqgiz>Política de <em data-astro-cid-dpidqgiz>Reembolso</em></h1>
+<p class="legal-hero__en" data-astro-cid-dpidqgiz>Refund Policy</p>
+<hr class="legal-rule" data-astro-cid-dpidqgiz>
+<p class="legal-page__updated" data-astro-cid-dpidqgiz>Actualizado · 29 de octubre de 2025</p>
+</div>
+</div>
+</section>
+<main class="legal-main" data-astro-cid-dpidqgiz>
+<div class="container" data-astro-cid-dpidqgiz>
+<nav class="legal-toc" aria-label="Contenido" data-astro-cid-dpidqgiz>
+<p class="legal-toc__titulo" data-astro-cid-dpidqgiz>Contenido</p>
+<ol style="grid-template-rows:repeat(4,auto)" data-astro-cid-dpidqgiz>
+<li data-astro-cid-dpidqgiz><a href="#s01" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>01</span><span data-astro-cid-dpidqgiz>General Conditions / Condiciones Generales</span></a></li>
+<li data-astro-cid-dpidqgiz><a href="#s02" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>02</span><span data-astro-cid-dpidqgiz>Non-Refundable Fees / Cargos No Reembolsables</span></a></li>
+<li data-astro-cid-dpidqgiz><a href="#s03" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>03</span><span data-astro-cid-dpidqgiz>Refunds from Suppliers / Reembolsos de los Proveedores</span></a></li>
+<li data-astro-cid-dpidqgiz><a href="#s04" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>04</span><span data-astro-cid-dpidqgiz>Refund Timelines / Plazos de Reembolso</span></a></li>
+<li data-astro-cid-dpidqgiz><a href="#s05" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>05</span><span data-astro-cid-dpidqgiz>Partial Refunds or Credits / Reembolsos Parciales o Créditos</span></a></li>
+<li data-astro-cid-dpidqgiz><a href="#s06" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>06</span><span data-astro-cid-dpidqgiz>Governing Law / Ley Aplicable</span></a></li>
+<li data-astro-cid-dpidqgiz><a href="#s07" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>07</span><span data-astro-cid-dpidqgiz>Contact / Contacto</span></a></li>
+</ol>
+</nav>
+<div class="legal-cols" data-astro-cid-dpidqgiz>
+<div class="legal-body" data-astro-cid-dpidqgiz>
+<section id="s01" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>01</span><span data-astro-cid-dpidqgiz>General Conditions / Condiciones Generales</span></h2>
+<p>CS Travel Group, operating as an Independent Travel Agent affiliated with Archer Travel Group, Inc. (California Seller of Travel CST #2001330-10; Florida Seller of Travel License #35395; IATA #05824840), is also legally registered in Colombia under Registro Mercantil (Mercantile Registry) No. 945.293, Tax ID (NIT) 902.096.878-3 and Registro Nacional de Turismo (RNT) No. 299.130.</p> <p>The company acts solely as an intermediary between clients and authorized third-party travel suppliers. All reservations, payments, cancellations, and refunds are subject to the specific terms and conditions established by each supplier (such as airlines, hotels, cruise lines, tour operators, or other travel service providers).</p> <p>CS Travel Group, operando como Agente de Viajes Independiente afiliado a Archer Travel Group, Inc. (California Seller of Travel CST #2001330-10; Florida Seller of Travel License #35395; IATA #05824840), también está legalmente registrado en Colombia bajo el Registro Mercantil No. 945.293, NIT 902.096.878-3 y el Registro Nacional de Turismo (RNT) No. 299.130.</p> <p>La empresa actúa únicamente como intermediario entre los clientes y proveedores turísticos autorizados. Todas las reservas, pagos, cancelaciones y reembolsos están sujetos a las condiciones específicas establecidas por cada proveedor (aerolíneas, hoteles, cruceros, operadores turísticos u otros prestadores de servicios).</p>
+</section>
+<section id="s02" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>02</span><span data-astro-cid-dpidqgiz>Non-Refundable Fees / Cargos No Reembolsables</span></h2>
+<p>The Agent Service Fee charged by CS Travel Group for advisory, booking, coordination, and customer-support services is non-refundable under any circumstance, as it covers administrative and operational costs incurred at the time of service.</p> <p>El honorario de servicio del agente (Agent Service Fee) cobrado por CS Travel Group por concepto de asesoría, gestión y soporte al cliente es no reembolsable bajo ninguna circunstancia, ya que cubre los costos administrativos y operativos generados al momento de la prestación del servicio.</p>
+</section>
+<section id="s03" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>03</span><span data-astro-cid-dpidqgiz>Refunds from Suppliers / Reembolsos de los Proveedores</span></h2>
+<p>Any applicable refund for travel services (such as flights, hotels, or tours) will be processed directly by the supplier according to their internal refund policies.</p> <p>CS Travel Group will assist the client in submitting the request but does not guarantee approval or processing time, as these depend entirely on each supplier's procedures.</p> <p>Cualquier reembolso aplicable por servicios turísticos (como vuelos, hoteles o tours) será procesado directamente por el proveedor, conforme a sus políticas internas de reembolso.</p> <p>CS Travel Group asistirá al cliente en la presentación de la solicitud, pero no garantiza la aprobación ni el tiempo de procesamiento, dado que esto depende exclusivamente de los procedimientos de cada proveedor.</p>
+</section>
+<section id="s04" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>04</span><span data-astro-cid-dpidqgiz>Refund Timelines / Plazos de Reembolso</span></h2>
+<p>Once a supplier approves a refund, the processing time generally ranges between 15 and 30 business days, depending on the provider and payment method used.</p> <p>These timelines are approximate and may vary based on each supplier's internal processes, payment gateway, or bank.</p> <p>Una vez que el proveedor aprueba un reembolso, el plazo de procesamiento suele ser de 15 a 30 días hábiles, dependiendo del proveedor y del método de pago utilizado.</p> <p>Estos plazos son estimativos y pueden variar según los procesos internos de cada proveedor, pasarela de pago o entidad bancaria.</p>
+</section>
+<section id="s05" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>05</span><span data-astro-cid-dpidqgiz>Partial Refunds or Credits / Reembolsos Parciales o Créditos</span></h2>
+<p>If a supplier offers a travel credit, partial refund, or rescheduling option, CS Travel Group will communicate these alternatives and assist with coordination.</p> <p>Such credits or refunds are subject to the supplier's final decision and terms.</p> <p>Si un proveedor ofrece un crédito de viaje, reembolso parcial o reprogramación, CS Travel Group informará estas alternativas y brindará asistencia en la gestión.</p> <p>Dichos créditos o reembolsos están sujetos a la decisión y condiciones finales del proveedor.</p>
+</section>
+<section id="s06" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>06</span><span data-astro-cid-dpidqgiz>Governing Law / Ley Aplicable</span></h2>
+<p>This Refund Policy is governed by the laws of the State of Florida, USA, and the laws of the Republic of Colombia, according to the jurisdiction of the transaction. Disputes shall be resolved before the courts of Miami-Dade County, Florida, or before the competent authorities in Barranquilla, Colombia.</p> <p>Esta Política de Reembolso se rige por las leyes del Estado de Florida, EE. UU. y las leyes de la República de Colombia, según la jurisdicción aplicable. Cualquier controversia será resuelta ante los tribunales del condado de Miami-Dade, Florida, o ante las autoridades competentes en Barranquilla, Colombia.</p>
+</section>
+<section id="s07" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>07</span><span data-astro-cid-dpidqgiz>Contact / Contacto</span></h2>
+<p>To request a refund or ask questions about this policy, please contact CS Travel Group. / Para solicitar un reembolso o consultar sobre esta política, comuníquese con CS Travel Group:</p> <div class="legal-contacto" data-astro-cid-dpidqgiz>
+<a href="mailto:info.cstravelgroup@gmail.com" aria-label="Email / Correo: info.cstravelgroup@gmail.com" data-astro-cid-dpidqgiz><svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-dpidqgiz><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span data-astro-cid-dpidqgiz>info.cstravelgroup@gmail.com</span></a>
+<a href="tel:+573146103599" aria-label="Colombia: +57 314 610 3599" data-astro-cid-dpidqgiz><svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-dpidqgiz><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2.2 2A16 16 0 0 1 3 6.2 2 2 0 0 1 5 4Z"/></svg><span data-astro-cid-dpidqgiz>+57 314 610 3599</span></a>
+<a href="https://www.cstravelgroup.com" aria-label="Web: www.cstravelgroup.com" data-astro-cid-dpidqgiz><svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-dpidqgiz><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.8 3.8 9S14.5 21.3 12 21c-2.5-2.7-3.8-5.8-3.8-9S9.5 5.7 12 3Z"/></svg><span data-astro-cid-dpidqgiz>www.cstravelgroup.com</span></a>
+</div>  </div>
+</section>
+</div>
+<p class="legal-volver" data-astro-cid-dpidqgiz><a href="../" data-astro-cid-dpidqgiz>← Volver al inicio</a></p>
+</div>
+</div>
+</main> <!-- Footer --> <footer class="footer" data-astro-cid-dpidqgiz> <div class="container" data-astro-cid-dpidqgiz> <div class="footer-grid" data-astro-cid-dpidqgiz> <div class="footer-brand" data-astro-cid-dpidqgiz> <a href="../" class="nav-logo" data-astro-cid-dpidqgiz> <img loading="lazy" decoding="async" src="../assets/images/logo-cstravel-cropped.webp" alt="CS Travel Group" class="nav-logo-img" data-astro-cid-dpidqgiz> </a> <p data-astro-cid-dpidqgiz>Logística de viajes corporativos y médicos, gestionada de principio a fin.</p> </div> <div data-astro-cid-dpidqgiz> <h5 data-astro-cid-dpidqgiz>Navegación</h5> <ul data-astro-cid-dpidqgiz> <li data-astro-cid-dpidqgiz><a href="../" data-astro-cid-dpidqgiz>Inicio</a></li> <li data-astro-cid-dpidqgiz><a href="../empresas/" data-astro-cid-dpidqgiz>Empresas</a></li> <li data-astro-cid-dpidqgiz><a href="../medicos/" data-astro-cid-dpidqgiz>Médicos</a></li> <li data-astro-cid-dpidqgiz><a href="../contacto/" data-astro-cid-dpidqgiz>Contacto</a></li>   </ul> </div> <div data-astro-cid-dpidqgiz> <h5 data-astro-cid-dpidqgiz>Legal</h5> <ul data-astro-cid-dpidqgiz> <li data-astro-cid-dpidqgiz><a href="../terminos/" data-astro-cid-dpidqgiz>Términos y condiciones</a></li> <li data-astro-cid-dpidqgiz><a href="../privacidad/" data-astro-cid-dpidqgiz>Política de privacidad</a></li> <li data-astro-cid-dpidqgiz><a href="../reembolso/" data-astro-cid-dpidqgiz>Política de reembolso</a></li> <li data-astro-cid-dpidqgiz><a href="../accesibilidad/" data-astro-cid-dpidqgiz>Accesibilidad</a></li> </ul> </div> <div data-astro-cid-dpidqgiz> <h5 data-astro-cid-dpidqgiz>Contacto</h5> <ul data-astro-cid-dpidqgiz> <li data-astro-cid-dpidqgiz><a href="mailto:info.cstravelgroup@gmail.com" data-astro-cid-dpidqgiz>info.cstravelgroup@gmail.com</a></li> <li data-astro-cid-dpidqgiz><a href="https://wa.me/573146103599" data-astro-cid-dpidqgiz>+57 314 610 3599</a></li> </ul> </div> </div> <div class="footer-bottom" data-astro-cid-dpidqgiz> <span data-astro-cid-dpidqgiz>© 2026 CS Travel Group. Todos los derechos reservados.</span> <span data-astro-cid-dpidqgiz>CS Travel Group Colombia S.A.S. · NIT 902.096.878-3 · RNT 299.130 · Matrícula Mercantil 945.293</span> <span class="footer-credit" data-astro-cid-dpidqgiz>Sitio desarrollado por <a href="https://kaivastudio.com/" target="_blank" rel="noopener" data-astro-cid-dpidqgiz>Kaiva Studio</a></span> </div> </div> </footer> <script src=https://static.parastorage.com/services/site-bi/1.17.0/site-bi.umd.min.js defer=defer></script>
+<script src=https://static.parastorage.com/services/site-analytics/1.14.0/site-analytics.umd.min.js defer=defer></script>
+<script src=https://static.parastorage.com/services/tag-manager-client/1.1075.0/siteTags.bundle.min.js defer=defer></script>
+<script>document.addEventListener("DOMContentLoaded", function() {
+          window.wixAnalytics.trackEvent('PageView', { pageNumber: 1 });
+
+          window.addEventListener('wix:bi:navigation', function(e) {
+            window.wixAnalytics.trackEvent('PageView', { pageNumber: e.detail.pageNumber });
+          });
+        });</script><script src="../js/main.js"></script>
+</body></html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="es" data-astro-cid-dpidqgiz> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Declaración de Accesibilidad / Accessibility Statement | CS Travel Group</title><meta name="description" content="Accessibility Statement of CS Travel Group: our commitment to WCAG 2.1 AA, the ADA, and Colombia Ley 1618 de 2013 and Decreto 2011 de 2017. / Declaración de accesibilidad de CS Travel Group."><meta name="robots" content="index,follow"><link rel="stylesheet" href="../css/styles.css?v=20260613a"><link rel="icon" type="image/webp" href="../assets/images/logo-cstravel-cropped.webp"><style>
+body{margin:0;background:var(--bg);color:var(--text-secondary)}
+
+/* ---------- Cabecera de la página ---------- */
+.legal-hero{position:relative;overflow:hidden;text-align:center;
+  background:var(--primary) url("../assets/images/legal-hero.webp") center center / cover no-repeat;
+  border-bottom:5px solid var(--accent);padding-bottom:34px}
+/* Velo navy suave: lo justo para que el texto se lea, dejando ver la foto.
+   Va más cargado abajo, que es donde se apoya el bloque de texto.
+   Debajo queda el navy sólido por si la imagen no carga. */
+.legal-hero:before{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(3,24,56,.30) 0%,rgba(3,24,56,.48) 55%,rgba(3,24,56,.70) 100%)}
+.legal-hero .container{position:relative;z-index:2}
+.legal-hero__inner{max-width:none;margin:0 auto}
+
+.legal-eyebrow{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);border:1.5px solid var(--accent);border-radius:999px;padding:7px 18px;margin:0 0 18px;background:rgba(6,18,36,.38);backdrop-filter:blur(3px)}
+.legal-hero h1{font-family:var(--font-heading),Manrope,sans-serif;font-weight:800;
+  font-size:clamp(1.95rem,1.35rem+1.9vw,2.9rem)!important;letter-spacing:-.04em;line-height:1.08!important;
+  color:#fff;margin:0;text-shadow:0 2px 12px rgba(6,18,36,.72)}
+.legal-hero h1 em{font-style:italic;color:var(--accent)}
+.legal-hero__en{font-family:var(--font-heading),Manrope,sans-serif;font-weight:700;
+  font-size:clamp(1rem,.86rem+.55vw,1.35rem)!important;letter-spacing:-.02em;color:#EAF6FF;margin:8px 0 0;text-shadow:0 2px 10px rgba(6,18,36,.7)}
+.legal-rule{width:42px;height:3px;background:var(--accent);border:0;margin:18px auto 0}
+.legal-page__updated{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--secondary-light);font-style:normal;margin:16px 0 0;
+  border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 16px;background:rgba(6,18,36,.38);backdrop-filter:blur(3px)}
+
+/* ---------- Cuerpo ---------- */
+.legal-main{padding:0 0 92px;background:var(--bg)}
+.legal-cols{max-width:none;margin:0 auto}
+
+.legal-intro{max-width:880px;margin:48px auto 0}
+.legal-intro p{font-size:1.02rem!important;line-height:1.78!important;
+  color:var(--text-secondary);margin:0 0 14px;text-align:justify!important;hyphens:auto!important;-webkit-hyphens:auto!important}
+
+/* Índice: tarjeta ancha, en dos columnas.
+   Centrar cada fila por separado dejaba los números en zigzag; en dos
+   columnas alineadas a la izquierda quedan en dos hileras limpias. */
+.legal-toc{max-width:none;margin:48px auto 0;background:#fff;border:1px solid var(--border);
+  border-top:4px solid var(--accent-strong);border-radius:16px;padding:30px 38px 32px}
+.legal-toc__titulo{text-align:center;font-size:11px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--text-light);margin:0 0 24px}
+/* grid-auto-flow:column + filas fijas = 01-03 a la izquierda, 04-06 a la
+   derecha. Por filas saldría 01,02 arriba, que no es lo pedido. */
+.legal-toc ol{list-style:none;margin:0;padding:0;display:grid;
+  grid-auto-flow:column;column-gap:44px;row-gap:15px}
+.legal-toc li{margin:0}
+.legal-toc a{display:flex;align-items:center;justify-content:flex-start;gap:13px;
+  font-size:.92rem;font-weight:600;line-height:1.45;color:var(--text);text-decoration:none;text-align:left;min-height:34px}
+/* Círculos más grandes. El número iba descentrado por la altura de línea
+   heredada: con line-height:1 y sin márgenes el glifo queda al medio. */
+.legal-n{flex:0 0 34px;width:34px;height:34px;box-sizing:border-box;
+  border:1.5px solid var(--accent-strong);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-heading),Manrope,sans-serif;
+  font-weight:800;font-size:12.5px;line-height:1!important;color:var(--text);
+  font-variant-numeric:tabular-nums;margin:0;padding-top:2px}
+.legal-toc a:hover{color:var(--primary-light)}
+.legal-toc a:hover .legal-n{background:var(--accent);border-color:var(--accent)}
+
+/* Secciones: el cuerpo se recoge, la cabecera y el indice no */
+.legal-body{max-width:880px;margin:0 auto}
+.legal-seccion{padding-top:28px!important;margin-top:28px!important;margin-bottom:0!important;border-top:1px solid var(--border);scroll-margin-top:130px}
+/* El ultimo elemento de cada seccion arrastraba su margen (15px un parrafo,
+   20 una lista, 38 los botones): por eso unos huecos salian mas grandes que
+   otros. A cero, todas las separaciones quedan iguales. */
+.legal-seccion > *:last-child{margin-bottom:0!important}
+.legal-body h2{display:flex;align-items:center;justify-content:center;gap:13px;
+  font-family:var(--font-heading),Manrope,sans-serif;font-weight:800;font-size:1.12rem!important;letter-spacing:-.025em;
+  color:var(--text);line-height:1.4!important;margin:0 0 22px;text-align:center}
+/* El cuerpo justificado: bloque parejo por los dos lados */
+.legal-body p,
+.legal-body li{font-size:.97rem!important;line-height:1.8!important;
+  color:var(--text-secondary);text-align:justify!important;text-justify:inter-word;hyphens:auto!important;-webkit-hyphens:auto!important}
+.legal-body p{margin:0 0 15px}
+/* Las listas van centradas como el resto de la página. Los ítems son cortos
+   (contacto, tipos de dato), así que centrados se leen bien. La viñeta va
+   "inside" para que acompañe al texto en vez de quedarse colgada a la izquierda. */
+.legal-body ul{max-width:660px;margin:0 auto 20px;padding-left:0;
+  list-style-position:inside}
+.legal-body ul li{margin-bottom:10px;
+  text-align:center!important;hyphens:none!important}
+.legal-body li::marker{color:var(--accent-strong)}
+/* Contacto en botones: la lista de correo/teléfono/web se vuelve una fila
+   de píldoras. El icono sustituye a la etiqueta ("Email / Correo:"), que
+   queda en el aria-label para quien use lector de pantalla. */
+.legal-contacto{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin:36px 0 38px}
+.legal-contacto a{display:inline-flex;align-items:center;gap:10px;
+  background:#fff;border:1px solid var(--border);border-radius:999px;padding:12px 22px;
+  font-size:.92rem;font-weight:600;color:var(--primary-light);text-decoration:none;
+  box-shadow:0 1px 2px rgba(6,43,85,.04);transition:border-color .16s ease,box-shadow .16s ease,transform .16s ease}
+.legal-contacto a:hover{border-color:var(--accent-strong);
+  box-shadow:0 6px 18px rgba(6,43,85,.08);transform:translateY(-1px)}
+.legal-contacto svg{width:17px;height:17px;flex:0 0 17px;stroke:currentColor;fill:none;
+  stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:620px){
+ .legal-contacto{flex-direction:column;align-items:stretch}
+ .legal-contacto a{justify-content:center}
+}
+.legal-body strong{color:var(--text);font-weight:700}
+.legal-body a{color:var(--primary-light);font-weight:600}
+
+.legal-volver{margin:56px 0 0;padding-top:28px;border-top:1px solid var(--border);
+  font-size:.9rem;font-weight:700;text-align:center}
+.legal-volver a{color:var(--primary-light);text-decoration:none}
+
+/* Dos columnas solo si hay sitio de verdad */
+@media(max-width:880px){
+ .legal-toc ol{grid-auto-flow:row!important;grid-template-rows:none!important}
+}
+@media(max-width:760px){
+ .legal-toc{padding:22px 20px}
+ .legal-hero{padding-bottom:32px}
+ /* en pantalla angosta justificar abre huecos feos: mejor alineado a la izquierda */
+ .legal-body p,
+ .legal-body li,
+ .legal-intro p{text-align:left!important}
+}</style><script>window.commonConfig =
+            {
+  "locale": "en-US",
+  "language": "en"
+};</script>
+<script>window.essentials =
+            {
+  "locale": "en-US",
+  "language": "en",
+  "timeZone": "America/Bogota"
+};</script>
+<script>window.wixEmbedsAPI = {
+          registerToEvent: () => {},
+          getExternalBaseUrl: () => "https://www.wixapis.com",
+          getHtmlSiteId: () => "dummy-site-id",
+          getMetaSiteId: () => "cc9dc53e-c5a8-4c67-a696-4ab3d3a7443e",
+          getLanguage: () => "en",
+          isWixSite: () => false,
+          getAccessTokenFunction: function getAccessTokenFunction() { return () => window.__wix_context__?.client?.auth?.getAuthHeaders?.()?.then((res) =>  {  return res.headers.Authorization })}
+        };</script>
+<script id=site-bi-navigation>!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define("site-bi",[],t):"object"==typeof exports?exports["site-bi"]=t():e["site-bi"]=t()}("undefined"!=typeof self?self:this,(()=>(()=>{"use strict";var e={d:(t,o)=>{for(var n in o)e.o(o,n)&&!e.o(t,n)&&Object.defineProperty(t,n,{enumerable:!0,get:o[n]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t),r:e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})}},t={};e.r(t),e.d(t,{resetNavigation:()=>r});let o=1;const n=()=>++o;let i=new URL(document.location.href);const r=()=>{i=new URL(window.location.origin+"/__dummy__")},a=e=>{if(!e)return;let t=null;try{const o="string"==typeof e&&e.startsWith("/")?window.location.origin+e:e;t=new URL(o)}catch(e){}if(t&&t.origin===i.origin){if(t.pathname!==i.pathname){const e=n();setTimeout((()=>{window.dispatchEvent(new CustomEvent("wix:bi:navigation",{detail:{pageNumber:e}}))}))}i=t}};return["pushState","replaceState"].forEach((e=>{const t=window.history[e];window.history[e]=function(){for(var e=arguments.length,o=new Array(e),n=0;n<e;n++)o[n]=arguments[n];a(o[2]),t.apply(window.history,o)}})),window.addEventListener("popstate",(()=>a(window.location.href))),t})()));</script>
+<script src=https://static.parastorage.com/services/cookie-consent-policy-client/1.983.0/headlessApp.bundle.min.js defer=defer></script>
+<script id=site-consent-policy src=https://static.parastorage.com/services/site-consent-policy/1.10.0/site-consent-policy.umd.min.js defer=defer data-default-consent-policy=""></script></head> <body data-astro-cid-dpidqgiz> <header class="header" id="top"> <div class="container"> <nav class="nav"> <a href="../" class="nav-logo"> <img loading="lazy" decoding="async" src="../assets/images/logo-cstravel-cropped.webp" alt="CS Travel Group" class="nav-logo-img"> </a> <div class="nav-right"> <ul class="nav-links"> <li><a href="../#inicio" data-i18n="nav_home">Inicio</a></li> <li><a href="../empresas/" data-i18n="nav_why">Empresas</a></li> <li><a href="../medicos/" data-i18n="nav_process">Médicos</a></li> </ul> <div class="lang-switcher"> <div class="lang-trigger"> <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> <span class="current-lang">Español</span> <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> </div> <div class="lang-dropdown"> <div class="lang-divider"></div> <button class="lang-btn" data-lang="en">English (US)</button> <button class="lang-btn active" data-lang="es">Español</button> </div> </div> <a href="../contacto/" class="btn btn-primary nav-cta" data-i18n="nav_cta">Hablémos hoy</a> </div> <button class="hamburger" aria-label="Abrir menú"> <span></span><span></span><span></span> </button> </nav> </div> </header> <section class="legal-hero" data-astro-cid-dpidqgiz>
+<div aria-hidden="true" style="height:62px" data-astro-cid-dpidqgiz></div>
+<div class="container" data-astro-cid-dpidqgiz>
+<div class="legal-hero__inner" data-astro-cid-dpidqgiz>
+<p class="legal-eyebrow" data-astro-cid-dpidqgiz>Legal</p>
+<h1 data-astro-cid-dpidqgiz>Declaración de <em data-astro-cid-dpidqgiz>Accesibilidad</em></h1>
+<p class="legal-hero__en" data-astro-cid-dpidqgiz>Accessibility Statement</p>
+<hr class="legal-rule" data-astro-cid-dpidqgiz>
+<p class="legal-page__updated" data-astro-cid-dpidqgiz>Actualizado · 29 de octubre de 2025</p>
+</div>
+</div>
+</section>
+<main class="legal-main" data-astro-cid-dpidqgiz>
+<div class="container" data-astro-cid-dpidqgiz>
+<div class="legal-cols" data-astro-cid-dpidqgiz>
+<div class="legal-intro" data-astro-cid-dpidqgiz>
+<p>This statement was last updated on October 29, 2025.</p> <p>We at CS Travel Group are working to make our website (<a href="https://www.cstravelgroup.com">www.cstravelgroup.com</a>) accessible to people with disabilities. Our ongoing goal is to ensure that all users, regardless of ability, can easily navigate, understand, and interact with the information and services we provide.</p> <p>Esta declaración fue actualizada por última vez el 29 de octubre de 2025.</p> <p>En CS Travel Group, trabajamos para que nuestro sitio web (<a href="https://www.cstravelgroup.com">www.cstravelgroup.com</a>) sea accesible para personas con discapacidad. Nuestro objetivo permanente es garantizar que todos los usuarios, sin importar sus capacidades, puedan navegar, comprender e interactuar fácilmente con la información y los servicios que ofrecemos.</p>
+</div>
+</div>
+<nav class="legal-toc" aria-label="Contenido" data-astro-cid-dpidqgiz>
+<p class="legal-toc__titulo" data-astro-cid-dpidqgiz>Contenido</p>
+<ol style="grid-template-rows:repeat(2,auto)" data-astro-cid-dpidqgiz>
+<li data-astro-cid-dpidqgiz><a href="#s01" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>01</span><span data-astro-cid-dpidqgiz>Commitment to Accessibility / Compromiso con la Accesibilidad</span></a></li>
+<li data-astro-cid-dpidqgiz><a href="#s02" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>02</span><span data-astro-cid-dpidqgiz>Standards and Compliance / Estándares y Cumplimiento</span></a></li>
+<li data-astro-cid-dpidqgiz><a href="#s03" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>03</span><span data-astro-cid-dpidqgiz>Continuous Improvement / Mejora Continua</span></a></li>
+<li data-astro-cid-dpidqgiz><a href="#s04" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>04</span><span data-astro-cid-dpidqgiz>Accessibility Contact / Contacto de Accesibilidad</span></a></li>
+</ol>
+</nav>
+<div class="legal-cols" data-astro-cid-dpidqgiz>
+<div class="legal-body" data-astro-cid-dpidqgiz>
+<section id="s01" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>01</span><span data-astro-cid-dpidqgiz>Commitment to Accessibility / Compromiso con la Accesibilidad</span></h2>
+<p>CS Travel Group is committed to ensuring digital accessibility for all users, including people with disabilities. We strive to provide an inclusive experience on our website, digital communications, and booking platforms by following recognized accessibility standards.</p> <p>CS Travel Group está comprometido con garantizar la accesibilidad digital para todos los usuarios, incluidas las personas con discapacidad. Buscamos ofrecer una experiencia inclusiva en nuestro sitio web, comunicaciones digitales y plataformas de reserva, cumpliendo con estándares reconocidos de accesibilidad.</p>
+</section>
+<section id="s02" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>02</span><span data-astro-cid-dpidqgiz>Standards and Compliance / Estándares y Cumplimiento</span></h2>
+<p>Our digital content aims to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA, developed by the World Wide Web Consortium (W3C).</p> <p>We also comply with applicable laws and regulations, including the Americans with Disabilities Act (ADA) in the United States and Ley 1618 de 2013 and Decreto 2011 de 2017 in Colombia, which promote equal access to information and services.</p> <p>Nuestro contenido digital procura cumplir con las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.1 Nivel AA, elaboradas por el World Wide Web Consortium (W3C).</p> <p>Asimismo, cumplimos con la ADA (Estados Unidos) y con la Ley 1618 de 2013 y el Decreto 2011 de 2017 en Colombia, que garantizan la igualdad de acceso a la información y a los servicios.</p>
+</section>
+<section id="s03" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>03</span><span data-astro-cid-dpidqgiz>Continuous Improvement / Mejora Continua</span></h2>
+<p>We regularly review our content, color contrasts, alternative text for images, keyboard navigation, and document structure to improve usability for all users. Feedback from users with disabilities is highly valued and contributes directly to ongoing improvements.</p> <p>Revisamos periódicamente nuestro contenido, contraste de colores, texto alternativo en imágenes, navegación mediante teclado y estructura de documentos para mejorar la experiencia de todos los usuarios. Valoramos enormemente los comentarios de las personas con discapacidad, ya que contribuyen de forma directa a nuestras mejoras continuas.</p>
+</section>
+<section id="s04" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>04</span><span data-astro-cid-dpidqgiz>Accessibility Contact / Contacto de Accesibilidad</span></h2>
+<p>If you find an accessibility issue on our site or require further assistance, please contact CS Travel Group directly. We will review your message and make every reasonable effort to address your concern promptly.</p> <p>Si encuentra algún problema de accesibilidad en nuestro sitio o necesita asistencia adicional, por favor comuníquese directamente con CS Travel Group. Revisaremos su mensaje y haremos todo lo posible por atender su solicitud de manera oportuna.</p> <div class="legal-contacto" data-astro-cid-dpidqgiz>
+<a href="mailto:info.cstravelgroup@gmail.com" aria-label="Email / Correo: info.cstravelgroup@gmail.com" data-astro-cid-dpidqgiz><svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-dpidqgiz><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span data-astro-cid-dpidqgiz>info.cstravelgroup@gmail.com</span></a>
+<a href="tel:+573146103599" aria-label="Phone / Teléfono: +57 314 610 3599" data-astro-cid-dpidqgiz><svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-dpidqgiz><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2.2 2A16 16 0 0 1 3 6.2 2 2 0 0 1 5 4Z"/></svg><span data-astro-cid-dpidqgiz>+57 314 610 3599</span></a>
+<a href="https://www.cstravelgroup.com" aria-label="Website / Sitio web: www.cstravelgroup.com" data-astro-cid-dpidqgiz><svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-dpidqgiz><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.8 3.8 9S14.5 21.3 12 21c-2.5-2.7-3.8-5.8-3.8-9S9.5 5.7 12 3Z"/></svg><span data-astro-cid-dpidqgiz>www.cstravelgroup.com</span></a>
+</div>  </div>
+</section>
+</div>
+<p class="legal-volver" data-astro-cid-dpidqgiz><a href="../" data-astro-cid-dpidqgiz>← Volver al inicio</a></p>
+</div>
+</div>
+</main> <!-- Footer --> <footer class="footer" data-astro-cid-dpidqgiz> <div class="container" data-astro-cid-dpidqgiz> <div class="footer-grid" data-astro-cid-dpidqgiz> <div class="footer-brand" data-astro-cid-dpidqgiz> <a href="../" class="nav-logo" data-astro-cid-dpidqgiz> <img loading="lazy" decoding="async" src="../assets/images/logo-cstravel-cropped.webp" alt="CS Travel Group" class="nav-logo-img" data-astro-cid-dpidqgiz> </a> <p data-astro-cid-dpidqgiz>Logística de viajes corporativos y médicos, gestionada de principio a fin.</p> </div> <div data-astro-cid-dpidqgiz> <h5 data-astro-cid-dpidqgiz>Navegación</h5> <ul data-astro-cid-dpidqgiz> <li data-astro-cid-dpidqgiz><a href="../" data-astro-cid-dpidqgiz>Inicio</a></li> <li data-astro-cid-dpidqgiz><a href="../empresas/" data-astro-cid-dpidqgiz>Empresas</a></li> <li data-astro-cid-dpidqgiz><a href="../medicos/" data-astro-cid-dpidqgiz>Médicos</a></li> <li data-astro-cid-dpidqgiz><a href="../contacto/" data-astro-cid-dpidqgiz>Contacto</a></li>   </ul> </div> <div data-astro-cid-dpidqgiz> <h5 data-astro-cid-dpidqgiz>Legal</h5> <ul data-astro-cid-dpidqgiz> <li data-astro-cid-dpidqgiz><a href="../terminos/" data-astro-cid-dpidqgiz>Términos y condiciones</a></li> <li data-astro-cid-dpidqgiz><a href="../privacidad/" data-astro-cid-dpidqgiz>Política de privacidad</a></li> <li data-astro-cid-dpidqgiz><a href="../reembolso/" data-astro-cid-dpidqgiz>Política de reembolso</a></li> <li data-astro-cid-dpidqgiz><a href="../accesibilidad/" data-astro-cid-dpidqgiz>Accesibilidad</a></li> </ul> </div> <div data-astro-cid-dpidqgiz> <h5 data-astro-cid-dpidqgiz>Contacto</h5> <ul data-astro-cid-dpidqgiz> <li data-astro-cid-dpidqgiz><a href="mailto:info.cstravelgroup@gmail.com" data-astro-cid-dpidqgiz>info.cstravelgroup@gmail.com</a></li> <li data-astro-cid-dpidqgiz><a href="https://wa.me/573146103599" data-astro-cid-dpidqgiz>+57 314 610 3599</a></li> </ul> </div> </div> <div class="footer-bottom" data-astro-cid-dpidqgiz> <span data-astro-cid-dpidqgiz>© 2026 CS Travel Group. Todos los derechos reservados.</span> <span data-astro-cid-dpidqgiz>CS Travel Group Colombia S.A.S. · NIT 902.096.878-3 · RNT 299.130 · Matrícula Mercantil 945.293</span> <span class="footer-credit" data-astro-cid-dpidqgiz>Sitio desarrollado por <a href="https://kaivastudio.com/" target="_blank" rel="noopener" data-astro-cid-dpidqgiz>Kaiva Studio</a></span> </div> </div> </footer> <script src=https://static.parastorage.com/services/site-bi/1.17.0/site-bi.umd.min.js defer=defer></script>
+<script src=https://static.parastorage.com/services/site-analytics/1.14.0/site-analytics.umd.min.js defer=defer></script>
+<script src=https://static.parastorage.com/services/tag-manager-client/1.1075.0/siteTags.bundle.min.js defer=defer></script>
+<script>document.addEventListener("DOMContentLoaded", function() {
+          window.wixAnalytics.trackEvent('PageView', { pageNumber: 1 });
+
+          window.addEventListener('wix:bi:navigation', function(e) {
+            window.wixAnalytics.trackEvent('PageView', { pageNumber: e.detail.pageNumber });
+          });
+        });</script><script src="../js/main.js"></script>
+</body></html>
