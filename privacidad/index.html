@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="es" data-astro-cid-dpidqgiz> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Política de Privacidad / Privacy Policy | CS Travel Group</title><meta name="description" content="Privacy Policy of CS Travel Group: how we collect, use, protect, and share your personal data under CCPA, GDPR, FIPA, and Colombia Law 1581 of 2012. / Política de Privacidad de CS Travel Group: cómo recopilamos, usamos, protegemos y compartimos sus datos personales."><meta name="robots" content="index,follow"><link rel="stylesheet" href="../css/styles.css?v=20260613a"><link rel="icon" type="image/webp" href="../assets/images/logo-cstravel-cropped.webp"><style>
+body{margin:0;background:var(--bg);color:var(--text-secondary)}
+
+/* ---------- Cabecera de la página ---------- */
+.legal-hero{position:relative;overflow:hidden;text-align:center;
+  background:var(--primary) url("../assets/images/legal-hero.webp") center center / cover no-repeat;
+  border-bottom:5px solid var(--accent);padding-bottom:34px}
+/* Velo navy suave: lo justo para que el texto se lea, dejando ver la foto.
+   Va más cargado abajo, que es donde se apoya el bloque de texto.
+   Debajo queda el navy sólido por si la imagen no carga. */
+.legal-hero:before{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(3,24,56,.30) 0%,rgba(3,24,56,.48) 55%,rgba(3,24,56,.70) 100%)}
+.legal-hero .container{position:relative;z-index:2}
+.legal-hero__inner{max-width:none;margin:0 auto}
+
+.legal-eyebrow{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);border:1.5px solid var(--accent);border-radius:999px;padding:7px 18px;margin:0 0 18px;background:rgba(6,18,36,.38);backdrop-filter:blur(3px)}
+.legal-hero h1{font-family:var(--font-heading),Manrope,sans-serif;font-weight:800;
+  font-size:clamp(1.95rem,1.35rem+1.9vw,2.9rem)!important;letter-spacing:-.04em;line-height:1.08!important;
+  color:#fff;margin:0;text-shadow:0 2px 12px rgba(6,18,36,.72)}
+.legal-hero h1 em{font-style:italic;color:var(--accent)}
+.legal-hero__en{font-family:var(--font-heading),Manrope,sans-serif;font-weight:700;
+  font-size:clamp(1rem,.86rem+.55vw,1.35rem)!important;letter-spacing:-.02em;color:#EAF6FF;margin:8px 0 0;text-shadow:0 2px 10px rgba(6,18,36,.7)}
+.legal-rule{width:42px;height:3px;background:var(--accent);border:0;margin:18px auto 0}
+.legal-page__updated{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--secondary-light);font-style:normal;margin:16px 0 0;
+  border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 16px;background:rgba(6,18,36,.38);backdrop-filter:blur(3px)}
+
+/* ---------- Cuerpo ---------- */
+.legal-main{padding:0 0 92px;background:var(--bg)}
+.legal-cols{max-width:none;margin:0 auto}
+
+.legal-intro{max-width:880px;margin:48px auto 0}
+.legal-intro p{font-size:1.02rem!important;line-height:1.78!important;
+  color:var(--text-secondary);margin:0 0 14px;text-align:justify!important;hyphens:auto!important;-webkit-hyphens:auto!important}
+
+/* Índice: tarjeta ancha, en dos columnas.
+   Centrar cada fila por separado dejaba los números en zigzag; en dos
+   columnas alineadas a la izquierda quedan en dos hileras limpias. */
+.legal-toc{max-width:none;margin:48px auto 0;background:#fff;border:1px solid var(--border);
+  border-top:4px solid var(--accent-strong);border-radius:16px;padding:30px 38px 32px}
+.legal-toc__titulo{text-align:center;font-size:11px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--text-light);margin:0 0 24px}
+/* grid-auto-flow:column + filas fijas = 01-03 a la izquierda, 04-06 a la
+   derecha. Por filas saldría 01,02 arriba, que no es lo pedido. */
+.legal-toc ol{list-style:none;margin:0;padding:0;display:grid;
+  grid-auto-flow:column;column-gap:44px;row-gap:15px}
+.legal-toc li{margin:0}
+.legal-toc a{display:flex;align-items:center;justify-content:flex-start;gap:13px;
+  font-size:.92rem;font-weight:600;line-height:1.45;color:var(--text);text-decoration:none;text-align:left;min-height:34px}
+/* Círculos más grandes. El número iba descentrado por la altura de línea
+   heredada: con line-height:1 y sin márgenes el glifo queda al medio. */
+.legal-n{flex:0 0 34px;width:34px;height:34px;box-sizing:border-box;
+  border:1.5px solid var(--accent-strong);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-heading),Manrope,sans-serif;
+  font-weight:800;font-size:12.5px;line-height:1!important;color:var(--text);
+  font-variant-numeric:tabular-nums;margin:0;padding-top:2px}
+.legal-toc a:hover{color:var(--primary-light)}
+.legal-toc a:hover .legal-n{background:var(--accent);border-color:var(--accent)}
+
+/* Secciones: el cuerpo se recoge, la cabecera y el indice no */
+.legal-body{max-width:880px;margin:0 auto}
+.legal-seccion{padding-top:28px!important;margin-top:28px!important;margin-bottom:0!important;border-top:1px solid var(--border);scroll-margin-top:130px}
+/* El ultimo elemento de cada seccion arrastraba su margen (15px un parrafo,
+   20 una lista, 38 los botones): por eso unos huecos salian mas grandes que
+   otros. A cero, todas las separaciones quedan iguales. */
+.legal-seccion > *:last-child{margin-bottom:0!important}
+.legal-body h2{display:flex;align-items:center;justify-content:center;gap:13px;
+  font-family:var(--font-heading),Manrope,sans-serif;font-weight:800;font-size:1.12rem!important;letter-spacing:-.025em;
+  color:var(--text);line-height:1.4!important;margin:0 0 22px;text-align:center}
+/* El cuerpo justificado: bloque parejo por los dos lados */
+.legal-body p,
+.legal-body li{font-size:.97rem!important;line-height:1.8!important;
+  color:var(--text-secondary);text-align:justify!important;text-justify:inter-word;hyphens:auto!important;-webkit-hyphens:auto!important}
+.legal-body p{margin:0 0 15px}
+/* Las listas van centradas como el resto de la página. Los ítems son cortos
+   (contacto, tipos de dato), así que centrados se leen bien. La viñeta va
+   "inside" para que acompañe al texto en vez de quedarse colgada a la izquierda. */
+.legal-body ul{max-width:660px;margin:0 auto 20px;padding-left:0;
+  list-style-position:inside}
+.legal-body ul li{margin-bottom:10px;
+  text-align:center!important;hyphens:none!important}
+.legal-body li::marker{color:var(--accent-strong)}
+/* Contacto en botones: la lista de correo/teléfono/web se vuelve una fila
+   de píldoras. El icono sustituye a la etiqueta ("Email / Correo:"), que
+   queda en el aria-label para quien use lector de pantalla. */
+.legal-contacto{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin:36px 0 38px}
+.legal-contacto a{display:inline-flex;align-items:center;gap:10px;
+  background:#fff;border:1px solid var(--border);border-radius:999px;padding:12px 22px;
+  font-size:.92rem;font-weight:600;color:var(--primary-light);text-decoration:none;
+  box-shadow:0 1px 2px rgba(6,43,85,.04);transition:border-color .16s ease,box-shadow .16s ease,transform .16s ease}
+.legal-contacto a:hover{border-color:var(--accent-strong);
+  box-shadow:0 6px 18px rgba(6,43,85,.08);transform:translateY(-1px)}
+.legal-contacto svg{width:17px;height:17px;flex:0 0 17px;stroke:currentColor;fill:none;
+  stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:620px){
+ .legal-contacto{flex-direction:column;align-items:stretch}
+ .legal-contacto a{justify-content:center}
+}
+.legal-body strong{color:var(--text);font-weight:700}
+.legal-body a{color:var(--primary-light);font-weight:600}
+
+.legal-volver{margin:56px 0 0;padding-top:28px;border-top:1px solid var(--border);
+  font-size:.9rem;font-weight:700;text-align:center}
+.legal-volver a{color:var(--primary-light);text-decoration:none}
+
+/* Dos columnas solo si hay sitio de verdad */
+@media(max-width:880px){
+ .legal-toc ol{grid-auto-flow:row!important;grid-template-rows:none!important}
+}
+@media(max-width:760px){
+ .legal-toc{padding:22px 20px}
+ .legal-hero{padding-bottom:32px}
+ /* en pantalla angosta justificar abre huecos feos: mejor alineado a la izquierda */
+ .legal-body p,
+ .legal-body li,
+ .legal-intro p{text-align:left!important}
+}</style><script>window.commonConfig =
+            {
+  "locale": "en-US",
+  "language": "en"
+};</script>
+<script>window.essentials =
+            {
+  "locale": "en-US",
+  "language": "en",
+  "timeZone": "America/Bogota"
+};</script>
+<script>window.wixEmbedsAPI = {
+          registerToEvent: () => {},
+          getExternalBaseUrl: () => "https://www.wixapis.com",
+          getHtmlSiteId: () => "dummy-site-id",
+          getMetaSiteId: () => "cc9dc53e-c5a8-4c67-a696-4ab3d3a7443e",
+          getLanguage: () => "en",
+          isWixSite: () => false,
+          getAccessTokenFunction: function getAccessTokenFunction() { return () => window.__wix_context__?.client?.auth?.getAuthHeaders?.()?.then((res) =>  {  return res.headers.Authorization })}
+        };</script>
+<script id=site-bi-navigation>!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define("site-bi",[],t):"object"==typeof exports?exports["site-bi"]=t():e["site-bi"]=t()}("undefined"!=typeof self?self:this,(()=>(()=>{"use strict";var e={d:(t,o)=>{for(var n in o)e.o(o,n)&&!e.o(t,n)&&Object.defineProperty(t,n,{enumerable:!0,get:o[n]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t),r:e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})}},t={};e.r(t),e.d(t,{resetNavigation:()=>r});let o=1;const n=()=>++o;let i=new URL(document.location.href);const r=()=>{i=new URL(window.location.origin+"/__dummy__")},a=e=>{if(!e)return;let t=null;try{const o="string"==typeof e&&e.startsWith("/")?window.location.origin+e:e;t=new URL(o)}catch(e){}if(t&&t.origin===i.origin){if(t.pathname!==i.pathname){const e=n();setTimeout((()=>{window.dispatchEvent(new CustomEvent("wix:bi:navigation",{detail:{pageNumber:e}}))}))}i=t}};return["pushState","replaceState"].forEach((e=>{const t=window.history[e];window.history[e]=function(){for(var e=arguments.length,o=new Array(e),n=0;n<e;n++)o[n]=arguments[n];a(o[2]),t.apply(window.history,o)}})),window.addEventListener("popstate",(()=>a(window.location.href))),t})()));</script>
+<script src=https://static.parastorage.com/services/cookie-consent-policy-client/1.983.0/headlessApp.bundle.min.js defer=defer></script>
+<script id=site-consent-policy src=https://static.parastorage.com/services/site-consent-policy/1.10.0/site-consent-policy.umd.min.js defer=defer data-default-consent-policy=""></script></head> <body data-astro-cid-dpidqgiz> <header class="header" id="top"> <div class="container"> <nav class="nav"> <a href="../" class="nav-logo"> <img loading="lazy" decoding="async" src="../assets/images/logo-cstravel-cropped.webp" alt="CS Travel Group" class="nav-logo-img"> </a> <div class="nav-right"> <ul class="nav-links"> <li><a href="../#inicio" data-i18n="nav_home">Inicio</a></li> <li><a href="../empresas/" data-i18n="nav_why">Empresas</a></li> <li><a href="../medicos/" data-i18n="nav_process">Médicos</a></li> </ul> <div class="lang-switcher"> <div class="lang-trigger"> <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> <span class="current-lang">Español</span> <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> </div> <div class="lang-dropdown"> <div class="lang-divider"></div> <button class="lang-btn" data-lang="en">English (US)</button> <button class="lang-btn active" data-lang="es">Español</button> </div> </div> <a href="../contacto/" class="btn btn-primary nav-cta" data-i18n="nav_cta">Hablémos hoy</a> </div> <button class="hamburger" aria-label="Abrir menú"> <span></span><span></span><span></span> </button> </nav> </div> </header> <section class="legal-hero" data-astro-cid-dpidqgiz>
+<div aria-hidden="true" style="height:62px" data-astro-cid-dpidqgiz></div>
+<div class="container" data-astro-cid-dpidqgiz>
+<div class="legal-hero__inner" data-astro-cid-dpidqgiz>
+<p class="legal-eyebrow" data-astro-cid-dpidqgiz>Legal</p>
+<h1 data-astro-cid-dpidqgiz>Política de <em data-astro-cid-dpidqgiz>Privacidad</em></h1>
+<p class="legal-hero__en" data-astro-cid-dpidqgiz>Privacy Policy</p>
+<hr class="legal-rule" data-astro-cid-dpidqgiz>
+<p class="legal-page__updated" data-astro-cid-dpidqgiz>Actualizado · 29 de octubre de 2025</p>
+</div>
+</div>
+</section>
+<main class="legal-main" data-astro-cid-dpidqgiz>
+<div class="container" data-astro-cid-dpidqgiz>
+<nav class="legal-toc" aria-label="Contenido" data-astro-cid-dpidqgiz>
+<p class="legal-toc__titulo" data-astro-cid-dpidqgiz>Contenido</p>
+<ol style="grid-template-rows:repeat(4,auto)" data-astro-cid-dpidqgiz>
+<li data-astro-cid-dpidqgiz><a href="#s01" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>01</span><span data-astro-cid-dpidqgiz>Nature of Services / Naturaleza del Servicio</span></a></li>
+<li data-astro-cid-dpidqgiz><a href="#s02" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>02</span><span data-astro-cid-dpidqgiz>Information We Collect / Información que Recopilamos</span></a></li>
+<li data-astro-cid-dpidqgiz><a href="#s03" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>03</span><span data-astro-cid-dpidqgiz>Purpose and Use of Information / Finalidad y Uso de la Información</span></a></li>
+<li data-astro-cid-dpidqgiz><a href="#s04" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>04</span><span data-astro-cid-dpidqgiz>Data Protection and Security / Protección y Seguridad de los Datos</span></a></li>
+<li data-astro-cid-dpidqgiz><a href="#s05" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>05</span><span data-astro-cid-dpidqgiz>User Rights / Derechos del Usuario</span></a></li>
+<li data-astro-cid-dpidqgiz><a href="#s06" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>06</span><span data-astro-cid-dpidqgiz>Limitation of Liability / Limitación de Responsabilidad</span></a></li>
+<li data-astro-cid-dpidqgiz><a href="#s07" data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>07</span><span data-astro-cid-dpidqgiz>Governing Law / Ley Aplicable</span></a></li>
+</ol>
+</nav>
+<div class="legal-cols" data-astro-cid-dpidqgiz>
+<div class="legal-body" data-astro-cid-dpidqgiz>
+<section id="s01" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>01</span><span data-astro-cid-dpidqgiz>Nature of Services / Naturaleza del Servicio</span></h2>
+<p>CS Travel Group operates as an Independent Travel Agent affiliated with Archer Travel Group, Inc. (California Seller of Travel CST #2001330-10; Florida Seller of Travel License #35395; IATA #05824840). In Colombia, CS Travel Group is legally registered under Registro Mercantil (Mercantile Registry) No. 945.293, Tax ID (NIT) 902.096.878-3 and Registro Nacional de Turismo (RNT) No. 299.130.</p> <p>All travel services including flights, hotels, cruises, tours, and vacation packages are provided by authorized third-party suppliers. All payments are processed through secure and authorized platforms, such as ePayco, PayU, Stripe, or other PCI DSS compliant providers, either through manual processing, electronic payment links, or online checkout systems.</p> <p>Before processing any payment, CS Travel Group will always request prior, explicit, and documented authorization from the holder of the payment method for the temporary use and processing of confidential data solely to complete the approved transaction.</p> <p>CS Travel Group opera como Agente de Viajes Independiente afiliado a Archer Travel Group, Inc. (California Seller of Travel CST #2001330-10; Florida Seller of Travel License #35395; IATA #05824840). En Colombia, CS Travel Group está legalmente registrada bajo el Registro Mercantil No. 945.293, NIT 902.096.878-3 y el Registro Nacional de Turismo (RNT) No. 299.130.</p> <p>Todos los servicios turísticos incluidos vuelos, hoteles, cruceros, tours y paquetes vacacionales se ofrecen mediante proveedores autorizados. Todos los pagos se procesan a través de plataformas seguras y autorizadas, tales como ePayco, PayU, Stripe u otras que cumplan con los estándares internacionales PCI DSS, ya sea mediante procesamiento manual, enlaces de pago electrónicos o sistemas de pago en línea.</p> <p>Antes de procesar cualquier pago, CS Travel Group solicitará siempre la autorización previa, expresa y documentada del titular del método de pago para el uso y tratamiento temporal de los datos confidenciales, con el único fin de completar la transacción aprobada.</p>
+</section>
+<section id="s02" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>02</span><span data-astro-cid-dpidqgiz>Information We Collect / Información que Recopilamos</span></h2>
+<p>CS Travel Group collects only the information strictly necessary for billing, communication, and the provision of travel services:</p> <ul> <li>Full name.</li> <li>Billing address.</li> <li>Email address.</li> <li>Contact number.</li> <li>Payment authorization data (for verification only).</li> </ul> <p>We do not store or retain credit/debit card numbers or any sensitive financial data. All such data is securely processed by certified third-party payment platforms.</p> <p>CS Travel Group recopila únicamente la información estrictamente necesaria para efectos de facturación, comunicación y prestación de los servicios turísticos:</p> <ul> <li>Nombre completo.</li> <li>Dirección de facturación.</li> <li>Correo electrónico.</li> <li>Número telefónico de contacto.</li> <li>Datos de autorización de pago (solo con fines de verificación).</li> </ul> <p>No almacenamos ni conservamos números de tarjetas de crédito, débito ni datos financieros sensibles. Toda la información es procesada de forma segura por plataformas externas certificadas.</p>
+</section>
+<section id="s03" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>03</span><span data-astro-cid-dpidqgiz>Purpose and Use of Information / Finalidad y Uso de la Información</span></h2>
+<p>The personal data collected is used exclusively to:</p> <ul> <li>Process travel bookings and payments.</li> <li>Issue invoices and confirmations.</li> <li>Manage authorized agent fees and supplier transactions.</li> <li>Comply with applicable tax, financial, and regulatory obligations.</li> <li>Prevent fraud and ensure transactional security.</li> </ul> <p>CS Travel Group does not sell, rent, or share personal information with third parties for marketing or advertising purposes.</p> <p>Los datos personales recolectados se utilizan exclusivamente para:</p> <ul> <li>Procesar reservas y pagos de servicios turísticos.</li> <li>Emitir comprobantes de pago y confirmaciones.</li> <li>Gestionar honorarios de servicio del agente y transacciones con proveedores.</li> <li>Cumplir con obligaciones tributarias, financieras y regulatorias.</li> <li>Prevenir fraudes y garantizar la seguridad transaccional.</li> </ul> <p>CS Travel Group no vende, arrienda ni comparte información personal con terceros con fines publicitarios o de mercadeo.</p>
+</section>
+<section id="s04" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>04</span><span data-astro-cid-dpidqgiz>Data Protection and Security / Protección y Seguridad de los Datos</span></h2>
+<p>We adopt technical, administrative, and organizational measures to safeguard your information, including:</p> <ul> <li>Encrypted SSL/TLS communications.</li> <li>Limited internal access to data.</li> <li>Regular security monitoring.</li> <li>Secure deletion of data no longer required.</li> </ul> <p>In case of a data breach, notifications will be issued following the Florida Information Protection Act (FIPA) and Colombia Ley 1581 de 2012 and Decreto 1377 de 2013.</p> <p>Adoptamos medidas técnicas, administrativas y organizativas para proteger tu información, incluyendo:</p> <ul> <li>Comunicaciones cifradas SSL/TLS.</li> <li>Acceso interno limitado a los datos.</li> <li>Monitoreo constante de seguridad.</li> <li>Eliminación segura de datos no necesarios.</li> </ul> <p>En caso de presentarse una violación de seguridad, se notificará conforme a la Florida Information Protection Act (FIPA) y a la Ley 1581 de 2012 y el Decreto 1377 de 2013 en Colombia.</p>
+</section>
+<section id="s05" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>05</span><span data-astro-cid-dpidqgiz>User Rights / Derechos del Usuario</span></h2>
+<p>You may exercise your rights to:</p> <ul> <li>Access, correct, or delete your personal data.</li> <li>Withdraw consent for data processing.</li> <li>Request information about how your data is handled.</li> <li>File a complaint with the Federal Trade Commission (FTC) in the U.S. or the Superintendencia de Industria y Comercio (SIC) in Colombia.</li> </ul> <p>Requests can be sent to <a href="mailto:info.cstravelgroup@gmail.com">info.cstravelgroup@gmail.com</a>, and responses will be issued within 10 business days, in accordance with applicable law.</p> <p>El usuario puede ejercer sus derechos a:</p> <ul> <li>Acceder, corregir o eliminar sus datos personales.</li> <li>Revocar su consentimiento para el tratamiento de datos.</li> <li>Solicitar información sobre el manejo de sus datos.</li> <li>Presentar una queja ante la Federal Trade Commission (FTC) en EE. UU. o ante la Superintendencia de Industria y Comercio (SIC) en Colombia.</li> </ul> <p>Las solicitudes pueden enviarse a <a href="mailto:info.cstravelgroup@gmail.com">info.cstravelgroup@gmail.com</a>, y se responderán dentro de los 10 días hábiles siguientes, conforme a la ley aplicable.</p>
+</section>
+<section id="s06" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>06</span><span data-astro-cid-dpidqgiz>Limitation of Liability / Limitación de Responsabilidad</span></h2>
+<p>CS Travel Group is not liable for:</p> <ul> <li>Service interruptions, errors, or delays caused by third-party platforms.</li> <li>Cancellations, delays, or issues related to suppliers.</li> <li>Events beyond our control, including weather, strikes, government restrictions, or force majeure.</li> </ul> <p>Each supplier and payment provider acts as an independent controller for its own transactions and policies.</p> <p>CS Travel Group no será responsable por:</p> <ul> <li>Interrupciones, errores o demoras ocasionadas por plataformas de terceros.</li> <li>Cancelaciones, retrasos o problemas atribuibles a los proveedores.</li> <li>Eventos fuera de nuestro control, incluyendo clima, huelgas, restricciones gubernamentales o fuerza mayor.</li> </ul> <p>Cada proveedor y procesador de pagos actúa como un responsable independiente de sus propias operaciones y políticas.</p>
+</section>
+<section id="s07" class="legal-seccion" style="margin-top:18px!important;padding-top:18px!important" data-astro-cid-dpidqgiz>
+<h2 data-astro-cid-dpidqgiz><span class="legal-n" data-astro-cid-dpidqgiz>07</span><span data-astro-cid-dpidqgiz>Governing Law / Ley Aplicable</span></h2>
+<p>This Privacy Policy is governed by the laws of the State of Florida, United States, and by the laws of the Republic of Colombia, depending on the jurisdiction of the transaction. Any disputes shall be resolved in the courts of Miami-Dade County, Florida, or before the competent authorities in Barranquilla, Colombia, as applicable.</p> <p>Esta Política de Privacidad se rige por las leyes del Estado de Florida, EE. UU., y las leyes de la República de Colombia, según la jurisdicción de la transacción. Cualquier disputa será resuelta ante los tribunales del condado de Miami-Dade, Florida, o ante las autoridades competentes en Barranquilla, Colombia, según corresponda.</p>  </div>
+</section>
+</div>
+<p class="legal-volver" data-astro-cid-dpidqgiz><a href="../" data-astro-cid-dpidqgiz>← Volver al inicio</a></p>
+</div>
+</div>
+</main> <!-- Footer --> <footer class="footer" data-astro-cid-dpidqgiz> <div class="container" data-astro-cid-dpidqgiz> <div class="footer-grid" data-astro-cid-dpidqgiz> <div class="footer-brand" data-astro-cid-dpidqgiz> <a href="../" class="nav-logo" data-astro-cid-dpidqgiz> <img loading="lazy" decoding="async" src="../assets/images/logo-cstravel-cropped.webp" alt="CS Travel Group" class="nav-logo-img" data-astro-cid-dpidqgiz> </a> <p data-astro-cid-dpidqgiz>Logística de viajes corporativos y médicos, gestionada de principio a fin.</p> </div> <div data-astro-cid-dpidqgiz> <h5 data-astro-cid-dpidqgiz>Navegación</h5> <ul data-astro-cid-dpidqgiz> <li data-astro-cid-dpidqgiz><a href="../" data-astro-cid-dpidqgiz>Inicio</a></li> <li data-astro-cid-dpidqgiz><a href="../empresas/" data-astro-cid-dpidqgiz>Empresas</a></li> <li data-astro-cid-dpidqgiz><a href="../medicos/" data-astro-cid-dpidqgiz>Médicos</a></li> <li data-astro-cid-dpidqgiz><a href="../contacto/" data-astro-cid-dpidqgiz>Contacto</a></li>   </ul> </div> <div data-astro-cid-dpidqgiz> <h5 data-astro-cid-dpidqgiz>Legal</h5> <ul data-astro-cid-dpidqgiz> <li data-astro-cid-dpidqgiz><a href="../terminos/" data-astro-cid-dpidqgiz>Términos y condiciones</a></li> <li data-astro-cid-dpidqgiz><a href="../privacidad/" data-astro-cid-dpidqgiz>Política de privacidad</a></li> <li data-astro-cid-dpidqgiz><a href="../reembolso/" data-astro-cid-dpidqgiz>Política de reembolso</a></li> <li data-astro-cid-dpidqgiz><a href="../accesibilidad/" data-astro-cid-dpidqgiz>Accesibilidad</a></li> </ul> </div> <div data-astro-cid-dpidqgiz> <h5 data-astro-cid-dpidqgiz>Contacto</h5> <ul data-astro-cid-dpidqgiz> <li data-astro-cid-dpidqgiz><a href="mailto:info.cstravelgroup@gmail.com" data-astro-cid-dpidqgiz>info.cstravelgroup@gmail.com</a></li> <li data-astro-cid-dpidqgiz><a href="https://wa.me/573146103599" data-astro-cid-dpidqgiz>+57 314 610 3599</a></li> </ul> </div> </div> <div class="footer-bottom" data-astro-cid-dpidqgiz> <span data-astro-cid-dpidqgiz>© 2026 CS Travel Group. Todos los derechos reservados.</span> <span data-astro-cid-dpidqgiz>CS Travel Group Colombia S.A.S. · NIT 902.096.878-3 · RNT 299.130 · Matrícula Mercantil 945.293</span> <span class="footer-credit" data-astro-cid-dpidqgiz>Sitio desarrollado por <a href="https://kaivastudio.com/" target="_blank" rel="noopener" data-astro-cid-dpidqgiz>Kaiva Studio</a></span> </div> </div> </footer> <script src=https://static.parastorage.com/services/site-bi/1.17.0/site-bi.umd.min.js defer=defer></script>
+<script src=https://static.parastorage.com/services/site-analytics/1.14.0/site-analytics.umd.min.js defer=defer></script>
+<script src=https://static.parastorage.com/services/tag-manager-client/1.1075.0/siteTags.bundle.min.js defer=defer></script>
+<script>document.addEventListener("DOMContentLoaded", function() {
+          window.wixAnalytics.trackEvent('PageView', { pageNumber: 1 });
+
+          window.addEventListener('wix:bi:navigation', function(e) {
+            window.wixAnalytics.trackEvent('PageView', { pageNumber: e.detail.pageNumber });
+          });
+        });</script><script src="../js/main.js"></script>
+</body></html>
