@@ -1,8 +1,8 @@
 // =====================================================================
 // Inicio de CS Travel Group (rebranding, copia sin publicar)
-// 1) Las cifras del hero cuentan al aparecer.
+// 1) Las cifras del hero cuentan al aparecer. El video se reproduce al pulsar.
 // 2) Lo que significa trabajar con nosotros: tres paneles; el elegido se abre.
-// 3) Carrusel de servicios en abanico (flechas, puntos, teclado, arrastre).
+// 3) Carrusel de servicios en abanico: avanza solo; flechas, puntos, teclado y arrastre.
 // Nada sigue al cursor. Sin JS todo se ve: cifras finales, primer panel
 // abierto y las tarjetas del carrusel quietas.
 // =====================================================================
@@ -32,6 +32,22 @@
       });
     }, { threshold: 0.5 });
     els.forEach(function (el) { el.textContent = '0'; io.observe(el); });
+  })();
+
+  // ---------------------------------------------------------- Video
+  (function video() {
+    var frame = document.querySelector('.cs-video-frame');
+    if (!frame) return;
+    var v = frame.querySelector('video');
+    var btn = frame.querySelector('.cs-video-play');
+    if (!v || !btn) return;
+    btn.addEventListener('click', function () {
+      frame.classList.add('is-playing');
+      v.controls = true;
+      var p = v.play();
+      if (p && p.catch) p.catch(function () { frame.classList.remove('is-playing'); });
+    });
+    v.addEventListener('ended', function () { frame.classList.remove('is-playing'); v.controls = false; });
   })();
 
   // -------------------------------------------------------- Paneles
@@ -114,5 +130,18 @@
     });
     window.addEventListener('resize', layout);
     layout();
+
+    // Avanza solo cada pocos segundos mientras se ve; se detiene con el
+    // mouse encima, con el foco del teclado o cuando la pestaña no está activa.
+    if (reduced || !('IntersectionObserver' in window)) return;
+    var visible = false, hold = false;
+    new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }, { threshold: 0.4 }).observe(root);
+    root.addEventListener('pointerenter', function () { hold = true; });
+    root.addEventListener('pointerleave', function () { hold = false; });
+    root.addEventListener('focusin', function () { hold = true; });
+    root.addEventListener('focusout', function () { hold = false; });
+    setInterval(function () {
+      if (visible && !hold && !document.hidden) set(active + 1);
+    }, 3800);
   })();
 })();
