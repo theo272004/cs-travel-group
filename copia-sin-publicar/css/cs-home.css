@@ -18,7 +18,7 @@
   color: var(--primary-light);
   margin-bottom: 12px;
 }
-.cs-hero h1, .cs-video h2, .cs-why h2, .cs-about h2, .cs-voices h2, .cs-close h2, .rb-cover-head h2 {
+.cs-hero h1, .cs-video h2, .cs-why h2, .cs-about h2, .cs-voices h2, .rb-cover-head h2 {
   font-family: var(--font-heading);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -357,16 +357,33 @@
 .cs-quote.is-main figcaption { color: var(--text-secondary); }
 .cs-quote.is-main figcaption strong { color: var(--primary); }
 
-/* ------------------------------------- Cierre (amarillo, antes del pie) */
-.cs-close { background: var(--accent); color: var(--primary); padding: 96px 0; text-align: center; }
-.cs-close-inner { display: flex; flex-direction: column; align-items: center; }
-.cs-close h2 { font-size: clamp(2rem, 3.4vw, 3rem); color: var(--primary); max-width: 18ch; }
-.cs-close p { margin: 18px 0 30px; max-width: 52ch; font-size: 1.05rem; line-height: 1.6; color: rgba(3, 32, 66, .8); }
-.cs-close-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-.cs-close .cs-btn-light { background: var(--primary); color: #fff; }
-.cs-close .cs-btn-light .cs-arrow { background: #fff; color: var(--primary); }
-.cs-close .cs-btn-light:hover { background: var(--primary-light); }
-.cs-close-mail { margin-top: 22px; color: var(--primary); font-size: .9rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+/* --------------------------- Pie con el cierre: foto de fondo y una
+   figura blanca que sobresale hacia la sección anterior. */
+.footer.cs-foot { position: relative; background: var(--navy-deep); padding-top: 0 !important; margin-top: 0 !important; }
+.cs-foot-media { position: absolute; inset: 0; overflow: hidden; }
+.cs-foot-media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
+.cs-foot-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(1, 20, 40, .78) 0%, rgba(1, 20, 40, .93) 60%, var(--navy-deep) 100%); }
+.cs-foot > .container { position: relative; z-index: 1; }
+.cs-cta-wrap { padding-bottom: 64px; }
+.cs-cta-card {
+  position: relative; z-index: 3;
+  margin-top: -96px;
+  display: grid; grid-template-columns: minmax(0, 1.2fr) auto; gap: 40px; align-items: center;
+  padding: 40px 44px;
+  border-radius: 32px;
+  background: #fff;
+  color: var(--primary);
+  box-shadow: 0 30px 70px rgba(1, 20, 40, .28);
+}
+.cs-cta-card h2 { font-family: var(--font-heading); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.08; color: var(--primary); margin: 0; text-wrap: balance; }
+.cs-cta-card p { margin: 12px 0 0; max-width: 48ch; font-size: 1rem; line-height: 1.6; color: var(--text-secondary); }
+.cs-cta-actions { display: flex; flex-direction: column; align-items: stretch; gap: 10px; min-width: 280px; }
+.cs-cta-actions .cs-btn { justify-content: space-between; }
+.cs-cta-actions .cs-btn-ghost { justify-content: center; }
+.cs-cta-mail { text-align: center; font-size: .88rem; font-weight: 600; color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+/* El pie sobre la foto: columnas en blanco, legibles. */
+.cs-foot .footer-grid, .cs-foot .rb-entities, .cs-foot .footer-bottom { position: relative; }
+.cs-voices { padding-bottom: 168px; }
 
 /* ------------------------------------------------------------ Celular */
 @media (max-width: 1180px) {
@@ -390,7 +407,9 @@
 }
 @media (max-width: 640px) {
   .cs-why, .rb-cover, .cs-about, .cs-voices { min-height: 0; padding: 64px 0; }
-  .cs-close { padding: 64px 0; }
+  .cs-cta-card { grid-template-columns: 1fr; padding: 28px 24px; gap: 24px; margin-top: -64px; }
+  .cs-cta-actions { min-width: 0; }
+  .cs-voices { padding-bottom: 120px; }
   .cs-bubble { padding: 16px; border-radius: 18px; }
   .rb-cover-nav { display: none; }
   .rb-cover-stage { height: 440px; }
@@ -408,3 +427,12 @@
 .cs-panel { justify-content: flex-start; }
 .cs-panel-t { margin-top: auto; }
 .cs-panel.is-active .cs-panel-d { margin-top: 12px; }
+
+/* Quiénes somos: título a todo el ancho; debajo, los dos párrafos en dos
+   columnas parejas; luego las cifras legales. */
+.cs-about-top { grid-template-columns: 1fr; gap: 28px; align-items: start; }
+.cs-about h2 { max-width: 22ch; }
+.cs-about-text { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; padding-top: 28px; border-top: 1px solid var(--border); }
+.cs-about-text p { margin: 0; max-width: none; }
+.cs-seals { margin-top: 48px; }
+@media (max-width: 980px) { .cs-about-text { grid-template-columns: 1fr; gap: 14px; } }
