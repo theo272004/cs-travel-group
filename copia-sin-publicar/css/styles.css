@@ -1075,7 +1075,7 @@ body.b2b-landing .header .nav-logo-img {
 .home-final-cta-inner {
   background:
     linear-gradient(90deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.82) 48%, rgba(255,255,255,.64) 100%),
-    url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat;
+    url("../assets/images/optimized/booking-sky-cta.webp?v=rb4") center / cover no-repeat;
   border: 1px solid rgba(59, 117, 171,.18);
   border-radius: 22px;
   box-shadow: 0 24px 60px rgba(11, 31, 58,.1);
@@ -5330,14 +5330,14 @@ body.b2b-landing:not(.medical-landing) .company-benefits-section .ev-card {
 body.b2b-landing:not(.medical-landing) .company-sky-cta {
   background:
     linear-gradient(180deg, rgba(248,251,255,.92), rgba(255,255,255,.7)),
-    url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat !important;
+    url("../assets/images/optimized/booking-sky-cta.webp?v=rb4") center / cover no-repeat !important;
   overflow: hidden;
 }
 
 body.b2b-landing:not(.medical-landing) .company-sky-cta .booking-cta-inner {
   background:
     linear-gradient(135deg, rgba(8, 26, 51,.78), rgba(11, 31, 58,.48)),
-    url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat !important;
+    url("../assets/images/optimized/booking-sky-cta.webp?v=rb4") center / cover no-repeat !important;
   border: 1px solid rgba(255,255,255,.34);
   box-shadow: 0 28px 74px rgba(11, 31, 58,.18);
 }
@@ -5360,7 +5360,7 @@ body:not(.b2b-landing) .booking-cta {
 body:not(.b2b-landing) .booking-cta-inner {
   background:
     linear-gradient(135deg, rgba(8, 26, 51,.88), rgba(11, 31, 58,.68)),
-    url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat;
+    url("../assets/images/optimized/booking-sky-cta.webp?v=rb4") center / cover no-repeat;
   border: 1px solid rgba(255,255,255,.24);
   box-shadow: 0 28px 72px rgba(8, 26, 51,.2);
   backdrop-filter: blur(4px);
@@ -6218,7 +6218,7 @@ body:not(.b2b-landing) .hero-cta-secondary:hover {
 body:not(.b2b-landing) .profiles-section {
   background:
     linear-gradient(180deg, rgba(239, 248, 255, 0.62) 0%, rgba(255, 255, 255, 0.56) 100%),
-    url("../assets/images/profiles-sky-bg.webp") center top / cover no-repeat;
+    url("../assets/images/profiles-sky-bg.webp?v=rb4") center top / cover no-repeat;
   padding-bottom: clamp(28px, 4vw, 37px);
 }
 
@@ -8740,7 +8740,7 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
   .home-final-cta-inner {
     background:
       linear-gradient(180deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.76) 100%),
-      url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat;
+      url("../assets/images/optimized/booking-sky-cta.webp?v=rb4") center / cover no-repeat;
     border-radius: 18px;
     padding: 30px 20px;
     text-align: left;
@@ -8806,7 +8806,7 @@ body:not(.b2b-landing) .proof-card p {
 .home-final-cta {
   background:
     linear-gradient(90deg, rgba(255,255,255,.94) 0%, rgba(255,255,255,.84) 48%, rgba(255,255,255,.62) 100%),
-    url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat;
+    url("../assets/images/optimized/booking-sky-cta.webp?v=rb4") center / cover no-repeat;
   overflow: hidden;
   padding: clamp(62px, 8vw, 102px) 0;
   position: relative;
@@ -8882,7 +8882,7 @@ body:not(.b2b-landing) .proof-card p {
   .home-final-cta {
     background:
       linear-gradient(180deg, rgba(255,255,255,.94) 0%, rgba(255,255,255,.72) 100%),
-      url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat;
+      url("../assets/images/optimized/booking-sky-cta.webp?v=rb4") center / cover no-repeat;
     padding: 56px 0;
   }
 }
@@ -10272,7 +10272,7 @@ body:not(.b2b-landing) .work-meaning-card::before {
   border-radius: 999px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 100%),
-    url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat;
+    url("../assets/images/profiles-sky-bg.webp?v=rb4") center center / cover no-repeat;
   z-index: 5;
 }
 
@@ -11359,7 +11359,7 @@ body:not(.b2b-landing) .benefit-item p {
 body.b2b-landing:not(.medical-landing) .company-calc-feature {
   background:
     linear-gradient(180deg, rgba(239, 248, 255, 0.78) 0%, rgba(255, 255, 255, 0.92) 100%),
-    url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat;
+    url("../assets/images/profiles-sky-bg.webp?v=rb4") center center / cover no-repeat;
 }
 
 body.b2b-landing:not(.medical-landing) .company-calc-feature .container {
@@ -11491,7 +11491,7 @@ body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-result-card.a
 body.medical-landing .medical-calc-feature {
   background:
     linear-gradient(180deg, rgba(239, 248, 255, 0.78) 0%, rgba(255, 255, 255, 0.92) 100%),
-    url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat;
+    url("../assets/images/profiles-sky-bg.webp?v=rb4") center center / cover no-repeat;
 }
 
 body.medical-landing .medical-calc-feature .container {
@@ -12163,7 +12163,7 @@ body.medical-landing .medical-hero .split-hero-image img {
 body.medical-landing .medical-program-section {
   background:
     linear-gradient(180deg, rgba(239,248,255,.76) 0%, rgba(255,255,255,.98) 100%),
-    url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat;
+    url("../assets/images/profiles-sky-bg.webp?v=rb4") center center / cover no-repeat;
   padding-block: clamp(34px, 5vw, 56px) !important;
 }
 
@@ -12312,7 +12312,7 @@ body.medical-landing .medical-process-cta .btn {
 body.medical-landing .medical-specialties-light {
   background:
     linear-gradient(180deg, rgba(239,248,255,.72) 0%, rgba(255,255,255,.96) 100%),
-    url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat;
+    url("../assets/images/profiles-sky-bg.webp?v=rb4") center center / cover no-repeat;
   color: var(--primary);
 }
 
@@ -12372,7 +12372,7 @@ body.medical-landing .medical-specialties-light .medical-specialty-note .btn {
 body.medical-landing .medical-final-cta-light {
   background:
     linear-gradient(180deg, rgba(239,248,255,.76) 0%, rgba(255,255,255,.98) 100%),
-    url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat;
+    url("../assets/images/profiles-sky-bg.webp?v=rb4") center center / cover no-repeat;
 }
 
 body.medical-landing .medical-final-cta-light .medical-final-cta-inner {
@@ -12444,7 +12444,7 @@ body.medical-landing .medical-cta-action-bar .btn-outline {
 body.medical-landing main > .medical-final-cta-light {
   background:
     linear-gradient(180deg, rgba(242, 249, 255, .22) 0%, rgba(255, 255, 255, .35) 100%),
-    url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat !important;
+    url("../assets/images/profiles-sky-bg.webp?v=rb4") center center / cover no-repeat !important;
   color: var(--primary);
 }
 
@@ -12587,7 +12587,7 @@ body.medical-landing .medical-process-cta .btn {
 body.medical-landing .medical-specialties-light {
   background:
     linear-gradient(180deg, rgba(247, 251, 255, .94) 0%, rgba(238, 247, 255, .92) 100%),
-    url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat;
+    url("../assets/images/profiles-sky-bg.webp?v=rb4") center center / cover no-repeat;
   padding-block: clamp(34px, 5vw, 56px) !important;
 }
 
@@ -12803,7 +12803,7 @@ body.medical-landing .medical-proof-merged {
   align-items: center;
   background:
     linear-gradient(180deg, rgba(242, 249, 255, .22) 0%, rgba(255, 255, 255, .35) 100%),
-    url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat !important;
+    url("../assets/images/profiles-sky-bg.webp?v=rb4") center center / cover no-repeat !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15611,7 +15611,7 @@ body.medical-landing .medical-complete-service-media img {
 body.medical-landing .medical-standards {
   background:
     linear-gradient(180deg, rgba(246, 251, 255, .78) 0%, rgba(255, 255, 255, .96) 100%),
-    url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat;
+    url("../assets/images/profiles-sky-bg.webp?v=rb4") center center / cover no-repeat;
   min-height: 0 !important;
   padding-block: clamp(50px, 6vw, 69px);
 }
@@ -15742,7 +15742,7 @@ body.medical-landing .medical-closing-cta {
   align-items: center;
   background:
     linear-gradient(180deg, rgba(248, 252, 255, .34) 0%, rgba(255, 255, 255, .7) 100%),
-    url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat !important;
+    url("../assets/images/profiles-sky-bg.webp?v=rb4") center center / cover no-repeat !important;
   display: flex;
   min-height: 0 !important;
   padding-block: clamp(62px, 8vw, 94px) !important;
@@ -15755,7 +15755,7 @@ body.medical-landing .medical-closing-cta .container {
 body.medical-landing .medical-closing-cta-panel {
   background:
     linear-gradient(180deg, rgba(4, 23, 45, .78), rgba(4, 23, 45, .78)),
-    url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat;
+    url("../assets/images/profiles-sky-bg.webp?v=rb4") center center / cover no-repeat;
   border-radius: 22px;
   box-shadow: 0 28px 70px rgba(3, 32, 66, .18);
   margin: 0 auto;
@@ -18464,7 +18464,7 @@ body:not(.b2b-landing) .profiles-section {
 body:not(.b2b-landing) .profiles-section::before {
   background:
     linear-gradient(180deg, rgba(239, 248, 255, 0.62) 0%, rgba(255, 255, 255, 0.56) 100%),
-    url("../assets/images/profiles-sky-bg.webp") center top / cover no-repeat;
+    url("../assets/images/profiles-sky-bg.webp?v=rb4") center top / cover no-repeat;
   content: "" !important;
   inset: -118px 0 0 !important;
   pointer-events: none !important;
@@ -19798,13 +19798,13 @@ html body.b2b-landing {
 body.medical-landing .company-sky-cta.medical-booking-cta {
   background:
     linear-gradient(180deg, rgba(248,251,255,.92), rgba(255,255,255,.7)),
-    url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat !important;
+    url("../assets/images/optimized/booking-sky-cta.webp?v=rb4") center / cover no-repeat !important;
   overflow: hidden !important;
 }
 body.medical-landing .company-sky-cta.medical-booking-cta .booking-cta-inner {
   background:
     linear-gradient(135deg, rgba(8, 26, 51,.78), rgba(11, 31, 58,.48)),
-    url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat !important;
+    url("../assets/images/optimized/booking-sky-cta.webp?v=rb4") center / cover no-repeat !important;
   border: 1px solid rgba(255,255,255,.34) !important;
   box-shadow: 0 28px 74px rgba(11, 31, 58,.18) !important;
   text-align: center !important;
@@ -20358,3 +20358,164 @@ body:not(.b2b-landing) .cred-grid-three .cred-shield-icon { width: 44px; height:
 /* Rebranding: todo un poco más pequeño. Las letras del sitio están en rem,
    así que bajar la base de 16px a 14px las reduce un 12,5 % de forma pareja. */
 html { font-size: 14px !important; }
+
+/* ============================================================
+   Rebranding 4 — estética limpia (inspirada en Thallo, con la
+   identidad de CS Travel): blanco, líneas finas, sin íconos
+   decorativos, sombras suaves, títulos firmes. El azul y el
+   amarillo de CS siguen siendo la marca.
+   ============================================================ */
+:root {
+  --rb-line: #E5E9F0;
+  --rb-ink: #0B1626;
+  --rb-muted: #5B6676;
+  --rb-paper: #F7F9FC;
+}
+
+/* Sin íconos decorativos en tarjetas, cifras y sellos. */
+.stat-icon, .benefit-icon, .cred-logo, .profile-icon,
+.home-final-contact-icon, .company-trust-point-icon, .ci-icon,
+.schedule-cta-icon { display: none !important; }
+.profile-card-header { gap: 0 !important; margin-bottom: 12px !important; }
+
+/* Títulos: firmes, poco espacio entre letras, sin la rayita amarilla debajo. */
+h1, h2, h3, .hero-title, .section-title {
+  letter-spacing: -0.025em !important;
+}
+h2 { line-height: 1.1 !important; text-wrap: balance; }
+body:not(.b2b-landing) .profiles-section h2::after,
+body:not(.b2b-landing) .proof-title-line,
+body.medical-landing h2::after,
+.credentials-header h2::after,
+.home-testimonials-section h2::after,
+.home-final-cta h2::after,
+.work-meaning-section h2::after,
+.rb-about h2::after { display: none !important; }
+
+/* Etiquetas pequeñas sobre los títulos: gris, mayúsculas, discretas. */
+.section-label {
+  font-size: 0.72rem !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: var(--rb-muted) !important;
+  font-weight: 600 !important;
+}
+.section-label::before, .section-label::after { display: none !important; }
+
+/* Fondos: blanco y papel, separados por líneas finas (sin cielos de nubes). */
+body:not(.b2b-landing) .profiles-section,
+body:not(.b2b-landing) .home-final-cta,
+body:not(.b2b-landing) .home-testimonials-section,
+body:not(.b2b-landing) .credentials,
+body:not(.b2b-landing) .destinations-scroll,
+body:not(.b2b-landing) .work-meaning-section,
+.rb-about {
+  background: #ffffff !important;
+  background-image: none !important;
+  border-top: 1px solid var(--rb-line);
+}
+body:not(.b2b-landing) .credentials,
+body:not(.b2b-landing) .home-testimonials-section { background: var(--rb-paper) !important; }
+.sky-background, .company-sky-cta, .philosophy-section {
+  background-image: none !important;
+  background-color: var(--rb-paper) !important;
+}
+
+/* Tarjetas: blancas, borde fino, sombra apenas. */
+body:not(.b2b-landing) .profile-card-minimal,
+.cred-card, body:not(.b2b-landing) .cred-card,
+body:not(.b2b-landing) .cred-grid-three .cred-card,
+.testimonial-card, .home-testimonial-card,
+.medical-standard-card, .faq-item, .b2b-faq-item {
+  background: #ffffff !important;
+  border: 1px solid var(--rb-line) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 1px 2px rgba(11, 22, 38, 0.04) !important;
+}
+body:not(.b2b-landing) .profile-card-minimal:hover,
+body:not(.b2b-landing) .profile-card-minimal:focus-visible,
+body:not(.b2b-landing) .profile-card-minimal.is-mobile-selected {
+  transform: translateY(-2px);
+  border-color: var(--primary) !important;
+  box-shadow: 0 10px 30px rgba(11, 22, 38, 0.08) !important;
+}
+
+/* Enlace de las tarjetas: texto con flecha, sin cápsula. */
+body:not(.b2b-landing) .profile-link {
+  padding: 0 !important;
+  background: none !important;
+  color: var(--primary) !important;
+  font-weight: 700;
+  border-bottom: 1px solid currentColor;
+  border-radius: 0;
+  gap: 8px;
+}
+body:not(.b2b-landing) .profile-card-minimal:hover .profile-link {
+  background: none !important;
+  color: var(--primary) !important;
+  gap: 12px;
+}
+
+/* Botones: cápsula, más compactos. */
+.btn { font-size: 0.86rem !important; padding: 12px 22px !important; letter-spacing: 0; }
+.btn-large { padding: 14px 26px !important; }
+
+/* Texto corrido: gris legible, columnas angostas. */
+.rb-about-copy p, .profile-content-minimal p, .cred-card p { color: var(--rb-muted) !important; }
+
+/* Quiénes somos: título a la izquierda, texto a la derecha (sin foto). */
+.rb-about-grid { grid-template-columns: 1fr !important; }
+.rb-about-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  column-gap: 72px;
+  align-items: start;
+}
+.rb-about-copy > .section-label { grid-column: 1; grid-row: 1; }
+.rb-about-copy > h2 { grid-column: 1; grid-row: 2 / span 4; margin-top: 8px !important; color: var(--rb-ink) !important; }
+.rb-about-copy > p, .rb-about-copy > ul { grid-column: 2; }
+.rb-about-copy > p:nth-of-type(1) { grid-row: 2; }
+.rb-about-copy > p:nth-of-type(2) { grid-row: 3; }
+.rb-about-copy > p:nth-of-type(3) { grid-row: 4; }
+.rb-about-copy > ul { grid-row: 5; margin-top: 12px !important; }
+@media (max-width: 900px) {
+  .rb-about-copy { grid-template-columns: 1fr; }
+  .rb-about-copy > * { grid-column: 1 !important; grid-row: auto !important; }
+}
+
+/* Cifras del inicio: sin íconos, número grande y etiqueta pequeña. */
+.stats-section .stat-item { gap: 2px !important; }
+
+/* Pie: más sobrio. */
+.rb-entities a { border-radius: 12px; }
+
+/* Refuerzo: los íconos y los adornos tienen reglas más específicas antes. */
+.stat-icon.stat-icon.stat-icon, .benefit-icon.benefit-icon.benefit-icon,
+.profile-icon.profile-icon.profile-icon, .cred-logo.cred-logo.cred-logo,
+.home-final-contact-icon.home-final-contact-icon,
+.company-trust-point-icon.company-trust-point-icon, .ci-icon.ci-icon, .schedule-cta-icon.schedule-cta-icon { display: none !important; }
+body:not(.b2b-landing) .work-meaning-section h2::after,
+body:not(.b2b-landing) .work-meaning-section .section-title::after { display: none !important; }
+/* El avión de catálogo sobre "Lo que significa trabajar con nosotros" se retira. */
+img[src*="value-plane"] { display: none !important; }
+
+/* Limpieza final: sin rayitas amarillas bajo los títulos, sin círculos
+   numerados, sin íconos en las tarjetas de servicios y sin el recuadro vacío
+   donde estaba el avión. */
+[class*="title-line"] { display: none !important; }
+body.b2b-landing h2::after, body.medical-landing h2::after,
+body.medical-landing .medical-program-copy h2::before { display: none !important; }
+body:not(.b2b-landing) .work-meaning-card::before { display: none !important; }
+.work-meaning-card { padding-top: 0 !important; margin-top: 0 !important; }
+.profile-content > div[style*="display:flex"] > svg { display: none !important; }
+.company-model-number {
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  width: auto !important;
+  height: auto !important;
+  color: var(--rb-muted) !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.14em;
+  font-weight: 700 !important;
+}
