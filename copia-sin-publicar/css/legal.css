@@ -1,0 +1,130 @@
+/* =============================================================
+ * legal.css - estilos de las paginas legales (Terminos, Privacidad,
+ * Reembolso, Accesibilidad). Extraido de LegalLayout.astro: el CSS
+ * que Astro extraia del layout no llegaba a enlazarse en el HTML
+ * publicado, asi que se sirve como archivo propio, igual que
+ * pay-shell.css. Si lo editas, sube el ?v= del <link> en el layout.
+ * ============================================================= */
+  body{margin:0;background:var(--bg);color:var(--text-secondary)}
+
+  /* ---------- Cabecera de la página ---------- */
+  .legal-hero{position:relative;overflow:hidden;text-align:center;
+    background:var(--primary) url("../assets/images/legal-hero.webp") center center / cover no-repeat;
+    border-bottom:5px solid var(--accent);padding-bottom:34px}
+  /* Velo navy suave: lo justo para que el texto se lea, dejando ver la foto.
+     Va más cargado abajo, que es donde se apoya el bloque de texto.
+     Debajo queda el navy sólido por si la imagen no carga. */
+  .legal-hero:before{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(3,24,56,.30) 0%,rgba(3,24,56,.48) 55%,rgba(3,24,56,.70) 100%)}
+  .legal-hero .container{position:relative;z-index:2}
+  .legal-hero__inner{max-width:none;margin:0 auto}
+
+  .legal-eyebrow{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--accent);border:1.5px solid var(--accent);border-radius:999px;padding:7px 18px;margin:0 0 18px;background:rgba(6,18,36,.38);backdrop-filter:blur(3px)}
+  .legal-hero h1{font-family:var(--font-heading),Manrope,sans-serif;font-weight:800;
+    font-size:clamp(1.95rem,1.35rem+1.9vw,2.9rem)!important;letter-spacing:-.04em;line-height:1.08!important;
+    color:#fff;margin:0;text-shadow:0 2px 12px rgba(6,18,36,.72)}
+  .legal-hero h1 em{font-style:italic;color:var(--accent)}
+  .legal-hero__en{font-family:var(--font-heading),Manrope,sans-serif;font-weight:700;
+    font-size:clamp(1rem,.86rem+.55vw,1.35rem)!important;letter-spacing:-.02em;color:#EAF6FF;margin:8px 0 0;text-shadow:0 2px 10px rgba(6,18,36,.7)}
+  .legal-rule{width:42px;height:3px;background:var(--accent);border:0;margin:18px auto 0}
+  .legal-page__updated{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--secondary-light);font-style:normal;margin:16px 0 0;
+    border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 16px;background:rgba(6,18,36,.38);backdrop-filter:blur(3px)}
+
+  /* ---------- Cuerpo ---------- */
+  .legal-main{padding:0 0 92px;background:var(--bg)}
+  .legal-cols{max-width:none;margin:0 auto}
+
+  .legal-intro{max-width:880px;margin:48px auto 0}
+  .legal-intro p{font-size:1.02rem!important;line-height:1.78!important;
+    color:var(--text-secondary);margin:0 0 14px;text-align:justify!important;hyphens:auto!important;-webkit-hyphens:auto!important}
+
+  /* Índice: tarjeta ancha, en dos columnas.
+     Centrar cada fila por separado dejaba los números en zigzag; en dos
+     columnas alineadas a la izquierda quedan en dos hileras limpias. */
+  .legal-toc{max-width:none;margin:48px auto 0;background:#fff;border:1px solid var(--border);
+    border-top:4px solid var(--accent-strong);border-radius:16px;padding:30px 38px 32px}
+  .legal-toc__titulo{text-align:center;font-size:11px;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--text-light);margin:0 0 24px}
+  /* grid-auto-flow:column + filas fijas = 01-03 a la izquierda, 04-06 a la
+     derecha. Por filas saldría 01,02 arriba, que no es lo pedido. */
+  .legal-toc ol{list-style:none;margin:0;padding:0;display:grid;
+    grid-auto-flow:column;column-gap:44px;row-gap:15px}
+  .legal-toc li{margin:0}
+  .legal-toc a{display:flex;align-items:center;justify-content:flex-start;gap:13px;
+    font-size:.92rem;font-weight:600;line-height:1.45;color:var(--text);text-decoration:none;text-align:left;min-height:34px}
+  /* Círculos más grandes. El número iba descentrado por la altura de línea
+     heredada: con line-height:1 y sin márgenes el glifo queda al medio. */
+  .legal-n{flex:0 0 34px;width:34px;height:34px;box-sizing:border-box;
+    border:1.5px solid var(--accent-strong);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-family:var(--font-heading),Manrope,sans-serif;
+    font-weight:800;font-size:12.5px;line-height:1!important;color:var(--text);
+    font-variant-numeric:tabular-nums;margin:0;padding-top:2px}
+  .legal-toc a:hover{color:var(--primary-light)}
+  .legal-toc a:hover .legal-n{background:var(--accent);border-color:var(--accent)}
+
+  /* Secciones: el cuerpo se recoge, la cabecera y el indice no */
+  .legal-body{max-width:880px;margin:0 auto}
+  /* Selector largo a proposito: styles.css tiene "section:not(.hero){padding-block:...!important}"
+     que si no le ganaria. El espacio de abajo va fijo aqui, no heredado. */
+  html body .legal-body section.legal-seccion{padding-top:18px!important;padding-bottom:clamp(56px,7vw,110px)!important;margin-top:18px!important;margin-bottom:0!important;border-top:1px solid var(--border);scroll-margin-top:130px}
+  /* El ultimo elemento de cada seccion arrastraba su margen (15px un parrafo,
+     20 una lista, 38 los botones): por eso unos huecos salian mas grandes que
+     otros. A cero, todas las separaciones quedan iguales. */
+  .legal-seccion > *:last-child{margin-bottom:0!important}
+  .legal-body h2{display:flex;align-items:center;justify-content:center;gap:13px;
+    font-family:var(--font-heading),Manrope,sans-serif;font-weight:800;font-size:1.12rem!important;letter-spacing:-.025em;
+    color:var(--text);line-height:1.4!important;margin:0 0 22px;text-align:center}
+  /* El cuerpo justificado: bloque parejo por los dos lados */
+  .legal-body p,
+  .legal-body li{font-size:.97rem!important;line-height:1.8!important;
+    color:var(--text-secondary);text-align:justify!important;text-justify:inter-word;hyphens:auto!important;-webkit-hyphens:auto!important}
+  .legal-body p{margin:0 0 15px}
+  /* Las listas van centradas como el resto de la página. Los ítems son cortos
+     (contacto, tipos de dato), así que centrados se leen bien. La viñeta va
+     "inside" para que acompañe al texto en vez de quedarse colgada a la izquierda. */
+  .legal-body ul{max-width:660px;margin:0 auto 20px;padding-left:0;
+    list-style-position:inside}
+  .legal-body ul li{margin-bottom:10px;
+    text-align:center!important;hyphens:none!important}
+  .legal-body li::marker{color:var(--accent-strong)}
+  /* Contacto en botones: la lista de correo/teléfono/web se vuelve una fila
+     de píldoras. El icono sustituye a la etiqueta ("Email / Correo:"), que
+     queda en el aria-label para quien use lector de pantalla. */
+  .legal-contacto{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin:36px 0 38px}
+  .legal-contacto a{display:inline-flex;align-items:center;gap:10px;
+    background:#fff;border:1px solid var(--border);border-radius:999px;padding:12px 22px;
+    font-size:.92rem;font-weight:600;color:var(--primary-light);text-decoration:none;
+    box-shadow:0 1px 2px rgba(6,43,85,.04);transition:border-color .16s ease,box-shadow .16s ease,transform .16s ease}
+  .legal-contacto a:hover{border-color:var(--accent-strong);
+    box-shadow:0 6px 18px rgba(6,43,85,.08);transform:translateY(-1px)}
+  .legal-contacto svg{width:17px;height:17px;flex:0 0 17px;stroke:currentColor;fill:none;
+    stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  @media(max-width:620px){
+   .legal-contacto{flex-direction:column;align-items:stretch}
+   .legal-contacto a{justify-content:center}
+  }
+  .legal-body strong{color:var(--text);font-weight:700}
+  .legal-body a{color:var(--primary-light);font-weight:600}
+
+  .legal-volver{margin:56px 0 0;padding-top:28px;border-top:1px solid var(--border);
+    font-size:.9rem;font-weight:700;text-align:center}
+  .legal-volver a{color:var(--primary-light);text-decoration:none}
+
+  @media (min-width:901px) and (max-width:1440px){
+   html body .legal-body section.legal-seccion{padding-bottom:clamp(28px,3vw,48px)!important}
+  }
+  /* Dos columnas solo si hay sitio de verdad */
+  @media(max-width:880px){
+   .legal-toc ol{grid-auto-flow:row!important;grid-template-rows:none!important}
+  }
+  @media(max-width:760px){
+   .legal-toc{padding:22px 20px}
+   .legal-hero{padding-bottom:32px}
+   /* en pantalla angosta justificar abre huecos feos: mejor alineado a la izquierda */
+   .legal-body p,
+   .legal-body li,
+   .legal-intro p{text-align:left!important}
+  }
+    
