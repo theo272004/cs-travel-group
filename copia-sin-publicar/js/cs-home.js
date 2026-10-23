@@ -41,13 +41,20 @@
     var v = frame.querySelector('video');
     var btn = frame.querySelector('.cs-video-play');
     if (!v || !btn) return;
+    var stage = frame.closest('.cs-video-stage');
     btn.addEventListener('click', function () {
       frame.classList.add('is-playing');
+      if (stage) stage.classList.add('is-playing');
       v.controls = true;
       var p = v.play();
-      if (p && p.catch) p.catch(function () { frame.classList.remove('is-playing'); });
+      if (p && p.catch) p.catch(function () { frame.classList.remove('is-playing'); if (stage) stage.classList.remove('is-playing'); });
     });
-    v.addEventListener('ended', function () { frame.classList.remove('is-playing'); v.controls = false; });
+    v.addEventListener('ended', function () {
+      frame.classList.remove('is-playing');
+      if (stage) stage.classList.remove('is-playing');
+      v.controls = false;
+      v.load();
+    });
   })();
 
   // -------------------------------------------------------- Paneles
