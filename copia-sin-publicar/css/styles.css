@@ -3,32 +3,32 @@
 
 :root {
   /* Brand palette — CS Travel Group Premium */
-  --primary: #062B55;
-  --primary-light: #0F5EA8;
-  --secondary: #6A9BC8;
+  --primary: #032042;
+  --primary-light: #084781;
+  --secondary: #3B75AB;
   --secondary-light: #BFD8F4;
   --sky: #BFD8F4;
   --sky-soft: #EAF6FF;
   --accent: #FFD21F;
   --accent-strong: #FFC928;
   --accent-light: #FFD21F;
-  --navy-deep: #031B34;
+  --navy-deep: #011428;
   --gold-glow: rgba(255,210,31,.12);
   
   --bg: #F7FAFC;
   --bg-alt: #EAF6FF;
   --surface: #FFFFFF;
   
-  --text: #0B2545;
+  --text: #071C35;
   --text-secondary: #4B6078;
   --text-light: #94A3B8;
   --border: #DCE8F4;
   
   /* Shadows - Softer for premium feel */
-  --shadow-sm: 0 10px 26px rgba(6,43,85,.07);
-  --shadow-md: 0 18px 40px rgba(6,43,85,.10);
-  --shadow-lg: 0 28px 60px rgba(6,43,85,.14);
-  --shadow-xl: 0 40px 86px rgba(6,43,85,.18);
+  --shadow-sm: 0 10px 26px rgba(3, 32, 66,.07);
+  --shadow-md: 0 18px 40px rgba(3, 32, 66,.10);
+  --shadow-lg: 0 28px 60px rgba(3, 32, 66,.14);
+  --shadow-xl: 0 40px 86px rgba(3, 32, 66,.18);
   
   /* Border radius - Premium rounded */
   --radius-sm: 14px;
@@ -57,7 +57,7 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   scrollbar-width: thin;
-  scrollbar-color: #0F5EA8 transparent;
+  scrollbar-color: #084781 transparent;
   width: 100%;
 }
 
@@ -70,12 +70,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0F5EA8;
+  background: #084781;
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #062B55;
+  background: #032042;
 }
 
 body {
@@ -171,10 +171,10 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
   padding: 20px 0; transition: all var(--transition);
 }
 .header.scrolled {
-  background: rgba(255,255,255,.92); padding: 12px 0; box-shadow: 0 1px 24px rgba(6,43,85,.06);
+  background: rgba(255,255,255,.92); padding: 12px 0; box-shadow: 0 1px 24px rgba(3, 32, 66,.06);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(6,43,85,.05);
+  border-bottom: 1px solid rgba(3, 32, 66,.05);
 }
 .header.scrolled .nav-links a { color: var(--text); }
 .header.scrolled .nav-logo { color: var(--primary); }
@@ -326,7 +326,7 @@ body.b2b-landing .header {
   box-shadow: var(--shadow-md);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(16,42,76,.08);
+  border-bottom: 1px solid rgba(11, 31, 58,.08);
 }
 
 body.b2b-landing .header .nav-links a,
@@ -367,7 +367,7 @@ body.b2b-landing .header .nav-logo-img {
   height: 58vh;
   z-index: 3;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(6,43,85,0) 0%, rgba(6,43,85,0.12) 18%, rgba(6,43,85,.38) 36%, rgba(6,43,85,.68) 54%, rgba(6,43,85,.92) 72%, var(--primary) 100%);
+  background: linear-gradient(180deg, rgba(3, 32, 66,0) 0%, rgba(3, 32, 66,0.12) 18%, rgba(3, 32, 66,.38) 36%, rgba(3, 32, 66,.68) 54%, rgba(3, 32, 66,.92) 72%, var(--primary) 100%);
 }
 .hero-slides {
   position: absolute; inset: 0; z-index: 1;
@@ -393,7 +393,7 @@ body.b2b-landing .header .nav-logo-img {
   position: absolute; inset: -2px 0 -12vh 0; z-index: 2;
   background:
     radial-gradient(circle at 50% 44%, rgba(191,216,244,.10), transparent 34%),
-    linear-gradient(180deg, rgba(6,43,85,.56) 0%, rgba(6,43,85,.46) 18%, rgba(6,43,85,.50) 36%, rgba(6,43,85,.62) 50%, rgba(6,43,85,.78) 65%, rgba(6,43,85,.94) 82%, var(--primary) 100%);
+    linear-gradient(180deg, rgba(3, 32, 66,.56) 0%, rgba(3, 32, 66,.46) 18%, rgba(3, 32, 66,.50) 36%, rgba(3, 32, 66,.62) 50%, rgba(3, 32, 66,.78) 65%, rgba(3, 32, 66,.94) 82%, var(--primary) 100%);
 }
 
 .hero-flight-path {
@@ -550,8 +550,8 @@ body.b2b-landing .header .nav-logo-img {
   padding: 14px 18px;
   border-radius: var(--radius-md);
   background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(234,244,255,.78));
-  border: 1px solid rgba(16,42,76,.08);
-  box-shadow: 0 18px 36px rgba(16,42,76,.05);
+  border: 1px solid rgba(11, 31, 58,.08);
+  box-shadow: 0 18px 36px rgba(11, 31, 58,.05);
 }
 .trust-item strong { color: var(--primary); font-weight: 600; font-size: 1.1rem; }
 .trust-item span { color: var(--text-secondary); font-size: 0.95rem; }
@@ -581,7 +581,7 @@ body.b2b-landing .header .nav-logo-img {
 .ev-card {
   background: rgba(255,255,255,.96); border-radius: 28px;
   display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(340px, 0.8fr); max-width: 1180px; margin: 0 auto;
-  box-shadow: 0 32px 80px rgba(6,43,85,.12); overflow: hidden;
+  box-shadow: 0 32px 80px rgba(3, 32, 66,.12); overflow: hidden;
   border: none;
   backdrop-filter: blur(18px);
 }
@@ -630,7 +630,7 @@ body.b2b-landing .header .nav-logo-img {
 .ed-card {
   display: flex; flex-direction: column; gap: 16px;
   padding: 28px 24px;
-  border-left: 1px solid rgba(16,42,76,.12);
+  border-left: 1px solid rgba(11, 31, 58,.12);
 }
 .ed-number {
   font-family: var(--font-heading); font-size: 4rem; color: var(--accent);
@@ -661,7 +661,7 @@ body.b2b-landing .header .nav-logo-img {
 }
 .step-number {
   width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 28px;
-  background: var(--surface); border: 2px solid rgba(106,155,200,.28);
+  background: var(--surface); border: 2px solid rgba(59, 117, 171,.28);
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700;
   color: var(--secondary); position: relative; z-index: 2;
@@ -669,7 +669,7 @@ body.b2b-landing .header .nav-logo-img {
 }
 .step:hover .step-number {
   background: var(--secondary); color: #fff; border-color: var(--secondary);
-  transform: scale(1.08); box-shadow: 0 12px 36px rgba(106,155,200,.35);
+  transform: scale(1.08); box-shadow: 0 12px 36px rgba(59, 117, 171,.35);
 }
 .step h4 { margin-bottom: 8px; }
 .step p { color: var(--text-secondary); font-size: 0.98rem; line-height: 1.7; }
@@ -690,7 +690,7 @@ body.b2b-landing .header .nav-logo-img {
 .dest-item:hover img { transform: scale(1.05); }
 .dest-info {
   position: absolute; bottom: 0; left: 0; width: 100%;
-  background: linear-gradient(0deg, rgba(18,38,64,0.95) 0%, rgba(18,38,64,0.6) 50%, rgba(18,38,64,0) 100%);
+  background: linear-gradient(0deg, rgba(12, 28, 49,0.95) 0%, rgba(12, 28, 49,0.6) 50%, rgba(12, 28, 49,0) 100%);
   padding: 60px 32px 32px; color: #fff;
 }
 .dest-info h3 {
@@ -738,8 +738,8 @@ body.b2b-landing .header .nav-logo-img {
   padding: 14px 18px;
   border-radius: var(--radius-md);
   background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(234,244,255,.78));
-  border: 1px solid rgba(16,42,76,.08);
-  box-shadow: 0 18px 36px rgba(16,42,76,.05);
+  border: 1px solid rgba(11, 31, 58,.08);
+  box-shadow: 0 18px 36px rgba(11, 31, 58,.05);
 }
 .trust-item strong { color: var(--primary); font-weight: 600; font-size: 1.1rem; }
 .trust-item span { color: var(--text-secondary); font-size: 0.95rem; }
@@ -769,7 +769,7 @@ body.b2b-landing .header .nav-logo-img {
 .ev-card {
   background: rgba(255,255,255,.96); border-radius: 28px;
   display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(340px, 0.8fr); max-width: 1180px; margin: 0 auto;
-  box-shadow: 0 32px 80px rgba(6,43,85,.12); overflow: hidden;
+  box-shadow: 0 32px 80px rgba(3, 32, 66,.12); overflow: hidden;
   border: none;
   backdrop-filter: blur(18px);
 }
@@ -818,7 +818,7 @@ body.b2b-landing .header .nav-logo-img {
 .ed-card {
   display: flex; flex-direction: column; gap: 16px;
   padding: 28px 24px;
-  border-left: 1px solid rgba(16,42,76,.12);
+  border-left: 1px solid rgba(11, 31, 58,.12);
 }
 .ed-number {
   font-family: var(--font-heading); font-size: 4rem; color: var(--accent);
@@ -849,7 +849,7 @@ body.b2b-landing .header .nav-logo-img {
 }
 .step-number {
   width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 28px;
-  background: var(--surface); border: 2px solid rgba(106,155,200,.28);
+  background: var(--surface); border: 2px solid rgba(59, 117, 171,.28);
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700;
   color: var(--secondary); position: relative; z-index: 2;
@@ -857,7 +857,7 @@ body.b2b-landing .header .nav-logo-img {
 }
 .step:hover .step-number {
   background: var(--secondary); color: #fff; border-color: var(--secondary);
-  transform: scale(1.08); box-shadow: 0 12px 36px rgba(106,155,200,.35);
+  transform: scale(1.08); box-shadow: 0 12px 36px rgba(59, 117, 171,.35);
 }
 .step h4 { margin-bottom: 8px; }
 .step p { color: var(--text-secondary); font-size: 0.98rem; line-height: 1.7; }
@@ -878,7 +878,7 @@ body.b2b-landing .header .nav-logo-img {
 .dest-item:hover img { transform: scale(1.05); }
 .dest-info {
   position: absolute; bottom: 0; left: 0; width: 100%;
-  background: linear-gradient(0deg, rgba(18,38,64,0.95) 0%, rgba(18,38,64,0.6) 50%, rgba(18,38,64,0) 100%);
+  background: linear-gradient(0deg, rgba(12, 28, 49,0.95) 0%, rgba(12, 28, 49,0.6) 50%, rgba(12, 28, 49,0) 100%);
   padding: 60px 32px 32px; color: #fff;
 }
 .dest-info h3 {
@@ -911,13 +911,13 @@ body.b2b-landing .header .nav-logo-img {
   background: #fff;
   border-radius: 22px;
   padding: 36px 40px;
-  box-shadow: 0 8px 32px rgba(6,43,85,.06);
-  border: 1px solid rgba(6,43,85,.05);
+  box-shadow: 0 8px 32px rgba(3, 32, 66,.06);
+  border: 1px solid rgba(3, 32, 66,.05);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 .cred-list-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(6,43,85,.10);
+  box-shadow: 0 16px 48px rgba(3, 32, 66,.10);
 }
 .cred-icon {
   flex-shrink: 0; width: 64px; height: 64px;
@@ -932,7 +932,7 @@ body.b2b-landing .header .nav-logo-img {
 /* ===== About ===== */
 .about { padding: var(--section-py) 0; background: #F7FAFC; }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 56px; }
-.about-image { border-radius: 32px; overflow: hidden; aspect-ratio: 4/3; box-shadow: 0 20px 60px rgba(6,43,85,.10); }
+.about-image { border-radius: 32px; overflow: hidden; aspect-ratio: 4/3; box-shadow: 0 20px 60px rgba(3, 32, 66,.10); }
 .about-image img { width: 100%; height: 100%; object-fit: cover; }
 .about-text p { color: var(--text-secondary); margin-bottom: 20px; line-height: 1.85; font-size: 1.04rem; }
 .about-founders-img {
@@ -1076,9 +1076,9 @@ body.b2b-landing .header .nav-logo-img {
   background:
     linear-gradient(90deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.82) 48%, rgba(255,255,255,.64) 100%),
     url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat;
-  border: 1px solid rgba(106,155,200,.18);
+  border: 1px solid rgba(59, 117, 171,.18);
   border-radius: 22px;
-  box-shadow: 0 24px 60px rgba(16,42,76,.1);
+  box-shadow: 0 24px 60px rgba(11, 31, 58,.1);
   color: var(--primary);
   margin-inline: auto;
   max-width: 1060px;
@@ -1135,9 +1135,9 @@ body.b2b-landing .header .nav-logo-img {
 .home-final-contact-pill {
   align-items: center;
   background: rgba(255,255,255,.72);
-  border: 1px solid rgba(106,155,200,.26);
+  border: 1px solid rgba(59, 117, 171,.26);
   border-radius: 16px;
-  box-shadow: 0 12px 28px rgba(16,42,76,.07);
+  box-shadow: 0 12px 28px rgba(11, 31, 58,.07);
   color: var(--primary);
   display: inline-flex;
   font-size: .96rem;
@@ -1150,15 +1150,15 @@ body.b2b-landing .header .nav-logo-img {
 }
 
 .home-final-contact-pill:hover {
-  border-color: rgba(106,155,200,.5);
-  box-shadow: 0 16px 34px rgba(16,42,76,.11);
+  border-color: rgba(59, 117, 171,.5);
+  box-shadow: 0 16px 34px rgba(11, 31, 58,.11);
   transform: translateY(-1px);
 }
 
 .home-final-contact-icon {
   align-items: center;
   background: #fff;
-  border: 1px solid rgba(106,155,200,.24);
+  border: 1px solid rgba(59, 117, 171,.24);
   border-radius: 50%;
   color: var(--secondary);
   display: inline-flex;
@@ -1233,7 +1233,7 @@ body.b2b-landing .header .nav-logo-img {
 
 /* ===== Mobile Nav Overlay ===== */
 .mobile-nav {
-  position: fixed; inset: 0; background: rgba(18,38,64,.97); backdrop-filter: blur(20px);
+  position: fixed; inset: 0; background: rgba(12, 28, 49,.97); backdrop-filter: blur(20px);
   z-index: 999; display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 32px; opacity: 0; pointer-events: none; transition: opacity var(--transition);
 }
@@ -1263,17 +1263,17 @@ body.b2b-landing .header .nav-logo-img {
   background: var(--surface);
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 16px 48px rgba(6,43,85,.08);
+  box-shadow: 0 16px 48px rgba(3, 32, 66,.08);
   transition: all var(--transition);
   cursor: pointer;
-  border: 1px solid rgba(6,43,85,.06);
+  border: 1px solid rgba(3, 32, 66,.06);
   display: flex;
   flex-direction: column;
 }
 .profile-card:hover, .profile-card.active {
   transform: translateY(-10px);
   box-shadow: var(--shadow-xl);
-  border-color: rgba(106,155,200,.45);
+  border-color: rgba(59, 117, 171,.45);
 }
 .profile-image {
   position: relative;
@@ -1293,7 +1293,7 @@ body.b2b-landing .header .nav-logo-img {
 .profile-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(8,24,46,0.9) 0%, rgba(16,42,76,0.24) 100%);
+  background: linear-gradient(0deg, rgba(5, 18, 35,0.9) 0%, rgba(11, 31, 58,0.24) 100%);
 }
 .profile-title {
   position: absolute;
@@ -1512,7 +1512,7 @@ body.b2b-landing .header .nav-logo-img {
   color: #fff;
   align-self: flex-end;
   border-bottom-right-radius: 4px;
-  box-shadow: 0 2px 8px rgba(18,38,64,0.2);
+  box-shadow: 0 2px 8px rgba(12, 28, 49,0.2);
 }
 .chat-action-btn {
   display: inline-block;
@@ -1635,7 +1635,7 @@ body.b2b-landing .header .nav-logo-img {
   }
   .header {
     padding: 10px 0;
-    background: rgba(16,42,76,.86);
+    background: rgba(11, 31, 58,.86);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
   }
@@ -1716,15 +1716,15 @@ body.b2b-landing .header .nav-logo-img {
   .profiles-grid { grid-template-columns: 1fr; gap: 18px; margin-bottom: 22px; }
   .profile-card {
     border-radius: var(--radius-md);
-    box-shadow: 0 18px 42px rgba(16,42,76,.08);
+    box-shadow: 0 18px 42px rgba(11, 31, 58,.08);
   }
   .profile-card:hover,
   .profile-card.active {
     transform: none;
   }
   .profile-card.active {
-    box-shadow: 0 24px 56px rgba(16,42,76,.14);
-    border-color: rgba(106,155,200,.38);
+    box-shadow: 0 24px 56px rgba(11, 31, 58,.14);
+    border-color: rgba(59, 117, 171,.38);
   }
   .profile-content { padding: 24px 20px; }
   .profile-image { aspect-ratio: 5/3; min-height: 0; }
@@ -1813,8 +1813,8 @@ body.b2b-landing .header .nav-logo-img {
     border-radius: 999px;
     background: rgba(255,255,255,.76);
     color: var(--primary);
-    border: 1px solid rgba(16,42,76,.08);
-    box-shadow: 0 12px 30px rgba(16,42,76,.08);
+    border: 1px solid rgba(11, 31, 58,.08);
+    box-shadow: 0 12px 30px rgba(11, 31, 58,.08);
   }
   .destinations-grid { grid-template-columns: 1fr; }
   .dest-card {
@@ -1885,7 +1885,7 @@ body.b2b-landing .header .nav-logo-img {
     gap: 0;
     padding: 18px;
     overflow-y: auto;
-    background: rgba(16,42,76,.98);
+    background: rgba(11, 31, 58,.98);
     transform: translateY(-12px);
     transition: opacity var(--transition-fast), transform var(--transition-fast);
   }
@@ -1940,7 +1940,7 @@ body.b2b-landing .header .nav-logo-img {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 18% 20%, rgba(106,155,200,.22), transparent 32%);
+  background: radial-gradient(circle at 18% 20%, rgba(59, 117, 171,.22), transparent 32%);
   pointer-events: none;
 }
 .scroll-container {
@@ -1960,7 +1960,7 @@ body.b2b-landing .header .nav-logo-img {
 }
 .dest-card-inner {
   position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 20px;
-  box-shadow: 0 34px 90px rgba(6,43,85,.16);
+  box-shadow: 0 34px 90px rgba(3, 32, 66,.16);
   border: 1px solid rgba(255,255,255,.40);
 }
 .dest-card img {
@@ -1970,7 +1970,7 @@ body.b2b-landing .header .nav-logo-img {
 
 .dest-card-content {
   position: absolute; bottom: 0; left: 0; width: 100%; padding: 48px;
-  background: linear-gradient(to top, rgba(8,24,46,0.96) 0%, rgba(16,42,76,0.5) 55%, transparent 100%);
+  background: linear-gradient(to top, rgba(5, 18, 35,0.96) 0%, rgba(11, 31, 58,0.5) 55%, transparent 100%);
   color: #fff; z-index: 2;
 }
 .dest-card-content span {
@@ -2016,8 +2016,8 @@ body.b2b-landing .header .nav-logo-img {
   z-index: 1;
   background: #fff;
   border-radius: 22px;
-  box-shadow: 0 20px 60px rgba(6,43,85,.10);
-  border: 1px solid rgba(6,43,85,.06);
+  box-shadow: 0 20px 60px rgba(3, 32, 66,.10);
+  border: 1px solid rgba(3, 32, 66,.06);
   padding: 40px 48px;
   max-width: 1060px;
   margin: 0 auto;
@@ -2053,7 +2053,7 @@ body.b2b-landing .header .nav-logo-img {
 .stat-divider {
   width: 1px;
   height: 48px;
-  background: rgba(6,43,85,.10);
+  background: rgba(3, 32, 66,.10);
 }
 @media (max-width: 768px) {
   .stat-divider { display: none; }
@@ -2068,7 +2068,7 @@ body.b2b-landing .header .nav-logo-img {
   padding: clamp(28px, 2.7vw, 40px);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-md);
-  border: 1px solid rgba(16,42,76,0.05);
+  border: 1px solid rgba(11, 31, 58,0.05);
   transition: transform var(--transition), box-shadow var(--transition);
   min-height: 250px;
 }
@@ -2084,7 +2084,7 @@ body.b2b-landing .header .nav-logo-img {
   align-items: center;
   justify-content: center;
   background: var(--sky-soft);
-  border: 1px solid rgba(106,155,200,.28);
+  border: 1px solid rgba(59, 117, 171,.28);
   color: var(--primary);
   margin-bottom: 24px;
 }
@@ -2121,7 +2121,7 @@ body.b2b-landing .header .nav-logo-img {
 .phil-item {
   position: relative;
   padding-top: 24px;
-  border-top: 1px solid rgba(16,42,76,0.1);
+  border-top: 1px solid rgba(11, 31, 58,0.1);
 }
 .phil-num {
   font-family: var(--font-heading);
@@ -2189,7 +2189,7 @@ body.b2b-landing .header .nav-logo-img {
 .ig-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(16,42,76,0.5);
+  background: rgba(11, 31, 58,0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2214,7 +2214,7 @@ body.b2b-landing .header .nav-logo-img {
 }
 .booking-cta-inner {
   background:
-    radial-gradient(circle at top right, rgba(106,155,200,.15), transparent 40%),
+    radial-gradient(circle at top right, rgba(59, 117, 171,.15), transparent 40%),
     linear-gradient(135deg, var(--primary) 0%, var(--navy-deep) 100%);
   border-radius: 28px;
   padding: 72px 48px;
@@ -2273,7 +2273,7 @@ body.b2b-landing .header .nav-logo-img {
 /* Logos Premium */
 .b2b-premium-logos {
   background: var(--bg);
-  border-top: 1px solid rgba(16,42,76,.06);
+  border-top: 1px solid rgba(11, 31, 58,.06);
   padding: 48px 0;
 }
 .b2b-premium-logos .marquee-item-box {
@@ -2289,7 +2289,7 @@ body.b2b-landing .header .nav-logo-img {
 
 /* Statement Dark Section */
 .b2b-dark-statement {
-  background: linear-gradient(135deg, var(--primary) 0%, #08182E 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, #051223 100%);
   color: #fff;
   padding: 140px 0;
   position: relative;
@@ -2350,7 +2350,7 @@ body.b2b-landing .header .nav-logo-img {
   border-radius: var(--radius-xl);
   padding: 56px 48px;
   box-shadow: var(--shadow-xl);
-  border: 1px solid rgba(16,42,76,.05);
+  border: 1px solid rgba(11, 31, 58,.05);
 }
 .b2b-fit-card.pro {
   background: linear-gradient(180deg, #FFFFFF 0%, var(--bg) 100%);
@@ -2422,7 +2422,7 @@ body.b2b-landing .split-hero-kicker {
 
 body.b2b-landing .hero-highlight {
   display: inline-block;
-  color: #102A4C;
+  color: #0B1F3A;
   background: #FFD21F;
   padding: .02em .12em .08em;
   box-decoration-break: clone;
@@ -2497,11 +2497,11 @@ body.medical-landing .medical-standard-card:focus-within,
 body.medical-landing .medical-standard-card:active {
   border-color: var(--accent) !important;
   outline: 0 !important;
-  box-shadow: 0 24px 58px rgba(16, 42, 76, .14) !important;
+  box-shadow: 0 24px 58px rgba(11, 31, 58, .14) !important;
 }
 
 body.medical-landing .medical-behind-scenes.company-trust-proof {
-  background: linear-gradient(135deg, #07172b 0%, #062b55 58%, #0a3665 100%) !important;
+  background: linear-gradient(135deg, #041121 0%, #032042 58%, #05284E 100%) !important;
   padding-block: clamp(64px, 7vw, 104px) !important;
 }
 
@@ -3376,8 +3376,8 @@ body.b2b-landing .b2b-fit-card {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(16,42,76,.12) 0%, rgba(16,42,76,0) 35%),
-    linear-gradient(180deg, rgba(16,42,76,0) 52%, rgba(16,42,76,.42) 100%);
+    linear-gradient(90deg, rgba(11, 31, 58,.12) 0%, rgba(11, 31, 58,0) 35%),
+    linear-gradient(180deg, rgba(11, 31, 58,0) 52%, rgba(11, 31, 58,.42) 100%);
   pointer-events: none;
 }
 .medical-hero .split-hero-image img {
@@ -3397,7 +3397,7 @@ body.b2b-landing .b2b-fit-card {
   position: relative;
   min-height: 360px;
   padding: 40px 32px;
-  border: 1px solid rgba(16,42,76,.08);
+  border: 1px solid rgba(11, 31, 58,.08);
   border-radius: var(--radius-md);
   background:
     linear-gradient(180deg, rgba(234,244,255,.8) 0%, rgba(255,255,255,.96) 44%),
@@ -3413,7 +3413,7 @@ body.b2b-landing .b2b-fit-card {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  border: 1px solid rgba(106,155,200,.24);
+  border: 1px solid rgba(59, 117, 171,.24);
 }
 .timeline-step span {
   display: inline-flex;
@@ -3468,7 +3468,7 @@ body.b2b-landing .b2b-fit-card {
   background:
     linear-gradient(145deg, rgba(255,255,255,.94), rgba(255,255,255,.72)),
     radial-gradient(circle at 20% 20%, rgba(255,210,0,.24), transparent 34%);
-  border: 1px solid rgba(16,42,76,.08);
+  border: 1px solid rgba(11, 31, 58,.08);
   box-shadow: var(--shadow-md);
 }
 .medical-specialties {
@@ -3496,7 +3496,7 @@ body.b2b-landing .b2b-fit-card {
 .medical-brand {
   padding: 110px 0;
   background:
-    linear-gradient(135deg, rgba(16,42,76,.96), rgba(24,58,99,.94)),
+    linear-gradient(135deg, rgba(11, 31, 58,.96), rgba(16, 43, 76,.94)),
     var(--primary);
   color: #FFFFFF;
 }
@@ -3526,7 +3526,7 @@ body.b2b-landing .b2b-fit-card {
 }
 .medical-landing .contact {
   background:
-    linear-gradient(180deg, rgba(16,42,76,.98), rgba(16,42,76,.94)),
+    linear-gradient(180deg, rgba(11, 31, 58,.98), rgba(11, 31, 58,.94)),
     var(--primary);
 }
 
@@ -3668,8 +3668,8 @@ body {
   display: flex;
   flex-direction: column;
   padding: clamp(26px, 2.7vw, 40px);
-  border-color: rgba(16,42,76,.08);
-  box-shadow: 0 16px 46px rgba(16,42,76,.06);
+  border-color: rgba(11, 31, 58,.08);
+  box-shadow: 0 16px 46px rgba(11, 31, 58,.06);
 }
 
 .srv-card:hover {
@@ -3684,7 +3684,7 @@ body {
   align-items: center;
   justify-content: center;
   background: var(--sky-soft);
-  border: 1px solid rgba(106,155,200,.28);
+  border: 1px solid rgba(59, 117, 171,.28);
   color: var(--primary);
   margin-bottom: 24px;
   font-size: 0;
@@ -4187,7 +4187,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   font-size: 20rem;
-  color: rgba(16, 42, 76, 0.03);
+  color: rgba(11, 31, 58, 0.03);
   font-family: var(--font-heading);
   line-height: 1;
 }
@@ -4368,7 +4368,7 @@ body {
 
 .nav-arrow.next {
   background: var(--primary) !important;
-  box-shadow: 0 4px 12px rgba(12, 32, 56, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(8, 24, 43, 0.3) !important;
 }
 
 .nav-arrow.next:hover {
@@ -4457,7 +4457,7 @@ body {
 
 
 body.b2b-landing .profile-card { transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s ease !important; }
-body.b2b-landing .profile-card:hover { transform: translateY(-12px) !important; box-shadow: 0 25px 50px rgba(16,42,76,0.15), 0 0 20px rgba(255, 184, 0, 0.15) !important; border-color: var(--accent) !important; }
+body.b2b-landing .profile-card:hover { transform: translateY(-12px) !important; box-shadow: 0 25px 50px rgba(11, 31, 58,0.15), 0 0 20px rgba(255, 184, 0, 0.15) !important; border-color: var(--accent) !important; }
 
 
 .b2b-premium-logos .marquee-track { display: inline-flex !important; width: max-content !important; align-items: center; }
@@ -4580,7 +4580,7 @@ body.medical-landing .medical-program-section {
 body.b2b-landing:not(.medical-landing) .b2b-dark-statement {
   background:
     radial-gradient(circle at 82% 16%, rgba(255,210,0,.14), transparent 25%),
-    linear-gradient(135deg, #07172b 0%, var(--primary) 58%, #17375e 100%);
+    linear-gradient(135deg, #041121 0%, var(--primary) 58%, #102948 100%);
 }
 
 body.b2b-landing:not(.medical-landing) .statement-grid {
@@ -4641,12 +4641,12 @@ body.b2b-landing:not(.medical-landing) .ed-grid-4 .ed-card {
   aspect-ratio: 4 / 4.75 !important;
   border: 1px solid rgba(255,255,255,.2);
   border-radius: 22px;
-  box-shadow: 0 20px 50px rgba(16,42,76,.12);
+  box-shadow: 0 20px 50px rgba(11, 31, 58,.12);
   min-height: clamp(310px, 39vh, 430px) !important;
 }
 
 body.b2b-landing:not(.medical-landing) .ed-grid-4 .ed-overlay {
-  background: linear-gradient(180deg, rgba(8,24,46,.08), rgba(8,24,46,.92));
+  background: linear-gradient(180deg, rgba(5, 18, 35,.08), rgba(5, 18, 35,.92));
   opacity: 0;
 }
 
@@ -4710,9 +4710,9 @@ body.b2b-landing:not(.medical-landing) .profiles-grid-3 {
 }
 
 body.b2b-landing:not(.medical-landing) .profile-card {
-  border: 1px solid rgba(16,42,76,.08);
+  border: 1px solid rgba(11, 31, 58,.08);
   border-radius: 20px;
-  box-shadow: 0 18px 46px rgba(16,42,76,.08);
+  box-shadow: 0 18px 46px rgba(11, 31, 58,.08);
   overflow: hidden;
 }
 
@@ -4755,9 +4755,9 @@ body.b2b-landing:not(.medical-landing) .b2b-testimonial-grid {
 }
 
 body.b2b-landing:not(.medical-landing) .b2b-testimonial-card {
-  border: 1px solid rgba(16,42,76,.1);
+  border: 1px solid rgba(11, 31, 58,.1);
   border-radius: 20px;
-  box-shadow: 0 18px 42px rgba(16,42,76,.08);
+  box-shadow: 0 18px 42px rgba(11, 31, 58,.08);
   min-height: 300px;
   padding: clamp(24px, 2.8vw, 34px);
 }
@@ -5110,7 +5110,7 @@ body.b2b-landing:not(.medical-landing) .assurance-grid {
   background: rgba(255, 255, 255, 0.86);
   border: 1px solid rgba(203, 213, 225, 0.9);
   border-radius: 12px;
-  box-shadow: 0 18px 40px rgba(16,42,76,.06);
+  box-shadow: 0 18px 40px rgba(11, 31, 58,.06);
   overflow: hidden;
 }
 
@@ -5140,7 +5140,7 @@ body.b2b-landing:not(.medical-landing) .assurance-icon {
   flex: 0 0 auto;
   border-radius: 999px;
   background: rgba(224, 242, 254, 0.9);
-  color: #123f75;
+  color: #0B2F5A;
   border: 1px solid rgba(191, 219, 254, 0.9);
 }
 
@@ -5298,7 +5298,7 @@ body:not(.b2b-landing) .proof-single-column .proof-grid {
 body.b2b-landing:not(.medical-landing) .b2b-dark-statement {
   background:
     radial-gradient(circle at 84% 18%, rgba(255, 210, 0, .08), transparent 20%),
-    linear-gradient(135deg, #07172b 0%, #0b2746 58%, #17375e 100%);
+    linear-gradient(135deg, #041121 0%, #071D36 58%, #102948 100%);
   color: #fff;
 }
 
@@ -5324,7 +5324,7 @@ body.b2b-landing:not(.medical-landing) .company-benefits-section .ev-bg {
 }
 
 body.b2b-landing:not(.medical-landing) .company-benefits-section .ev-card {
-  box-shadow: 0 28px 70px rgba(16,42,76,.12);
+  box-shadow: 0 28px 70px rgba(11, 31, 58,.12);
 }
 
 body.b2b-landing:not(.medical-landing) .company-sky-cta {
@@ -5336,10 +5336,10 @@ body.b2b-landing:not(.medical-landing) .company-sky-cta {
 
 body.b2b-landing:not(.medical-landing) .company-sky-cta .booking-cta-inner {
   background:
-    linear-gradient(135deg, rgba(12,35,66,.78), rgba(16,42,76,.48)),
+    linear-gradient(135deg, rgba(8, 26, 51,.78), rgba(11, 31, 58,.48)),
     url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat !important;
   border: 1px solid rgba(255,255,255,.34);
-  box-shadow: 0 28px 74px rgba(16,42,76,.18);
+  box-shadow: 0 28px 74px rgba(11, 31, 58,.18);
 }
 
 body.b2b-landing:not(.medical-landing) .company-sky-cta .btn {
@@ -5359,10 +5359,10 @@ body:not(.b2b-landing) .booking-cta {
 
 body:not(.b2b-landing) .booking-cta-inner {
   background:
-    linear-gradient(135deg, rgba(12,35,66,.88), rgba(16,42,76,.68)),
+    linear-gradient(135deg, rgba(8, 26, 51,.88), rgba(11, 31, 58,.68)),
     url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat;
   border: 1px solid rgba(255,255,255,.24);
-  box-shadow: 0 28px 72px rgba(12,35,66,.2);
+  box-shadow: 0 28px 72px rgba(8, 26, 51,.2);
   backdrop-filter: blur(4px);
   overflow: hidden;
   position: relative;
@@ -5371,7 +5371,7 @@ body:not(.b2b-landing) .booking-cta-inner {
 body:not(.b2b-landing) .booking-cta-inner .btn {
   background: var(--accent);
   border: 2px solid rgba(255,255,255,.92);
-  box-shadow: 0 16px 34px rgba(12,35,66,.22);
+  box-shadow: 0 16px 34px rgba(8, 26, 51,.22);
   color: var(--primary);
 }
 
@@ -5385,7 +5385,7 @@ body:not(.b2b-landing) .booking-cta-inner .btn:hover {
 
 .philosophy-visual { flex: 0 0 50%; position: relative; }
 
-.airplane-img { width: 140%; max-width: none; height: auto; transform: translateX(-20%) translateY(20px); filter: drop-shadow(0 30px 60px rgba(15, 42, 76, 0.15)); z-index: 2; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.airplane-img { width: 140%; max-width: none; height: auto; transform: translateX(-20%) translateY(20px); filter: drop-shadow(0 30px 60px rgba(10, 31, 58, 0.15)); z-index: 2; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
 .philosophy-visual:hover .airplane-img { transform: translateX(-18%) translateY(0); }
 
 .philosophy-text { flex: 0 0 50%; z-index: 3; }
@@ -5523,7 +5523,7 @@ body:not(.b2b-landing) .value-capture-grid {
 body:not(.b2b-landing) .value-capture-image {
   aspect-ratio: 4 / 3.1;
   border-radius: 22px;
-  box-shadow: 0 22px 52px rgba(16,42,76,.1);
+  box-shadow: 0 22px 52px rgba(11, 31, 58,.1);
   overflow: hidden;
 }
 
@@ -5642,9 +5642,9 @@ body:not(.b2b-landing) .proof-grid {
 
 body:not(.b2b-landing) .proof-card {
   background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
-  border: 1px solid rgba(106,155,200,.22);
+  border: 1px solid rgba(59, 117, 171,.22);
   border-radius: 18px;
-  box-shadow: 0 18px 42px rgba(16,42,76,.07);
+  box-shadow: 0 18px 42px rgba(11, 31, 58,.07);
   padding: clamp(22px, 2.4vw, 30px);
 }
 
@@ -5664,7 +5664,7 @@ body:not(.b2b-landing) .proof-person {
 
 body:not(.b2b-landing) .proof-person span {
   background: linear-gradient(180deg, #e9f2fb, #fff);
-  border: 1px solid rgba(16,42,76,.08);
+  border: 1px solid rgba(11, 31, 58,.08);
   border-radius: 50%;
   grid-row: span 2;
   height: 40px;
@@ -5863,7 +5863,7 @@ body:not(.b2b-landing) .stats-grid {
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: 18px;
-  box-shadow: 0 22px 60px rgba(8, 24, 46, 0.18);
+  box-shadow: 0 22px 60px rgba(5, 18, 35, 0.18);
   display: grid;
   gap: 0;
   grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr) 1px minmax(0, 1fr) 1px minmax(0, 1fr);
@@ -5947,7 +5947,7 @@ body:not(.b2b-landing) .profiles-section {
 }
 
 body:not(.b2b-landing) .ev-services {
-  background: linear-gradient(135deg, #031b34 0%, #062b55 58%, #031b34 100%);
+  background: linear-gradient(135deg, #011428 0%, #032042 58%, #011428 100%);
   color: #fff;
   min-height: auto;
   overflow: hidden;
@@ -6139,7 +6139,7 @@ body:not(.b2b-landing) .ev-quote-feature .ev-founder-quote cite {
   }
 
   body:not(.b2b-landing) .ev-feature {
-    border-bottom: 1px solid rgba(106, 155, 200, 0.18);
+    border-bottom: 1px solid rgba(59, 117, 171, 0.18);
     min-height: 0;
     padding: 22px;
   }
@@ -6176,7 +6176,7 @@ body:not(.b2b-landing) .ev-quote-feature .ev-founder-quote cite {
   }
 
   body:not(.b2b-landing) .ev-feature {
-    border-bottom: 1px solid rgba(106, 155, 200, 0.18) !important;
+    border-bottom: 1px solid rgba(59, 117, 171, 0.18) !important;
     border-right: 0 !important;
     min-height: auto;
     padding: 22px 0;
@@ -6250,9 +6250,9 @@ body:not(.b2b-landing) .profiles-grid {
 }
 
 body:not(.b2b-landing) .profile-card {
-  border: 1px solid rgba(106, 155, 200, 0.2);
+  border: 1px solid rgba(59, 117, 171, 0.2);
   border-radius: 14px;
-  box-shadow: 0 18px 44px rgba(16, 42, 76, 0.08);
+  box-shadow: 0 18px 44px rgba(11, 31, 58, 0.08);
 }
 
 body:not(.b2b-landing) .profile-image {
@@ -6269,8 +6269,8 @@ body:not(.b2b-landing) .profile-overlay {
 
 body:not(.b2b-landing) .profile-overlay {
   background:
-    linear-gradient(180deg, rgba(6, 43, 85, 0.02) 0%, rgba(3, 27, 52, 0.34) 100%),
-    linear-gradient(90deg, rgba(3, 27, 52, 0.18) 0%, rgba(3, 27, 52, 0.04) 56%, rgba(3, 27, 52, 0.18) 100%);
+    linear-gradient(180deg, rgba(3, 32, 66, 0.02) 0%, rgba(1, 20, 40, 0.34) 100%),
+    linear-gradient(90deg, rgba(1, 20, 40, 0.18) 0%, rgba(1, 20, 40, 0.04) 56%, rgba(1, 20, 40, 0.18) 100%);
   z-index: 1;
 }
 
@@ -6436,9 +6436,9 @@ body:not(.b2b-landing) .proof-grid {
 
 body:not(.b2b-landing) .proof-card {
   background: rgba(255, 255, 255, 0.86);
-  border: 1px solid rgba(11, 37, 69, 0.08);
+  border: 1px solid rgba(7, 28, 53, 0.08);
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(16, 42, 67, 0.05);
+  box-shadow: 0 8px 24px rgba(11, 32, 51, 0.05);
   min-height: 228px;
   overflow: visible;
   padding: clamp(20px, 1.9vw, 26px);
@@ -6497,9 +6497,9 @@ body:not(.b2b-landing) .difference-block {
 
 body:not(.b2b-landing) .difference-table {
   background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(11, 37, 69, 0.09);
+  border: 1px solid rgba(7, 28, 53, 0.09);
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(16, 42, 67, 0.055);
+  box-shadow: 0 8px 24px rgba(11, 32, 51, 0.055);
   display: grid;
   grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1fr);
   overflow: hidden;
@@ -6522,7 +6522,7 @@ body:not(.b2b-landing) .difference-head.without {
 }
 
 body:not(.b2b-landing) .difference-head.with {
-  background: #0067c7;
+  background: #004D95;
   color: #fff;
   grid-column: 3 / 4;
 }
@@ -6743,7 +6743,7 @@ body.medical-landing .split-hero-image img {
 body.medical-landing .b2b-dark-statement {
   background:
     radial-gradient(circle at 85% 18%, rgba(255,210,0,.16), transparent 24%),
-    linear-gradient(135deg, #07172b 0%, var(--primary) 58%, #17375e 100%);
+    linear-gradient(135deg, #041121 0%, var(--primary) 58%, #102948 100%);
 }
 
 body.medical-landing .statement-grid {
@@ -6791,7 +6791,7 @@ body.medical-landing .medical-ed-grid .ed-card {
 }
 
 body.medical-landing .medical-ed-grid .ed-overlay {
-  background: linear-gradient(180deg, rgba(8,24,46,.08), rgba(8,24,46,.92));
+  background: linear-gradient(180deg, rgba(5, 18, 35,.08), rgba(5, 18, 35,.92));
   opacity: .34;
 }
 
@@ -6824,7 +6824,7 @@ body.b2b-landing .header.scrolled {
 
 body.b2b-landing .ed-card .ed-overlay,
 body.medical-landing .medical-ed-grid .ed-overlay {
-  background: linear-gradient(180deg, rgba(15,42,76,.08), rgba(15,42,76,.9));
+  background: linear-gradient(180deg, rgba(10, 31, 58,.08), rgba(10, 31, 58,.9));
   opacity: 0 !important;
 }
 
@@ -6861,8 +6861,8 @@ body.b2b-landing .header,
 body.b2b-landing .header:not(.scrolled),
 body.b2b-landing .header.scrolled {
   background: rgba(255, 255, 255, 0.96) !important;
-  border-bottom: 1px solid rgba(16, 42, 76, 0.08);
-  box-shadow: 0 10px 28px rgba(16, 42, 76, 0.06);
+  border-bottom: 1px solid rgba(11, 31, 58, 0.08);
+  box-shadow: 0 10px 28px rgba(11, 31, 58, 0.06);
   opacity: 1 !important;
   pointer-events: auto !important;
   transform: translateY(0) !important;
@@ -6953,9 +6953,9 @@ body.b2b-landing:not(.medical-landing) .b2b-testimonial-grid .b2b-testimonial-ca
 
 body.b2b-landing:not(.medical-landing) .b2b-testimonial-card {
   background: rgba(255, 255, 255, 0.9) !important;
-  border: 1px solid rgba(11, 37, 69, 0.08);
+  border: 1px solid rgba(7, 28, 53, 0.08);
   border-radius: 16px;
-  box-shadow: 0 12px 28px rgba(16, 42, 67, 0.06);
+  box-shadow: 0 12px 28px rgba(11, 32, 51, 0.06);
   display: flex;
   flex-direction: column;
   min-height: 0;
@@ -6988,7 +6988,7 @@ body.b2b-landing:not(.medical-landing) .b2b-testimonial-footer {
 }
 
 body.b2b-landing:not(.medical-landing) .testimonial-avatar {
-  border: 1px solid rgba(16, 42, 76, 0.08);
+  border: 1px solid rgba(11, 31, 58, 0.08);
   box-shadow: none;
   height: 42px;
   width: 42px;
@@ -7053,9 +7053,9 @@ body.b2b-landing:not(.medical-landing) .editorial-promise .ed-grid-4 {
 
 body.b2b-landing:not(.medical-landing) .editorial-promise .ed-card {
   aspect-ratio: 0.72 !important;
-  border: 1px solid rgba(16,42,76,.08);
+  border: 1px solid rgba(11, 31, 58,.08);
   border-radius: 20px;
-  box-shadow: 0 18px 40px rgba(16,42,76,.08);
+  box-shadow: 0 18px 40px rgba(11, 31, 58,.08);
   min-height: 0 !important;
 }
 
@@ -7129,9 +7129,9 @@ body.medical-landing .medical-timeline {
 
 body.medical-landing .timeline-step {
   background: #fff;
-  border: 1px solid rgba(16,42,76,.08);
+  border: 1px solid rgba(11, 31, 58,.08);
   border-radius: 18px;
-  box-shadow: 0 18px 42px rgba(16,42,76,.08);
+  box-shadow: 0 18px 42px rgba(11, 31, 58,.08);
   min-height: clamp(290px, 34vh, 350px);
   padding: clamp(26px, 2.6vw, 36px);
 }
@@ -7233,7 +7233,7 @@ body.medical-landing .medical-fit-section .b2b-fit-card {
 body.medical-landing .medical-brand {
   background:
     radial-gradient(circle at 18% 18%, rgba(255,210,0,.22), transparent 28%),
-    linear-gradient(135deg, rgba(8,24,46,.98), rgba(16,42,76,.94));
+    linear-gradient(135deg, rgba(5, 18, 35,.98), rgba(11, 31, 58,.94));
 }
 
 body.medical-landing .medical-brand-inner {
@@ -7536,7 +7536,7 @@ body:not(.b2b-landing) .difference-block {
 
 body:not(.b2b-landing) .difference-table {
   border-radius: 14px;
-  box-shadow: 0 24px 70px rgba(16,42,76,.12);
+  box-shadow: 0 24px 70px rgba(11, 31, 58,.12);
   min-height: clamp(355px, 31vw, 430px);
   overflow: hidden;
 }
@@ -7595,9 +7595,9 @@ body:not(.b2b-landing) .cred-grid {
 body:not(.b2b-landing) .cred-card {
   align-items: center;
   background: rgba(255,255,255,.9);
-  border: 1px solid rgba(16,42,76,.08);
+  border: 1px solid rgba(11, 31, 58,.08);
   border-radius: 18px;
-  box-shadow: 0 18px 44px rgba(16,42,76,.08);
+  box-shadow: 0 18px 44px rgba(11, 31, 58,.08);
   display: flex;
   gap: clamp(18px, 2vw, 28px);
   justify-content: flex-start;
@@ -7609,7 +7609,7 @@ body:not(.b2b-landing) .cred-card {
 
 body:not(.b2b-landing) .cred-card:hover {
   border-color: rgba(91,143,185,.32);
-  box-shadow: 0 26px 64px rgba(16,42,76,.13);
+  box-shadow: 0 26px 64px rgba(11, 31, 58,.13);
   transform: translateY(-5px);
 }
 
@@ -7750,9 +7750,9 @@ body:not(.b2b-landing) .cred-card strong {
 /* ===== Contact Boarding Pass Redesign ===== */
 .contact-page .ticket-contact {
   --ticket-page-bg:
-    radial-gradient(circle at 18% 20%, rgba(14, 74, 134, 0.46), transparent 34%),
+    radial-gradient(circle at 18% 20%, rgba(8, 55, 103, 0.46), transparent 34%),
     radial-gradient(circle at 86% 14%, rgba(255, 210, 31, 0.12), transparent 28%),
-    linear-gradient(135deg, #031b34 0%, #062b55 48%, #031b34 100%);
+    linear-gradient(135deg, #011428 0%, #032042 48%, #011428 100%);
   --ticket-page-grid:
     linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
@@ -7785,7 +7785,7 @@ body:not(.b2b-landing) .cred-card strong {
   --notch-radius: calc(var(--notch-size) / 2);
   background:
     radial-gradient(circle at 28% 26%, rgba(255,255,255,.08), transparent 30%),
-    linear-gradient(115deg, rgba(6,43,85,.96), rgba(3,27,52,.9));
+    linear-gradient(115deg, rgba(3, 32, 66,.96), rgba(1, 20, 40,.9));
   border: 1px solid rgba(191, 216, 244, 0.28);
   border-radius: 28px;
   box-shadow: 0 34px 100px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255,255,255,.12);
@@ -7819,7 +7819,7 @@ body:not(.b2b-landing) .cred-card strong {
 .contact-page .ticket-stub {
   background:
     radial-gradient(circle at 42% 46%, rgba(191,216,244,.09), transparent 35%),
-    linear-gradient(180deg, rgba(6,43,85,.88), rgba(3,27,52,.74));
+    linear-gradient(180deg, rgba(3, 32, 66,.88), rgba(1, 20, 40,.74));
   border-right: 2px dashed rgba(191,216,244,.4);
   border-radius: 28px 0 0 28px;
   display: flex;
@@ -7973,7 +7973,7 @@ body:not(.b2b-landing) .cred-card strong {
   background: #ffd21f;
   border: 1px solid #ffd21f;
   box-shadow: 0 0 0 6px rgba(255,210,31,.11);
-  color: #031b34;
+  color: #011428;
   height: 38px;
   width: 38px;
 }
@@ -7983,7 +7983,7 @@ body:not(.b2b-landing) .cred-card strong {
   background: #ffd21f;
   border-color: #ffd21f;
   box-shadow: 0 0 0 6px rgba(255,210,31,.16);
-  color: #031b34;
+  color: #011428;
 }
 
 .contact-page .form-step-label {
@@ -8093,7 +8093,7 @@ body:not(.b2b-landing) .cred-card strong {
 .contact-page .form-submit {
   background: #ffd21f;
   box-shadow: 0 16px 34px rgba(255,210,31,.22);
-  color: #031b34;
+  color: #011428;
 }
 
 .contact-page .form-next:hover,
@@ -8118,7 +8118,7 @@ body:not(.b2b-landing) .cred-card strong {
 .contact-page .boarding-strip {
   background:
     radial-gradient(circle at 42% 46%, rgba(191,216,244,.09), transparent 35%),
-    linear-gradient(180deg, rgba(6,43,85,.88), rgba(3,27,52,.74));
+    linear-gradient(180deg, rgba(3, 32, 66,.88), rgba(1, 20, 40,.74));
   border-left: 2px dashed rgba(191,216,244,.38);
   border-radius: 0 28px 28px 0;
   display: flex;
@@ -8391,9 +8391,9 @@ body:not(.b2b-landing) .about-editorial-grid {
 
 body:not(.b2b-landing) .about-editorial-grid .about-image {
   aspect-ratio: 16 / 9;
-  border: 1px solid rgba(106, 155, 200, .22);
+  border: 1px solid rgba(59, 117, 171, .22);
   border-radius: 22px;
-  box-shadow: 0 24px 60px rgba(16, 42, 76, .11);
+  box-shadow: 0 24px 60px rgba(11, 31, 58, .11);
 }
 
 body:not(.b2b-landing) .about-editorial-grid .about-text {
@@ -8450,7 +8450,7 @@ body:not(.b2b-landing) .cred-grid-three .cred-card {
 
 body:not(.b2b-landing) .cred-grid-three .cred-logo {
   background: #fff;
-  border: 1px solid rgba(106, 155, 200, .2);
+  border: 1px solid rgba(59, 117, 171, .2);
   border-radius: 18px;
   height: 96px;
   margin: 0;
@@ -8668,7 +8668,7 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
 
 .contact-page .header {
   background: rgba(255, 255, 255, .94) !important;
-  box-shadow: 0 1px 24px rgba(6, 43, 85, .06) !important;
+  box-shadow: 0 1px 24px rgba(3, 32, 66, .06) !important;
   padding: 12px 0 !important;
 }
 
@@ -8679,8 +8679,8 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
 }
 
 .contact-page .header .lang-trigger {
-  background: rgba(6, 43, 85, .04) !important;
-  border-color: rgba(6, 43, 85, .08) !important;
+  background: rgba(3, 32, 66, .04) !important;
+  border-color: rgba(3, 32, 66, .08) !important;
 }
 
 .contact-page .header .hamburger span {
@@ -8890,14 +8890,14 @@ body:not(.b2b-landing) .proof-card p {
 /* Final home adjustments */
 body:not(.b2b-landing) .hero::after {
   height: 58vh;
-  background: linear-gradient(180deg, rgba(6,43,85,0) 0%, rgba(6,43,85,0.12) 18%, rgba(6,43,85,.38) 36%, rgba(6,43,85,.68) 54%, rgba(6,43,85,.92) 72%, var(--primary) 100%);
+  background: linear-gradient(180deg, rgba(3, 32, 66,0) 0%, rgba(3, 32, 66,0.12) 18%, rgba(3, 32, 66,.38) 36%, rgba(3, 32, 66,.68) 54%, rgba(3, 32, 66,.92) 72%, var(--primary) 100%);
 }
 
 body:not(.b2b-landing) .hero-overlay {
   inset: -2px 0 -14vh 0;
   background:
     radial-gradient(circle at 50% 42%, rgba(191,216,244,.08), transparent 40%),
-    linear-gradient(180deg, rgba(6,43,85,.56) 0%, rgba(6,43,85,.46) 18%, rgba(6,43,85,.50) 36%, rgba(6,43,85,.62) 50%, rgba(6,43,85,.78) 65%, rgba(6,43,85,.94) 82%, var(--primary) 100%);
+    linear-gradient(180deg, rgba(3, 32, 66,.56) 0%, rgba(3, 32, 66,.46) 18%, rgba(3, 32, 66,.50) 36%, rgba(3, 32, 66,.62) 50%, rgba(3, 32, 66,.78) 65%, rgba(3, 32, 66,.94) 82%, var(--primary) 100%);
 }
 
 body:not(.b2b-landing) .destinations-scroll .scroll-title,
@@ -9047,7 +9047,7 @@ body:not(.b2b-landing) .instagram-feed .ig-header p {
 
 body:not(.b2b-landing) .instagram-feed .ig-card {
   background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 12px 26px rgba(16, 42, 76, 0.08);
+  box-shadow: 0 12px 26px rgba(11, 31, 58, 0.08);
 }
 
 body:not(.b2b-landing) .instagram-feed .ig-follow-btn {
@@ -9060,8 +9060,8 @@ body:not(.b2b-landing) .instagram-feed .ig-follow-btn {
 }
 
 body:not(.b2b-landing) .instagram-feed .ig-follow-btn:hover {
-  background: #0b2f59;
-  border-color: #0b2f59;
+  background: #062345;
+  border-color: #062345;
   color: #fff !important;
 }
 
@@ -9181,7 +9181,7 @@ body:not(.b2b-landing) .hero-desc {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 2px solid rgba(106,155,200,.22);
+  border: 2px solid rgba(59, 117, 171,.22);
 }
 
 body:not(.b2b-landing) .proof-person {
@@ -9230,15 +9230,15 @@ body:not(.b2b-landing) .instagram-feed .ig-follow-btn {
   font-weight: 700;
   min-height: 52px;
   padding: 12px 32px;
-  box-shadow: 0 8px 28px rgba(6,43,85,.18);
+  box-shadow: 0 8px 28px rgba(3, 32, 66,.18);
   transition: background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
 body:not(.b2b-landing) .instagram-feed .ig-follow-btn:hover {
-  background: #0b2f59 !important;
+  background: #062345 !important;
   border-color: rgba(191,216,244,.36) !important;
   color: #fff !important;
-  box-shadow: 0 12px 36px rgba(6,43,85,.24);
+  box-shadow: 0 12px 36px rgba(3, 32, 66,.24);
   transform: translateY(-2px);
 }
 
@@ -9359,16 +9359,16 @@ body:not(.b2b-landing) .instagram-feed .ig-header h3 {
 
 body:not(.b2b-landing) .instagram-feed .ig-follow-btn {
   background: rgba(255, 255, 255, 0.96) !important;
-  border: 1px solid rgba(16, 42, 76, 0.08) !important;
+  border: 1px solid rgba(11, 31, 58, 0.08) !important;
   color: var(--primary) !important;
-  box-shadow: 0 10px 28px rgba(16, 42, 76, 0.08);
+  box-shadow: 0 10px 28px rgba(11, 31, 58, 0.08);
 }
 
 body:not(.b2b-landing) .instagram-feed .ig-follow-btn:hover {
   background: #fff !important;
-  border-color: rgba(16, 42, 76, 0.14) !important;
+  border-color: rgba(11, 31, 58, 0.14) !important;
   color: var(--primary) !important;
-  box-shadow: 0 14px 34px rgba(16, 42, 76, 0.12);
+  box-shadow: 0 14px 34px rgba(11, 31, 58, 0.12);
 }
 
 @media (max-width: 900px) {
@@ -9557,7 +9557,7 @@ body:not(.b2b-landing) .section-flight-plane {
   transform-origin: center center;
   width: clamp(56px, 4.6vw, 84px);
   will-change: transform, opacity;
-  filter: drop-shadow(0 10px 24px rgba(6, 43, 85, 0.18));
+  filter: drop-shadow(0 10px 24px rgba(3, 32, 66, 0.18));
 }
 
 @media (max-width: 1100px) {
@@ -9835,13 +9835,13 @@ body:not(.b2b-landing) .ev-feature h3 {
 /* Final home polish: deeper opening gradient, wider profile cards, compact proof cards. */
 body:not(.b2b-landing) .hero::after {
   height: 74vh;
-  background: linear-gradient(180deg, rgba(6,43,85,0) 0%, rgba(6,43,85,.2) 10%, rgba(6,43,85,.52) 28%, rgba(6,43,85,.78) 48%, rgba(6,43,85,.95) 68%, var(--primary) 100%);
+  background: linear-gradient(180deg, rgba(3, 32, 66,0) 0%, rgba(3, 32, 66,.2) 10%, rgba(3, 32, 66,.52) 28%, rgba(3, 32, 66,.78) 48%, rgba(3, 32, 66,.95) 68%, var(--primary) 100%);
 }
 
 body:not(.b2b-landing) .hero-overlay {
   background:
     radial-gradient(circle at 50% 40%, rgba(191,216,244,.06), transparent 36%),
-    linear-gradient(180deg, rgba(6,43,85,.64) 0%, rgba(6,43,85,.58) 20%, rgba(6,43,85,.64) 38%, rgba(6,43,85,.78) 56%, rgba(6,43,85,.94) 76%, var(--primary) 100%);
+    linear-gradient(180deg, rgba(3, 32, 66,.64) 0%, rgba(3, 32, 66,.58) 20%, rgba(3, 32, 66,.64) 38%, rgba(3, 32, 66,.78) 56%, rgba(3, 32, 66,.94) 76%, var(--primary) 100%);
 }
 
 body:not(.b2b-landing) .hero-content {
@@ -9867,7 +9867,7 @@ body:not(.b2b-landing) .profile-card {
 body:not(.b2b-landing) .profile-card:hover,
 body:not(.b2b-landing) .profile-card.active {
   border-color: var(--accent);
-  box-shadow: 0 25px 50px rgba(16,42,76,0.15), 0 0 20px rgba(255, 184, 0, 0.15);
+  box-shadow: 0 25px 50px rgba(11, 31, 58,0.15), 0 0 20px rgba(255, 184, 0, 0.15);
   transform: translateY(-12px);
 }
 
@@ -9971,7 +9971,7 @@ body.medical-landing .medical-hero .split-hero-image::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(8, 24, 46, 0.04), rgba(8, 24, 46, 0.14));
+  background: linear-gradient(180deg, rgba(5, 18, 35, 0.04), rgba(5, 18, 35, 0.14));
   pointer-events: none;
 }
 
@@ -10024,7 +10024,7 @@ body.medical-landing .medical-program-copy h2 {
 body.medical-landing .statement-copy-card {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.16);
-  box-shadow: 0 28px 60px rgba(4, 12, 24, 0.16);
+  box-shadow: 0 28px 60px rgba(3, 9, 18, 0.16);
 }
 
 body.medical-landing .statement-copy-card p + p {
@@ -10050,9 +10050,9 @@ body.medical-landing .medical-timeline {
 
 body.medical-landing .timeline-step {
   background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(18, 48, 86, 0.08);
+  border: 1px solid rgba(12, 36, 66, 0.08);
   border-radius: 22px;
-  box-shadow: 0 20px 45px rgba(14, 41, 73, 0.08);
+  box-shadow: 0 20px 45px rgba(9, 31, 56, 0.08);
   padding: clamp(24px, 2.6vw, 32px);
   min-height: 100%;
 }
@@ -10064,7 +10064,7 @@ body.medical-landing .timeline-step span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(27, 89, 163, 0.1);
+  background: rgba(17, 66, 125, 0.1);
   color: var(--secondary);
   font-weight: 700;
   margin-bottom: 18px;
@@ -10084,7 +10084,7 @@ body.medical-landing .timeline-step p {
 }
 
 body.medical-landing .medical-step-icon {
-  color: #2e75cf;
+  color: #1F579F;
   display: flex;
   justify-content: center;
   margin: 2px 0 16px;
@@ -10108,7 +10108,7 @@ body.medical-landing .medical-process-cta {
 body.medical-landing .medical-specialties {
   background:
     radial-gradient(circle at 8% 14%, rgba(255, 211, 48, 0.18), transparent 20%),
-    linear-gradient(135deg, #081a32 0%, #0f2a4c 62%, #17375e 100%);
+    linear-gradient(135deg, #051326 0%, #0A1F3A 62%, #102948 100%);
   color: #fff;
 }
 
@@ -10194,13 +10194,13 @@ body.medical-landing .medical-testimonials .b2b-testimonial-card {
 
 body.medical-landing .testimonial-avatar--placeholder {
   background: linear-gradient(135deg, #eef3f9, #dbe7f3);
-  border: 1px solid rgba(16, 42, 76, 0.08);
+  border: 1px solid rgba(11, 31, 58, 0.08);
 }
 
 body.medical-landing .medical-final-cta {
   background:
     linear-gradient(135deg, rgba(255, 212, 48, 0.16), transparent 22%),
-    linear-gradient(135deg, #07172b 0%, var(--primary) 62%, #17375e 100%);
+    linear-gradient(135deg, #041121 0%, var(--primary) 62%, #102948 100%);
 }
 
 body.medical-landing .medical-final-cta .booking-cta-inner {
@@ -10239,8 +10239,8 @@ body.medical-landing .faq-list {
 
 body.medical-landing .faq-item {
   background: #fff;
-  border: 1px solid rgba(16, 42, 76, 0.08);
-  box-shadow: 0 18px 38px rgba(12, 36, 64, 0.06);
+  border: 1px solid rgba(11, 31, 58, 0.08);
+  box-shadow: 0 18px 38px rgba(8, 27, 49, 0.06);
 }
 
 body.medical-landing .faq-question {
@@ -10339,7 +10339,7 @@ body:not(.b2b-landing) .plane-showcase-image {
 }
 
 body:not(.b2b-landing) .benefits-band {
-  background: linear-gradient(135deg, #031b34 0%, #062b55 58%, #031b34 100%);
+  background: linear-gradient(135deg, #011428 0%, #032042 58%, #011428 100%);
   border-radius: 24px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -10572,7 +10572,7 @@ body:not(.b2b-landing) .benefit-item p {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   overflow: hidden;
-  border: 1px solid rgba(6,43,85,.06);
+  border: 1px solid rgba(3, 32, 66,.06);
 }
 .calc-header {
   padding: 40px 48px 0;
@@ -10721,7 +10721,7 @@ body:not(.b2b-landing) .benefit-item p {
   border: 2px solid transparent;
   border-radius: var(--radius-lg);
   padding: 32px 40px;
-  box-shadow: 0 4px 16px rgba(6, 43, 85, 0.05);
+  box-shadow: 0 4px 16px rgba(3, 32, 66, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
   display: flex;
@@ -10730,7 +10730,7 @@ body:not(.b2b-landing) .benefit-item p {
 .profile-card-minimal:hover {
   border-color: var(--accent);
   transform: translateY(-5px);
-  box-shadow: 0 14px 36px rgba(6, 43, 85, 0.12), 0 4px 20px rgba(255, 210, 31, 0.18);
+  box-shadow: 0 14px 36px rgba(3, 32, 66, 0.12), 0 4px 20px rgba(255, 210, 31, 0.18);
 }
 .profile-card-header {
   display: flex;
@@ -11070,9 +11070,9 @@ a[href^="tel"] {
 
 .b2b-proof-grid .proof-card {
   background: #ffffff;
-  border: 1px solid rgba(6, 43, 85, 0.1);
+  border: 1px solid rgba(3, 32, 66, 0.1);
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(6, 43, 85, 0.07);
+  box-shadow: 0 4px 20px rgba(3, 32, 66, 0.07);
   padding: 28px;
   display: flex;
   flex-direction: column;
@@ -11081,7 +11081,7 @@ a[href^="tel"] {
 }
 
 .b2b-proof-grid .proof-card:hover {
-  box-shadow: 0 8px 32px rgba(6, 43, 85, 0.12);
+  box-shadow: 0 8px 32px rgba(3, 32, 66, 0.12);
   transform: translateY(-3px);
 }
 
@@ -11119,24 +11119,24 @@ a[href^="tel"] {
 
 .b2b-proof-grid .proof-avatar {
   object-fit: cover;
-  border: 2px solid rgba(106, 155, 200, 0.3);
+  border: 2px solid rgba(59, 117, 171, 0.3);
 }
 
 .b2b-proof-grid .proof-avatar-initials {
   background: #d4e8f7;
-  color: #062B55;
+  color: #032042;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid rgba(6, 43, 85, 0.12);
+  border: 2px solid rgba(3, 32, 66, 0.12);
   user-select: none;
 }
 
 .b2b-proof-grid .proof-person strong {
-  color: #062B55;
+  color: #032042;
   font-size: 0.88rem;
   font-weight: 700;
   display: block;
@@ -11265,7 +11265,7 @@ body:not(.b2b-landing) .benefit-item p {
 .company-intro-block {
   background: linear-gradient(180deg, #eaf6ff 0%, #ffffff 100%);
   padding-block: clamp(44px, 5vw, 68px);
-  border-bottom: 1px solid rgba(6, 43, 85, 0.07);
+  border-bottom: 1px solid rgba(3, 32, 66, 0.07);
 }
 
 .intro-block-inner {
@@ -11282,7 +11282,7 @@ body:not(.b2b-landing) .benefit-item p {
   height: 68px;
   border-radius: 50%;
   background: var(--sky-soft);
-  border: 1.5px solid rgba(6, 43, 85, 0.12);
+  border: 1.5px solid rgba(3, 32, 66, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11405,7 +11405,7 @@ body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-quote {
 
 body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-card {
   border-radius: 28px;
-  box-shadow: 0 24px 64px rgba(16, 42, 76, 0.1);
+  box-shadow: 0 24px 64px rgba(11, 31, 58, 0.1);
   max-width: none;
 }
 
@@ -11475,16 +11475,16 @@ body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-results {
 body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-result-card {
   border-radius: 0;
   box-shadow: none;
-  border-top: 1px solid rgba(6, 43, 85, 0.08);
-  border-bottom: 1px solid rgba(6, 43, 85, 0.08);
+  border-top: 1px solid rgba(3, 32, 66, 0.08);
+  border-bottom: 1px solid rgba(3, 32, 66, 0.08);
 }
 
 body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-result-card + .calc-result-card {
-  border-left: 1px solid rgba(6, 43, 85, 0.08);
+  border-left: 1px solid rgba(3, 32, 66, 0.08);
 }
 
 body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-result-card.accent {
-  border-color: rgba(6, 43, 85, 0.08);
+  border-color: rgba(3, 32, 66, 0.08);
 }
 
 /* ===== Medical integrated calculator block ===== */
@@ -11543,7 +11543,7 @@ body.medical-landing .medical-calc-feature .company-calc-intro .intro-block-quot
 
 body.medical-landing .medical-calc-feature .calc-card {
   border-radius: 28px;
-  box-shadow: 0 24px 64px rgba(16, 42, 76, 0.1);
+  box-shadow: 0 24px 64px rgba(11, 31, 58, 0.1);
   max-width: none;
 }
 
@@ -11568,16 +11568,16 @@ body.medical-landing .medical-calc-feature .calc-results {
 body.medical-landing .medical-calc-feature .calc-result-card {
   border-radius: 0;
   box-shadow: none;
-  border-top: 1px solid rgba(6, 43, 85, 0.08);
-  border-bottom: 1px solid rgba(6, 43, 85, 0.08);
+  border-top: 1px solid rgba(3, 32, 66, 0.08);
+  border-bottom: 1px solid rgba(3, 32, 66, 0.08);
 }
 
 body.medical-landing .medical-calc-feature .calc-result-card + .calc-result-card {
-  border-left: 1px solid rgba(6, 43, 85, 0.08);
+  border-left: 1px solid rgba(3, 32, 66, 0.08);
 }
 
 body.medical-landing .medical-calc-feature .calc-result-card.accent {
-  border-color: rgba(6, 43, 85, 0.08);
+  border-color: rgba(3, 32, 66, 0.08);
 }
 
 /* ===== Smaller companies marquee ===== */
@@ -11631,7 +11631,7 @@ body.medical-landing .b2b-premium-logos .marquee-item-box img {
   body.b2b-landing:not(.medical-landing) .company-calc-feature .calc-result-card + .calc-result-card,
   body.medical-landing .medical-calc-feature .calc-result-card + .calc-result-card {
     border-left: 0;
-    border-top: 1px solid rgba(6, 43, 85, 0.08);
+    border-top: 1px solid rgba(3, 32, 66, 0.08);
   }
 
   body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box,
@@ -11672,9 +11672,9 @@ body.medical-landing .medical-process .company-model-grid {
 
 body.b2b-landing:not(.medical-landing) .company-model-card {
   background: #fff;
-  border: 1px solid rgba(6, 43, 85, 0.08);
+  border: 1px solid rgba(3, 32, 66, 0.08);
   border-radius: 24px;
-  box-shadow: 0 16px 36px rgba(16, 42, 76, 0.08);
+  box-shadow: 0 16px 36px rgba(11, 31, 58, 0.08);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11686,9 +11686,9 @@ body.b2b-landing:not(.medical-landing) .company-model-card {
 
 body.medical-landing .medical-process .company-model-card {
   background: #fff;
-  border: 1px solid rgba(6, 43, 85, 0.08);
+  border: 1px solid rgba(3, 32, 66, 0.08);
   border-radius: 24px;
-  box-shadow: 0 16px 36px rgba(16, 42, 76, 0.08);
+  box-shadow: 0 16px 36px rgba(11, 31, 58, 0.08);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11741,13 +11741,13 @@ body.medical-landing .medical-process .company-model-number {
 }
 
 body.b2b-landing:not(.medical-landing) .company-model-icon {
-  color: #2e75cf;
+  color: #1F579F;
   display: inline-flex;
   margin: 26px auto 18px;
 }
 
 body.b2b-landing:not(.medical-landing) .company-model-icon--accent {
-  color: #2e75cf;
+  color: #1F579F;
 }
 
 body.b2b-landing:not(.medical-landing) .company-model-icon svg {
@@ -11819,7 +11819,7 @@ body.b2b-landing:not(.medical-landing) .company-model-cta {
 
 /* ===== Company trust + testimonials ===== */
 body.b2b-landing:not(.medical-landing) .company-trust-proof {
-  background: linear-gradient(135deg, #07172b 0%, #062b55 58%, #0a3665 100%);
+  background: linear-gradient(135deg, #041121 0%, #032042 58%, #05284E 100%);
   padding-block: clamp(64px, 7vw, 104px);
 }
 
@@ -11996,7 +11996,7 @@ body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-pro
 body.b2b-landing:not(.medical-landing) .company-proof-cards .testimonial-avatar--placeholder {
   align-items: center;
   background: linear-gradient(135deg, #eef3f9, #dbe7f3);
-  border: 1px solid rgba(16, 42, 76, 0.08);
+  border: 1px solid rgba(11, 31, 58, 0.08);
   color: var(--primary);
   display: inline-flex;
   font-size: 0.78rem;
@@ -12050,7 +12050,7 @@ body.b2b-landing:not(.medical-landing) .philosophy-p[data-i18n="company_phil_p3"
   width: 10px;
   height: 10px;
   margin-right: 10px;
-  border: 2px solid #0f5ea8;
+  border: 2px solid #084781;
   border-radius: 50%;
   vertical-align: middle;
 }
@@ -12191,9 +12191,9 @@ body.medical-landing .medical-program-title h2 {
 
 body.medical-landing .medical-program-card {
   background: rgba(255,255,255,.92);
-  border: 1px solid rgba(16,42,76,.08);
+  border: 1px solid rgba(11, 31, 58,.08);
   border-radius: 26px;
-  box-shadow: 0 20px 48px rgba(16,42,76,.08);
+  box-shadow: 0 20px 48px rgba(11, 31, 58,.08);
   padding: clamp(24px, 2.8vw, 34px);
 }
 
@@ -12264,9 +12264,9 @@ body.medical-landing .medical-process-cards {
 body.medical-landing .medical-process-cards .timeline-step {
   align-items: center;
   background: #fff;
-  border: 1px solid rgba(16,42,76,.08);
+  border: 1px solid rgba(11, 31, 58,.08);
   border-radius: 22px;
-  box-shadow: 0 16px 38px rgba(16,42,76,.06);
+  box-shadow: 0 16px 38px rgba(11, 31, 58,.06);
   display: flex;
   flex-direction: column;
   padding: 22px 20px 24px;
@@ -12282,7 +12282,7 @@ body.medical-landing .medical-process-cards .timeline-step span {
 }
 
 body.medical-landing .medical-process-cards .medical-step-icon {
-  color: #2f73c9;
+  color: #20569A;
   margin-bottom: 14px;
 }
 
@@ -12336,15 +12336,15 @@ body.medical-landing .medical-specialties-light .specialty-grid {
 
 body.medical-landing .medical-specialties-light .specialty-card {
   background: rgba(255,255,255,.96);
-  border: 1px solid rgba(16,42,76,.08);
+  border: 1px solid rgba(11, 31, 58,.08);
   border-radius: 18px;
-  box-shadow: 0 14px 32px rgba(16,42,76,.05);
+  box-shadow: 0 14px 32px rgba(11, 31, 58,.05);
   min-height: 126px;
   padding: 20px 16px;
 }
 
 body.medical-landing .medical-specialties-light .specialty-icon {
-  color: #2f73c9;
+  color: #20569A;
 }
 
 body.medical-landing .medical-specialties-light .specialty-card span:last-child {
@@ -12394,9 +12394,9 @@ body.medical-landing .medical-final-cta-light p {
 
 body.medical-landing .medical-cta-action-bar {
   background: rgba(255,255,255,.92);
-  border: 1px solid rgba(16,42,76,.08);
+  border: 1px solid rgba(11, 31, 58,.08);
   border-radius: 18px;
-  box-shadow: 0 14px 36px rgba(16,42,76,.06);
+  box-shadow: 0 14px 36px rgba(11, 31, 58,.06);
   grid-template-columns: repeat(5, minmax(0, 1fr));
   margin-top: 26px;
   padding: 10px;
@@ -12409,7 +12409,7 @@ body.medical-landing .medical-cta-action-bar .btn {
 }
 
 body.medical-landing .medical-cta-action-bar .btn-outline {
-  border-color: rgba(16,42,76,.12);
+  border-color: rgba(11, 31, 58,.12);
   color: var(--primary);
 }
 
@@ -12512,9 +12512,9 @@ body.medical-landing .medical-process-cards {
 body.medical-landing .medical-process-cards .timeline-step {
   align-items: center !important;
   background: rgba(255, 255, 255, .96) !important;
-  border: 1px solid rgba(6, 43, 85, .1) !important;
+  border: 1px solid rgba(3, 32, 66, .1) !important;
   border-radius: 24px !important;
-  box-shadow: 0 16px 36px rgba(16, 42, 76, .08) !important;
+  box-shadow: 0 16px 36px rgba(11, 31, 58, .08) !important;
   display: flex !important;
   flex-direction: column !important;
   min-height: 100% !important;
@@ -12542,7 +12542,7 @@ body.medical-landing .medical-process-cards .timeline-step > span {
 }
 
 body.medical-landing .medical-process-cards .medical-step-icon {
-  color: #1f6fbd !important;
+  color: #145391 !important;
   display: inline-flex !important;
   margin: 26px auto 18px !important;
 }
@@ -12631,9 +12631,9 @@ body.medical-landing .medical-specialties-light .specialty-grid {
 body.medical-landing .medical-specialties-light .specialty-card {
   align-items: center !important;
   background: rgba(255, 255, 255, .86) !important;
-  border: 1px solid rgba(16, 42, 76, .09) !important;
+  border: 1px solid rgba(11, 31, 58, .09) !important;
   border-radius: 16px !important;
-  box-shadow: 0 14px 30px rgba(16, 42, 76, .07) !important;
+  box-shadow: 0 14px 30px rgba(11, 31, 58, .07) !important;
   display: flex !important;
   flex-direction: row !important;
   gap: 14px !important;
@@ -12645,17 +12645,17 @@ body.medical-landing .medical-specialties-light .specialty-card {
 }
 
 body.medical-landing .medical-specialties-light .specialty-card:hover {
-  border-color: rgba(46, 117, 207, .26) !important;
-  box-shadow: 0 18px 38px rgba(16, 42, 76, .1) !important;
+  border-color: rgba(31, 87, 159, .26) !important;
+  box-shadow: 0 18px 38px rgba(11, 31, 58, .1) !important;
   transform: translateY(-3px);
 }
 
 body.medical-landing .medical-specialties-light .specialty-icon {
   align-items: center;
-  background: rgba(46, 117, 207, .1);
-  border: 1px solid rgba(46, 117, 207, .14);
+  background: rgba(31, 87, 159, .1);
+  border: 1px solid rgba(31, 87, 159, .14);
   border-radius: 14px;
-  color: #2e5f9f !important;
+  color: #20477A !important;
   display: inline-flex;
   flex: 0 0 auto;
   height: 64px;
@@ -12773,7 +12773,7 @@ body.medical-landing .medical-cta-action-bar {
 
 body.medical-landing .medical-cta-action-bar .btn {
   border-radius: 999px !important;
-  box-shadow: 0 10px 22px rgba(16, 42, 76, .08);
+  box-shadow: 0 10px 22px rgba(11, 31, 58, .08);
   font-size: .9rem !important;
   justify-content: center;
   min-height: 48px !important;
@@ -12794,7 +12794,7 @@ body.medical-landing .medical-cta-action-bar .btn-dark {
 
 body.medical-landing .medical-cta-action-bar .btn-outline {
   background: #fff !important;
-  border: 1px solid rgba(16, 42, 76, .1) !important;
+  border: 1px solid rgba(11, 31, 58, .1) !important;
   color: var(--primary) !important;
 }
 
@@ -12882,7 +12882,7 @@ body.medical-landing .medical-proof-cards .b2b-testimonial-card {
   background: rgba(255, 255, 255, 0.94) !important;
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 16px;
-  box-shadow: 0 18px 40px rgba(16, 42, 76, 0.12);
+  box-shadow: 0 18px 40px rgba(11, 31, 58, 0.12);
   min-height: 0 !important;
   padding: clamp(20px, 1.8vw, 26px) !important;
 }
@@ -12931,7 +12931,7 @@ body.medical-landing .medical-proof-cards .b2b-testimonial-profile {
 body.medical-landing .medical-proof-cards .testimonial-avatar--placeholder {
   align-items: center;
   background: linear-gradient(135deg, #eef3f9, #dbe7f3);
-  border: 1px solid rgba(16, 42, 76, 0.08);
+  border: 1px solid rgba(11, 31, 58, 0.08);
   color: var(--primary);
   display: inline-flex;
   font-size: 0.78rem;
@@ -13494,7 +13494,7 @@ body.medical-landing .split-hero-title {
 }
 
 .hero-highlight-blue {
-  color: #1f6fbd !important;
+  color: #145391 !important;
 }
 
 .medical-hero-line-nowrap {
@@ -13875,7 +13875,7 @@ body.medical-landing .medical-program-section {
     content: "";
     position: absolute;
     inset: 0;
-    background: url("../assets/images/empresas-hero.webp?v=20260518a") center 22% / cover no-repeat;
+    background: url("../assets/images/foto-equipo-portatil.webp") center 22% / cover no-repeat;
     filter: blur(5px) saturate(0.9);
     transform: scale(1.08);
     z-index: -2;
@@ -13886,7 +13886,7 @@ body.medical-landing .medical-program-section {
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(180deg, rgba(6, 18, 38, 0.42) 0%, rgba(6, 18, 38, 0.72) 58%, rgba(6, 18, 38, 0.82) 100%);
+      linear-gradient(180deg, rgba(4, 13, 29, 0.42) 0%, rgba(4, 13, 29, 0.72) 58%, rgba(4, 13, 29, 0.82) 100%);
     z-index: -1;
   }
 
@@ -13899,18 +13899,18 @@ body.medical-landing .medical-program-section {
     margin: 0 auto;
     padding: clamp(18px, 4vw, 26px);
     border-radius: 18px;
-    background: rgba(7, 20, 44, 0.45);
+    background: rgba(4, 15, 34, 0.45);
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
-    box-shadow: 0 16px 42px rgba(0, 10, 30, 0.2);
+    box-shadow: 0 16px 42px rgba(0, 7, 22, 0.2);
   }
 
   body.b2b-landing:not(.medical-landing) .split-hero-kicker,
   body.b2b-landing:not(.medical-landing) .split-hero-title,
   body.b2b-landing:not(.medical-landing) .split-hero-desc {
     color: #f6f9ff !important;
-    text-shadow: 0 2px 14px rgba(4, 12, 26, 0.55);
+    text-shadow: 0 2px 14px rgba(3, 9, 20, 0.55);
   }
 
   body.b2b-landing:not(.medical-landing) .split-hero-title {
@@ -14426,8 +14426,8 @@ textarea {
   body.medical-landing .header,
   body.contact-page .header {
     background: rgba(255, 255, 255, .96) !important;
-    border-bottom: 1px solid rgba(16, 42, 76, .08);
-    box-shadow: 0 10px 30px rgba(16, 42, 76, .08);
+    border-bottom: 1px solid rgba(11, 31, 58, .08);
+    box-shadow: 0 10px 30px rgba(11, 31, 58, .08);
     padding-block: 8px !important;
   }
 
@@ -14471,8 +14471,8 @@ textarea {
   }
 
   .lang-trigger {
-    background: rgba(16, 42, 76, .06) !important;
-    border: 1px solid rgba(16, 42, 76, .08) !important;
+    background: rgba(11, 31, 58, .06) !important;
+    border: 1px solid rgba(11, 31, 58, .08) !important;
     color: var(--primary) !important;
     min-height: 42px;
     min-width: 42px;
@@ -14486,8 +14486,8 @@ textarea {
 
   .hamburger {
     align-items: center;
-    background: rgba(16, 42, 76, .06) !important;
-    border: 1px solid rgba(16, 42, 76, .08) !important;
+    background: rgba(11, 31, 58, .06) !important;
+    border: 1px solid rgba(11, 31, 58, .08) !important;
     border-radius: 999px;
     cursor: pointer;
     display: flex !important;
@@ -14562,13 +14562,13 @@ textarea {
 
   body.b2b-landing:not(.medical-landing) .split-hero {
     background:
-      linear-gradient(90deg, rgba(5, 24, 48, .78) 0%, rgba(5, 24, 48, .55) 46%, rgba(5, 24, 48, .26) 100%),
-      url("../assets/images/empresas-hero.webp?v=20260518a") center center / cover no-repeat !important;
+      linear-gradient(90deg, rgba(3, 18, 37, .78) 0%, rgba(3, 18, 37, .55) 46%, rgba(3, 18, 37, .26) 100%),
+      url("../assets/images/foto-equipo-portatil.webp") center center / cover no-repeat !important;
   }
 
   body.medical-landing .medical-hero {
     background:
-      linear-gradient(90deg, rgba(5, 24, 48, .78) 0%, rgba(5, 24, 48, .48) 52%, rgba(255, 255, 255, .2) 100%),
+      linear-gradient(90deg, rgba(3, 18, 37, .78) 0%, rgba(3, 18, 37, .48) 52%, rgba(255, 255, 255, .2) 100%),
       url("../assets/images/service-medical-concierge.webp?v=20260517c") center center / cover no-repeat !important;
   }
 
@@ -15031,7 +15031,7 @@ body.medical-landing .medical-process-cards.company-model-grid .company-model-ca
 body.b2b-landing:not(.medical-landing) .company-model-card:hover {
   border-color: var(--accent) !important;
   box-shadow:
-    0 14px 36px rgba(6, 43, 85, .12),
+    0 14px 36px rgba(3, 32, 66, .12),
     0 4px 20px rgba(255, 210, 31, .18) !important;
   transform: translateY(-5px) !important;
 }
@@ -15280,13 +15280,13 @@ body.medical-landing .medical-specialty-note .btn {
 
 body.medical-landing .medical-cta-action-bar .btn-dark {
   background: #fff !important;
-  border-color: rgba(16, 42, 76, .18) !important;
+  border-color: rgba(11, 31, 58, .18) !important;
   color: var(--primary) !important;
 }
 
 body.medical-landing .medical-cta-action-bar .btn-dark:hover {
-  background: rgba(16, 42, 76, .06) !important;
-  border-color: rgba(16, 42, 76, .32) !important;
+  background: rgba(11, 31, 58, .06) !important;
+  border-color: rgba(11, 31, 58, .32) !important;
   color: var(--primary) !important;
 }
 
@@ -15456,7 +15456,7 @@ body.medical-landing .medical-process-cards.company-model-grid .company-model-ca
   background: #fff !important;
   border: 2px solid transparent !important;
   border-radius: 24px !important;
-  box-shadow: 0 16px 36px rgba(16, 42, 76, 0.08) !important;
+  box-shadow: 0 16px 36px rgba(11, 31, 58, 0.08) !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
@@ -15583,7 +15583,7 @@ body.medical-landing .medical-complete-service-list li {
 body.medical-landing .medical-complete-service-list li::before {
   align-items: center;
   background: transparent;
-  border: 2px solid #0d65bf;
+  border: 2px solid #064C93;
   border-radius: 999px;
   content: "";
   display: inline-flex;
@@ -15595,7 +15595,7 @@ body.medical-landing .medical-complete-service-list li::before {
 
 body.medical-landing .medical-complete-service-media {
   border-radius: 22px;
-  box-shadow: 0 28px 70px rgba(6, 43, 85, .16);
+  box-shadow: 0 28px 70px rgba(3, 32, 66, .16);
   overflow: hidden;
   position: relative;
 }
@@ -15668,9 +15668,9 @@ body.medical-landing .medical-standards-grid {
 body.medical-landing .medical-standard-card {
   align-items: center;
   background: rgba(255, 255, 255, .96);
-  border: 1px solid rgba(16, 42, 76, .08);
+  border: 1px solid rgba(11, 31, 58, .08);
   border-radius: 22px;
-  box-shadow: 0 18px 44px rgba(16, 42, 76, .08);
+  box-shadow: 0 18px 44px rgba(11, 31, 58, .08);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15681,8 +15681,8 @@ body.medical-landing .medical-standard-card {
 }
 
 body.medical-landing .medical-standard-card:hover {
-  border-color: rgba(16, 42, 76, .12);
-  box-shadow: 0 24px 58px rgba(16, 42, 76, .14);
+  border-color: rgba(11, 31, 58, .12);
+  box-shadow: 0 24px 58px rgba(11, 31, 58, .14);
 }
 
 body.medical-landing .medical-standard-card h3 {
@@ -15701,7 +15701,7 @@ body.medical-landing .medical-standard-card p {
 }
 
 body.medical-landing .medical-behind-scenes {
-  background: linear-gradient(135deg, #07172b 0%, var(--primary) 58%, #17375e 100%);
+  background: linear-gradient(135deg, #041121 0%, var(--primary) 58%, #102948 100%);
   min-height: 0 !important;
   padding-block: clamp(66px, 7vw, 102px);
 }
@@ -15754,10 +15754,10 @@ body.medical-landing .medical-closing-cta .container {
 
 body.medical-landing .medical-closing-cta-panel {
   background:
-    linear-gradient(180deg, rgba(7, 31, 58, .78), rgba(7, 31, 58, .78)),
+    linear-gradient(180deg, rgba(4, 23, 45, .78), rgba(4, 23, 45, .78)),
     url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat;
   border-radius: 22px;
-  box-shadow: 0 28px 70px rgba(6, 43, 85, .18);
+  box-shadow: 0 28px 70px rgba(3, 32, 66, .18);
   margin: 0 auto;
   max-width: 980px;
   padding: clamp(58px, 6vw, 86px) clamp(28px, 6vw, 86px);
@@ -15930,7 +15930,7 @@ body.medical-landing .medical-specialty-carousel::-webkit-scrollbar {
 body.medical-landing .medical-specialty-slide {
   background: var(--primary);
   border-radius: 20px;
-  box-shadow: 0 28px 70px rgba(6, 43, 85, .16);
+  box-shadow: 0 28px 70px rgba(3, 32, 66, .16);
   flex: 0 0 clamp(310px, 25vw, 380px);
   height: clamp(310px, 25vw, 380px);
   overflow: hidden;
@@ -15939,7 +15939,7 @@ body.medical-landing .medical-specialty-slide {
 }
 
 body.medical-landing .medical-specialty-slide::after {
-  background: linear-gradient(180deg, rgba(3, 23, 45, 0) 34%, rgba(3, 23, 45, .84) 100%);
+  background: linear-gradient(180deg, rgba(1, 17, 35, 0) 34%, rgba(1, 17, 35, .84) 100%);
   content: "";
   inset: 0;
   position: absolute;
@@ -16125,7 +16125,7 @@ body.medical-landing .medical-specialty-slide-copy h3 {
 /* Company hero photo lock: fill the entire right side without shortening the book. */
 @media (min-width: 1024px) {
   body.b2b-landing:not(.medical-landing) .split-hero-image {
-    background: url("../assets/images/empresas-hero.webp?v=20260518a") right top / auto 100% no-repeat !important;
+    background: url("../assets/images/foto-equipo-portatil.webp") right top / auto 100% no-repeat !important;
     overflow: visible !important;
   }
 
@@ -16371,11 +16371,11 @@ body.medical-landing .medical-standard-card:focus-within,
 body.medical-landing .medical-standard-card:active {
   border-color: var(--accent) !important;
   outline: 0 !important;
-  box-shadow: 0 24px 58px rgba(16, 42, 76, .14) !important;
+  box-shadow: 0 24px 58px rgba(11, 31, 58, .14) !important;
 }
 
 body.medical-landing .medical-behind-scenes.company-trust-proof {
-  background: linear-gradient(135deg, #07172b 0%, #062b55 58%, #0a3665 100%) !important;
+  background: linear-gradient(135deg, #041121 0%, #032042 58%, #05284E 100%) !important;
   padding-block: clamp(64px, 7vw, 104px) !important;
 }
 
@@ -16591,7 +16591,7 @@ body.medical-landing .medical-patient-journey .section-header {
   body.b2b-landing .split-hero-title .hero-highlight,
   body.medical-landing .split-hero-title .hero-highlight {
     text-shadow: none !important;
-    color: #102A4C !important;
+    color: #0B1F3A !important;
     background: #FFD21F !important;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
@@ -16603,7 +16603,7 @@ body.medical-landing .medical-patient-journey .section-header {
 @media (max-width: 900px) {
   body.medical-landing .medical-program-section {
     background:
-      linear-gradient(rgba(6, 43, 85, 0.82), rgba(6, 43, 85, 0.82)),
+      linear-gradient(rgba(3, 32, 66, 0.82), rgba(3, 32, 66, 0.82)),
       url("../assets/images/medical-program-office-bg.webp") center center / cover no-repeat !important;
     height: auto !important;
     min-height: 0 !important;
@@ -16682,7 +16682,7 @@ body.medical-landing .medical-patient-journey .section-header {
 @media (max-width: 900px) {
   body.medical-landing .medical-hero {
     background:
-      linear-gradient(180deg, rgba(4, 18, 42, .78) 0%, rgba(4, 18, 42, .72) 100%),
+      linear-gradient(180deg, rgba(2, 13, 32, .78) 0%, rgba(2, 13, 32, .72) 100%),
       url("../assets/images/service-medical-concierge.webp?v=20260517c") center center / cover no-repeat !important;
   }
 }
@@ -16804,7 +16804,7 @@ body.medical-landing .medical-patient-journey .section-header {
   body:not(.b2b-landing) .stats-grid {
     border-radius: 16px !important;
     border: 1px solid rgba(191, 216, 244, 0.5) !important;
-    box-shadow: 0 4px 20px rgba(6, 43, 85, 0.06) !important;
+    box-shadow: 0 4px 20px rgba(3, 32, 66, 0.06) !important;
     background: rgba(255, 255, 255, 0.96) !important;
     margin-inline: 4px !important;
   }
@@ -17027,7 +17027,7 @@ body.medical-landing .medical-patient-journey .section-header {
     left: 0 !important;
     width: 100% !important;
     padding: 20px 18px !important;
-    background: linear-gradient(to top, rgba(8, 24, 46, 0.97) 0%, rgba(16, 42, 76, 0.52) 60%, transparent 100%) !important;
+    background: linear-gradient(to top, rgba(5, 18, 35, 0.97) 0%, rgba(11, 31, 58, 0.52) 60%, transparent 100%) !important;
   }
   body:not(.b2b-landing) .dest-card-content h3 {
     font-size: 1.18rem !important;
@@ -17064,7 +17064,7 @@ body.medical-landing .medical-patient-journey .section-header {
     background: #ffffff !important;
     border: 1px solid rgba(191, 216, 244, 0.55) !important;
     border-radius: 18px !important;
-    box-shadow: 0 8px 36px rgba(6, 43, 85, 0.13) !important;
+    box-shadow: 0 8px 36px rgba(3, 32, 66, 0.13) !important;
     margin-inline: 0 !important;
     grid-template-columns: 1fr 1fr !important;
     gap: 0 !important;
@@ -17224,9 +17224,9 @@ body.medical-landing .medical-patient-journey .section-header {
 
   body:not(.b2b-landing) .destinations-scroll .scroll-title {
     background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(240,247,255,.92)) !important;
-    border: 1px solid rgba(16,42,76,.08) !important;
+    border: 1px solid rgba(11, 31, 58,.08) !important;
     border-radius: 18px !important;
-    box-shadow: 0 14px 36px rgba(6,43,85,.08) !important;
+    box-shadow: 0 14px 36px rgba(3, 32, 66,.08) !important;
     justify-content: center !important;
     min-height: 320px !important;
     order: 0 !important;
@@ -17318,7 +17318,7 @@ body.medical-landing .medical-patient-journey .section-header {
     background: transparent !important;
     box-decoration-break: initial !important;
     -webkit-box-decoration-break: initial !important;
-    color: #102A4C !important;
+    color: #0B1F3A !important;
     display: inline-flex !important;
     flex-direction: column !important;
     gap: 0.14em !important;
@@ -17328,7 +17328,7 @@ body.medical-landing .medical-patient-journey .section-header {
 
   body.medical-landing .medical-hero .split-hero-title .medical-hero-highlight-piece {
     background: #FFD21F !important;
-    color: #102A4C !important;
+    color: #0B1F3A !important;
     display: inline-block !important;
     line-height: 1.04 !important;
     padding: 0 .12em .04em !important;
@@ -17518,9 +17518,9 @@ body:not(.b2b-landing) .home-credentials-testimonials {
 
 body:not(.b2b-landing) .home-testimonial-card {
   background: rgba(255, 255, 255, 0.94) !important;
-  border: 1px solid rgba(16, 42, 76, 0.08) !important;
+  border: 1px solid rgba(11, 31, 58, 0.08) !important;
   border-radius: 16px !important;
-  box-shadow: 0 18px 44px rgba(16, 42, 76, 0.08) !important;
+  box-shadow: 0 18px 44px rgba(11, 31, 58, 0.08) !important;
   display: flex !important;
   flex-direction: column !important;
   min-height: 0 !important;
@@ -17594,7 +17594,7 @@ body:not(.b2b-landing) .home-testimonial-card .testimonial-stars {
 @media (max-width: 768px) {
   body:not(.b2b-landing) .profile-card-minimal.is-mobile-selected {
     border-color: var(--accent) !important;
-    box-shadow: 0 14px 34px rgba(6, 43, 85, 0.11), 0 0 0 2px rgba(255, 210, 31, 0.46) !important;
+    box-shadow: 0 14px 34px rgba(3, 32, 66, 0.11), 0 0 0 2px rgba(255, 210, 31, 0.46) !important;
   }
 
   body:not(.b2b-landing) .home-credentials-testimonials {
@@ -17633,7 +17633,7 @@ body:not(.b2b-landing) .home-testimonial-card .testimonial-stars {
    Medicos — patient banner and mobile FAQ arrows
    ============================================================ */
 body.medical-landing .medical-patient-banner {
-  background: #062b55 !important;
+  background: #032042 !important;
   border-radius: 999px !important;
   box-shadow: none !important;
   margin: clamp(28px, 3.2vw, 44px) auto 0 !important;
@@ -19529,7 +19529,7 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
     background: rgba(255, 255, 255, 0.96) !important;
     border: 1px solid rgba(226, 232, 240, 0.9) !important;
     border-radius: 18px !important;
-    box-shadow: 0 22px 60px rgba(8, 24, 46, 0.18) !important;
+    box-shadow: 0 22px 60px rgba(5, 18, 35, 0.18) !important;
     display: grid !important;
     gap: 0 !important;
     grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr) 1px minmax(0, 1fr) 1px minmax(0, 1fr) !important;
@@ -19629,7 +19629,7 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
     background: rgba(255, 255, 255, 0.96) !important;
     border: 1px solid rgba(226, 232, 240, 0.9) !important;
     border-radius: 18px !important;
-    box-shadow: 0 22px 60px rgba(8, 24, 46, 0.18) !important;
+    box-shadow: 0 22px 60px rgba(5, 18, 35, 0.18) !important;
     grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr) 1px minmax(0, 1fr) 1px minmax(0, 1fr) !important;
     max-width: 1180px !important;
     padding: 0 !important;
@@ -19803,10 +19803,10 @@ body.medical-landing .company-sky-cta.medical-booking-cta {
 }
 body.medical-landing .company-sky-cta.medical-booking-cta .booking-cta-inner {
   background:
-    linear-gradient(135deg, rgba(12,35,66,.78), rgba(16,42,76,.48)),
+    linear-gradient(135deg, rgba(8, 26, 51,.78), rgba(11, 31, 58,.48)),
     url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat !important;
   border: 1px solid rgba(255,255,255,.34) !important;
-  box-shadow: 0 28px 74px rgba(16,42,76,.18) !important;
+  box-shadow: 0 28px 74px rgba(11, 31, 58,.18) !important;
   text-align: center !important;
 }
 body.medical-landing .company-sky-cta.medical-booking-cta .company-booking-inner h2 {
@@ -20006,7 +20006,7 @@ body.medical-landing .company-sky-cta.medical-booking-cta .btn-dark:hover {
   transform: translate(-50%, 160%);
   width: min(960px, calc(100% - 28px));
   z-index: 9999;
-  background: #082b4b;
+  background: #04203A;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 16px;
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
@@ -20041,7 +20041,7 @@ body.medical-landing .company-sky-cta.medical-booking-cta .btn-dark:hover {
 }
 .cookie-banner__btn--accept {
   background: linear-gradient(90deg, #ffd322 0%, #ffcf24 100%);
-  color: #082b4b;
+  color: #04203A;
 }
 .cookie-banner__btn--accept:hover { filter: brightness(1.05); }
 .cookie-banner__btn--ghost {
@@ -20171,9 +20171,9 @@ body.medical-landing .company-sky-cta.medical-booking-cta .btn-dark:hover {
     align-items: center;
     gap: 10px;
     padding: 10px;
-    background: rgba(6, 25, 83, .96);
+    background: rgba(3, 18, 64, .96);
     border-radius: 18px;
-    box-shadow: 0 14px 34px rgba(6, 25, 83, .35);
+    box-shadow: 0 14px 34px rgba(3, 18, 64, .35);
     transform: translateY(160%);
     transition: transform .35s cubic-bezier(.22, 1, .36, 1);
   }

@@ -1642,7 +1642,7 @@ document.addEventListener('DOMContentLoaded', () => {
           destination: lead.destination || ''
         });
         btn.textContent = currentLang === 'es' ? 'Solicitud recibida ✓' : 'Request received ✓';
-        btn.style.background = '#183A63';
+        btn.style.background = '#102B4C';
         form.reset();
         Object.entries(attribution).forEach(([key, value]) => {
           const field = document.getElementById(key);
@@ -1703,7 +1703,7 @@ document.addEventListener('DOMContentLoaded', () => {
           volume: lead.volume || lead.patient_volume || ''
         });
         btn.textContent = 'Solicitud recibida';
-        btn.style.background = '#183A63';
+        btn.style.background = '#102B4C';
         landingForm.reset();
       } catch (error) {
         console.error('Landing lead submit failed:', error);
@@ -2087,7 +2087,7 @@ document.addEventListener('DOMContentLoaded', () => {
       var style = document.createElement('style');
       style.textContent =
         '.promo-strip{padding:18px 0 6px;background:transparent}' +
-        '.promo-strip__frame{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(10,37,64,.12);background:#0a2540}' +
+        '.promo-strip__frame{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(6, 28, 49,.12);background:#061C31}' +
         '.promo-strip__slide{display:block;position:absolute;inset:0;opacity:0;transition:opacity .6s ease;pointer-events:none}' +
         '.promo-strip__slide.is-active{position:relative;opacity:1;pointer-events:auto}' +
         '.promo-strip__slide img{display:block;width:100%;height:auto;aspect-ratio:12/1;object-fit:cover}' +
