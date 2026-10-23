@@ -1,11 +1,10 @@
 // =====================================================================
 // Inicio de CS Travel Group (rebranding, copia sin publicar)
-// 1) Burbujas de cifras: siguen el cursor por capas, brillo bajo el mouse
-//    y los números cuentan al aparecer.
-// 2) ¿Con quién trabajamos?: tarjetas que flotan sobre el borde del video.
-// 3) Lo que significa trabajar con nosotros: lista que cambia la foto.
-// 4) Carrusel de servicios en abanico (flechas, puntos, teclado, arrastre).
-// Sin JS todo se ve: cifras finales, primer punto abierto, tarjetas quietas.
+// 1) Las cifras del hero cuentan al aparecer.
+// 2) Lo que significa trabajar con nosotros: tres paneles; el elegido se abre.
+// 3) Carrusel de servicios en abanico (flechas, puntos, teclado, arrastre).
+// Nada sigue al cursor. Sin JS todo se ve: cifras finales, primer panel
+// abierto y las tarjetas del carrusel quietas.
 // =====================================================================
 (function () {
   'use strict';
@@ -35,92 +34,30 @@
     els.forEach(function (el) { el.textContent = '0'; io.observe(el); });
   })();
 
-  // ------------------------------------------------------- Burbujas
-  (function bubbles() {
-    var hero = document.querySelector('.cs-hero');
-    var items = document.querySelectorAll('.cs-bubble');
-    if (!hero || !items.length) return;
-    items.forEach(function (b) {
-      b.addEventListener('pointermove', function (e) {
-        var r = b.getBoundingClientRect();
-        b.style.setProperty('--gx', (e.clientX - r.left) + 'px');
-        b.style.setProperty('--gy', (e.clientY - r.top) + 'px');
-      });
-    });
-    if (reduced || !finePointer) return;
-    // Cada burbuja se mueve con una profundidad distinta: parecen flotar.
-    var depth = [10, 18, 14, 22];
-    var raf = 0, px = 0, py = 0;
-    hero.addEventListener('pointermove', function (e) {
-      var r = hero.getBoundingClientRect();
-      px = (e.clientX - r.left) / r.width - 0.5;
-      py = (e.clientY - r.top) / r.height - 0.5;
-      if (raf) return;
-      raf = requestAnimationFrame(function () {
-        raf = 0;
-        items.forEach(function (b, i) {
-          b.style.setProperty('--mx', (px * depth[i % depth.length]).toFixed(1) + 'px');
-          b.style.setProperty('--my', (py * depth[i % depth.length] * 0.6).toFixed(1) + 'px');
-        });
-      });
-    });
-    hero.addEventListener('pointerleave', function () {
-      items.forEach(function (b) { b.style.setProperty('--mx', '0px'); b.style.setProperty('--my', '0px'); });
-    });
-  })();
-
-  // ---------------------------- Tarjetas que flotan alrededor del video
-  (function floats() {
-    var sec = document.querySelector('.cs-video');
-    var cards = document.querySelectorAll('.cs-float');
-    if (!sec || !cards.length || reduced || !finePointer) return;
-    var raf = 0, px = 0, py = 0;
-    sec.addEventListener('pointermove', function (e) {
-      var r = sec.getBoundingClientRect();
-      px = (e.clientX - r.left) / r.width - 0.5;
-      py = (e.clientY - r.top) / r.height - 0.5;
-      if (raf) return;
-      raf = requestAnimationFrame(function () {
-        raf = 0;
-        cards.forEach(function (c) {
-          var d = +c.getAttribute('data-depth') || 16;
-          c.style.setProperty('--mx', (-px * d).toFixed(1) + 'px');
-          c.style.setProperty('--my', (-py * d * 0.7).toFixed(1) + 'px');
-        });
-      });
-    });
-    sec.addEventListener('pointerleave', function () {
-      cards.forEach(function (c) { c.style.setProperty('--mx', '0px'); c.style.setProperty('--my', '0px'); });
-    });
-  })();
-
-  // ------------------------------------ Lista que cambia la foto
-  (function why() {
+  // -------------------------------------------------------- Paneles
+  (function panels() {
     var root = document.querySelector('.cs-why');
     if (!root) return;
-    var items = root.querySelectorAll('.cs-why-list li');
-    var imgs = root.querySelectorAll('.cs-why-media img');
+    var items = Array.prototype.slice.call(root.querySelectorAll('.cs-panel'));
     var current = 0, touched = false;
     function set(i) {
       current = i;
-      items.forEach(function (li, k) {
-        li.classList.toggle('is-active', k === i);
-        li.querySelector('button').setAttribute('aria-expanded', k === i ? 'true' : 'false');
+      items.forEach(function (b, k) {
+        b.classList.toggle('is-active', k === i);
+        b.setAttribute('aria-expanded', k === i ? 'true' : 'false');
       });
-      imgs.forEach(function (im, k) { im.classList.toggle('is-active', k === i); });
     }
-    items.forEach(function (li, i) {
-      var b = li.querySelector('button');
+    items.forEach(function (b, i) {
       b.addEventListener('click', function () { touched = true; set(i); });
       if (finePointer) b.addEventListener('pointerenter', function () { touched = true; set(i); });
     });
-    // Mientras nadie la toque, la lista avanza sola cuando está a la vista.
+    // Mientras nadie los toque, avanzan solos cuando la sección está a la vista.
     if (reduced || !('IntersectionObserver' in window)) return;
     var visible = false;
-    new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }, { threshold: 0.4 }).observe(root);
+    new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }, { threshold: 0.5 }).observe(root);
     setInterval(function () {
       if (!touched && visible && !document.hidden) set((current + 1) % items.length);
-    }, 4500);
+    }, 4200);
   })();
 
   // -------------------------------------------------------- Carrusel
@@ -143,7 +80,7 @@
     });
 
     function layout() {
-      var w = cards[0].offsetWidth || 280;
+      var w = cards[0].offsetWidth || 380;
       var gap = w * 0.78;
       cards.forEach(function (c, i) {
         var o = i - active;
