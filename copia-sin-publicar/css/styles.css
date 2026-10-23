@@ -112,7 +112,7 @@ ul { list-style: none; }
 button { cursor: pointer; border: none; font-family: inherit; }
 
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
-section[id] { scroll-margin-top: 104px; }
+section[id] { scroll-margin-top: 83px; }
 
 /* ===== Typography ===== */
 h1, h2, h3, h4, h5 { font-family: var(--font-heading); line-height: 1.1; font-weight: 800; color: var(--text); text-wrap: balance; }
@@ -179,7 +179,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
 .header.scrolled .nav-links a { color: var(--text); }
 .header.scrolled .nav-logo { color: var(--primary); }
 .header .container { max-width: 100%; padding: 0 4%; }
-.nav { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 
 .nav-logo {
   font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; color: #fff;
@@ -405,7 +405,7 @@ body.b2b-landing .header .nav-logo-img {
 .airplane { opacity: .86; }
 
 .hero-content {
-  position: relative; z-index: 4; padding-top: 40px;
+  position: relative; z-index: 4; padding-top: 32px;
   display: flex; flex-direction: column; align-items: center; width: 100%;
 }
 .hero-kicker {
@@ -498,7 +498,7 @@ body.b2b-landing .header .nav-logo-img {
 .hero-cta-container {
   display: flex;
   justify-content: center;
-  margin-top: clamp(34px, 5.5vh, 78px);
+  margin-top: clamp(34px, 5.5vh, 62px);
   text-align: center;
   width: 100%;
 }
@@ -524,7 +524,7 @@ body.b2b-landing .header .nav-logo-img {
   padding: 8px 8px 8px 24px; border-radius: 100px; max-width: 640px; width: 100%;
   box-shadow: 0 28px 70px rgba(0,0,0,0.26);
   border: 1px solid rgba(255, 255, 255, 0.22);
-  margin-top: 110px;
+  margin-top: 88px;
 }
 .search-input-wrap {
   display: flex; align-items: center; gap: 12px; flex: 1; color: rgba(255,255,255,0.7);
@@ -543,7 +543,7 @@ body.b2b-landing .header .nav-logo-img {
   backdrop-filter: blur(14px);
 }
 .trust-grid {
-  display: flex; justify-content: center; align-items: center; gap: 48px; flex-wrap: wrap;
+  display: flex; justify-content: center; align-items: center; gap: 38px; flex-wrap: wrap;
 }
 .trust-item {
   display: flex; align-items: center; gap: 12px;
@@ -562,7 +562,7 @@ body.b2b-landing .header .nav-logo-img {
 /* ===== Evaneos Services Parallax ===== */
 .ev-services {
   position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center;
-  padding: 120px 0; overflow: hidden;
+  padding: 96px 0; overflow: hidden;
 }
 .ev-services::after {
   content: '';
@@ -585,7 +585,7 @@ body.b2b-landing .header .nav-logo-img {
   border: none;
   backdrop-filter: blur(18px);
 }
-.ev-card-content { padding: 48px 56px; display: flex; flex-direction: column; justify-content: center; }
+.ev-card-content { padding: 38px 45px; display: flex; flex-direction: column; justify-content: center; }
 .ev-title { font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 24px; color: var(--primary); }
 .ev-title em { font-style: normal; color: var(--accent); font-family: var(--font-heading); }
 .ev-card-content p { color: var(--text-secondary); margin-bottom: 32px; font-size: 1.12rem; line-height: 1.75; }
@@ -610,10 +610,10 @@ body.b2b-landing .header .nav-logo-img {
 
 /* ===== Editorial Promise ===== */
 .editorial-promise {
-  padding: 80px 0; background: linear-gradient(180deg, var(--bg) 0%, #FFFFFF 100%);
+  padding: 64px 0; background: linear-gradient(180deg, var(--bg) 0%, #FFFFFF 100%);
 }
 .ed-header {
-  display: flex; flex-direction: column; gap: 16px; margin-bottom: 50px; max-width: 760px; margin-left: auto; margin-right: auto; text-align: center;
+  display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; max-width: 760px; margin-left: auto; margin-right: auto; text-align: center;
 }
 .ed-header h2 {
   font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.1; color: var(--primary);
@@ -625,7 +625,7 @@ body.b2b-landing .header .nav-logo-img {
   font-size: 1.18rem; color: var(--text-secondary); line-height: 1.72;
 }
 .ed-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 64px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 51px;
 }
 .ed-card {
   display: flex; flex-direction: column; gap: 16px;
@@ -651,7 +651,7 @@ body.b2b-landing .header .nav-logo-img {
 
 /* ===== Process ===== */
 .process { padding: var(--section-py) 0; background: linear-gradient(180deg, #FFFFFF 0%, var(--sky-soft) 100%); }
-.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 56px; position: relative; }
+.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 45px; position: relative; }
 .process-steps::before {
   content: ''; position: absolute; top: 40px; left: 12.5%; right: 12.5%; height: 2px;
   background: linear-gradient(90deg, var(--secondary), var(--accent));
@@ -675,7 +675,7 @@ body.b2b-landing .header .nav-logo-img {
 .step p { color: var(--text-secondary); font-size: 0.98rem; line-height: 1.7; }
 
 /* ===== Destinations (Editorial Masonry) ===== */
-.destinations { padding: 80px 0 120px; background: var(--bg-alt); }
+.destinations { padding: 64px 0 96px; background: var(--bg-alt); }
 .dest-masonry {
   display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px;
 }
@@ -691,7 +691,7 @@ body.b2b-landing .header .nav-logo-img {
 .dest-info {
   position: absolute; bottom: 0; left: 0; width: 100%;
   background: linear-gradient(0deg, rgba(12, 28, 49,0.95) 0%, rgba(12, 28, 49,0.6) 50%, rgba(12, 28, 49,0) 100%);
-  padding: 60px 32px 32px; color: #fff;
+  padding: 48px 32px 32px; color: #fff;
 }
 .dest-info h3 {
   font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 8px; font-weight: 600;
@@ -712,7 +712,7 @@ body.b2b-landing .header .nav-logo-img {
   background: var(--surface);
   box-shadow: 0 28px 70px rgba(0,0,0,0.26);
   border: 1px solid rgba(255, 255, 255, 0.22);
-  margin-top: 110px;
+  margin-top: 88px;
 }
 .search-input-wrap {
   display: flex; align-items: center; gap: 12px; flex: 1; color: rgba(255,255,255,0.7);
@@ -731,7 +731,7 @@ body.b2b-landing .header .nav-logo-img {
   backdrop-filter: blur(14px);
 }
 .trust-grid {
-  display: flex; justify-content: center; align-items: center; gap: 48px; flex-wrap: wrap;
+  display: flex; justify-content: center; align-items: center; gap: 38px; flex-wrap: wrap;
 }
 .trust-item {
   display: flex; align-items: center; gap: 12px;
@@ -750,7 +750,7 @@ body.b2b-landing .header .nav-logo-img {
 /* ===== Evaneos Services Parallax ===== */
 .ev-services {
   position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center;
-  padding: 120px 0; overflow: hidden;
+  padding: 96px 0; overflow: hidden;
 }
 .ev-services::after {
   content: '';
@@ -773,7 +773,7 @@ body.b2b-landing .header .nav-logo-img {
   border: none;
   backdrop-filter: blur(18px);
 }
-.ev-card-content { padding: 48px 56px; display: flex; flex-direction: column; justify-content: center; }
+.ev-card-content { padding: 38px 45px; display: flex; flex-direction: column; justify-content: center; }
 .ev-title { font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 24px; color: var(--primary); }
 .ev-title em { font-style: normal; color: var(--accent); font-family: var(--font-heading); }
 .ev-card-content p { color: var(--text-secondary); margin-bottom: 32px; font-size: 1.12rem; line-height: 1.75; }
@@ -798,10 +798,10 @@ body.b2b-landing .header .nav-logo-img {
 
 /* ===== Editorial Promise ===== */
 .editorial-promise {
-  padding: 80px 0; background: linear-gradient(180deg, var(--bg) 0%, #FFFFFF 100%);
+  padding: 64px 0; background: linear-gradient(180deg, var(--bg) 0%, #FFFFFF 100%);
 }
 .ed-header {
-  display: flex; flex-direction: column; gap: 16px; margin-bottom: 50px; max-width: 760px; margin-left: auto; margin-right: auto; text-align: center;
+  display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; max-width: 760px; margin-left: auto; margin-right: auto; text-align: center;
 }
 .ed-header h2 {
   font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.1; color: var(--primary);
@@ -813,7 +813,7 @@ body.b2b-landing .header .nav-logo-img {
   font-size: 1.18rem; color: var(--text-secondary); line-height: 1.72;
 }
 .ed-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 64px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 51px;
 }
 .ed-card {
   display: flex; flex-direction: column; gap: 16px;
@@ -839,7 +839,7 @@ body.b2b-landing .header .nav-logo-img {
 
 /* ===== Process ===== */
 .process { padding: var(--section-py) 0; background: linear-gradient(180deg, #FFFFFF 0%, var(--sky-soft) 100%); }
-.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 56px; position: relative; }
+.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 45px; position: relative; }
 .process-steps::before {
   content: ''; position: absolute; top: 40px; left: 12.5%; right: 12.5%; height: 2px;
   background: linear-gradient(90deg, var(--secondary), var(--accent));
@@ -863,7 +863,7 @@ body.b2b-landing .header .nav-logo-img {
 .step p { color: var(--text-secondary); font-size: 0.98rem; line-height: 1.7; }
 
 /* ===== Destinations (Editorial Masonry) ===== */
-.destinations { padding: 80px 0 120px; background: var(--bg-alt); }
+.destinations { padding: 64px 0 96px; background: var(--bg-alt); }
 .dest-masonry {
   display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px;
 }
@@ -879,7 +879,7 @@ body.b2b-landing .header .nav-logo-img {
 .dest-info {
   position: absolute; bottom: 0; left: 0; width: 100%;
   background: linear-gradient(0deg, rgba(12, 28, 49,0.95) 0%, rgba(12, 28, 49,0.6) 50%, rgba(12, 28, 49,0) 100%);
-  padding: 60px 32px 32px; color: #fff;
+  padding: 48px 32px 32px; color: #fff;
 }
 .dest-info h3 {
   font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 8px; font-weight: 600;
@@ -904,13 +904,13 @@ body.b2b-landing .header .nav-logo-img {
 }
 
 /* ===== Credentials (Values Style) ===== */
-.credentials { padding: 80px 0; background: var(--bg); }
+.credentials { padding: 64px 0; background: var(--bg); }
 .cred-list { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
 .cred-list-item {
   display: flex; gap: 28px; align-items: flex-start;
   background: #fff;
   border-radius: 22px;
-  padding: 36px 40px;
+  padding: 36px 32px;
   box-shadow: 0 8px 32px rgba(3, 32, 66,.06);
   border: 1px solid rgba(3, 32, 66,.05);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
@@ -931,7 +931,7 @@ body.b2b-landing .header .nav-logo-img {
 
 /* ===== About ===== */
 .about { padding: var(--section-py) 0; background: #F7FAFC; }
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 56px; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 51px; align-items: center; margin-top: 45px; }
 .about-image { border-radius: 32px; overflow: hidden; aspect-ratio: 4/3; box-shadow: 0 20px 60px rgba(3, 32, 66,.10); }
 .about-image img { width: 100%; height: 100%; object-fit: cover; }
 .about-text p { color: var(--text-secondary); margin-bottom: 20px; line-height: 1.85; font-size: 1.04rem; }
@@ -963,7 +963,7 @@ body.b2b-landing .header .nav-logo-img {
 }
 .contact h2 { color: #fff; }
 .contact .section-subtitle { color: rgba(255,255,255,.65); }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 56px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 51px; margin-top: 45px; }
 .contact-info { display: flex; flex-direction: column; gap: 32px; }
 .contact-item { display: flex; gap: 16px; align-items: flex-start; }
 .contact-item .ci-icon {
@@ -980,7 +980,7 @@ body.b2b-landing .header .nav-logo-img {
 .contact-page .contact {
   min-height: 100vh;
   overflow-x: hidden;
-  padding-top: calc(var(--section-py) + 72px);
+  padding-top: calc(var(--section-py) + 58px);
 }
 
 .contact-page .contact-grid,
@@ -1001,7 +1001,7 @@ body.b2b-landing .header .nav-logo-img {
 .contact-form {
   background: rgba(255,255,255,.1); backdrop-filter: blur(24px);
   border: 1px solid rgba(191,216,244,.26); border-radius: var(--radius-md);
-  padding: 40px;
+  padding: 32px;
   box-shadow: var(--shadow-xl);
 }
 .form-group { margin-bottom: 20px; }
@@ -1069,7 +1069,7 @@ body.b2b-landing .header .nav-logo-img {
 .home-final-cta {
   background:
     linear-gradient(180deg, #fff 0%, #f7fbff 100%);
-  padding: clamp(64px, 8vw, 110px) 0;
+  padding: clamp(51px, 8vw, 88px) 0;
 }
 
 .home-final-cta-inner {
@@ -1083,7 +1083,7 @@ body.b2b-landing .header .nav-logo-img {
   margin-inline: auto;
   max-width: 1060px;
   overflow: hidden;
-  padding: clamp(30px, 4.6vw, 58px) clamp(24px, 5vw, 72px);
+  padding: clamp(30px, 4.6vw, 46px) clamp(24px, 5vw, 58px);
   position: relative;
   text-align: left;
 }
@@ -1175,10 +1175,10 @@ body.b2b-landing .header .nav-logo-img {
 }
 
 /* ===== Footer ===== */
-.footer { background: var(--navy-deep); color: rgba(255,255,255,.7); padding: 72px 0 0; }
+.footer { background: var(--navy-deep); color: rgba(255,255,255,.7); padding: 58px 0 0; }
 .footer-grid {
-  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 52px;
-  padding-bottom: 52px; border-bottom: 1px solid rgba(255,255,255,.08);
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 42px;
+  padding-bottom: 42px; border-bottom: 1px solid rgba(255,255,255,.08);
 }
 .footer-brand p { margin-top: 16px; font-size: 0.98rem; line-height: 1.7; max-width: 320px; color: rgba(255,255,255,.7); }
 .footer h5 {
@@ -1256,7 +1256,7 @@ body.b2b-landing .header .nav-logo-img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   align-items: stretch;
 }
 .profile-card {
@@ -1589,7 +1589,7 @@ body.b2b-landing .header .nav-logo-img {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .why-us-grid { grid-template-columns: 1fr; }
   .why-us-image { max-height: 400px; }
-  .process-steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+  .process-steps { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .process-steps::before { display: none; }
   .destinations-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; }
@@ -1606,7 +1606,7 @@ body.b2b-landing .header .nav-logo-img {
   .container { padding: 0 28px; }
   .hero-title { font-size: clamp(2.75rem, 5.4vw, 4.15rem); }
   .hero-text-container { min-height: 224px; }
-  .hero-cta-container { margin-top: clamp(26px, 4vh, 48px); }
+  .hero-cta-container { margin-top: clamp(26px, 4vh, 38px); }
   .hero-search-bar { max-width: 590px; }
   .profiles-grid { gap: 24px; }
   .profile-image { min-height: 220px; }
@@ -1617,7 +1617,7 @@ body.b2b-landing .header .nav-logo-img {
 
 @media (max-width: 768px) {
   :root { --section-py: 64px; }
-  html { scroll-padding-top: 76px; }
+  html { scroll-padding-top: 61px; }
   body.menu-open { overflow: hidden; }
   .container { padding: 0 18px; }
   .btn {
@@ -1631,7 +1631,7 @@ body.b2b-landing .header .nav-logo-img {
   #destinos,
   #contacto,
   .profile-details-wrapper {
-    scroll-margin-top: 88px;
+    scroll-margin-top: 70px;
   }
   .header {
     padding: 10px 0;
@@ -1671,7 +1671,7 @@ body.b2b-landing .header .nav-logo-img {
   }
   .hero {
     min-height: 100svh;
-    padding: 96px 0 44px;
+    padding: 77px 0 35px;
     align-items: center;
   }
   .hero-flight-path { opacity: .56; }
@@ -1708,7 +1708,7 @@ body.b2b-landing .header .nav-logo-img {
   }
   .search-input-wrap input { min-height: 44px; font-size: 1rem; }
   .search-btn { justify-content: center; }
-  .stats-section { padding: 52px 0; }
+  .stats-section { padding: 42px 0; }
   .stat-number { font-size: 3rem; }
   .hero-stats { flex-direction: column; gap: 24px; }
   .clients-grid { grid-template-columns: 1fr; }
@@ -1758,7 +1758,7 @@ body.b2b-landing .header .nav-logo-img {
   }
   .ev-services {
     min-height: 100vh;
-    padding: 64px 0;
+    padding: 51px 0;
   }
   .ev-card {
     grid-template-columns: 1fr;
@@ -1768,7 +1768,7 @@ body.b2b-landing .header .nav-logo-img {
   .ev-card-image { min-height: 220px; }
   .process-steps { grid-template-columns: 1fr; }
   .destinations-scroll {
-    padding: 72px 0 56px;
+    padding: 58px 0 45px;
     overflow: hidden;
   }
   .scroll-container {
@@ -1828,17 +1828,17 @@ body.b2b-landing .header .nav-logo-img {
     font-size: 0.95rem;
     line-height: 1.55;
   }
-  .credentials { padding: 52px 0; }
+  .credentials { padding: 42px 0; }
   .cred-list { gap: 30px; }
   .cred-list-item { gap: 16px; }
   .cred-icon { width: 44px; height: 44px; }
-  .about { padding: 64px 0; }
+  .about { padding: 51px 0; }
   .about-grid { gap: 28px; margin-top: 32px; }
   .about-image { border-radius: var(--radius-md); }
   .cred-grid { gap: 16px; }
   .cred-item { min-width: 100px; padding: 16px 20px; }
   .about-founders { flex-direction: column; gap: 20px; }
-  .contact { padding: 64px 0; }
+  .contact { padding: 51px 0; }
   .contact-grid { gap: 34px; margin-top: 36px; }
   .contact-info { grid-template-columns: 1fr; gap: 22px; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -1934,7 +1934,7 @@ body.b2b-landing .header .nav-logo-img {
 /* ===== Horizontal Destinations Scroll ===== */
 .destinations-scroll {
   background: linear-gradient(180deg, var(--sky-soft) 0%, #FFFFFF 100%);
-  overflow: hidden; padding: 120px 0; position: relative;
+  overflow: hidden; padding: 96px 0; position: relative;
 }
 .destinations-scroll::before {
   content: '';
@@ -1947,10 +1947,10 @@ body.b2b-landing .header .nav-logo-img {
   height: 100vh; display: flex; align-items: center; position: relative;
 }
 .scroll-wrapper {
-  display: flex; gap: 60px; padding: 0 15vw; width: max-content; align-items: center;
+  display: flex; gap: 48px; padding: 0 15vw; width: max-content; align-items: center;
 }
 .scroll-title {
-  min-width: 500px; padding-right: 100px;
+  min-width: 500px; padding-right: 80px;
 }
 .scroll-title h2 { margin-bottom: 24px; font-size: clamp(2.5rem, 5vw, 4rem); }
 .scroll-title p { color: var(--text-secondary); line-height: 1.7; font-size: 1.1rem; }
@@ -1969,7 +1969,7 @@ body.b2b-landing .header .nav-logo-img {
 .dest-card:hover img { transform: scale(1.08); }
 
 .dest-card-content {
-  position: absolute; bottom: 0; left: 0; width: 100%; padding: 48px;
+  position: absolute; bottom: 0; left: 0; width: 100%; padding: 38px;
   background: linear-gradient(to top, rgba(5, 18, 35,0.96) 0%, rgba(11, 31, 58,0.5) 55%, transparent 100%);
   color: #fff; z-index: 2;
 }
@@ -2000,10 +2000,10 @@ body.b2b-landing .header .nav-logo-img {
 .stats-section {
   background: transparent;
   color: var(--text);
-  padding: 0 0 80px;
+  padding: 0 0 64px;
   position: relative;
   z-index: 10;
-  margin-top: -52px;
+  margin-top: -42px;
   border-top: none;
   box-shadow: none;
   isolation: isolate;
@@ -2018,7 +2018,7 @@ body.b2b-landing .header .nav-logo-img {
   border-radius: 22px;
   box-shadow: 0 20px 60px rgba(3, 32, 66,.10);
   border: 1px solid rgba(3, 32, 66,.06);
-  padding: 40px 48px;
+  padding: 32px 38px;
   max-width: 1060px;
   margin: 0 auto;
 }
@@ -2027,7 +2027,7 @@ body.b2b-landing .header .nav-logo-img {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 32px;
 }
 .stat-item {
   flex: 1;
@@ -2065,7 +2065,7 @@ body.b2b-landing .header .nav-logo-img {
 }
 .srv-card {
   background: #fff;
-  padding: clamp(28px, 2.7vw, 40px);
+  padding: clamp(28px, 2.7vw, 32px);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-md);
   border: 1px solid rgba(11, 31, 58,0.05);
@@ -2116,7 +2116,7 @@ body.b2b-landing .header .nav-logo-img {
 .phil-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 48px;
+  gap: 38px;
 }
 .phil-item {
   position: relative;
@@ -2157,7 +2157,7 @@ body.b2b-landing .header .nav-logo-img {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 48px;
+  margin-bottom: 38px;
 }
 .ig-header h3 {
   font-family: var(--font-heading);
@@ -2209,7 +2209,7 @@ body.b2b-landing .header .nav-logo-img {
 
 /* Booking CTA */
 .booking-cta {
-  padding: 80px 0;
+  padding: 64px 0;
   background: var(--bg);
 }
 .booking-cta-inner {
@@ -2217,7 +2217,7 @@ body.b2b-landing .header .nav-logo-img {
     radial-gradient(circle at top right, rgba(59, 117, 171,.15), transparent 40%),
     linear-gradient(135deg, var(--primary) 0%, var(--navy-deep) 100%);
   border-radius: 28px;
-  padding: 72px 48px;
+  padding: 58px 38px;
   text-align: center;
   color: #fff;
   position: relative;
@@ -2251,7 +2251,7 @@ body.b2b-landing .header .nav-logo-img {
   color: var(--primary);
   font-weight: 700;
   border-radius: 50px;
-  padding: 18px 40px;
+  padding: 18px 32px;
   font-size: 1.05rem;
   box-shadow: 0 8px 24px rgba(255,210,31,.25);
 }
@@ -2274,11 +2274,11 @@ body.b2b-landing .header .nav-logo-img {
 .b2b-premium-logos {
   background: var(--bg);
   border-top: 1px solid rgba(11, 31, 58,.06);
-  padding: 48px 0;
+  padding: 38px 0;
 }
 .b2b-premium-logos .marquee-item-box {
   display: inline-block;
-  padding: 0 48px;
+  padding: 0 38px;
   font-family: var(--font-body);
   font-size: 1.15rem;
   letter-spacing: 0.1em;
@@ -2291,7 +2291,7 @@ body.b2b-landing .header .nav-logo-img {
 .b2b-dark-statement {
   background: linear-gradient(135deg, var(--primary) 0%, #051223 100%);
   color: #fff;
-  padding: 140px 0;
+  padding: 112px 0;
   position: relative;
   overflow: hidden;
 }
@@ -2308,7 +2308,7 @@ body.b2b-landing .header .nav-logo-img {
 .statement-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(96px, 8vw, 132px);
+  gap: clamp(77px, 8vw, 106px);
   align-items: center;
 }
 .statement-title h2 {
@@ -2334,7 +2334,7 @@ body.b2b-landing .header .nav-logo-img {
   font-weight: 500;
   line-height: 1.6;
   font-style: italic;
-  margin-top: 40px;
+  margin-top: 32px;
   padding-left: 24px;
   border-left: 2px solid var(--accent);
 }
@@ -2343,12 +2343,12 @@ body.b2b-landing .header .nav-logo-img {
 .b2b-fit-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: 51px;
 }
 .b2b-fit-card {
   background: var(--surface);
   border-radius: var(--radius-xl);
-  padding: 56px 48px;
+  padding: 45px 38px;
   box-shadow: var(--shadow-xl);
   border: 1px solid rgba(11, 31, 58,.05);
 }
@@ -2432,7 +2432,7 @@ body.b2b-landing .hero-highlight {
 /* Move testimonial blocks slightly to the right on B2B landings (desktop/tablet) */
 body.b2b-landing:not(.medical-landing) .company-proof-cards,
 body.medical-landing .medical-proof-cards {
-  margin-left: clamp(28px, 3.8vw, 64px);
+  margin-left: clamp(28px, 3.8vw, 51px);
 }
 
 @media (max-width: 900px) {
@@ -2502,7 +2502,7 @@ body.medical-landing .medical-standard-card:active {
 
 body.medical-landing .medical-behind-scenes.company-trust-proof {
   background: linear-gradient(135deg, #041121 0%, #032042 58%, #05284E 100%) !important;
-  padding-block: clamp(64px, 7vw, 104px) !important;
+  padding-block: clamp(51px, 7vw, 83px) !important;
 }
 
 body.medical-landing .medical-behind-scenes.company-trust-proof .container {
@@ -2512,7 +2512,7 @@ body.medical-landing .medical-behind-scenes.company-trust-proof .container {
 body.medical-landing .medical-trust-proof-grid {
   align-items: center;
   display: grid;
-  gap: clamp(34px, 4.5vw, 64px);
+  gap: clamp(34px, 4.5vw, 51px);
   grid-template-columns: minmax(0, .68fr) minmax(760px, 1.32fr);
 }
 
@@ -2652,7 +2652,7 @@ body.medical-landing .medical-behind-scenes .company-proof-cards .testimonial-st
 }
 
 body.medical-landing .medical-patient-grid {
-  margin-top: clamp(66px, 5.6vw, 92px);
+  margin-top: clamp(53px, 5.6vw, 74px);
 }
 
 @media (max-width: 1180px) {
@@ -2705,7 +2705,7 @@ body.b2b-landing .hero-highlight {
 
 body.b2b-landing .statement-grid {
   grid-template-columns: .4fr 1.6fr;
-  gap: 40px;
+  gap: 32px;
 }
 
 body.b2b-landing .statement-content {
@@ -2831,14 +2831,14 @@ body.b2b-landing .ed-card p {
 @media (max-width: 1024px) {
   body.b2b-landing .ed-grid-4 {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 32px;
   }
 }
 
 @media (max-width: 640px) {
   body.b2b-landing .ed-grid-4 {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 48px;
   }
   .ed-number-large {
     font-size: 10rem;
@@ -2860,7 +2860,7 @@ body.b2b-landing .b2b-fit-grid {
 }
 
 body.b2b-landing .b2b-fit-card {
-  padding: clamp(30px, 3vw, 42px);
+  padding: clamp(30px, 3vw, 34px);
   border-radius: var(--radius-md);
 }
 
@@ -2868,7 +2868,7 @@ body.b2b-landing .b2b-fit-card {
   .statement-grid,
   .b2b-fit-grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 38px;
   }
   .b2b-fit-card {
     padding: 32px 24px;
@@ -2927,7 +2927,7 @@ body.b2b-landing .b2b-fit-card {
   .philosophy-section,
   .instagram-feed,
   .b2b-dark-statement {
-    padding: 64px 0;
+    padding: 51px 0;
   }
 
   .srv-grid,
@@ -2950,7 +2950,7 @@ body.b2b-landing .b2b-fit-card {
 
   .destinations-scroll {
     overflow: visible;
-    padding: 64px 0;
+    padding: 51px 0;
   }
 
   .scroll-container {
@@ -2983,7 +2983,7 @@ body.b2b-landing .b2b-fit-card {
   }
 
   .dest-card-content {
-    padding: 92px 22px 22px;
+    padding: 74px 22px 22px;
   }
 
   .dest-card-content h3 {
@@ -3027,7 +3027,7 @@ body.b2b-landing .b2b-fit-card {
   }
 
   .ig-grid { gap: 10px; }
-  .booking-cta { padding: 52px 0; }
+  .booking-cta { padding: 42px 0; }
   .booking-cta-inner { padding: 36px 20px; }
   .booking-cta-inner h2 { font-size: 2rem; }
 }
@@ -3093,7 +3093,7 @@ body.b2b-landing .b2b-fit-card {
   color: var(--text-secondary);
   font-size: 1.22rem;
   line-height: 1.72;
-  margin-bottom: 48px;
+  margin-bottom: 38px;
   max-width: 600px;
 }
 .split-hero-image {
@@ -3124,7 +3124,7 @@ body.b2b-landing .b2b-fit-card {
     position: static;
   }
   .split-hero-content {
-    padding: 60px 24px;
+    padding: 48px 24px;
     order: 1;
   }
 }
@@ -3391,12 +3391,12 @@ body.b2b-landing .b2b-fit-card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  margin-top: 56px;
+  margin-top: 45px;
 }
 .timeline-step {
   position: relative;
   min-height: 360px;
-  padding: 40px 32px;
+  padding: 32px 32px;
   border: 1px solid rgba(11, 31, 58,.08);
   border-radius: var(--radius-md);
   background:
@@ -3443,7 +3443,7 @@ body.b2b-landing .b2b-fit-card {
 .medical-services-grid {
   display: grid;
   grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
-  gap: 72px;
+  gap: 58px;
   align-items: center;
 }
 .medical-copy p {
@@ -3479,7 +3479,7 @@ body.b2b-landing .b2b-fit-card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
-  margin-top: 48px;
+  margin-top: 38px;
 }
 .specialty-grid span {
   display: flex;
@@ -3494,7 +3494,7 @@ body.b2b-landing .b2b-fit-card {
   box-shadow: var(--shadow-sm);
 }
 .medical-brand {
-  padding: 110px 0;
+  padding: 88px 0;
   background:
     linear-gradient(135deg, rgba(11, 31, 58,.96), rgba(16, 43, 76,.94)),
     var(--primary);
@@ -3543,7 +3543,7 @@ body.b2b-landing .b2b-fit-card {
     min-height: auto;
   }
   .medical-services-grid {
-    gap: 40px;
+    gap: 32px;
   }
 }
 
@@ -3555,7 +3555,7 @@ body.b2b-landing .b2b-fit-card {
     padding: 32px 24px;
   }
   .medical-brand {
-    padding: 76px 0;
+    padding: 61px 0;
   }
 }
 
@@ -3651,7 +3651,7 @@ body {
 }
 
 .ev-card-content {
-  padding: clamp(32px, 4vw, 56px);
+  padding: clamp(32px, 4vw, 45px);
 }
 
 .ev-card-image img {
@@ -3667,7 +3667,7 @@ body {
   min-height: 250px;
   display: flex;
   flex-direction: column;
-  padding: clamp(26px, 2.7vw, 40px);
+  padding: clamp(26px, 2.7vw, 32px);
   border-color: rgba(11, 31, 58,.08);
   box-shadow: 0 16px 46px rgba(11, 31, 58,.06);
 }
@@ -3710,7 +3710,7 @@ body {
 
 .ed-grid,
 .phil-grid {
-  gap: clamp(24px, 4vw, 56px);
+  gap: clamp(24px, 4vw, 45px);
 }
 
 .ed-card,
@@ -3842,7 +3842,7 @@ body {
   }
 
   .hero-cta-container {
-    margin-top: clamp(26px, 4vh, 48px);
+    margin-top: clamp(26px, 4vh, 38px);
   }
 
   .stats-grid {
@@ -3914,7 +3914,7 @@ body {
   }
 
   html {
-    scroll-padding-top: 76px;
+    scroll-padding-top: 61px;
   }
 
   .container {
@@ -3923,7 +3923,7 @@ body {
 
   .hero {
     min-height: 100svh;
-    padding: 86px 0 38px;
+    padding: 69px 0 38px;
     align-items: center;
   }
 
@@ -3971,7 +3971,7 @@ body {
   }
 
   .stats-section {
-    padding: 60px 0 54px;
+    padding: 48px 0 43px;
   }
 
   .stats-grid {
@@ -4034,7 +4034,7 @@ body {
 
   .process-steps {
     gap: 28px;
-    margin-top: 40px;
+    margin-top: 32px;
   }
 
   .step {
@@ -4053,7 +4053,7 @@ body {
   }
 
   .destinations-scroll {
-    padding: 68px 0;
+    padding: 54px 0;
   }
 
   .scroll-container {
@@ -4174,7 +4174,7 @@ body {
 
 /* Testimonials Section */
 .testimonials {
-  padding: 120px 0;
+  padding: 96px 0;
   background: var(--bg);
   position: relative;
   overflow: hidden;
@@ -4205,7 +4205,7 @@ body {
   line-height: 1.4;
   color: var(--text);
   font-style: italic;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   font-weight: 500;
 }
 
@@ -4230,7 +4230,7 @@ body {
 .b2b-testimonials {
   background: #f8fafc;
   color: var(--primary);
-  padding: clamp(92px, 10vw, 140px) 0;
+  padding: clamp(74px, 10vw, 112px) 0;
 }
 
 .b2b-testimonials::before {
@@ -4249,7 +4249,7 @@ body {
 
 .b2b-testimonials-header {
   max-width: 780px;
-  margin: 0 auto 56px;
+  margin: 0 auto 45px;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -4416,7 +4416,7 @@ body {
   body.b2b-landing .b2b-fit-section,
   body.b2b-landing .philosophy-section,
   body.b2b-landing .b2b-testimonials {
-    padding-block: clamp(72px, 8vh, 104px);
+    padding-block: clamp(58px, 8vh, 83px);
   }
 
   body.b2b-landing .split-hero {
@@ -4448,7 +4448,7 @@ body {
 
 /* Overrides applied for execution plan */
 .b2b-premium-logos .marquee-track { display: flex; align-items: center; }
-.b2b-premium-logos .marquee-item-box { display: flex; align-items: center; justify-content: center; width: 140px; height: 60px; margin: 0 40px; flex-shrink: 0; }
+.b2b-premium-logos .marquee-item-box { display: flex; align-items: center; justify-content: center; width: 140px; height: 60px; margin: 0 32px; flex-shrink: 0; }
 .b2b-premium-logos .marquee-item-box img { max-width: 100%; max-height: 100%; object-fit: contain; filter: grayscale(100%) opacity(0.5); mix-blend-mode: multiply; transition: all 0.3s ease; }
 .b2b-premium-logos .marquee-item-box:hover img { filter: grayscale(0%) opacity(1); }
 
@@ -4491,7 +4491,7 @@ body.b2b-landing:not(.medical-landing) .split-hero-content {
   flex-basis: 56%;
   min-width: 0;
   opacity: 1 !important;
-  padding-inline: clamp(28px, 6vw, 96px);
+  padding-inline: clamp(28px, 6vw, 77px);
   padding-top: clamp(12px, 2vh, 28px);
   row-gap: clamp(16px, 2.4vh, 26px);
   transform: none !important;
@@ -4584,7 +4584,7 @@ body.b2b-landing:not(.medical-landing) .b2b-dark-statement {
 }
 
 body.b2b-landing:not(.medical-landing) .statement-grid {
-  gap: clamp(38px, 6vw, 86px);
+  gap: clamp(38px, 6vw, 69px);
   grid-template-columns: .78fr 1.22fr;
 }
 
@@ -4621,7 +4621,7 @@ body.b2b-landing:not(.medical-landing) .statement-quote {
 }
 
 body.b2b-landing:not(.medical-landing) .ed-header {
-  margin: 0 auto clamp(34px, 5vh, 56px);
+  margin: 0 auto clamp(34px, 5vh, 45px);
   max-width: 860px;
   text-align: center;
 }
@@ -4686,7 +4686,7 @@ body.b2b-landing:not(.medical-landing) .ev-card {
 }
 
 body.b2b-landing:not(.medical-landing) .ev-card-content {
-  padding: clamp(30px, 4.4vw, 58px);
+  padding: clamp(30px, 4.4vw, 46px);
 }
 
 body.b2b-landing:not(.medical-landing) .ev-title {
@@ -4701,7 +4701,7 @@ body.b2b-landing:not(.medical-landing) .ev-card-content li {
 }
 
 body.b2b-landing:not(.medical-landing) .profiles-section .container > .reveal {
-  margin-bottom: clamp(34px, 5vh, 56px) !important;
+  margin-bottom: clamp(34px, 5vh, 45px) !important;
 }
 
 body.b2b-landing:not(.medical-landing) .profiles-grid-3 {
@@ -4742,7 +4742,7 @@ body.b2b-landing:not(.medical-landing) .profile-content p {
 body.b2b-landing:not(.medical-landing) .b2b-testimonials {
   background: #f8fafc !important;
   color: var(--primary) !important;
-  padding-block: clamp(64px, 8vh, 100px) !important;
+  padding-block: clamp(51px, 8vh, 80px) !important;
 }
 
 body.b2b-landing:not(.medical-landing) .b2b-testimonials h2 {
@@ -4769,16 +4769,16 @@ body.b2b-landing:not(.medical-landing) .b2b-fit-section .container {
 body.b2b-landing:not(.medical-landing) .b2b-fit-card {
   border-radius: 20px;
   min-height: 0;
-  padding: clamp(26px, 3vw, 40px);
+  padding: clamp(26px, 3vw, 32px);
 }
 
 body.b2b-landing:not(.medical-landing) .philosophy-split {
-  gap: clamp(28px, 5vw, 74px);
+  gap: clamp(28px, 5vw, 59px);
 }
 
 body.b2b-landing:not(.medical-landing) .booking-cta-inner {
   border-radius: 24px;
-  padding: clamp(32px, 5vw, 64px);
+  padding: clamp(32px, 5vw, 51px);
 }
 
 @media (min-width: 1100px) {
@@ -4829,7 +4829,7 @@ body.b2b-landing:not(.medical-landing) .booking-cta-inner {
   }
 
   body.b2b-landing:not(.medical-landing) .split-hero-content {
-    padding: 82px var(--company-page-x) 42px;
+    padding: 66px var(--company-page-x) 34px;
   }
 
   body.b2b-landing:not(.medical-landing) .split-hero-title {
@@ -4870,7 +4870,7 @@ body.b2b-landing:not(.medical-landing) .booking-cta-inner {
   body.b2b-landing:not(.medical-landing) .split-hero-content {
     justify-content: center;
     padding-bottom: 34px;
-    padding-top: 118px;
+    padding-top: 94px;
   }
 
   body.b2b-landing:not(.medical-landing) .split-hero-kicker {
@@ -4943,7 +4943,7 @@ body.b2b-landing:not(.medical-landing) .booking-cta-inner {
     justify-content: center;
     min-height: 100svh;
     min-width: 0;
-    padding-block: 72px 38px;
+    padding-block: 58px 38px;
     position: relative;
     width: 100%;
     z-index: 2;
@@ -5152,7 +5152,7 @@ body.b2b-landing:not(.medical-landing) .b2b-dark-statement {
   background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
   color: var(--primary);
   overflow: hidden;
-  padding: clamp(88px, 9vw, 126px) 0;
+  padding: clamp(70px, 9vw, 101px) 0;
 }
 
 body.b2b-landing:not(.medical-landing) .b2b-dark-statement::before {
@@ -5161,7 +5161,7 @@ body.b2b-landing:not(.medical-landing) .b2b-dark-statement::before {
 
 body.b2b-landing:not(.medical-landing) .statement-grid {
   align-items: center;
-  gap: clamp(24px, 4vw, 54px);
+  gap: clamp(24px, 4vw, 43px);
   grid-template-columns: minmax(320px, .9fr) minmax(420px, 1.1fr) minmax(220px, .72fr);
 }
 
@@ -5203,7 +5203,7 @@ body.b2b-landing:not(.medical-landing) .statement-art {
 
 body.b2b-landing:not(.medical-landing) .statement-art img {
   height: auto;
-  margin-right: clamp(-42px, -2vw, -12px);
+  margin-right: clamp(-34px, -2vw, -12px);
   margin-top: clamp(10px, 2vw, 34px);
   max-width: min(100%, 440px);
   object-fit: contain;
@@ -5381,7 +5381,7 @@ body:not(.b2b-landing) .booking-cta-inner .btn:hover {
   transform: translateY(-2px);
 }
 
-.philosophy-split { display: flex; align-items: center; gap: 64px; width: 100%; min-height: 80vh; }
+.philosophy-split { display: flex; align-items: center; gap: 51px; width: 100%; min-height: 80vh; }
 
 .philosophy-visual { flex: 0 0 50%; position: relative; }
 
@@ -5390,14 +5390,14 @@ body:not(.b2b-landing) .booking-cta-inner .btn:hover {
 
 .philosophy-text { flex: 0 0 50%; z-index: 3; }
 
-.philosophy-title { font-size: 3.5rem !important; line-height: 1.05 !important; margin-bottom: 40px !important; color: var(--primary); font-weight: 800; letter-spacing: -0.02em; }
+.philosophy-title { font-size: 3.5rem !important; line-height: 1.05 !important; margin-bottom: 32px !important; color: var(--primary); font-weight: 800; letter-spacing: -0.02em; }
 
 .philosophy-p { font-size: 1.35rem !important; line-height: 1.5 !important; margin-bottom: 28px !important; color: var(--text-secondary); max-width: 540px; }
 
 .philosophy-p.secondary { font-size: 1.15rem !important; opacity: 0.75; line-height: 1.6; }
 
 @media (max-width: 991px) {
-  .philosophy-split { flex-direction: column; gap: 40px; text-align: left; padding-top: 60px; }
+  .philosophy-split { flex-direction: column; gap: 32px; text-align: left; padding-top: 48px; }
   .philosophy-visual { order: 2; width: 100%; flex: none; }
   .philosophy-text { order: 1; width: 100%; flex: none; }
   .airplane-img { width: 110%; transform: translateX(-5%); }
@@ -5419,7 +5419,7 @@ body:not(.b2b-landing) {
   --home-hero-desc: clamp(.92rem, .8rem + .42vw, 1.18rem);
   --home-hero-copy: min(1120px, calc(100vw - (var(--home-page-x) * 2)));
   --home-hero-copy-min: clamp(232px, 29vh, 292px);
-  --home-hero-cta-gap: clamp(20px, 4.4vh, 66px);
+  --home-hero-cta-gap: clamp(20px, 4.4vh, 53px);
   --home-stat-number: clamp(2.35rem, 1.65rem + 2.55vw, 4rem);
   --home-stat-label: clamp(.68rem, .6rem + .26vw, .9rem);
 }
@@ -5430,7 +5430,7 @@ body:not(.b2b-landing) .container {
 
 body:not(.b2b-landing) .hero {
   min-height: 100svh;
-  padding-block: clamp(76px, 10svh, 116px) clamp(44px, 8svh, 88px);
+  padding-block: clamp(61px, 10svh, 93px) clamp(35px, 8svh, 70px);
 }
 
 body:not(.b2b-landing) .pin-spacer:has(> .hero),
@@ -5482,7 +5482,7 @@ body:not(.b2b-landing) .hero-progress {
 }
 
 body:not(.b2b-landing) .hero-cta-container {
-  margin-top: calc(var(--home-hero-cta-gap) + 120px);
+  margin-top: calc(var(--home-hero-cta-gap) + 96px);
   animation: heroButtonFadeIn 0.8s ease 0.45s forwards;
   opacity: 0;
 }
@@ -5504,18 +5504,18 @@ body:not(.b2b-landing) .hero-cta {
 }
 
 body:not(.b2b-landing) .stats-section {
-  padding-block: clamp(56px, 8vw, 92px) clamp(50px, 7vw, 80px);
+  padding-block: clamp(45px, 8vw, 74px) clamp(40px, 7vw, 64px);
 }
 
 body:not(.b2b-landing) .value-capture-section {
   background: linear-gradient(180deg, #fff 0%, #f7fbff 100%);
-  padding-block: clamp(56px, 7vw, 96px);
+  padding-block: clamp(45px, 7vw, 77px);
 }
 
 body:not(.b2b-landing) .value-capture-grid {
   align-items: center;
   display: grid;
-  gap: clamp(26px, 5vw, 64px);
+  gap: clamp(26px, 5vw, 51px);
   grid-template-columns: minmax(240px, .45fr) minmax(0, 1fr);
   max-width: 1060px;
 }
@@ -5553,7 +5553,7 @@ body:not(.b2b-landing) .value-capture-copy p {
 body:not(.b2b-landing) .stats-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
-  gap: clamp(14px, 2.8vw, 40px);
+  gap: clamp(14px, 2.8vw, 32px);
   max-width: 1120px;
 }
 
@@ -5617,11 +5617,11 @@ body:not(.b2b-landing) .ev-founder-quote cite {
 
 body:not(.b2b-landing) .proof-section {
   background: #fff;
-  padding-block: clamp(60px, 8vw, 110px);
+  padding-block: clamp(48px, 8vw, 88px);
 }
 
 body:not(.b2b-landing) .proof-header {
-  margin: 0 auto clamp(30px, 5vw, 48px);
+  margin: 0 auto clamp(30px, 5vw, 38px);
   max-width: 760px;
   text-align: center;
 }
@@ -5682,7 +5682,7 @@ body:not(.b2b-landing) .proof-person small {
 }
 
 body:not(.b2b-landing) .difference-block {
-  margin: clamp(44px, 6vw, 72px) auto 0;
+  margin: clamp(35px, 6vw, 58px) auto 0;
   max-width: 1060px;
 }
 
@@ -5775,7 +5775,7 @@ body:not(.b2b-landing) .difference-card.with li::before {
   }
 
   body:not(.b2b-landing) .hero {
-    padding-block: clamp(78px, 11svh, 104px) clamp(36px, 6svh, 58px);
+    padding-block: clamp(62px, 11svh, 83px) clamp(36px, 6svh, 46px);
   }
 
   body:not(.b2b-landing) .stats-grid {
@@ -5847,7 +5847,7 @@ body:not(.b2b-landing) .stats-section {
   border: 0;
   box-shadow: none;
   color: var(--primary);
-  margin: -62px 0 -62px !important;
+  margin: -50px 0 -50px !important;
   padding: 0;
   position: relative;
   z-index: 12;
@@ -5943,7 +5943,7 @@ body:not(.b2b-landing) .stat-divider {
 }
 
 body:not(.b2b-landing) .profiles-section {
-  padding-top: calc(var(--section-py) + 74px);
+  padding-top: calc(var(--section-py) + 59px);
 }
 
 body:not(.b2b-landing) .ev-services {
@@ -5973,7 +5973,7 @@ body:not(.b2b-landing) .ev-panel {
   max-width: none;
   min-height: 0;
   padding-block: clamp(20px, 2.3vw, 30px);
-  padding-inline: max(var(--home-page-x), calc((100vw - 1480px) / 2));
+  padding-inline: max(var(--home-page-x), calc((100vw - 1184px) / 2));
   width: 100%;
 }
 
@@ -6160,7 +6160,7 @@ body:not(.b2b-landing) .ev-quote-feature .ev-founder-quote cite {
 @media (max-width: 560px) {
 
   body:not(.b2b-landing) .profiles-section {
-    padding-top: calc(var(--section-py) + 48px);
+    padding-top: calc(var(--section-py) + 38px);
   }
 
   body:not(.b2b-landing) .ev-services {
@@ -6219,7 +6219,7 @@ body:not(.b2b-landing) .profiles-section {
   background:
     linear-gradient(180deg, rgba(239, 248, 255, 0.62) 0%, rgba(255, 255, 255, 0.56) 100%),
     url("../assets/images/profiles-sky-bg.webp") center top / cover no-repeat;
-  padding-bottom: clamp(28px, 4vw, 46px);
+  padding-bottom: clamp(28px, 4vw, 37px);
 }
 
 body:not(.b2b-landing) .profiles-section .section-label {
@@ -6279,7 +6279,7 @@ body:not(.b2b-landing) .profile-title {
 }
 
 body:not(.b2b-landing) .profile-content {
-  padding: clamp(44px, 4vw, 54px) clamp(20px, 2.4vw, 28px) clamp(20px, 2.4vw, 28px);
+  padding: clamp(35px, 4vw, 43px) clamp(20px, 2.4vw, 28px) clamp(20px, 2.4vw, 28px);
 }
 
 body:not(.b2b-landing) .profile-badge {
@@ -6396,13 +6396,13 @@ body:not(.b2b-landing) .ev-feature {
 body:not(.b2b-landing) .proof-section {
   background:
     linear-gradient(180deg, #ffffff 0%, #f4fbff 100%);
-  padding-block: clamp(48px, 5.2vw, 64px);
+  padding-block: clamp(38px, 5.2vw, 51px);
 }
 
 body:not(.b2b-landing) .proof-comparison-layout {
   align-items: start;
   display: grid;
-  gap: clamp(42px, 4.4vw, 62px);
+  gap: clamp(34px, 4.4vw, 50px);
   grid-template-columns: minmax(0, 1.12fr) minmax(390px, 460px);
   max-width: 1240px;
 }
@@ -6431,7 +6431,7 @@ body:not(.b2b-landing) .proof-title-line {
 body:not(.b2b-landing) .proof-grid {
   gap: clamp(16px, 1.8vw, 22px);
   max-width: none;
-  padding-top: 46px;
+  padding-top: 37px;
 }
 
 body:not(.b2b-landing) .proof-card {
@@ -6663,7 +6663,7 @@ body.medical-landing .split-hero {
 body.medical-landing .split-hero-content {
   flex-basis: 58%;
   opacity: 1 !important;
-  padding-inline: clamp(28px, 5.5vw, 88px);
+  padding-inline: clamp(28px, 5.5vw, 70px);
   padding-top: clamp(12px, 2vh, 28px);
   row-gap: clamp(14px, 2.2vh, 24px);
   transform: none !important;
@@ -6748,7 +6748,7 @@ body.medical-landing .b2b-dark-statement {
 
 body.medical-landing .statement-grid {
   grid-template-columns: .72fr 1.28fr;
-  gap: clamp(38px, 6vw, 84px);
+  gap: clamp(38px, 6vw, 67px);
 }
 
 body.medical-landing .statement-title h2,
@@ -6770,7 +6770,7 @@ body.medical-landing .statement-content p {
 
 body.medical-landing .ed-header {
   max-width: 860px;
-  margin: 0 auto clamp(34px, 5vh, 56px);
+  margin: 0 auto clamp(34px, 5vh, 45px);
   text-align: center;
 }
 
@@ -6912,7 +6912,7 @@ body.b2b-landing:not(.medical-landing) .company-benefits-section .ev-card {
 }
 
 body.b2b-landing:not(.medical-landing) .company-benefits-section .ev-card-content {
-  padding: clamp(34px, 4vw, 60px) clamp(38px, 4.2vw, 66px);
+  padding: clamp(34px, 4vw, 48px) clamp(38px, 4.2vw, 53px);
 }
 
 body.b2b-landing:not(.medical-landing) .company-benefits-section .ev-card-content ul.company-benefits-list {
@@ -7124,7 +7124,7 @@ body.medical-landing .medical-process {
 
 body.medical-landing .medical-timeline {
   gap: clamp(16px, 2vw, 24px);
-  margin-top: clamp(30px, 4vh, 50px);
+  margin-top: clamp(30px, 4vh, 40px);
 }
 
 body.medical-landing .timeline-step {
@@ -7174,8 +7174,8 @@ body.medical-landing .medical-services-grid {
   border: 1px solid rgba(255,255,255,.4);
   border-radius: 24px;
   box-shadow: 0 28px 70px rgba(0,0,0,.22);
-  gap: clamp(28px, 4vw, 58px);
-  padding: clamp(28px, 4.4vw, 58px);
+  gap: clamp(28px, 4vw, 46px);
+  padding: clamp(28px, 4.4vw, 46px);
 }
 
 body.medical-landing .medical-copy h2 {
@@ -7210,7 +7210,7 @@ body.medical-landing .medical-specialties .section-header {
 
 body.medical-landing .specialty-grid {
   gap: 12px;
-  margin-top: clamp(30px, 4vh, 46px);
+  margin-top: clamp(30px, 4vh, 37px);
 }
 
 body.medical-landing .specialty-grid span {
@@ -7266,7 +7266,7 @@ body.medical-landing .medical-sticky-copy {
 }
 
 body.medical-landing .medical-specialty-note {
-  margin: 40px auto 0;
+  margin: 32px auto 0;
   max-width: 760px;
   text-align: center;
 }
@@ -7361,7 +7361,7 @@ body.medical-landing .contact-form {
   }
 
   body.medical-landing .split-hero-content {
-    padding: 82px var(--medical-page-x) 42px;
+    padding: 66px var(--medical-page-x) 34px;
   }
 
   body.medical-landing .split-hero-title {
@@ -7414,7 +7414,7 @@ body.medical-landing .contact-form {
     justify-content: center;
     min-height: 100svh;
     min-width: 0;
-    padding-block: 72px 38px;
+    padding-block: 58px 38px;
     width: 100%;
     position: relative;
     z-index: 2;
@@ -7483,7 +7483,7 @@ body.medical-landing .contact-form {
 
 
 /* Final Philosophy Overlays and Text Sync */
-.philosophy-visual { margin-right: -120px; z-index: 100; }
+.philosophy-visual { margin-right: -96px; z-index: 100; }
 .airplane-img { width: 160% !important; transform: translateX(-25%) translateY(10px) !important; z-index: 1000 !important; }
 .philosophy-p.secondary { font-size: 1.35rem !important; opacity: 1 !important; line-height: 1.5 !important; color: var(--text-secondary) !important; }
 
@@ -7496,7 +7496,7 @@ body.medical-landing .contact-form {
 
 
 /* Resizing B2B Marquee Logos */
-.b2b-premium-logos .marquee-item-box { width: 280px !important; height: 120px !important; margin: 0 60px !important; }
+.b2b-premium-logos .marquee-item-box { width: 280px !important; height: 120px !important; margin: 0 48px !important; }
 .b2b-premium-logos .marquee-item-box img { max-height: 80% !important; }
 
 /* Home proof and credentials refinement */
@@ -7505,13 +7505,13 @@ body:not(.b2b-landing) .proof-section {
     radial-gradient(circle at 9% 18%, rgba(191,216,244,.34), transparent 28%),
     radial-gradient(circle at 90% 76%, rgba(255,210,0,.1), transparent 24%),
     linear-gradient(180deg, #fff 0%, #f5faff 100%);
-  padding: clamp(74px, 8vw, 118px) 0;
+  padding: clamp(59px, 8vw, 94px) 0;
 }
 
 body:not(.b2b-landing) .proof-comparison-layout {
   align-items: start;
   display: grid;
-  gap: clamp(40px, 5vw, 78px);
+  gap: clamp(32px, 5vw, 62px);
   grid-template-columns: minmax(0, 1.15fr) minmax(440px, .95fr);
   max-width: 1220px;
 }
@@ -7531,7 +7531,7 @@ body:not(.b2b-landing) .proof-card {
 
 body:not(.b2b-landing) .difference-block {
   align-self: start;
-  margin-top: clamp(22px, 5vh, 58px);
+  margin-top: clamp(22px, 5vh, 46px);
 }
 
 body:not(.b2b-landing) .difference-table {
@@ -7569,11 +7569,11 @@ body:not(.b2b-landing) .credentials {
   background:
     radial-gradient(circle at 20% 22%, rgba(191,216,244,.22), transparent 24%),
     linear-gradient(180deg, #f8fbff 0%, #fff 100%);
-  padding: clamp(70px, 8vw, 118px) 0;
+  padding: clamp(56px, 8vw, 94px) 0;
 }
 
 body:not(.b2b-landing) .credentials-header {
-  margin: 0 auto clamp(34px, 5vw, 56px);
+  margin: 0 auto clamp(34px, 5vw, 45px);
   max-width: 820px;
   text-align: center;
 }
@@ -7759,7 +7759,7 @@ body:not(.b2b-landing) .cred-card strong {
   background: var(--ticket-page-bg);
   min-height: 100svh;
   overflow: visible;
-  padding: clamp(118px, 13vh, 148px) 0 clamp(28px, 4.5vh, 52px);
+  padding: clamp(94px, 13vh, 118px) 0 clamp(28px, 4.5vh, 42px);
 }
 
 .contact-page .ticket-contact::before {
@@ -7825,7 +7825,7 @@ body:not(.b2b-landing) .cred-card strong {
   display: flex;
   flex-direction: column;
   gap: clamp(18px, 2.1vw, 30px);
-  padding: clamp(28px, 3vw, 42px) clamp(22px, 2.6vw, 40px);
+  padding: clamp(28px, 3vw, 34px) clamp(22px, 2.6vw, 32px);
 }
 
 .contact-page .ticket-stub::before {
@@ -7933,7 +7933,7 @@ body:not(.b2b-landing) .cred-card strong {
   box-shadow: none;
   margin: 0;
   max-width: none;
-  padding: clamp(28px, 3.2vw, 46px) clamp(34px, 4vw, 64px);
+  padding: clamp(28px, 3.2vw, 37px) clamp(34px, 4vw, 51px);
   z-index: 2;
 }
 
@@ -8124,7 +8124,7 @@ body:not(.b2b-landing) .cred-card strong {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  padding: clamp(28px, 2.6vw, 40px) clamp(18px, 1.8vw, 28px);
+  padding: clamp(28px, 2.6vw, 32px) clamp(18px, 1.8vw, 28px);
   z-index: 2;
 }
 
@@ -8303,7 +8303,7 @@ body:not(.b2b-landing) .cred-card strong {
 }
 
 @media (max-width: 860px) {
-  .contact-page .ticket-contact { padding-top: 124px; }
+  .contact-page .ticket-contact { padding-top: 99px; }
 
   .contact-page .ticket-shell {
     border-radius: 22px;
@@ -8379,12 +8379,12 @@ body:not(.b2b-landing) .about {
   background:
     radial-gradient(circle at 12% 20%, rgba(191, 216, 244, .34), transparent 30%),
     linear-gradient(180deg, #fff 0%, #f8fbff 100%);
-  padding-block: clamp(72px, 8vw, 116px);
+  padding-block: clamp(58px, 8vw, 93px);
 }
 
 body:not(.b2b-landing) .about-editorial-grid {
   align-items: center;
-  gap: clamp(34px, 5vw, 74px);
+  gap: clamp(34px, 5vw, 59px);
   grid-template-columns: minmax(280px, .95fr) minmax(0, 1.05fr);
   margin-top: 0;
 }
@@ -8444,7 +8444,7 @@ body:not(.b2b-landing) .cred-grid-three .cred-card {
   gap: 18px;
   justify-content: flex-start;
   min-height: 0;
-  padding: clamp(28px, 3vw, 42px) clamp(24px, 2.6vw, 38px);
+  padding: clamp(28px, 3vw, 34px) clamp(24px, 2.6vw, 38px);
   text-align: center;
 }
 
@@ -8504,7 +8504,7 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
   background: var(--ticket-page-bg);
   display: flex;
   min-height: 100svh;
-  padding: clamp(96px, 10vh, 122px) 0 clamp(56px, 7vh, 88px);
+  padding: clamp(77px, 10vh, 98px) 0 clamp(45px, 7vh, 70px);
 }
 
 .contact-page .ticket-contact::before {
@@ -8525,7 +8525,7 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
   .contact-page .ticket-contact {
     align-items: center;
     min-height: calc(100svh - 88px);
-    padding: 88px 0 18px;
+    padding: 70px 0 18px;
   }
 
   .contact-page .ticket-shell {
@@ -8593,7 +8593,7 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
 
 @media (min-width: 901px) and (max-height: 920px) {
   .contact-page .ticket-contact {
-    padding: 84px 0 12px;
+    padding: 67px 0 12px;
   }
 
   .contact-page .ticket-shell {
@@ -8712,7 +8712,7 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
 
   .contact-page .ticket-contact {
     align-items: flex-start;
-    padding-top: clamp(104px, 12vh, 132px);
+    padding-top: clamp(83px, 12vh, 106px);
   }
 }
 
@@ -8732,7 +8732,7 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
   }
 
   body.b2b-landing:not(.medical-landing) .split-hero-content {
-    padding-bottom: clamp(44px, 10vw, 68px);
+    padding-bottom: clamp(35px, 10vw, 54px);
   }
 }
 
@@ -8764,10 +8764,10 @@ body:not(.b2b-landing) .cred-grid-three .cred-logo-archer span {
 
 /* Final layout pass for testimonials and full-width cloud CTA */
 body:not(.b2b-landing) .proof-comparison-layout {
-  gap: clamp(42px, 4.4vw, 68px);
+  gap: clamp(34px, 4.4vw, 54px);
   grid-template-columns: minmax(720px, 1.5fr) minmax(390px, .72fr);
   max-width: none;
-  padding-inline: max(var(--home-page-x), calc((100vw - 1480px) / 2));
+  padding-inline: max(var(--home-page-x), calc((100vw - 1184px) / 2));
   width: 100%;
 }
 
@@ -8808,7 +8808,7 @@ body:not(.b2b-landing) .proof-card p {
     linear-gradient(90deg, rgba(255,255,255,.94) 0%, rgba(255,255,255,.84) 48%, rgba(255,255,255,.62) 100%),
     url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat;
   overflow: hidden;
-  padding: clamp(78px, 8vw, 128px) 0;
+  padding: clamp(62px, 8vw, 102px) 0;
   position: relative;
 }
 
@@ -8883,7 +8883,7 @@ body:not(.b2b-landing) .proof-card p {
     background:
       linear-gradient(180deg, rgba(255,255,255,.94) 0%, rgba(255,255,255,.72) 100%),
       url("../assets/images/optimized/booking-sky-cta.webp") center / cover no-repeat;
-    padding: 70px 0;
+    padding: 56px 0;
   }
 }
 
@@ -9256,11 +9256,11 @@ body:not(.b2b-landing) .hero-desc {
 }
 
 body:not(.b2b-landing) .hero-cta-container {
-  margin-top: calc(var(--home-hero-cta-gap) + 180px);
+  margin-top: calc(var(--home-hero-cta-gap) + 144px);
 }
 
 body:not(.b2b-landing) .proof-section {
-  padding-block: clamp(44px, 4.6vw, 58px);
+  padding-block: clamp(35px, 4.6vw, 46px);
 }
 
 body:not(.b2b-landing) .proof-grid {
@@ -9290,7 +9290,7 @@ body:not(.b2b-landing) .proof-person {
 }
 
 body:not(.b2b-landing) .credentials {
-  padding-block: clamp(34px, 3.8vw, 48px);
+  padding-block: clamp(34px, 3.8vw, 38px);
 }
 
 body:not(.b2b-landing) .credentials .container {
@@ -9348,7 +9348,7 @@ body:not(.b2b-landing) .cred-logo-img-archer {
 }
 
 body:not(.b2b-landing) .instagram-feed {
-  padding-block: clamp(42px, 4.8vw, 58px);
+  padding-block: clamp(34px, 4.8vw, 46px);
 }
 
 body:not(.b2b-landing) .instagram-feed .ig-header h3 {
@@ -9373,7 +9373,7 @@ body:not(.b2b-landing) .instagram-feed .ig-follow-btn:hover {
 
 @media (max-width: 900px) {
   body:not(.b2b-landing) .hero-cta-container {
-    margin-top: calc(var(--home-hero-cta-gap) + 160px);
+    margin-top: calc(var(--home-hero-cta-gap) + 128px);
   }
 
   body:not(.b2b-landing) .credentials {
@@ -9387,7 +9387,7 @@ body:not(.b2b-landing) .instagram-feed .ig-follow-btn:hover {
 
 /* ===== Home layout tightening and section order refinements ===== */
 body:not(.b2b-landing) .destinations-scroll {
-  padding-block: clamp(44px, 4.5vw, 64px);
+  padding-block: clamp(35px, 4.5vw, 51px);
 }
 
 body:not(.b2b-landing) .scroll-container {
@@ -9395,13 +9395,13 @@ body:not(.b2b-landing) .scroll-container {
 }
 
 body:not(.b2b-landing) .scroll-wrapper {
-  gap: 44px;
-  padding-inline: clamp(20px, 7vw, 112px);
+  gap: 35px;
+  padding-inline: clamp(20px, 7vw, 90px);
 }
 
 body:not(.b2b-landing) .scroll-title {
   min-width: 440px;
-  padding-right: 42px;
+  padding-right: 34px;
 }
 
 body:not(.b2b-landing) .scroll-title h2 {
@@ -9433,11 +9433,11 @@ body:not(.b2b-landing) .profile-card[data-profile="medical"] .profile-content h3
 
 body:not(.b2b-landing) .ev-panel {
   grid-template-columns: minmax(520px, 2.25fr) repeat(3, minmax(180px, .88fr));
-  padding-inline: max(var(--home-page-x), calc((100vw - 1500px) / 2));
+  padding-inline: max(var(--home-page-x), calc((100vw - 1200px) / 2));
 }
 
 body:not(.b2b-landing) .ev-intro {
-  padding-right: clamp(34px, 3.2vw, 56px);
+  padding-right: clamp(34px, 3.2vw, 45px);
 }
 
 body:not(.b2b-landing) .ev-intro::after {
@@ -9463,7 +9463,7 @@ body:not(.b2b-landing) .ev-feature::before {
 }
 
 body:not(.b2b-landing) .credentials {
-  padding-block: clamp(30px, 3.2vw, 42px);
+  padding-block: clamp(30px, 3.2vw, 34px);
 }
 
 @media (max-width: 1100px) {
@@ -9482,7 +9482,7 @@ body:not(.b2b-landing) .credentials {
   }
 
   body:not(.b2b-landing) .destinations-scroll {
-    padding-block: 40px;
+    padding-block: 32px;
   }
 
   body:not(.b2b-landing) .scroll-wrapper {
@@ -9604,7 +9604,7 @@ body:not(.b2b-landing) .profile-card[data-profile="medical"] .profile-badge svg 
 }
 
 body:not(.b2b-landing) .destinations-scroll {
-  padding-block: clamp(28px, 3.2vw, 44px);
+  padding-block: clamp(28px, 3.2vw, 35px);
 }
 
 body:not(.b2b-landing) .scroll-container {
@@ -9613,7 +9613,7 @@ body:not(.b2b-landing) .scroll-container {
 
 body:not(.b2b-landing) .scroll-wrapper {
   gap: 30px;
-  padding-inline: clamp(18px, 5vw, 86px);
+  padding-inline: clamp(18px, 5vw, 69px);
 }
 
 body:not(.b2b-landing) .scroll-title {
@@ -9658,7 +9658,7 @@ body:not(.b2b-landing) .dest-card-content h3 {
 
 @media (max-width: 768px) {
   body:not(.b2b-landing) .hero {
-    padding-block: 72px 28px;
+    padding-block: 58px 28px;
   }
 
   body:not(.b2b-landing) .hero-text-container {
@@ -9682,7 +9682,7 @@ body:not(.b2b-landing) .dest-card-content h3 {
   }
 
   body:not(.b2b-landing) .profiles-section {
-    padding-top: 42px;
+    padding-top: 34px;
     padding-bottom: 28px;
   }
 
@@ -9850,7 +9850,7 @@ body:not(.b2b-landing) .hero-content {
 
 body:not(.b2b-landing) .hero-cta-container {
   animation: none;
-  margin-top: clamp(44px, 6vh, 72px);
+  margin-top: clamp(35px, 6vh, 58px);
   opacity: 1;
   transform: none;
 }
@@ -9940,19 +9940,19 @@ body.medical-landing .header.scrolled {
 }
 
 body.medical-landing main > section {
-  padding-block: clamp(64px, 8vw, 104px);
+  padding-block: clamp(51px, 8vw, 83px);
 }
 
 body.medical-landing .medical-hero {
   min-height: calc(100vh - 88px);
-  padding-top: 88px;
+  padding-top: 70px;
   background:
     radial-gradient(circle at 12% 14%, rgba(254, 211, 48, 0.14), transparent 22%),
     linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(247,251,255,.94) 48%, rgba(226,237,249,.5) 100%);
 }
 
 body.medical-landing .medical-hero .split-hero-content {
-  padding-block: clamp(40px, 8vh, 88px);
+  padding-block: clamp(32px, 8vh, 70px);
 }
 
 body.medical-landing .medical-hero .split-hero-kicker {
@@ -10045,7 +10045,7 @@ body.medical-landing .b2b-faqs .section-header {
 body.medical-landing .medical-timeline {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(18px, 2vw, 26px);
-  margin-top: clamp(34px, 4vw, 48px);
+  margin-top: clamp(34px, 4vw, 38px);
 }
 
 body.medical-landing .timeline-step {
@@ -10124,7 +10124,7 @@ body.medical-landing .specialty-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
-  margin-top: clamp(34px, 4vw, 48px);
+  margin-top: clamp(34px, 4vw, 38px);
 }
 
 body.medical-landing .specialty-card {
@@ -10177,7 +10177,7 @@ body.medical-landing .medical-specialty-note .btn {
 
 body.medical-landing .medical-testimonials {
   background: #f7fbff;
-  padding-block: clamp(28px, 4vw, 52px) clamp(64px, 8vw, 92px);
+  padding-block: clamp(28px, 4vw, 42px) clamp(51px, 8vw, 74px);
 }
 
 body.medical-landing .medical-testimonials .b2b-testimonial-grid {
@@ -10234,7 +10234,7 @@ body.medical-landing .b2b-faqs {
 
 body.medical-landing .faq-list {
   max-width: 960px;
-  margin: 42px auto 0;
+  margin: 34px auto 0;
 }
 
 body.medical-landing .faq-item {
@@ -10251,7 +10251,7 @@ body.medical-landing .faq-question {
 /* ===== Home work meaning card ===== */
 body:not(.b2b-landing) .work-meaning-section {
   background: transparent;
-  padding: clamp(40px, 6vw, 80px) 0;
+  padding: clamp(32px, 6vw, 64px) 0;
 }
 
 body:not(.b2b-landing) .work-meaning-card {
@@ -10436,7 +10436,7 @@ body:not(.b2b-landing) .benefit-item p {
 
 @media (max-width: 640px) {
   body:not(.b2b-landing) .work-meaning-section {
-    padding: 52px 0;
+    padding: 42px 0;
   }
 
   body:not(.b2b-landing) .work-meaning-card {
@@ -10495,12 +10495,12 @@ body:not(.b2b-landing) .benefit-item p {
 
 @media (max-width: 767px) {
   body.medical-landing main > section {
-    padding-block: 48px;
+    padding-block: 38px;
   }
 
   body.medical-landing .medical-hero {
     min-height: auto;
-    padding-top: 74px;
+    padding-top: 59px;
   }
 
   body.medical-landing .split-hero {
@@ -10562,7 +10562,7 @@ body:not(.b2b-landing) .benefit-item p {
 
 /* ===== Calculator Section (Corporate Landing) ===== */
 .calc-section {
-  padding: 80px 0;
+  padding: 64px 0;
   background: linear-gradient(180deg, var(--bg) 0%, #FFFFFF 100%);
 }
 .calc-card {
@@ -10575,7 +10575,7 @@ body:not(.b2b-landing) .benefit-item p {
   border: 1px solid rgba(3, 32, 66,.06);
 }
 .calc-header {
-  padding: 40px 48px 0;
+  padding: 32px 38px 0;
   text-align: center;
 }
 .calc-header h2 {
@@ -10584,13 +10584,13 @@ body:not(.b2b-landing) .benefit-item p {
   margin-bottom: 0;
 }
 .calc-body {
-  padding: 36px 48px 48px;
+  padding: 36px 38px 38px;
 }
 .calc-inputs {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 .calc-input-group label {
   display: block;
@@ -10694,7 +10694,7 @@ body:not(.b2b-landing) .benefit-item p {
   font-weight: 500;
 }
 .no-risk-section {
-  padding: 80px 0;
+  padding: 64px 0;
 }
 .no-risk-section h2 {
   color: #fff;
@@ -10720,7 +10720,7 @@ body:not(.b2b-landing) .benefit-item p {
   background: #ffffff;
   border: 2px solid transparent;
   border-radius: var(--radius-lg);
-  padding: 32px 40px;
+  padding: 32px 32px;
   box-shadow: 0 4px 16px rgba(3, 32, 66, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
@@ -10850,7 +10850,7 @@ body.medical-landing .statement-content p {
 
 /* Medical landing: responsive container padding */
 body.medical-landing .container {
-  padding-inline: clamp(20px, 4vw, 56px);
+  padding-inline: clamp(20px, 4vw, 45px);
 }
 
 /* Medical landing: section header subtitles */
@@ -11059,7 +11059,7 @@ a[href^="tel"] {
 /* ===== B2B Landing: testimonials section ===== */
 .b2b-testimonials-section {
   background: #f4f8fc;
-  padding-block: clamp(56px, 6.5vw, 90px);
+  padding-block: clamp(45px, 6.5vw, 72px);
 }
 
 .b2b-proof-grid {
@@ -11186,7 +11186,7 @@ body.medical-landing h2 {
 
 /* ===== Reduce whitespace: credentials and destinations-scroll ===== */
 body:not(.b2b-landing) .credentials {
-  padding-block: clamp(24px, 2.8vw, 40px) !important;
+  padding-block: clamp(24px, 2.8vw, 32px) !important;
 }
 
 body:not(.b2b-landing) .credentials-header {
@@ -11194,7 +11194,7 @@ body:not(.b2b-landing) .credentials-header {
 }
 
 body:not(.b2b-landing) .destinations-scroll {
-  padding-block: clamp(24px, 2.8vw, 40px) !important;
+  padding-block: clamp(24px, 2.8vw, 32px) !important;
 }
 
 /* ===== Reduce whitespace: empresas and medicos sections ===== */
@@ -11206,7 +11206,7 @@ body.b2b-landing .philosophy-section,
 body.b2b-landing .b2b-faqs,
 body.b2b-landing .calc-section,
 body.b2b-landing .medical-process {
-  padding-block: clamp(52px, 6vw, 88px);
+  padding-block: clamp(42px, 6vw, 70px);
 }
 
 /* ===== Home mobile alignment fixes ===== */
@@ -11264,14 +11264,14 @@ body:not(.b2b-landing) .benefit-item p {
 /* ===== Company intro editorial block ===== */
 .company-intro-block {
   background: linear-gradient(180deg, #eaf6ff 0%, #ffffff 100%);
-  padding-block: clamp(44px, 5vw, 68px);
+  padding-block: clamp(35px, 5vw, 54px);
   border-bottom: 1px solid rgba(3, 32, 66, 0.07);
 }
 
 .intro-block-inner {
   display: flex;
   align-items: flex-start;
-  gap: clamp(28px, 3.5vw, 48px);
+  gap: clamp(28px, 3.5vw, 38px);
   max-width: min(1200px, calc(100% - 48px));
   margin: 0 auto;
 }
@@ -11371,7 +11371,7 @@ body.b2b-landing:not(.medical-landing) .company-calc-shell {
   display: grid;
   grid-template-columns: minmax(480px, 1.12fr) minmax(540px, 1fr);
   align-items: center;
-  gap: clamp(42px, 6vw, 96px);
+  gap: clamp(34px, 6vw, 77px);
   max-width: 100%;
   margin: 0 auto;
 }
@@ -11503,7 +11503,7 @@ body.medical-landing .medical-calc-feature .company-calc-shell {
   display: grid;
   grid-template-columns: minmax(480px, 1.12fr) minmax(540px, 1fr);
   align-items: center;
-  gap: clamp(42px, 6vw, 96px);
+  gap: clamp(34px, 6vw, 77px);
   max-width: 100%;
   margin: 0 auto;
 }
@@ -11585,7 +11585,7 @@ body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box,
 body.medical-landing .b2b-premium-logos .marquee-item-box {
   width: 196px !important;
   height: 84px !important;
-  margin: 0 42px !important;
+  margin: 0 34px !important;
 }
 
 body.b2b-landing:not(.medical-landing) .b2b-premium-logos .marquee-item-box img,
@@ -11667,7 +11667,7 @@ body.medical-landing .medical-process .company-model-grid {
   display: grid;
   gap: 22px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: clamp(30px, 4vh, 50px);
+  margin-top: clamp(30px, 4vh, 40px);
 }
 
 body.b2b-landing:not(.medical-landing) .company-model-card {
@@ -11679,7 +11679,7 @@ body.b2b-landing:not(.medical-landing) .company-model-card {
   flex-direction: column;
   justify-content: center;
   min-height: 100%;
-  padding: 58px 24px 30px;
+  padding: 46px 24px 30px;
   position: relative;
   text-align: center;
 }
@@ -11693,7 +11693,7 @@ body.medical-landing .medical-process .company-model-card {
   flex-direction: column;
   justify-content: center;
   min-height: 100%;
-  padding: 58px 24px 30px;
+  padding: 46px 24px 30px;
   position: relative;
   text-align: center;
 }
@@ -11820,7 +11820,7 @@ body.b2b-landing:not(.medical-landing) .company-model-cta {
 /* ===== Company trust + testimonials ===== */
 body.b2b-landing:not(.medical-landing) .company-trust-proof {
   background: linear-gradient(135deg, #041121 0%, #032042 58%, #05284E 100%);
-  padding-block: clamp(64px, 7vw, 104px);
+  padding-block: clamp(51px, 7vw, 83px);
 }
 
 body.b2b-landing:not(.medical-landing) .company-trust-proof .container {
@@ -11829,7 +11829,7 @@ body.b2b-landing:not(.medical-landing) .company-trust-proof .container {
 
 body.b2b-landing:not(.medical-landing) .company-trust-proof-grid {
   display: grid;
-  gap: clamp(34px, 4.5vw, 64px);
+  gap: clamp(34px, 4.5vw, 51px);
   grid-template-columns: minmax(0, 0.68fr) minmax(760px, 1.32fr);
   align-items: center;
 }
@@ -12007,7 +12007,7 @@ body.b2b-landing:not(.medical-landing) .company-proof-cards .testimonial-avatar-
 body.b2b-landing:not(.medical-landing) .philosophy-section.sky-background {
   min-height: auto !important;
   overflow: hidden;
-  padding-block: clamp(44px, 5vw, 72px) !important;
+  padding-block: clamp(35px, 5vw, 58px) !important;
 }
 
 body.b2b-landing:not(.medical-landing) .philosophy-section .container {
@@ -12015,7 +12015,7 @@ body.b2b-landing:not(.medical-landing) .philosophy-section .container {
 }
 
 body.b2b-landing:not(.medical-landing) .philosophy-split {
-  gap: clamp(24px, 4vw, 56px);
+  gap: clamp(24px, 4vw, 45px);
   min-height: 0;
 }
 
@@ -12124,7 +12124,7 @@ body.medical-landing .medical-hero {
 }
 
 body.medical-landing .medical-hero .split-hero-content {
-  padding-block: clamp(44px, 8vh, 92px);
+  padding-block: clamp(35px, 8vh, 74px);
 }
 
 body.medical-landing .medical-hero .split-hero-title {
@@ -12164,12 +12164,12 @@ body.medical-landing .medical-program-section {
   background:
     linear-gradient(180deg, rgba(239,248,255,.76) 0%, rgba(255,255,255,.98) 100%),
     url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat;
-  padding-block: clamp(42px, 5vw, 70px) !important;
+  padding-block: clamp(34px, 5vw, 56px) !important;
 }
 
 body.medical-landing .medical-program-grid {
   align-items: center;
-  gap: clamp(24px, 4vw, 48px);
+  gap: clamp(24px, 4vw, 38px);
   grid-template-columns: minmax(300px, .78fr) minmax(0, 1.22fr);
 }
 
@@ -12464,12 +12464,12 @@ body.medical-landing .medical-process-light {
   background: #fff !important;
   background-image: none !important;
   min-height: auto !important;
-  padding-block: clamp(54px, 6.2vw, 92px) clamp(72px, 7.6vw, 118px) !important;
+  padding-block: clamp(43px, 6.2vw, 74px) clamp(58px, 7.6vw, 94px) !important;
 }
 
 body.medical-landing .medical-process-light .container {
   max-width: 1240px;
-  padding-top: clamp(26px, 3.2vw, 44px) !important;
+  padding-top: clamp(26px, 3.2vw, 35px) !important;
 }
 
 body.medical-landing .medical-process-light .section-header {
@@ -12588,7 +12588,7 @@ body.medical-landing .medical-specialties-light {
   background:
     linear-gradient(180deg, rgba(247, 251, 255, .94) 0%, rgba(238, 247, 255, .92) 100%),
     url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat;
-  padding-block: clamp(42px, 5vw, 70px) !important;
+  padding-block: clamp(34px, 5vw, 56px) !important;
 }
 
 body.medical-landing .medical-specialties-light .container {
@@ -12699,7 +12699,7 @@ body.medical-landing .medical-specialties-light .medical-specialty-note {
   display: flex !important;
   gap: 14px !important;
   justify-content: center !important;
-  margin-top: clamp(30px, 3.6vw, 46px) !important;
+  margin-top: clamp(30px, 3.6vw, 37px) !important;
   text-align: center !important;
 }
 
@@ -12725,7 +12725,7 @@ body.medical-landing .medical-specialties-light .medical-specialty-note .btn {
 }
 
 body.medical-landing .medical-final-cta-light {
-  padding-block: clamp(38px, 4.8vw, 64px) !important;
+  padding-block: clamp(38px, 4.8vw, 51px) !important;
 }
 
 body.medical-landing .medical-final-cta-light .container {
@@ -12808,7 +12808,7 @@ body.medical-landing .medical-proof-merged {
   flex-direction: column;
   justify-content: center;
   min-height: clamp(600px, 65vh, 860px);
-  padding-block: clamp(52px, 6vw, 88px) !important;
+  padding-block: clamp(42px, 6vw, 70px) !important;
 }
 
 body.medical-landing .medical-proof-merged .container {
@@ -13018,7 +13018,7 @@ body.medical-landing .medical-hero {
 
 body.b2b-landing:not(.medical-landing) .split-hero-content,
 body.medical-landing .medical-hero .split-hero-content {
-  padding-block: clamp(24px, 4.8vh, 56px) !important;
+  padding-block: clamp(24px, 4.8vh, 45px) !important;
 }
 
 /* Final medical section background overrides */
@@ -13040,7 +13040,7 @@ body.medical-landing .medical-hero {
 }
 
 body.medical-landing .medical-hero .split-hero-content {
-  padding-top: 88px !important;
+  padding-top: 70px !important;
   padding-bottom: 18px !important;
 }
 
@@ -13061,7 +13061,7 @@ body.medical-landing .medical-program-section {
 }
 
 body.medical-landing .medical-program-direct .medical-program-copy {
-  margin: -10px auto 52px !important;
+  margin: -10px auto 42px !important;
 }
 
 body.medical-landing .medical-process-light {
@@ -13206,7 +13206,7 @@ body.b2b-landing:not(.medical-landing) .split-hero-kicker {
 }
 
 body.medical-landing .medical-specialties-light .specialty-grid {
-  margin-top: clamp(36px, 4.2vw, 52px) !important;
+  margin-top: clamp(36px, 4.2vw, 42px) !important;
 }
 
 @media (max-width: 900px) {
@@ -13241,7 +13241,7 @@ body.medical-landing .medical-program-direct {
   max-width: none !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
-  padding-left: clamp(120px, 10vw, 220px) !important;
+  padding-left: clamp(96px, 10vw, 176px) !important;
   padding-right: clamp(12px, 2vw, 28px) !important;
   display: flex !important;
   flex-direction: column !important;
@@ -13320,7 +13320,7 @@ body.medical-landing .medical-hero {
 body.b2b-landing:not(.medical-landing) .split-hero-content,
 body.medical-landing .medical-hero .split-hero-content {
   min-height: 100vh !important;
-  padding-top: 88px !important;
+  padding-top: 70px !important;
   padding-bottom: 28px !important;
 }
 
@@ -13530,7 +13530,7 @@ body.medical-landing .hero-action-row {
 }
 
 .hero .hero-text-slide .hero-desc {
-  margin-bottom: clamp(28px, 3.4vw, 44px) !important;
+  margin-bottom: clamp(28px, 3.4vw, 35px) !important;
   margin-left: auto !important;
   margin-right: auto !important;
   max-width: min(1040px, 94vw) !important;
@@ -13538,7 +13538,7 @@ body.medical-landing .hero-action-row {
 }
 
 .hero .hero-cta-container {
-  margin-top: clamp(66px, 9.6vh, 128px) !important;
+  margin-top: clamp(53px, 9.6vh, 102px) !important;
 }
 
 .hero .hero-text-container {
@@ -13588,7 +13588,7 @@ iframe {
   width: 100%;
   max-width: 1280px;
   margin-inline: auto;
-  padding-inline: clamp(20px, 4.5vw, 64px);
+  padding-inline: clamp(20px, 4.5vw, 51px);
 }
 
 @media (min-width: 1537px) {
@@ -13598,7 +13598,7 @@ iframe {
 }
 
 section {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 77px;
 }
 
 h1,
@@ -13649,7 +13649,7 @@ p {
 /* 901px - 1200px */
 @media (max-width: 1200px) {
   .container {
-    padding-inline: clamp(24px, 4.2vw, 48px);
+    padding-inline: clamp(24px, 4.2vw, 38px);
   }
 
   .hero .hero-text-slide h1.hero-title,
@@ -13692,7 +13692,7 @@ p {
   body.b2b-landing:not(.medical-landing) .split-hero,
   body.medical-landing .medical-hero {
     grid-template-columns: 1fr !important;
-    padding-top: 96px !important;
+    padding-top: 77px !important;
   }
 
   body.b2b-landing:not(.medical-landing) .split-hero-image,
@@ -13753,7 +13753,7 @@ p {
   }
 
   .hero .hero-cta-container {
-    margin-top: clamp(28px, 6vh, 56px) !important;
+    margin-top: clamp(28px, 6vh, 45px) !important;
   }
 
   .hero .hero-text-container {
@@ -13828,7 +13828,7 @@ body.medical-landing .trust-banner.b2b-premium-logos {
 body.medical-landing .b2b-premium-logos .marquee-item-box {
   width: 196px !important;
   height: 84px !important;
-  margin: 0 42px !important;
+  margin: 0 34px !important;
 }
 
 body.medical-landing .b2b-premium-logos .marquee-item-box img {
@@ -13867,7 +13867,7 @@ body.medical-landing .medical-program-section {
     overflow: hidden;
     min-height: clamp(520px, 78svh, 700px) !important;
     align-items: flex-end;
-    padding-top: 92px !important;
+    padding-top: 74px !important;
     padding-bottom: 28px !important;
   }
 
@@ -14024,7 +14024,7 @@ body.medical-landing .medical-program-section {
     grid-template-columns: 1fr !important;
     min-height: auto !important;
     height: auto !important;
-    padding-top: 96px !important;
+    padding-top: 77px !important;
   }
 
   body.b2b-landing:not(.medical-landing) .split-hero-content,
@@ -14138,7 +14138,7 @@ main > section,
 body.medical-landing .medical-program-section {
   min-height: auto !important;
   overflow: hidden !important;
-  padding-block: 78px !important;
+  padding-block: 62px !important;
 }
 
 body.medical-landing .medical-program-section .container {
@@ -14185,7 +14185,7 @@ body.medical-landing .medical-program-section .medical-program-text p {
 
 body.medical-landing .medical-final-cta-light {
   overflow: hidden !important;
-  padding-block: 76px !important;
+  padding-block: 61px !important;
 }
 
 body.medical-landing .medical-final-cta-light .container {
@@ -14291,7 +14291,7 @@ body.medical-landing .medical-proof-cards .b2b-testimonial-card p {
 @media (max-width: 640px) {
   body.medical-landing .medical-program-section,
   body.medical-landing .medical-final-cta-light {
-    padding-block: 52px !important;
+    padding-block: 42px !important;
   }
 
   body.medical-landing .medical-program-section .container,
@@ -14351,7 +14351,7 @@ video {
 .container {
   margin-inline: auto;
   max-width: 1320px;
-  padding-inline: clamp(20px, 5vw, 64px);
+  padding-inline: clamp(20px, 5vw, 51px);
   width: 100%;
 }
 
@@ -14363,7 +14363,7 @@ video {
 
 @media (max-width: 1200px) {
   .container {
-    padding-inline: 48px;
+    padding-inline: 38px;
   }
 }
 
@@ -14381,7 +14381,7 @@ video {
 
 section {
   overflow-x: clip;
-  padding-block: clamp(56px, 7vw, 110px);
+  padding-block: clamp(45px, 7vw, 88px);
 }
 
 .btn,
@@ -14556,7 +14556,7 @@ textarea {
     isolation: isolate;
     min-height: 100svh !important;
     overflow: hidden !important;
-    padding: 108px 0 58px !important;
+    padding: 86px 0 46px !important;
     position: relative;
   }
 
@@ -14643,7 +14643,7 @@ textarea {
   body.b2b-landing:not(.medical-landing) .split-hero,
   body.medical-landing .medical-hero {
     min-height: 92svh !important;
-    padding: 94px 0 46px !important;
+    padding: 75px 0 37px !important;
   }
 
   body.b2b-landing:not(.medical-landing) .split-hero-content,
@@ -14669,14 +14669,14 @@ textarea {
 body.medical-landing .medical-program-section {
   background: url("../assets/images/medical-program-bg.webp") 24% center / cover no-repeat !important;
   min-height: 0 !important;
-  padding-block: clamp(70px, 7vw, 116px) !important;
+  padding-block: clamp(56px, 7vw, 93px) !important;
 }
 
 body.medical-landing .medical-program-section .container {
   display: flex !important;
   justify-content: flex-end !important;
   max-width: 1320px !important;
-  padding-inline: clamp(20px, 5vw, 64px) !important;
+  padding-inline: clamp(20px, 5vw, 51px) !important;
   width: 100% !important;
 }
 
@@ -14750,7 +14750,7 @@ body.medical-landing .medical-program-section .medical-program-text p {
     background:
       linear-gradient(180deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.86) 100%),
       url("../assets/images/medical-program-bg.webp") 30% center / cover no-repeat !important;
-    padding-block: 58px !important;
+    padding-block: 46px !important;
   }
 
   body.medical-landing .medical-program-section .container {
@@ -14790,13 +14790,13 @@ body.medical-landing .medical-program-section .medical-program-text p {
 body.medical-landing .medical-proof-merged .container,
 body.b2b-landing:not(.medical-landing) .company-trust-proof .container {
   max-width: 1320px !important;
-  padding-inline: clamp(20px, 5vw, 64px) !important;
+  padding-inline: clamp(20px, 5vw, 51px) !important;
 }
 
 body.medical-landing .medical-proof-merged-grid,
 body.b2b-landing:not(.medical-landing) .company-trust-proof-grid {
   align-items: center;
-  gap: clamp(24px, 3vw, 40px) !important;
+  gap: clamp(24px, 3vw, 32px) !important;
   grid-template-columns: minmax(0, .82fr) minmax(0, 1.35fr) !important;
   width: 100%;
 }
@@ -14856,7 +14856,7 @@ body.b2b-landing:not(.medical-landing) .company-proof-cards .b2b-testimonial-car
   body.medical-landing .medical-proof-merged,
   body.b2b-landing:not(.medical-landing) .company-trust-proof {
     min-height: 0 !important;
-    padding-block: 58px !important;
+    padding-block: 46px !important;
   }
 
   body.medical-landing .medical-proof-merged .container,
@@ -14938,7 +14938,7 @@ body.contact-page .contact-section,
 body.contact-page .ticket-section {
   min-height: auto !important;
   overflow-x: hidden !important;
-  padding-block: clamp(36px, 5vw, 72px) !important;
+  padding-block: clamp(36px, 5vw, 58px) !important;
 }
 
 body.contact-page .ticket-shell,
@@ -15091,13 +15091,13 @@ body.b2b-landing .split-hero-title .hero-highlight {
   body.b2b-landing:not(.medical-landing) .company-trust-proof .container,
   body.medical-landing .medical-proof-merged .container {
     max-width: min(1640px, calc(100vw - 72px)) !important;
-    padding-inline: clamp(24px, 2.2vw, 42px) !important;
+    padding-inline: clamp(24px, 2.2vw, 34px) !important;
   }
 
   body.b2b-landing:not(.medical-landing) .company-trust-proof-grid,
   body.medical-landing .medical-proof-merged-grid {
     align-items: center !important;
-    gap: clamp(56px, 5vw, 96px) !important;
+    gap: clamp(45px, 5vw, 77px) !important;
     grid-template-columns: minmax(360px, .72fr) minmax(820px, 1.62fr) !important;
   }
 
@@ -15161,7 +15161,7 @@ body.medical-landing .medical-proof-cards {
   }
 
   body:not(.b2b-landing) .hero {
-    padding: 96px 0 34px !important;
+    padding: 77px 0 34px !important;
   }
 
   body:not(.b2b-landing) .hero-content {
@@ -15378,12 +15378,12 @@ body.medical-landing .medical-hero .split-hero-desc {
 body.medical-landing .medical-program-section {
   background-position: 20% center !important;
   min-height: clamp(620px, 70vh, 760px) !important;
-  padding-block: clamp(92px, 8vw, 130px) !important;
+  padding-block: clamp(74px, 8vw, 104px) !important;
 }
 
 body.medical-landing .medical-program-section .container {
   max-width: 1440px !important;
-  padding-left: clamp(20px, 5vw, 64px) !important;
+  padding-left: clamp(20px, 5vw, 51px) !important;
   padding-right: clamp(18px, 2vw, 32px) !important;
 }
 
@@ -15440,14 +15440,14 @@ body.medical-landing .medical-process-light .section-header {
 }
 
 body.medical-landing .medical-process-light {
-  padding-top: clamp(92px, 9vw, 124px) !important;
+  padding-top: clamp(74px, 9vw, 99px) !important;
 }
 
 body.medical-landing .medical-process-cards.company-model-grid {
   display: grid !important;
   gap: 22px !important;
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  margin: 56px auto 0 !important;
+  margin: 45px auto 0 !important;
   max-width: min(1270px, calc(100vw - 140px)) !important;
 }
 
@@ -15461,7 +15461,7 @@ body.medical-landing .medical-process-cards.company-model-grid .company-model-ca
   flex-direction: column !important;
   justify-content: center !important;
   min-height: 300px !important;
-  padding: 58px 28px 34px !important;
+  padding: 46px 28px 34px !important;
   position: relative !important;
   text-align: center !important;
 }
@@ -15512,7 +15512,7 @@ body.medical-landing .medical-process-cards.company-model-grid .company-model-ca
 
 body.medical-landing .medical-complete-service {
   background: #fff;
-  padding-block: clamp(72px, 8vw, 112px);
+  padding-block: clamp(58px, 8vw, 90px);
 }
 
 body.medical-landing .medical-complete-service .container {
@@ -15522,7 +15522,7 @@ body.medical-landing .medical-complete-service .container {
 body.medical-landing .medical-complete-service-grid {
   align-items: center;
   display: grid;
-  gap: clamp(48px, 7vw, 118px);
+  gap: clamp(38px, 7vw, 94px);
   grid-template-columns: minmax(430px, .88fr) minmax(560px, 1.12fr);
 }
 
@@ -15613,7 +15613,7 @@ body.medical-landing .medical-standards {
     linear-gradient(180deg, rgba(246, 251, 255, .78) 0%, rgba(255, 255, 255, .96) 100%),
     url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat;
   min-height: 0 !important;
-  padding-block: clamp(62px, 6vw, 86px);
+  padding-block: clamp(50px, 6vw, 69px);
 }
 
 body.medical-landing .medical-standards .container {
@@ -15621,7 +15621,7 @@ body.medical-landing .medical-standards .container {
 }
 
 body.medical-landing .medical-standards-header {
-  margin: 0 auto clamp(34px, 4vw, 48px);
+  margin: 0 auto clamp(34px, 4vw, 38px);
   max-width: 760px;
   text-align: center;
 }
@@ -15675,7 +15675,7 @@ body.medical-landing .medical-standard-card {
   flex-direction: column;
   justify-content: center;
   min-height: 190px;
-  padding: 34px 40px;
+  padding: 34px 32px;
   text-align: center;
   transition: border-color .24s ease, box-shadow .24s ease;
 }
@@ -15703,7 +15703,7 @@ body.medical-landing .medical-standard-card p {
 body.medical-landing .medical-behind-scenes {
   background: linear-gradient(135deg, #041121 0%, var(--primary) 58%, #102948 100%);
   min-height: 0 !important;
-  padding-block: clamp(66px, 7vw, 102px);
+  padding-block: clamp(53px, 7vw, 82px);
 }
 
 body.medical-landing .medical-behind-scenes-copy {
@@ -15745,7 +15745,7 @@ body.medical-landing .medical-closing-cta {
     url("../assets/images/profiles-sky-bg.webp") center center / cover no-repeat !important;
   display: flex;
   min-height: 0 !important;
-  padding-block: clamp(78px, 8vw, 118px) !important;
+  padding-block: clamp(62px, 8vw, 94px) !important;
 }
 
 body.medical-landing .medical-closing-cta .container {
@@ -15760,7 +15760,7 @@ body.medical-landing .medical-closing-cta-panel {
   box-shadow: 0 28px 70px rgba(3, 32, 66, .18);
   margin: 0 auto;
   max-width: 980px;
-  padding: clamp(58px, 6vw, 86px) clamp(28px, 6vw, 86px);
+  padding: clamp(46px, 6vw, 69px) clamp(28px, 6vw, 69px);
   text-align: center;
 }
 
@@ -15852,7 +15852,7 @@ body.medical-landing .medical-closing-cta .medical-cta-action-bar .btn {
 body.medical-landing .medical-specialty-carousel-section {
   background: linear-gradient(180deg, #fff 0%, #f6fbff 100%) !important;
   overflow: hidden;
-  padding-block: clamp(76px, 8vw, 112px) !important;
+  padding-block: clamp(61px, 8vw, 90px) !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: stretch !important;
@@ -15868,7 +15868,7 @@ body.medical-landing .medical-specialty-carousel-wrap {
 
 body.medical-landing .medical-specialty-intro {
   max-width: 800px;
-  margin: 0 auto 48px;
+  margin: 0 auto 38px;
   text-align: center;
 }
 
@@ -15902,7 +15902,7 @@ body.medical-landing .medical-specialty-carousel {
   gap: clamp(18px, 2.2vw, 28px);
   overflow: visible;
   overscroll-behavior-x: contain;
-  padding: 8px clamp(20px, 5vw, 64px) 20px;
+  padding: 8px clamp(20px, 5vw, 51px) 20px;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   width: max-content;
@@ -15910,7 +15910,7 @@ body.medical-landing .medical-specialty-carousel {
 
 body.medical-landing .medical-specialty-footer {
   text-align: center;
-  margin-top: 48px;
+  margin-top: 38px;
   max-width: 760px;
   margin-inline: auto;
 }
@@ -16172,13 +16172,13 @@ body.medical-landing .medical-specialty-slide-copy h3 {
 /* ===== Patient Journey / Concerns Section ===== */
 body.medical-landing .medical-patient-journey {
   background: #ffffff !important;
-  padding-block: clamp(76px, 8vw, 112px) !important;
+  padding-block: clamp(61px, 8vw, 90px) !important;
   display: block !important;
 }
 
 body.medical-landing .medical-patient-journey .section-header {
   max-width: 800px;
-  margin: 0 auto 48px;
+  margin: 0 auto 38px;
   text-align: center;
 }
 
@@ -16210,8 +16210,8 @@ body.medical-landing .medical-patient-journey .section-subtitle {
 body.medical-landing .medical-patient-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(20px, 3.2vw, 44px);
-  margin-top: clamp(96px, 8vw, 132px);
+  gap: clamp(20px, 3.2vw, 35px);
+  margin-top: clamp(77px, 8vw, 106px);
   justify-items: center;
   align-items: start;
 }
@@ -16266,9 +16266,9 @@ body.medical-landing .medical-patient-card.is-phone-hovered .medical-patient-pho
 body.medical-landing .medical-patient-banner {
   background: var(--accent) !important;
   border-radius: 20px;
-  padding: clamp(20px, 3vw, 30px) clamp(24px, 4vw, 48px);
+  padding: clamp(20px, 3vw, 30px) clamp(24px, 4vw, 38px);
   max-width: 960px;
-  margin: clamp(28px, 3.2vw, 44px) auto 0;
+  margin: clamp(28px, 3.2vw, 35px) auto 0;
   text-align: center;
   box-shadow: 0 14px 32px rgba(255, 210, 31, 0.14);
 }
@@ -16376,7 +16376,7 @@ body.medical-landing .medical-standard-card:active {
 
 body.medical-landing .medical-behind-scenes.company-trust-proof {
   background: linear-gradient(135deg, #041121 0%, #032042 58%, #05284E 100%) !important;
-  padding-block: clamp(64px, 7vw, 104px) !important;
+  padding-block: clamp(51px, 7vw, 83px) !important;
 }
 
 body.medical-landing .medical-behind-scenes.company-trust-proof .container {
@@ -16386,14 +16386,14 @@ body.medical-landing .medical-behind-scenes.company-trust-proof .container {
 body.medical-landing .medical-trust-proof-grid {
   align-items: center !important;
   display: grid !important;
-  gap: clamp(46px, 6vw, 92px) !important;
+  gap: clamp(37px, 6vw, 74px) !important;
   grid-template-columns: minmax(420px, .74fr) minmax(820px, 1.26fr) !important;
 }
 
 body.medical-landing .medical-behind-scenes .company-trust-panel {
   color: #fff !important;
   justify-self: start !important;
-  margin: 0 0 0 clamp(-48px, -3.4vw, -18px) !important;
+  margin: 0 0 0 clamp(-38px, -3.4vw, -18px) !important;
   max-width: 760px !important;
   padding: 0 !important;
   text-align: left !important;
@@ -16607,7 +16607,7 @@ body.medical-landing .medical-patient-journey .section-header {
       url("../assets/images/medical-program-office-bg.webp") center center / cover no-repeat !important;
     height: auto !important;
     min-height: 0 !important;
-    padding-block: 64px 52px !important;
+    padding-block: 51px 42px !important;
   }
   body.medical-landing .medical-program-section .medical-program-direct {
     width: 100% !important;
@@ -16887,8 +16887,8 @@ body.medical-landing .medical-patient-journey .section-header {
 /* ═══ HERO: bigger titles, content higher ═══ */
 @media (max-width: 768px) {
   body:not(.b2b-landing) .hero {
-    padding-top: 82px !important;
-    padding-bottom: 52px !important;
+    padding-top: 66px !important;
+    padding-bottom: 42px !important;
   }
   body:not(.b2b-landing) .hero-content {
     justify-content: flex-start !important;
@@ -17055,7 +17055,7 @@ body.medical-landing .medical-patient-journey .section-header {
   body:not(.b2b-landing) .stats-section {
     background: transparent !important;
     margin-top: -38px !important;
-    margin-bottom: -150px !important;
+    margin-bottom: -120px !important;
     padding: 0 16px 0 !important;
     position: relative !important;
     z-index: 10 !important;
@@ -17117,7 +17117,7 @@ body.medical-landing .medical-patient-journey .section-header {
     margin-top: 2px !important;
   }
   body:not(.b2b-landing) .profiles-section {
-    padding-top: 48px !important;
+    padding-top: 38px !important;
   }
 }
 
@@ -17125,7 +17125,7 @@ body.medical-landing .medical-patient-journey .section-header {
 @media (max-width: 640px) {
   /* Más separación entre título y avión */
   body:not(.b2b-landing) .work-meaning-head {
-    margin-bottom: 44px !important;
+    margin-bottom: 35px !important;
   }
   /* Sky: bajar al nivel del avión */
   body:not(.b2b-landing) .work-meaning-card::before {
@@ -17157,7 +17157,7 @@ body.medical-landing .medical-patient-journey .section-header {
    ============================================================ */
 @media (max-width: 768px) {
   body:not(.b2b-landing) .profiles-section {
-    padding-top: 78px !important;
+    padding-top: 62px !important;
   }
 
   body:not(.b2b-landing) .profiles-section .container > .reveal {
@@ -17244,7 +17244,7 @@ body.medical-landing .medical-patient-journey .section-header {
 
 @media (max-width: 420px) {
   body:not(.b2b-landing) .profiles-section {
-    padding-top: 86px !important;
+    padding-top: 69px !important;
   }
 
   body:not(.b2b-landing) .minimal-profiles {
@@ -17363,13 +17363,13 @@ body.medical-landing .medical-patient-journey .section-header {
   }
 
   body.medical-landing .medical-patient-grid {
-    margin-top: 64px !important;
+    margin-top: 51px !important;
   }
 }
 
 @media (max-width: 560px) {
   body.medical-landing .medical-patient-grid {
-    margin-top: 72px !important;
+    margin-top: 58px !important;
   }
 }
 
@@ -17499,11 +17499,11 @@ body:not(.b2b-landing) .benefit-item p {
 
 body:not(.b2b-landing) .home-testimonials-section {
   background: #f3f6fa;
-  padding: clamp(72px, 8vw, 108px) 0;
+  padding: clamp(58px, 8vw, 86px) 0;
 }
 
 body:not(.b2b-landing) .home-testimonials-section .home-testimonials-header {
-  margin-bottom: clamp(28px, 4vw, 44px);
+  margin-bottom: clamp(28px, 4vw, 35px);
 }
 
 body:not(.b2b-landing) .home-credentials-testimonials {
@@ -17511,7 +17511,7 @@ body:not(.b2b-landing) .home-credentials-testimonials {
   display: grid;
   gap: clamp(18px, 2vw, 26px);
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin: clamp(28px, 3vw, 42px) auto 0;
+  margin: clamp(28px, 3vw, 34px) auto 0;
   max-width: 100%;
   width: 100%;
 }
@@ -17636,9 +17636,9 @@ body.medical-landing .medical-patient-banner {
   background: #032042 !important;
   border-radius: 999px !important;
   box-shadow: none !important;
-  margin: clamp(28px, 3.2vw, 44px) auto 0 !important;
+  margin: clamp(28px, 3.2vw, 35px) auto 0 !important;
   max-width: min(1120px, calc(100vw - 96px)) !important;
-  padding: clamp(18px, 2.2vw, 26px) clamp(28px, 5vw, 72px) !important;
+  padding: clamp(18px, 2.2vw, 26px) clamp(28px, 5vw, 58px) !important;
   text-align: center !important;
 }
 
@@ -17686,7 +17686,7 @@ body.medical-landing .medical-patient-banner strong {
    ============================================================ */
 @media (min-width: 901px) and (max-width: 1440px) {
   body:not(.b2b-landing) section:not(.hero) {
-    padding-block: clamp(28px, 3vw, 48px) !important;
+    padding-block: clamp(28px, 3vw, 38px) !important;
   }
 
 
@@ -17699,7 +17699,7 @@ body.medical-landing .medical-patient-banner strong {
 
   body:not(.b2b-landing) .profiles-section {
     min-height: 430px !important;
-    padding-block: 58px 66px !important;
+    padding-block: 46px 53px !important;
   }
 
   body:not(.b2b-landing) .profiles-section .container > .reveal {
@@ -17792,13 +17792,13 @@ body.medical-landing .medical-patient-banner strong {
     height: min(72vh, 640px) !important;
     min-height: 560px !important;
     overflow: visible !important;
-    padding-top: 76px !important;
+    padding-top: 61px !important;
   }
 
   body:not(.b2b-landing) .scroll-wrapper {
     align-items: flex-start !important;
     gap: 24px !important;
-    padding-inline: clamp(28px, 5vw, 72px) !important;
+    padding-inline: clamp(28px, 5vw, 58px) !important;
   }
 
   body:not(.b2b-landing) .scroll-title {
@@ -17879,7 +17879,7 @@ body.medical-landing .medical-patient-banner strong {
   }
 
   body:not(.b2b-landing) .home-final-cta {
-    padding-block: 46px !important;
+    padding-block: 37px !important;
   }
 
   body:not(.b2b-landing) .home-final-cta-inner h2 {
@@ -18037,13 +18037,13 @@ body.b2b-landing:not(.medical-landing) .company-trust-point span:last-child {
   }
 
   body.medical-landing .medical-program-section .container {
-    padding-left: clamp(28px, 5vw, 72px) !important;
-    padding-right: clamp(52px, 7vw, 108px) !important;
+    padding-left: clamp(28px, 5vw, 58px) !important;
+    padding-right: clamp(42px, 7vw, 86px) !important;
   }
 
   body.medical-landing .medical-program-section .medical-program-direct {
     margin-left: auto !important;
-    margin-right: clamp(12px, 2.5vw, 42px) !important;
+    margin-right: clamp(12px, 2.5vw, 34px) !important;
     max-width: 560px !important;
     transform: none !important;
     width: min(560px, 46%) !important;
@@ -18064,7 +18064,7 @@ body.b2b-landing:not(.medical-landing) .company-trust-point span:last-child {
   }
 
   body.medical-landing .medical-trust-proof-grid {
-    gap: clamp(34px, 4vw, 62px) !important;
+    gap: clamp(34px, 4vw, 50px) !important;
     grid-template-columns: minmax(340px, 0.82fr) minmax(680px, 1.18fr) !important;
   }
 
@@ -18157,8 +18157,8 @@ body:not(.b2b-landing) .home-final-cta p {
 }
 
 body:not(.b2b-landing) .profiles-section {
-  margin-top: clamp(18px, 3vw, 42px) !important;
-  padding-top: clamp(78px, 8vw, 116px) !important;
+  margin-top: clamp(18px, 3vw, 34px) !important;
+  padding-top: clamp(62px, 8vw, 93px) !important;
 }
 
 @media (min-width: 901px) and (max-width: 1440px) {
@@ -18187,8 +18187,8 @@ body:not(.b2b-landing) .profiles-section {
   }
 
   body:not(.b2b-landing) .profiles-section {
-    margin-top: clamp(24px, 3vw, 46px) !important;
-    padding-top: 82px !important;
+    margin-top: clamp(24px, 3vw, 37px) !important;
+    padding-top: 66px !important;
   }
 }
 
@@ -18206,7 +18206,7 @@ body:not(.b2b-landing) .profiles-section {
 
   body:not(.b2b-landing) .profiles-section {
     margin-top: 24px !important;
-    padding-top: 70px !important;
+    padding-top: 56px !important;
   }
 }
 
@@ -18280,7 +18280,7 @@ body.b2b-landing:not(.medical-landing) .split-hero-kicker {
 }
 
 body.b2b-landing:not(.medical-landing) .company-calc-intro {
-  padding-left: clamp(28px, 3.2vw, 64px) !important;
+  padding-left: clamp(28px, 3.2vw, 51px) !important;
 }
 
 body.b2b-landing:not(.medical-landing) .company-calc-intro .intro-block-text h2,
@@ -18307,7 +18307,7 @@ body.b2b-landing:not(.medical-landing) main > section:not(.split-hero) .testimon
   }
 
   body.b2b-landing:not(.medical-landing) .company-calc-intro {
-    padding-left: clamp(34px, 4vw, 72px) !important;
+    padding-left: clamp(34px, 4vw, 58px) !important;
   }
 }
 
@@ -18405,8 +18405,8 @@ body.b2b-landing:not(.medical-landing) .company-booking-inner h2 {
    Home — profiles background extension + carousel intro alignment
    ============================================================ */
 body:not(.b2b-landing) .profiles-section {
-  margin-top: -96px !important;
-  padding-top: calc(clamp(78px, 8vw, 116px) + 96px) !important;
+  margin-top: -77px !important;
+  padding-top: calc(clamp(62px, 8vw, 93px) + 77px) !important;
 }
 
 body:not(.b2b-landing) .destinations-scroll .scroll-wrapper {
@@ -18432,8 +18432,8 @@ body:not(.b2b-landing) .destinations-scroll .scroll-title p {
 
 @media (min-width: 901px) and (max-width: 1440px) {
   body:not(.b2b-landing) .profiles-section {
-    margin-top: -82px !important;
-    padding-top: calc(82px + 82px) !important;
+    margin-top: -66px !important;
+    padding-top: calc(66px + 66px) !important;
   }
 
   body:not(.b2b-landing) .destinations-scroll .scroll-title {
@@ -18443,8 +18443,8 @@ body:not(.b2b-landing) .destinations-scroll .scroll-title p {
 
 @media (max-width: 900px) {
   body:not(.b2b-landing) .profiles-section {
-    margin-top: -74px !important;
-    padding-top: calc(70px + 74px) !important;
+    margin-top: -59px !important;
+    padding-top: calc(56px + 59px) !important;
   }
 
   body:not(.b2b-landing) .destinations-scroll .scroll-title {
@@ -18458,7 +18458,7 @@ body:not(.b2b-landing) .profiles-section {
   isolation: isolate !important;
   margin-top: 0 !important;
   overflow: visible !important;
-  padding-top: clamp(132px, 10vw, 168px) !important;
+  padding-top: clamp(106px, 10vw, 134px) !important;
 }
 
 body:not(.b2b-landing) .profiles-section::before {
@@ -18480,7 +18480,7 @@ body:not(.b2b-landing) .profiles-section > .container {
 @media (min-width: 901px) and (max-width: 1440px) {
   body:not(.b2b-landing) .profiles-section {
     margin-top: 0 !important;
-    padding-top: 146px !important;
+    padding-top: 117px !important;
   }
 
   body:not(.b2b-landing) .profiles-section::before {
@@ -18491,7 +18491,7 @@ body:not(.b2b-landing) .profiles-section > .container {
 @media (max-width: 900px) {
   body:not(.b2b-landing) .profiles-section {
     margin-top: 0 !important;
-    padding-top: 116px !important;
+    padding-top: 93px !important;
   }
 
   body:not(.b2b-landing) .profiles-section::before {
@@ -18501,21 +18501,21 @@ body:not(.b2b-landing) .profiles-section > .container {
 
 /* Home — lower profile content only, keep sky start fixed */
 body:not(.b2b-landing) .profiles-section {
-  padding-bottom: clamp(46px, 5.2vw, 72px) !important;
-  padding-top: clamp(154px, 11vw, 188px) !important;
+  padding-bottom: clamp(37px, 5.2vw, 58px) !important;
+  padding-top: clamp(123px, 11vw, 150px) !important;
 }
 
 @media (min-width: 901px) and (max-width: 1440px) {
   body:not(.b2b-landing) .profiles-section {
-    padding-bottom: 64px !important;
-    padding-top: 168px !important;
+    padding-bottom: 51px !important;
+    padding-top: 134px !important;
   }
 }
 
 @media (max-width: 900px) {
   body:not(.b2b-landing) .profiles-section {
-    padding-bottom: 58px !important;
-    padding-top: 136px !important;
+    padding-bottom: 46px !important;
+    padding-top: 109px !important;
   }
 }
 
@@ -18525,7 +18525,7 @@ body:not(.b2b-landing) .profiles-section > .container {
 }
 
 body:not(.b2b-landing) .profiles-section {
-  padding-bottom: calc(clamp(46px, 5.2vw, 72px) + 34px) !important;
+  padding-bottom: calc(clamp(37px, 5.2vw, 58px) + 34px) !important;
 }
 
 @media (min-width: 901px) and (max-width: 1440px) {
@@ -18534,7 +18534,7 @@ body:not(.b2b-landing) .profiles-section {
   }
 
   body:not(.b2b-landing) .profiles-section {
-    padding-bottom: 100px !important;
+    padding-bottom: 80px !important;
   }
 }
 
@@ -18544,7 +18544,7 @@ body:not(.b2b-landing) .profiles-section {
   }
 
   body:not(.b2b-landing) .profiles-section {
-    padding-bottom: 86px !important;
+    padding-bottom: 69px !important;
   }
 }
 
@@ -18706,7 +18706,7 @@ body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box {
   display: flex !important;
   height: 60px !important;
   justify-content: center !important;
-  margin: 0 40px !important;
+  margin: 0 32px !important;
   padding: 0 !important;
   width: 140px !important;
 }
@@ -18764,7 +18764,7 @@ body.medical-landing .medical-proof-panel h2 {
 }
 
 body.medical-landing .medical-trust-proof-grid {
-  gap: clamp(34px, 4.5vw, 70px) !important;
+  gap: clamp(34px, 4.5vw, 56px) !important;
   grid-template-columns: minmax(330px, .58fr) minmax(940px, 1.42fr) !important;
 }
 
@@ -18917,16 +18917,16 @@ body.medical-landing .medical-behind-scenes .company-proof-cards .b2b-testimonia
 
   body.medical-landing .medical-specialty-carousel-section {
     overflow: visible !important;
-    padding-bottom: clamp(96px, 8vw, 124px) !important;
+    padding-bottom: clamp(77px, 8vw, 99px) !important;
   }
 
   body.medical-landing .medical-specialty-carousel-wrap {
     overflow: visible !important;
-    padding-block: 10px 40px !important;
+    padding-block: 10px 32px !important;
   }
 
   body.medical-landing .medical-specialty-carousel {
-    padding-bottom: 56px !important;
+    padding-bottom: 45px !important;
   }
 
   body.medical-landing .medical-specialty-slide-copy {
@@ -19098,7 +19098,7 @@ html body.b2b-landing:not(.medical-landing) .trust-banner.b2b-premium-logos .mar
 html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box {
   width: clamp(112px, 11.5vw, 168px) !important;
   height: clamp(48px, 4.8vw, 70px) !important;
-  margin: 0 clamp(16px, 2.4vw, 44px) !important;
+  margin: 0 clamp(16px, 2.4vw, 35px) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -19146,9 +19146,9 @@ html body:not(.b2b-landing) .stats-section::after {
     flex: 0 0 56% !important;
     max-width: 56% !important;
     box-sizing: border-box !important;
-    padding-inline: clamp(28px, 5vw, 92px) !important;
-    padding-top: clamp(78px, 9vh, 104px) !important;
-    padding-bottom: clamp(24px, 4vh, 40px) !important;
+    padding-inline: clamp(28px, 5vw, 74px) !important;
+    padding-top: clamp(62px, 9vh, 83px) !important;
+    padding-bottom: clamp(24px, 4vh, 32px) !important;
     justify-content: center !important;
     row-gap: clamp(14px, 2vh, 24px) !important;
   }
@@ -19326,7 +19326,7 @@ html body main img:not([class*="hero"]):not(.company-hero-photo) {
     justify-content: center !important;
     max-width: none !important;
     min-width: 0 !important;
-    padding: clamp(88px, 10vh, 118px) clamp(56px, 5.8vw, 92px) clamp(44px, 6vh, 76px) clamp(52px, 5vw, 84px) !important;
+    padding: clamp(70px, 10vh, 94px) clamp(45px, 5.8vw, 74px) clamp(35px, 6vh, 61px) clamp(42px, 5vw, 67px) !important;
     row-gap: clamp(14px, 1.8vh, 22px) !important;
     width: 100% !important;
   }
@@ -19382,7 +19382,7 @@ html body main img:not([class*="hero"]):not(.company-hero-photo) {
 
   html body.b2b-landing:not(.medical-landing) .split-hero-content,
   html body.medical-landing .medical-hero .split-hero-content {
-    padding-inline: clamp(44px, 5vw, 58px) clamp(38px, 4.4vw, 54px) !important;
+    padding-inline: clamp(35px, 5vw, 46px) clamp(38px, 4.4vw, 43px) !important;
   }
 
   html body.b2b-landing:not(.medical-landing) .split-hero-title,
@@ -19484,7 +19484,7 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
   }
 
   html body:not(.b2b-landing) .stats-section {
-    margin-top: clamp(-132px, -8vw, -86px) !important;
+    margin-top: clamp(-106px, -8vw, -69px) !important;
     padding-top: 0 !important;
     z-index: 20 !important;
   }
@@ -19496,7 +19496,7 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
 
 @media (max-width: 900px) {
   html body:not(.b2b-landing) .stats-section {
-    margin-top: -72px !important;
+    margin-top: -58px !important;
     padding-top: 0 !important;
   }
 }
@@ -19514,7 +19514,7 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
     border: 0 !important;
     box-shadow: none !important;
     color: var(--primary) !important;
-    margin: -62px 0 -62px !important;
+    margin: -50px 0 -50px !important;
     padding: 0 !important;
     position: relative !important;
     z-index: 12 !important;
@@ -19618,8 +19618,8 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
-    margin-top: -62px !important;
-    margin-bottom: -62px !important;
+    margin-top: -50px !important;
+    margin-bottom: -50px !important;
     padding: 0 !important;
     position: relative !important;
     z-index: 20 !important;
@@ -19650,8 +19650,8 @@ html body.medical-landing .trust-banner.b2b-premium-logos .marquee-item-box img 
   }
 
   html body:not(.b2b-landing) .stats-section {
-    margin-top: -42px !important;
-    margin-bottom: -58px !important;
+    margin-top: -34px !important;
+    margin-bottom: -46px !important;
     padding-top: 0 !important;
     z-index: 40 !important;
   }
@@ -19904,7 +19904,7 @@ body.medical-landing .company-sky-cta.medical-booking-cta .btn-dark:hover {
     max-width: 100% !important;
   }
   body.medical-landing .medical-behind-scenes .company-trust-panel {
-    margin-bottom: clamp(24px, 7vw, 40px) !important;
+    margin-bottom: clamp(24px, 7vw, 32px) !important;
   }
   body.medical-landing .medical-behind-scenes .company-trust-panel h2 {
     white-space: normal !important;
@@ -19971,7 +19971,7 @@ body.medical-landing .company-sky-cta.medical-booking-cta .btn-dark:hover {
 
 @media (max-width: 768px) {
   body:not(.b2b-landing) .home-testimonials-header {
-    margin-top: clamp(58px, 16vw, 88px) !important;
+    margin-top: clamp(46px, 16vw, 70px) !important;
   }
 }
 
@@ -20112,7 +20112,7 @@ body.medical-landing .company-sky-cta.medical-booking-cta .btn-dark:hover {
     transform: none !important;
   }
   body:not(.b2b-landing) .hero-cta-container {
-    margin-top: clamp(28px, 4vh, 56px) !important;
+    margin-top: clamp(28px, 4vh, 45px) !important;
     opacity: 1 !important;
     transform: none !important;
   }
@@ -20261,11 +20261,11 @@ body:not(.b2b-landing) .profile-card-minimal:hover .profile-link {
 }
 
 /* Quiénes somos */
-.rb-about { padding: 96px 0; background: #ffffff; }
+.rb-about { padding: 77px 0; background: #ffffff; }
 .rb-about-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  gap: 64px;
+  gap: 51px;
   align-items: center;
 }
 .rb-about-copy { min-width: 0; }
@@ -20309,7 +20309,7 @@ body:not(.b2b-landing) .profile-card-minimal:hover .profile-link {
 }
 .rb-about-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 @media (max-width: 900px) {
-  .rb-about { padding: 64px 0; }
+  .rb-about { padding: 51px 0; }
   .rb-about-grid { grid-template-columns: 1fr; gap: 36px; }
   .rb-about-photo { aspect-ratio: 4 / 3; }
 }
@@ -20323,7 +20323,7 @@ body:not(.b2b-landing) .cred-grid-three .cred-shield-icon { width: 44px; height:
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
-  margin-top: 40px;
+  margin-top: 32px;
   padding-top: 28px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -20354,3 +20354,7 @@ body:not(.b2b-landing) .cred-grid-three .cred-shield-icon { width: 44px; height:
   .rb-entities { grid-template-columns: 1fr; }
 }
 .footer-bottom { flex-wrap: wrap; row-gap: 8px; }
+
+/* Rebranding: todo un poco más pequeño. Las letras del sitio están en rem,
+   así que bajar la base de 16px a 14px las reduce un 12,5 % de forma pareja. */
+html { font-size: 14px !important; }
