@@ -21,7 +21,7 @@
   
   --text: #071C35;
   --text-secondary: #4B6078;
-  --text-light: #94A3B8;
+  --text-light: #64748B; /* 4,76:1 sobre blanco; #94A3B8 daba 2,56:1 */
   --border: #DCE8F4;
   
   /* Shadows - Softer for premium feel */
