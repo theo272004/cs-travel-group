@@ -2,7 +2,7 @@
 // Inicio de CS Travel Group (rebranding, copia sin publicar)
 // 1) Burbujas de cifras: siguen el cursor por capas, brillo bajo el mouse
 //    y los números cuentan al aparecer.
-// 2) Tarjetas de ¿Con quién trabajamos?: se inclinan hacia el cursor.
+// 2) ¿Con quién trabajamos?: tarjetas que flotan sobre el borde del video.
 // 3) Lo que significa trabajar con nosotros: lista que cambia la foto.
 // 4) Carrusel de servicios en abanico (flechas, puntos, teclado, arrastre).
 // Sin JS todo se ve: cifras finales, primer punto abierto, tarjetas quietas.
@@ -69,21 +69,28 @@
     });
   })();
 
-  // ------------------------------------------- Tarjetas que se inclinan
-  (function tilt() {
-    if (reduced || !finePointer) return;
-    document.querySelectorAll('.cs-who-card').forEach(function (c) {
-      c.addEventListener('pointermove', function (e) {
-        var r = c.getBoundingClientRect();
-        var x = (e.clientX - r.left) / r.width - 0.5;
-        var y = (e.clientY - r.top) / r.height - 0.5;
-        c.style.setProperty('--ry', (x * 8).toFixed(2) + 'deg');
-        c.style.setProperty('--rx', (-y * 6).toFixed(2) + 'deg');
+  // ---------------------------- Tarjetas que flotan alrededor del video
+  (function floats() {
+    var sec = document.querySelector('.cs-video');
+    var cards = document.querySelectorAll('.cs-float');
+    if (!sec || !cards.length || reduced || !finePointer) return;
+    var raf = 0, px = 0, py = 0;
+    sec.addEventListener('pointermove', function (e) {
+      var r = sec.getBoundingClientRect();
+      px = (e.clientX - r.left) / r.width - 0.5;
+      py = (e.clientY - r.top) / r.height - 0.5;
+      if (raf) return;
+      raf = requestAnimationFrame(function () {
+        raf = 0;
+        cards.forEach(function (c) {
+          var d = +c.getAttribute('data-depth') || 16;
+          c.style.setProperty('--mx', (-px * d).toFixed(1) + 'px');
+          c.style.setProperty('--my', (-py * d * 0.7).toFixed(1) + 'px');
+        });
       });
-      c.addEventListener('pointerleave', function () {
-        c.style.setProperty('--ry', '0deg');
-        c.style.setProperty('--rx', '0deg');
-      });
+    });
+    sec.addEventListener('pointerleave', function () {
+      cards.forEach(function (c) { c.style.setProperty('--mx', '0px'); c.style.setProperty('--my', '0px'); });
     });
   })();
 

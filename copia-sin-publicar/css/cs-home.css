@@ -18,7 +18,7 @@
   color: var(--primary-light);
   margin-bottom: 12px;
 }
-.cs-hero h1, .cs-who h2, .cs-video h2, .cs-why h2, .cs-about h2, .cs-voices h2, .cs-close h2, .rb-cover-head h2 {
+.cs-hero h1, .cs-video h2, .cs-why h2, .cs-about h2, .cs-voices h2, .cs-close h2, .rb-cover-head h2 {
   font-family: var(--font-heading);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -26,7 +26,7 @@
   text-wrap: balance;
   margin: 0;
 }
-.cs-who h2, .cs-video h2, .cs-why h2, .cs-about h2, .rb-cover-head h2 { font-size: clamp(1.8rem, 2.8vw, 2.5rem); color: var(--primary); }
+.cs-video h2, .cs-why h2, .cs-about h2, .rb-cover-head h2 { font-size: clamp(1.8rem, 2.8vw, 2.5rem); color: var(--primary); }
 .cs-head { text-align: center; max-width: 640px; margin: 0 auto 36px; }
 
 .cs-btn {
@@ -45,7 +45,7 @@
   font-size: .95rem;
   transition: transform 200ms cubic-bezier(.16,1,.3,1);
 }
-.cs-btn:hover .cs-arrow, .cs-who-card:hover .cs-arrow { transform: translateX(3px); }
+.cs-btn:hover .cs-arrow { transform: translateX(3px); }
 .cs-btn-light { background: #fff; color: var(--primary); }
 .cs-btn-light .cs-arrow { background: var(--primary); color: #fff; }
 .cs-btn-light:hover { background: var(--accent); }
@@ -145,83 +145,77 @@
 }
 .cs-bubble > span { font-size: .9rem; color: rgba(255,255,255,.8); }
 
-/* ------------------------------------------------------------ Video */
-.cs-video { background: #fff; padding: 72px 0; }
+/* ------------------------------- Video con las tarjetas de perfil */
+.cs-video {
+  min-height: 100vh; min-height: 100svh;
+  display: flex; align-items: center;
+  background: #fff;
+  padding: 88px 0 72px;
+  overflow: hidden;
+}
+.cs-video > .container { width: 100%; }
 .cs-video-inner { display: flex; flex-direction: column; align-items: center; gap: 28px; }
 .cs-video-head { text-align: center; }
+/* El escenario: el video al centro y las tarjetas montadas sobre su borde,
+   mitad adentro y mitad afuera. */
+.cs-video-stage {
+  position: relative;
+  width: min(100%, 860px, calc((100svh - 300px) * 16 / 9));
+  margin: 0 auto;
+}
 .cs-video-frame {
   position: relative; display: block;
-  width: min(100%, 1100px, calc((100svh - 260px) * 16 / 9));
+  width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: 24px;
+  border-radius: 26px;
   overflow: hidden;
   background: var(--primary);
-  box-shadow: 0 30px 60px rgba(1, 20, 40, .18);
+  box-shadow: 0 30px 60px rgba(1, 20, 40, .16);
 }
 .cs-video-frame img { width: 100%; height: 100%; object-fit: cover; transition: transform 600ms cubic-bezier(.16,1,.3,1); }
-.cs-video-frame::after { content: ""; position: absolute; inset: 0; background: rgba(1, 20, 40, .35); }
+.cs-video-frame::after { content: ""; position: absolute; inset: 0; background: rgba(1, 20, 40, .3); }
 .cs-video-frame:hover img { transform: scale(1.03); }
 .cs-video-play {
   position: absolute; left: 50%; top: 50%; z-index: 1;
-  width: 92px; height: 92px; margin: -46px 0 0 -46px;
+  width: 88px; height: 88px; margin: -44px 0 0 -44px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   background: rgba(255,255,255,.18);
   border: 1px solid rgba(255,255,255,.4);
   -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
-  color: #fff; font-size: 1.5rem;
-  transition: transform 200ms cubic-bezier(.16,1,.3,1), background-color 160ms cubic-bezier(.2,0,0,1);
+  color: #fff; font-size: 1.4rem;
+  transition: transform 200ms cubic-bezier(.16,1,.3,1), background-color 160ms cubic-bezier(.2,0,0,1), color 160ms cubic-bezier(.2,0,0,1);
 }
 .cs-video-play span { transform: translateX(3px); }
 .cs-video-frame:hover .cs-video-play { transform: scale(1.08); background: var(--accent); color: var(--primary); }
-.cs-video-tag { position: absolute; left: 18px; bottom: 18px; z-index: 1; padding: 10px 16px; border-radius: 999px; font-size: .82rem; font-weight: 600; }
+.cs-video-tag { position: absolute; left: 50%; bottom: 18px; translate: -50% 0; z-index: 1; padding: 10px 16px; border-radius: 999px; font-size: .82rem; font-weight: 600; white-space: nowrap; }
 
-/* ------------------------------------------------- ¿Con quién trabajamos? */
-.cs-who {
-  min-height: 100vh; min-height: 100svh;
-  display: flex; align-items: center;
-  background: var(--bg);
-  padding: 88px 0;
-}
-.cs-who > .container { width: 100%; }
-.cs-who-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; perspective: 1200px; }
-.cs-who-card {
-  position: relative;
-  display: flex; flex-direction: column; justify-content: space-between;
-  height: min(480px, 62svh);
-  padding: 26px;
-  border-radius: 24px;
-  overflow: hidden;
+/* Tarjetas flotantes: un solo tono, azul clarito. */
+.cs-float {
+  position: absolute; z-index: 2;
+  width: 250px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(234, 243, 255, .94);
+  border: 1px solid rgba(255, 255, 255, .9);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  box-shadow: 0 20px 44px rgba(1, 20, 40, .14);
+  color: var(--primary);
   text-decoration: none;
-  box-shadow: 0 18px 40px rgba(1, 20, 40, .1);
-  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(var(--lift, 0px));
-  transition: transform 400ms cubic-bezier(.16,1,.3,1), box-shadow 200ms cubic-bezier(.2,0,0,1);
+  transform: translate3d(var(--mx, 0px), calc(var(--my, 0px) + var(--lift, 0px)), 0);
+  transition: transform 400ms cubic-bezier(.16,1,.3,1), box-shadow 200ms cubic-bezier(.2,0,0,1), border-color 200ms cubic-bezier(.2,0,0,1);
 }
-.cs-who-card:hover { --lift: -6px; box-shadow: 0 28px 56px rgba(1, 20, 40, .18); }
-.cs-who-card h3 { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 10px; }
-.cs-who-card p { font-size: .95rem; line-height: 1.55; margin: 0 0 18px; }
-.cs-who-body { position: relative; z-index: 1; }
-.cs-link { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: .9rem; }
-.cs-link .cs-arrow { width: 30px; height: 30px; }
-.cs-tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; position: relative; z-index: 1; }
-.cs-tags li { padding: 8px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; }
-
-.cs-who-card.is-dark { background: linear-gradient(160deg, var(--primary-light) 0%, var(--primary) 45%, var(--navy-deep) 100%); color: #fff; }
-.cs-who-card.is-dark p { color: rgba(255,255,255,.78); }
-.cs-who-card.is-dark .cs-tags li { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22); }
-.cs-who-card.is-dark .cs-arrow { background: var(--accent); color: var(--primary); }
-
-.cs-who-card.is-photo { color: #fff; background: var(--primary); justify-content: flex-end; }
-.cs-who-card.is-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 700ms cubic-bezier(.16,1,.3,1); }
-.cs-who-card.is-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(1,20,40,.92) 0%, rgba(1,20,40,.3) 55%, rgba(1,20,40,.05) 100%); }
-.cs-who-card.is-photo:hover img { transform: scale(1.06); }
-.cs-who-card.is-photo p { color: rgba(255,255,255,.82); }
-.cs-who-card.is-photo .cs-arrow { background: #fff; color: var(--primary); }
-
-.cs-who-card.is-light { background: linear-gradient(160deg, #EAF3FF 0%, var(--sky) 100%); color: var(--primary); }
-.cs-who-card.is-light p { color: var(--text-secondary); }
-.cs-who-card.is-light .cs-tags li { background: #fff; color: var(--primary); }
-.cs-who-card.is-light .cs-arrow { background: var(--primary); color: #fff; }
+.cs-float:hover, .cs-float:focus-visible { --lift: -6px; border-color: var(--primary-light); box-shadow: 0 28px 56px rgba(1, 20, 40, .2); }
+.cs-float-kicker { display: block; font-size: .7rem; font-weight: 700; letter-spacing: .14em; color: var(--primary-light); margin-bottom: 8px; }
+.cs-float h3 { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; letter-spacing: -0.02em; color: var(--primary); margin: 0 0 6px; }
+.cs-float p { font-size: .84rem; line-height: 1.5; color: var(--text-secondary); margin: 0 0 12px; }
+.cs-float .cs-link { color: var(--primary); font-size: .84rem; }
+.cs-float .cs-arrow { width: 28px; height: 28px; background: var(--primary); color: #fff; }
+.cs-float:hover .cs-arrow { transform: translateX(3px); }
+/* Posiciones: cada tarjeta cruza un borde distinto del video. */
+.cs-float.is-navy  { left: -150px; top: 9%; }
+.cs-float.is-white { right: -160px; top: 34%; }
+.cs-float.is-sky   { left: 14%; bottom: -70px; }
 
 /* ------------------------------------- Lo que significa trabajar con nosotros */
 .cs-why {
@@ -357,10 +351,15 @@
 .cs-close-mail:hover { color: #fff; }
 
 /* ------------------------------------------------------------ Celular */
+@media (max-width: 1180px) {
+  .cs-float.is-navy { left: -40px; }
+  .cs-float.is-white { right: -40px; }
+}
 @media (max-width: 980px) {
+  .cs-video { min-height: 0; }
+  .cs-video-stage { width: 100%; display: grid; gap: 12px; }
+  .cs-float { position: relative; inset: auto !important; width: auto; transform: none; }
   .cs-bubbles { grid-template-columns: 1fr 1fr; }
-  .cs-who-grid { grid-template-columns: 1fr; }
-  .cs-who-card { height: auto; min-height: 300px; gap: 40px; }
   .cs-why-grid, .cs-about-top { grid-template-columns: 1fr; gap: 36px; }
   .cs-why-media { height: 52svh; }
   .cs-voices-grid { grid-template-columns: 1fr; }
@@ -370,7 +369,7 @@
   .cs-about-legal > div { padding: 20px 0; }
 }
 @media (max-width: 640px) {
-  .cs-who, .cs-why, .rb-cover { min-height: 0; padding: 64px 0; }
+  .cs-why, .rb-cover { min-height: 0; padding: 64px 0; }
   .cs-video, .cs-about, .cs-voices, .cs-close { padding: 64px 0; }
   .cs-bubble { padding: 16px; border-radius: 18px; }
   .rb-cover-nav { display: none; }
@@ -379,12 +378,20 @@
 
 @media (prefers-reduced-motion: reduce) {
   .cs-hero-img { animation: none; transform: none; }
-  .cs-bubble, .cs-who-card, .cs-why-media img, .rb-cover-card, .cs-video-frame img { transition-duration: 1ms !important; }
+  .cs-bubble, .cs-float, .cs-why-media img, .rb-cover-card, .cs-video-frame img { transition-duration: 1ms !important; }
   .cs-why-list li.is-active p { animation: none; }
 }
 
-/* Los h3 del sitio son azules por regla general: en las tarjetas oscuras van en blanco. */
-.cs-who-card.is-dark h3, .cs-who-card.is-photo h3 { color: #fff; }
-.cs-who-card.is-light h3 { color: var(--primary); }
 /* La profundidad del abanico necesita que la pista conserve el 3D. */
 .rb-cover-track { transform-style: preserve-3d; }
+
+/* Ajustes del escenario del video. */
+.cs-video-tag { left: auto; right: 18px; top: 18px; bottom: auto; translate: none; }
+.cs-float.is-white { right: -170px; top: 42%; }
+.cs-float.is-sky { left: 6%; bottom: -64px; }
+@media (max-height: 800px) and (min-width: 981px) {
+  .cs-float { width: 226px; padding: 14px 16px; }
+  .cs-float p { font-size: .8rem; margin-bottom: 8px; }
+}
+
+@media (max-width: 640px) { .cs-video-tag { display: none; } }
