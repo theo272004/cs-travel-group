@@ -546,3 +546,11 @@
 .cs-us-values .cs-value-n { grid-row: span 2; margin-top: 2px; }
 .cs-us-values .cs-value h4 { margin: 0 0 6px; }
 @media (max-width: 980px) { .cs-us-top { grid-template-columns: 1fr; gap: 36px; } }
+
+/* Espacio real bajo el video: la tarjeta de Eventos cuelga 54px por debajo
+   del video, así que el escenario reserva ese espacio y la sección suma
+   120px más antes de que empiece el azul. El video se ajusta para que todo
+   siga cabiendo en una pantalla. */
+.cs-video { padding-bottom: 120px; align-items: flex-start; }
+.cs-video-stage { width: min(100%, 1040px, calc((100svh - 400px) * 16 / 9)); margin-bottom: 64px; }
+@media (max-width: 980px) { .cs-video { padding-bottom: 64px; } .cs-video-stage { margin-bottom: 0; } }
