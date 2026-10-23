@@ -20213,3 +20213,144 @@ body.medical-landing .company-sky-cta.medical-booking-cta .btn-dark:hover {
   color: #fff !important;
   border-color: rgba(255, 255, 255, .55) !important;
 }
+
+/* ============================================================
+   Rebranding (copia sin publicar) — tarjetas con profundidad,
+   "Quiénes somos", respaldo legal y pie con ESCNNA.
+   ============================================================ */
+
+/* Tarjetas de perfil: tres columnas, sombra marcada y flecha que invita al clic. */
+body:not(.b2b-landing) .minimal-profiles {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  max-width: 1120px !important;
+}
+body:not(.b2b-landing) .profile-card-minimal {
+  border: 1px solid rgba(3, 32, 66, 0.08) !important;
+  box-shadow: 0 18px 40px rgba(3, 32, 66, 0.12), 0 2px 6px rgba(3, 32, 66, 0.06) !important;
+}
+body:not(.b2b-landing) .profile-card-minimal:hover,
+body:not(.b2b-landing) .profile-card-minimal:focus-visible {
+  border-color: var(--accent) !important;
+  transform: translateY(-6px);
+  box-shadow: 0 26px 54px rgba(3, 32, 66, 0.18), 0 0 0 2px rgba(255, 210, 31, 0.5) !important;
+  outline: none;
+}
+.icon-events { background-color: var(--primary); color: #ffffff; }
+body:not(.b2b-landing) .profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #ffffff !important;
+  transition: background 0.2s ease, color 0.2s ease, gap 0.2s ease;
+}
+body:not(.b2b-landing) .profile-link::after {
+  content: "\2192";
+  font-weight: 700;
+}
+body:not(.b2b-landing) .profile-card-minimal:hover .profile-link {
+  background: var(--accent);
+  color: var(--primary) !important;
+  gap: 14px;
+}
+@media (max-width: 1024px) {
+  body:not(.b2b-landing) .minimal-profiles { grid-template-columns: 1fr !important; max-width: 560px !important; }
+}
+
+/* Quiénes somos */
+.rb-about { padding: 96px 0; background: #ffffff; }
+.rb-about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 64px;
+  align-items: center;
+}
+.rb-about-copy { min-width: 0; }
+.rb-about-copy h2 {
+  color: var(--primary);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  margin: 12px 0 24px;
+  text-wrap: balance;
+}
+.rb-about-copy p {
+  color: var(--text-secondary);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin: 0 0 16px;
+  max-width: 62ch;
+}
+.rb-about-facts {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 28px 0 0;
+}
+.rb-about-facts li {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(3, 32, 66, 0.14);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.rb-about-photo {
+  margin: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(3, 32, 66, 0.2);
+  aspect-ratio: 4 / 5;
+  max-width: 100%;
+}
+.rb-about-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 900px) {
+  .rb-about { padding: 64px 0; }
+  .rb-about-grid { grid-template-columns: 1fr; gap: 36px; }
+  .rb-about-photo { aspect-ratio: 4 / 3; }
+}
+
+/* Respaldo: los tres sellos con el mismo icono de línea. */
+body:not(.b2b-landing) .cred-grid-three .cred-logo-shield { color: var(--primary); }
+body:not(.b2b-landing) .cred-grid-three .cred-shield-icon { width: 44px; height: 44px; }
+
+/* Pie legal: entidades + advertencia ESCNNA */
+.rb-entities {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.rb-entities a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.rb-entities a span { color: rgba(255, 255, 255, 0.6); font-weight: 400; font-size: 0.8rem; }
+.rb-entities a:hover { border-color: var(--accent); background: rgba(255, 255, 255, 0.04); }
+.footer-bottom .rb-escnna {
+  flex-basis: 100%;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  max-width: 110ch;
+}
+@media (max-width: 768px) {
+  .rb-entities { grid-template-columns: 1fr; }
+}
+.footer-bottom { flex-wrap: wrap; row-gap: 8px; }
