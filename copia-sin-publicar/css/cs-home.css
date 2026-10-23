@@ -535,3 +535,14 @@
 
 /* Al pausar, el botón vuelve amarillo en el centro. */
 .cs-video-frame:not(.is-playing) .cs-video-play { background: var(--accent); color: var(--primary); border-color: var(--accent); }
+
+/* Quiénes somos: a la izquierda el título con su texto debajo; a la
+   derecha las tres tarjetas en columna; abajo las cifras. */
+.cs-us-top { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 80px; align-items: start; }
+.cs-us-left h2 { margin-bottom: 28px; }
+.cs-us-left .cs-us-text p { max-width: 50ch; }
+.cs-us-values .cs-us-grid { grid-template-columns: 1fr; gap: 12px; }
+.cs-us-values .cs-value { display: grid; grid-template-columns: auto 1fr; column-gap: 18px; align-items: start; padding: 20px 22px; }
+.cs-us-values .cs-value-n { grid-row: span 2; margin-top: 2px; }
+.cs-us-values .cs-value h4 { margin: 0 0 6px; }
+@media (max-width: 980px) { .cs-us-top { grid-template-columns: 1fr; gap: 36px; } }
