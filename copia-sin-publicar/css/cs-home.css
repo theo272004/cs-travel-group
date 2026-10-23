@@ -1,0 +1,390 @@
+/* =====================================================================
+   Inicio de CS Travel Group (rebranding, copia sin publicar)
+   Mismas secciones y textos del sitio; forma nueva tomada de las
+   referencias (BriskPay, Healora): todo de punta a punta, cada sección
+   cabe en una pantalla, vidrio solo sobre foto o sobre azul.
+   Usa los tokens de styles.css; no declara tokens propios.
+   Movimiento: entra con cubic-bezier(.16,1,.3,1), sale más rápido,
+   solo transform y opacity, con versión para movimiento reducido.
+   ===================================================================== */
+
+/* ------------------------------------------------------------ Común */
+.cs-label {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--primary-light);
+  margin-bottom: 12px;
+}
+.cs-hero h1, .cs-who h2, .cs-video h2, .cs-why h2, .cs-about h2, .cs-voices h2, .cs-close h2, .rb-cover-head h2 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  text-wrap: balance;
+  margin: 0;
+}
+.cs-who h2, .cs-video h2, .cs-why h2, .cs-about h2, .rb-cover-head h2 { font-size: clamp(1.8rem, 2.8vw, 2.5rem); color: var(--primary); }
+.cs-head { text-align: center; max-width: 640px; margin: 0 auto 36px; }
+
+.cs-btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 7px 7px 7px 22px;
+  border-radius: 999px;
+  font: 700 .9rem/1 var(--font-body);
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: background-color 160ms cubic-bezier(.2,0,0,1), color 160ms cubic-bezier(.2,0,0,1), border-color 160ms cubic-bezier(.2,0,0,1), transform 100ms cubic-bezier(.4,0,.2,1);
+}
+.cs-btn:active { transform: scale(.97); }
+.cs-arrow {
+  width: 34px; height: 34px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: .95rem;
+  transition: transform 200ms cubic-bezier(.16,1,.3,1);
+}
+.cs-btn:hover .cs-arrow, .cs-who-card:hover .cs-arrow { transform: translateX(3px); }
+.cs-btn-light { background: #fff; color: var(--primary); }
+.cs-btn-light .cs-arrow { background: var(--primary); color: #fff; }
+.cs-btn-light:hover { background: var(--accent); }
+.cs-btn-navy { background: var(--primary); color: #fff; }
+.cs-btn-navy .cs-arrow { background: var(--accent); color: var(--primary); }
+.cs-btn-navy:hover { background: var(--primary-light); }
+.cs-btn-ghost { color: #fff; border-color: rgba(255,255,255,.35); padding: 16px 22px; }
+.cs-btn-ghost:hover { border-color: #fff; }
+
+.cs-glass {
+  background: rgba(255, 255, 255, .14);
+  border: 1px solid rgba(255, 255, 255, .28);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  color: #fff;
+}
+
+/* ------------------------------------------------------------- Hero */
+.cs-hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  overflow: hidden;
+  background: var(--navy-deep);
+  color: #fff;
+}
+.cs-hero-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: 62% 40%;
+  transform: scale(1.06);
+  animation: cs-settle 1600ms cubic-bezier(.16,1,.3,1) forwards;
+}
+@keyframes cs-settle { to { transform: scale(1); } }
+.cs-hero-shade {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, rgba(1, 20, 40, .88) 0%, rgba(3, 32, 66, .6) 46%, rgba(3, 32, 66, .12) 100%),
+    linear-gradient(0deg, rgba(1, 20, 40, .75) 0%, rgba(1, 20, 40, 0) 42%);
+}
+.cs-hero-inner {
+  position: relative; z-index: 1;
+  width: 100%;
+  display: flex; flex-direction: column; justify-content: space-between;
+  padding-top: clamp(120px, 20svh, 200px);
+  padding-bottom: clamp(28px, 5svh, 48px);
+  gap: 40px;
+}
+.cs-hero-copy { max-width: 620px; }
+.cs-hero h1 { font-size: clamp(2.3rem, 4.4vw, 3.8rem); color: #fff; }
+.cs-hero h1 em { font-style: italic; color: var(--accent); }
+.cs-hero-copy p { margin: 20px 0 30px; max-width: 48ch; font-size: 1.08rem; line-height: 1.6; color: rgba(255,255,255,.82); }
+
+/* Las cifras: burbujas de vidrio que siguen el cursor y se abren al pasar. */
+.cs-bubbles {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.cs-bubble {
+  position: relative;
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 20px 22px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .26);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+  overflow: hidden;
+  cursor: default;
+  outline: none;
+  transform: translate3d(var(--mx, 0px), var(--my, 0px), 0);
+  transition: transform 400ms cubic-bezier(.16,1,.3,1), background-color 200ms cubic-bezier(.2,0,0,1), border-color 200ms cubic-bezier(.2,0,0,1);
+}
+.cs-bubble::before {
+  /* El brillo que sigue al cursor dentro de la burbuja. */
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(180px circle at var(--gx, 50%) var(--gy, 50%), rgba(255,255,255,.28), transparent 60%);
+  opacity: 0;
+  transition: opacity 200ms cubic-bezier(.2,0,0,1);
+  pointer-events: none;
+}
+.cs-bubble:hover, .cs-bubble:focus-visible {
+  background: rgba(255, 255, 255, .2);
+  border-color: rgba(255, 210, 31, .7);
+  transform: translate3d(var(--mx, 0px), calc(var(--my, 0px) - 6px), 0) scale(1.03);
+}
+.cs-bubble:hover::before, .cs-bubble:focus-visible::before { opacity: 1; }
+.cs-bubble strong {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+.cs-bubble > span { font-size: .9rem; color: rgba(255,255,255,.8); }
+
+/* ------------------------------------------------------------ Video */
+.cs-video { background: #fff; padding: 72px 0; }
+.cs-video-inner { display: flex; flex-direction: column; align-items: center; gap: 28px; }
+.cs-video-head { text-align: center; }
+.cs-video-frame {
+  position: relative; display: block;
+  width: min(100%, 1100px, calc((100svh - 260px) * 16 / 9));
+  aspect-ratio: 16 / 9;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--primary);
+  box-shadow: 0 30px 60px rgba(1, 20, 40, .18);
+}
+.cs-video-frame img { width: 100%; height: 100%; object-fit: cover; transition: transform 600ms cubic-bezier(.16,1,.3,1); }
+.cs-video-frame::after { content: ""; position: absolute; inset: 0; background: rgba(1, 20, 40, .35); }
+.cs-video-frame:hover img { transform: scale(1.03); }
+.cs-video-play {
+  position: absolute; left: 50%; top: 50%; z-index: 1;
+  width: 92px; height: 92px; margin: -46px 0 0 -46px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.4);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  color: #fff; font-size: 1.5rem;
+  transition: transform 200ms cubic-bezier(.16,1,.3,1), background-color 160ms cubic-bezier(.2,0,0,1);
+}
+.cs-video-play span { transform: translateX(3px); }
+.cs-video-frame:hover .cs-video-play { transform: scale(1.08); background: var(--accent); color: var(--primary); }
+.cs-video-tag { position: absolute; left: 18px; bottom: 18px; z-index: 1; padding: 10px 16px; border-radius: 999px; font-size: .82rem; font-weight: 600; }
+
+/* ------------------------------------------------- ¿Con quién trabajamos? */
+.cs-who {
+  min-height: 100vh; min-height: 100svh;
+  display: flex; align-items: center;
+  background: var(--bg);
+  padding: 88px 0;
+}
+.cs-who > .container { width: 100%; }
+.cs-who-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; perspective: 1200px; }
+.cs-who-card {
+  position: relative;
+  display: flex; flex-direction: column; justify-content: space-between;
+  height: min(480px, 62svh);
+  padding: 26px;
+  border-radius: 24px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 18px 40px rgba(1, 20, 40, .1);
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(var(--lift, 0px));
+  transition: transform 400ms cubic-bezier(.16,1,.3,1), box-shadow 200ms cubic-bezier(.2,0,0,1);
+}
+.cs-who-card:hover { --lift: -6px; box-shadow: 0 28px 56px rgba(1, 20, 40, .18); }
+.cs-who-card h3 { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 10px; }
+.cs-who-card p { font-size: .95rem; line-height: 1.55; margin: 0 0 18px; }
+.cs-who-body { position: relative; z-index: 1; }
+.cs-link { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: .9rem; }
+.cs-link .cs-arrow { width: 30px; height: 30px; }
+.cs-tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; position: relative; z-index: 1; }
+.cs-tags li { padding: 8px 14px; border-radius: 999px; font-size: .8rem; font-weight: 600; }
+
+.cs-who-card.is-dark { background: linear-gradient(160deg, var(--primary-light) 0%, var(--primary) 45%, var(--navy-deep) 100%); color: #fff; }
+.cs-who-card.is-dark p { color: rgba(255,255,255,.78); }
+.cs-who-card.is-dark .cs-tags li { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22); }
+.cs-who-card.is-dark .cs-arrow { background: var(--accent); color: var(--primary); }
+
+.cs-who-card.is-photo { color: #fff; background: var(--primary); justify-content: flex-end; }
+.cs-who-card.is-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 700ms cubic-bezier(.16,1,.3,1); }
+.cs-who-card.is-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(1,20,40,.92) 0%, rgba(1,20,40,.3) 55%, rgba(1,20,40,.05) 100%); }
+.cs-who-card.is-photo:hover img { transform: scale(1.06); }
+.cs-who-card.is-photo p { color: rgba(255,255,255,.82); }
+.cs-who-card.is-photo .cs-arrow { background: #fff; color: var(--primary); }
+
+.cs-who-card.is-light { background: linear-gradient(160deg, #EAF3FF 0%, var(--sky) 100%); color: var(--primary); }
+.cs-who-card.is-light p { color: var(--text-secondary); }
+.cs-who-card.is-light .cs-tags li { background: #fff; color: var(--primary); }
+.cs-who-card.is-light .cs-arrow { background: var(--primary); color: #fff; }
+
+/* ------------------------------------- Lo que significa trabajar con nosotros */
+.cs-why {
+  min-height: 100vh; min-height: 100svh;
+  display: flex; align-items: center;
+  background: var(--bg-alt);
+  padding: 88px 0;
+}
+.cs-why-grid { width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; }
+.cs-why-media { position: relative; height: min(580px, 74svh); border-radius: 26px; overflow: hidden; background: var(--primary); }
+.cs-why-media img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transform: scale(1.05);
+  transition: opacity 500ms cubic-bezier(.16,1,.3,1), transform 1200ms cubic-bezier(.16,1,.3,1);
+}
+.cs-why-media img.is-active { opacity: 1; transform: scale(1); }
+.cs-why-badge { position: absolute; left: 20px; bottom: 20px; z-index: 1; display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 18px; }
+.cs-why-badge strong { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; letter-spacing: -0.03em; }
+.cs-why-badge span { font-size: .85rem; max-width: 14ch; line-height: 1.3; }
+.cs-why-list { list-style: none; margin: 28px 0 32px; padding: 0; }
+.cs-why-list li { border-top: 1px solid var(--border); }
+.cs-why-list li:last-child { border-bottom: 1px solid var(--border); }
+.cs-why-list button {
+  width: 100%; display: flex; align-items: center; gap: 18px;
+  padding: 20px 0;
+  background: none; border: 0; cursor: pointer; text-align: left;
+  font: 700 1.2rem/1.3 var(--font-heading);
+  letter-spacing: -0.01em;
+  color: var(--text-light);
+  transition: color 200ms cubic-bezier(.2,0,0,1);
+}
+.cs-why-n {
+  font: 700 .75rem/1 var(--font-body); letter-spacing: .12em;
+  padding: 7px 10px; border-radius: 999px;
+  border: 1px solid var(--border); color: var(--text-light);
+  transition: background-color 200ms cubic-bezier(.2,0,0,1), color 200ms cubic-bezier(.2,0,0,1), border-color 200ms cubic-bezier(.2,0,0,1);
+}
+.cs-why-list li.is-active button, .cs-why-list button:hover { color: var(--primary); }
+.cs-why-list li.is-active .cs-why-n { background: var(--accent); border-color: var(--accent); color: var(--primary); }
+.cs-why-list p { display: none; margin: -6px 0 20px 64px; font-size: 1rem; line-height: 1.6; color: var(--text-secondary); max-width: 46ch; }
+.cs-why-list li.is-active p { display: block; animation: cs-in 400ms cubic-bezier(.16,1,.3,1); }
+@keyframes cs-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* ----------------------------------------------- Carrusel de servicios */
+.rb-cover {
+  min-height: 100vh; min-height: 100svh;
+  display: flex; flex-direction: column; justify-content: center;
+  background: #fff; padding: 72px 0; overflow: hidden;
+}
+.rb-cover-head { text-align: center; max-width: 640px; margin: 0 auto 32px; }
+.rb-cover-head h2 em { color: var(--primary-light); }
+.rb-cover-head p { color: var(--text-secondary); font-size: 1rem; margin: 12px 0 0; }
+.rb-cover-head .section-label { color: var(--primary-light); font-size: .72rem; letter-spacing: .16em; }
+.rb-cover-stage { position: relative; height: min(420px, 52svh); perspective: 1400px; touch-action: pan-y; user-select: none; outline: none; }
+.rb-cover-track { list-style: none; margin: 0; padding: 0; position: absolute; inset: 0; }
+.rb-cover-card {
+  position: absolute; left: 50%; top: 50%;
+  width: min(280px, 34svh); height: min(380px, 48svh);
+  transform-origin: center;
+  translate: -50% -50%;
+  border-radius: 22px; overflow: hidden;
+  background: var(--primary);
+  box-shadow: 0 20px 44px rgba(1, 20, 40, .2);
+  transition: transform 560ms cubic-bezier(.16,1,.3,1);
+  cursor: pointer;
+}
+/* Las tarjetas laterales se oscurecen con una capa sólida, no con transparencia:
+   así no se ve una tarjeta a través de otra. */
+.rb-cover-card::before {
+  content: ""; position: absolute; inset: 0; z-index: 2;
+  background: var(--navy-deep);
+  opacity: var(--dim, 0);
+  transition: opacity 400ms cubic-bezier(.16,1,.3,1);
+  pointer-events: none;
+}
+.rb-cover-card img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.rb-cover-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(1,20,40,.88) 0%, rgba(1,20,40,0) 55%); }
+.rb-cover-copy { position: absolute; left: 20px; right: 20px; bottom: 18px; z-index: 1; color: #fff; }
+.rb-cover-copy span { display: block; font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.rb-cover-copy h3 { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; line-height: 1.2; margin: 0; color: #fff; }
+.rb-cover-nav {
+  position: absolute; top: 50%; z-index: 30;
+  width: 48px; height: 48px; translate: 0 -50%;
+  border-radius: 50%; border: 1px solid var(--border);
+  background: #fff; color: var(--primary); font-size: 1rem; cursor: pointer;
+  transition: background-color 160ms cubic-bezier(.2,0,0,1), color 160ms cubic-bezier(.2,0,0,1), transform 100ms cubic-bezier(.4,0,.2,1);
+}
+.rb-cover-nav:hover { background: var(--primary); color: #fff; }
+.rb-cover-nav:active { transform: scale(.97); }
+.rb-cover-nav.prev { left: max(20px, calc(50% - 560px)); }
+.rb-cover-nav.next { right: max(20px, calc(50% - 560px)); }
+.rb-cover-dots { display: flex; justify-content: center; gap: 6px; margin-top: 26px; }
+.rb-cover-dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 999px; background: var(--border); cursor: pointer; transition: background-color 200ms cubic-bezier(.2,0,0,1), transform 200ms cubic-bezier(.2,0,0,1); }
+.rb-cover-dots button[aria-selected="true"] { background: var(--primary); transform: scaleX(2.6); margin: 0 7px; }
+
+/* ----------------------------------------------------- Quiénes somos */
+.cs-about { background: #fff; padding: 96px 0 72px; border-top: 1px solid var(--border); }
+.cs-about-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: start; }
+.cs-about-text p { font-size: 1rem; line-height: 1.7; color: var(--text-secondary); margin: 0 0 14px; max-width: 56ch; }
+.cs-chips { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.cs-chips li { padding: 8px 14px; border-radius: 999px; background: var(--bg-alt); color: var(--primary); font-size: .82rem; font-weight: 600; }
+.cs-about-legal { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 56px; border-top: 1px solid var(--border); }
+.cs-about-legal > div { padding: 24px 24px 0 0; display: flex; flex-direction: column; gap: 6px; }
+.cs-about-legal > div + div { padding-left: 24px; border-left: 1px solid var(--border); }
+.cs-about-legal strong { font-family: var(--font-heading); font-size: 1rem; color: var(--primary); }
+.cs-about-legal span { font-size: .88rem; line-height: 1.5; color: var(--text-secondary); }
+
+/* -------------------------------------------------------- Testimonios */
+.cs-voices { background: var(--primary); color: #fff; padding: 96px 0; }
+.cs-voices-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr) minmax(0, 1.1fr); gap: 40px; align-items: center; }
+.cs-voices .cs-label { color: var(--accent); }
+.cs-voices h2 { font-size: clamp(1.8rem, 2.6vw, 2.4rem); color: #fff; margin-bottom: 28px; }
+.cs-voices-photo { margin: 0; height: min(460px, 60svh); border-radius: 24px; overflow: hidden; }
+.cs-voices-photo img { width: 100%; height: 100%; object-fit: cover; }
+.cs-voices-mini { padding: 18px 20px; border-radius: 18px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); }
+.cs-voices-mini p { font-size: .9rem; line-height: 1.55; margin: 0 0 12px; color: rgba(255,255,255,.85); }
+.cs-voices-mini span, .cs-voices-who { display: flex; flex-direction: column; font-size: .8rem; color: rgba(255,255,255,.65); }
+.cs-voices-mini strong, .cs-voices-who strong { color: #fff; font-size: .88rem; }
+.cs-voices-mini.is-light { background: #fff; border-color: #fff; margin-top: 24px; }
+.cs-voices-mini.is-light p { color: var(--text); }
+.cs-voices-mini.is-light span { color: var(--text-secondary); }
+.cs-voices-mini.is-light strong { color: var(--primary); }
+.cs-stars { color: var(--accent); letter-spacing: 3px; margin-bottom: 14px; }
+.cs-voices-main blockquote { margin: 0 0 16px; font-family: var(--font-heading); font-size: clamp(1.2rem, 1.6vw, 1.5rem); font-weight: 600; line-height: 1.4; letter-spacing: -0.01em; }
+
+/* ------------------------------------------------------------- Cierre */
+.cs-close { background: var(--navy-deep); color: #fff; padding: 104px 0; text-align: center; }
+.cs-close-inner { display: flex; flex-direction: column; align-items: center; }
+.cs-close h2 { font-size: clamp(2rem, 3.4vw, 3rem); color: #fff; max-width: 18ch; }
+.cs-close p { margin: 18px 0 30px; max-width: 52ch; font-size: 1.05rem; line-height: 1.6; color: rgba(255,255,255,.75); }
+.cs-close-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.cs-close-mail { margin-top: 22px; color: rgba(255,255,255,.7); font-size: .9rem; text-decoration: underline; text-underline-offset: 3px; }
+.cs-close-mail:hover { color: #fff; }
+
+/* ------------------------------------------------------------ Celular */
+@media (max-width: 980px) {
+  .cs-bubbles { grid-template-columns: 1fr 1fr; }
+  .cs-who-grid { grid-template-columns: 1fr; }
+  .cs-who-card { height: auto; min-height: 300px; gap: 40px; }
+  .cs-why-grid, .cs-about-top { grid-template-columns: 1fr; gap: 36px; }
+  .cs-why-media { height: 52svh; }
+  .cs-voices-grid { grid-template-columns: 1fr; }
+  .cs-voices-photo { height: 46svh; }
+  .cs-about-legal { grid-template-columns: 1fr; }
+  .cs-about-legal > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--border); }
+  .cs-about-legal > div { padding: 20px 0; }
+}
+@media (max-width: 640px) {
+  .cs-who, .cs-why, .rb-cover { min-height: 0; padding: 64px 0; }
+  .cs-video, .cs-about, .cs-voices, .cs-close { padding: 64px 0; }
+  .cs-bubble { padding: 16px; border-radius: 18px; }
+  .rb-cover-nav { display: none; }
+  .cs-why-list p { margin-left: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-hero-img { animation: none; transform: none; }
+  .cs-bubble, .cs-who-card, .cs-why-media img, .rb-cover-card, .cs-video-frame img { transition-duration: 1ms !important; }
+  .cs-why-list li.is-active p { animation: none; }
+}
+
+/* Los h3 del sitio son azules por regla general: en las tarjetas oscuras van en blanco. */
+.cs-who-card.is-dark h3, .cs-who-card.is-photo h3 { color: #fff; }
+.cs-who-card.is-light h3 { color: var(--primary); }
+/* La profundidad del abanico necesita que la pista conserve el 3D. */
+.rb-cover-track { transform-style: preserve-3d; }
