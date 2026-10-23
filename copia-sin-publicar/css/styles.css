@@ -20519,3 +20519,7 @@ body:not(.b2b-landing) .work-meaning-card::before { display: none !important; }
   letter-spacing: 0.14em;
   font-weight: 700 !important;
 }
+
+/* Rebranding 5: sin granulado en los azules y todo un poco más pequeño. */
+.noise-overlay { display: none !important; background-image: none !important; }
+html { font-size: 13.5px !important; }
