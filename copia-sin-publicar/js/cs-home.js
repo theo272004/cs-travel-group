@@ -35,6 +35,8 @@
   })();
 
   // ---------------------------------------------------------- Video
+  // Al pulsar el botón empieza; al pausar o terminar vuelven el botón
+  // amarillo del centro y las tarjetas a su lugar.
   (function video() {
     var frame = document.querySelector('.cs-video-frame');
     if (!frame) return;
@@ -42,19 +44,19 @@
     var btn = frame.querySelector('.cs-video-play');
     if (!v || !btn) return;
     var stage = frame.closest('.cs-video-stage');
+    function playing(on) {
+      frame.classList.toggle('is-playing', on);
+      if (stage) stage.classList.toggle('is-playing', on);
+      v.controls = on;
+    }
     btn.addEventListener('click', function () {
-      frame.classList.add('is-playing');
-      if (stage) stage.classList.add('is-playing');
-      v.controls = true;
+      playing(true);
       var p = v.play();
-      if (p && p.catch) p.catch(function () { frame.classList.remove('is-playing'); if (stage) stage.classList.remove('is-playing'); });
+      if (p && p.catch) p.catch(function () { playing(false); });
     });
-    v.addEventListener('ended', function () {
-      frame.classList.remove('is-playing');
-      if (stage) stage.classList.remove('is-playing');
-      v.controls = false;
-      v.load();
-    });
+    v.addEventListener('play', function () { playing(true); });
+    v.addEventListener('pause', function () { if (!v.seeking) playing(false); });
+    v.addEventListener('ended', function () { playing(false); v.currentTime = 0; v.load(); });
   })();
 
   // -------------------------------------------------------- Paneles

@@ -532,3 +532,6 @@
   .cs-us-facts > div:nth-child(n+3) { border-top: 1px solid rgba(255, 255, 255, .16); margin-top: 20px; }
 }
 @media (prefers-reduced-motion: reduce) { .cs-value, .cs-value-n, .cs-value p { transition-duration: 1ms !important; } }
+
+/* Al pausar, el botón vuelve amarillo en el centro. */
+.cs-video-frame:not(.is-playing) .cs-video-play { background: var(--accent); color: var(--primary); border-color: var(--accent); }
