@@ -1,0 +1,432 @@
+/* =====================================================================
+   Empresas, Médicos, Contacto, Reservas y legales con la estética del
+   inicio nuevo (rebranding, copia sin publicar). Se carga después de
+   cs-home.css y reutiliza sus piezas: cs-hero, cs-btn, cs-label, cs-us,
+   cs-value, cs-voices, cs-quote, rb-cover y el pie cs-foot.
+   Los textos son los del sitio: aquí solo cambia la forma.
+   Paleta: azul profundo, blanco y el amarillo de acento; sin azul claro.
+   Movimiento: entra con cubic-bezier(.16,1,.3,1); nada sigue al cursor.
+   ===================================================================== */
+
+/* ------------------------------------------------------------ Común */
+.pg-sec { position: relative; padding: 104px 0; background: #fff; }
+.pg-sec.is-full { min-height: 100vh; min-height: 100svh; display: flex; align-items: center; }
+.pg-sec.is-full > .container { width: 100%; }
+.pg-sec.is-navy { background: var(--primary); color: #fff; }
+.pg-sec.is-deep { background: var(--navy-deep); color: #fff; }
+.pg-sec.is-soft { background: var(--bg); }
+.pg-sec h2, .pg-h2 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  color: var(--primary);
+  margin: 0;
+  text-wrap: balance;
+}
+.pg-sec.is-navy h2, .pg-sec.is-deep h2 { color: #fff; }
+.pg-sec.is-navy .cs-label, .pg-sec.is-deep .cs-label { color: var(--accent); }
+.pg-lead { margin: 16px 0 0; font-size: 1.04rem; line-height: 1.65; color: var(--text-secondary); max-width: 58ch; }
+.pg-sec.is-navy .pg-lead, .pg-sec.is-deep .pg-lead { color: rgba(255, 255, 255, .75); }
+.pg-head { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 48px; }
+.pg-head.is-center { flex-direction: column; align-items: center; text-align: center; gap: 0; }
+.pg-head.is-center .pg-lead { margin-left: auto; margin-right: auto; }
+.pg-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+/* El texto resaltado de los títulos del sitio (hero-highlight) toma el
+   amarillo del inicio, igual que su <em>. */
+.cs-hero .hero-highlight { color: var(--accent); background: none; padding: 0; font-style: italic; }
+.cs-hero h1 > span { display: block; }
+.cs-hero h1 > span > span { display: inline; }
+
+/* ------------------------------------------- Hero de página (foto) */
+.cs-hero.is-page .cs-hero-copy { max-width: 640px; }
+.cs-hero.is-page .cs-label { color: var(--accent); }
+/* Proveedores: una cápsula blanca al pie del hero, quieta. */
+.pg-brands {
+  display: grid; grid-template-columns: 1fr; align-items: center; gap: 28px;
+  padding: 14px 28px;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 24px 50px rgba(1, 20, 40, .24);
+}
+.pg-brands ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; align-items: center; }
+.pg-brands li { display: grid; place-items: center; height: 44px; }
+.pg-brands img { max-height: 34px; max-width: 120px; width: auto; object-fit: contain; filter: grayscale(1); opacity: .78; transition: filter 200ms cubic-bezier(.2,0,0,1), opacity 200ms cubic-bezier(.2,0,0,1); }
+.pg-brands li:hover img { filter: none; opacity: 1; }
+.pg-brands-k { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--text-secondary); white-space: nowrap; }
+
+/* ------------------------------------------------- Calculadora */
+.pg-calc { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 72px; align-items: center; }
+.pg-calc-intro h2 { font-size: clamp(2rem, 3.2vw, 2.8rem); }
+.pg-calc-intro p { margin: 18px 0 0; font-size: 1.04rem; line-height: 1.65; color: var(--text-secondary); max-width: 50ch; }
+.pg-calc-intro .pg-quote {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin-top: 26px; padding: 10px 18px 10px 12px;
+  border-radius: 999px; background: var(--accent); color: var(--primary);
+  font-weight: 700; font-size: .95rem;
+}
+.pg-quote::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--primary); }
+.pg-calc-card {
+  padding: 34px;
+  border-radius: 28px;
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 30px 60px rgba(1, 20, 40, .18);
+}
+.pg-calc-card h2 { font-size: clamp(1.4rem, 2vw, 1.8rem); color: #fff; margin-bottom: 26px; }
+.pg-calc-card label { display: block; font-size: .86rem; font-weight: 600; color: rgba(255, 255, 255, .78); margin-bottom: 12px; }
+.pg-calc-row { margin-bottom: 26px; }
+.pg-calc-slider { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: center; }
+.pg-calc-slider .calc-range-value {
+  min-width: 86px; text-align: center;
+  padding: 8px 14px; border-radius: 999px;
+  background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .22);
+  font: 800 1rem/1 var(--font-heading); color: #fff; font-variant-numeric: tabular-nums;
+}
+.pg-calc-card input[type="range"] {
+  -webkit-appearance: none; appearance: none;
+  width: 100%; height: 6px; margin: 0;
+  border-radius: 999px; background: rgba(255, 255, 255, .2);
+  outline: none; cursor: pointer;
+}
+.pg-calc-card input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--accent); border: 4px solid var(--primary);
+  box-shadow: 0 0 0 1px var(--accent);
+  transition: transform 150ms cubic-bezier(.2,0,0,1);
+}
+.pg-calc-card input[type="range"]::-moz-range-thumb {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--accent); border: 4px solid var(--primary);
+}
+.pg-calc-card input[type="range"]:hover::-webkit-slider-thumb { transform: scale(1.12); }
+.pg-calc-card input[type="range"]:focus-visible { box-shadow: 0 0 0 3px rgba(255, 210, 31, .45); }
+.pg-calc-results { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 10px; margin-top: 8px; }
+.pg-calc-results > div {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .07);
+  border: 1px solid rgba(255, 255, 255, .16);
+}
+.pg-calc-results > div.is-accent { background: var(--accent); border-color: var(--accent); color: var(--primary); }
+.pg-calc-results .calc-result-number { color: #fff; font: 800 clamp(1.3rem, 1.9vw, 1.7rem)/1 var(--font-heading); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.pg-calc-results .calc-result-label { font-size: .8rem; line-height: 1.35; color: rgba(255, 255, 255, .72); }
+.pg-calc-results .is-accent .calc-result-label { color: rgba(3, 32, 66, .78); }
+.pg-calc-results .is-accent .calc-result-number { color: var(--primary); }
+
+/* -------------------------------- Pasos numerados (sobre azul) */
+.pg-steps { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 72px; align-items: center; }
+.pg-steps-head .cs-btn { margin-top: 30px; }
+.pg-steps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.pg-steps-grid .cs-value { display: flex; flex-direction: column; }
+.pg-steps-grid .cs-value h3 { margin: 18px 0 8px; font: 800 1.15rem/1.2 var(--font-heading); letter-spacing: -0.02em; color: inherit; }
+.pg-steps-grid .cs-value p { margin: 0; font-size: .93rem; line-height: 1.55; color: rgba(255, 255, 255, .72); transition: color 200ms cubic-bezier(.2,0,0,1); }
+.pg-steps-grid .cs-value:hover p { color: rgba(3, 32, 66, .82); }
+.pg-steps-grid .cs-value-n { align-self: flex-start; min-width: 30px; }
+
+/* Pasos en línea de tiempo (sobre blanco). */
+.pg-line { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; position: relative; }
+.pg-line::before { content: ""; position: absolute; left: 27px; right: calc((100% - 48px) / 4 - 27px); top: 26px; height: 2px; background: var(--border); }
+.pg-line li { position: relative; display: flex; flex-direction: column; }
+.pg-line-n {
+  position: relative; z-index: 1;
+  width: 54px; height: 54px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--primary); color: #fff;
+  font: 800 1.15rem/1 var(--font-heading);
+  box-shadow: 0 0 0 8px #fff;
+  transition: background-color 200ms cubic-bezier(.2,0,0,1), color 200ms cubic-bezier(.2,0,0,1);
+}
+.pg-line li:hover .pg-line-n { background: var(--accent); color: var(--primary); }
+.pg-line-card {
+  flex: 1;
+  margin-top: 22px; padding: 24px;
+  border-radius: 22px; background: var(--bg); border: 1px solid var(--border);
+  transition: border-color 200ms cubic-bezier(.2,0,0,1);
+}
+.pg-line li:hover .pg-line-card { border-color: var(--primary); }
+.pg-line h3 { margin: 0 0 8px; font: 800 1.12rem/1.25 var(--font-heading); letter-spacing: -0.02em; color: var(--primary); }
+.pg-line p { margin: 0; font-size: .93rem; line-height: 1.6; color: var(--text-secondary); }
+.pg-center-cta { display: flex; justify-content: center; margin-top: 44px; }
+
+/* ------------------------------------------ Tarjetas con foto */
+.pg-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.pg-card {
+  display: flex; flex-direction: column;
+  border-radius: 24px; overflow: hidden;
+  background: #fff; border: 1px solid var(--border);
+  transition: border-color 200ms cubic-bezier(.2,0,0,1), box-shadow 200ms cubic-bezier(.2,0,0,1);
+}
+.pg-card:hover { border-color: var(--primary); box-shadow: 0 22px 48px rgba(1, 20, 40, .12); }
+.pg-card-img { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--primary); }
+.pg-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 600ms cubic-bezier(.16,1,.3,1); }
+.pg-card:hover .pg-card-img img { transform: scale(1.04); }
+.pg-card-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(1, 20, 40, .86) 0%, rgba(1, 20, 40, 0) 60%); }
+.pg-card-img h3 { position: absolute; left: 22px; right: 22px; bottom: 18px; z-index: 1; margin: 0; font: 800 1.3rem/1.15 var(--font-heading); letter-spacing: -0.02em; color: #fff; }
+.pg-card-img h3 em { color: var(--accent); font-style: normal; }
+.pg-card-body { flex: 1; display: flex; flex-direction: column; gap: 12px; padding: 22px; }
+.pg-card-tag { display: flex; align-items: center; gap: 10px; font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--primary); }
+.pg-card-tag svg { flex: none; width: 20px; height: 20px; }
+.pg-card-body p { margin: 0 0 6px; font-size: .92rem; line-height: 1.55; color: var(--text-secondary); flex: 1; }
+.pg-card-body .cs-btn { align-self: stretch; justify-content: space-between; }
+
+/* --------------------------------------- Bloque con foto al lado */
+.pg-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 72px; align-items: center; }
+.pg-split.is-flip .pg-split-media { order: 2; }
+.pg-split-media { position: relative; border-radius: 28px; overflow: hidden; aspect-ratio: 5 / 4; background: var(--primary); }
+.pg-split-media img { width: 100%; height: 100%; object-fit: cover; }
+.pg-split-copy p { margin: 16px 0 0; font-size: 1rem; line-height: 1.7; color: var(--text-secondary); max-width: 56ch; }
+.pg-sec.is-navy .pg-split-copy p, .pg-sec.is-deep .pg-split-copy p { color: rgba(255, 255, 255, .75); }
+.pg-split-copy p strong { color: var(--primary); }
+.pg-sec.is-navy .pg-split-copy p strong, .pg-sec.is-deep .pg-split-copy p strong { color: #fff; }
+.pg-split-copy .circle-blue {
+  display: inline-block; width: 8px; height: 8px; margin: 0 10px 2px 0;
+  border-radius: 50%; background: var(--accent); vertical-align: middle;
+}
+.pg-split-copy .pg-ticks { line-height: 2.1; color: var(--primary); font-weight: 600; }
+/* Lista de lo incluido: fichas con su punto amarillo. */
+.pg-chips { list-style: none; margin: 26px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.pg-chips li {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 16px; border-radius: 16px;
+  font-size: .92rem; font-weight: 600; line-height: 1.35;
+  background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .16); color: #fff;
+}
+.pg-chips li::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+
+/* ---------------------------------------- Cuatro tarjetas de texto */
+.pg-seals { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.pg-seal {
+  display: flex; flex-direction: column; gap: 10px;
+  padding: 28px 24px 26px;
+  border-radius: 22px; background: var(--bg); border: 1px solid var(--border);
+  transition: background-color 200ms cubic-bezier(.2,0,0,1), border-color 200ms cubic-bezier(.2,0,0,1), color 200ms cubic-bezier(.2,0,0,1);
+}
+.pg-seal::before { content: ""; width: 36px; height: 6px; border-radius: 999px; background: var(--accent); margin-bottom: 8px; }
+.pg-seal h3 { margin: 0; font: 800 1.2rem/1.2 var(--font-heading); letter-spacing: -0.02em; color: var(--primary); transition: color 200ms cubic-bezier(.2,0,0,1); }
+.pg-seal p { margin: 0; font-size: .93rem; line-height: 1.6; color: var(--text-secondary); transition: color 200ms cubic-bezier(.2,0,0,1); }
+.pg-seal:hover { background: var(--primary); border-color: var(--primary); }
+.pg-seal:hover h3 { color: #fff; }
+.pg-seal:hover p { color: rgba(255, 255, 255, .75); }
+
+/* --------------------------- Testimonios con texto a la izquierda */
+.cs-voices.is-split .cs-voices-inner { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 64px; align-items: center; }
+.cs-voices.is-split { padding: 104px 0; }
+.cs-voices.is-split h2 { font-size: clamp(2rem, 3.4vw, 3rem); text-align: left; }
+.cs-voices.is-split .pg-lead { color: rgba(255, 255, 255, .8); }
+.cs-voices.is-split .pg-lead.is-strong { color: #fff; font-weight: 600; }
+.cs-voices.is-split .cs-quotes { grid-template-columns: 1fr; gap: 12px; }
+.cs-voices.is-split .cs-quote { padding: 22px 24px; }
+.cs-voices.is-split .cs-quote blockquote { font-size: .96rem; }
+.pg-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.pg-pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  height: 44px; padding: 0 18px 0 8px; border-radius: 999px;
+  background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .26);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  font-weight: 700; font-size: .9rem; color: #fff;
+}
+.pg-pill-i { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--primary); }
+.pg-pill-i svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ------------------------------------------- Celulares del paciente */
+.pg-phones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; max-width: 980px; margin: 0 auto; }
+.pg-phone { display: grid; place-items: center; padding: 18px; border-radius: 26px; background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .14); overflow: hidden; }
+.pg-phone img { width: 100%; height: auto; display: block; }
+.pg-banner {
+  max-width: 980px; margin: 24px auto 0;
+  padding: 24px 32px; border-radius: 24px;
+  background: #fff; color: var(--primary); text-align: center;
+  box-shadow: 0 24px 50px rgba(1, 20, 40, .24);
+}
+.pg-banner p { margin: 0; font-size: 1.05rem; line-height: 1.55; }
+.pg-banner span, .pg-banner strong { display: block; }
+.pg-banner strong { font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; margin-top: 4px; }
+
+/* --------------------------------- Especialidades en el carrusel */
+.rb-cover.is-page { min-height: 100vh; min-height: 100svh; }
+.pg-cover-foot { display: flex; align-items: center; justify-content: center; gap: 24px; margin-top: 30px; text-align: left; }
+.pg-cover-foot p { margin: 0; max-width: 52ch; font-size: .96rem; line-height: 1.55; color: var(--text-secondary); }
+
+/* ------------------------------------------- Cierre y preguntas */
+.pg-faq { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 64px; align-items: start; }
+.pg-faq-side { position: sticky; top: 110px; display: flex; flex-direction: column; gap: 22px; }
+.pg-close {
+  padding: 32px;
+  border-radius: 28px;
+  background: var(--primary); color: #fff;
+  box-shadow: 0 30px 60px rgba(1, 20, 40, .18);
+}
+.pg-close h2 { font-size: clamp(1.5rem, 2.3vw, 2rem); color: #fff; }
+.pg-close p { margin: 12px 0 24px; font-size: .98rem; line-height: 1.6; color: rgba(255, 255, 255, .78); }
+.pg-close .pg-actions { flex-direction: column; align-items: stretch; }
+.pg-close .cs-btn { justify-content: space-between; }
+.pg-close .cs-btn-ghost { color: #fff; border-color: rgba(255, 255, 255, .4); justify-content: center; }
+.pg-close .cs-btn-ghost:hover { border-color: #fff; }
+.pg-close .cs-btn-yellow { background: var(--accent); color: var(--primary); }
+.pg-close .cs-btn-yellow .cs-arrow { background: var(--primary); color: #fff; }
+.pg-close .cs-btn-yellow:hover { background: #fff; }
+
+.pg-faq .faq-list { display: flex; flex-direction: column; gap: 10px; margin: 0; max-width: none; }
+.pg-faq .faq-item {
+  border-radius: 20px; background: #fff; border: 1px solid var(--border);
+  overflow: hidden; margin: 0; box-shadow: none;
+  transition: border-color 200ms cubic-bezier(.2,0,0,1);
+}
+.pg-faq .faq-item:hover, .pg-faq .faq-item.active { border-color: var(--primary); }
+.pg-faq .faq-question {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  padding: 20px 22px; margin: 0;
+  background: none; border: 0; cursor: pointer; text-align: left;
+  font: 700 1rem/1.4 var(--font-heading); color: var(--primary);
+}
+.pg-faq .faq-question svg {
+  flex: none; width: 32px; height: 32px; padding: 8px; border-radius: 50%;
+  background: var(--bg); color: var(--primary);
+  transition: transform 260ms cubic-bezier(.16,1,.3,1), background-color 160ms cubic-bezier(.2,0,0,1);
+}
+.pg-faq .faq-item.active .faq-question svg { transform: rotate(180deg); background: var(--accent); }
+.pg-faq .faq-answer { max-height: 0; overflow: hidden; transition: max-height 320ms cubic-bezier(.16,1,.3,1); padding: 0; }
+.pg-faq .faq-answer p { margin: 0; padding: 0 22px 22px; font-size: .95rem; line-height: 1.65; color: var(--text-secondary); }
+
+/* ---------------------------------------- Contacto y Reservas */
+/* Banda azul arriba para que el menú se lea igual que en el inicio. */
+.pg-top { position: relative; background: var(--primary); color: #fff; padding: 150px 0 120px; overflow: hidden; }
+.pg-top-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .28; }
+.pg-top .container { position: relative; z-index: 1; }
+.pg-top .cs-label { color: var(--accent); }
+.pg-top h1 { margin: 0; font: 800 clamp(2.3rem, 4.4vw, 3.8rem)/1.06 var(--font-heading); letter-spacing: -0.03em; color: #fff; text-wrap: balance; }
+.pg-top h1 em, .pg-top h1 .t-accent { color: var(--accent); font-style: italic; }
+.pg-top p { margin: 18px 0 0; max-width: 56ch; font-size: 1.05rem; line-height: 1.6; color: rgba(255, 255, 255, .8); }
+.pg-top.is-center { text-align: center; }
+.pg-top.is-center p { margin-left: auto; margin-right: auto; }
+.pg-lift { position: relative; z-index: 2; margin-top: -72px; padding-bottom: 96px; }
+
+/* ------------------------------------------------------------ Celular */
+@media (max-width: 1180px) {
+  .pg-cards { grid-template-columns: 1fr 1fr; }
+  .pg-seals { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 980px) {
+  .pg-sec { padding: 72px 0; }
+  .pg-sec.is-full, .rb-cover.is-page { min-height: 0; }
+  .pg-head { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 32px; }
+  .pg-calc, .pg-steps, .pg-split, .pg-faq, .cs-voices.is-split .cs-voices-inner { grid-template-columns: 1fr; gap: 36px; }
+  .pg-split.is-flip .pg-split-media { order: 0; }
+  .pg-line { grid-template-columns: 1fr 1fr; }
+  .pg-line::before { display: none; }
+  .pg-faq-side { position: static; }
+  .pg-brands { grid-template-columns: 1fr; gap: 8px; padding: 14px 18px; }
+  .pg-brands ul { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 16px; }
+  .pg-phones { grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .pg-phone { padding: 10px; }
+  .cs-voices.is-split { padding: 72px 0; }
+}
+@media (max-width: 640px) {
+  .pg-sec { padding: 64px 0; }
+  .pg-cards, .pg-seals, .pg-line, .pg-steps-grid, .pg-chips { grid-template-columns: 1fr; }
+  .pg-calc-card { padding: 24px 20px; border-radius: 22px; }
+  .pg-calc-results { grid-template-columns: 1fr; }
+  .pg-phones { grid-template-columns: 1fr; max-width: 300px; }
+  .pg-banner { padding: 20px; }
+  .pg-close { padding: 24px 20px; }
+  .pg-cover-foot { flex-direction: column; text-align: center; }
+  .pg-top { padding: 120px 0 96px; }
+  .pg-faq .faq-question { padding: 18px; font-size: .95rem; }
+  .pg-faq .faq-answer p { padding: 0 18px 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pg-card-img img, .pg-faq .faq-answer, .pg-faq .faq-question svg, .pg-seal, .pg-line-n { transition-duration: 1ms !important; }
+}
+
+/* Médicos: la foto del hero trae una franja blanca a la izquierda; se
+   corre hacia la izquierda para que quede fuera de la pantalla. */
+.cs-hero.is-medical .cs-hero-img { left: -36%; width: 136%; max-width: none; object-position: 100% 30%; }
+@media (max-width: 640px) { .cs-hero.is-medical .cs-hero-img { left: -40%; width: 140%; } }
+
+/* ------------------------------------------------------- Contacto */
+/* El pase de abordar queda sobre una foto del equipo, como los
+   testimonios del inicio; nada de fondo celeste. */
+body.contact-page { background: #fff; }
+body.contact-page .contact.ticket-contact {
+  position: relative; isolation: isolate;
+  min-height: 100vh; min-height: 100svh;
+  display: flex; align-items: center;
+  background: var(--navy-deep) url("../assets/images/foto-alianza-ventana.webp") center / cover no-repeat !important;
+}
+.contact-page .ticket-contact::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(1, 20, 40, .72); }
+.contact-page .ticket-contact > .container { width: 100%; }
+.contact-page .ticket-shell { box-shadow: 0 40px 80px rgba(0, 0, 0, .35); }
+/* Los canales de contacto ocupaban una columna de 42 px (el ícono está
+   oculto) y el texto se partía letra por letra. */
+.contact-page .ticket-contact-grid .contact-item { grid-template-columns: minmax(0, 1fr) !important; }
+.contact-page .ticket-contact-grid .contact-item p { word-break: normal; overflow-wrap: anywhere; }
+/* Las muescas del pase toman el color de la foto oscura, no el blanco. */
+.contact-page .ticket-notch-notch { background: #0b1d33 !important; }
+
+/* ------------------------------------------------------- Reservas */
+/* Banda azul arriba, como el hero del inicio; el calendario queda en su
+   tarjeta blanca encima del corte. */
+body.reservas-page { background: #fff; }
+.reservas-page .reservas { padding-top: 150px !important;
+  background: linear-gradient(180deg, var(--primary) 0, var(--primary) 510px, #fff 510px) !important;
+}
+.reservas-page .header:not(.scrolled) .nav-cta { background: var(--accent) !important; color: var(--primary) !important; }
+.reservas-page .reservas-eyebrow { color: var(--accent) !important; }
+.reservas-page .reservas-head h1 { color: #fff !important; font-family: var(--font-heading); font-weight: 800 !important; letter-spacing: -0.03em !important; }
+.reservas-page .reservas-head h1 strong { color: var(--accent) !important; font-style: italic; }
+.reservas-page .reservas-head p { color: rgba(255, 255, 255, .8) !important; }
+.reservas-page .reservas-card { border-radius: 28px !important; box-shadow: 0 30px 60px rgba(1, 20, 40, .18) !important; }
+.reservas-page .reservas-note svg, .reservas-page .reservas-note a { color: var(--primary) !important; }
+
+/* -------------------------------------------------------- Legales */
+/* Encabezado alto sobre la foto, como el hero del inicio; índice y
+   contacto en tarjetas blancas redondeadas; números en azul. */
+.legal-hero { border-bottom: 0 !important; padding: 170px 0 96px !important; }
+.legal-hero::before { background: rgba(1, 20, 40, .62) !important; }
+.legal-hero h1 { font-size: clamp(2.3rem, 4.4vw, 3.8rem) !important; letter-spacing: -0.03em !important; text-shadow: none !important; }
+.legal-hero__en { color: rgba(255, 255, 255, .8) !important; text-shadow: none !important; }
+.legal-eyebrow { border: 1px solid rgba(255, 255, 255, .26) !important; background: rgba(255, 255, 255, .12) !important; -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px) !important; }
+.legal-rule { width: 56px; height: 6px; border-radius: 999px; }
+.legal-page__updated { color: #fff !important; background: rgba(255, 255, 255, .12) !important; }
+body:has(.legal-hero), .legal-main { background: #fff !important; }
+.legal-toc {
+  position: relative; z-index: 2;
+  margin-top: -56px !important;
+  border: 1px solid var(--border) !important; border-radius: 24px !important;
+  box-shadow: 0 30px 60px rgba(1, 20, 40, .12);
+}
+.legal-n { border: 0 !important; background: var(--primary); color: #fff !important; transition: background-color 160ms cubic-bezier(.2,0,0,1), color 160ms cubic-bezier(.2,0,0,1); }
+.legal-toc a:hover .legal-n { background: var(--accent) !important; color: var(--primary) !important; }
+.legal-body h2 { color: var(--primary) !important; }
+.legal-contacto a { color: var(--primary) !important; }
+.legal-contacto a:hover { border-color: var(--primary) !important; transform: none !important; }
+.legal-volver a { color: var(--primary) !important; font-weight: 700; }
+@media (max-width: 640px) { .legal-hero { padding: 130px 0 80px !important; } .legal-toc { margin-top: -40px !important; } }
+
+/* styles.css aplasta el relleno de todas las secciones entre 901 y 1440 px
+   (body:not(.b2b-landing) section:not(.hero), 28-38 px con !important).
+   Estas reglas, más específicas, devuelven el aire a las secciones nuevas. */
+@media (min-width: 901px) and (max-width: 1440px) {
+  body:not(.b2b-landing) section.pg-sec:not(.hero) { padding-block: 104px !important; }
+  body:not(.b2b-landing) section.cs-voices.is-split:not(.hero) { padding-block: 104px !important; }
+  body:not(.b2b-landing) section.rb-cover.is-page:not(.hero) { padding-block: 72px !important; }
+  body:not(.b2b-landing) section.reservas:not(.hero) { padding-block: 150px 80px !important; }
+  body:not(.b2b-landing) section.legal-hero:not(.hero) { padding-block: 170px 96px !important; }
+}
+
+/* Celular: los tres celulares del paciente se pasan de lado, y cada paso
+   de la línea de tiempo lleva su número pegado a la tarjeta. */
+@media (max-width: 640px) {
+  .pg-phones { display: flex; max-width: none; margin: 0 -24px; padding: 0 24px 6px; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .pg-phones::-webkit-scrollbar { display: none; }
+  .pg-phone { flex: 0 0 78%; scroll-snap-align: center; }
+  .pg-line { gap: 12px; }
+  .pg-line li { display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: start; }
+  .pg-line-n { width: 44px; height: 44px; font-size: 1rem; box-shadow: none; }
+  .pg-line-card { margin-top: 0; padding: 18px; }
+}
