@@ -20523,3 +20523,16 @@ body:not(.b2b-landing) .work-meaning-card::before { display: none !important; }
 /* Rebranding 5: sin granulado en los azules y todo un poco más pequeño. */
 .noise-overlay { display: none !important; background-image: none !important; }
 html { font-size: 13.5px !important; }
+
+/* Rebranding 19: letra un poco más grande. La base sube de 13,5 a 15 px
+   (1 a 2 px más en cada texto), cerca de los 16 px que se recomiendan para
+   leer en pantalla. El menú también crece: enlaces, idioma y botones. */
+html { font-size: 15px !important; }
+@media (min-width: 1025px) {
+  html body .header .nav-links a { font-size: 1rem !important; }
+  html body .header .lang-trigger,
+  html body .header .lang-trigger .current-lang { font-size: .97rem !important; }
+  html body .header .lang-trigger svg:first-of-type { width: 20px; height: 20px; }
+  html body .header .nav-portal,
+  html body .header .nav-cta { font-size: .97rem !important; min-height: 44px !important; padding: 0 24px !important; display: inline-flex; align-items: center; }
+}

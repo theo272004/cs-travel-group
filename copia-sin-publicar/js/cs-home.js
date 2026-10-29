@@ -49,9 +49,22 @@
       if (stage) stage.classList.toggle('is-playing', on);
       v.controls = on;
     }
+    // El sonido sube en casi un segundo para que el video no entre de golpe.
+    function fadeIn() {
+      if (reduced) { v.volume = 1; return; }
+      var t0 = performance.now();
+      v.volume = 0;
+      (function step(now) {
+        var k = Math.min(1, (now - t0) / 900);
+        v.volume = 1 - Math.pow(1 - k, 3);
+        if (k < 1 && !v.paused) requestAnimationFrame(step);
+        else v.volume = 1;
+      })(t0);
+    }
     btn.addEventListener('click', function () {
       playing(true);
       var p = v.play();
+      fadeIn();
       if (p && p.catch) p.catch(function () { playing(false); });
     });
     v.addEventListener('play', function () { playing(true); });

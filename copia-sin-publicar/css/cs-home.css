@@ -596,3 +596,45 @@ html body:not(.b2b-landing) section.cs-voices:not(.hero) { padding-block: 100px 
   html body:not(.b2b-landing) section.rb-cover:not(.hero),
   html body:not(.b2b-landing) section.cs-voices:not(.hero) { padding-block: 64px !important; }
 }
+
+/* Rebranding 19 ------------------------------------------------------- */
+/* Letras pequeñas: ninguna baja de 12 px con la base nueva de 15 px. */
+.cs-label, .rb-cover-head .section-label, .rb-cover-copy span, .cs-seal-k, .cs-us-facts dt { font-size: .8rem; }
+.cs-float p, .cs-float .cs-link { font-size: .88rem; }
+.cs-quote blockquote { font-size: .97rem; }
+.cs-quote.is-main blockquote { font-size: 1.05rem; }
+.cs-quote figcaption { font-size: .84rem; }
+.cs-quote figcaption strong { font-size: .9rem; }
+.cs-hero h1 { font-size: clamp(2.3rem, 4.4vw, 3.6rem); }
+
+/* Hero: el texto y las cifras, juntos y centrados en el alto que queda
+   bajo el menú (antes el bloque arrancaba muy abajo). */
+.cs-hero-inner {
+  justify-content: center;
+  padding-top: clamp(124px, 14.5svh, 140px);
+  padding-bottom: clamp(28px, 5svh, 48px);
+  gap: clamp(32px, 6svh, 64px);
+}
+
+/* Cifras del hero: vidrio de verdad. Más desenfoque, brillo en el borde de
+   arriba y una luz suave que baja; la foto se sigue viendo detrás. */
+.cs-bubble {
+  background: linear-gradient(160deg, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .06) 100%);
+  border: 1px solid rgba(255, 255, 255, .3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45), inset 0 -1px 0 rgba(255, 255, 255, .06), 0 18px 40px rgba(1, 20, 40, .28);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
+}
+.cs-bubble:hover { background: linear-gradient(160deg, rgba(255, 255, 255, .26) 0%, rgba(255, 255, 255, .1) 100%); }
+.cs-bubble > span { color: rgba(255, 255, 255, .86); }
+
+/* Video: al darle play no arranca de golpe. La capa oscura se va despacio
+   y la imagen se asienta (de 1,04 a 1); el sonido sube en el JS. */
+.cs-video-el { transition: transform 900ms cubic-bezier(.16,1,.3,1); }
+.cs-video-frame:not(.is-playing) .cs-video-el { transform: scale(1.04); }
+.cs-video-frame.is-playing::after { transition: opacity 700ms cubic-bezier(.16,1,.3,1); }
+.cs-video-frame.is-playing .cs-video-play, .cs-video-frame.is-playing .cs-video-tag { transition: opacity 400ms cubic-bezier(.16,1,.3,1), transform 400ms cubic-bezier(.16,1,.3,1); transform: scale(.9); }
+@media (prefers-reduced-motion: reduce) {
+  .cs-video-el, .cs-video-frame::after { transition-duration: 1ms !important; }
+  .cs-video-frame:not(.is-playing) .cs-video-el { transform: none; }
+}
