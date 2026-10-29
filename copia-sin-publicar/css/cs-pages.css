@@ -13,7 +13,7 @@
 .pg-sec.is-full { min-height: 100vh; min-height: 100svh; display: flex; align-items: center; }
 .pg-sec.is-full > .container { width: 100%; }
 .pg-sec.is-navy { background: var(--primary); color: #fff; }
-.pg-sec.is-deep { background: var(--navy-deep); color: #fff; }
+.pg-sec.is-deep { background: var(--primary); color: #fff; }
 .pg-sec.is-soft { background: var(--bg); }
 .pg-sec h2, .pg-h2 {
   font-family: var(--font-heading);
@@ -356,9 +356,9 @@ body.contact-page .contact.ticket-contact {
   position: relative; isolation: isolate;
   min-height: 100vh; min-height: 100svh;
   display: flex; align-items: center;
-  background: var(--navy-deep) url("../assets/images/foto-alianza-ventana.webp") center / cover no-repeat !important;
+  background: var(--primary) url("../assets/images/foto-alianza-ventana.webp") center / cover no-repeat !important;
 }
-.contact-page .ticket-contact::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(1, 20, 40, .72); }
+.contact-page .ticket-contact::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(3, 32, 66, .74); }
 .contact-page .ticket-contact > .container { width: 100%; }
 .contact-page .ticket-shell { box-shadow: 0 40px 80px rgba(0, 0, 0, .35); }
 /* Los canales de contacto ocupaban una columna de 42 px (el ícono está
@@ -387,7 +387,7 @@ body.reservas-page { background: #fff; }
 /* Encabezado alto sobre la foto, como el hero del inicio; índice y
    contacto en tarjetas blancas redondeadas; números en azul. */
 .legal-hero { border-bottom: 0 !important; padding: 170px 0 96px !important; }
-.legal-hero::before { background: rgba(1, 20, 40, .62) !important; }
+.legal-hero::before { background: rgba(3, 32, 66, .64) !important; }
 .legal-hero h1 { font-size: clamp(2.3rem, 4.4vw, 3.8rem) !important; letter-spacing: -0.03em !important; text-shadow: none !important; }
 .legal-hero__en { color: rgba(255, 255, 255, .8) !important; text-shadow: none !important; }
 .legal-eyebrow { border: 1px solid rgba(255, 255, 255, .26) !important; background: rgba(255, 255, 255, .12) !important; -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px) !important; }
